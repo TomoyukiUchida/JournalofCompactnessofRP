@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p4.1.0-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2024.2.3)  12 MAR 2024 13:59
+This is e-pTeX, Version 3.141592653-p4.1.0-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2024.2.3)  12 MAR 2024 14:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -309,9 +309,9 @@ LaTeX Info: Redefining \not on input line 2959.
 
 Class ieice Warning: membership "" is wrong.
 
+\@toksii=\toks30
 
-Class ieice Warning: Check the "affiliate label" label, it does not correspond to 
-  any labels in \authorentry command.
+Class ieice Warning: membership "membership" is wrong.
 
 LaTeX Font Info:    Trying to load font information for OT1+ntxtlf on input line 47.
 (c:/texlive/2023/texmf-dist/tex/latex/newtx/ot1ntxtlf.fd
@@ -373,6 +373,10 @@ LaTeX Info: Command `\dddot' is already robust on input line 47.
 LaTeX Info: Command `\ddddot' is already robust on input line 47.
 \c@mv@tabular=\count299
 \c@mv@boldtabular=\count300
+
+
+Class ieice Warning: Information of \paffiliate is not specified.
+
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 17.28pt on input line 48.
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <17.28> not available
@@ -386,7 +390,7 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 17.28pt on input line 48.
 LaTeX Font Info:    Trying to load font information for OT1+minntx on input line 48.
- (c:/texlive/2023/texmf-dist/tex/latex/newtx/ot1minntx.fd
+(c:/texlive/2023/texmf-dist/tex/latex/newtx/ot1minntx.fd
 File: ot1minntx.fd 2022/01/20 v1.0 font definition file for OT1/minntx
 )
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 48.
@@ -438,6 +442,12 @@ LaTeX Font Info:    Kanji font shape `JY1/mc/b/it' undefined
 (Font)              No change on input line 48.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/it' will be
 (Font)              scaled to size 10.0pt on input line 48.
+LaTeX Font Info:    Kanji font shape `JY1/mc/b/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY1/mc/b/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY1/mc/b/it' undefined
+(Font)              No change on input line 48.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 7.0pt on input line 48.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
@@ -483,12 +493,12 @@ LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
 
 ] (out/main.aux) ) 
 Here is how much of TeX's memory you used:
- 6421 strings out of 476693
- 87911 string characters out of 5808558
- 1848203 words of memory out of 5000000
- 26790 multiletter control sequences out of 15000+600000
+ 6437 strings out of 476693
+ 88160 string characters out of 5808558
+ 1849203 words of memory out of 5000000
+ 26806 multiletter control sequences out of 15000+600000
  559106 words of font info for 123 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  55i,11n,62p,372b,406s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/main.dvi (1 page, 2140 bytes).
+Output written on out/main.dvi (1 page, 2264 bytes).

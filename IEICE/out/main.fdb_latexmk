@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1710219568 "out/main.dvi" "out/main.pdf" "out/main" 1710219568 0
-  "out/main.dvi" 1710219568 2140 3a83cf5cabaa614cb37bae1d740f448b "latex"
+["dvipdf"] 1710220892 "out/main.dvi" "out/main.pdf" "out/main" 1710220893 2
+  "out/main.dvi" 1710220892 2264 76a49134cb847a50e6322b844f9bd791 "latex"
   (generated)
   "out/main.pdf"
   (rewritten before read)
-["latex"] 1710219566 "c:/Users/uchida/Documents/GitHub/JournalofCompactnessofRP/IEICE/main.tex" "out/main.dvi" "main" 1710219568 0
-  "c:/Users/uchida/Documents/GitHub/JournalofCompactnessofRP/IEICE/main.tex" 1710218825 1837 5a197021d2f204df2861c176dadc4507 ""
+["latex"] 1710220886 "c:/Users/uchida/Documents/GitHub/JournalofCompactnessofRP/IEICE/main.tex" "out/main.dvi" "main" 1710220893 0
+  "c:/Users/uchida/Documents/GitHub/JournalofCompactnessofRP/IEICE/main.tex" 1710220861 1857 0c265de61b7d3d5e8f945130a00c35a6 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1706939044 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1706940468 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/ptex-fonts/standard/goth8.tfm" 1706940468 1196 f76ab7ae43ed1dfe29b9e6ec2933fdb4 ""
@@ -84,8 +84,8 @@
   "c:/texlive/2023/texmf-var/web2c/eptex/platex.fmt" 1706941590 7883359 5143f224090b3661c2571aa4c0cb7890 ""
   "c:/texlive/2023/texmf.cnf" 1706941446 713 e69b156964470283e0530f5060668171 ""
   "ieice.cls" 1710173470 60907 bc79ecdaf8174967f60740b4b6969939 ""
-  "main.tex" 1710218825 1837 5a197021d2f204df2861c176dadc4507 ""
-  "out/main.aux" 1710219567 46 ba5e8d0d59e747e7e21a974ec613c204 "latex"
+  "main.tex" 1710220861 1857 0c265de61b7d3d5e8f945130a00c35a6 ""
+  "out/main.aux" 1710220892 46 ba5e8d0d59e747e7e21a974ec613c204 "latex"
   (generated)
   "out/main.aux"
   "out/main.dvi"
