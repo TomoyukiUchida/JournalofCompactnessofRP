@@ -1,0 +1,84 @@
+\section{非隣接変数正規パターン}
+
+隣接した変数記号を持たない正規パターンを\textbf{非隣接変数正規パターン}という．
+例えば，パターン$axybc$は正規パターンであるが，非隣接変数正規パターンではない．パターン$axbcy$は非隣接変数正規パターンである．
+$\NAVRP$を非隣接変数正規パターン全体の集合とする．
+$\NAVRP$の空でない有限部分集合の集合を$\NAVRPplus$で，
+高々$k~(k\geq 1)$個のパターンから成る$\NAVRP$の部分集合$\{P\in \NAVRPplus \mid \sharp P \leq k\}$を$\NAVRPkei$で表す．
+このとき，次の定理が成り立つ．
+
+\begin{thm}\label{非隣接kが4以上}
+$\sharp \Sigma \ge k+2,~P\in \NAVRPplus,~Q \in \NAVRPkei$とする．
+このとき，以下の{\rm (i), (ii), (iii)}は同値である．
+\[
+\begin{tabular}{ll}
+$(\mathrm{i})$ $S_{2}(P) \subseteq L(Q)$,
+$(\mathrm{ii})$ $P \sqsubseteq Q$,
+$(\mathrm{iii})$ $L(P) \subseteq L(Q)$.
+\end{tabular}
+\]
+\end{thm}
+
+\begin{proof}
+定義より，
+(ii) $\Rightarrow$ (iii)と(iii) $\Rightarrow$ (i)は自明に成り立つ．
+よって，(i) $\Rightarrow$ (ii)が成り立つことを，$p$に現れる変数記号の数$n$に関する数学的帰納法で証明する．
+
+$n=0$のとき，$S_{2}(p)= \{ p \}$であり，$p \in L(Q)$となる．よって，ある$q \in Q$に対して，$p \preceq q$となる．
+
+$n \ge 0$個の変数記号を含む任意の正規パターンに対して，題意が成り立つと仮定する．
+$p$を$S_{2}(p) \subseteq L(Q)$を満たす$n+1$個の変数記号を含む非隣接変数正規パターンとする．
+$p \not \preceq q_{i}$ ($i=1, 2$)と仮定する．
+非隣接変数正規パターン$p$を$p=p_{1}xp_{2}$, $Q=\{ q_{1}, \ldots , q_{k} \}$とおく．
+ここで，$p_{1}$は末尾が定数記号である非隣接変数正規パターンであり，$p_{2}$は先頭が定数記号である非隣接変数正規パターン，$x$は変数記号，任意の$i$ ($i=1, \ldots, k$)に対して，$q_{i}$は非隣接変数正規パターンである．
+$a, b \in \Sigma$に対して，$p_{a}=p \{ x := a \}$，$p_{ab}=p \{ x := ab \}$とおく．
+このとき，$p_{a}, p_{ab}$は$n$個の変数記号が含まれ，$S_{2}(p_{a}) \subseteq L(Q)$かつ$S_{2}(p_{ab}) \subseteq L(Q)$が成り立つことに注意する．
+帰納法の仮定より，任意の$a, b \in \Sigma$に対して，$p_{a} \preceq q_{i}$かつ$p_{ab} \preceq q_{i^{\prime}}$を満たすような$i, i^{\prime} \le k$が存在する．
+
+補題\ref{追加補題1}より，ある$i$に対して$p \{ x:=xy \} \preceq q_{i}$が成り立つ．
+このとき，$p \{ x:=xy \} =p_{1}xyp_{2}$の部分パターン$xy$は$q_{i}$の変数記号を置き換えることで生成できない．
+このことは，$q_{i}$に$xy$が含まれることを示している．
+これは，$q_{i}$が非隣接変数正規パターンであることに矛盾する．
+
+以上より，(i) $\Rightarrow$ (ii)が成り立つ．
+\end{proof}
+
+\begin{col}
+$\sharp\Sigma \ge k+2$，$P \in \NAVRPplus$とする．このとき，$S_{2}(P)$は$\mathcal{RPL^{\mbox{$k$}}_{NAV}}$における$L(P)$の特徴集合である．
+\end{col}
+
+\begin{lem}\label{k+2のとき}
+$\sharp\Sigma \le k+1$とする．このとき，$\NAVRPkei$は包含に関してコンパクト性を持たない．
+\end{lem}
+\begin{proof}
+$\Sigma = \{ a_{1}, \ldots , a_{k+1} \}$を$k+1$個の定数記号から成る集合，$p, q_{i}$を正規パターンとする．
+$p \{ x := a_{i}y \} \preceq q_{i}$かつ$p \{ x := ya_{i+1} \} \preceq q_{i}~(i=1,2, \ldots ,k)$とする．
+$p \{ x:= a_{k+1}a_{1} \} \preceq q_{1}$であるとき，$S_{2}(p) \backslash S_{1}(p) \subseteq \bigcup^{k}_{i=1} L(q_{i})$となる． 
+すなわち，$L(p) \subseteq L(Q)$である．
+しかし，$p \not \preceq q_{i}$であるため，$L(p) \not \subseteq L(q_{i})~(i=1,2, \ldots k)$である．
+したがって，$\NAVRPkei$は包含に関するコンパクト性を持たない．
+\end{proof}
+
+コンパクト性をもたない例を例\ref{反例k+1}に示す．
+\begin{figure*}[tb]
+\begin{ex}\label{反例k+1}
+$\Sigma= \{a_{1}, a_{2}, a_{3}, a_{4} \}$を$4$つの定数記号から成る集合，$p,q_{1},q_{2},q_{3}$を正規パターン，$x,x^{\prime},x^{\prime\prime}$を変数記号とする．
+$p,q_{1},q_{2},q_{3}$を以下のように定義する．
+\begin{align*}
+p & = x^{\prime}a_{3}a_{1}a_{4}a_{1}a_{4}a_{1}a_{1}a_{4}a_{1}a_{3}a_{2}a_{1}a_{4}a_{1}a_{4}a_{1}a_{1}a_{4}a_{1}xa_{1}a_{4}a_{1}a_{4}a_{1}a_{1}a_{4}a_{1}a_{3}a_{2}a_{1}a_{4}a_{1}a_{4}a_{1}a_{1}a_{4}a_{1}a_{2}x^{\prime\prime},\\
+q_{1} & = x^{\prime}a_{3}a_{1}a_{4}a_{1}a_{4}a_{1}a_{1}a_{4}a_{1}a_{3}a_{2}a_{1}a_{4}a_{1}a_{4}a_{1}a_{1}a_{4}a_{1}a_{2}x^{\prime\prime},\\
+q_{2} & = x^{\prime}a_{2}a_{1}a_{4}a_{1}a_{4}a_{1}a_{1}a_{4}a_{1}a_{3}x^{\prime\prime},\\
+q_{3} & = x^{\prime}a_{1}a_{1}a_{4}a_{1}a_{4}x^{\prime\prime}.
+\end{align*}
+
+これは，$L(p) \subseteq L(q_{1}) \cup L(q_{2}) \cup L(q_{3})$となる．
+しかし，$p \not \preceq q_{1},~p \not \preceq q_{2}$かつ$p \not \preceq q_{3}$である．
+\end{ex}
+\end{figure*}
+
+定理\ref{非隣接kが4以上}と補題\ref{k+2のとき}より，次の定理が成り立つ．
+
+\begin{thm}
+$\sharp\Sigma \ge k+2$とする．
+このとき，$\RPat^{k}$は包含に関してコンパクト性を持つ．
+\end{thm}

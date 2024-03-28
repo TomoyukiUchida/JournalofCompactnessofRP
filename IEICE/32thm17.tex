@@ -1,0 +1,131 @@
+補題\ref{追加補題1}，補題\ref{補題15}より，次の定理が成り立つ．
+
+\begin{thm}\label{定理17}
+$k \ge 3$，$\sharp \Sigma \ge 2k-1$，$P \in \RPatplus,~Q \in \RPat^{k}$とする．
+このとき，以下の{\rm (i),(ii),(iii)}は同値である．
+\[
+\begin{tabular}{ll}
+$(\mathrm{i})$ $S_{2}(P) \subseteq L(Q)$,
+$(\mathrm{ii})$ $P \sqsubseteq Q$,
+$(\mathrm{iii})$ $L(P) \subseteq L(Q)$.
+\end{tabular}
+\]
+\end{thm}
+
+\begin{proof}
+(ii) $\Rightarrow$ (iii)と(iii) $\Rightarrow$ (i)は自明である．
+定理\ref{定理10}より，$\sharp\Sigma \ge 2k+1$のとき，(i) $\Rightarrow$ (ii)は成り立つ．
+よって，$\sharp Q=k$のとき，$\sharp\Sigma = 2k-1$または$\sharp\Sigma = 2k$の場合，(i) $\Rightarrow$ (ii)が成り立つことを，$p$に含まれる変数記号の数$n$に関する数学的帰納法により証明する．
+
+$n=0$のとき，$S_{2}(p)= \{ p \}$であり，$p \in L(Q)$となる．よって，ある$q \in Q$に対して，$p \preceq q$となる．
+
+$n \ge 0$個の変数記号を含む任意の正規パターンに対して題意が成り立つと仮定する．
+$p$を$S_{2}(p) \subseteq L(Q)$を満たす$n+1$個の変数記号を含む正規パターンとする．
+$p \not \preceq q_{i}$ ($i=1, \ldots, k$)と仮定する．
+$p=p_{1}xp_{2}$ ($p_{1},p_{2}$は正規パターン，$x$は変数記号)，$Q=\{ q_{1}, \ldots , q_{k} \}$を考える．
+$a, b \in \Sigma$に対して，$p_{a}=p \{ x := a \}$と$p_{ab}=p \{ x := ab \}$とおく．
+このとき，$p_{a},p_{ab}$は$n$個の変数記号が含まれ，$S_{2}(p_{a}) \subseteq L(Q)$かつ$S_{2}(p_{ab}) \subseteq L(Q)$が成り立つことに注意する．
+帰納法の仮定より，任意の$a,b \in \Sigma$に対して，$p_{a} \preceq q_{i}$かつ$p_{ab} \preceq q_{i^{\prime}}$を満たすような$i, i^{\prime} \le k$が存在する． 
+$D_{i}=\{ a \in \Sigma \mid p \{ x:=a \} \preceq q_{i} \}$ \ ($i=1, \ldots, k$)とする．
+ある$i$に対して，$\sharp D_{i} \ge 3$であるとき，補題\ref{補題10}より，$p \preceq q_{i}$となる．これは仮定に矛盾する．
+よって，$\sharp D_{i} \le 2$ ($i=1, \ldots, k$)となる場合を考える．
+$\sharp\Sigma = 2k-1$のとき，任意の$i$に対して，$\sharp D_{i}=2$または$\sharp D_{i}=1$，$\sharp\Sigma = 2k$のとき，任意の$i$に対して，$\sharp D_{i}=2$となる．
+$k \ge 3$であるとき，$2k+1 \ge k+2$となる．
+よって，補題\ref{追加補題1}より，$p \{ x:=xy \} \preceq q_{i}$となる$i$が存在する．
+したがって，補題\ref{補題15}より，$p \preceq q_{i}$となる．
+これは仮定に矛盾する．
+  
+以上より，(i) $\Rightarrow$ (ii)が成り立つ．
+\end{proof}
+
+この定理\ref{定理17}より，次の系が得られる．
+
+\begin{col}\label{命題18}
+$k \ge 3$，$\sharp\Sigma \ge 2k-1$，$P \in \mathcal{RP}^{+}$とする．このとき，$S_{2}(P)$は$\mathcal{RPL}^{k}$における$L(P)$の特徴集合である．
+\end{col}
+
+\begin{lem}[Sato et al.\cite{Sato1}]\label{補題19}
+$\sharp\Sigma \le 2k-2$とする．このとき，$\mathcal{RP}^{k}$は包含に関するコンパクト性を持たない．
+\end{lem}
+
+\begin{proof}
+$\Sigma = \{ a_{1}, \ldots , a_{k-1}, b_{1}, \ldots , b_{k-1} \}$を$(2k-2)$個の定数記号から成る集合，$p, q_{i}$を正規パターン，$w_{i}~(i = 1, \ldots , k-1)$を例\ref{例題1}と同様に定義された記号列とする．
+$q_{k} = x_{1}a_{1}w_{1}xyw_{1}b_{1}x_{2}$とする．
+例\ref{例題1}で示した通り，$p \{ x := a_{i} \} \preceq q_{i}$かつ$p \{ x := b_{i} \} \preceq q_{i}~(i=1,2, \ldots ,k-1)$であるとき，$S_{1}(p) \subseteq \bigcup^{k-1}_{i=1} L(q_{i})$となる． 
+一方で，任意の$w$ $(|w| \ge 2)$に対して，$p \{ x:= w \} \preceq q_{k}$となる． 
+すなわち，$L(p) \subseteq L(Q)$である．
+しかし，$p \not \preceq q_{i}$であるため，$L(p) \not \subseteq L(q_{i}) (i=1,2, \ldots k)$である．
+したがって，$\RPatkei$は包含に関するコンパクト性を持たない．
+\end{proof}
+
+定理\ref{定理17}と補題\ref{補題19}より，次の定理が成り立つ．
+
+\begin{thm}
+$k \ge 3$とし，$\sharp\Sigma \ge 2k-1$とする．
+このとき，$\RPat^{k}$は包含に関してコンパクト性を持つ．
+\end{thm}
+
+$k=2$のとき，次の定理が成り立つ．
+
+\begin{thm}\label{補題21}
+$\sharp \Sigma \ge 4$とし，$P \in \RPatplus$，$Q \in \RPat^{2}$とする．
+このとき，以下の{\rm (i),(ii),(iii)}は同値である．
+\[
+\begin{tabular}{ll}
+$(\mathrm{i})$ $S_{2}(P) \subseteq L(Q)$,
+$(\mathrm{ii})$ $P \sqsubseteq Q$,
+$(\mathrm{iii})$ $L(P) \subseteq L(Q)$.
+\end{tabular}
+\]
+\end{thm}
+
+\begin{proof}
+(ii) $\Rightarrow$ (iii)と(iii) $\Rightarrow$ (i)は自明に成り立つ．
+よって，(i) $\Rightarrow$ (ii)が成り立つことを示す．
+$Q= \{ q_{1}, q_{2} \}$とするとき，$p$に含まれる変数記号の数$n$に関する数学的帰納法で示す．\\
+\noindent (1) $n=0$のとき，$p$は定数記号列となるので$S_{2}(p)= \{ p \}$となり
+(i)より，$p \in L(Q)$となる．
+よって，ある$q \in Q$に対して$p \preceq q$となる．\\
+\noindent (2) $n=k$個の変数記号を含むすべての正規パターンに対して有効であると仮定する．
+そして，$p$を$S_{2}(p) \subseteq L(Q)$を満たす$(n+1)$個の変数記号を含む正規パターンとする．
+
+$p \not \preceq q_{i}$ ($i=1, 2$)と仮定する．
+$p=p_{1}xp_{2}$ ($p_{1}, p_{2}$は正規パターン，$x$は変数記号)を考える．
+$a, b \in \Sigma$に対して，$p_{a}=p \{ x := a \}$，$p_{ab}=p \{ x := ab \}$とおく．
+このとき，$p_{a},p_{ab}$は$n$個の変数記号が含まれ，$S_{2}(p_{a}) \subseteq L(Q)$，$S_{2}(p_{ab}) \subseteq L(Q)$が成り立つことに注意する．
+帰納法の仮定より，任意の$a, b \in \Sigma$に対して，$p_{a} \preceq q_{i}, p_{ab} \preceq q_{i^{\prime}}$を満たすような$i, i^{\prime} \le k$が存在する．
+
+ある$i$に対して$\sharp D_{i} \ge 3$のとき，補題\ref{補題10}より，$p \preceq q_{i}$となる．
+よって，任意の$i$に対して，$\sharp D_{i} \le 2$となる．
+したがって，$\sharp D_{1}=2$かつ$\sharp D_{2}=2$となる場合を考える．
+
+$\sharp \Sigma = k+2$であるとき，$k=2$より，$\sharp \Sigma =4$となる．
+よって，補題\ref{追加補題1}より，ある$i$に対して，$p \{ x:=xy \} \preceq q_{i}$となる．
+したがって，補題\ref{補題15}より，$p \preceq q_{i}$となる．
+これは，仮定に矛盾する．
+
+以上より，(i) $\Rightarrow$ (ii)が成り立つ．
+\end{proof}
+
+次の例は，$k = 2$における定理\ref{補題21}の反例である．
+\begin{ex}\label{反例thm17}
+$\Sigma= \{a, b, c \}$を$3$つの定数記号から成る集合，$p,q_{1},q_{2}$を正規パターン，$x,x^{\prime},x^{\prime\prime}$を変数記号とする．
+\begin{eqnarray*}
+p = x^{\prime}axbx^{\prime\prime},
+q_{1} = x^{\prime}abx^{\prime\prime},
+q_{2} = x^{\prime}cx^{\prime\prime}.
+\end{eqnarray*}
+$w \in \Sigma^{+}$とする．$w$に$c$が含まれるとき，$p \{ x:=w \} \preceq q_{2}$となり，$c$が含まれないとき，$p \{ x:=w \} \preceq q_{1}$となる．
+よって，$L(p) \subseteq L(q_{1}) \cup L(q_{2})$である．
+しかし，$p \not \preceq q_{1}$かつ$p \not \preceq q_{2}$である．
+\end{ex}
+
+定理\ref{補題21}より，次の2つの系が成り立つ．
+\begin{col}
+$\sharp\Sigma \ge 4$とし，$P \in \RPatplus$とする．
+このとき，$S_{2}(P)$は，$\RPatL^{2}$における$L(P)$の特徴集合である．
+\end{col}
+
+\begin{col}
+$\sharp\Sigma \ge 4$とする．このとき，クラス$\mathcal{RP}^{2}$は包含に関してコンパクト性を持つ．
+\end{col}

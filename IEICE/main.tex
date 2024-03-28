@@ -15,6 +15,8 @@
 \usepackage[fleqn]{amsmath}
 \usepackage{newtxtext}
 \usepackage[varg]{newtxmath}
+\usepackage{bm}
+\usepackage{comment}
 
 \setcounter{page}{1}
 %\breakauthorline{}% breaks lines after the n-th author
@@ -27,40 +29,62 @@
 %\title[title for header]{title}
 %\titlenote{}
 \authorlist{%
- \authorentry{Naoto Taketa}{}{}\MembershipNumber{}
-\authorentry{Tomoyuki Uchida}{membership}{affiliate label}\MembershipNumber{}
-\authorentry{Takayoshi Shoudai}{membership}{affiliate label}[present affiliate label]\MembershipNumber{}
+\authorentry{Naoto Taketa}{n}{labelA}\MembershipNumber{0000000}
+\authorentry{Tomoyuki Uchida}{m}{labelA}\MembershipNumber{000000}
+\authorentry{Takayoshi Shoudai}{m}{labelB}\MembershipNumber{000000}
+\authorentry{Satoshi Matsumoto}{m}{labelC}\MembershipNumber{00000}
+\authorentry{Yusuke Suzuki}{m}{labelA}\MembershipNumber{00000}
+\authorentry{Tetsuhiro Miyahara}{m}{labelA}\MembershipNumber{000000}
+%\authorentry{Takayoshi Shoudai}{m}{labelB}[present affiliate label]\MembershipNumber{}
 % \authorentry[e-mail address]{name}{membership}{affiliate label}\MembershipNumber{}
 % \authorentry[e-mail address]{name}{membership}{affiliate label}[present affiliate label]\MembershipNumber{}
 }
-\affiliate[affiliate label]{The author is with the 
-}
+\affiliate[labelA]{Graduate School of Information Sciences, Hiroshima City University}
+\affiliate[labelB]{Department of Computer Science and Engineering, Fukuoka
+Institute of Technology}
+\affiliate[labelC]{Faculty of Science, Tokai University}
+%\affiliate[affiliate label]{The author is with the 
+%}
 %\paffiliate[present affiliate label]{Presently, the author is with the }
 
 \received{2015}{1}{1}
 \revised{2015}{1}{1}
 
 %% <local definitions here>
-
+\input{localenv.sty}
 %% </local definitions here>
 
 \begin{document}
 \maketitle
-\begin{summary}
 
-\end{summary}
-\begin{keywords}
+% abst
+\input{00summary}
+% keywords
+\input{01keywords}
 
-\end{keywords}
+% intro
+\input{10intro}
+%\section{}
 
-\section{}
+% prelim
+\input{21prelim}
 
+\input{22prelim}
 
-%\bibliographystyle{ieicetr}% bib style
+\input{31compactness}
+\input{32thm17}
+
+\input{40navrp}
+
+\input{50concl}
+
+\input{60ack}
+\bibliographystyle{ieicetr}% bib style
 %\bibliography{}% your bib database
-\begin{thebibliography}{99}% more than 9 --> 99 / less than 10 --> 9
-\bibitem{}
-\end{thebibliography}
+\input{LA-summer.bib}
+%\begin{thebibliography}{99}% more than 9 --> 99 / less than 10 --> 9
+%\bibitem{}
+%\end{thebibliography}
 
 %\profile{}{}
 %\profile*{}{}% without picture of author's face
