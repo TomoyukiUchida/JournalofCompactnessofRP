@@ -1,0 +1,601 @@
+This is e-pTeX, Version 3.141592653-p4.1.0-230214-2.6 (utf8.sjis) (TeX Live 2023) (preloaded format=platex 2024.2.3)  15 APR 2024 23:01
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**c:/Users/uchida/Documents/GitHub/JournalofCompactnessofRP/IEICE/main.tex
+(c:/Users/uchida/Documents/GitHub/JournalofCompactnessofRP/IEICE/main.tex
+pLaTeX2e <2023-02-14>+1 (based on LaTeX2e <2022-11-01> patch level 1)
+L3 programming layer <2023-02-22> (./ieice.cls
+Document Class: ieice 2016/03/25 v2.2 for Transactions of IEICE
+\c@@paper=\count184
+\tn@cnt=\count185
+\@authorlist=\toks17
+\@authorcnt=\count186
+\total@mbr=\count187
+\@alcnt=\count188
+\p@alcnt=\count189
+\chk@al@cnt=\count190
+\chk@p@al@cnt=\count191
+\@authorcnt@p@ne=\count192
+\totalnumberm@ne=\count193
+\authorlistlength=\dimen156
+\c@section=\count194
+\c@subsection=\count195
+\c@subsubsection=\count196
+\c@paragraph=\count197
+\c@subparagraph=\count198
+\@hlskip=\skip48
+\verbatimleftmargin=\dimen157
+\verbatimbaselineskip=\dimen158
+\c@figure=\count199
+\c@table=\count266
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\capwidth=\dimen159
+\bibindent=\dimen160
+\c@profile=\count267
+(c:/texlive/2023/texmf-dist/tex/latex/yafoot/pfnote.sty
+Package: pfnote 2018/09/03 v1.1 
+\pfn@fnotectr=\count268
+\pfn@page=\count269
+\pfn@pageprev=\count270
+)
+\@minsofar=\count271
+\@min=\count272
+\@cite@temp=\count273
+\mathindent=\dimen161
+) (c:/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+) (c:/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (c:/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvipdfmx.def on input line 107.
+ (c:/texlive/2023/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+File: dvipdfmx.def 2022/09/22 v5.0m Graphics/color driver for dvipdfmx
+))
+\Gin@req@height=\dimen162
+\Gin@req@width=\dimen163
+) (c:/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+ (c:/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: dvipdfmx.def on input line 227.
+ (c:/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+) (c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen164
+)) (c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen165
+) (c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count274
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count275
+\leftroot@=\count276
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count277
+\DOTSCASE@=\count278
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box68
+\strutbox@=\box69
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen166
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count279
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count280
+\dotsspace@=\muskip16
+\c@parentequation=\count281
+\dspbrk@lvl=\count282
+\tag@help=\toks20
+\row@=\count283
+\column@=\count284
+\maxfields@=\count285
+\andhelp@=\toks21
+\eqnshift@=\dimen167
+\alignsep@=\dimen168
+\tagshift@=\dimen169
+\tagwidth@=\dimen170
+\totwidth@=\dimen171
+\lineht@=\dimen172
+\@envbody=\toks22
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (c:/texlive/2023/texmf-dist/tex/latex/newtx/newtxtext.sty
+Package: newtxtext 2022/02/28 v1.71(Michael Sharpe) latex and unicode latex support for TeXGyreTermesX
+ `newtxtext' v1.71, 2022/02/28 Text macros taking advantage of TeXGyre Termes and its extensions (msharpe) (c:/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+) (c:/texlive/2023/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+ (c:/texlive/2023/texmf-dist/tex/generic/xkeyval/xkeyval.tex (c:/texlive/2023/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks24
+\XKV@tempa@toks=\toks25
+)
+\XKV@depth=\count286
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (c:/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count287
+) (c:/texlive/2023/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+) (c:/texlive/2023/texmf-dist/tex/generic/xstring/xstring.sty (c:/texlive/2023/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count288
+\decimalpart=\count289
+)
+Package: xstring 2023/01/14 v1.85 String manipulations (CT)
+) (c:/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (c:/texlive/2023/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+LaTeX Font Info:    Setting ntxLF sub-encoding to TS1/0 on input line 21.
+LaTeX Font Info:    Setting ntxTLF sub-encoding to TS1/0 on input line 21.
+LaTeX Font Info:    Setting ntxOsF sub-encoding to TS1/0 on input line 21.
+LaTeX Font Info:    Setting ntxTOsF sub-encoding to TS1/0 on input line 21.
+ (c:/texlive/2023/texmf-dist/tex/generic/kastrup/binhex.tex)
+\ntx@tmpcnta=\count290
+\ntx@cnt=\count291
+
+ntx@otftextfalse
+(c:/texlive/2023/texmf-dist/tex/latex/fontaxes/fontaxes.sty
+Package: fontaxes 2020/07/21 v1.0e Font selection axes
+LaTeX Info: Redefining \upshape on input line 29.
+LaTeX Info: Redefining \itshape on input line 31.
+LaTeX Info: Redefining \slshape on input line 33.
+LaTeX Info: Redefining \swshape on input line 35.
+LaTeX Info: Redefining \scshape on input line 37.
+LaTeX Info: Redefining \sscshape on input line 39.
+LaTeX Info: Redefining \ulcshape on input line 41.
+LaTeX Info: Redefining \textsw on input line 47.
+LaTeX Info: Redefining \textssc on input line 48.
+LaTeX Info: Redefining \textulc on input line 49.
+)
+LaTeX Info: Redefining \oldstylenums on input line 657.
+) (c:/texlive/2023/texmf-dist/tex/latex/newtx/newtxmath.sty
+Package: newtxmath 2022/01/16 v1.71
+ `newtxmath' v1.71, 2022/01/16 Math macros based originally on txfonts (msharpe) (c:/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+) (c:/texlive/2023/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+) (c:/texlive/2023/texmf-dist/tex/latex/oberdiek/centernot.sty
+Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
+)
+\tx@cntz=\count292
+ (c:/texlive/2023/texmf-dist/tex/generic/kastrup/binhex.tex)
+\tx@Isdigit=\count293
+\tx@IsAlNum=\count294
+\tx@tA=\toks26
+\tx@tB=\toks27
+\tx@su=\read2
+
+amsthm NOT loaded
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 376.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/minntx/m/n on input line 376.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/minntx/m/n on input line 376.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/minntx/m/n --> OT1/minntx/b/n on input line 377.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 383.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/qhv/m/n on input line 383.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/qhv/m/n on input line 383.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 384.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/minntx/m/it on input line 384.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/minntx/m/it on input line 384.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 385.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/ntxtt/m/n on input line 385.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/ntxtt/m/n on input line 385.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 387.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/minntx/b/n on input line 387.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/minntx/b/n on input line 387.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/minntx/m/it --> OT1/minntx/b/it on input line 388.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/qhv/m/n --> OT1/qhv/b/n on input line 389.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/ntxtt/m/n --> OT1/ntxtt/b/n on input line 390.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 491.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ntxmi/m/it on input line 491.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ntxmi/m/it on input line 491.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/ntxmi/m/it --> OML/ntxmi/b/it on input line 492.
+\symlettersA=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lettersA' in version `bold'
+(Font)                  U/ntxmia/m/it --> U/ntxmia/b/it on input line 547.
+Now handling font encoding LMS ...
+... no UTF-8 mapping file for font encoding LMS
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 568.
+LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 568.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> LMS/ntxsy/m/n on input line 568.
+LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 568.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> LMS/ntxsy/m/n on input line 568.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  LMS/ntxsy/m/n --> LMS/ntxsy/b/n on input line 569.
+\symAMSm=\mathgroup5
+LaTeX Font Info:    Overwriting symbol font `AMSm' in version `bold'
+(Font)                  U/ntxsym/m/n --> U/ntxsym/b/n on input line 594.
+\symsymbolsC=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `bold'
+(Font)                  U/ntxsyc/m/n --> U/ntxsyc/b/n on input line 615.
+Now handling font encoding LMX ...
+... no UTF-8 mapping file for font encoding LMX
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 628.
+LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 628.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 628.
+LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 628.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 628.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  LMX/ntxexx/m/n --> LMX/ntxexx/b/n on input line 629.
+\symlargesymbolsTXA=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `largesymbolsTXA' in version `bold'
+(Font)                  U/ntxexa/m/n --> U/ntxexa/b/n on input line 643.
+\tx@sbptoks=\toks28
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 866.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 867.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 868.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 869.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 870.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 871.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 872.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 874.
+LaTeX Font Info:    Redeclaring math delimiter \arrowvert on input line 878.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 879.
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 925.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 950.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 951.
+LaTeX Font Info:    Redeclaring math accent \vec on input line 2020.
+LaTeX Info: Redefining \Bbbk on input line 2810.
+LaTeX Info: Redefining \not on input line 2959.
+) (c:/texlive/2023/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2022/01/05 v1.2f Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup8
+\symboldletters=\mathgroup9
+\symboldsymbols=\mathgroup10
+\symboldlargesymbols=\mathgroup11
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+) (c:/texlive/2023/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write3
+ Excluding comment 'comment')
+\@toksi=\toks29
+\@toksii=\toks30
+ (./localenv.sty
+\c@dfn=\count295
+\c@thm=\count296
+\c@lem=\count297
+\c@col=\count298
+\c@ex=\count299
+\c@cl=\count300
+)
+LaTeX Font Info:    Trying to load font information for OT1+ntxtlf on input line 57.
+ (c:/texlive/2023/texmf-dist/tex/latex/newtx/ot1ntxtlf.fd
+File: ot1ntxtlf.fd 2021/05/24 v1.0 font definition file for OT1/ntx/tlf
+)
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 10.0pt on input line 57.
+ (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2023-01-16 L3 backend support: dvips
+\l__pdf_internal_box=\box70
+\g__pdf_backend_object_int=\count301
+\l__pdf_backend_content_box=\box71
+\l__pdf_backend_model_box=\box72
+\g__pdf_backend_annotation_int=\count302
+\g__pdf_backend_link_int=\count303
+\g__pdf_backend_link_sf_int=\count304
+) (out/main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 57.
+LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 57.
+ (c:/texlive/2023/texmf-dist/tex/latex/newtx/omlntxmi.fd
+File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
+)
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 57.
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 57.
+ (c:/texlive/2023/texmf-dist/tex/latex/newtx/untxexa.fd
+File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
+)
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 57.
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 57.
+ (c:/texlive/2023/texmf-dist/tex/latex/newtx/lmsntxsy.fd
+File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
+)
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 57.
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 57.
+ (c:/texlive/2023/texmf-dist/tex/latex/newtx/lmxntxexx.fd
+File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
+)
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Info: Command `\dddot' is already robust on input line 57.
+LaTeX Info: Command `\ddddot' is already robust on input line 57.
+\c@mv@tabular=\count305
+\c@mv@boldtabular=\count306
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 17.28pt on input line 58.
+LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <17.28> not available
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 58.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 58.
+LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <17.28> not available
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 58.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 58.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 17.28pt on input line 58.
+LaTeX Font Info:    Trying to load font information for OT1+minntx on input line 58.
+ (c:/texlive/2023/texmf-dist/tex/latex/newtx/ot1minntx.fd
+File: ot1minntx.fd 2022/01/20 v1.0 font definition file for OT1/minntx
+)
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 58.
+ (c:/texlive/2023/texmf-dist/tex/latex/newtx/untxmia.fd
+File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
+)
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 58.
+ (c:/texlive/2023/texmf-dist/tex/latex/newtx/untxsym.fd
+File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
+)
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 58.
+ (c:/texlive/2023/texmf-dist/tex/latex/newtx/untxsyc.fd
+File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
+)
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 12.0pt on input line 58.
+LaTeX Font Info:    Trying to load font information for OT1+qhv on input line 58.
+ (c:/texlive/2023/texmf-dist/tex/latex/tex-gyre/ot1qhv.fd
+File: ot1qhv.fd 2009/09/25 v1.2 font definition file for OT1/qhv
+)
+LaTeX Font Info:    Font shape `OT1/qhv/m/n' will be
+(Font)              scaled to size 11.28003pt on input line 58.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 9.0pt on input line 58.
+LaTeX Font Info:    Font shape `OT1/qhv/m/n' will be
+(Font)              scaled to size 8.46002pt on input line 58.
+LaTeX Font Info:    Font shape `JT1/mc/m/sl' in size <9> not available
+(Font)              Font shape `JT1/mc/m/n' tried instead on input line 58.
+LaTeX Font Info:    Font shape `JY1/mc/m/sl' in size <9> not available
+(Font)              Font shape `JY1/mc/m/n' tried instead on input line 58.
+
+
+LaTeX Font Warning: Font shape `OT1/qhv/m/sl' in size <9> not available
+(Font)              Font shape `OT1/qhv/m/it' tried instead on input line 58.
+
+LaTeX Font Info:    Font shape `OT1/qhv/m/it' will be
+(Font)              scaled to size 8.46002pt on input line 58.
+LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <10> not available
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 58.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 58.
+LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <10> not available
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 58.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 58.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 10.0pt on input line 58.
+LaTeX Font Info:    Kanji font shape `JY1/mc/b/it' undefined
+(Font)              No change on input line 58.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/it' will be
+(Font)              scaled to size 10.0pt on input line 58.
+LaTeX Font Info:    Kanji font shape `JY1/mc/b/it' undefined
+(Font)              No change on input line 58.
+LaTeX Font Info:    Kanji font shape `JY1/mc/b/it' undefined
+(Font)              No change on input line 58.
+LaTeX Font Info:    Kanji font shape `JY1/mc/b/it' undefined
+(Font)              No change on input line 58.
+LaTeX Font Info:    Kanji font shape `JY1/mc/b/it' undefined
+(Font)              No change on input line 58.
+LaTeX Font Info:    Kanji font shape `JY1/mc/b/it' undefined
+(Font)              No change on input line 58.
+LaTeX Font Info:    Kanji font shape `JY1/mc/b/it' undefined
+(Font)              No change on input line 58.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 7.0pt on input line 58.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 58.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 7.3pt on input line 58.
+LaTeX Font Info:    Calculating math sizes for size <7.3> on input line 58.
+(./00summary.tex
+LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <8> not available
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <8> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <8> not available
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <8> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 8.0pt on input line 1.
+) (./01keywords.tex
+LaTeX Font Info:    Font shape `JT1/mc/m/it' in size <8> not available
+(Font)              Font shape `JT1/mc/m/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `JY1/mc/m/it' in size <8> not available
+(Font)              Font shape `JY1/mc/m/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/it' will be
+(Font)              scaled to size 8.0pt on input line 1.
+
+
+LaTeX Font Warning: Font shape `JY1/mc/b/it' undefined
+(Font)              using `JY1/mc/bx/it' instead on input line 1.
+
+LaTeX Font Info:    Font shape `JT1/mc/bx/it' in size <8> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `JY1/mc/bx/it' in size <8> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/it' will be
+(Font)              scaled to size 8.0pt on input line 1.
+) (./10intro.tex
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 62.
+ (c:/texlive/2023/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
+File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
+)
+LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
+(Font)              scaled to size 10.0pt on input line 62.
+ [1
+
+
+]) (./21prelim.tex) (./22prelim.tex [2]
+Overfull \hbox (57.6805pt too wide) in paragraph at lines 109--116
+[][][][] []\OT1/minntx/m/n/10 ($\OML/ntxmi/m/it/10 q[]; q[]; q[]; q[]$
+ []
+
+Excluding 'comment' comment.) (./31compactness.tex [3]
+Overfull \hbox (18.48895pt too wide) detected at line 41
+ $[][][]$ 
+ []
+
+
+Overfull \hbox (14.2539pt too wide) detected at line 83
+ $[][][]$ 
+ []
+
+File: figs/Cases-abc.png Graphic file (type bmp)
+<figs/Cases-abc.png>
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 5.5pt on input line 111.
+[4]
+File: figs/Cases-d.png Graphic file (type bmp)
+<figs/Cases-d.png>
+ [5] [6]
+File: figs/Pre-Suff.png Graphic file (type bmp)
+<figs/Pre-Suff.png>
+File: figs/ConstantSeq.png Graphic file (type bmp)
+<figs/ConstantSeq.png>
+File: figs/w_n=1.png Graphic file (type bmp)
+<figs/w_n=1.png>
+File: figs/w_n=2.png Graphic file (type bmp)
+<figs/w_n=2.png>
+File: figs/w_n=3.png Graphic file (type bmp)
+<figs/w_n=3.png>
+ [7]
+File: figs/wgewprime+3.png Graphic file (type bmp)
+<figs/wgewprime+3.png>
+File: figs/w=w_1.png Graphic file (type bmp)
+<figs/w=w_1.png>
+File: figs/w=w_1+1.png Graphic file (type bmp)
+<figs/w=w_1+1.png>
+File: figs/w=w_1+2.png Graphic file (type bmp)
+<figs/w=w_1+2.png>
+File: figs/w=2w_1.png Graphic file (type bmp)
+<figs/w=2w_1.png>
+File: figs/w=2w_1+1.png Graphic file (type bmp)
+<figs/w=2w_1+1.png>
+File: figs/w=2w_1+2.png Graphic file (type bmp)
+<figs/w=2w_1+2.png>
+File: figs/w=2w_1+3.png Graphic file (type bmp)
+<figs/w=2w_1+3.png>
+File: figs/w=2w_1+4.png Graphic file (type bmp)
+<figs/w=2w_1+4.png>
+ [8]
+File: figs/w1+3.png Graphic file (type bmp)
+<figs/w1+3.png>
+File: figs/2w1+5.png Graphic file (type bmp)
+<figs/2w1+5.png>
+
+Overfull \hbox (4.76515pt too wide) in paragraph at lines 693--696
+[]\OT1/ntxtlf/b/n/10 (a) \JY1/mc/m/n/10 記号列 $\OML/ntxmi/m/it/10 A; B; C$ \JY1/mc/m/n/10 に対して ， $\LMS/ntxsy/m/n/10 f\OML/ntxmi/m/it/10 A; B; C\LMS/ntxsy/m/n/10 g \U/ntxmia/m/it/10 = \LMS/ntxsy/m/n/10 f\OML/ntxmi/m/it/10 y[]a; bc; dy[]\LMS/ntxsy/m/n/10 g$
+ []
+
+[9]
+File: figs/Exam_b=a_c=d.png Graphic file (type bmp)
+<figs/Exam_b=a_c=d.png>
+ Excluding 'comment' comment.
+File: figs/ComparingBipartiteGraph.png Graphic file (type bmp)
+<figs/ComparingBipartiteGraph.png>
+File: figs/Exam-BipartiteGraph-Corollary.png Graphic file (type bmp)
+<figs/Exam-BipartiteGraph-Corollary.png>
+ [10] [11]
+File: figs/BipartiteGraph-diff-ab.png Graphic file (type bmp)
+<figs/BipartiteGraph-diff-ab.png>
+File: figs/BipartiteGraph-NumEdges-3.png Graphic file (type bmp)
+<figs/BipartiteGraph-NumEdges-3.png>
+ [12]
+File: figs/Exam-Cases-(2).png Graphic file (type bmp)
+<figs/Exam-Cases-(2).png>
+File: figs/Exam-BipartiteGraph.png Graphic file (type bmp)
+<figs/Exam-BipartiteGraph.png>
+ [13] [14] [15]) (./32thm17.tex) (./40navrp.tex [16]) (./50concl.tex) (./60ack.tex) (./LA-summer.bib) [17] [18
+
+] (out/main.aux) ) 
+Here is how much of TeX's memory you used:
+ 6989 strings out of 476693
+ 96907 string characters out of 5808558
+ 1892203 words of memory out of 5000000
+ 27277 multiletter control sequences out of 15000+600000
+ 585849 words of font info for 174 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 55i,14n,62p,533b,547s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on out/main.dvi (18 pages, 183008 bytes).
