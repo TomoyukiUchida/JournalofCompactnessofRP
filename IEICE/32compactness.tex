@@ -1,6 +1,6 @@
 
 \begin{lem}\label{片方}
-Let $\sharp \Sigma \ge 3$ and let $p,~q$ be regular patterns.
+Let $\sharp \Sigma \ge 3$ and $p,~q$ regular patterns on $\Sigma$.
 Suppose that the finite set $D$ of regular patterns is one of the following {\rm (i), (ii)}.
 Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.
 \begin{enumerate}
@@ -93,26 +93,24 @@ This contradicts the assumption.
 In this case, by reversing the strings $p$ and $q$, we can prove that the assumption $p \{ x := xy \} \preceq q$ is contradicted, as in the case of \textrm{(i)}.
 \end{proof}
 
-補題\ref{追加部分}，補題\ref{片方}より，次の系が得られる．
+From Lemmas \ref{追加部分} and \ref{片方}, we obtain the following corollary:
 
 \begin{col}\label{両方}
-$\sharp \Sigma \ge 3$とし，$p, q$を正規パターンとする．
-正規パターンの有限集合$D= \{ ya, bc, dy \}$ $(b = a$かつ$c = d)$で表されるとき，任意の$r \in D$に対して$p \{ x := r \} \preceq q$ならば，$p \{ x := xy \} \not \preceq q$となる$q$が存在する．
+  Let $\sharp \Sigma \ge 3$ and $p, q$ regular patterns on $\Sigma$.
+  For a variable symbol $y$, if $D= \{ ya, bc, dy \}$ $(b = a$ and $c = d)$, there exists $q$ such that $p \{ x := r \} \preceq q$ for any $r \in D$, then $p \{ x := xy \} \not \preceq q$.
 \end{col}
 \begin{ex}
-$a,b,c,d,e$を定数記号，$x,y,y_{1},y_{2}$を変数記号とする．
-$p \{ x:=xy \} \not \preceq q$となる正規パターン$p,q$を$p=eabcbcadabcbcadaxbcadadabcbcadade,~q=y_{1}abcbcadabcbcadady_{2}$ $(b = a$かつ$c = d)$とする．
-\end{ex}
+Let $a,b,c,d,e$ be constant symbols in $\Sigma$ and 
+$x,y,y_{1},y_{2}$ variable symbols.
+Let 
+\begin{align*}
+p &= eabcbcadabcbcadaxbcadadabcbcadade,\\
+q &= y_{1}abcbcadabcbcadady_{2}~~~~~(b = a\mbox{~and~}c = d).
+\end{align*}
 
-%\begin{figure}[H]
-\begin{figure}
-\includegraphics[width=\linewidth]{figs/Exam_b=a_c=d.png}
-%\vspace{-1cm}
-\caption{$p$に対する代入と$q$の関係}
-\label{b=aとc=dの例}
-\end{figure}
-
-このとき，図\ref{b=aとc=dの例}のように，
+\noindent
+Obviously $p \{ x:=xy \} \not \preceq q$ holds.
+For these $p$ and $q$, the condition for Corollary \ref{両方} holds as follows (see also Fig.~\ref{b=aとc=dの例}):
 \begin{eqnarray*}
 &p& \{ x:=ya \} \\ 
 & = & (eabcbcadabcbcaday)abcadadabcbcadade\\
@@ -127,12 +125,19 @@ $p \{ x:=xy \} \not \preceq q$となる正規パターン$p,q$を$p=eabcbcadabcb
 & = & q \{ y_{2} := y_{2}bcadadabcbcadade \} \\
 & \preceq & q.
 \end{eqnarray*}
-となる．
-これは，系\ref{両方}の条件を満たす．
+\end{ex}
+
+\begin{figure}[t]
+\includegraphics[width=\linewidth]{figs/Exam_b=a_c=d.png}
+\caption{Substitutions for $p$ and each relation to $q$.}
+\label{b=aとc=dの例}
+\end{figure}
+
 \begin{comment}
 \begin{lem}\label{追加補題2}
-$\sharp \Sigma \ge 3$とし，$p, q$を正規パターンとする．
-正規パターンの有限集合$D= \{ ya，ab，by，cd \}$ $(cd \not = ab)$で表されるとき，すべての$r \in D$に対して$p \{ x := r \} \preceq q$ならば，$p \{ x := xy \} \preceq q$である．
+Let $\sharp \Sigma \ge 3$ and $p, q$ regular patterns on $\Sigma$.
+Let $D= \{ ya，ab，by，cd \}$ $(cd \not = ab)$ be a set consisting of constant symbols $a,b,c,d$ in $\Sigma$ and a variable symbol $y$.
+If for all $r \in D$, $p \{ x := r \} \preceq q holds, then $p \{ x := xy \} \preceq q$ holds.
 \end{lem}
 \begin{proof}
 $p$に変数記号が現れない場合は自明である．
@@ -152,14 +157,14 @@ $c \not = a$かつ$d = b$，または，$c = a$かつ$d \not = b$であるとき
 %\end{lem}
 
 \begin{lem}\label{追加補題1}
-$\sharp \Sigma \ge k+2$，$p \in \RPat$，$Q \in \RPat^{k}$とする．
-任意の定数記号$a, b \in \Sigma$に対し，ある正規パターン$q \in Q$が存在し，
-$p \{ x:=ab \} \preceq q$ならば，$p \{ x:=xy \} \preceq q$となる．
+Let $\sharp \Sigma \ge k+2$ for $k\geq 1$. Let $p,q$ be regular patterns with $p \in \RPat$ and $Q \in \RPat^{k}$.
+For any constant symbols $a, b \in \Sigma$, there exists a regular pattern $q \in Q$ such that if $p \{ x:=ab \} \preceq q$ holds, then $p \{ x:=xy \} \preceq q$ holds.
 \end{lem}
 \begin{proof}
-$p$に変数記号が現れない場合は自明である．
-したがって，$p=p_{1}xp_{2}$ ($p_{1},p_{2}$は正規パターン，$x$は変数記号)とおく．
-また，$Q=\{ q_{1}, \ldots , q_{k} \}$とする．次のように記号を定める．
+If no variable symbol appears in $p$, this lemma is obvious.
+For regular patterns $p_{1},p_{2}\in \RPat$ and a variable symbol $x$, let $p=p_{1}xp_{2}$.
+And let $Q=\{ q_{1}, \ldots , q_{k} \}\in \RPat^{k}$.
+The notations are defined as follows:
 \begin{align*}
 & A_{i} = \{ a \in \Sigma \mid p \{ x:=ay \} \preceq q_{i},\ y\in X\},\\ 
 & B_{i} = \{ b \in \Sigma \mid p \{ x:=yb \} \preceq q_{i},\ y\in X\},\\ 
@@ -171,7 +176,7 @@ $p$に変数記号が現れない場合は自明である．
 & \tilde{B}^{\prime} = \{ b \mid b \in \tilde{\Sigma} \setminus \tilde{B} \}~~(i=1, \ldots , k).
 \end{align*}
 
-$p \{ x:=xy \} \not \preceq q_{i}$ \ ($i=1, \ldots , k$)と仮定する．
+Assume that $p \{ x:=xy \} \not \preceq q_{i}$ \ ($i=1, \ldots , k$) holds.
 
 $k=1$のとき，$p \{ x:=a_{1}a_{i} \} \preceq q_{1}$かつ$p \{ x:=a_{2}a_{i} \} \preceq q_{1}$ ($i=1,2,3$)となる．
 $p^{\prime} = p \{ x:=a_{1}y \} = p_{1}a_{1}yp_{2}$とおくと，$p \{ x:=a_{1}a_{i} \} \preceq q_{1}$より，$p^{\prime} \{ y:=a_{i} \} \preceq q_{1}$となる．
@@ -199,10 +204,10 @@ $\textbf{(2)}$ $\sharp A = k-1$かつ$\sharp \tilde{B} \le k-1$,\\
 $\textbf{(3)}$ $\sharp A \le k-2$かつ$\sharp \tilde{B} \le k-2$,
 \end{tabular}
 \]
-\begin{figure*}
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\linewidth]{figs/ComparingBipartiteGraph.png}
-\vspace{-1cm}
+%\vspace{-1cm}
 \caption{(1-1)，(1-2)，(1-3)の例}
 \label{グラフ比較}
 \end{figure*}
@@ -224,10 +229,10 @@ $\sharp A = k$かつ$\sharp \tilde{B} = k$であるとき，
 $p \{ x:=ya_{i} \} \preceq q_{i}$かつ$p \{ x:=a_{i}y \} \preceq q_{i}$ $(i=3,\ldots,k)$とし，$p \{ x:=a_{j}y \} \preceq q_{j}$かつ$p \{ x:=ya_{k+j} \} \preceq q_{j}$ $(j=1,2)$とする．
 
 %\begin{figure}[H]
-\begin{figure}  
+\begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{figs/Exam-BipartiteGraph-Corollary.png}
-\vspace{-1cm}
+%\vspace{-1cm}
 \caption{系\ref{両方}の条件に当てはまるパターンにおける二分グラフの例}
 \label{系との関係}
 %\vspace*{-.5cm}
@@ -244,10 +249,10 @@ $G$に含まれる辺は，4本であるため，残り$4-2=2$本の辺は$\tild
 $\sharp A = k$かつ$\sharp \tilde{B} < k$であるとき，$\sharp A_{i}=1$かつ$\sharp B_{i}=0$となる$i$が存在する．
 
 %\begin{figure}[H]
-\begin{figure}
+\begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{figs/BipartiteGraph-diff-ab.png}
-\vspace{-1cm}
+%\vspace{-1cm}
 \caption{$\sharp A_{k} =1$かつ$\sharp B_{k}=1$の場合と$\sharp A_{k}=1$かつ$\sharp B_{k}=0$の場合の$G$に含まれる辺数の違い}
 \label{abが異なる場合}
 \end{figure}
@@ -278,10 +283,10 @@ ${G}^{(k,~k-2)}$の部分グラフ$\tilde{G}^{(1,~0)}_{k-1}$と$\tilde{G}^{(1,~0
 %よって，$p \{ x:=xy \} \not \preceq q_{i}$ $(i=1,\ldots,k)$となる．
 
 %\begin{figure}[H]
-\begin{figure}
+\begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{figs/BipartiteGraph-NumEdges-3.png}
-\vspace*{-1cm}
+%\vspace*{-1cm}
 \caption{辺数が3である二分グラフの例}
 \label{辺3におけるパターン}
 \end{figure}
@@ -317,10 +322,10 @@ $G$に$4$本の辺が含まれるため，$p \{ x:=a_{k+1}a_{k+1} \} \preceq q_{
 よって，任意の$i$に対して，$a_{k+1} \not = a_{i}$となる．
 補題\ref{追加部分}より，$p \{ x:=xy \} \preceq q_{i_{0}}$となり，仮定に矛盾する.
 
-\begin{figure*}
+\begin{figure*}[t]
 \centering
 \includegraphics[width=\linewidth]{figs/Exam-Cases-(2).png}
-\vspace*{-1cm}
+%\vspace*{-1cm}
 \caption{(2-1)，(2-2)，(2-3)，(2-4)の例}
 \label{(2)におけるパターン}
 \end{figure*}
@@ -349,10 +354,10 @@ $\tilde{G}_{i}$ $(i=4, \ldots, k-1)$のいずれかに，辺が1本以上含ま�
 したがって，$\tilde{G}_{k}$に含まれる頂点の次数は2以下となる．
 
 %\begin{figure}[H]
-\begin{figure}
+\begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{figs/Exam-BipartiteGraph.png}
-\vspace*{-1cm}
+%\vspace*{-1cm}
 \caption{辺数が5である二分グラフの例（各頂点の次数は2以下）}
 \label{辺5本の場合}
 \end{figure}
@@ -442,5 +447,9 @@ $\sharp \Sigma \ge 3$とし，$p,q$を正規パターンとする．
 $p \{ x := a \} \preceq q$かつ$p \{ x := xy \} \preceq q$ならば$p \preceq q$である．
 ただし，$y$は$q$に含まれない変数記号である．
 \end{lem}
+
+\hfill Edited by Takayoshi Shoudai.
+\hrule
+\bigskip
 
 %\input{sec3thm.tex}
