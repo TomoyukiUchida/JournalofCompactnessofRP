@@ -1,96 +1,96 @@
 
 \begin{lem}\label{片方}
-Let $\sharp \Sigma \ge 3$ and let $p,~q$ be regular patterns.
-Suppose that the finite set $D$ of regular patterns is one of the following {\rm (i), (ii)}.
-Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.
-\begin{enumerate}
-\item[{\rm (i)}] $D=\{ ya, bc, dy \}$ $(b = a,~c \not = a,d,\mbox{~and~} b \not = d)$,
-\item[{\rm (ii)}] $D=\{ ya, bc, dy \}$ $(b \not = a,d,~c = d,\mbox{~and~} c \not = a)$.
-\end{enumerate}
+$\sharp \Sigma \ge 3$とし，$p,~q$を正規パターンとする．
+正規パターンの有限集合$D$が，次の{\rm (i), (ii)}のいずれかで表されるとき，すべての$r \in D$に対して$p \{ x := r \} \preceq q$ならば，$p \{ x := xy \} \preceq q$である．
+
+\begin{description}
+\item[{\rm (i)}] $\{ ya, bc, dy \}$ $(b = a,~c \not = a,d,~b \not = d)$,
+\item[{\rm (ii)}] $\{ ya, bc, dy \}$ $(b \not = a,d,~c = d,~c \not = a)$.
+\end{description}
 \end{lem}
 \begin{proof}
+$p$に変数記号が現れない場合は自明である．
+したがって，$p=p_{1}xp_{2}$ ($p_{1}, p_{2}$は正規パターン, $x$は変数記号)とおく．$p \{ x := xy \} \not \preceq q$と仮定して，矛盾を導く．
 
-It is obvious if no variable symbol appears in $p$.
-Therefore, let $p=p_{1}xp_{2}$ ($p_{1}, p_{2}$ are regular patterns and $x$ is a variable symbol). Assume that $p \{ x := xy \} \not \preceq q$ and derive the contradiction.
+\noindent\textbf{(i)}
+$D=\{ ya, bc, dy \}$ $(b = a,~c \not = a,d,~b \not = d)$であるとする．
+すべての$r \in D$に対して$p \{ x := r \} \preceq q$であるから
+正規パターン$q$には，$ya, bc, dy$に対応する3つの長さ2の記号列が存在する．
+その3つの記号列は一部を重複して現れることがあることに注意する．$D$の3つの記号列に対応する$q$の記号列の現れ方には次の3通り存在する．
 
-\noindent\textrm{(i)}
-Let $D=\{ ya, bc, dy \}$ $(b = a,~c \not = a,d,\mbox{~and~}b \not = d)$.
-Since $p \{ x := r \} \preceq q$ for all $r \in D$, there are three strings of length $2$ corresponding to $ya, bc, dy$ in $q$. Note that the three strings may appear partly overlapping.
-The symbols appearing in $D$ corresponds to a variable or a constant in $q$.
-Let $y_{1}, y_{2}, y_{3}$ be variable symbols appearing in $q$.
-The strings $ya$ and $dy$ must correspond to the strings $y_{1}a$ and $dy_{3}$ in $q$, respectively.
-There are the following three possibilities of strings in $q$ which corresponds to $bc$ in $p\{x:=bc\}$.
-\begin{center}
-\begin{tabular}{cccccc}
-\textrm{(a)} & $bc$, &
-\textrm{(b)} & $y_{2}c$, &
-\textrm{(c)} & $by_{2}$.
-\end{tabular}
-\end{center}
+\begin{description}
+\item[(a)] $y_{1}a, bc, dy_{2}$,
+\item[(b)] $y_{1}a, y_{2}c, dy_{3}$,
+\item[(c)] $y_{1}a, by_{2}, dy_{3}$.
+\end{description}
 
-\textrm{(a)}
-Let $A,B,C$ be strings where $\{ A,B,C \} = \{ y_{1}a,bc,dy_{3} \}$ and let $q=q_{1}AwBw^{\prime}Cq_{2}$.
-Since $p \{ x := r \} \preceq q$ for all $r \in D$ and $p \{ x := xy \} \not \preceq q$ hold, the following conditions hold:
+\textbf{(a)}
+記号列$A,B,C$に対して，$\{ A,B,C \} = \{ y_{1}a,bc,dy_{2} \}$とおき，$q=q_{1}AwBw^{\prime}Cq_{2}$とする．
+これに対して，次の式が成り立っているものとする．
 \begin{align*}
 (1)~& p_{1} \preceq q_{1} & (1')~& p_{2} \preceq wBw^{\prime}Cq_{2} \\
 (2)~& p_{1} \preceq q_{1}Aw & (2')~& p_{2} \preceq w^{\prime}Cq_{2} \\
 (3)~& p_{1} \preceq q_{1}AwBw^{\prime} & (3')~& p_{2} \preceq q_{2}
 \end{align*}
 
-Let $q^{\prime}_{1}=q_{1}A,~q^{\prime}_{2}=wBw^{\prime},~q^{\prime}_{3}=Cq_{2}$. From $(3)$ and $(1')$, we have $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2},~p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$.
-From Lemma \ref{補題9}, if $q^{\prime}_{2}$ contains a variable, $p \preceq q$ holds.
-Therefore, $B$ must be $bc$.
-If $A=dy_{3}$, from $(2)$, $p_{1} \preceq q_{1}dy_{3}w$ holds.
-Let $p_{1}=p^{\prime}_{1}p^{\prime\prime}_{1}, p^{\prime}_{1} \preceq q_{1}d$, and $p^{\prime\prime}_{1} \preceq y_{3}w$.
-From $(1')$, we have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xwbcw^{\prime}y_{1}aq_{2}=q \{ x:=p^{\prime\prime}_{1}x \}$. This shows that there is a substitution $\theta$ such that $p=q\theta$ holds, and this contradicts to the assumption. Therefore, we only need to consider the case where $A=y_{1}a,B=bc$, and $C=dy_{3}$.
+$q^{\prime}_{1}=q_{1}A,~q^{\prime}_{2}=wBw^{\prime},~q^{\prime}_{3}=Cq_{2}$とおくと，(3)と(1')より，$p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2},~p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$となる．
+補題\ref{補題9}より，$q^{\prime}_{2}$に変数が含まれるとき，$p \preceq q$となる．
+よって，$B=y_{1}a$または，$B=dy_{2}$である場合，仮定に矛盾する．
+したがって，$B=bc$である場合のみを考える．
 
-From the above, we consider two cases: one in which the symbols overlap and the other in which they do not.
-\smallskip
+$A=dy_{2}$とすると，(2)は$p_{1} \preceq q_{1}dy_{2}w$となる．
+$p_{1}=p^{\prime}_{1}p^{\prime\prime}_{1}, p^{\prime}_{1} \preceq q_{1}d$かつ$p^{\prime\prime}_{1} \preceq y_{2}w$とおくと，(1')より，$p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xwbcw^{\prime}y_{1}aq_{2}=q \{ x:=p^{\prime\prime}_{1}x \}$となり，$p=q\theta$となる．
+これは仮定に矛盾する．
+したがって，$A=y_{1}a,B=bc,C=dy_{2}$である場合のみ考えればよい．
 
-\begin{tabular}{cl}
-\textrm{(a-1)} & $q=q_{1}y_{1}awbcw^{\prime}dy_{3}q_{2}$,\\
-\textrm{(a-2)} & $q=q_{1}y_{1}acwdy_{3}q_{2}$~~($a=b$).
-\end{tabular}
-\smallskip
+以上より，記号列が重複する場合を考慮して，次の2つの場合に分けて証明する．
 
-\textrm{(a-1)}
-From the proof of Lemma \ref{追加部分}, $p \{ x:= xy \} \preceq q$ holds.
-Therefore, it contradicts the assumption.
+\begin{description}
+\item[(a-1)] $q=q_{1}y_{1}awbcw^{\prime}dy_{2}q_{2}$,
+\item[(a-2)] $q=q_{1}y_{1}acwdy_{2}q_{2}$ ($a=b$),
+\end{description}
 
-\textrm{(a-2)}
-Let $q=q_{1}y_{1}acwdy_{3}q_{2}$ ($a=b$).
-For this $q$, the following conditions hold:
+%$p \{ x:=ya \} \preceq q$かつ$p \{ x:=bc \} \preceq q$かつ$p \{ x:=dy \} \preceq q$ならば，
+\textbf{(a-1)}
+補題\ref{追加部分}の証明より，$p \{ x:= xy \} \preceq q$となる．
+よって，仮定に矛盾する．
+
+\textbf{(a-2)}
+$q=q_{1}y_{1}acwdy_{2}q_{2}$ ($a=b$)とする．
+この$q$に対して，次の式が成り立っているものとする．
 \begin{align*}
-(1)~& p_{1} \preceq q_{1} & (1')~& p_{2} \preceq cwdy_{3}q_{2} \\
-(2)~& p_{1} \preceq q_{1}y_{1} & (2')~& p_{2} \preceq wdy_{3}q_{2} \\
-(3)~& p_{1} \preceq q_{1}y_{1}acwdy_{3} & (3')~& p_{2} \preceq q_{2}
+(1)~& p_{1} \preceq q_{1} & (1')~& p_{2} \preceq cwdy_{2}q_{2} \\
+(2)~& p_{1} \preceq q_{1}y_{1} & (2')~& p_{2} \preceq wdy_{2}q_{2} \\
+(3)~& p_{1} \preceq q_{1}y_{1}acwdy_{2} & (3')~& p_{2} \preceq q_{2}
 \end{align*}
 
-%
-If $|w|=0$, from $(1')$ and $(2')$, the prefix of $p_{2}$ is $cd$ and $d$.
-Therefore, $c=d$. This contradicts the fact that $c \not = d$.
+$|w|=0$であれば，(1')と(2')より，$p_{2}$の接頭辞は$cd$かつ$d$となる．
+よって，$c=d$となる．
+これは，$c \not = d$であることに矛盾する．
 
-If $|w|=1$, from (1') and (2'), the prefix of $p_{2}$ is $cwd$ and $wd$.
-Therefore, $w=c=d$.
-This contradicts to the fact that $c \not = d$.
+$|w|=1$であれば，(1')と(2')より，$p_{2}$の接頭辞は$cwd$かつ$wd$となる．
+よって，$w=c=d$となる．
+これは，$c \not = d$であることに矛盾する．
 
-If $|w| \ge 2$, then from $(1')$ and $(2')$,  prefixes of $p_{2}$ is $cwd$ and $wd$.
-Let $w$ be $w_{1}w_{2}w_{3} \cdots w_{n-1}w_{n}$ $(n\geq 2,~w_{i}\in\Sigma$ for $i=1, \ldots , n)$.
-From $cw=wd$, a prefix of $w$ is $c$ and a suffix of $w$ is $d$.
-Therefore, we have $w=cw_{2}w_{3} \cdots w_{n-1}d$.
-Since $cw=cw_{2}w_{3} \cdots w_{n-1}d,~wd=cw_{2}w_{3} \cdots w_{n-1}dd$, from $cw=wd$, $w_{i}=w_{i+1}$ holds for $i=2, \ldots , n-2$.
-Therefore, $c=d$. This contradicts to the fact that $c \not = d$.
+$|w| \ge 2$であれば，(1')と(2')より，$p_{2}$の接頭辞は$cwd$かつ$wd$となる．
+長さ$n$の$w$を$w_{1}w_{2}w_{3} \cdots w_{n-1}w_{n}$ $(w_{i}$ $(i=1, \ldots , n)$は定数記号$)$とする．
+$cw=wd$より，$w$の接頭辞は$c$，$w$の接尾辞は$d$となる．
+よって，$cw_{2}w_{3} \cdots w_{n-1}d$となる．
+$cw=ccw_{2}w_{3} \cdots w_{n-1}d,~wd=cw_{2}w_{3} \cdots w_{n-1}dd$であるから，$cw=wd$より，$w_{i}=w_{i+1}$ $(i=2, \ldots , n-2)$となる．
+したがって，$c=d$となる．
+これは，$c \not = d$であることに矛盾する．
 
-\textrm{(b)}
-Let $q=q_{1}AwBw^{\prime}Cq_{2}$ where $\{ A,B,C \} = \{ y_{1}a,y_{2}c,dy_{3} \}$, and let $q=q_{1}AwBw^{\prime}Cq_{2}$.
-Since $c \not = a$ holds, $q$ have a substring that is corresponding to (i-2) of Lemma~\ref{変数2つ}.
-Therefore, $p \{ x:= xy \} \preceq q$ holds.
-This contradicts the assumption. 
+\textbf{(b)}の記号列を含む正規パターン$q$は，
+$c \not = a$より，補題\ref{変数2つ}(i-2)に対応する記号列が現れる．
+よって，$p \{ x:= xy \} \preceq q$となる．
+これは，仮定に矛盾する．
 
-\textrm{(c)} As in (b), this contradicts to the assumption.
+\textbf{(c)}の記号列を含む正規パターン$q$は，
+$b \not = d$より，補題\ref{変数2つ}(i-1)に対応する記号列が現れる．
+よって，$p \{ x:= xy \} \preceq q$となる．
 
-\noindent\textrm{(ii)}
-In this case, by reversing the strings $p$ and $q$, we can prove that the assumption $p \{ x := xy \} \preceq q$ is contradicted, as in the case of \textrm{(i)}.
+\noindent\textbf{(ii)}
+$D=\{ ya, bc, dy \} \ (b \not = a,d,~c = d$かつ$c \not = a)$のときは，記号列$p$と$q$を逆順にすることにより，\textbf{(ii)}の場合と同様に， 仮定$p \{ x := xy \} \not\preceq q$に矛盾することを証明できる．
 \end{proof}
 
 補題\ref{追加部分}，補題\ref{片方}より，次の系が得られる．
@@ -107,7 +107,7 @@ $p \{ x:=xy \} \not \preceq q$となる正規パターン$p,q$を$p=eabcbcadabcb
 %\begin{figure}[H]
 \begin{figure}
 \includegraphics[width=\linewidth]{figs/Exam_b=a_c=d.png}
-%\vspace{-1cm}
+\vspace{-1cm}
 \caption{$p$に対する代入と$q$の関係}
 \label{b=aとc=dの例}
 \end{figure}
