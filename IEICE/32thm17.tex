@@ -39,7 +39,7 @@ we have the following theorem.
     Let $\sharp Q = k$, $p \in P$, $\sharp\Sigma = 2k-1$ or $2k$.
     Then, we show that (i) implies (ii).
     It suffices to show that $S_{2}(p) \subseteq L(Q)$ implies $P \sqsubseteq Q$
-    for any regular pattern $p \in P$.
+    for any regular pattern $p \in \RPat$.
     The proof is done by mathematical induction on $n$, where $n$ is the number of variable symbols appears in $p$.
 
     % よって，$\sharp Q=k$のとき，$\sharp\Sigma = 2k-1$または$\sharp\Sigma = 2k$の場合，
@@ -121,7 +121,7 @@ From Theorem~\ref{定理17}, the following corollary holds.
 \begin{col}\label{命題18}
     Let $k \geq 3$, $\sharp\Sigma \geq 2k-1$ and $P \in \RPatplus$.
     %このとき，$S_{2}(P)$は$\mathcal{RPL}^{k}$における$L(P)$の特徴集合である．
-    Then, $S_{2}(P)$ is a characteristic set for $L(P)$.
+    Then, $S_{2}(P)$ is a characteristic set for $L(P)$ within $\RPatLkei$.
 \end{col}
 
 % \begin{lem}[Sato et al.\cite{Sato1}]\label{補題19}
@@ -148,6 +148,7 @@ From Theorem~\ref{定理17}, the following corollary holds.
 %     しかし，$p \not \preceq q_{i}$であるため，$L(p) \not \subseteq L(q_{i}) (i=1,2, \ldots k)$である．
 %     したがって，$\RPatkei$は包含に関するコンパクト性を持たない．
 % \end{proof}
+
 \begin{lem}[Mukouchi\cite{Mukouchi1991}]\label{regularPatternEquivalence}
     Let $p$ and $q$ be regular patterns.
     Then $p \preceq q$ if and only if $L(p) \subseteq L(q)$.
@@ -209,7 +210,7 @@ In case $k=2$, we have the following theorem.
     Let $\sharp\Sigma \geq 4$, $P \in \RPatplus$ and $Q \in \RPat^{2}$.
     %$\sharp \Sigma \ge 4$とし，$P \in \RPatplus$，$Q \in \RPat^{2}$とする．
     %このとき，以下の{\rm (i),(ii),(iii)}は同値である． 
-    The following (i), (ii) and (iii) are equivalence:
+    The following (i), (ii) and (iii) are equivalent:
     \[
         \mathrm{(i)}\ S_{2}(P) \subseteq L(Q),\ \
         \mathrm{(ii)}\ P \sqsubseteq Q, \ \
@@ -217,53 +218,152 @@ In case $k=2$, we have the following theorem.
     \]
 \end{thm}
 
+% \begin{proof}
+%     (ii) $\Rightarrow$ (iii)と(iii) $\Rightarrow$ (i)は自明に成り立つ．
+%     よって，(i) $\Rightarrow$ (ii)が成り立つことを示す．
+%     $Q= \{ q_{1}, q_{2} \}$とするとき，$p$に含まれる変数記号の数$n$に関する数学的帰納法で示す．\\
+%     \noindent (1) $n=0$のとき，$p$は定数記号列となるので$S_{2}(p)= \{ p \}$となり
+%     (i)より，$p \in L(Q)$となる．
+%     よって，ある$q \in Q$に対して$p \preceq q$となる．\\
+%     \noindent (2) $n=k$個の変数記号を含むすべての正規パターンに対して有効であると仮定する．
+%     そして，$p$を$S_{2}(p) \subseteq L(Q)$を満たす$(n+1)$個の変数記号を含む正規パターンとする．
+
+%     $p \not \preceq q_{i}$ ($i=1, 2$)と仮定する．
+%     $p=p_{1}xp_{2}$ ($p_{1}, p_{2}$は正規パターン，$x$は変数記号)を考える．
+%     $a, b \in \Sigma$に対して，$p_{a}=p \{ x := a \}$，$p_{ab}=p \{ x := ab \}$とおく．
+%     このとき，$p_{a},p_{ab}$は$n$個の変数記号が含まれ，$S_{2}(p_{a}) \subseteq L(Q)$，$S_{2}(p_{ab}) \subseteq L(Q)$が成り立つことに注意する．
+%     帰納法の仮定より，任意の$a, b \in \Sigma$に対して，$p_{a} \preceq q_{i}, p_{ab} \preceq q_{i^{\prime}}$を満たすような$i, i^{\prime} \le k$が存在する．
+
+%     ある$i$に対して$\sharp D_{i} \ge 3$のとき，補題\ref{補題10}より，$p \preceq q_{i}$となる．
+%     よって，任意の$i$に対して，$\sharp D_{i} \le 2$となる．
+%     したがって，$\sharp D_{1}=2$かつ$\sharp D_{2}=2$となる場合を考える．
+
+%     $\sharp \Sigma = k+2$であるとき，$k=2$より，$\sharp \Sigma =4$となる．
+%     よって，補題\ref{追加補題1}より，ある$i$に対して，$p \{ x:=xy \} \preceq q_{i}$となる．
+%     したがって，補題\ref{補題15}より，$p \preceq q_{i}$となる．
+%     これは，仮定に矛盾する．
+
+%     以上より，(i) $\Rightarrow$ (ii)が成り立つ．
+% \end{proof}
+
 \begin{proof}
-    (ii) $\Rightarrow$ (iii)と(iii) $\Rightarrow$ (i)は自明に成り立つ．
-    よって，(i) $\Rightarrow$ (ii)が成り立つことを示す．
-    $Q= \{ q_{1}, q_{2} \}$とするとき，$p$に含まれる変数記号の数$n$に関する数学的帰納法で示す．\\
-    \noindent (1) $n=0$のとき，$p$は定数記号列となるので$S_{2}(p)= \{ p \}$となり
-    (i)より，$p \in L(Q)$となる．
-    よって，ある$q \in Q$に対して$p \preceq q$となる．\\
-    \noindent (2) $n=k$個の変数記号を含むすべての正規パターンに対して有効であると仮定する．
-    そして，$p$を$S_{2}(p) \subseteq L(Q)$を満たす$(n+1)$個の変数記号を含む正規パターンとする．
-
-    $p \not \preceq q_{i}$ ($i=1, 2$)と仮定する．
-    $p=p_{1}xp_{2}$ ($p_{1}, p_{2}$は正規パターン，$x$は変数記号)を考える．
-    $a, b \in \Sigma$に対して，$p_{a}=p \{ x := a \}$，$p_{ab}=p \{ x := ab \}$とおく．
-    このとき，$p_{a},p_{ab}$は$n$個の変数記号が含まれ，$S_{2}(p_{a}) \subseteq L(Q)$，$S_{2}(p_{ab}) \subseteq L(Q)$が成り立つことに注意する．
-    帰納法の仮定より，任意の$a, b \in \Sigma$に対して，$p_{a} \preceq q_{i}, p_{ab} \preceq q_{i^{\prime}}$を満たすような$i, i^{\prime} \le k$が存在する．
-
-    ある$i$に対して$\sharp D_{i} \ge 3$のとき，補題\ref{補題10}より，$p \preceq q_{i}$となる．
-    よって，任意の$i$に対して，$\sharp D_{i} \le 2$となる．
-    したがって，$\sharp D_{1}=2$かつ$\sharp D_{2}=2$となる場合を考える．
-
-    $\sharp \Sigma = k+2$であるとき，$k=2$より，$\sharp \Sigma =4$となる．
-    よって，補題\ref{追加補題1}より，ある$i$に対して，$p \{ x:=xy \} \preceq q_{i}$となる．
-    したがって，補題\ref{補題15}より，$p \preceq q_{i}$となる．
+    It is clear that (ii) implies (iii), and (iii) implies (i).
+    %(ii) $\Rightarrow$ (iii)と(iii) $\Rightarrow$ (i)は自明に成り立つ．
+    Thus, we show that (i) implies (ii).
+    %よって，(i) $\Rightarrow$ (ii)が成り立つことを示す．
+    It suffices to show that $S_{2}(p) \subseteq L(Q)$ implies $P \sqsubseteq Q$
+    for any regular pattern $p \in \RPat$.
+    Let $Q = \{q_{1}, q_{2}\}$.
+    The proof is done by mathematical induction on $n$,
+    where $n$ is the number of variable symbols appearing in $p$.
+    % $Q= \{ q_{1}, q_{2} \}$とするとき，
+    % $p$に含まれる変数記号の数$n$に関する数学的帰納法で示す．\\
+    In case $n=0$, $p \in \Sigma^{+}$.
+    Since $S_{2}(p) = \{p\} \subseteq L(Q)$, we have $p \preceq q$
+    for some $q \in Q$.
+    % \noindent (1) $n=0$のとき，$p$は定数記号列となるので$S_{2}(p)= \{ p \}$となり
+    % (i)より，$p \in L(Q)$となる．
+    % よって，ある$q \in Q$に対して$p \preceq q$となる．\\
+    For $n \geq 0$, we assume that it is valid for any regular pattern $p$ with
+    $n$ variable symbols.
+    % \noindent (2) $n=k$個の変数記号を含むすべての正規パターンに対して有効であると仮定する．
+    Let $p$ be a regular pattern such that $n+1$ variable symbols appear in $p$,
+    ans $S_{2}(p) \subseteq L(Q)$.
+    % そして，$p$を$S_{2}(p) \subseteq L(Q)$を満たす
+    % $(n+1)$個の変数記号を含む正規パターンとする．
+    We assume that $p \not\preceq q_{i}$ ($i=1,2$).
+    Let $p_{1}$, $p_{2}$ be regular patterns and $x$ a variable symbol
+    with $p = p_{1}xp_{2}$.
+    %$p \not \preceq q_{i}$ ($i=1, 2$)と仮定する．
+    %$p=p_{1}xp_{2}$ ($p_{1}, p_{2}$は正規パターン，$x$は変数記号)を考える．
+    For $a, b \in \Sigma$,
+    let $p_{a} = p\{x:=a\}$ and $p_{ab} = p\{x:=ab\}$.
+    % $a, b \in \Sigma$に対して，$p_{a}=p \{ x := a \}$，
+    % $p_{ab}=p \{ x := ab \}$とおく．
+    Note that $p_{a}$ and $p_{ab}$ have $n$ variable symbols.
+    %このとき，$p_{a},p_{ab}$は$n$個の変数記号が含まれ，
+    Thus, by the assumption,
+    $S_{2}(p_{a}) \subseteq L(Q)$ and $S_{2}(p_{ab}) \subseteq L(Q)$
+    implies $p_{a} \preceq q_{i}$ and $p_{ab} \preceq q_{i'}$ for some
+    $i, i' \in \{1,2\}$.
+    % $S_{2}(p_{a}) \subseteq L(Q)$，$S_{2}(p_{ab}) \subseteq L(Q)$
+    % が成り立つことに注意する．
+    % 帰納法の仮定より，
+    % 任意の$a, b \in \Sigma$に対して，
+    % $p_{a} \preceq q_{i}, p_{ab} \preceq q_{i^{\prime}}$を満たすような
+    % $i, i^{\prime} \le k$が存在する．
+    %
+    Let $D_{i} = \{a \in \Sigma \mid p\{x:=a\} \preceq q_{i}\}$ $(i=1,2)$.
+    By Lemma~\ref{補題10}, if $\sharp D_{i} \geq 3$ for some $i \in \{1,2\}$,
+    then $p \preceq q_{i}$.
+    % ある$i$に対して$\sharp D_{i} \ge 3$のとき，補題\ref{補題10}より，
+    % $p \preceq q_{i}$となる．
+    This contradicts that $p \not\preceq q_{i}$ $(i=1,2)$.
+    Thus, we have $\sharp D_{i} \leq 2$ for any $i \in \{1,2\}$.
+    %よって，任意の$i$に対して，$\sharp D_{i} \le 2$となる．
+    Since $\sharp \Sigma \geq 4$,
+    %したがって，$\sharp D_{1}=2$かつ$\sharp D_{2}=2$となる場合を考える．
+    We consider that $\sharp D_{1}=2$ and $\sharp D_{2} = 2$.
+    %$\sharp \Sigma = k+2$であるとき，$k=2$より，$\sharp \Sigma =4$となる．
+    From Lemma~\ref{追加補題1}, $p\{x:=xy\} \preceq q_{i}$ for some $i \in \{1,2\}$.
+    % よって，補題\ref{追加補題1}より，ある$i$に対して，
+    % $p \{ x:=xy \} \preceq q_{i}$となる．
+    From Lemma~\ref{補題15}, we have $p \preceq q_{i}$ for some $i \in \{1,2\}$.
+    %したがって，補題\ref{補題15}より，$p \preceq q_{i}$となる．
     これは，仮定に矛盾する．
-
-    以上より，(i) $\Rightarrow$ (ii)が成り立つ．
+    This contradicts that $p \not\preceq q_{i}$ ($i=1,2$).
+    Therefore, (i) implies (ii).
+    %以上より，(i) $\Rightarrow$ (ii)が成り立つ．
 \end{proof}
 
-次の例は，$k = 2$における定理\ref{補題21}の反例である．
+%次の例は，$k = 2$における定理\ref{補題21}の反例である．
+The next example is a counter-example of Theorem~\ref{補題21}.
+
+% \begin{ex}\label{反例thm17}
+%     $\Sigma= \{a, b, c \}$を$3$つの定数記号から成る集合，$p,q_{1},q_{2}$を正規パターン，$x,x^{\prime},x^{\prime\prime}$を変数記号とする．
+%     \begin{eqnarray*}
+%         p = x^{\prime}axbx^{\prime\prime},
+%         q_{1} = x^{\prime}abx^{\prime\prime},
+%         q_{2} = x^{\prime}cx^{\prime\prime}.
+%     \end{eqnarray*}
+%     $w \in \Sigma^{+}$とする．$w$に$c$が含まれるとき，$p \{ x:=w \} \preceq q_{2}$となり，$c$が含まれないとき，$p \{ x:=w \} \preceq q_{1}$となる．
+%     よって，$L(p) \subseteq L(q_{1}) \cup L(q_{2})$である．
+%     しかし，$p \not \preceq q_{1}$かつ$p \not \preceq q_{2}$である．
+% \end{ex}
+
 \begin{ex}\label{反例thm17}
-    $\Sigma= \{a, b, c \}$を$3$つの定数記号から成る集合，$p,q_{1},q_{2}$を正規パターン，$x,x^{\prime},x^{\prime\prime}$を変数記号とする．
-    \begin{eqnarray*}
-        p = x^{\prime}axbx^{\prime\prime},
-        q_{1} = x^{\prime}abx^{\prime\prime},
-        q_{2} = x^{\prime}cx^{\prime\prime}.
-    \end{eqnarray*}
-    $w \in \Sigma^{+}$とする．$w$に$c$が含まれるとき，$p \{ x:=w \} \preceq q_{2}$となり，$c$が含まれないとき，$p \{ x:=w \} \preceq q_{1}$となる．
-    よって，$L(p) \subseteq L(q_{1}) \cup L(q_{2})$である．
-    しかし，$p \not \preceq q_{1}$かつ$p \not \preceq q_{2}$である．
+    % $\Sigma= \{a, b, c \}$を$3$つの定数記号から成る集合，
+    % $p,q_{1},q_{2}$を正規パターン，
+    % $x,x^{\prime},x^{\prime\prime}$を変数記号とする．
+    Let $\Sigma = \{a,b,c\}$, $p$, $q_{1}$, $q_{2}$ regular patterns and
+    $x,x',x''$ variable symbols such that
+    $p = x'axbx''$, $q_{1} = x'abx''$ and $q_{2} = x'cx''$.
+    Let $w \in \Sigma^{+}$.
+    If $w$ contains $c$, then $p \{x:=w\} \preceq q_{2}$.
+    On the other hand, if $w$ does not contain $c$,
+    then $p\{x:=w\} \preceq q_{1}$.
+    Thus, $L(p) \subseteq L(q_{1}) \cup L(q_{2})$.
+    However, $p \not\preceq q_{1}$ and $p \not\preceq q_{2}$.
 \end{ex}
 
-定理\ref{補題21}より，次の2つの系が成り立つ．
-\begin{col}
-    $\sharp\Sigma \ge 4$とし，$P \in \RPatplus$とする．
-    このとき，$S_{2}(P)$は，$\RPatL^{2}$における$L(P)$の特徴集合である．
-\end{col}
+From Theorem~\ref{補題21}, we have that following two corollaries.
+
+% \begin{col}
+%     $\sharp\Sigma \ge 4$とし，$P \in \RPatplus$とする．
+%     このとき，$S_{2}(P)$は，$\RPatL^{2}$における$L(P)$の特徴集合である．
+% \end{col}
 
 \begin{col}
-    $\sharp\Sigma \ge 4$とする．このとき，クラス$\mathcal{RP}^{2}$は包含に関してコンパクト性を持つ．
+    Let $\sharp\Sigma \geq 4$ and $P \in \RPatplus$.
+    Then, $S_{2}(P)$ is a characteristic set for $L(P)$ within $\RPatL^{2}$.
+    %このとき，$S_{2}(P)$は，$\RPatL^{2}$における$L(P)$の特徴集合である．
+\end{col}
+
+% \begin{col}
+%     $\sharp\Sigma \ge 4$とする．このとき，クラス$\mathcal{RP}^{2}$は包含に関してコンパクト性を持つ．
+% \end{col}
+
+\begin{col}
+    Let $\sharp\Sigma \geq 4$.
+    Then, $\RPat^{2}$ has compactness with respect to containment.
 \end{col}
