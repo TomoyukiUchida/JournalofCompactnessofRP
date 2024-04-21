@@ -114,7 +114,7 @@ For these $p$ and $q$, the condition for Corollary \ref{両方} holds as follows
 \begin{eqnarray*}
 &p& \{ x:=ya \} \\ 
 & = & (eabcbcadabcbcaday)abcadadabcbcadade\\
-& = & q \{ y_{1} := eabcbcadabcbcaday_{1} \} \\
+& = & q \{ y_{1} := eabcbcadabcbcaday,~y_{2}:=e \} \\
 & \preceq & q,\\
 &p& \{ x:=bc \}  \\
 & = & (eabcbcad)abcbcadabcbcadad(abcbcadade) \\
@@ -122,14 +122,14 @@ For these $p$ and $q$, the condition for Corollary \ref{両方} holds as follows
 & \preceq & q,\\
 &p& \{ x:=dy \}  \\
 & = & eabcbcadabcbcadad(ybcadadabcbcadade) \\
-& = & q \{ y_{2} := y_{2}bcadadabcbcadade \} \\
+& = & q \{ y_{1}:=e,~y_{2} := ybcadadabcbcadade \} \\
 & \preceq & q.
 \end{eqnarray*}
 \end{ex}
 
 \begin{figure}[t]
 \includegraphics[width=\linewidth]{figs/Exam_b=a_c=d.png}
-\caption{Substitutions for $p$ and each relation to $q$.}
+\caption{Substitutions for $p$ and each correspondence to $q$.}
 \label{b=aとc=dの例}
 \end{figure}
 
@@ -178,7 +178,7 @@ The notations are defined as follows:
 & \tilde{B}^{\prime} = \{ b \mid b \in \tilde{\Sigma} \setminus \tilde{B} \}~~(i=1, \ldots , k).
 \end{align*}
 
-Assume that $p \{ x:=xy \} \not \preceq q_{i}$ \ ($i=1, \ldots , k$) holds.
+%Assume that $p \{ x:=xy \} \not \preceq q_{i}$ \ ($i=1, \ldots , k$) holds.
 
 When $k=1$, $p \{ x:=a_{1}a_{i} \} \preceq q_{1}$ and $p \{ x:=a_{2}a_{i} \} \preceq q_{1}$ ($i=1,2,3$) hold.
 Let $p^{\prime} = p \{ x:=a_{1}y \} = p_{1}a_{1}yp_{2}$.
@@ -187,29 +187,39 @@ From Lemma \ref{Sato1:Lemma10}, this fact implies that $p^{\prime} \preceq q_{1}
 Therefore, we have $p \{ x:=a_{1}y \} \preceq q_{1}$.
 Similarly, we have  $p \{ x:=a_{2}y \} \preceq q_{1}$.
 From Lemma \ref{変数2つ}, we have $p \{ x:= xy \} \preceq q_{1}$.
-This contradicts the assumption.
-
-
+%This contradicts the assumption.
 
 When $k \ge 2$, let $G=(\Sigma,\tilde{\Sigma}; A^{\prime} \times \tilde{B}^{\prime})$ be a bipartite graph whose parts are $\Sigma$ and $\tilde{\Sigma}$ and whose edge set is $A^{\prime}\times\tilde{B}^{\prime}$.
 Moreover, let $\tilde{G}_{i}=(\Sigma,\tilde{\Sigma}; \tilde{E}_{i})$ be a bipartite graph whose parts are $\Sigma$ and $\tilde{\Sigma}$ and whose edge set is $\tilde{E}_{i}=\{ (a, \tilde{b}) \in A^{\prime} \times \tilde{B}^{\prime} \mid p \{ x:=ab \} \preceq q_{i} \}$.
 %
 If there exists a positive integer $i\geq 1$ such that $\sharp A_{i} \ge 2$ or $\sharp B_{i} \ge 2$, from Lemma \ref{変数2つ}, $p \{ x:=xy \} \preceq q_{i}$ holds.
-This contradicts the assumption. Thus, for any $i$ ($i=1, \ldots , k$), $\sharp A_{i} \le 1$ and $\sharp B_{i} \le 1$ hold.
+%This contradicts the assumption.
+Thus, we prove the statement when for any $i$ ($i=1, \ldots , k$), $\sharp A_{i} \le 1$ and $\sharp B_{i} \le 1$ hold.
+From the above, we obtain the following facts:
 
-\bigskip
-
-また，$0 \le \sharp A \le k$かつ$0 \le \sharp\tilde{B} \le k$となり，$2 \le \sharp A^{\prime} \le k+2$かつ$2 \le \sharp \tilde{B}^{\prime} \le k+2$となる．
-$\sharp A=k$かつ$\sharp \tilde{B}=k$である$G$を$G^{(k,~k)}$と表し，$\sharp A_{i}=1$かつ$\sharp B_{i}=1$である$\tilde{G}_{i}$を$\tilde{G}^{(1,~1)}_{i}$と表す．
-
-$\sharp A$と$\sharp \tilde{B}$の関係を，次の3つの場合に分けて証明する．
-\[
-\begin{tabular}{ll}
-$\textbf{(1)}$ $\sharp A=k$かつ$\sharp \tilde{B} \le k$,\\
-$\textbf{(2)}$ $\sharp A = k-1$かつ$\sharp \tilde{B} \le k-1$,\\
-$\textbf{(3)}$ $\sharp A \le k-2$かつ$\sharp \tilde{B} \le k-2$,
+\begin{tabular}{l}
+$0 \le \sharp A \le k$,~~$0 \le \sharp\tilde{B} \le k$,\\
+$2 \le \sharp A^{\prime} \le k+2$, and $2 \le \sharp \tilde{B}^{\prime} \le k+2$.
 \end{tabular}
-\]
+
+\noindent
+$G^{(k,~k)}$ denotes $G$ that satisfies $\sharp A=k$ and $\sharp \tilde{B}=k$.
+Furthermore, $\tilde{G}^{(1,~1)}_{i}$ denotes $\tilde{G}_{i}$ that satisfies $\sharp A_{i}=1$ and $\sharp B_{i}=1$.
+%
+Depending on $\sharp A$ and $\sharp \tilde{B}$, we divide the case of $k\ge 2$ into the following five subcases:
+\smallskip
+
+\begin{tabular}{ll}
+\textrm{(1)} & $\sharp A=k$ and $\sharp \tilde{B} \le k$,\\
+\textrm{(2)} & $\sharp A = k-1$ and $\sharp \tilde{B} \le k-1$,\\
+\textrm{(3)} & $\sharp A \le k-2$ and $\sharp \tilde{B} \le k-2$,\\
+\textrm{(4)} & $\sharp A \le k$ and $\sharp \tilde{B} = k$,\\
+\textrm{(5)} & $\sharp A \le k - 1$ and $\sharp \tilde{B} = k - 1$.
+\end{tabular}
+%\smallskip
+
+\noindent
+Below we prove (1)--(3). The subcases (4) and (5) can be proven in a similar way to (1) and (2), respectively.
 
 \newdimen\mywidth
 \mywidth=\textwidth
@@ -224,21 +234,52 @@ $\textbf{(3)}$ $\sharp A \le k-2$かつ$\sharp \tilde{B} \le k-2$,
 \label{グラフ比較}
 \end{figure*}
 
-\noindent\textbf{(1)} 
-$\sharp A=k$かつ$\sharp \tilde{B} \le k$であるとき，$\sharp A^{\prime}=2$かつ$\sharp \tilde{B}^{\prime} \ge 2$となる．
-このとき，$G$には少なくとも$\sharp A^{\prime} \times \sharp \tilde{B}^{\prime}=2\times2=4$本の辺が含まれる．
-図\ref{グラフ比較}のように，$| A^{\prime} \cap B^{\prime} |$の関係は，3種類に分けられる．
-よって，以下のように，場合分けして証明する．
-\[
-\begin{tabular}{ll}
-$\textbf{(1-1)}$ $| A^{\prime} \cap B^{\prime} | = 0$，$\textbf{(1-2)}$ $| A^{\prime} \cap B^{\prime} | = 1$，\\
-$\textbf{(1-3)}$ $| A^{\prime} \cap B^{\prime} | = 2$.
-\end{tabular}
-\]
+\begin{enumerate}
+\item[\textrm{(1)}] 
+When $\sharp A=k$ and $\sharp \tilde{B} \le k$, we have $\sharp A^{\prime}=2$ and $\sharp \tilde{B}^{\prime} \ge 2$.
+In this case, $G$ has at least $\sharp A^{\prime} \times \sharp \tilde{B}^{\prime}=2\times2=4$ edges.
+Depending on $\sharp( A^{\prime} \cap B^{\prime} )$, we divide the case \textrm{(1)} into the following three subcases:
+\smallskip
 
-\textbf{(1-1)} 
-$\sharp A = k$かつ$\sharp \tilde{B} = k$であるとき，
-$p \{ x:=ya_{i} \} \preceq q_{i}$かつ$p \{ x:=a_{i}y \} \preceq q_{i}$ $(i=3,\ldots,k)$とし，$p \{ x:=a_{j}y \} \preceq q_{j}$かつ$p \{ x:=ya_{k+j} \} \preceq q_{j}$ $(j=1,2)$とする．
+\begin{tabular}{llll}
+\textrm{(1-1)} & $\sharp( A^{\prime} \cap B^{\prime} ) = 0$,&
+\textrm{(1-2)} & $\sharp( A^{\prime} \cap B^{\prime} ) = 1$,\\
+\textrm{(1-3)} & $\sharp( A^{\prime} \cap B^{\prime} ) = 2$.
+\end{tabular}
+%\smallskip
+
+\begin{enumerate}
+\item[\textrm(1-1)]
+When $\sharp A = \sharp \tilde{B} = k$ with $\sharp( A^{\prime} \cap B^{\prime} ) = 0$, w.l.o.g., we let $A'=\{a_{k+1},a_{k+2}\}$ and $B'=\{a_{1},a_{2}\}$ (see Fig.~\ref{グラフ比較} (1-1)).
+Since $\sharp A = \sharp B = \sharp Q$, there are permutations $\sigma_{A},\sigma_{B} : \{1,\dots,k\} \rightarrow \{1,\dots,k\}$ such that for all $i = 1,\ldots,k$, $p \{ x:=a_{\sigma_{A}(i)}y \} \preceq q_{i}$ and $p \{ x:=ya_{\sigma_{B}(i) + 2} \} \preceq q_{i}$.
+Let $r_{1}=a_{k+1}a_{1}$, $r_{2}=a_{k+1}a_{2}$, $r_{3}=a_{k+2}a_{1}$, $r_{4}=a_{k+2}a_{2}$, and $R=\{r_{1}, r_{2}, r_{3}, r_{4}\}$.
+For each $r \in R$, there exists an index $i(r)$ $(1\le i(r)\le k)$ such that $p \{x := r\} \preceq q_{i(r)}$ holds.
+For $r\in R$, $p \{ x:=a_{\sigma_{A}(i(r))}y \} \preceq q_{i(r)}$, $p \{ x:=ya_{\sigma_{B}(i(r))+2} \} \preceq q_{i(r)}$, and $p \{ x:=r \} \preceq q_{i(r)}$.
+If there exists $r\in R$ such that $\sigma_{A}(i(r)) \ge 3$ or $\sigma_{B}(i(r)) \le k - 2$, from Lemmas~\ref{両方} and \ref{片方}, we get $p \{x := xy\} \preceq q_{i(r)}$.
+%
+Let $I = \{(1, k - 1), (1, k), (2, k - 1), (2, k)\}$.
+Next we suppose that for any $r\in R$, $(\sigma_{A}(i(r)), \sigma_{B}(i(r))) \in I$.
+If either of
+\begin{enumerate}
+\item[] $(\sigma_{A}(i(r_{1})), \sigma_{B}(i(r_{1}))) \in I\setminus\{(1, k - 1)\}$,
+\item[] $(\sigma_{A}(i(r_{2})), \sigma_{B}(i(r_{2}))) \in I\setminus\{(2, k - 1)\}$,
+\item[] $(\sigma_{A}(i(r_{3})), \sigma_{B}(i(r_{3}))) \in I\setminus\{(1, k)\}$, or
+\item[] $(\sigma_{A}(i(r_{4})), \sigma_{B}(i(r_{4}))) \in I\setminus\{(2, k)\}$,
+\end{enumerate}
+is satisfied, from Lemmas~\ref{両方} and \ref{片方}, we get $p \{x := xy\} \preceq q_{i(r)}$ for some $r\in R$.
+
+Finally, we consider the case of which all the following conditions are satisfied:
+
+\begin{enumerate}
+\item[(i)] $(\sigma_{A}(i(r_{1})), \sigma_{B}(i(r_{1}))) = (1, k - 1)$,
+\item[(ii)] $(\sigma_{A}(i(r_{2})), \sigma_{B}(i(r_{2}))) = (2, k - 1)$,
+\item[(iii)] $(\sigma_{A}(i(r_{3})), \sigma_{B}(i(r_{3}))) = (1, k)$,
+\item[(iv)] $(\sigma_{A}(i(r_{4})), \sigma_{B}(i(r_{4}))) = (2, k)$.
+\end{enumerate}
+
+Since $\sigma_{A}$ is a permutation, from (i) and (iii), $i(r_{1}) = i(r_{3})$ holds.
+However $\sigma_{B}(i(r_{1})) \not= \sigma_{B}(i(r_{3}))$ holds.
+This is contrary to the fact that $\sigma_{B}$ is a permutation.
 
 %\begin{figure}[H]
 \begin{figure}[t]
@@ -250,13 +291,7 @@ $p \{ x:=ya_{i} \} \preceq q_{i}$かつ$p \{ x:=a_{i}y \} \preceq q_{i}$ $(i=3,\
 %\vspace*{-.5cm}
 \end{figure}
 
-系\ref{両方}より，$p \{ x:=a_{k+1}a_{1} \} \preceq q_{1}$(図\ref{系との関係})，$p \{ x:=a_{k+2}a_{2} \} \preceq q_{2}$となる$q_{1},~q_{2}$が考えられる．
-
-このとき，$\tilde{G}_{1}$と$\tilde{G}_{2}$に含まれる辺はそれぞれ1本となる．
-$G$に含まれる辺は，4本であるため，残り$4-2=2$本の辺は$\tilde{G}_{i}$ $(i=3, \ldots, k)$に含まれる．
-すなわち，$p \{ x:=a_{k+1}a_{2} \} \preceq q_{i_{0}}$と$p \{ x:=a_{k+2}a_{1} \} \preceq q_{i_{1}}$となる$q_{i_{0}}$と$q_{i_{1}}$が存在する．
-任意の$i$ $(i=3, \ldots, k)$に対して，$p \{ x:=ya_{i} \} \preceq q_{i}$かつ$p \{ x:=a_{i}y \} \preceq q_{i}$であるため，$q_{i_{0}},q_{i_{1}} \in Q \setminus \{ q_{1},q_{2} \}$より，$a_{k+1} \not = a_{i}$かつ$a_{2} \not = a_{i}$となる．
-よって，補題\ref{追加部分}より，$p \{ x:=xy \} \preceq q_{i_{0}}$となり，仮定に矛盾する．
+\smallskip
 
 $\sharp A = k$かつ$\sharp \tilde{B} < k$であるとき，$\sharp A_{i}=1$かつ$\sharp B_{i}=0$となる$i$が存在する．
 
@@ -317,7 +352,7 @@ $a_{j}$は互いに異なる定数記号であるため，補題\ref{補題10}�
 以上より，$G^{(k,~k)}$において，仮定に矛盾する場合，$\sharp A=k$かつ$\sharp \tilde{B}^{\prime} < k$である場合においても，仮定に矛盾する．
 (2)，(3)のいずれの場合においても，$\sharp A^{\prime} > 2$であることから，同様のことが言える．
 
-\textbf{(1-2)} 
+\item[\textrm{(1-2)}] 
 $\sharp A = k$かつ$\sharp \tilde{B} = k$であるとき，
 $p \{ x:=ya_{i} \} \preceq q_{i}$かつ$p \{ x:=a_{i}y \} \preceq q_{i}$ $(i=1,\ldots,k-1)$とし，$p \{ x:= ya_{k+2} \} \preceq q_{k}$かつ$p \{ x:= a_{k}y \} \preceq q_{k}$とする．
 系\ref{両方}より，$p \{ x:=a_{k+2}a_{k} \} \preceq q_{k}$である$q_{k}$が考えられる．
@@ -327,12 +362,13 @@ $G$に含まれる辺は，4本であるから，残り$4-1=3$本の辺は$\tild
 任意の$i$ $(i=1, \ldots, k-1)$に対して，$p \{ x:=ya_{i} \} \preceq q_{i}$かつ$p \{ x:=a_{i}y \} \preceq q_{i}$であるため，$q_{i_{0}} \in Q \setminus \{ q_{k} \}$より，$a_{k+1} \not = a_{i}$となる．
 よって，補題\ref{追加部分}より，$p \{ x:=xy \} \preceq q_{i_{0}}$となり，仮定に矛盾する.
 
-\textbf{(1-3)} 
+\item[\textrm{(1-3)}]
 $\sharp A = k$かつ$\sharp \tilde{B} = k$であるとき，
 $p \{ x:=ya_{i} \} \preceq q_{i}$かつ$p \{ x:=a_{i}y \} \preceq q_{i}$ $(i=1,\ldots,k)$とする
 $G$に$4$本の辺が含まれるため，$p \{ x:=a_{k+1}a_{k+1} \} \preceq q_{i_{0}}$が存在する．
 よって，任意の$i$に対して，$a_{k+1} \not = a_{i}$となる．
 補題\ref{追加部分}より，$p \{ x:=xy \} \preceq q_{i_{0}}$となり，仮定に矛盾する.
+\end{enumerate}
 
 %\newdimen\mywidth
 \mywidth=\textwidth
@@ -347,18 +383,19 @@ $G$に$4$本の辺が含まれるため，$p \{ x:=a_{k+1}a_{k+1} \} \preceq q_{
 \label{(2)におけるパターン}
 \end{figure*}
 
-\noindent\textbf{(2)} 
+\item[\textrm{(2)}]
 $\sharp A=k-1$かつ$\sharp B \le k-1$であるとき，$\sharp A^{\prime}=3$かつ$\sharp \tilde{B}^{\prime} \ge 3$となる．
 $G$には少なくとも$\sharp A^{\prime} \times \sharp \tilde{B}^{\prime}=3\times3=9$本の辺が含まれる．
 図\ref{(2)におけるパターン}のように，$| A^{\prime} \cap B^{\prime} |$の関係は，4種類に分けられる．よって，以下のように，場合分けして証明する．
-\[
-\begin{tabular}{ll}
-$\textbf{(2-1)}$ $| A^{\prime} \cap B^{\prime} | = 0$，$\textbf{(2-2)}$ $| A^{\prime} \cap B^{\prime} | = 1$，\\
-$\textbf{(2-3)}$ $| A^{\prime} \cap B^{\prime} | = 2$，$\textbf{(2-4)}$ $| A^{\prime} \cap B^{\prime} | = 3$．
-\end{tabular}
-\]
+\smallskip
 
-\textbf{(2-1)} 
+\begin{tabular}{llll}
+\textrm{(2-1)} & $| A^{\prime} \cap B^{\prime} | = 0$,&\textrm{(2-2)} & $| A^{\prime} \cap B^{\prime} | = 1$,\\
+\textrm{(2-3)} & $| A^{\prime} \cap B^{\prime} | = 2$,&\textrm{(2-4)} & $| A^{\prime} \cap B^{\prime} | = 3$.
+\end{tabular}
+
+\begin{enumerate}
+\item[\textrm{(2-1)}] 
 $\sharp A=k-1$かつ$\sharp \tilde{B}=k-1$であるとき，
 $p \{ x:=ya_{i} \} \preceq q_{i}$かつ$p \{ x:=a_{i}y \} \preceq q_{i}$ $(i=4, \ldots, k-1)$とし，$p \{ x:=ya_{j} \} \preceq q_{j}$かつ$p \{ x:=a_{k+j-1}y \} \preceq q_{j}$ $(j=1,2,3)$とする．
 このとき，系\ref{両方}より，$p \{ x:=a_{j}a_{k+j-1} \} \preceq q_{j}$となる$q_{j}$が考えられる．
@@ -383,7 +420,7 @@ $\tilde{G}_{i}$ $(i=4, \ldots, k-1)$のいずれかに，辺が1本以上含ま�
 よって，補題\ref{補題14}(abc)より，$p \{x:=xy \} \preceq q_{k}$となる．
 これは，仮定に矛盾する．
 
-\textbf{(2-2)} 
+\item[\textrm{(2-2)}]
 $p \{ x:=ya_{i} \} \preceq q_{i}$かつ$p \{ x:=a_{i}y \} \preceq q_{i}$ $(i=1, \ldots, k-3)$とし，$p \{ x:=ya_{j+3} \} \preceq q_{j}$かつ$p \{ x:=a_{j}y \} \preceq q_{j}$ $(j=k-2,k-1)$とする．
 このとき，系\ref{両方}より，$p \{ x:=a_{j+3}a_{j} \} \preceq q_{j}$となる$q_{j}$が考えられる．
 よって，$\tilde{G}_{j}$には，それぞれ1本の辺が含まれる．
@@ -396,7 +433,7 @@ $\tilde{G}_{i}$のいずれかに，辺が1本以上含まれる場合，$p \{ x
 補題\ref{補題14}(abc)より，$p \{x:=xy \} \preceq q_{k}$となる．
 これは，仮定に矛盾する．
 
-\textbf{(2-3)} 
+\item[\textrm{(2-3)}]
 $p \{ x:=ya_{i} \} \preceq q_{i}$かつ$p \{ x:=a_{i}y \} \preceq q_{i}$ $(i=1, \ldots, k-2)$とし，$p \{ x:=ya_{k+2} \} \preceq q_{k-1}$かつ$p \{ x:=a_{k-1}y \} \preceq q_{k-1}$とする．
 このとき，系\ref{両方}より，$p \{ x:=a_{k+2}a_{k-1} \} \preceq q_{k-1}$となる$q_{k-1}$が考えられる．
 よって，$\tilde{G}_{k-1}$には，1本の辺が含まれる．
@@ -409,7 +446,7 @@ $\tilde{G}_{i}$のいずれかに，辺が1本以上含まれる場合，$p \{ x
 補題\ref{補題14}(abc)より，$p \{x:=xy \} \preceq q_{k}$となる．
 これは，仮定に矛盾する．
 
-\textbf{(2-4)} 
+\item[\textrm{(2-4)}] 
 $p \{ x:=ya_{i} \} \preceq q_{i}$かつ$p \{ x:=a_{i}y \} \preceq q_{i}$ $(i=1, \ldots, k-1)$とする．
 $\tilde{G}_{i}$のいずれかに，辺が1本以上含まれる場合，$p \{ x:=ab \} \preceq q_{i}$ $(a \not = a_{i}$かつ$b \not = a_{i})$となる．
 補題\ref{追加部分}より，$p \{ x:=xy \} \preceq q_{i}$となる．
@@ -417,8 +454,9 @@ $\tilde{G}_{i}$のいずれかに，辺が1本以上含まれる場合，$p \{ x
 ある$\tilde{G}_{i}$に含まれる辺が5本以上であるとき，互いに隣接しない辺が3本以上存在する．
 補題\ref{補題14}(abc)より，$p \{x:=xy \} \preceq q_{k}$となる．
 これは，仮定に矛盾する．
+\end{enumerate}
 
-\noindent\textbf{(3)}
+\item[\textrm{(3)}]
 $G^{(k-2,~k-2)}$には$4\times4=16$本の辺が含まれる．
 $| A^{\prime} \cap B^{\prime} | = 0$であるとき，最大$4$つの$\tilde{G}_{i}$に辺が1本含まれ，$\tilde{G}^{(0,~0)}_{i_{0}}$と$\tilde{G}^{(0,~0)}_{i_{1}}$に，少なくとも$4 \times 4-4=12$本の辺が含まれる．
 $12 > 4 \times 2 + 1$より，$\tilde{G}^{(0,~0)}_{i_{0}}$または$\tilde{G}^{(0,~0)}_{i_{1}}$は$5$本以上の辺を含む．
@@ -453,7 +491,8 @@ $\sharp A^{\prime}-2$個の$\tilde{G}^{(0,~0)}_{j_{m}}$に対して，合計$4(\
 $D<0$より，任意の$\sharp A^{\prime}$について不等式が成り立つ．
 よって，ある$\tilde{G}^{(0,~0)}_{i}$に含まれる辺は5本以上となり，互いに隣接しない辺が3本以上存在する．
 したがって，補題\ref{補題14}(abc)より，$p \{x:=xy \} \preceq q_{i}$となる．
-これは，仮定に矛盾する．  
+これは，仮定に矛盾する．
+\end{enumerate}
 
 以上より，$k \ge 2$においても，仮定に矛盾する．
 \end{proof}
