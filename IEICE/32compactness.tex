@@ -178,7 +178,7 @@ The notations are defined as follows:
 & \tilde{B}^{\prime} = \{ b \mid b \in \tilde{\Sigma} \setminus \tilde{B} \}~~(i=1, \ldots , k).
 \end{align*}
 
-Assume that $p \{ x:=xy \} \not \preceq q_{i}$ \ ($i=1, \ldots , k$) holds.
+%Assume that $p \{ x:=xy \} \not \preceq q_{i}$ \ ($i=1, \ldots , k$) holds.
 
 When $k=1$, $p \{ x:=a_{1}a_{i} \} \preceq q_{1}$ and $p \{ x:=a_{2}a_{i} \} \preceq q_{1}$ ($i=1,2,3$) hold.
 Let $p^{\prime} = p \{ x:=a_{1}y \} = p_{1}a_{1}yp_{2}$.
@@ -187,13 +187,14 @@ From Lemma \ref{Sato1:Lemma10}, this fact implies that $p^{\prime} \preceq q_{1}
 Therefore, we have $p \{ x:=a_{1}y \} \preceq q_{1}$.
 Similarly, we have  $p \{ x:=a_{2}y \} \preceq q_{1}$.
 From Lemma \ref{変数2つ}, we have $p \{ x:= xy \} \preceq q_{1}$.
-This contradicts the assumption.
+%This contradicts the assumption.
 
 When $k \ge 2$, let $G=(\Sigma,\tilde{\Sigma}; A^{\prime} \times \tilde{B}^{\prime})$ be a bipartite graph whose parts are $\Sigma$ and $\tilde{\Sigma}$ and whose edge set is $A^{\prime}\times\tilde{B}^{\prime}$.
 Moreover, let $\tilde{G}_{i}=(\Sigma,\tilde{\Sigma}; \tilde{E}_{i})$ be a bipartite graph whose parts are $\Sigma$ and $\tilde{\Sigma}$ and whose edge set is $\tilde{E}_{i}=\{ (a, \tilde{b}) \in A^{\prime} \times \tilde{B}^{\prime} \mid p \{ x:=ab \} \preceq q_{i} \}$.
 %
 If there exists a positive integer $i\geq 1$ such that $\sharp A_{i} \ge 2$ or $\sharp B_{i} \ge 2$, from Lemma \ref{変数2つ}, $p \{ x:=xy \} \preceq q_{i}$ holds.
-This contradicts the assumption. Thus, for any $i$ ($i=1, \ldots , k$), $\sharp A_{i} \le 1$ and $\sharp B_{i} \le 1$ hold.
+%This contradicts the assumption.
+Thus, we prove the statement when for any $i$ ($i=1, \ldots , k$), $\sharp A_{i} \le 1$ and $\sharp B_{i} \le 1$ hold.
 From the above, we obtain the following facts:
 
 \begin{tabular}{l}
@@ -248,33 +249,37 @@ Depending on $\sharp( A^{\prime} \cap B^{\prime} )$, we divide the case \textrm{
 %\smallskip
 
 \begin{enumerate}
-\item[\textrm(1-1)] 
-When $\sharp A = \sharp \tilde{B} = k$ with $\sharp( A^{\prime} \cap B^{\prime} ) = 0$, w.l.o.g., we let $A'=\{a_{k+1},a_{k+2}\}$ and $B'=\{a_{1},a_{2}\}$ (see Fig.~\ref{グラフ比較} (1-1)). Moreover, since $\sharp A = \sharp B = \sharp Q$, w.l.o.g., we suppose that there is a permutation $\sigma$ such that for all $i = 1,\ldots,k$, $p \{ x:=a_{i}y \} \preceq q_{i}$ and $p \{ x:=ya_{\sigma(i)+2} \} \preceq q_{i}$.
-Let $R=\{a_{k+1}a_{1}, a_{k+1}a_{2}, a_{k+2}a_{1}, a_{k+2}a_{2}\}$.
+\item[\textrm(1-1)]
+When $\sharp A = \sharp \tilde{B} = k$ with $\sharp( A^{\prime} \cap B^{\prime} ) = 0$, w.l.o.g., we let $A'=\{a_{k+1},a_{k+2}\}$ and $B'=\{a_{1},a_{2}\}$ (see Fig.~\ref{グラフ比較} (1-1)).
+Since $\sharp A = \sharp B = \sharp Q$, there are permutations $\sigma_{A},\sigma_{B} : \{1,\dots,k\} \rightarrow \{1,\dots,k\}$ such that for all $i = 1,\ldots,k$, $p \{ x:=a_{\sigma_{A}(i)}y \} \preceq q_{i}$ and $p \{ x:=ya_{\sigma_{B}(i) + 2} \} \preceq q_{i}$.
+Let $r_{1}=a_{k+1}a_{1}$, $r_{2}=a_{k+1}a_{2}$, $r_{3}=a_{k+2}a_{1}$, $r_{4}=a_{k+2}a_{2}$, and $R=\{r_{1}, r_{2}, r_{3}, r_{4}\}$.
 For each $r \in R$, there exists an index $i(r)$ $(1\le i(r)\le k)$ such that $p \{x := r\} \preceq q_{i(r)}$ holds.
-For $a_{k+1}a_{1}\in R$, $p \{ x:=a_{i(a_{k+1}a_{1})}y \} \preceq q_{i(a_{k+1}a_{1})}$, $p \{ x:=ya_{\sigma(i(a_{k+1}a_{1}))+2} \} \preceq q_{i(a_{k+1}a_{1})}$, and $p \{ x:=a_{k+1}a_{1} \} \preceq q_{i(a_{k+1}a_{1})}$.
-If $3\le i(a_{k+1}a_{1})\le k$, since $a_{i(a_{k+1}a_{1})} \not= a_{1}$, from Lemms~\ref{両方} and \ref{片方}, we get $p \{x := xy\} \preceq q_{i(r)}$. This contradicts the assumption.
-Similarly for any $r\in R$, we have $i(r) = 1$ or $i(r) = 2$.
+For $r\in R$, $p \{ x:=a_{\sigma_{A}(i(r))}y \} \preceq q_{i(r)}$, $p \{ x:=ya_{\sigma_{B}(i(r))+2} \} \preceq q_{i(r)}$, and $p \{ x:=r \} \preceq q_{i(r)}$.
+If there exists $r\in R$ such that $\sigma_{A}(i(r)) \ge 3$ or $\sigma_{B}(i(r)) \le k - 2$, from Lemmas~\ref{両方} and \ref{片方}, we get $p \{x := xy\} \preceq q_{i(r)}$.
+%
+Let $I = \{(1, k - 1), (1, k), (2, k - 1), (2, k)\}$.
+Next we suppose that for any $r\in R$, $(\sigma_{A}(i(r)), \sigma_{B}(i(r))) \in I$.
+If either of
+\begin{enumerate}
+\item[] $(\sigma_{A}(i(r_{1})), \sigma_{B}(i(r_{1}))) \in I\setminus\{(1, k - 1)\}$,
+\item[] $(\sigma_{A}(i(r_{2})), \sigma_{B}(i(r_{2}))) \in I\setminus\{(2, k - 1)\}$,
+\item[] $(\sigma_{A}(i(r_{3})), \sigma_{B}(i(r_{3}))) \in I\setminus\{(1, k)\}$, or
+\item[] $(\sigma_{A}(i(r_{4})), \sigma_{B}(i(r_{4}))) \in I\setminus\{(2, k)\}$,
+\end{enumerate}
+is satisfied, from Lemmas~\ref{両方} and \ref{片方}, we get $p \{x := xy\} \preceq q_{i(r)}$ for some $r\in R$.
 
+Finally, we consider the case of which all the following conditions are satisfied:
 
+\begin{enumerate}
+\item[(i)] $(\sigma_{A}(i(r_{1})), \sigma_{B}(i(r_{1}))) = (1, k - 1)$,
+\item[(ii)] $(\sigma_{A}(i(r_{2})), \sigma_{B}(i(r_{2}))) = (2, k - 1)$,
+\item[(iii)] $(\sigma_{A}(i(r_{3})), \sigma_{B}(i(r_{3}))) = (1, k)$,
+\item[(iv)] $(\sigma_{A}(i(r_{4})), \sigma_{B}(i(r_{4}))) = (2, k)$.
+\end{enumerate}
 
-If $\sigma(1) \not= k - 1$, since $p \{ x:=ya_{\sigma(1) + 2} \} \preceq q_{1}$ and $p \{ x:=a_{1}y \} \preceq q_{i}$, $p \{x := a_{k+1}a_{1}\} \not\preceq q_{1}$ holds. Nevertheless, from Lemma~\ref{片方}, we have $p \{x := xy\} \preceq q_{1}$. It contradicts the assumption.
-Thus, if $p \{x := a_{k+1}a_{1}\} \preceq q_{1}$, then $\sigma(1) = k - 1$ holds.
-By the same reason, if $p \{x := a_{k+2}a_{1}\} \preceq q_{1}$, then $\sigma(1) = k$ holds.
-Therefore, since $\sigma$ is a permutation, either $p \{x := a_{k+1}a_{1}\} \preceq q_{1}$ or $p \{x := a_{k+2}a_{1}\} \preceq q_{1}$ holds.
-Similarly either $p \{x := a_{k+1}a_{2}\} \preceq q_{2}$ or $p \{x := a_{k+2}a_{2}\} \preceq q_{2}$ holds.
-
-
-if there exists $q \in Q'$ such that $p \{ x:=w \} \preceq q$ holds, from Lemma~\ref{追加部分}, $p \{ x:=xy \} \preceq q$ holds. This contradicts the assumption.
-If there exists $q \in Q'$ such that $p \{ x:=a_{1}y \} \preceq q$ and $p \{ x:=ya_{k+1} \} \preceq q$ hold, from Corollary~\ref{両方}, $p \{ x:=a_{k+1}a_{1} \} \preceq q$ may hold.
-
-
-
-
-\medskip
-
-we let $p \{ x:=ya_{i'} \} \preceq q_{i}$ and $p \{ x:=a_{i''}y \} \preceq q_{i}$, $(i,i',i''=3,\ldots,k)$.
-Moreover, we let $p \{ x:=a_{i}y \} \preceq q_{i}$, and $p \{ x:=ya_{k+i} \} \preceq q_{i}$ $(i=1,2)$  (see Fig.~\ref{グラフ比較} (1-1)).
+Since $\sigma_{A}$ is a permutation, from (i) and (iii), $i(r_{1}) = i(r_{3})$ holds.
+However $\sigma_{B}(i(r_{1})) \not= \sigma_{B}(i(r_{3}))$ holds.
+This is contrary to the fact that $\sigma_{B}$ is a permutation.
 
 %\begin{figure}[H]
 \begin{figure}[t]
@@ -286,14 +291,7 @@ Moreover, we let $p \{ x:=a_{i}y \} \preceq q_{i}$, and $p \{ x:=ya_{k+i} \} \pr
 %\vspace*{-.5cm}
 \end{figure}
 
-\noindent
-From Corollary~\ref{両方}, $p \{ x:=a_{k+1}a_{1} \} \preceq q_{1}$(図\ref{系との関係})，$p \{ x:=a_{k+2}a_{2} \} \preceq q_{2}$となる$q_{1},~q_{2}$が考えられる．
-
-このとき，$\tilde{G}_{1}$と$\tilde{G}_{2}$に含まれる辺はそれぞれ1本となる．
-$G$に含まれる辺は，4本であるため，残り$4-2=2$本の辺は$\tilde{G}_{i}$ $(i=3, \ldots, k)$に含まれる．
-すなわち，$p \{ x:=a_{k+1}a_{2} \} \preceq q_{i_{0}}$と$p \{ x:=a_{k+2}a_{1} \} \preceq q_{i_{1}}$となる$q_{i_{0}}$と$q_{i_{1}}$が存在する．
-任意の$i$ $(i=3, \ldots, k)$に対して，$p \{ x:=ya_{i} \} \preceq q_{i}$かつ$p \{ x:=a_{i}y \} \preceq q_{i}$であるため，$q_{i_{0}},q_{i_{1}} \in Q \setminus \{ q_{1},q_{2} \}$より，$a_{k+1} \not = a_{i}$かつ$a_{2} \not = a_{i}$となる．
-よって，補題\ref{追加部分}より，$p \{ x:=xy \} \preceq q_{i_{0}}$となり，仮定に矛盾する．
+\smallskip
 
 $\sharp A = k$かつ$\sharp \tilde{B} < k$であるとき，$\sharp A_{i}=1$かつ$\sharp B_{i}=0$となる$i$が存在する．
 
