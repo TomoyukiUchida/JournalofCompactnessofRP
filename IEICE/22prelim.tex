@@ -1,23 +1,29 @@
 %\section{特徴集合としての$S_{1}(P)$}
-%この章では，$\sharp\Sigma \ge 2k+1$のとき，$S_{1}(P)$は$\mathcal{RPL}^{k}$における$L(P)$の特徴集合となることを示す．．
+%この章では，$\sharp\Sigma \ge 2k+1$のとき，
+%$S_{1}(P)$は$\mathcal{RPL}^{k}$における$L(P)$の特徴集合となることを示す．．
 
-% $\RPat^{k}$について，任意のパターン$p\in \RPatplus$に対し，ある特定の有限部分集合$S \subseteq L(p)$が存在して，$S \subseteq L(Q)$ならば，ある$q \in Q$に対して$L(p) \subseteq L(q)$となることが知られている\cite{Mukouchi1991}．
+% $\RPat^{k}$について，任意のパターン$p\in \RPatplus$に対し，
+% ある特定の有限部分集合$S \subseteq L(p)$が存在して，
+% $S \subseteq L(Q)$ならば，
+% ある$q \in Q$に対して$L(p) \subseteq L(q)$となることが知られている\cite{Mukouchi1991}．
 % また，$S \subseteq L(Q)$ならば$L(p) \subseteq L(Q)$である．
 % これにより，$S$は次の定義される$L(p)$の特徴集合であることがわかる．
-%このような集合$S$は$L(p)$の特徴集合と呼ばれ，次のように定義される．
+% このような集合$S$は$L(p)$の特徴集合と呼ばれ，次のように定義される．
 
 % \begin{dfn}
-% $\mathcal{L}$を言語クラスとする．$L$を$\mathcal{L}$に属する言語とする．
-% 空でない有限部分集合$S \subseteq \Sigma^{+}$は$\mathcal{L}$における$L$の\textbf{特徴集合}であるとは，
-% 任意の$L^{\prime} \in \mathcal{L}$に対して$S \subseteq L^{\prime}$ならば$L \subseteq L^{\prime}$となるときをいう．
+%     $\mathcal{L}$を言語クラスとする．$L$を$\mathcal{L}$に属する言語とする．
+%     空でない有限部分集合$S \subseteq \Sigma^{+}$は$\mathcal{L}$における$L$の\textbf{特徴集合}であるとは，
+%     任意の$L^{\prime} \in \mathcal{L}$に対して$S \subseteq L^{\prime}$ならば$L \subseteq L^{\prime}$となるときをいう．
 % \end{dfn}
-%\noindent
-% \begin{dfn}
-%     Let $\L$ be a class of languages, $L$ a language in $\L$ and 
-%     $S$ a nonempty finite set of $L$.
-%     We say that $S$ is a \textit{characteristic} set for $L$ within $\L$ if for any $L' \in \L$,
-%     $S \subseteq L'$ implies $L \subseteq L'$.
-% \end{dfn}
+% \noindent
+\begin{dfn}
+    Let $\L$ be a class of languages, $L$ a language in $\L$ and
+    $S$ a nonempty finite set of $L$.
+    We say that $S$ is a \textit{characteristic} set for $L$ within $\L$
+    if for any $L' \in \L$,
+    $S \subseteq L'$ implies $L \subseteq L'$.
+\end{dfn}
+
 %
 %Mukouchi showed that 
 %この2つの性質は,次のように定義される．
@@ -27,6 +33,7 @@
 %{ w_{0}, \cdots , w_{i-1} } \subseteq L_{i}, ただし,w_{i} \not \in L_{i}
 %\end{equation*}
 %\end{dfn}
+%
 %\begin{dfn}[Sato\cite{Sato2}]\label{fc}
 %$\mathcal{L}$を言語族とする．言語$L$が$\mathcal{L}$における有限交差性を持つとは,次のような文字列の有限集合の無限列$(T_{n})_{n \ge 1}$と$\mathcal{L}$に含まれる言語の無限列$(L_{i})_{i \ge 1}$が存在しないことをいう．
 %\begin{align*}
@@ -59,7 +66,16 @@
 %Wright\cite{Wright}は$\mathcal{PL}^{k}$,その部分集合である$\mathcal{RPL}^{k}$が有限弾力性を持つことを示した．
 %したがって,補題\ref{fcfe}, 補題\ref{fcc}より, $\mathcal{RPL}^{k}$における$L$の特徴集合が存在する．
 
-% $m~(m\geq 0)$個の変数記号$x_{1},\ldots, x_{m}$を含む正規パターン$p$と$n~(n\geq 1)$に対して，%次のような$L(p)$の部分集合$S_{n}(p)$を定義する．
+% $m~(m\geq 0)$個の変数記号$x_{1},\ldots, x_{m}$を含む正規パターン$p$と$n~(n\geq 1)$に対して，
+%次のような$L(p)$の部分集合$S_{n}(p)$を定義する．
+Let $n$ be a positive integer and $p$ a regular pattern. % and $x_{1},\ldots,x_{m}$ ($m \geq 0$) variable symbols appearing in $p$.
+We denote by $S_{n}(p)$ the set of all strings in $\Sigma^{\ast}$ obtained by replacing all variable symbols in $p$
+with strings in $\Sigma^{+}$ of which the length is at most $n$.
+Moreover, for a set $P \in \RPatplus$, we define $S_{n}(P)$ as follows:
+\[
+    S_{n}(P)=\bigcup_{p \in P}S_{n}(p).
+\]
+It is clear that $S_{n}(P) \subseteq S_{n+1}(P) \subseteq L(P)$ for any positive integer $n$.
 % %\begin{dfn}\label{部分集合}
 % $p$中の各変数記号に長さが高々$n$の$\Sigma^{+}$の定数記号列を代入して得られるすべての定数記号列の集合を$S_{n}(p)$で表す．
 % さらに，正規パターンの空でない有限集合$P$に対して，
@@ -67,6 +83,15 @@
 % $S_{n}(P)= \bigcup_{p \in P} S_{n}(p)$
 % %\end{equation*}
 % %\end{dfn}
+%
+% %\begin{dfn}\label{部分集合}
+% $p$中の各変数記号に長さが高々$n$の$\Sigma^{+}$の定数記号列を代入して得られるすべての定数記号列の集合を$S_{n}(p)$で表す．
+% さらに，正規パターンの空でない有限集合$P$に対して，
+% %\begin{equation*}
+% $S_{n}(P)= \bigcup_{p \in P} S_{n}(p)$
+% %\end{equation*}
+% %\end{dfn}
+%
 % とする．
 % このとき，
 % 任意の自然数$n~(n \ge 1)$に対して, $S_{n}(P) \subseteq S_{n+1}(P) \subseteq L(P)$である．
@@ -76,11 +101,17 @@
 % 任意の$P \in \RPat^{k}$に対して，$S_{n}(P)$がクラス$\RPatL^{k}$内の正規パターン言語$L(P)$の特徴集合であるような自然数$n~(n \ge 1)$が存在する．
 % \end{thm}
 
-Let $p_{1}$, $p_{2}$, $r$, $q$ be regular patterns with $p_{1}rp_{2} \preceq q$ and 
-$x_{1},\ldots,x_{n}$ variable symbols appearing in $q$. 
-In~\cite{Mukouchi1991}, the regular pattern $r$ in $p_{1}rp_{2}$ is said to be generated from $q$ by variable substitution if 
-there exist a variable symbol $x_{i}$ and a substitution 
-$\theta = \{x_{1}:=r_{1},\ldots,x_{i}:=r'rr'',\ldots,x_{n}:=r_{n}\}$ such that 
+\begin{thm}[Sato et al.\cite{Sato1}]
+    Let $k$ be a positive integer and $P \in \RPatkei$.
+    Then, there exists a positive integer $n$ such that $S_{n}(P)$ is a characteristic set for $L(P)$ within $\RPatLkei$.
+    %任意の$P \in \RPat^{k}$に対して，$S_{n}(P)$がクラス$\RPatL^{k}$内の正規パターン言語$L(P)$の特徴集合であるような自然数$n~(n \ge 1)$が存在する．
+\end{thm}
+
+Let $p_{1}$, $p_{2}$, $r$, $q$ be regular patterns with $p_{1}rp_{2} \preceq q$ and
+$x_{1},\ldots,x_{n}$ variable symbols appearing in $q$.
+In~\cite{Mukouchi1991}, the regular pattern $r$ in $p_{1}rp_{2}$ is said to be generated from $q$ by variable substitution if
+there exist a variable symbol $x_{i}$ and a substitution
+$\theta = \{x_{1}:=r_{1},\ldots,x_{i}:=r'rr'',\ldots,x_{n}:=r_{n}\}$ such that
 $p_{1} = (q_{1}\theta)r'$, $p_{2} = r''(q_{2}\theta)$ for $q = q_{1}x_{i}q_{2}$.
 It is clear that $p_{1}xp_{2} \preceq q$ if the regular pattern $r$ in $p_{1}rp_{2}$ is generated from $q$ by variable substitution.
 %
@@ -104,25 +135,25 @@ It is clear that $p_{1}xp_{2} \preceq q$ if the regular pattern $r$ in $p_{1}rp_
 % \end{lem}
 
 \begin{thm}[Sato et al.\cite{Sato1}]\label{Sato1:Lemma9}
-    Let $p$, $q$, $p_{1}$, $p_{2}$, $q_{1}$, $q_{2}$, $q_{3}$ be regular patterns and $x$ a variable symbol with 
+    Let $p$, $q$, $p_{1}$, $p_{2}$, $q_{1}$, $q_{2}$, $q_{3}$ be regular patterns and $x$ a variable symbol with
     $p = p_{1}xp_{2}$ and $q = q_{1}q_{2}q_{3}$.
     Then $p \preceq q$ if the following three conditions are holds:
     \[
-    \begin{tabular}{ll}
-    $(\mathrm{i})$ $p_{1} \preceq q_{1}q_{2},$
-    $(\mathrm{ii})$ $p_{2} \preceq q_{2}q_{3},$\\
-    $(\mathrm{iii})$ $q_{2}$ contains at least one variable symbol.
-    \end{tabular}
-    \] 
-%     $p=p_{1}xp_{2}, \ q=q_{1}q_{2}q_{3}$を正規パターンとする．
-%     以下の{\rm (i), (ii), (iii)}がすべて成り立つとき，$p \preceq q$である．
-%     \[
-%     \begin{tabular}{ll}
-%     $(\mathrm{i})$ $p_{1} \preceq q_{1}q_{2},$
-%     $(\mathrm{ii})$ $p_{2} \preceq q_{2}q_{3},$\\
-%     $(\mathrm{iii})$ $q_{2}$は変数記号を含む．
-%     \end{tabular}
-%     \]    
+        \begin{tabular}{ll}
+            $(\mathrm{i})$ $p_{1} \preceq q_{1}q_{2},$
+            $(\mathrm{ii})$ $p_{2} \preceq q_{2}q_{3},$ \\
+            $(\mathrm{iii})$ $q_{2}$ contains at least one variable symbol.
+        \end{tabular}
+    \]
+    %     $p=p_{1}xp_{2}, \ q=q_{1}q_{2}q_{3}$を正規パターンとする．
+    %     以下の{\rm (i), (ii), (iii)}がすべて成り立つとき，$p \preceq q$である．
+    %     \[
+    %     \begin{tabular}{ll}
+    %     $(\mathrm{i})$ $p_{1} \preceq q_{1}q_{2},$
+    %     $(\mathrm{ii})$ $p_{2} \preceq q_{2}q_{3},$\\
+    %     $(\mathrm{iii})$ $q_{2}$は変数記号を含む．
+    %     \end{tabular}
+    %     \]    
 \end{thm}
 
 % \begin{proof}
@@ -132,9 +163,9 @@ It is clear that $p_{1}xp_{2} \preceq q$ if the regular pattern $r$ in $p_{1}rp_
 % このとき，$p=p_{1}xp_{2}=p_{1}^{\prime}(p_{1}^{\prime\prime}xp_{2}^{\prime})p_{2}^{\prime\prime} \preceq q_{1}q_{2}^{\prime}(p_{1}^{\prime\prime}xp_{2}^{\prime})q_{2}^{\prime\prime}q_{3}=q\theta \preceq q$となる．
 % \end{proof}
 
-Let $p_{1}$, $p_{2}$, $q$ be regular patterns and $a$ a constant symbol with $p_{1}ap_{2} \preceq q$. 
-If $p_{1}xp_{2} \not\preceq q$, then the constant symbol $a$ in $p_{1}ap_{2}$ is not generated from $q$ by variable substitution. 
-Thus $q  = q_{1}aq_{2}$ for some regular patterns such that $p_{1} \preceq q_{1}$ and $p_{2} \preceq q_{2}$. 
+Let $p_{1}$, $p_{2}$, $q$ be regular patterns and $a$ a constant symbol with $p_{1}ap_{2} \preceq q$.
+If $p_{1}xp_{2} \not\preceq q$, then the constant symbol $a$ in $p_{1}ap_{2}$ is not generated from $q$ by variable substitution.
+Thus $q  = q_{1}aq_{2}$ for some regular patterns such that $p_{1} \preceq q_{1}$ and $p_{2} \preceq q_{2}$.
 From the above, the following lemma holds.
 %
 % ある$a \in  \Sigma$に対して，$p \{ x:=a \} \preceq q$のとき，$p_{1}xp_{2} \not \preceq q$ならば，$p_{1}ap_{2}$の定数記号$a$は，$q$の変数記号への代入によって生成することはできない．
@@ -211,19 +242,20 @@ From the above, the following lemma holds.
 % \]
 % \end{lem}
 \begin{lem}[Sato et. al.\cite{Sato1}]\label{Sato1:Lemma13}
-    Suppose $\sharp\Sigma \geq 3$. 
+    Suppose $\sharp\Sigma \geq 3$.
     Let $p_{1}$, $p_{2}$, $q_{1}$, $q_{2}$ be regular patterns and $x$ a variable symbol.
     Let $a$, $b$ be constant symbols with $a \neq b$ and $w$ a string in $\Sigma^{\ast}$.
     Let $p = p_{1}AwxwBp_{2}$ and $q = q_{1}AwBq_{2}$ be regular patterns satisfies the following three conditions:
     \[
         \begin{tabular}{ll}
-            $\mathrm{(i)}~p_{1} \preceq q_{1}$, \\
+            $\mathrm{(i)}~p_{1} \preceq q_{1}$,  \\
             $\mathrm{(ii)}~p_{2} \preceq q_{2}$, \\
             $\mathrm{(iii)}~A=a, B=b$ or $A=b, B=a$.
         \end{tabular}
     \]
-    If $p\{x:=a\} \preceq q$ and $p\{x:=b\} \preceq q$, then we have $p \not\preceq q$.
-    \end{lem}
+    If $p\{x:=a\} \preceq q$ and $p\{x:=b\} \preceq q$,
+    then we have $p \not\preceq q$.
+\end{lem}
 
 % \begin{comment}
 % \begin{proof}
@@ -256,36 +288,58 @@ From the above, the following lemma holds.
 % \]
 % \end{thm}
 
-% 次の例は，$\sharp \Sigma = 2k$における定理\ref{定理10}の反例である．
-% \begin{ex}\label{例題1}
-% $\Sigma = \{ a_{1}, \ldots , a_{k}, b_{1}, \ldots , b_{k} \}$を$2k$個の定数記号から成る集合，$p$を正規パターン，$Q = \{ q_{1}, \ldots , q_{k} \}$とする．
-% $w_{1}, \ldots , w_{k}$を
-% $w_{i} = w_{i+1}b_{i+1}a_{i+1}w_{i+1}$ $(i = 1,2, \ldots , k-1), w_{k} = \varepsilon$
-% のように定義する．				
-% \begin{eqnarray*}
-% p = x_{1}a_{1}w_{1}xw_{1}b_{1}x_{2},
-% q_{i} = x_{1}a_{i}w_{i}b_{i}x_{2}.
-% \end{eqnarray*}
-% $p \{ x:=a_{i} \} \preceq q_{i}$かつ$p \{ x:=b_{i} \} \preceq q_{i}$ $(i = 1,2, \ldots , k)$である場合を考える．
-% $i=1$のとき，$p \{ x:=a_{1} \} = (x_{1}a_{1}w_{1})a_{1}(w_{1}b_{1}x_{2}) = q_{1} \{ x_{1} := x_{1}a_{1}w_{1} \} \preceq q_{1}$かつ$p \{ x:=b_{1} \} = q_{1} \{ x_{2} := w_{1}b_{1}x_{2} \} \preceq q_{1}$となる．
-% $i \ge 2$のとき，$w_{i}$の定義より，ある記号列$w^{(i)},w^{\prime (i)}$に対して，$w_{1} = (w_{i}b_{i})w^{(i)} = w^{\prime (i)}(a_{i}w_{i})$となる．
-% したがって，任意の$i~(i \ge 2)$に対して， 
-% \begin{eqnarray*}
-% p \{ x:=a_{i} \} & = & (x_{1}a_{1}w_{1})a_{i}(w_{1}b_{1}x_{2})\\
-% & = & (x_{1}a_{1}w_{1})a_{i}(w_{i}b_{i}w^{(i)})b_{1}x_{2}\\
-% & = & (x_{1}a_{1}w_{1})(a_{i}w_{i}b_{i})(w^{(i)}b_{1}x_{2})\\
-% & = & q_{i} \{ x_{1} := x_{1}a_{1}w_{1}, x_{2} := w^{(i)}b_{1}x_{2} \}\\
-% & \preceq & q_{i},\\
-% p \{ x:=b_{i} \} & = & (x_{1}a_{1}w_{1})b_{i}(w_{1}b_{1}x_{2})\\
-% & = & x_{1}a_{1}(w^{\prime (i)}a_{i}w_{i})b_{i}(w_{1}b_{1}x_{2}) \\
-% & = & (x_{1}a_{1}w^{\prime (i)})a_{i}w_{i}b_{i}(w_{1}b_{1}x_{2}) \\
-% & = & q_{i} \{ x_{1} := x_{1}a_{1}w^{\prime (i)}, x_{2} := w_{1}b_{1}x_{2} \}\\
-% & \preceq & q_{i}.
-% \end{eqnarray*}
+From Lemma~\ref{補題10}, the following lemma holds.
+\begin{thm}[Sato et al.\cite{Sato1}]\label{定理10}
+    Let $\sharp\Sigma \geq 2k+1$, $P \in \RPatplus$ and $Q \in \RPatkei$.
+    Then, the following (i), (ii) and (iii) are equivalent:
+    %$\sharp \Sigma \ge 2k+1$とし，$P \in \RPatplus,~Q \in \RPat^{k}$とする．
+    %このとき，次の{\rm (i), (ii), (iii)}は同値である．
+    \[
+        (\mathrm{i})\ S_{1}(P) \subseteq L(Q),\ \
+        (\mathrm{ii})\ P \sqsubseteq Q,\ \
+        (\mathrm{iii})\ L(P) \subseteq L(Q).
+    \]
+\end{thm}
+%
+%In case $\sharp\Sigma = 2k$,
 
-% したがって，$S_{1}(p) \subseteq L(Q)$である． 
-% 一方で，$p \not \preceq q_{i}$であるため，
-% $L(p) \not \subseteq L(q_{i})$ $(i=1, \ldots , k)$である．
+Example~1 in~\cite{Sato1} is given as a counter-example of Theorem~\ref{定理10}.
+%次の例は，$\sharp \Sigma = 2k$における定理\ref{定理10}の反例である．
+% \begin{ex}\label{例題1}
+%     Let $k$ be a positive integer and
+%     $\Sigma = \{a_{1},\ldots,a_{k},b_{1},\ldots,b_{k}\}$.
+%     %$p$ a regular pattern and $Q = \{q_{1},\ldots,q_{k}\} \in \RPatkei$.
+%     % $\Sigma = \{ a_{1}, \ldots , a_{k}, b_{1}, \ldots , b_{k} \}$を
+%     % $2k$個の定数記号から成る集合，$p$を正規パターン，
+%     % $Q = \{ q_{1}, \ldots , q_{k} \}$とする．
+%     We define $w_{1},\ldots,w_{k}$ recursively as follows:
+%     %$w_{1}, \ldots , w_{k}$を
+%     $w_{i} = w_{i+1}b_{i+1}a_{i+1}w_{i+1}$ $(i = 1,2,\ldots,k-1)$, and
+%     $w_{k} = \varepsilon$.
+%     Let $p$, $q_{i}$ ($i=1,2,\ldots,k$) regular patterns as follows:
+%     $p = x_{1}a_{1}w_{1}xw_{1}b_{1}x_{2}$, $q_{i} = x_{1}a_{i}w_{i}b_{i}x_{2}$.
+
+%     $p \{ x:=a_{i} \} \preceq q_{i}$かつ
+%     $p \{ x:=b_{i} \} \preceq q_{i}$ $(i = 1,2, \ldots , k)$である場合を考える．
+%     $i=1$のとき，$p \{ x:=a_{1} \} = (x_{1}a_{1}w_{1})a_{1}(w_{1}b_{1}x_{2}) = q_{1} \{ x_{1} := x_{1}a_{1}w_{1} \} \preceq q_{1}$かつ$p \{ x:=b_{1} \} = q_{1} \{ x_{2} := w_{1}b_{1}x_{2} \} \preceq q_{1}$となる．
+%     $i \ge 2$のとき，$w_{i}$の定義より，ある記号列$w^{(i)},w^{\prime (i)}$に対して，$w_{1} = (w_{i}b_{i})w^{(i)} = w^{\prime (i)}(a_{i}w_{i})$となる．
+%     したがって，任意の$i~(i \ge 2)$に対して，
+%     \begin{eqnarray*}
+%         p \{ x:=a_{i} \} & = & (x_{1}a_{1}w_{1})a_{i}(w_{1}b_{1}x_{2})\\
+%         & = & (x_{1}a_{1}w_{1})a_{i}(w_{i}b_{i}w^{(i)})b_{1}x_{2}\\
+%         & = & (x_{1}a_{1}w_{1})(a_{i}w_{i}b_{i})(w^{(i)}b_{1}x_{2})\\
+%         & = & q_{i} \{ x_{1} := x_{1}a_{1}w_{1}, x_{2} := w^{(i)}b_{1}x_{2} \}\\
+%         & \preceq & q_{i},\\
+%         p \{ x:=b_{i} \} & = & (x_{1}a_{1}w_{1})b_{i}(w_{1}b_{1}x_{2})\\
+%         & = & x_{1}a_{1}(w^{\prime (i)}a_{i}w_{i})b_{i}(w_{1}b_{1}x_{2}) \\
+%         & = & (x_{1}a_{1}w^{\prime (i)})a_{i}w_{i}b_{i}(w_{1}b_{1}x_{2}) \\
+%         & = & q_{i} \{ x_{1} := x_{1}a_{1}w^{\prime (i)}, x_{2} := w_{1}b_{1}x_{2} \}\\
+%         & \preceq & q_{i}.
+%     \end{eqnarray*}
+
+%     したがって，$S_{1}(p) \subseteq L(Q)$である．
+%     一方で，$p \not \preceq q_{i}$であるため，
+%     $L(p) \not \subseteq L(q_{i})$ $(i=1, \ldots , k)$である．
 % \end{ex}
 
 % 定理\ref{定理10}より，次の系が得られる．
@@ -300,3 +354,16 @@ From the above, the following lemma holds.
 % \end{tabular}
 % \]
 % \end{col}
+
+From Theorem~\ref{定理10}, we have the following corollary.
+\begin{col}[Sato et al.\cite{Sato1}]
+    Let $\sharp\Sigma \geq 3$ and $p$, $q$ regular patterns.
+    % $\sharp \Sigma \ge 3$とし，$p,q$を正規パターンとする．
+    Then, the following (i), (ii) and (iii) are equivalent:
+    %このとき，次の{\rm (i), (ii), (iii)}は同値である．
+    \[
+        (\mathrm{i})\ S_{1}(p) \subseteq L(q),\ \
+        (\mathrm{ii})\ p \preceq q,\ \
+        (\mathrm{iii})\ L(p) \subseteq L(q).
+    \]
+\end{col}

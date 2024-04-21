@@ -1,17 +1,18 @@
 \section{Preliminaries}
 
 % Preliminaries
-Let $\Sigma$ be a nonempty finite set of constant symbols and 
-$X$ ab infinite set of variable symbols such that $\Sigma \cap X = \emptyset$.
+Let $\Sigma$ be a nonempty finite set of constant symbols and
+$X$ an infinite set of variable symbols such that $\Sigma \cap X = \emptyset$.
 %$\Sigma$を有限アルファベットとし，$X$を$\Sigma \cap X=\emptyset$を満たす可算無限集合とする．
 %$\Sigma$と$X$の要素をそれぞれ定数記号と変数記号という．
 %%$\Sigma$を少なくとも2つの記号を含む定数記号の有限集合, $X$を変数記号からなる可算集合とする．
 %%ただし, $\Sigma \cap X = \phi$とする．
 A pattern is a finite string which consists of symbols in $\Sigma \cup X$.
 Note that the empty string $\varepsilon$ is a regular pattern in this paper.
-A pattern $p$ is said to be \textit{regular} if each variable symbol appears at most one in $p$.
+A pattern $p$ is said to be \textit{regular} if each variable symbol appears
+at most one in $p$.
 It is clear that $\varepsilon$ is a regular pattern.
-The length of $p$, denote by $|p|$, is the number of symbols in $p$. 
+The length of $p$, denote by $|p|$, is the number of symbols in $p$.
 %$\Sigma$と$X$の記号から成る記号列を\textbf{パターン}という．
 %また，各変数記号が高々1回しか現れないパターンを\textbf{正規パターン}という．
 %パターン$p$の長さ，つまりその記号列の長さを$|p|$で表す．
@@ -36,13 +37,13 @@ In this paper, we assume $\sharp \Sigma \geq 2$.
 %%便宜上，空文字列$\varepsilon$をパターンとして考える．
 %%全てのパターンの族を$\mathcal{P}$と表し, パターン$p$の文字列の長さを$|p|$で表す．
 %
-A substitution $\theta$ is a mapping from $(\Sigma \cup X)^{\ast}$ to $(\Sigma \cup X)^{\ast}$ such that 
-(1) $\theta$ is a homomorphism with respect to string concatenation, that is, for patterns $\pi_{1}$ and $\pi_{2}$, 
-$\theta(\pi_{1} \cdot \pi_{2}) = \theta(\pi_{1}) \cdot \theta(\pi_{2})$ holds, 
-(2) for each constant symbol $a \in \Sigma$, $\theta(a) = a$ holds, 
+A substitution $\theta$ is a mapping from $(\Sigma \cup X)^{\ast}$ to $(\Sigma \cup X)^{\ast}$ such that
+(1) $\theta$ is a homomorphism with respect to string concatenation, that is, for patterns $\pi_{1}$ and $\pi_{2}$,
+$\theta(\pi_{1} \cdot \pi_{2}) = \theta(\pi_{1}) \cdot \theta(\pi_{2})$ holds,
+(2) for each constant symbol $a \in \Sigma$, $\theta(a) = a$ holds,
 and (3) for each variable symbol $x \in X$, $|\theta(x)| \geq 1$ holds.
 Let $x_{1},\ldots,x_{n}$ are variable symbols and $p_{1},\ldots,p_{n}$ nonempty patterns.
-We denote by $\{x_{1}:=p_{1},\ldots,x_{n}:=p_{n}\}$ a substitution that replaces each variable symbol $x_{i}$ 
+We denote by $\{x_{1}:=p_{1},\ldots,x_{n}:=p_{n}\}$ a substitution that replaces each variable symbol $x_{i}$
 with a nonempty pattern $p_{i}$ for $i \in \{1,\ldots,n\}$ respectively.
 We denote by $\theta(\pi)$ a new pattern obtained by $\theta$ for a pattern $\pi$.
 %
@@ -53,8 +54,8 @@ We denote by $\theta(\pi)$ a new pattern obtained by $\theta$ for a pattern $\pi
 %便宜上，$\theta$を代入と呼ぶ．
 %%\textbf{代入}\bm{$\theta$}とは,全ての定数をそれ自身に移すパターンからパターンへの準同型写像をいう．
 %%代入$\theta$によるパターン$q$の像を$q \theta$で表す．
-For a pattern $p$ and $q$, 
-$q$ is a \textit{generalization} of $p$, or $p$ is an \textit{instance} of $q$, denoted by $p \preceq p$, 
+For a pattern $p$ and $q$,
+$q$ is a \textit{generalization} of $p$, or $p$ is an \textit{instance} of $q$, denoted by $p \preceq p$,
 if there exists a substitution $\theta$ sudh that $p = q\theta$.
 We say that $p$ is equal to $q$, denoted by $p \equiv q$, if $p \preceq q$ and $p \succeq p$.
 %For a pattern $p$, the \textit{pattern language} of $p$, denoted by $L(p)$, is the set of all strings $w$ in $\Sigma^{+}$
@@ -71,7 +72,7 @@ In particular, if $p$ is a regular pattern, we say that $L(p)$ is a \textit{regu
 The set of all pattern languages and regular patterns languages are denoted by $\PatL$ and $\RPatL$ respectively.
 For patterns $p$ and $q$, it is clear that $L(p) = L(q)$ if $p \equiv q$, and $L(p) \subseteq L(q)$ if $p \preceq q$.
 % In general, it is not valid that 
-Note that $L(\varepsilon) = \emptyset$. 
+Note that $L(\varepsilon) = \emptyset$.
 %パターン$p$に対し，$p$が表す言語($\Sigma^{*}$の部分集合)を，$p$に代入を施すことにより生成できる定数記号列の集合$L(p)$，つまり，
 %$L(p)=\{w\in \Sigma^{+} \mid w \preceq p\}$
 %と定義する．
@@ -83,24 +84,31 @@ Note that $L(\varepsilon) = \emptyset$.
 %%正規パターン$p, q$に対して, $p \preceq q$ならば$L(p) \subseteq L(q)$となる．この逆は一般に成立しない．
 %%正規パターンに関して,次のような結果が得られている．
 %正規パターンについては，次の補題が成り立つ．
-\begin{lem}[Mukouchi\cite{Mukouchi1991}]\label{Mukouchi:Lemma1}
-  Let $p$ and $q$ be regular patterns. 
-  Then $p \preceq L(p)$ if and only if $L(p) = L(q)$.
+
+\begin{lem}[Mukouchi\cite{Mukouchi1991}]\label{regularPatternEquivalence}
+  Let $p$ and $q$ be regular patterns.
+  Then $p \preceq q$ if and only if $L(p) \subseteq L(q)$.
 \end{lem}
+
+% \begin{lem}[Mukouchi\cite{Mukouchi1991}]\label{Mukouchi:Lemma1}
+%   Let $p$ and $q$ be regular patterns. 
+%   Then $p \preceq L(p)$ if and only if $L(p) = L(q)$.
+% \end{lem}
+
 %%\begin{comment}
 %\begin{lem}[Mukouchi\cite{Mukouchi1991}]\label{補題1}
-  %$\sharp \Sigma \geq 3$とする．
-  %%$p, q$を正規パターンとする．%このとき，
+%$\sharp \Sigma \geq 3$とする．
+%%$p, q$を正規パターンとする．%このとき，
 %  任意の正規パターン$p,q \in \RPat$に対して，
 %$p \preceq q$ならばその時に限り$L(p) \subseteq L(q)$である．
 %\end{lem}
 %%\end{comment}
 Next, we consider unions of pattern languages. % or regular pattern languages.
-The class of all nonempty finite subsets of $\Pat$ is denoted by $\Patplus$, that is, 
-$\Patplus = \{P \subseteq \Pat \mid 0 < |P| < \infty\}$. 
+The class of all nonempty finite subsets of $\Pat$ is denoted by $\Patplus$, that is,
+$\Patplus = \{P \subseteq \Pat \mid 0 < |P| < \infty\}$.
 For a positive integer $k$, the class of nonempty sets consisting of at most $k$ patterns, that is,
 $\Patkei = \{P \subseteq \Pat \mid 0 < |P| \leq k\}$.
-We denote by $\PatLkei$ the class of unions of at most $k$ pattern languages, 
+We denote by $\PatLkei$ the class of unions of at most $k$ pattern languages,
 that is, $\PatLkei = \{L(P) \mid P \in \Patkei\}$,
 where $L(P) = \cup_{p \in P}L(p)$.
 In a similar way, we also define $\RPatplus$, $\RPatkei$ and $\RPatLkei$ respectively.
