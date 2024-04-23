@@ -162,7 +162,7 @@ For any constant symbols $a, b \in \Sigma$, there exists a regular pattern $q \i
 \end{lem}
 
 \begin{proof}
-Let $\Sigma=\{a_{1}, a_{2}, \ldots, a_{k+2}\}$ for $k\geq 1$.
+Let $\Sigma=\{a_{1}, a_{2}, \ldots, a_{k+2}\}$ and $Q=\{q_{1}, q_{2}, \ldots, q_{k}\}$ for $k\geq 1$ .
 If no variable symbol appears in $p$, this lemma is obvious.
 For regular patterns $p_{1},p_{2}\in \RPat$ and a variable symbol $x$, let $p=p_{1}xp_{2}$.
 And let $Q=\{ q_{1}, \ldots , q_{k} \}\in \RPat^{k}$.
@@ -251,35 +251,34 @@ Depending on $\sharp( A^{\prime} \cap B^{\prime} )$, we divide the case \textrm{
 \begin{enumerate}
 \item[\textrm(1-1)]
 When $\sharp A = \sharp \tilde{B} = k$ with $\sharp( A^{\prime} \cap B^{\prime} ) = 0$, w.l.o.g., we let $A'=\{a_{k+1},a_{k+2}\}$ and $B'=\{a_{1},a_{2}\}$ (see Fig.~\ref{グラフ比較} (1-1)).
-Since $\sharp A = \sharp B = \sharp Q$, there are permutations $\sigma_{A},\sigma_{B} : \{1,\dots,k\} \rightarrow \{1,\dots,k\}$ such that for all $i = 1,\ldots,k$, $p \{ x:=a_{\sigma_{A}(i)}y \} \preceq q_{i}$ and $p \{ x:=ya_{\sigma_{B}(i) + 2} \} \preceq q_{i}$.
+Since $\sharp A = \sharp B = \sharp Q$, there are bijections $\sigma_{A} : \{1,\dots,k\} \rightarrow \{1,\dots,k\}$ and $\sigma_{B} : \{1,\dots,k\} \rightarrow \{3,\dots,k + 2\}$ such that for all $i = 1,\ldots,k$, $p \{ x:=a_{\sigma_{A}(i)}y \} \preceq q_{i}$ and $p \{ x:=ya_{\sigma_{B}(i)} \} \preceq q_{i}$.
 Let $r_{1}=a_{k+1}a_{1}$, $r_{2}=a_{k+1}a_{2}$, $r_{3}=a_{k+2}a_{1}$, $r_{4}=a_{k+2}a_{2}$, and $R=\{r_{1}, r_{2}, r_{3}, r_{4}\}$.
 For each $r \in R$, there exists an index $i(r)$ $(1\le i(r)\le k)$ such that $p \{x := r\} \preceq q_{i(r)}$ holds.
-For $r\in R$, $p \{ x:=a_{\sigma_{A}(i(r))}y \} \preceq q_{i(r)}$, $p \{ x:=ya_{\sigma_{B}(i(r))+2} \} \preceq q_{i(r)}$, and $p \{ x:=r \} \preceq q_{i(r)}$.
-If there exists $r\in R$ such that $\sigma_{A}(i(r)) \ge 3$ or $\sigma_{B}(i(r)) \le k - 2$, from Lemmas~\ref{両方} and \ref{片方}, we get $p \{x := xy\} \preceq q_{i(r)}$.
+For $r\in R$, $p \{ x:=a_{\sigma_{A}(i(r))}y \} \preceq q_{i(r)}$, $p \{ x:=ya_{\sigma_{B}(i(r))} \} \preceq q_{i(r)}$, and $p \{ x:=r \} \preceq q_{i(r)}$.
+If there exists $r\in R$ such that $\sigma_{A}(i(r)) \ge 3$ or $\sigma_{B}(i(r)) \le k$, from Lemma~\ref{追加部分}, we get $p \{x := xy\} \preceq q_{i(r)}$.
 %
-Let $I = \{(1, k - 1), (1, k), (2, k - 1), (2, k)\}$.
+Let $I = \{(1, k + 1), (2, k + 1), (1, k + 2), (2, k + 2)\}$.
 Next we suppose that for any $r\in R$, $(\sigma_{A}(i(r)), \sigma_{B}(i(r))) \in I$.
 If either of
-\begin{enumerate}
-\item[] $(\sigma_{A}(i(r_{1})), \sigma_{B}(i(r_{1}))) \in I\setminus\{(1, k - 1)\}$,
-\item[] $(\sigma_{A}(i(r_{2})), \sigma_{B}(i(r_{2}))) \in I\setminus\{(2, k - 1)\}$,
-\item[] $(\sigma_{A}(i(r_{3})), \sigma_{B}(i(r_{3}))) \in I\setminus\{(1, k)\}$, or
-\item[] $(\sigma_{A}(i(r_{4})), \sigma_{B}(i(r_{4}))) \in I\setminus\{(2, k)\}$,
-\end{enumerate}
-is satisfied, from Lemmas~\ref{両方} and \ref{片方}, we get $p \{x := xy\} \preceq q_{i(r)}$ for some $r\in R$.
+\begin{align*}
+(\sigma_{A}(i(r_{1})), \sigma_{B}(i(r_{1}))) &\in I\setminus\{(1, k + 1)\},\\
+(\sigma_{A}(i(r_{2})), \sigma_{B}(i(r_{2}))) &\in I\setminus\{(2, k + 1)\},\\
+(\sigma_{A}(i(r_{3})), \sigma_{B}(i(r_{3}))) &\in I\setminus\{(1, k + 2)\},\mbox{~or}\\
+(\sigma_{A}(i(r_{4})), \sigma_{B}(i(r_{4}))) &\in I\setminus\{(2, k + 2)\}
+\end{align*}
+is satisfied, from Lemma~\ref{片方}, we get $p \{x := xy\} \preceq q_{i(r)}$ for some $r\in R$.
 
 Finally, we consider the case of which all the following conditions are satisfied:
+\begin{align}
+(\sigma_{A}(i(r_{1})), \sigma_{B}(i(r_{1}))) &= (1, k + 1),\label{cond1}\\
+(\sigma_{A}(i(r_{2})), \sigma_{B}(i(r_{2}))) &= (2, k + 1),\\
+(\sigma_{A}(i(r_{3})), \sigma_{B}(i(r_{3}))) &= (1, k + 2),\label{cond2}\\
+(\sigma_{A}(i(r_{4})), \sigma_{B}(i(r_{4}))) &= (2, k + 2).
+\end{align}
 
-\begin{enumerate}
-\item[(i)] $(\sigma_{A}(i(r_{1})), \sigma_{B}(i(r_{1}))) = (1, k - 1)$,
-\item[(ii)] $(\sigma_{A}(i(r_{2})), \sigma_{B}(i(r_{2}))) = (2, k - 1)$,
-\item[(iii)] $(\sigma_{A}(i(r_{3})), \sigma_{B}(i(r_{3}))) = (1, k)$,
-\item[(iv)] $(\sigma_{A}(i(r_{4})), \sigma_{B}(i(r_{4}))) = (2, k)$.
-\end{enumerate}
-
-Since $\sigma_{A}$ is a permutation, from (i) and (iii), $i(r_{1}) = i(r_{3})$ holds.
+Since $\sigma_{A}$ is a bijection, from (\ref{cond1}) and (\ref{cond2}), $i(r_{1}) = i(r_{3})$ holds.
 However $\sigma_{B}(i(r_{1})) \not= \sigma_{B}(i(r_{3}))$ holds.
-This is contrary to the fact that $\sigma_{B}$ is a permutation.
+This is contrary to the fact that $\sigma_{B}$ is a bijection.
 
 %\begin{figure}[H]
 \begin{figure}[t]
