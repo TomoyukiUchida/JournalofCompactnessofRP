@@ -67,12 +67,13 @@ We say that $p$ is equal to $q$, denoted by $p \equiv q$, if $p \preceq q$ and $
 %\bm{$p \preceq q$}で表す．
 %また，$p \preceq q$かつ$q \preceq p$であるとき，$p$と$q$は等価であるといい， \bm{$p \equiv q$}で表す．
 %
-For a pattern $p$, the \textit{pattern language} of $p$, denoted by $L(p)$, is the set $\{w \in \Sigma^{+} \mid w \preceq p\}$.
+For a pattern $p$, the \textit{pattern language} of $p$, denoted by $L(p)$, is the set $\{w \in \Sigma^{\ast} \mid w \preceq p\}$.
 In particular, if $p$ is a regular pattern, we say that $L(p)$ is a \textit{regular pattern language}.
 The set of all pattern languages and regular patterns languages are denoted by $\PatL$ and $\RPatL$ respectively.
 For patterns $p$ and $q$, it is clear that $L(p) = L(q)$ if $p \equiv q$, and $L(p) \subseteq L(q)$ if $p \preceq q$.
 % In general, it is not valid that 
-Note that $L(\varepsilon) = \emptyset$.
+%Note that $L(\varepsilon) = \emptyset$.
+Note that $L(\varepsilon) = \{\varepsilon\}$.
 %パターン$p$に対し，$p$が表す言語($\Sigma^{*}$の部分集合)を，$p$に代入を施すことにより生成できる定数記号列の集合$L(p)$，つまり，
 %$L(p)=\{w\in \Sigma^{+} \mid w \preceq p\}$
 %と定義する．
@@ -105,9 +106,9 @@ Note that $L(\varepsilon) = \emptyset$.
 %%\end{comment}
 Next, we consider unions of pattern languages. % or regular pattern languages.
 The class of all nonempty finite subsets of $\Pat$ is denoted by $\Patplus$, that is,
-$\Patplus = \{P \subseteq \Pat \mid 0 < |P| < \infty\}$.
+$\Patplus = \{P \subseteq \Pat \mid 0 < \sharp P < \infty\}$.
 For a positive integer $k$, the class of nonempty sets consisting of at most $k$ patterns, that is,
-$\Patkei = \{P \subseteq \Pat \mid 0 < |P| \leq k\}$.
+$\Patkei = \{P \subseteq \Pat \mid 0 < \sharp P \leq k\}$.
 We denote by $\PatLkei$ the class of unions of at most $k$ pattern languages,
 that is, $\PatLkei = \{L(P) \mid P \in \Patkei\}$,
 where $L(P) = \cup_{p \in P}L(p)$.
