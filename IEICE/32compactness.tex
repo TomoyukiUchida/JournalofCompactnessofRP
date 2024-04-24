@@ -254,11 +254,14 @@ When $\sharp A = \sharp \tilde{B} = k$ with $\sharp( A^{\prime} \cap B^{\prime} 
 Since $\sharp A = \sharp B = \sharp Q$, there are bijections $\sigma_{A} : \{1,\dots,k\} \rightarrow \{1,\dots,k\}$ and $\sigma_{B} : \{1,\dots,k\} \rightarrow \{3,\dots,k + 2\}$ such that for all $i = 1,\ldots,k$, $p \{ x:=a_{\sigma_{A}(i)}y \} \preceq q_{i}$ and $p \{ x:=ya_{\sigma_{B}(i)} \} \preceq q_{i}$.
 Let $r_{1}=a_{k+1}a_{1}$, $r_{2}=a_{k+1}a_{2}$, $r_{3}=a_{k+2}a_{1}$, $r_{4}=a_{k+2}a_{2}$, and $R=\{r_{1}, r_{2}, r_{3}, r_{4}\}$.
 For each $r \in R$, there exists an index $i(r)$ $(1\le i(r)\le k)$ such that $p \{x := r\} \preceq q_{i(r)}$ holds.
-For $r\in R$, $p \{ x:=a_{\sigma_{A}(i(r))}y \} \preceq q_{i(r)}$, $p \{ x:=ya_{\sigma_{B}(i(r))} \} \preceq q_{i(r)}$, and $p \{ x:=r \} \preceq q_{i(r)}$.
+Then, for $r\in R$, we have $p \{ x:=a_{\sigma_{A}(i(r))}y \} \preceq q_{i(r)}$, $p \{ x:=ya_{\sigma_{B}(i(r))} \} \preceq q_{i(r)}$, and $p \{ x:=r \} \preceq q_{i(r)}$.
+\smallskip
+
 If there exists $r\in R$ such that $\sigma_{A}(i(r)) \ge 3$ or $\sigma_{B}(i(r)) \le k$, from Lemma~\ref{追加部分}, we get $p \{x := xy\} \preceq q_{i(r)}$.
-%
+\smallskip
+
 Let $I = \{(1, k + 1), (2, k + 1), (1, k + 2), (2, k + 2)\}$.
-Next we suppose that for any $r\in R$, $(\sigma_{A}(i(r)), \sigma_{B}(i(r))) \in I$.
+%Next we suppose that for any $r\in R$, $(\sigma_{A}(i(r)), \sigma_{B}(i(r))) \in I$.
 If either of
 \begin{align*}
 (\sigma_{A}(i(r_{1})), \sigma_{B}(i(r_{1}))) &\in I\setminus\{(1, k + 1)\},\\
@@ -267,6 +270,7 @@ If either of
 (\sigma_{A}(i(r_{4})), \sigma_{B}(i(r_{4}))) &\in I\setminus\{(2, k + 2)\}
 \end{align*}
 is satisfied, from Lemma~\ref{片方}, we get $p \{x := xy\} \preceq q_{i(r)}$ for some $r\in R$.
+\smallskip
 
 Finally, we consider the case of which all the following conditions are satisfied:
 \begin{align}
@@ -275,7 +279,6 @@ Finally, we consider the case of which all the following conditions are satisfie
 (\sigma_{A}(i(r_{3})), \sigma_{B}(i(r_{3}))) &= (1, k + 2),\label{cond2}\\
 (\sigma_{A}(i(r_{4})), \sigma_{B}(i(r_{4}))) &= (2, k + 2).
 \end{align}
-
 Since $\sigma_{A}$ is a bijection, from (\ref{cond1}) and (\ref{cond2}), $i(r_{1}) = i(r_{3})$ holds.
 However $\sigma_{B}(i(r_{1})) \not= \sigma_{B}(i(r_{3}))$ holds.
 This is contrary to the fact that $\sigma_{B}$ is a bijection.
