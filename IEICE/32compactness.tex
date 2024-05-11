@@ -157,353 +157,188 @@ $c \not = a$かつ$d = b$，または，$c = a$かつ$d \not = b$であるとき
 %\end{lem}
 
 \begin{lem}\label{追加補題1}
-Let $\sharp \Sigma \ge k+2$ for $k\geq 1$. Let $p,q$ be regular patterns with $p \in \RPat$ and $Q \in \RPat^{k}$.
-For any constant symbols $a, b \in \Sigma$, there exists a regular pattern $q \in Q$ such that if $p \{ x:=ab \} \preceq q$ holds, then $p \{ x:=xy \} \preceq q$ holds.
+Let $k$ be an integer with $k\geq 1$.
+Let $\Sigma$ be an alphabet with $\sharp \Sigma = k + 2$.
+Let $p \in \RPat$ in which a variable symbol $x$ appears, and let $Q \in \RPat^{k}$.
+If for any string $w \in \Sigma^{\ast}$ with $|w|=2$, there exists a regular pattern $q_{w} \in Q$ such that $p \{ x:=w \} \preceq q_{w}$ holds, then there exists a regular pattern $q \in Q$ such that $p \{ x:=xy \} \preceq q$ holds.
 \end{lem}
 
 \begin{proof}
-Let $\Sigma=\{a_{1}, a_{2}, \ldots, a_{k+2}\}$ and $Q=\{q_{1}, q_{2}, \ldots, q_{k}\}$ for $k\geq 1$ .
-If no variable symbol appears in $p$, this lemma is obvious.
-For regular patterns $p_{1},p_{2}\in \RPat$ and a variable symbol $x$, let $p=p_{1}xp_{2}$.
-And let $Q=\{ q_{1}, \ldots , q_{k} \}\in \RPat^{k}$.
-The notations are defined as follows:
+For any $q \in Q$, we define the sets $A(q), B(q) \subset \Sigma$ as follows:
 \begin{align*}
-& A_{i} = \{ a \in \Sigma \mid p \{ x:=ay \} \preceq q_{i},\ y\in X\},\\ 
-& B_{i} = \{ b \in \Sigma \mid p \{ x:=yb \} \preceq q_{i},\ y\in X\},\\ 
-%& \tilde{B}_{i} = \{ \tilde{b} \in \Sigma \mid p \{ x:=yb \} \preceq q_{i},\ y\in X\},\\ 
-& A = \bigcup_{i=1}^{k}A_{i},B = \bigcup_{i=1}^{k} B_{i},\\
-& \tilde{B} = \{ \tilde{b} \mid b \in B \},\\
-& A^{\prime} = \Sigma\setminus A,~B^{\prime} = \Sigma\setminus B,\\
-& \tilde{\Sigma} = \{ \tilde{c} \mid c \in \Sigma \},\\
-& \tilde{B}^{\prime} = \{ b \mid b \in \tilde{\Sigma} \setminus \tilde{B} \}~~(i=1, \ldots , k).
+  A(q) & = \{ a \in \Sigma \mid p \{ x:=ay \} \preceq q,\ y\in X\},\\ 
+  B(q) & = \{ b \in \Sigma \mid p \{ x:=yb \} \preceq q,\ y\in X\}.
+  \end{align*}
+  If there exists $q\in Q$ such that $|A(q)|\geq 2$ or $|B(q)|\geq 2$, from Lemma~\ref{変数2つ}, $p\{x := xy\} \preceq q$ holds.
+Suppose that $|A(q)|\leq 1$ and $|B(q)|\leq 1$.
+Let $\varnothing$ be a constant symbol that is not a member in $\Sigma$.
+We define the functions $\sigma_{A}: Q \rightarrow \Sigma \cup \{\varnothing\}$ and $\sigma_{B}: Q \rightarrow \Sigma \cup \{\varnothing\}$ as follows:
+\begin{align*}
+  \sigma_{A}(q) & =
+  \begin{cases}
+    a & \textrm{if } A(q) = \{a\}, \\
+    \varnothing & \textrm{if } A(q) = \emptyset.
+  \end{cases}\\
+  \sigma_{B}(q) & =
+  \begin{cases}
+    b & \textrm{if } B(q) = \{b\}, \\
+    \varnothing & \textrm{if } B(q) = \emptyset.
+  \end{cases}
 \end{align*}
+We use the following notations that denote the subsets of $\Sigma$:
+\begin{align*}
+  A & = \bigcup_{q \in Q \textrm{~s.t.~}\sigma_{A}(q) \not= \varnothing} A(q),\\
+  B & = \bigcup_{q \in Q \textrm{~s.t.~}\sigma_{B}(q) \not= \varnothing} B(q),\\
+  A' & = \Sigma \setminus A, \mbox{ and } B' = \Sigma \setminus B.
+\end{align*}
+For any $a,b \in \Sigma$, we define the following notations:
+\begin{align*}
+  \ell_{A}(a) & = \{ q \in Q \mid p \{ x:=ay \} \preceq q,\ y\in X\},\\ 
+  \ell_{B}(b) & = \{ b \in \Sigma \mid p \{ x:=yb \} \preceq q,\ y\in X\}\\
+  \ell_{A} &= \sum_{a \in \Sigma}(\ell_{A}(a) - 1),\\
+  \ell_{B} &= \sum_{b\in \Sigma}(\ell_{B}(b) - 1),
+\end{align*}
+We easily see the following claim:  
 
-%Assume that $p \{ x:=xy \} \not \preceq q_{i}$ \ ($i=1, \ldots , k$) holds.
-
-When $k=1$, $p \{ x:=a_{1}a_{i} \} \preceq q_{1}$ and $p \{ x:=a_{2}a_{i} \} \preceq q_{1}$ ($i=1,2,3$) hold.
-Let $p^{\prime} = p \{ x:=a_{1}y \} = p_{1}a_{1}yp_{2}$.
-Then, since $p \{ x:=a_{1}a_{i} \} \preceq q_{1}$, $p^{\prime} \{ y:=a_{i} \} \preceq q_{1}$ holds.
-From Lemma \ref{Sato1:Lemma10}, this fact implies that $p^{\prime} \preceq q_{1}$ holds.
-Therefore, we have $p \{ x:=a_{1}y \} \preceq q_{1}$.
-Similarly, we have  $p \{ x:=a_{2}y \} \preceq q_{1}$.
-From Lemma \ref{変数2つ}, we have $p \{ x:= xy \} \preceq q_{1}$.
-%This contradicts the assumption.
-
-When $k \ge 2$, let $G=(\Sigma,\tilde{\Sigma}; A^{\prime} \times \tilde{B}^{\prime})$ be a bipartite graph whose parts are $\Sigma$ and $\tilde{\Sigma}$ and whose edge set is $A^{\prime}\times\tilde{B}^{\prime}$.
-Moreover, let $\tilde{G}_{i}=(\Sigma,\tilde{\Sigma}; \tilde{E}_{i})$ be a bipartite graph whose parts are $\Sigma$ and $\tilde{\Sigma}$ and whose edge set is $\tilde{E}_{i}=\{ (a, \tilde{b}) \in A^{\prime} \times \tilde{B}^{\prime} \mid p \{ x:=ab \} \preceq q_{i} \}$.
-%
-If there exists a positive integer $i\geq 1$ such that $\sharp A_{i} \ge 2$ or $\sharp B_{i} \ge 2$, from Lemma \ref{変数2つ}, $p \{ x:=xy \} \preceq q_{i}$ holds.
-%This contradicts the assumption.
-Thus, we prove the statement when for any $i$ ($i=1, \ldots , k$), $\sharp A_{i} \le 1$ and $\sharp B_{i} \le 1$ hold.
-From the above, we obtain the following facts:
-
-\begin{tabular}{l}
-$0 \le \sharp A \le k$,~~$0 \le \sharp\tilde{B} \le k$,\\
-$2 \le \sharp A^{\prime} \le k+2$, and $2 \le \sharp \tilde{B}^{\prime} \le k+2$.
-\end{tabular}
+\smallskip
 
 \noindent
-$G^{(k,~k)}$ denotes $G$ that satisfies $\sharp A=k$ and $\sharp \tilde{B}=k$.
-Furthermore, $\tilde{G}^{(1,~1)}_{i}$ denotes $\tilde{G}_{i}$ that satisfies $\sharp A_{i}=1$ and $\sharp B_{i}=1$.
-%
-Depending on $\sharp A$ and $\sharp \tilde{B}$, we divide the case of $k\ge 2$ into the following five subcases:
+\textit{Claim} 1. 
+\begin{enumerate}
+  \item[(i)] $\ell_{A} = k - \sharp \sigma_{A}^{-1}(\varnothing) - \sharp A$, and
+  \item[(ii)] $\ell_{B} = k - \sharp \sigma_{B}^{-1}(\varnothing) - \sharp B$,
+\end{enumerate}
+where $\sigma_{A}^{-1}$ and $\sigma_{B}^{-1}$ are the inverse functions of $\sigma_{A}$ and $\sigma_{B}$, respectively.
+
 \smallskip
 
-\begin{tabular}{ll}
-\textrm{(1)} & $\sharp A=k$ and $\sharp \tilde{B} \le k$,\\
-\textrm{(2)} & $\sharp A = k-1$ and $\sharp \tilde{B} \le k-1$,\\
-\textrm{(3)} & $\sharp A \le k-2$ and $\sharp \tilde{B} \le k-2$,\\
-\textrm{(4)} & $\sharp A \le k$ and $\sharp \tilde{B} = k$,\\
-\textrm{(5)} & $\sharp A \le k - 1$ and $\sharp \tilde{B} = k - 1$.
-\end{tabular}
-%\smallskip
+Since $\sharp \Sigma = k + 2$ and $\sharp Q = k$, $\sharp A' \geq 2$ and $\sharp B' \geq 2$ hold.
+Moreover, we use the following notations that denote the subsets of $Q$:
+\begin{align*}
+  Q^{(\varnothing,\varnothing)} & = \{q \in Q \mid \sigma_{A}(q) = \varnothing \textrm{~and~} \sigma_{B}(q) = \varnothing\},\\
+  Q^{(\varnothing,\cdot)} & = \{q \in Q \mid \sigma_{A}(q) = \varnothing \textrm{~and~} \sigma_{B}(q) \not= \varnothing\},\\
+  Q^{(\cdot,\varnothing)} & = \{q \in Q \mid \sigma_{A}(q) \not= \varnothing \textrm{~and~} \sigma_{B}(q) = \varnothing\},\\
+  Q^{(\cdot,\cdot)} & = \{q \in Q \mid \sigma_{A}(q) \not= \varnothing \textrm{~and~} \sigma_{B}(q) \not= \varnothing\}.
+\end{align*}
+Suppose that for any string $w \in \Sigma^{\ast}$ with $|w|=2$, there exists a regular pattern $q_{w} \in Q$ such that $p \{ x:=w \} \preceq q_{w}$ holds.
+It is easy to see that if $w \in (A\cdot B) \cup (A'\cdot B) \cup (A\cdot B')$, there exists a regular pattern $q_{w} \in Q^{(\varnothing,\cdot)} \cup Q^{(\cdot,\varnothing)} \cup Q^{(\cdot,\cdot)}$ such that $p \{ x:=w \} \preceq q_{w}$ holds.
+
+For $w=a'b'\in A'\cdot B'$, we must have $q_{w} \in Q$ that satisfies that $p \{ x:=w \} \preceq q_{w}$. The following two claims are proven from Lemmas~\ref{変数2つ} and \ref{補題14}:
+
+\smallskip
 
 \noindent
-Below we prove (1)--(3). The subcases (4) and (5) can be proven in a similar way to (1) and (2), respectively.
+\textit{Claim} 2. If there exist $q \in Q^{(\varnothing,\varnothing)}$ and distinct $5$ strings $w_{i} \in A'\cdot B'$ ($1\leq i\leq 5$) such  that $p \{ x:=w_{i} \} \preceq q$ holds ($1\leq i\leq 5$),  then $p \{ x:=xy \} \preceq q$ holds.
 
-\newdimen\mywidth
-\mywidth=\textwidth
-\divide\mywidth by 3
-\multiply\mywidth by 2
-
-\begin{figure*}[t]
-\centering
-\includegraphics[width=\mywidth]{figs/ComparingBipartiteGraph.png}
-%\vspace{-1cm}
-\caption{Examples of (1-1), (1-2), and (1-3)}
-\label{グラフ比較}
-\end{figure*}
-
-\begin{enumerate}
-\item[\textrm{(1)}] 
-When $\sharp A=k$ and $\sharp \tilde{B} \le k$, we have $\sharp A^{\prime}=2$ and $\sharp \tilde{B}^{\prime} \ge 2$.
-In this case, $G$ has at least $\sharp A^{\prime} \times \sharp \tilde{B}^{\prime}=2\times2=4$ edges.
-Depending on $\sharp( A^{\prime} \cap B^{\prime} )$, we divide the case \textrm{(1)} into the following three subcases:
 \smallskip
 
-\begin{tabular}{llll}
-\textrm{(1-1)} & $\sharp( A^{\prime} \cap B^{\prime} ) = 0$,&
-\textrm{(1-2)} & $\sharp( A^{\prime} \cap B^{\prime} ) = 1$,\\
-\textrm{(1-3)} & $\sharp( A^{\prime} \cap B^{\prime} ) = 2$.
-\end{tabular}
-%\smallskip
+\noindent
+\textit{Claim} 3. If there exist $q \in Q^{(\varnothing,\cdot)} \cup Q^{(\cdot,\varnothing)}$ and distinct $3$ strings $w_{i} \in A'\cdot B'$ ($1\leq i\leq 3$) such that $p \{ x:=w_{i} \} \preceq q$ holds ($1\leq i\leq 3$),  then $p \{ x:=xy \} \preceq q$ holds.
 
-\begin{enumerate}
-\item[\textrm(1-1)]
-When $\sharp A = \sharp \tilde{B} = k$ with $\sharp( A^{\prime} \cap B^{\prime} ) = 0$, w.l.o.g., we let $A'=\{a_{k+1},a_{k+2}\}$ and $B'=\{a_{1},a_{2}\}$ (see Fig.~\ref{グラフ比較} (1-1)).
-Since $\sharp A = \sharp B = \sharp Q$, there are bijections $\sigma_{A} : \{1,\dots,k\} \rightarrow \{1,\dots,k\}$ and $\sigma_{B} : \{1,\dots,k\} \rightarrow \{3,\dots,k + 2\}$ such that for all $i = 1,\ldots,k$, $p \{ x:=a_{\sigma_{A}(i)}y \} \preceq q_{i}$ and $p \{ x:=ya_{\sigma_{B}(i)} \} \preceq q_{i}$.
-Let $r_{1}=a_{k+1}a_{1}$, $r_{2}=a_{k+1}a_{2}$, $r_{3}=a_{k+2}a_{1}$, $r_{4}=a_{k+2}a_{2}$, and $R=\{r_{1}, r_{2}, r_{3}, r_{4}\}$.
-For each $r \in R$, there exists an index $i(r)$ $(1\le i(r)\le k)$ such that $p \{x := r\} \preceq q_{i(r)}$ holds.
-Then, for $r\in R$, we have $p \{ x:=a_{\sigma_{A}(i(r))}y \} \preceq q_{i(r)}$, $p \{ x:=ya_{\sigma_{B}(i(r))} \} \preceq q_{i(r)}$, and $p \{ x:=r \} \preceq q_{i(r)}$.
 \smallskip
 
-If there exists $r\in R$ such that $\sigma_{A}(i(r)) \ge 3$ or $\sigma_{B}(i(r)) \le k$, from Lemma~\ref{追加部分}, we get $p \{x := xy\} \preceq q_{i(r)}$.
-\smallskip
-
-Let $I = \{(1, k + 1), (2, k + 1), (1, k + 2), (2, k + 2)\}$.
-%Next we suppose that for any $r\in R$, $(\sigma_{A}(i(r)), \sigma_{B}(i(r))) \in I$.
-If either of
+\noindent
+Assume that the conditions of \textit{Claims} 2 and 3 are not satisfied.
+Let ${\cal L}_{1}$ be the number of the strings $w \in A'\cdot B'$ such that there exists a regular pattern $q_{w} \in Q^{(\varnothing,\varnothing)} \cup Q^{(\varnothing,\cdot)} \cup Q^{(\cdot,\varnothing)}$ such that $p \{ x:=w \} \preceq q_{w}$ holds.
+Then, by \textit{Claim} 1,
 \begin{align*}
-(\sigma_{A}(i(r_{1})), \sigma_{B}(i(r_{1}))) &\in I\setminus\{(1, k + 1)\},\\
-(\sigma_{A}(i(r_{2})), \sigma_{B}(i(r_{2}))) &\in I\setminus\{(2, k + 1)\},\\
-(\sigma_{A}(i(r_{3})), \sigma_{B}(i(r_{3}))) &\in I\setminus\{(1, k + 2)\},\mbox{~or}\\
-(\sigma_{A}(i(r_{4})), \sigma_{B}(i(r_{4}))) &\in I\setminus\{(2, k + 2)\}
+  {\cal L}_{1} &\leq 4\sharp Q^{(\varnothing,\varnothing)} + 2\sharp Q^{(\varnothing,\cdot)} + 2\sharp Q^{(\cdot,\varnothing)}\\
+  & = 2(Q^{(\varnothing,\varnothing)} + \sharp Q^{(\varnothing,\cdot)}) + 2(Q^{(\varnothing,\varnothing)} + \sharp Q^{(\cdot,\varnothing)})\\
+  & = 2\sharp \sigma_{A}^{-1}(\varnothing) + 2\sharp \sigma_{B}^{-1}(\varnothing)\\
+  & = 2(k - \ell_{A} - \sharp A) + 2(k - \ell_{B} - \sharp B)\\
+  & = 2(\sharp A' - \ell_{A} - 2) + 2(\sharp B' - \ell_{B} - 2)\\
+  & = 2(\sharp A' + \sharp B') - 2(\ell_{A} + \ell_{B}) - 8.
 \end{align*}
-is satisfied, from Lemma~\ref{片方}, we get $p \{x := xy\} \preceq q_{i(r)}$ for some $r\in R$.
-\smallskip
-
-Finally, we consider the case of which all the following conditions are satisfied:
-\begin{align}
-(\sigma_{A}(i(r_{1})), \sigma_{B}(i(r_{1}))) &= (1, k + 1),\label{cond1}\\
-(\sigma_{A}(i(r_{2})), \sigma_{B}(i(r_{2}))) &= (2, k + 1),\\
-(\sigma_{A}(i(r_{3})), \sigma_{B}(i(r_{3}))) &= (1, k + 2),\label{cond2}\\
-(\sigma_{A}(i(r_{4})), \sigma_{B}(i(r_{4}))) &= (2, k + 2).
-\end{align}
-Since $\sigma_{A}$ is a bijection, from (\ref{cond1}) and (\ref{cond2}), $i(r_{1}) = i(r_{3})$ holds.
-However $\sigma_{B}(i(r_{1})) \not= \sigma_{B}(i(r_{3}))$ holds.
-This is contrary to the fact that $\sigma_{B}$ is a bijection.
-
-%\begin{figure}[H]
-\begin{figure}[t]
-\centering
-\includegraphics[width=\linewidth]{figs/Exam-BipartiteGraph-Corollary.png}
-%\vspace{-1cm}
-\caption{系\ref{両方}の条件に当てはまるパターンにおける二分グラフの例}
-\label{系との関係}
-%\vspace*{-.5cm}
-\end{figure}
+  
+Next, we show the next two claims:
 
 \smallskip
 
-$\sharp A = k$かつ$\sharp \tilde{B} < k$であるとき，$\sharp A_{i}=1$かつ$\sharp B_{i}=0$となる$i$が存在する．
+\noindent
+\textit{Claim} 4. 
+For constant symbols $a \in A$, $a' \in A'$, $b \in B$, $b' \in B'$ such that $p\{x:=yb\} \preceq q$, $p\{x:=a'b'\} \preceq q$, and $p\{x:=ay\} \preceq q$ hold,
+if $a \in A\cap B$ or $b \in A\cap B$, then $p\{x:=xy\} \preceq q$ holds.
 
-%\begin{figure}[H]
-\begin{figure}[t]
-\centering
-\includegraphics[width=\linewidth]{figs/BipartiteGraph-diff-ab.png}
-%\vspace{-1cm}
-\caption{$\sharp A_{k} =1$かつ$\sharp B_{k}=1$の場合と$\sharp A_{k}=1$かつ$\sharp B_{k}=0$の場合の$G$に含まれる辺数の違い}
-\label{abが異なる場合}
-\end{figure}
-
-図\ref{abが異なる場合}のように，$G^{(k,~k-1)}$に含まれる辺の本数は，$G^{(k,~k)}$と比べて，$\sharp A^{\prime}$本多くなる．
-すなわち，ある$\tilde{G}^{(1,~1)}_{i}$が$\tilde{G}^{(1,~0)}_{i}$となった場合，全体の$G$に含まれる辺の本数は，$\sharp A^{\prime}$本多くなる．
-このことから，$G^{(k,~k-1)}$の部分グラフ$\tilde{G}^{(1,~0)}_{i}$に含まれる辺の本数が$\sharp A^{\prime}$本以下であるとき，$G^{(k,~k)}$における結果と同様となる．
-一方で，$G^{(k,~k-1)}$の部分グラフ$\tilde{G}^{(1,~0)}_{i}$に$\sharp A^{\prime}+1=2+1=3$本以上の辺が含まれるとき，$G^{(k,~k)}$における結果から変化する可能性がある．
-
-$G^{(k,~k-2)}$の部分グラフ$\tilde{G}^{(1,~0)}_{i_{0}}$と$\tilde{G}^{(1,~0)}_{i_{1}}$が，それぞれ$3$本の辺を含むとき，以下のような例が考えられる．
-
-\begin{ex}\label{少なくなるとき}
-${G}^{(k,~k-2)}$の部分グラフ$\tilde{G}^{(1,~0)}_{k-1}$と$\tilde{G}^{(1,~0)}_{k}$に$\sharp A^{\prime}+1=2+1=3$本の辺が含まれるとき，
-\begin{description}
-\item[$(\mathrm{i})$] $p \{ x:= a_{i}y \} \preceq q_{i}$かつ$p \{ x:= ya_{i} \} \preceq q_{i}$ $(i=3, \ldots , k-2)$,
-\item[$(\mathrm{ii})$] $p \{ x:=a_{j}y \} \preceq q_{j},~p \{ x:=ya_{k+j} \} \preceq q_{j}$かつ$p \{ x:=a_{k+j}a_{j} \} \preceq q_{j}$ $(j=1,2)$,
-\item[$(\mathrm{iii})$] $p \{ x:=a_{k-1}y \} \preceq q_{k-1},~p \{ x:=a_{z}a_{k-1} \} \preceq q_{k-1}$かつ$p \{ x:=a_{1}a_{k+2} \} \preceq q_{k-1}$ \\$(z=k+1,k+2)$,
-\item[$(\mathrm{iv})$] $p \{ x:=a_{k}y \} \preceq q_{k},~p \{ x:=a_{z}a_{k} \} \preceq q_{k}$かつ$p \{ x:=a_{2}a_{k+1} \} \preceq q_{k}$.
-\end{description}
-となる$p$と$q_{i}$ $(i=1,\ldots,k)$が存在し，$p \{ x:=xy \} \not \preceq q_{i}$となる．
-\end{ex}
-%例\ref{少なくなるとき}において，$G^{(k，k)}$の部分グラフ$\tilde{G}_{i}，\tilde{G}_{j}$と$G^{(k，k-2)}$の部分グラフ$\tilde{G}_{i}，\tilde{G}_{j}$に含まれる辺数は変わらない．
-%よって，$\tilde{G}_{k-1}$と$\tilde{G}_{k}$に注目すればよい．
-%$G^{(k，k)}$には$2 \times 2=4$本の辺が含まれ，$G^{(k，k-2)}$には$2 \times 4=8$本の辺が含まれる．
-%$\sharp ((\tilde{A} \times \tilde{B}) \setminus E_{i})$は，$G^{(k，k)}$に含まれる辺の$\sharp (\tilde{A} \times \tilde{B})=4$本より少なくなる．
-%(1)の場合，$\sharp\tilde{A} = 2$より，$\tilde{G}^{(1，0)}_{i}$に$2+1=3$本以上の辺が含まれるとき，$\sharp ((\tilde{A} \times \tilde{B}) \setminus E_{i})$は，$G^{(k，k)}$に含まれる辺の$\sharp (\tilde{A} \times \tilde{B})$本より少なくなる．
-%$\tilde{G}^{(1，0)}_{k-1}$と$\tilde{G}^{(1，0)}_{k}$が，それぞれ$\sharp A^{\prime}+1$=3本の辺を持つ場合，$\tilde{G}_{i}$には辺は含まれない．
-%よって，$p \{ x:=xy \} \not \preceq q_{i}$ $(i=1,\ldots,k)$となる．
-
-%\begin{figure}[H]
-\begin{figure}[t]
-\centering
-\includegraphics[width=\linewidth]{figs/BipartiteGraph-NumEdges-3.png}
-%\vspace*{-1cm}
-\caption{辺数が3である二分グラフの例}
-\label{辺3におけるパターン}
-\end{figure}
-
-図\ref{辺3におけるパターン}のように，$\tilde{G}^{(1,~0)}_{i}$に3本の辺が含まれるパターンは，4つ存在する．
-パターン1の場合，補題\ref{補題14}(abc)より，$p \{ x:=xy \} \preceq q_{i}$となる．
-パターン2とパターン3の場合，互いに隣接しない辺が2本存在するため，
-補題\ref{補題14}(d)より，$p \{ x:=xy \} \preceq q_{i}$となる．
-パターン4の場合，$p \{ x:=a_{1}a_{j} \} \preceq q_{i}$ $(j=1,2,3)$となる．
-$p^{\prime} = p \{ x:=a_{1}y \} = p_{1}a_{1}yp_{2}$とおくと，$p \{ x:=a_{1}a_{j} \} \preceq q_{i}$より，$p^{\prime} \{ y:=a_{j} \} \preceq q_{i}$となる．
-$a_{j}$は互いに異なる定数記号であるため，補題\ref{補題10}より，$p^{\prime} \preceq q_{i}$となり，$p \{ x:=a_{1}y \} \preceq q_{i}$となる．
-これは，$A_{i}$の定義に矛盾する．
-よって，$\tilde{G}^{(1,~0)}_{i}$に含まれる辺は2本以下となる．
-したがって，例\ref{少なくなるとき}は，$\tilde{G}^{(1,~0)}_{k-1}$と$\tilde{G}^{(1,~0)}_{k}$に含まれる辺がそれぞれ2本以下であることに矛盾する．
-
-以上より，$G^{(k,~k)}$において，仮定に矛盾する場合，$\sharp A=k$かつ$\sharp \tilde{B}^{\prime} < k$である場合においても，仮定に矛盾する．
-(2)，(3)のいずれの場合においても，$\sharp A^{\prime} > 2$であることから，同様のことが言える．
-
-\item[\textrm{(1-2)}] 
-$\sharp A = k$かつ$\sharp \tilde{B} = k$であるとき，
-$p \{ x:=ya_{i} \} \preceq q_{i}$かつ$p \{ x:=a_{i}y \} \preceq q_{i}$ $(i=1,\ldots,k-1)$とし，$p \{ x:= ya_{k+2} \} \preceq q_{k}$かつ$p \{ x:= a_{k}y \} \preceq q_{k}$とする．
-系\ref{両方}より，$p \{ x:=a_{k+2}a_{k} \} \preceq q_{k}$である$q_{k}$が考えられる．
-このとき，$\tilde{G}_{k}$に含まれる辺は1本となる．
-$G$に含まれる辺は，4本であるから，残り$4-1=3$本の辺は$\tilde{G}_{i}$ $(i=1, \ldots, k-1)$に含まれる．
-すなわち，$p \{ x:=a_{k+1}a_{k+1} \} \preceq q_{i_{0}}$が存在する．
-任意の$i$ $(i=1, \ldots, k-1)$に対して，$p \{ x:=ya_{i} \} \preceq q_{i}$かつ$p \{ x:=a_{i}y \} \preceq q_{i}$であるため，$q_{i_{0}} \in Q \setminus \{ q_{k} \}$より，$a_{k+1} \not = a_{i}$となる．
-よって，補題\ref{追加部分}より，$p \{ x:=xy \} \preceq q_{i_{0}}$となり，仮定に矛盾する.
-
-\item[\textrm{(1-3)}]
-$\sharp A = k$かつ$\sharp \tilde{B} = k$であるとき，
-$p \{ x:=ya_{i} \} \preceq q_{i}$かつ$p \{ x:=a_{i}y \} \preceq q_{i}$ $(i=1,\ldots,k)$とする
-$G$に$4$本の辺が含まれるため，$p \{ x:=a_{k+1}a_{k+1} \} \preceq q_{i_{0}}$が存在する．
-よって，任意の$i$に対して，$a_{k+1} \not = a_{i}$となる．
-補題\ref{追加部分}より，$p \{ x:=xy \} \preceq q_{i_{0}}$となり，仮定に矛盾する.
-\end{enumerate}
-
-%\newdimen\mywidth
-\mywidth=\textwidth
-\divide\mywidth by 5
-\multiply\mywidth by 4
-
-\begin{figure*}[t]
-\centering
-\includegraphics[width=\mywidth]{figs/Exam-Cases-(2).png}
-%\vspace*{-1cm}
-\caption{Examples of (2-1), (2-2), (2-3), and (2-4)}
-\label{(2)におけるパターン}
-\end{figure*}
-
-\item[\textrm{(2)}]
-$\sharp A=k-1$かつ$\sharp B \le k-1$であるとき，$\sharp A^{\prime}=3$かつ$\sharp \tilde{B}^{\prime} \ge 3$となる．
-$G$には少なくとも$\sharp A^{\prime} \times \sharp \tilde{B}^{\prime}=3\times3=9$本の辺が含まれる．
-図\ref{(2)におけるパターン}のように，$| A^{\prime} \cap B^{\prime} |$の関係は，4種類に分けられる．よって，以下のように，場合分けして証明する．
 \smallskip
 
-\begin{tabular}{llll}
-\textrm{(2-1)} & $| A^{\prime} \cap B^{\prime} | = 0$,&\textrm{(2-2)} & $| A^{\prime} \cap B^{\prime} | = 1$,\\
-\textrm{(2-3)} & $| A^{\prime} \cap B^{\prime} | = 2$,&\textrm{(2-4)} & $| A^{\prime} \cap B^{\prime} | = 3$.
-\end{tabular}
+\noindent
+\textit{Proof of Claim} 4. 
+When both $a\in A\cap B$ and $b \in A\cap B$ hold, since $a' \not= a, b$ and $b' \not= a, b$, from Lemma~\ref{追加部分}, $p\{x:=xy\} \preceq q$ holds.
+Suppose that $a\in A\cap B$ and $b\in A'\cap B$.
+If $a' = b$, since $a\in A\cap B$ and $a' \in A'\cap B$, $b' \not= a, a'$ holds, and therefore from Lemma~\ref{片方}, $p\{x:=xy\} \preceq q$ holds. If $a' \not= b$, since $b' \not\in A\cap B$, $b' \not= a$ holds, and therefore from Lemma~\ref{追加部分}, $p\{x:=xy\} \preceq q$ holds.
+In the case of $a\in A\cap B'$ and $b\in A\cap B$, the statement is similarly proven. (\textit{End of Proof of Claim})
 
+\smallskip
+
+\noindent
+\textit{Claim} 5. 
+For constant symbols $a \in A$, $a' \in A'$, $b \in B$, $b' \in B'$ such that $p\{x:=yb\} \preceq q$, $p\{x:=a'b'\} \preceq q$, and $p\{x:=ay\} \preceq q$ hold, if the following conditions (i) and (ii) are satisfied, then $p\{x:=xy\} \preceq q$ holds.
 \begin{enumerate}
-\item[\textrm{(2-1)}] 
-$\sharp A=k-1$かつ$\sharp \tilde{B}=k-1$であるとき，
-$p \{ x:=ya_{i} \} \preceq q_{i}$かつ$p \{ x:=a_{i}y \} \preceq q_{i}$ $(i=4, \ldots, k-1)$とし，$p \{ x:=ya_{j} \} \preceq q_{j}$かつ$p \{ x:=a_{k+j-1}y \} \preceq q_{j}$ $(j=1,2,3)$とする．
-このとき，系\ref{両方}より，$p \{ x:=a_{j}a_{k+j-1} \} \preceq q_{j}$となる$q_{j}$が考えられる．
-よって，$\tilde{G}_{j}$には，それぞれ1本の辺が含まれる．
-$G$に含まれる辺は，9本であるから，残り$9-3=6$本の辺は$\tilde{G}_{i}$ $(i=4, \ldots, k)$に含まれる．
-$\tilde{G}_{i}$ $(i=4, \ldots, k-1)$のいずれかに，辺が1本以上含まれる場合，$p \{ x:=ab \} \preceq q_{i}$ $(a \not = a_{i}$かつ$b \not = a_{i})$となる．
-これは，補題\ref{追加部分}より，$p \{ x:=xy \} \preceq q_{i}$となるため，仮定に矛盾する．
-よって，$\tilde{G}_{k}$には$6$本の辺が含まれる．
-次数が3以上である頂点$a$が$\tilde{G}_{k}$に含まれるとき，補題\ref{補題10}より，$p \{x:=ay \} \preceq q_{k}$または$p \{ x:= ya \} \preceq q_{k}$となり，$A_{k}$または$B_{k}$の定義に矛盾する．
-したがって，$\tilde{G}_{k}$に含まれる頂点の次数は2以下となる．
+  \item[(i)] $a \in A\cap B'$ and $b \in A'\cap B$,
+  \item[(ii)] $a' \not= b$ or $b' \not= a$.
+  \end{enumerate}
+  
+  \smallskip
 
-%\begin{figure}[H]
-\begin{figure}[t]
-\centering
-\includegraphics[width=\linewidth]{figs/Exam-BipartiteGraph.png}
-%\vspace*{-1cm}
-\caption{辺数が5である二分グラフの例（各頂点の次数は2以下）}
-\label{辺5本の場合}
-\end{figure}
-
-図\ref{辺5本の場合}のように，ある$\tilde{G}_{i}$に含まれる辺が5本であるとき，互いに隣接しない辺が3本以上存在する．
-よって，補題\ref{補題14}(abc)より，$p \{x:=xy \} \preceq q_{k}$となる．
-これは，仮定に矛盾する．
-
-\item[\textrm{(2-2)}]
-$p \{ x:=ya_{i} \} \preceq q_{i}$かつ$p \{ x:=a_{i}y \} \preceq q_{i}$ $(i=1, \ldots, k-3)$とし，$p \{ x:=ya_{j+3} \} \preceq q_{j}$かつ$p \{ x:=a_{j}y \} \preceq q_{j}$ $(j=k-2,k-1)$とする．
-このとき，系\ref{両方}より，$p \{ x:=a_{j+3}a_{j} \} \preceq q_{j}$となる$q_{j}$が考えられる．
-よって，$\tilde{G}_{j}$には，それぞれ1本の辺が含まれる．
-$G$に含まれる辺は，9本であるから，残り$9-2=7$本の辺は$\tilde{G}_{i}$ $(i=1, \ldots, k-3)$と$\tilde{G}_{k}$に含まれる．
-$\tilde{G}_{i}$のいずれかに，辺が1本以上含まれる場合，$p \{ x:=ab \} \preceq q_{i}$ $(a \not = a_{i}$かつ$b \not = a_{i})$となる．
-補題\ref{追加部分}より，$p \{ x:=xy \} \preceq q_{i}$となる
-これは，仮定に矛盾する．
-よって，$\tilde{G}_{k}$には$7$本の辺が含まれる．
-ある$\tilde{G}_{i}$に含まれる辺が5本以上であるとき，互いに隣接しない辺が3本以上存在する．
-補題\ref{補題14}(abc)より，$p \{x:=xy \} \preceq q_{k}$となる．
-これは，仮定に矛盾する．
-
-\item[\textrm{(2-3)}]
-$p \{ x:=ya_{i} \} \preceq q_{i}$かつ$p \{ x:=a_{i}y \} \preceq q_{i}$ $(i=1, \ldots, k-2)$とし，$p \{ x:=ya_{k+2} \} \preceq q_{k-1}$かつ$p \{ x:=a_{k-1}y \} \preceq q_{k-1}$とする．
-このとき，系\ref{両方}より，$p \{ x:=a_{k+2}a_{k-1} \} \preceq q_{k-1}$となる$q_{k-1}$が考えられる．
-よって，$\tilde{G}_{k-1}$には，1本の辺が含まれる．
-$G$に含まれる辺は，9本であるから，残り$9-1=8$本の辺は$\tilde{G}_{i}$ $(i=1, \ldots, k-2)$と$\tilde{G}_{k}$に含まれる．
-$\tilde{G}_{i}$のいずれかに，辺が1本以上含まれる場合，$p \{ x:=ab \} \preceq q_{i}$ $(a \not = a_{i}$かつ$b \not = a_{i})$となる．
-補題\ref{追加部分}より，$p \{ x:=xy \} \preceq q_{i}$となる．
-これは，仮定に矛盾する．
-よって，$\tilde{G}_{k}$には$8$本の辺が含まれる．
-ある$\tilde{G}_{i}$に含まれる辺が5本以上であるとき，互いに隣接しない辺が3本以上存在する．
-補題\ref{補題14}(abc)より，$p \{x:=xy \} \preceq q_{k}$となる．
-これは，仮定に矛盾する．
-
-\item[\textrm{(2-4)}] 
-$p \{ x:=ya_{i} \} \preceq q_{i}$かつ$p \{ x:=a_{i}y \} \preceq q_{i}$ $(i=1, \ldots, k-1)$とする．
-$\tilde{G}_{i}$のいずれかに，辺が1本以上含まれる場合，$p \{ x:=ab \} \preceq q_{i}$ $(a \not = a_{i}$かつ$b \not = a_{i})$となる．
-補題\ref{追加部分}より，$p \{ x:=xy \} \preceq q_{i}$となる．
-よって，$\tilde{G}_{k}$に$9$本の辺が含まれる．
-ある$\tilde{G}_{i}$に含まれる辺が5本以上であるとき，互いに隣接しない辺が3本以上存在する．
-補題\ref{補題14}(abc)より，$p \{x:=xy \} \preceq q_{k}$となる．
-これは，仮定に矛盾する．
+  \noindent
+  \textit{Proof of Claim} 5. 
+  When $a'=b'$, since $a \not= b$, from Lemma~\ref{追加部分}, this statement holds. When $a' \not = b'$, since $a \not= b$, from Lemma~\ref{追加部分} or Lemma~\ref{片方}, this holds.  (\textit{End of Proof of Claim})
+  
+  \smallskip
+  
+Assume that the conditions of \textit{Claims} 4 and 5 are not satisfied.
+I.e., for constant symbols $a \in A$, $a' \in A'$, $b \in B$, $b' \in B'$ such that $p\{x:=yb\} \preceq q$, $p\{x:=a'b'\} \preceq q$, and $p\{x:=ay\} \preceq q$ hold, the next conditions are assumed:
+\begin{enumerate}
+\item $a \in A\cap B'$ and $b \in A'\cap B$,
+\item $a' = b$ and $b' = a$.
 \end{enumerate}
 
-\item[\textrm{(3)}]
-$G^{(k-2,~k-2)}$には$4\times4=16$本の辺が含まれる．
-$| A^{\prime} \cap B^{\prime} | = 0$であるとき，最大$4$つの$\tilde{G}_{i}$に辺が1本含まれ，$\tilde{G}^{(0,~0)}_{i_{0}}$と$\tilde{G}^{(0,~0)}_{i_{1}}$に，少なくとも$4 \times 4-4=12$本の辺が含まれる．
-$12 > 4 \times 2 + 1$より，$\tilde{G}^{(0,~0)}_{i_{0}}$または$\tilde{G}^{(0,~0)}_{i_{1}}$は$5$本以上の辺を含む．
-よって，$\tilde{G}^{(0,~0)}_{i_{0}}$または$\tilde{G}^{(0,~0)}_{i_{1}}$は，互いに隣接しない辺を3本以上含む．
-したがって，補題\ref{補題14}(abc)より，$p \{x:=xy \} \preceq q_{i_{0}}$または$p \{x:=xy \} \preceq q_{i_{1}}$となる．
-これは，仮定に矛盾する．  
+\noindent
+Let ${\cal L}_{2}$ be the number of the strings $w=a'b' \in A'\cdot B'$ such that there exists a regular pattern $q_{w} \in Q$ such that $A(q_{w})=\{b'\}=\{a\}$, $B(q_{w})=\{a'\}=\{b\}$, and $p \{ x:=w \} \preceq q_{w}$ holds. Considering the duplicate numbers $\ell_{A}$ and $\ell_{B}$,
 
-$| A^{\prime} \cap B^{\prime} |=0$であるとき，$\tilde{G}^{(0,~0)}_{i_{0}}$と$\tilde{G}^{(0,~0)}_{i_{1}}$に含まれる辺数が最も少なくなる．
-よって，$| A^{\prime} \cap B^{\prime} |=0$であるとき，矛盾であれば，$| A^{\prime} \cap B |=n$ $(n=1,2,3,4)$であるときも矛盾する．
+We show the last claim:
+  
+\smallskip
 
-一般化して考えていくと，$G$には$\sharp A^{\prime} \times \sharp\tilde{B}^{\prime}$本の辺が含まれる．
-$| A^{\prime} \cap B^{\prime} |=0$であるとき，1本の辺を持つ$\tilde{G}^{(1,~1)}_{i_{n}}$ $(n=1,\ldots, \ell$ $(0 \le \ell \le \sharp A^{\prime}))$が最大$\sharp A^{\prime}$個存在する．
-このとき，$\tilde{G}^{(0,~0)}_{j_{m}}$ $(m=1,\ldots, \sharp A^{\prime}-2)$には$\sharp A^{\prime} \times \sharp\tilde{B}^{\prime} - \ell$本の辺が含まれる．
-よって，$\ell \le \sharp A^{\prime}$より，少なくとも$\sharp A^{\prime} \times \sharp\tilde{B}^{\prime} - \sharp A^{\prime}$本の辺が含まれる．
-$\sharp A^{\prime}-2$個の$\tilde{G}^{(0,~0)}_{j_{m}}$に対して，合計$4(\sharp A^{\prime}-2) +1$本の辺を追加していくと，少なくとも1個のグラフは，5本以上の辺を含む．
-%\begin{equation*}\label{ine}
-  %\begin{split}
+\noindent
+\textit{Claim} 6. 
+$\sharp A' \times \sharp B' - {\cal L}_{1} - {\cal L}_{2} > 0$.
 
-\begin{center}
-  \begin{tabular}{l}
-  $\sharp A^{\prime} \times \sharp\tilde{B}^{\prime} -\sharp A^{\prime} \ge 4(\sharp A^{\prime}-2)+1$\\
-  $\sharp A^{\prime 2}-\sharp A^{\prime} \ge 4\sharp A^{\prime}-8+1$\\
-%  &\sharp A^{\prime 2}-\sharp A^{\prime}-4\sharp A^{\prime}+7 \ge 0\\
-  $\sharp A^{\prime 2}-5\sharp A^{\prime}+7 \ge 0$~~~~~~~~~~~~~~~~~~~~~~~~~(1)
-\end{tabular}
-\end{center}
-  %\end{split}
-  %\end{equation*}
+\smallskip
 
+\noindent
+\textit{Proof of Claim} 6. 
+First we prove the inequality when $\sharp A \leq k - 1$ and $\sharp B \leq k - 1$, i.e., $\sharp A' \geq 3$ and $\sharp B' \geq 3$ hold.
+Since ${\cal L}_{2} \leq \frac{1}{2}(\sharp A' + \sharp B' + \ell_{A} + \ell_{B})$,
+\begin{align*}
+  &\ \sharp A' \times \sharp B' - {\cal L}_{1} - {\cal L}_{2}\\
+\geq &\ \sharp A' \times \sharp B' - (2(\sharp A' + \sharp B') - 2(\ell_{A} + \ell_{B}) - 8)\\
+  &\ - \frac{1}{2}(\sharp A' + \sharp B' + \ell_{A} + \ell_{B})\\
+=    &\ \sharp A' \times \sharp B' - \frac{5}{2}(\sharp A' + \sharp B') + \frac{3}{2}(\ell_{A} + \ell_{B}) + 8\\
+=    &(\sharp A' - \frac{5}{2})(\sharp B' - \frac{5}{2}) + \frac{3}{2}(\ell_{A} + \ell_{B}) + \frac{7}{4} > 0.
+\end{align*}
+When $\sharp A = k$ and $\sharp B \leq k$, i.e., $\sharp A' = 2$ and $\sharp B' \geq 2$ hold, since $\ell_{A} = 0$,
+${\cal L}_{1} \leq 2\sharp B' - 2\ell_{B} -4$ holds.
+Moreover, ${\cal L}_{2} \leq \min\{\sharp B', \ell_{B} + 2\}$ holds.
+From \textit{Claim} 1, $\ell_B + 2 = k - \sharp\sigma^{^1}_{B}(\varnothing) - \sharp B = \sharp B' - \sharp\sigma^{^1}_{B}(\varnothing)$ hold. Therefore, ${\cal L}_{2} \leq \ell_{B} + 2$ holds.
+Thus,
+\begin{align*}
+  &\ \sharp A' \times \sharp B' - {\cal L}_{1} - {\cal L}_{2}\\
+\geq &\ 2\sharp B' - (2\sharp B' - 2\ell_{B} -4) - (\ell_{B} + 2)\\
+= & \sharp B' + \ell_B + 2 > 0.
+\end{align*}
+Similarly, the case when $\sharp A \leq k$ and $\sharp B = k$ is proven.
+(\textit{End of Proof of Claim})
 
-(1)式の判別式を$D$とすると，$D=25-4\times7=-3$となる．
-$D<0$より，任意の$\sharp A^{\prime}$について不等式が成り立つ．
-よって，ある$\tilde{G}^{(0,~0)}_{i}$に含まれる辺は5本以上となり，互いに隣接しない辺が3本以上存在する．
-したがって，補題\ref{補題14}(abc)より，$p \{x:=xy \} \preceq q_{i}$となる．
-これは，仮定に矛盾する．
-\end{enumerate}
+\smallskip
 
-以上より，$k \ge 2$においても，仮定に矛盾する．
+From \textit{Claim} 6, there exist $w\in A'\cdot B'$ and a regular pattern $q_{w} \in Q$ such that either of the conditions of \textit{Claims} 2--5 is satisfied. 
+Therefore, for such a regular pattern $q_{w}$, $p \{x := xy\} \preceq q_{w}$ holds.
 \end{proof}
 
 \begin{lem}[Sato et al.\cite{Sato1}]\label{補題15}
-$\sharp \Sigma \ge 3$とし，$p,q$を正規パターンとする．
-このとき，ある$a \in \Sigma$に対して，
-$p \{ x := a \} \preceq q$かつ$p \{ x := xy \} \preceq q$ならば$p \preceq q$である．
-ただし，$y$は$q$に含まれない変数記号である．
+Let $\Sigma$ be a finite alphabet with $\sharp \Sigma \ge 3$ and $p,q$ be regular patterns.
+If there exists a constant symbol $a \in \Sigma$ such that $p \{ x := a \} \preceq q$ and $p \{ x := xy \} \preceq q$, then $p \preceq q$ holds, where $y$ is a variable symbol that does not appear in $q$.
 \end{lem}
 
 \hfill Edited by Takayoshi Shoudai.
