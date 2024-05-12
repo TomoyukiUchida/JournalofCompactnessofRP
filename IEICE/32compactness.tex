@@ -1,6 +1,6 @@
 
 \begin{lem}\label{片方}
-Let $\sharp$ be an alphabet with $\Sigma \ge 3$ and $p,~q$ regular patterns on $\Sigma$.
+Let $\Sigma$ be an alphabet with $\Sigma \ge 3$ and $p,~q$ regular patterns on $\Sigma$.
 Let $D$ be one of the following sets \textrm{(i), (ii)} of regular patterns on $\Sigma$.
 Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.
 \begin{enumerate}
@@ -93,14 +93,15 @@ This contradicts the assumption.
 In this case, by reversing the strings $p$ and $q$, we can prove that the assumption $p \{ x := xy \} \preceq q$ is contradicted, as in the case of \textrm{(i)}.
 \end{proof}
 
-From Lemmas \ref{追加部分} and \ref{片方}, we obtain the following corollary:
+When the conditions of both Lemmas \ref{追加部分} and \ref{片方} are not satisfied, counterexamples exist as follows:
 
-\begin{col}\label{両方}
-  Let $\sharp \Sigma \ge 3$ and $p, q$ regular patterns on $\Sigma$.
+\begin{lem}\label{両方}
+  Let $\Sigma$ be an alphabet with $\sharp \Sigma \ge 3$ and $p, q$ regular patterns on $\Sigma$.
   For a variable symbol $y$, if $D= \{ ya, bc, dy \}$ $(b = a$ and $c = d)$, there exists $q$ such that $p \{ x := r \} \preceq q$ for any $r \in D$, then $p \{ x := xy \} \not \preceq q$.
-\end{col}
+\end{lem}
 
 \begin{proof}
+We give an example which shows this lemma.
 Let $a,b,c,d,e$ be constant symbols in $\Sigma$ and 
 $x,y,y_{1},y_{2}$ variable symbols.
 Let 
@@ -128,11 +129,14 @@ For these $p$ and $q$, the condition for Corollary \ref{両方} holds as follows
 \end{eqnarray*}
 \end{proof}
 
-\begin{figure}[t]
-\includegraphics[width=\linewidth]{figs/Exam_b=a_c=d.png}
+\begin{figure*}[t]
+%\includegraphics[width=\linewidth]{figs/Exam_b=a_c=d.png}
+\begin{center}
+\includegraphics[scale=0.45]{figs/Exam_b=a_c=d.png}
+\end{center}
 \caption{Substitutions for $p$ and each correspondence to $q$.}
 \label{b=aとc=dの例}
-\end{figure}
+\end{figure*}
 
 \begin{lem}\label{追加補題1}
 Let $k$ be an integer with $k\geq 1$.
@@ -298,7 +302,7 @@ There is no $q \in Q_{2}^{(\cdot,\cdot)}$ and a string $a'b' \in A'\cdot B'$ suc
 
 \noindent
 Let ${\cal L}_{2} = \sharp\{a'b' \in A'\cdot B' \mid \exists q \in Q_{2}^{(\cdot,\cdot)} \mbox{ s.t. } p\{x:=a'b'\} \preceq q\}$.
-For any $a'b' \in A'\cdot B'$ and $q \in Q_{2}^{(\cdot,\cdot)}$, if $a' = \sigma_{B}(q)$ and $b' = \sigma_{A}(q)$ hold (it is the case of Corollary~\ref{両方}), by considering the duplicate numbers $\ell_{A}$ and $\ell_{B}$, we have the following inequality:
+For any $a'b' \in A'\cdot B'$ and $q \in Q_{2}^{(\cdot,\cdot)}$, if $a' = \sigma_{B}(q)$ and $b' = \sigma_{A}(q)$ hold (it is the condition of Lemma~\ref{両方}), by considering the duplicate numbers $\ell_{A}$ and $\ell_{B}$, we have the following inequality:
 \begin{align*}
   {\cal L}_{2} &\leq \min\{\sharp A' + \ell_{B}, \sharp B' + \ell_{A}\}.
 \end{align*}
