@@ -1,20 +1,20 @@
 
 \begin{lem}\label{片方}
-Let $\sharp \Sigma \ge 3$ and $p,~q$ regular patterns on $\Sigma$.
-Suppose that the finite set $D$ of regular patterns is one of the following {\rm (i), (ii)}.
+Let $\sharp$ be an alphabet with $\Sigma \ge 3$ and $p,~q$ regular patterns on $\Sigma$.
+Let $D$ be one of the following sets \textrm{(i), (ii)} of regular patterns on $\Sigma$.
 Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.
 \begin{enumerate}
-\item[{\rm (i)}] $D=\{ ya, bc, dy \}$ $(b = a,~c \not = a,d,\mbox{~and~} b \not = d)$,
-\item[{\rm (ii)}] $D=\{ ya, bc, dy \}$ $(b \not = a,d,~c = d,\mbox{~and~} c \not = a)$.
+\item[{\rm (i)}] $D=\{ ya, bc, dy \}$ ($b = a,~b \not= d,\mbox{~and~}c \not\in \{a,d\}$),
+\item[{\rm (ii)}] $D=\{ ya, bc, dy \}$ ($b \not\in \{a,d\},~c = d,\mbox{~and~} c \not = a$).
 \end{enumerate}
 \end{lem}
-\begin{proof}
 
+\begin{proof}
 It is obvious if no variable symbol appears in $p$.
 Therefore, let $p=p_{1}xp_{2}$ ($p_{1}, p_{2}$ are regular patterns and $x$ is a variable symbol). Assume that $p \{ x := xy \} \not \preceq q$ and derive the contradiction.
 
 \noindent\textrm{(i)}
-Let $D=\{ ya, bc, dy \}$ $(b = a,~c \not = a,d,\mbox{~and~}b \not = d)$.
+Let $D=\{ ya, bc, dy \}$ ($b = a,~b \not= d,\mbox{~and~}c \not\in \{a,d\}$).
 Since $p \{ x := r \} \preceq q$ for all $r \in D$, there are three strings of length $2$ corresponding to $ya, bc, dy$ in $q$. Note that the three strings may appear partly overlapping.
 The symbols appearing in $D$ corresponds to a variable or a constant in $q$.
 Let $y_{1}, y_{2}, y_{3}$ be variable symbols appearing in $q$.
@@ -99,7 +99,8 @@ From Lemmas \ref{追加部分} and \ref{片方}, we obtain the following corolla
   Let $\sharp \Sigma \ge 3$ and $p, q$ regular patterns on $\Sigma$.
   For a variable symbol $y$, if $D= \{ ya, bc, dy \}$ $(b = a$ and $c = d)$, there exists $q$ such that $p \{ x := r \} \preceq q$ for any $r \in D$, then $p \{ x := xy \} \not \preceq q$.
 \end{col}
-\begin{ex}
+
+\begin{proof}
 Let $a,b,c,d,e$ be constant symbols in $\Sigma$ and 
 $x,y,y_{1},y_{2}$ variable symbols.
 Let 
@@ -125,7 +126,7 @@ For these $p$ and $q$, the condition for Corollary \ref{両方} holds as follows
 & = & q \{ y_{1}:=e,~y_{2} := ybcadadabcbcadade \} \\
 & \preceq & q.
 \end{eqnarray*}
-\end{ex}
+\end{proof}
 
 \begin{figure}[t]
 \includegraphics[width=\linewidth]{figs/Exam_b=a_c=d.png}
@@ -261,13 +262,14 @@ If there exist $q \in Q_{1}^{(\cdot,\cdot)}$ and a string $a'b' \in A'\cdot B'$ 
 
 \noindent
 \textit{Proof of Claim} 4.
-Suppose that both $\sigma_{A}(q) \in B$ and $\sigma_{B}(q) \in A$ hold. Then, since $a' \not= \sigma_{A}(q)$, $a' \not= \sigma_{B}(q)$, $b' \not= \sigma_{A}(q)$, and $b' \not= \sigma_{B}(q)$, from Lemma~\ref{追加部分}, $p\{x:=xy\} \preceq q$ holds.
+Suppose that both $\sigma_{A}(q) \in B$ and $\sigma_{B}(q) \in A$ hold. Then, since $a' \not\in \{\sigma_{A}(q), \sigma_{B}(q)\} \subset A\cap B$ and $b' \not\in \{\sigma_{A}(q), \sigma_{B}(q)\} \subset A\cap B$, from Lemma~\ref{追加部分}, $p\{x:=xy\} \preceq q$ holds.
 Suppose that $\sigma_{A}(q)\in B$ and $\sigma_{B}(q)\in A'$.
 If $a' = \sigma_{B}(q)$, since $a' \in B$, $a' \not= b'$ holds.
 Since $\sigma_{A}(q)\in B$, $b' \not= \sigma_{A}(q)$ holds.
+I.e., $a' = \sigma_{B}(q)$, $a' \not= \sigma_{A}(q)$, and $b' \not\in \{\sigma_{A}(q), \sigma_{B}(q)\}$ hold.
 Therefore, from Lemma~\ref{片方}, $p\{x:=xy\} \preceq q$ holds.
 If $a' \not= \sigma_{B}(q)$, since $b' \not= \sigma_{A}(q)$, from Lemma~\ref{追加部分}, $p\{x:=xy\} \preceq q$ holds.
-In the case of $a\in A\cap B'$ and $b\in A\cap B$, this claim is similarly proven. (\textit{End of Proof of Claim})
+Similarly, the case that $\sigma_{A}(q)\in B'$ and $\sigma_{B}(q)\in A$ is proven. (\textit{End of Proof of Claim})
 
 \smallskip
 
@@ -296,7 +298,7 @@ There is no $q \in Q_{2}^{(\cdot,\cdot)}$ and a string $a'b' \in A'\cdot B'$ suc
 
 \noindent
 Let ${\cal L}_{2} = \sharp\{a'b' \in A'\cdot B' \mid \exists q \in Q_{2}^{(\cdot,\cdot)} \mbox{ s.t. } p\{x:=a'b'\} \preceq q\}$.
-For any $a'b' \in A'\cdot B'$ and $q \in Q_{2}^{(\cdot,\cdot)}$, if $a' = \sigma_{B}(q)$ and $b' = \sigma_{A}(q)$ hold, by considering the duplicate numbers $\ell_{A}$ and $\ell_{B}$, we have the following inequality:
+For any $a'b' \in A'\cdot B'$ and $q \in Q_{2}^{(\cdot,\cdot)}$, if $a' = \sigma_{B}(q)$ and $b' = \sigma_{A}(q)$ hold (it is the case of Corollary~\ref{両方}), by considering the duplicate numbers $\ell_{A}$ and $\ell_{B}$, we have the following inequality:
 \begin{align*}
   {\cal L}_{2} &\leq \min\{\sharp A' + \ell_{B}, \sharp B' + \ell_{A}\}.
 \end{align*}
