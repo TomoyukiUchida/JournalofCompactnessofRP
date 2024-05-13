@@ -1,4 +1,368 @@
 
+\begin{lem}\label{追加部分}
+  $\sharp \Sigma \ge 3$とし，$p, q$を正規パターンとする．
+  正規パターンの有限集合$D= \{ ya, bc, dy \}$ $(b \not = a,d$ かつ $c \not = a,d)$で表されるとき，任意の$r \in D$に対して$p \{ x := r \} \preceq q$ならば，$p \{ x := xy \} \preceq q$である．
+  \end{lem}
+  \begin{proof}
+  $p$に変数記号が現れない場合は自明である．
+  したがって，$p=p_{1}xp_{2}$ ($p_{1}, p_{2}$は正規パターン，$x$は変数記号)とおく．$p \{ x := xy \} \not \preceq q$と仮定して，矛盾を導く．
+  
+  記号列$A,B,C$に対して，$\{ A,B,C \} = \{ y_{1}a,bc,dy_{2} \}$とおき，$q=q_{1}AwBw^{\prime}Cq_{2}$とする．
+  これに対して，次の式が成り立っているものとする．
+  \begin{align*}
+  (1)~& p_{1} \preceq q_{1} & (\text{1'})~& p_{2} \preceq wBw^{\prime}Cq_{2} \\
+  (2)~& p_{1} \preceq q_{1}Aw & (\text{2'})~& p_{2} \preceq w^{\prime}Cq_{2} \\
+  (3)~& p_{1} \preceq q_{1}AwBw^{\prime} & (\text{3'})~& p_{2} \preceq q_{2}
+  \end{align*}
+  
+  $q^{\prime}_{1}=q_{1}A,~q^{\prime}_{2}=wBw^{\prime},~q^{\prime}_{3}=Cq_{2}$とおくと，(3)と(1')より，$p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2},~p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$となる．
+  補題\ref{補題9}より，$q^{\prime}_{2}$に変数記号が含まれるとき，$p \preceq q$となる．
+  よって，$B=y_{1}a$または，$B=dy_{2}$である場合，仮定に矛盾する．
+  したがって，$B=bc$である場合のみを考える．
+  
+  $A=dy_{2}$とすると，(2)は$p_{1} \preceq q_{1}dy_{2}w$となる．
+  $p_{1}=p^{\prime}_{1}p^{\prime\prime}_{1}, p^{\prime}_{1} \preceq q_{1}d$かつ$p^{\prime\prime}_{1} \preceq y_{2}w$とおくと，(1')より，$p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xwbcw^{\prime}y_{1}aq_{2}=q \{ x:=p^{\prime\prime}_{1}x \}$となり，$p=q\theta$となる．
+  これは仮定に矛盾する．
+  したがって，$A=y_{1}a,B=bc,C=dy_{2}$である場合のみ考えればよい．
+  
+  $q=q_{1}y_{1}awbcw^{\prime}dy_{2}q_{2}~(b \not = a,d$かつ$c \not = a,d)$とする．
+  これに対して，次の式が成り立っているものとする．
+  \begin{align*}
+  (1)~& p_{1} \preceq q_{1} & (\text{1'})~& p_{2} \preceq wbcw^{\prime}dy_{2}q_{2} \\
+  (2)~& p_{1} \preceq q_{1}y_{1}aw & (\text{2'})~& p_{2} \preceq w^{\prime}dy_{2}q_{2} \\
+  (3)~& p_{1} \preceq q_{1}y_{1}awbcw^{\prime} & (\text{3'})~& p_{2} \preceq q_{2}
+  \end{align*}
+  
+  $|w|=|w^{\prime}|$のとき，(2)と(3)より，$p_{1}$の接尾辞は$awbcw^{\prime}$かつ$aw$であるので，$cw^{\prime}=aw$となる．
+  これは，$c=a$となり，$c \not = a$であることに矛盾する．
+  
+  $|w| = |w^{\prime}|+1$のとき，(2)と(3)より，$p_{1}$の接尾辞は$awbcw^{\prime}$かつ$aw$である．
+  $w=w_{1}w^{\prime}$とおくと，$aw=aw_{1}w^{\prime}$となる．
+  したがって，$bcw^{\prime}=aw_{1}w^{\prime}$より，$b = a$となる．
+  これは$b \not = a$であることに矛盾する．
+  
+  $|w| = |w^{\prime}|+2$のとき，(2)と(3)より，$p_{1}$の接尾辞は$awbcw^{\prime}$かつ$aw$であり，(1')と(2')より，$p_{2}$の接頭辞は$wbcw^{\prime}d$かつ$w^{\prime}d$である．
+  
+  %\begin{figure}[H]
+  \begin{figure}  
+  \centering
+  \includegraphics[width=\linewidth]{figs/Pre-Suff.png}
+  \vspace{-1cm}
+  \caption{$|w| = |w^{\prime}|+2$における\,$p_{1}$\,の接尾辞，$p_{2}$\,の接頭辞の関係}
+  \label{追加部分1}
+  \vspace*{-.2cm}
+  \end{figure}
+  
+  図\ref{追加部分1}のように，$w=w^{\prime}da,~w=bcw^{\prime}$となる．
+  よって，$w^{\prime}da=bcw^{\prime}$となる．
+  
+  \begin{cl}\label{主張1}
+  $w^{\prime}$を定数記号列，a,b,c,dを定数記号とする．
+  このとき，$w^{\prime}da \not =bcw^{\prime}$ $(b \not = a,d$かつ$c \not = a,d)$となる．
+  \end{cl}
+  
+  \noindent\textbf{主張\ref{主張1}の証明.}
+  $w^{\prime}da=bcw^{\prime}$と仮定する．
+  $|w^{\prime}| \ge 4$のとき，$w^{\prime}=bcw_{1}da$ $(w_{1}$は定数記号列$)$とおける．
+  $w^{\prime}da=bcw_{1}dada, bcw^{\prime}=bcbcw_{1}da$であるので，$bcw_{1}dada=bcbcw_{1}da$となる．
+  $w^{\prime}$と同様に$w_{1}$を考えると，$w_{1}=bcw_{2}da$ $(w_{2}$は定数記号列$)$とおける．
+  $w_{2}$以降も同様に定義できる．
+  ここで，定数記号列の長さを考えていくと，$|w_{1}|=|w^{\prime}|-4, |w_{2}|=|w_{1}|-4$のように，$|w_{i+1}|$は$|w_{i}|$より長さ4ずつ短くなっていく．
+  そのため，定数記号列を繰り返し定義していくと，最終的に定義できる$w_{n}$は長さ0,1,2,3のいずれかとなる．
+  
+  %\begin{figure}[H]
+  \begin{figure}  
+  \centering
+  \includegraphics[width=\linewidth]{figs/ConstantSeq.png}
+  \vspace{-1.5cm}
+  \caption{$|w_{n}| = 0$における定数記号列}
+  \label{追加部分2}
+  \vspace*{-.2cm}
+  \end{figure}
+  
+  
+  $|w_{n}|=0$のとき，図\ref{追加部分2}のように，$da=bc$となる．
+  これは，$b \not = d$であることに矛盾する．
+  
+  %\begin{figure}[H]
+  \begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{figs/w_n=1.png}
+  \vspace{-1.5cm}
+  \caption{$|w_{n}| = 1$における定数記号列}
+  \label{追加部分3}
+  \vspace*{-.2cm}
+  \end{figure}
+  
+  
+  $|w_{n}|=1$のとき，図\ref{追加部分3}のように，$w_{n}=a=b$となる．
+  これは，$b \not = a$であることに矛盾する．
+  
+  %\begin{figure}[H]
+  \begin{figure}  
+  \centering
+  \includegraphics[width=\linewidth]{figs/w_n=2.png}
+  \vspace{-1.5cm}
+  \caption{$|w_{n}| = 2$における定数記号列}
+  \label{追加部分4}
+  \vspace*{-.2cm}
+  \end{figure}
+  
+  $|w_{n}|=2$のとき，図\ref{追加部分4}のように，$w_{n}=bc=da$となる．
+  これは，$b \not = d$であることに矛盾する．
+  
+  %\begin{figure}[H]
+  \begin{figure}  
+  \centering
+  \includegraphics[width=\linewidth]{figs/w_n=3.png}
+  \vspace{-1.5cm}
+  \caption{$|w_{n}| = 3$における定数記号列}
+  \label{追加部分5}
+  \end{figure}
+  
+  $|w_{n}|=3$のとき，$w_{n}=w_{n_{1}}w_{n_{2}}w_{n_{3}} (w_{n_{i}}$は$w_{n}$におけるi番目の定数記号$)$と表すと，図\ref{追加部分5}のように，$bcw_{n_{3}}=w_{n_{1}}da$となる．
+  よって，$c=d$となる．
+  これは，$c \not = d$であることに矛盾する．
+  
+  以上より，$|w_{n}|=0,1,2,3$のとき，すべての場合において，仮定に矛盾するため，$|w^{\prime}| \ge 4$である場合，$w^{\prime}da \not = bcw^{\prime}$となる．
+  
+  $|w^{\prime}| \le 3$のとき，$|w_{n}|=0,1,2,3$を$|w^{\prime}|$と置き換えて考えることができるため，すべての場合において仮定に矛盾する．
+  よって，$w^{\prime}da \not = bcw^{\prime}$となる．
+  
+  \hspace{\fill}\rm{(主張\ref{主張1}のQ.E.D)}
+  
+  よって，$w^{\prime}da=bcw^{\prime}$は，主張\ref{主張1}に矛盾する．
+  
+  %\begin{figure}[H]
+  \begin{figure}  
+  \centering
+  \includegraphics[width=\linewidth]{figs/wgewprime+3.png}
+  \vspace{-1cm}
+  \caption{$|w| \ge |w^{\prime}|+3$における$p_{1}$の接尾辞，$p_{2}$の接頭辞の関係}
+  \label{追加部分6}
+  \end{figure}
+  
+  $|w| \ge |w^{\prime}|+3$のとき，図\ref{追加部分6}のように，$w=w^{\prime}daw_{1}=w_{1}bcw^{\prime}$ $(w_{1}$は定数記号列$)$となる．
+  よって，$w^{\prime}daw_{1}=w_{1}bcw^{\prime}$となる．
+  
+  \begin{cl}\label{主張2}
+  $w, w_{1}$を定数記号列，a,b,c,dを定数記号とする．
+  このとき，$wdaw_{1} \not =w_{1}bcw$ $(b \not = a,d$かつ$c \not = a,d)$となる．
+  \end{cl}
+  
+  \noindent\textbf{主張\ref{主張2}の証明.}
+  $wdaw_{1}=w_{1}bcw$と仮定する．
+  $w$と$w_{1}$の関係を以下のように場合分けして，考えていく．
+  \[
+  \begin{tabular}{ll}
+  $\textbf{(a)}$ $|w_{1}| \le |w| \le |w_{1}|+2$,\\
+  $\textbf{(b)}$ $2|w_{1}| \le |w| \le 2|w_{1}|+4$,\\
+  $\textbf{(c)}$ $|w_{1}|=0$,\\
+  $\textbf{(d)}$ $|w_{1}|+3 \le |w| \le 2|w_{1}|-1$,\\
+  $\textbf{(e)}$ $|w| \ge 2|w_{1}|+5$. 
+  \end{tabular}
+  \]
+  
+  \noindent$\textbf{(a)}$ $|w_{1}| \le |w| \le |w_{1}|+2$である場合から考える．
+  
+  %\begin{figure}[H]
+  \begin{figure} 
+  \centering
+  \includegraphics[width=\linewidth]{figs/w=w_1.png}
+  \vspace{-1.5cm}
+  \caption{$|w| = |w_{1}|$における定数記号列}
+  \label{追加部分7}
+  \vspace*{-.4cm}
+  \end{figure}
+  
+  $|w|=|w_{1}|$のとき，図\ref{追加部分7}のように，$bc=da$となる．
+  これは，$b \not = d$であることに矛盾する．
+  
+  %\begin{figure}[H]
+  \begin{figure}  
+  \centering
+  \includegraphics[width=\linewidth]{figs/w=w_1+1.png}
+  \vspace{-1.5cm}
+  \caption{$|w| = |w_{1}|+1$における定数記号列}
+  \label{追加部分8}
+  \vspace*{-.4cm}
+  \end{figure}
+  
+  $|w|=|w_{1}|+1$のとき，図\ref{追加部分8}のように，$c=d$となる．
+  これは，$c \not = d$であることに矛盾する．
+  
+  %\begin{figure}[H]
+  %\begin{figure}  
+  %\centering
+  %\includegraphics[width=\linewidth]{figs/追加部分9.png}
+  %\vspace{-1.5cm}
+  %\caption{$|w| = |w_{1}|+2$における定数記号列}
+  %\label{追加部分9}
+  %\vspace*{-.4cm}
+  %\end{figure}
+  
+  $|w|=|w_{1}|+2$のとき，図\ref{追加部分9}のように，$w=w_{1}bc=daw_{1}$となる．
+  これは，主張\ref{主張1}に矛盾する．
+  
+  \noindent$\textbf{(b)}$ $2|w_{1}| \le |w| \le 2|w_{1}|+4$である場合，
+  
+  $|w|=2|w_{1}|$のとき，図\ref{追加部分14}のように，$w_{1}da=bcw_{1}$となる．
+  これは，主張\ref{主張1}に矛盾する．
+  
+  $|w|=2|w_{1}|+1$のとき，図\ref{追加部分13}のように，$b=a$となる．
+  これは，$b \not = a$であることに矛盾する．
+  
+  $|w|=2|w_{1}|+2$のとき，図\ref{追加部分12}のように，$bc=da$となる．
+  これは，$b \not = d$であることに矛盾する．
+  
+  $|w|=2|w_{1}|+3$のとき，図\ref{追加部分11}のように，$c=d$となる．
+  これは，$c \not = d$であることに矛盾する．
+  
+  %\begin{figure}[H]
+  \begin{figure}  
+  \centering
+  \includegraphics[width=\linewidth]{figs/w=w_1+2.png}
+  \vspace{-1.0cm}
+  \caption{$|w| = |w_{1}|+2$における定数記号列}
+  \label{追加部分9}
+  \vspace*{.5cm}
+  
+  \centering
+  \includegraphics[scale=.4]{figs/w=2w_1.png}
+  \vspace{-.4cm}
+  \caption{$|w| = 2|w_{1}|$における定数記号列}
+  \label{追加部分14}
+  \vspace*{.5cm}
+  %\vspace*{-.2cm}
+  %\end{figure}
+  %
+  %\begin{figure}[H]
+  %\begin{figure}  
+  \centering
+  \includegraphics[scale=.4]{figs/w=2w_1+1.png}
+  \vspace{-.4cm}
+  \caption{$|w| = 2|w_{1}|+1$における定数記号列}
+  \label{追加部分13}
+  \vspace*{.5cm}
+  %\vspace*{-.4cm}
+  %\end{figure}
+  %
+  %
+  %\begin{figure}[H]
+  %\begin{figure}
+  \centering
+  \includegraphics[scale=.4]{figs/w=2w_1+2.png}
+  \vspace{-.5cm}
+  \caption{$|w| = 2|w_{1}|+2$における定数記号列}
+  \label{追加部分12}
+  \vspace*{.5cm}
+  %\vspace*{-.4cm}
+  %\end{figure}
+  %
+  %
+  %\begin{figure}[H]
+  %\begin{figure} 
+  \centering
+  \includegraphics[width=\linewidth]{figs/w=2w_1+3.png}
+  \vspace{-1cm}
+  \caption{$|w| = 2|w_{1}|+3$における定数記号列}
+  \label{追加部分11}
+  \vspace*{.5cm}
+  %\vspace*{-.7cm}
+  %\end{figure}
+  %
+  %
+  %\begin{figure}[H]
+  %\begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{figs/w=2w_1+4.png}
+  \vspace{-1.2cm}
+  \caption{$|w| = 2|w_{1}|+4$における定数記号列}
+  \label{追加部分10}
+  %\vspace*{-.5cm}
+  
+  %\centering
+  %\includegraphics[width=\linewidth]{figs/w1+3.png}
+  %\vspace{-1cm}
+  %\caption{$|w_{1}|+3 \le |w| \le 2|w_{1}|-1$における定数記号列}
+  %\label{w1+3}
+  \end{figure}
+  
+  $|w|=2|w_{1}|+4$のとき，$w=w_{1}bcdaw_{1}$とおける．
+  図\ref{追加部分10}のように，$daw_{1}=w_{1}bc$となる．
+  これは，主張\ref{主張1}に矛盾する．
+  
+  \noindent$\textbf{(c)}$ $|w_{1}|=0$のとき，$wda \not = bcw$ $(b \not = a,d$かつ$c \not = a,d)$となる．
+  これは，主張\ref{主張1}に矛盾する．
+  
+  上記以外の範囲$\textbf{(d)}$ $|w_{1}|+3 \le |w| \le 2|w_{1}|-1$と$\textbf{(e)}$ $|w| \ge 2|w_{1}|+5$である場合，対象とする定数記号列の長さを減らして考えることができる．
+  
+  \noindent$\textbf{(d)}$ $|w_{1}|+3 \le |w| \le 2|w_{1}|-1$のとき，
+  
+  %\begin{figure}[H]
+  %\begin{figure}
+  %\centering
+  %\includegraphics[width=\linewidth]{figs/w1+3.png}
+  %\vspace{-1cm}
+  %\caption{$|w_{1}|+3 \le |w| \le 2|w_{1}|-1$における定数記号列}
+  %\label{w1+3}
+  %\end{figure}
+  
+  図\ref{w1+3}のように，$W$を$w$，$W^{\prime}$を$w_{1}$と置き換えて考えることができる．
+  よって，赤枠部分以外の定数記号列を無視できるため，対象とする定数記号列の長さを減らすことができる．
+  
+  \noindent$\textbf{(e)}$ $|w| \ge 2|w_{1}|+5$のとき，
+  
+  %\begin{figure}[H]
+  \begin{figure}
+  \centering
+  \includegraphics[width=\linewidth]{figs/w1+3.png}
+  \vspace{-1cm}
+  \caption{$|w_{1}|+3 \le |w| \le 2|w_{1}|-1$における定数記号列}
+  \label{w1+3}
+  %\vspace*{-.3cm}
+  
+  \centering
+  \includegraphics[width=\linewidth]{figs/2w1+5.png}
+  \vspace{-1cm}
+  \caption{$|w| \ge 2|w_{1}|+5$における定数記号列}
+  \label{2w1+5}
+  \vspace*{-.3cm}
+  \end{figure}
+  
+  図\ref{2w1+5}のように，$W$と$w$を置き換えて考えることができる．
+  よって，赤枠部分以外の定数記号列を無視できるため，対象とする定数記号列の長さを減らすことができる．
+  
+  したがって，$\textbf{(d)}$ $|w_{1}|+3 \le |w| \le 2|w_{1}|-1$と$\textbf{(e)}$ $|w| \ge 2|w_{1}|+5$の場合，$w,w_{1}$の長さを減らして考えることができる．
+  この結果より，$w$と$w_{1}$の長さの関係は，最終的に，$\textbf{(a)}$ $|w_{1}| \le |w| \le |w_{1}|+2$，$\textbf{(b)}$ $2|w_{1}| \le |w| \le 2|w_{1}|+4$，$\textbf{(c)}$ $|w_{1}|=0$のいずれかに当てはまるため，仮定に矛盾する．
+  
+  \hspace{\fill}\rm{(主張\ref{主張2}のQ.E.D)}
+  
+  よって，$w^{\prime}daw_{1}=w_{1}bcw^{\prime}$は，主張\ref{主張2}に矛盾する．
+  次に，$|w| < |w^{\prime}|$である場合を考える．
+  
+  $|w^{\prime}|=|w|+1$のとき，(1')と(2')より，$p_{2}$の接頭辞は$wbcw^{\prime}d$かつ$w^{\prime}d$である．
+  $|wbc|=|w^{\prime}d|$より，$c=d$となる．
+  これは，$c \ne d$であることに矛盾する．
+  
+  $|w^{\prime}|=|w|+2$のとき，(1')と(2')より，$p_{2}$の接頭辞は$wbcw^{\prime}d$かつ$w^{\prime}d$である．
+  $|wbc|=|w^{\prime}|$より，$w^{\prime}$の最初の記号は$d$となり，$w^{\prime}$の最後の2つの記号は$bc$となる．
+  (2)と(3)より，$p_{1}$の接尾辞は$awbcw^{\prime}$かつ$aw$であるため，$|w^{\prime}|-1=|aw|$より，$w^{\prime}$の最初から2つ目の記号は$a$となる．
+  よって，$w^{\prime}=wbc=daw$となる．
+  これは，主張\ref{主張1}に矛盾する．
+  
+  $|w^{\prime}| \ge |w|+3$のとき，(1')と(2')より，$p_{2}$の接頭辞は$wbcw^{\prime}d$かつ$w^{\prime}d$である．
+  $|wbcw_{1}|=|w^{\prime}|$ ($w_{1}$は定数記号列)より，$w^{\prime}$の接頭辞は$w_{1}d$となり，$w^{\prime}$の接尾辞は$bcw_{1}$となる．
+  (2)と(3)より，$p_{1}$の接尾辞は$awbcw^{\prime}$かつ$aw$である．
+  $|w^{\prime}|-|w_{1}|-1=|aw|$より，$w^{\prime}$の最初から2つ目の記号は$a$となる．
+  よって，$w^{\prime}=wbcw_{1}=w_{1}daw$となる．
+  これは，主張\ref{主張2}に矛盾する．
+  \end{proof}
+  
+  
+
+
+
 \begin{lem}\label{片方}
 Let $\Sigma$ be an alphabet with $\Sigma \ge 3$ and $p,~q$ regular patterns on $\Sigma$.
 Let $D$ be one of the following sets \textrm{(i), (ii)} of regular patterns on $\Sigma$.
