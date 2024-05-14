@@ -58,15 +58,14 @@
 
   \noindent
   \textit{Claim} 1.
-  Let $w^{\prime}$ be a string of constant symbols in $\Sigma$ and $a,b,c,d$ constant symbols.
-  Then, if $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$, then $w^{\prime}da \not =bcw^{\prime}$ holds.
+  Let $w^{\prime}$ be a string of constant symbols in $\Sigma$ and $a,b,c,d$ constant symbols in $\Sigma$.
+  Then, if $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$, then $w^{\prime}da \not = bcw^{\prime}$ holds.
   %\end{cl}
 
   \smallskip
   
   \noindent
   \textit{Proof of Claim} 1.
-  We prove this lemma by an induction on $|w^{\prime}|$. 
   When $|w^{\prime}| = 0, 1, 2, 3$, it is easy to see that $w^{\prime}da=bcw^{\prime}$ does not satisfy the conditions $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$. Therefore, $w^{\prime}da \not= bcw^{\prime}$ holds.
   Let $n = |w^{\prime}|$.
   When $n \ge 4$, we assume that for any string $w^{\prime\prime}$ with $|w^{\prime\prime}|<n$, if $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$, $w^{\prime\prime}da \not =bcw^{\prime\prime}$ holds.
@@ -80,16 +79,7 @@
   \smallskip
 
   Therefore, if $|w|=|w^{\prime}|+2$, it contradicts \textit{Claim} 1. 
-  
-  %\begin{figure}[H]
-  \begin{figure}[t]  
-  \centering
-  \includegraphics[width=\linewidth]{figs/wgewprime+3.png}
-  %\vspace{-1cm}
-  \caption{$|w| \ge |w^{\prime}|+3$における$p_{1}$の接尾辞，$p_{2}$の接頭辞の関係}
-  \label{追加部分6}
-  \end{figure}
-  
+
   If $|w| \ge |w^{\prime}|+3$, from (2) and (3), there exists a string $w^{\prime\prime}$ of length $|w|-|w^{\prime}|-2$ such that $w=w^{\prime\prime}bcw^{\prime}$ holds.
   Moreover, from (2) and (3), since $|aw| < |wbcw^{\prime}|$ and $aw = aw^{\prime\prime}bcw^{\prime}$, $aw^{\prime\prime}$ is a suffix of $w$.
   On the other hand, from (1') and (2'), $w^{\prime}d$ is a prefix of $w$.
@@ -100,198 +90,105 @@
   
   \noindent
   \textit{Claim} 2.
-  $w, w_{1}$を定数記号列，a,b,c,dを定数記号とする．
-  このとき，$wdaw_{1} \not =w_{1}bcw$ $(b \not = a,d$かつ$c \not = a,d)$となる．
-  
+  Let $w^{\prime},w^{\prime\prime}$ be strings of constant symbols in $\Sigma$ and $a,b,c,d$ constant symbols in $\Sigma$.
+  Then, if $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$, then $w^{\prime}daw^{\prime\prime} \not = w^{\prime\prime}bcw^{\prime}$ holds.
+
   \smallskip
   
   \noindent
   \textit{Proof of Claim} 2.
-  $wdaw_{1}=w_{1}bcw$と仮定する．
-  $w$と$w_{1}$の関係を以下のように場合分けして，考えていく．
-  \[
-  \begin{tabular}{ll}
-  $\textbf{(a)}$ $|w_{1}| \le |w| \le |w_{1}|+2$,\\
-  $\textbf{(b)}$ $2|w_{1}| \le |w| \le 2|w_{1}|+4$,\\
-  $\textbf{(c)}$ $|w_{1}|=0$,\\
-  $\textbf{(d)}$ $|w_{1}|+3 \le |w| \le 2|w_{1}|-1$,\\
-  $\textbf{(e)}$ $|w| \ge 2|w_{1}|+5$. 
-  \end{tabular}
-  \]
-  
-  \noindent$\textbf{(a)}$ $|w_{1}| \le |w| \le |w_{1}|+2$である場合から考える．
-  
-  %\begin{figure}[H]
-  \begin{figure}[t]
-  \centering
-  \includegraphics[width=\linewidth]{figs/w=w_1.png}
-  %\vspace{-1.5cm}
-  \caption{$|w| = |w_{1}|$における定数記号列}
-  \label{追加部分7}
-  %\vspace*{-.4cm}
-  \end{figure}
-  
-  $|w|=|w_{1}|$のとき，図\ref{追加部分7}のように，$bc=da$となる．
-  これは，$b \not = d$であることに矛盾する．
-  
-  %\begin{figure}[H]
-  \begin{figure}[t]
-  \centering
-  \includegraphics[width=\linewidth]{figs/w=w_1+1.png}
-  %\vspace{-1.5cm}
-  \caption{$|w| = |w_{1}|+1$における定数記号列}
-  \label{追加部分8}
-  %\vspace*{-.4cm}
-  \end{figure}
-  
-  $|w|=|w_{1}|+1$のとき，図\ref{追加部分8}のように，$c=d$となる．
-  これは，$c \not = d$であることに矛盾する．
-  
-  %\begin{figure}[H]
-  %\begin{figure}[t]
-  %\centering
-  %\includegraphics[width=\linewidth]{figs/追加部分9.png}
-  %\vspace{-1.5cm}
-  %\caption{$|w| = |w_{1}|+2$における定数記号列}
-  %\label{追加部分9}
-  %\vspace*{-.4cm}
-  %\end{figure}
-  
-  $|w|=|w_{1}|+2$のとき，図\ref{追加部分9}のように，$w=w_{1}bc=daw_{1}$となる．
-  これは，主張\ref{主張1}に矛盾する．
-  
-  \noindent$\textbf{(b)}$ $2|w_{1}| \le |w| \le 2|w_{1}|+4$である場合，
-  
+  W.l.o.g., we suppose that $|w^{\prime\prime}| \leq |w^{\prime}|$ holds.
+  We assume that the next equation holds:
+  \begin{equation}
+  w^{\prime}daw^{\prime\prime} = w^{\prime\prime}bcw^{\prime}\label{eq:claim2}
+  \end{equation}
+  We prove this claim by an induction on $|w^{\prime\prime}|$.
+  \begin{enumerate}
+    \item[(i)] $|w^{\prime\prime}|=0$:
+    We have $w^{\prime}da = bcw^{\prime}$ ($b \not\in \{a,d\}$ and $c \not\in \{a,d\}$).
+    It contradicts \textit{Claim} 1.
+  \end{enumerate}
+  We assume that for constant strings $u$ and $v$ with $|u| < |w^{\prime\prime}|$ and $|v| \leq |w^{\prime}|$, $vbcu \not= udav$ holds.
+  We partition the relations between $|w^{\prime}|$ and $|w^{\prime\prime}|$ into the following four parts:
+  \begin{enumerate}
+  \item[(i)] $|w^{\prime\prime}|=0$:
+  We have $w^{\prime}da = bcw^{\prime}$ ($b \not\in \{a,d\}$ and $c \not\in \{a,d\}$).
+  It contradicts \textit{Claim} 1.
+  \item[(ii)] $|w^{\prime\prime}| \le |w^{\prime}| \le |w^{\prime\prime}|+2$:
+  When either $|w^{\prime}|=|w^{\prime\prime}|$ or $|w^{\prime}|=|w^{\prime\prime}|+1$, Eq.~\ref{eq:claim2} is written as shown in Figs.~\ref{追加部分7}, \ref{追加部分8}. Trivially, these cases contradict the conditions $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$.
+  When $|w^{\prime}|=|w^{\prime\prime}|+2$, Eq.~\ref{eq:claim2} can be written as shown in Fig.~\ref{追加部分9}. This implies $w^{\prime}=w^{\prime\prime}bc=daw^{\prime\prime}$, and contradicts \textit{Claim} 1.
+  \item[(iii)] $|w^{\prime\prime}|+3 \le |w^{\prime}| \le 2|w^{\prime\prime}| - 1$:
+  On Eq.~\ref{eq:claim2}, since $|w^{\prime}daw^{\prime\prime}| = |w^{\prime\prime}bcw^{\prime}| = |w^{\prime}| + |w^{\prime\prime}| + 2$, there exists a constant string $u$ of length $2|w^{\prime}| - (|w^{\prime}| + |w^{\prime\prime}| + 2) = |w^{\prime}| - |w^{\prime\prime}| - 2$ such that $u$ is a prefix and a suffix of $w^{\prime}$.
+  Since $uda$ is of length $|w^{\prime}| - |w^{\prime\prime}|$, $uda$ is a prefix of $w^{\prime}$. Similarly, $bcu$ is a suffix of $w^{\prime}$.
+  Since $|w^{\prime}| - 2(|w^{\prime}| - |w^{\prime\prime}|) = 2|w^{\prime\prime}| - |w^{\prime}| \ge 1$, there exist a constant string $v$ of length at least $1$ such that $w = udavbcu$ holds. Since $|vbcu| = (2|w^{\prime\prime}| - |w^{\prime}|) + 2 + (|w^{\prime}| - |w^{\prime\prime}| - 2) = |w^{\prime\prime}|$, we have $w^{\prime\prime} = vbcu$. Similarly, we have $w^{\prime\prime} = udav$. Therefore, we have a new equation $vbcu = udav$.
+  Since $|u| = |w^{\prime}| - |w^{\prime\prime}| - 2 \leq |w^{\prime\prime}| - 3 < |w^{\prime\prime}|$ and $|v| = 2|w^{\prime\prime}| - |w^{\prime}| \le |w^{\prime}|$, it contradicts the induction hypothesis on $|w^{\prime\prime}|$. Therefore, the claim holds.
+  \item[(iv)] $2|w^{\prime\prime}| \le |w^{\prime}| \le 2|w^{\prime\prime}|+4$:
   $|w|=2|w_{1}|$のとき，図\ref{追加部分14}のように，$w_{1}da=bcw_{1}$となる．
   これは，主張\ref{主張1}に矛盾する．
-  
   $|w|=2|w_{1}|+1$のとき，図\ref{追加部分13}のように，$b=a$となる．
   これは，$b \not = a$であることに矛盾する．
-  
   $|w|=2|w_{1}|+2$のとき，図\ref{追加部分12}のように，$bc=da$となる．
   これは，$b \not = d$であることに矛盾する．
-  
   $|w|=2|w_{1}|+3$のとき，図\ref{追加部分11}のように，$c=d$となる．
   これは，$c \not = d$であることに矛盾する．
-  
-  %\begin{figure}[H]
-  \begin{figure}[t]
-  \centering
-  \includegraphics[width=\linewidth]{figs/w=w_1+2.png}
-  %\vspace{-1.0cm}
-  \caption{$|w| = |w_{1}|+2$における定数記号列}
-  \label{追加部分9}
-  %\vspace*{.5cm}
-  
-  \centering
-  \includegraphics[scale=.4]{figs/w=2w_1.png}
-  %\vspace{-.4cm}
-  \caption{$|w| = 2|w_{1}|$における定数記号列}
-  \label{追加部分14}
-  %\vspace*{.5cm}
-  %\end{figure}
-  %
-  %\begin{figure}[H]
-  %\begin{figure}[t]  
-  \centering
-  \includegraphics[scale=.4]{figs/w=2w_1+1.png}
-  %\vspace{-.4cm}
-  \caption{$|w| = 2|w_{1}|+1$における定数記号列}
-  \label{追加部分13}
-  %\vspace*{.5cm}
-  %\vspace*{-.4cm}
-  %\end{figure}
-  %
-  %
-  %\begin{figure}[H]
-  %\begin{figure}[t]
-  \centering
-  \includegraphics[scale=.4]{figs/w=2w_1+2.png}
-  %\vspace{-.5cm}
-  \caption{$|w| = 2|w_{1}|+2$における定数記号列}
-  \label{追加部分12}
-  %\vspace*{.5cm}
-  %\vspace*{-.4cm}
-  %\end{figure}
-  %
-  %
-  %\begin{figure}[H]
-  %\begin{figure}[t] 
-  \centering
-  \includegraphics[width=\linewidth]{figs/w=2w_1+3.png}
-  %\vspace{-1cm}
-  \caption{$|w| = 2|w_{1}|+3$における定数記号列}
-  \label{追加部分11}
-  %\vspace*{.5cm}
-  %\vspace*{-.7cm}
-  %\end{figure}
-  %
-  %
-  %\begin{figure}[H]
-  %\begin{figure}[t]
-  \centering
-  \includegraphics[width=\linewidth]{figs/w=2w_1+4.png}
-  %\vspace{-1.2cm}
-  \caption{$|w| = 2|w_{1}|+4$における定数記号列}
-  \label{追加部分10}
-  %\vspace*{-.5cm}x
-  
-  %\centering
-  %\includegraphics[width=\linewidth]{figs/w1+3.png}
-  %\vspace{-1cm}
-  %\caption{$|w_{1}|+3 \le |w| \le 2|w_{1}|-1$における定数記号列}
-  %\label{w1+3}
-  \end{figure}
-  
   $|w|=2|w_{1}|+4$のとき，$w=w_{1}bcdaw_{1}$とおける．
   図\ref{追加部分10}のように，$daw_{1}=w_{1}bc$となる．
   これは，主張\ref{主張1}に矛盾する．
-  
-  \noindent$\textbf{(c)}$ $|w_{1}|=0$のとき，$wda \not = bcw$ $(b \not = a,d$かつ$c \not = a,d)$となる．
-  これは，主張\ref{主張1}に矛盾する．
-  
   上記以外の範囲$\textbf{(d)}$ $|w_{1}|+3 \le |w| \le 2|w_{1}|-1$と$\textbf{(e)}$ $|w| \ge 2|w_{1}|+5$である場合，対象とする定数記号列の長さを減らして考えることができる．
-  
-  \noindent$\textbf{(d)}$ $|w_{1}|+3 \le |w| \le 2|w_{1}|-1$のとき，
-  
-  %\begin{figure}[H]
-  %\begin{figure}[t]
-  %\centering
-  %\includegraphics[width=\linewidth]{figs/w1+3.png}
-  %\vspace{-1cm}
-  %\caption{$|w_{1}|+3 \le |w| \le 2|w_{1}|-1$における定数記号列}
-  %\label{w1+3}
-  %\end{figure}
-  
-  図\ref{w1+3}のように，$W$を$w$，$W^{\prime}$を$w_{1}$と置き換えて考えることができる．
-  よって，赤枠部分以外の定数記号列を無視できるため，対象とする定数記号列の長さを減らすことができる．
-  
-  \noindent$\textbf{(e)}$ $|w| \ge 2|w_{1}|+5$のとき，
-  
-  %\begin{figure}[H]
-  \begin{figure}[t]
-  \centering
-  \includegraphics[width=\linewidth]{figs/w1+3.png}
-  %\vspace{-1cm}
-  \caption{$|w_{1}|+3 \le |w| \le 2|w_{1}|-1$における定数記号列}
-  \label{w1+3}
-  %\vspace*{-.3cm}
-  
-  \centering
-  \includegraphics[width=\linewidth]{figs/2w1+5.png}
-  %\vspace{-1cm}
-  \caption{$|w| \ge 2|w_{1}|+5$における定数記号列}
-  \label{2w1+5}
-  %\vspace*{-.3cm}
-  \end{figure}
-  
+  \item[(v)] $2|w^{\prime\prime}|+5 \leq |w^{\prime}|$:
   図\ref{2w1+5}のように，$W$と$w$を置き換えて考えることができる．
   よって，赤枠部分以外の定数記号列を無視できるため，対象とする定数記号列の長さを減らすことができる．
-  
   したがって，$\textbf{(d)}$ $|w_{1}|+3 \le |w| \le 2|w_{1}|-1$と$\textbf{(e)}$ $|w| \ge 2|w_{1}|+5$の場合，$w,w_{1}$の長さを減らして考えることができる．
   この結果より，$w$と$w_{1}$の長さの関係は，最終的に，$\textbf{(a)}$ $|w_{1}| \le |w| \le |w_{1}|+2$，$\textbf{(b)}$ $2|w_{1}| \le |w| \le 2|w_{1}|+4$，$\textbf{(c)}$ $|w_{1}|=0$のいずれかに当てはまるため，仮定に矛盾する．
+  \end{enumerate}
+  From the above, we conclude that $w^{\prime}daw^{\prime\prime} \not = w^{\prime\prime}bcw^{\prime}$ holds.
   (\textit{End of Proof of Claim})
-  
+
+\smallskip
+
+Therefore, if $|w|=|w^{\prime}|+3$, it contradicts \textit{Claim} 2. 
+
+
+\begin{figure}[t]
+  \begin{center}
+    \includegraphics[scale=0.35]{figs/w=w_1.png}
+    \caption{$|w| = |w_{1}|$における定数記号列}\label{追加部分7}
+    \includegraphics[scale=0.35]{figs/w=w_1+1.png}
+    \caption{$|w| = |w_{1}|+1$における定数記号列}\label{追加部分8}
+    \includegraphics[scale=0.35]{figs/w=w_1+2.png}
+    \caption{$|w| = |w_{1}|+2$における定数記号列}\label{追加部分9}
+  \end{center}
+\end{figure}
+
+\begin{figure}[t]
+  \begin{center}
+    \includegraphics[scale=0.35]{figs/w1+3.png}
+    \caption{$|w_{1}|+3 \le |w| \le 2|w_{1}|-1$における定数記号列}\label{w1+3}
+  \end{center}
+\end{figure}
+
+\begin{figure}[t]
+  \begin{center}
+    \includegraphics[scale=0.35]{figs/w=2w_1.png}
+    \caption{$|w| = 2|w_{1}|$における定数記号列}\label{追加部分14}
+    \includegraphics[scale=0.35]{figs/w=2w_1+1.png}
+    \caption{$|w| = 2|w_{1}|+1$における定数記号列}\label{追加部分13}
+    \includegraphics[scale=0.35]{figs/w=2w_1+2.png}
+    \caption{$|w| = 2|w_{1}|+2$における定数記号列}\label{追加部分12}
+    \includegraphics[scale=0.35]{figs/w=2w_1+3.png}
+    \caption{$|w| = 2|w_{1}|+3$における定数記号列}\label{追加部分11}
+    \includegraphics[scale=0.35]{figs/w=2w_1+4.png}
+    \caption{$|w| = 2|w_{1}|+4$における定数記号列}\label{追加部分10}
+  \end{center}
+\end{figure}
+
+\begin{figure}[t]
+  \begin{center}
+    \includegraphics[scale=0.35]{figs/2w1+5.png}
+    \caption{$|w| \ge 2|w_{1}|+5$における定数記号列}\label{2w1+5}
+  \end{center}
+\end{figure}
+    
   よって，$w^{\prime}daw_{1}=w_{1}bcw^{\prime}$は，主張\ref{主張2}に矛盾する．
   次に，$|w| < |w^{\prime}|$である場合を考える．
   
