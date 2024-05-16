@@ -125,7 +125,7 @@
   Since $uda$ is of length $|w^{\prime}| - |w^{\prime\prime}|$, $uda$ is also a prefix of $w^{\prime}$. Similarly, $bcu$ is also a suffix of $w^{\prime}$.
   Since $|w^{\prime}| - (|uda| + |bcu|) = 2|w^{\prime\prime}| - |w^{\prime}| \ge 1$, there exist a constant string $v$ of length $2|w^{\prime\prime}| - |w^{\prime}|$ such that $w^{\prime} = udavbcu$ holds. Since $w^{\prime\prime}$ is a suffix of $w^{\prime}$ and $|vbcu| = (2|w^{\prime\prime}| - |w^{\prime}|) + 2 + (|w^{\prime}| - |w^{\prime\prime}| - 2) = |w^{\prime\prime}|$, we have $w^{\prime\prime} = vbcu$. Similarly, we have $w^{\prime\prime} = udav$. Thus, we have a new equation $vbcu = udav$.
   Since $|u| = |w^{\prime}| - |w^{\prime\prime}| - 2 \leq |w^{\prime\prime}| - 3 < |w^{\prime\prime}|$ and $|v| = 2|w^{\prime\prime}| - |w^{\prime}| \le |w^{\prime}|$, i.e., $|u| + |v| < |w^{\prime}| + |w^{\prime\prime}|$ holds, it contradicts the induction hypothesis on $|u| + |v|$. Therefore, the claim holds.
-  \item[(iv)] $2|w^{\prime\prime}| \le |w^{\prime}| \le 2|w^{\prime\prime}|+4$:
+  \item[(iv)] $2|w^{\prime\prime}| \le |w^{\prime}| \le 2|w^{\prime\prime}|+3$:
   When $|w^{\prime}|=2|w^{\prime\prime}|$, we easily see that $w^{\prime} = w^{\prime\prime}w^{\prime\prime}$.
   Therefore, $w^{\prime\prime}da = bcw^{\prime\prime}$ holds as shown in Fig.~\ref{追加部分14}. It contradicts \textit{Claim} 1.
   When $|w^{\prime}|=2|w^{\prime\prime}|+i$ ($i=1,2,3$), Eq.~\ref{eq:claim2} is written as shown in Figs.~\ref{追加部分13}, \ref{追加部分12}, and \ref{追加部分11}. Trivially, these cases contradict the conditions $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$.
@@ -145,40 +145,40 @@ Thus, the case of $|w| \geq |w^{\prime}| + 3$ contradicts \textit{Claim} 2.
 \begin{figure}[t]
   \begin{center}
     \includegraphics[scale=0.35]{figs/w=w_1.png}
-    \caption{$|w| = |w_{1}|$における定数記号列}\label{追加部分7}
+    \caption{Subcase $|w^{\prime}| = |w^{\prime\prime}|$ of (ii) of \textit{Claim} 2 (Lemma~\ref{追加部分})}\label{追加部分7}
     \includegraphics[scale=0.35]{figs/w=w_1+1.png}
-    \caption{$|w| = |w_{1}|+1$における定数記号列}\label{追加部分8}
+    \caption{Subcase $|w^{\prime}| = |w^{\prime\prime}| + 1$ of (ii) of \textit{Claim} 2 (Lemma~\ref{追加部分})}\label{追加部分8}
     \includegraphics[scale=0.35]{figs/w=w_1+2.png}
-    \caption{$|w| = |w_{1}|+2$における定数記号列}\label{追加部分9}
+    \caption{Subcase $|w^{\prime}| = |w^{\prime\prime}| + 2$ of (ii) of \textit{Claim} 2 (Lemma~\ref{追加部分})}\label{追加部分9}
   \end{center}
 \end{figure}
 
 \begin{figure}[t]
   \begin{center}
     \includegraphics[scale=0.35]{figs/w1+3.png}
-    \caption{$|w_{1}|+3 \le |w| \le 2|w_{1}|-1$における定数記号列}\label{w1+3}
+    \caption{Case $|w_{\prime\prime}| + 3 \le |w^{\prime}| \le 2|w^{\prime\prime}| - 1$ of (iii) of \textit{Claim} 2 (Lemma~\ref{追加部分})}\label{w1+3}
   \end{center}
 \end{figure}
 
 \begin{figure}[t]
   \begin{center}
     \includegraphics[scale=0.35]{figs/w=2w_1.png}
-    \caption{$|w| = 2|w_{1}|$における定数記号列}\label{追加部分14}
+    \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}|$ of (iv) of \textit{Claim} 2 (Lemma~\ref{追加部分})}\label{追加部分14}
     \includegraphics[scale=0.35]{figs/w=2w_1+1.png}
-    \caption{$|w| = 2|w_{1}|+1$における定数記号列}\label{追加部分13}
+    \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}| + 1$ of (iv) of \textit{Claim} 2 (Lemma~\ref{追加部分})}\label{追加部分13}
     \includegraphics[scale=0.35]{figs/w=2w_1+2.png}
-    \caption{$|w| = 2|w_{1}|+2$における定数記号列}\label{追加部分12}
+    \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}| + 2$ of (iv) of \textit{Claim} 2 (Lemma~\ref{追加部分})}\label{追加部分12}
     \includegraphics[scale=0.35]{figs/w=2w_1+3.png}
-    \caption{$|w| = 2|w_{1}|+3$における定数記号列}\label{追加部分11}
-    \includegraphics[scale=0.35]{figs/w=2w_1+4.png}
-    \caption{$|w| = 2|w_{1}|+4$における定数記号列}\label{追加部分10}
+    \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}| + 3$ of (iv) of \textit{Claim} 2 (Lemma~\ref{追加部分})}\label{追加部分11}
+    %\includegraphics[scale=0.35]{figs/w=2w_1+4.png}
+    %\caption{$|w| = 2|w_{1}|+4$における定数記号列}\label{追加部分10}
   \end{center}
 \end{figure}
 
 \begin{figure}[t]
   \begin{center}
     \includegraphics[scale=0.35]{figs/2w1+5.png}
-    \caption{$|w| \ge 2|w_{1}|+5$における定数記号列}\label{2w1+5}
+    \caption{Case $2|w^{\prime\prime}| + 4 \leq |w^{\prime}|$ of (v) of \textit{Claim} 2 (Lemma~\ref{追加部分})}\label{2w1+5}
   \end{center}
 \end{figure}
     
