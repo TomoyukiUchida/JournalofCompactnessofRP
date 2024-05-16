@@ -5,8 +5,11 @@
 
 \begin{lem}\label{追加部分}
   Let $\Sigma$ be an alphabet with $\Sigma \ge 3$ and $p,~q$ regular patterns on $\Sigma$.
-  Let $D = \{ ya, bc, dy \}$ $(b \not\in \{a,d\}$ and $c \not\in \{a,d\})$ of regular patterns on $\Sigma$.
-  Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.
+  Let $D$ be the following set of regular patterns on $\Sigma$.
+  Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$:
+  \begin{enumerate}
+  \item[] $D = \{ ya, bc, dy \}$ $(b \not\in \{a,d\}$ and $c \not\in \{a,d\})$.
+  \end{enumerate}
 \end{lem}
 
   \begin{proof}
@@ -35,20 +38,22 @@
   From (1'), we have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xwbcw^{\prime}y_{1}aq_{2}=q \{ y_{2}:=p^{\prime\prime}_{1}x \}$.
   Thus, $p \{ x := xy \} \preceq q \{ y_{2}:=p^{\prime\prime}_{1}xy \}$ holds. This contradicts the assumption.
 
-  Below, we consider the case of $A=y_{1}a,B=bc$, and $C=dy_{2}$ only.
+  Below, we consider the case of $A=y_{1}a,B=bc$, and $C=dy_{2}$.
   Let $q=q_{1}y_{1}awbcw^{\prime}dy_{2}q_{2}$, where $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$.
-  We have the following equations:
+  If $p \{ x := xy \} \not \preceq q$ holds, we have the following equations:
   \begin{align*}
   (1)~& p_{1} \preceq q_{1} & (\text{1'})~& p_{2} \preceq wbcw^{\prime}dy_{2}q_{2} \\
   (2)~& p_{1} \preceq q_{1}y_{1}aw & (\text{2'})~& p_{2} \preceq w^{\prime}dy_{2}q_{2} \\
   (3)~& p_{1} \preceq q_{1}y_{1}awbcw^{\prime} & (\text{3'})~& p_{2} \preceq q_{2}
   \end{align*}
+  Note that from (1') and (2'), $wbcw^{\prime}d$ and $w^{\prime}d$ are prefixes of $p_{2}$, and from (2) and (3), $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$.
 
-  From (2) and (3), $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$.
   If $|w|=|w^{\prime}|$, then $c=a$ holds.
   It contradicts the condition $c \not = a$.
+  
   If $|w|=|w^{\prime}|+1$, then $b = a$ holds.
   It contradicts the condition $b \not = a$.
+  
   If $|w| = |w^{\prime}|+2$, since $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$, and since $|w|\geq 2$, $a$ is a suffix of $w$.
   From (1') and (2'), since $wbcw^{\prime}d$ and $w^{\prime}d$ are prefixes of $p_{2}$, we have $w=w^{\prime}da$.
   Since $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$, we have $w=bcw^{\prime}$.
@@ -78,7 +83,8 @@
   
   \smallskip
 
-  Therefore, if $|w|=|w^{\prime}|+2$, it contradicts \textit{Claim} 1. 
+  \noindent
+  Thus, the case of $|w|=|w^{\prime}|+2$ contradicts \textit{Claim} 1. 
 
   If $|w| \ge |w^{\prime}|+3$, from (2) and (3), there exists a string $w^{\prime\prime}$ of length $|w|-|w^{\prime}|-2$ such that $w=w^{\prime\prime}bcw^{\prime}$ holds.
   Moreover, from (2) and (3), since $|aw| < |wbcw^{\prime}|$ and $aw = aw^{\prime\prime}bcw^{\prime}$, $aw^{\prime\prime}$ is a suffix of $w$.
@@ -97,57 +103,44 @@
   
   \noindent
   \textit{Proof of Claim} 2.
-  W.l.o.g., we suppose that $|w^{\prime\prime}| \leq |w^{\prime}|$ holds.
-  We assume that the next equation holds:
+  We assume that the following equation holds:
   \begin{equation}
   w^{\prime}daw^{\prime\prime} = w^{\prime\prime}bcw^{\prime}\label{eq:claim2}
   \end{equation}
-  We prove this claim by an induction on $|w^{\prime\prime}|$.
+  We prove this claim by an induction on $|w^{\prime}| + |w^{\prime\prime}|$.
+  W.l.o.g., we suppose that $|w^{\prime}| \geq |w^{\prime\prime}|$ holds.
   \begin{enumerate}
-    \item[(i)] $|w^{\prime\prime}|=0$:
+    \item[(i)] $|w^{\prime}| \geq 0$ and $|w^{\prime\prime}|=0$:
     We have $w^{\prime}da = bcw^{\prime}$ ($b \not\in \{a,d\}$ and $c \not\in \{a,d\}$).
     It contradicts \textit{Claim} 1.
   \end{enumerate}
-  We assume that for constant strings $u$ and $v$ with $|u| < |w^{\prime\prime}|$ and $|v| \leq |w^{\prime}|$, $vbcu \not= udav$ holds.
+  We assume that for constant strings $u$ and $v$ with $|u| + |v| < |w^{\prime}| + |w^{\prime\prime}|$, $vbcu \not= udav$ holds.
   We partition the relations between $|w^{\prime}|$ and $|w^{\prime\prime}|$ into the following four parts:
   \begin{enumerate}
-  \item[(i)] $|w^{\prime\prime}|=0$:
-  We have $w^{\prime}da = bcw^{\prime}$ ($b \not\in \{a,d\}$ and $c \not\in \{a,d\}$).
-  It contradicts \textit{Claim} 1.
-  \item[(ii)] $|w^{\prime\prime}| \le |w^{\prime}| \le |w^{\prime\prime}|+2$:
+  \item[(ii)] $0 < |w^{\prime\prime}| \le |w^{\prime}| \le |w^{\prime\prime}|+2$:
   When either $|w^{\prime}|=|w^{\prime\prime}|$ or $|w^{\prime}|=|w^{\prime\prime}|+1$, Eq.~\ref{eq:claim2} is written as shown in Figs.~\ref{追加部分7}, \ref{追加部分8}. Trivially, these cases contradict the conditions $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$.
-  When $|w^{\prime}|=|w^{\prime\prime}|+2$, Eq.~\ref{eq:claim2} can be written as shown in Fig.~\ref{追加部分9}. This implies $w^{\prime}=w^{\prime\prime}bc=daw^{\prime\prime}$, and contradicts \textit{Claim} 1.
+  When $|w^{\prime}|=|w^{\prime\prime}|+2$, Eq.~\ref{eq:claim2} can be written as shown in Fig.~\ref{追加部分9}. This implies $w^{\prime}=w^{\prime\prime}bc=daw^{\prime\prime}$, and then contradicts \textit{Claim} 1.
   \item[(iii)] $|w^{\prime\prime}|+3 \le |w^{\prime}| \le 2|w^{\prime\prime}| - 1$:
-  On Eq.~\ref{eq:claim2}, since $|w^{\prime}daw^{\prime\prime}| = |w^{\prime\prime}bcw^{\prime}| = |w^{\prime}| + |w^{\prime\prime}| + 2$, there exists a constant string $u$ of length $2|w^{\prime}| - (|w^{\prime}| + |w^{\prime\prime}| + 2) = |w^{\prime}| - |w^{\prime\prime}| - 2$ such that $u$ is a prefix and a suffix of $w^{\prime}$.
-  Since $uda$ is of length $|w^{\prime}| - |w^{\prime\prime}|$, $uda$ is a prefix of $w^{\prime}$. Similarly, $bcu$ is a suffix of $w^{\prime}$.
-  Since $|w^{\prime}| - 2(|w^{\prime}| - |w^{\prime\prime}|) = 2|w^{\prime\prime}| - |w^{\prime}| \ge 1$, there exist a constant string $v$ of length at least $1$ such that $w = udavbcu$ holds. Since $|vbcu| = (2|w^{\prime\prime}| - |w^{\prime}|) + 2 + (|w^{\prime}| - |w^{\prime\prime}| - 2) = |w^{\prime\prime}|$, we have $w^{\prime\prime} = vbcu$. Similarly, we have $w^{\prime\prime} = udav$. Therefore, we have a new equation $vbcu = udav$.
-  Since $|u| = |w^{\prime}| - |w^{\prime\prime}| - 2 \leq |w^{\prime\prime}| - 3 < |w^{\prime\prime}|$ and $|v| = 2|w^{\prime\prime}| - |w^{\prime}| \le |w^{\prime}|$, it contradicts the induction hypothesis on $|w^{\prime\prime}|$. Therefore, the claim holds.
+  On Eq.~\ref{eq:claim2}, since $|w^{\prime}daw^{\prime\prime}| = |w^{\prime\prime}bcw^{\prime}| = |w^{\prime}| + |w^{\prime\prime}| + 2$, a suffix of $w^{\prime}$ overlaps with a prefix of $w^{\prime}$ as shown in Fig.~\ref{w1+3}. I.e., there exists a constant string $u$ of length $2|w^{\prime}| - (|w^{\prime}| + |w^{\prime\prime}| + 2) = |w^{\prime}| - |w^{\prime\prime}| - 2$ such that $u$ is a prefix and a suffix of $w^{\prime}$.
+  Since $uda$ is of length $|w^{\prime}| - |w^{\prime\prime}|$, $uda$ is also a prefix of $w^{\prime}$. Similarly, $bcu$ is also a suffix of $w^{\prime}$.
+  Since $|w^{\prime}| - (|uda| + |bcu|) = 2|w^{\prime\prime}| - |w^{\prime}| \ge 1$, there exist a constant string $v$ of length $2|w^{\prime\prime}| - |w^{\prime}|$ such that $w^{\prime} = udavbcu$ holds. Since $w^{\prime\prime}$ is a suffix of $w^{\prime}$ and $|vbcu| = (2|w^{\prime\prime}| - |w^{\prime}|) + 2 + (|w^{\prime}| - |w^{\prime\prime}| - 2) = |w^{\prime\prime}|$, we have $w^{\prime\prime} = vbcu$. Similarly, we have $w^{\prime\prime} = udav$. Thus, we have a new equation $vbcu = udav$.
+  Since $|u| = |w^{\prime}| - |w^{\prime\prime}| - 2 \leq |w^{\prime\prime}| - 3 < |w^{\prime\prime}|$ and $|v| = 2|w^{\prime\prime}| - |w^{\prime}| \le |w^{\prime}|$, i.e., $|u| + |v| < |w^{\prime}| + |w^{\prime\prime}|$ holds, it contradicts the induction hypothesis on $|u| + |v|$. Therefore, the claim holds.
   \item[(iv)] $2|w^{\prime\prime}| \le |w^{\prime}| \le 2|w^{\prime\prime}|+4$:
-  $|w|=2|w_{1}|$のとき，図\ref{追加部分14}のように，$w_{1}da=bcw_{1}$となる．
-  これは，主張\ref{主張1}に矛盾する．
-  $|w|=2|w_{1}|+1$のとき，図\ref{追加部分13}のように，$b=a$となる．
-  これは，$b \not = a$であることに矛盾する．
-  $|w|=2|w_{1}|+2$のとき，図\ref{追加部分12}のように，$bc=da$となる．
-  これは，$b \not = d$であることに矛盾する．
-  $|w|=2|w_{1}|+3$のとき，図\ref{追加部分11}のように，$c=d$となる．
-  これは，$c \not = d$であることに矛盾する．
-  $|w|=2|w_{1}|+4$のとき，$w=w_{1}bcdaw_{1}$とおける．
-  図\ref{追加部分10}のように，$daw_{1}=w_{1}bc$となる．
-  これは，主張\ref{主張1}に矛盾する．
-  上記以外の範囲$\textbf{(d)}$ $|w_{1}|+3 \le |w| \le 2|w_{1}|-1$と$\textbf{(e)}$ $|w| \ge 2|w_{1}|+5$である場合，対象とする定数記号列の長さを減らして考えることができる．
-  \item[(v)] $2|w^{\prime\prime}|+5 \leq |w^{\prime}|$:
-  図\ref{2w1+5}のように，$W$と$w$を置き換えて考えることができる．
-  よって，赤枠部分以外の定数記号列を無視できるため，対象とする定数記号列の長さを減らすことができる．
-  したがって，$\textbf{(d)}$ $|w_{1}|+3 \le |w| \le 2|w_{1}|-1$と$\textbf{(e)}$ $|w| \ge 2|w_{1}|+5$の場合，$w,w_{1}$の長さを減らして考えることができる．
-  この結果より，$w$と$w_{1}$の長さの関係は，最終的に，$\textbf{(a)}$ $|w_{1}| \le |w| \le |w_{1}|+2$，$\textbf{(b)}$ $2|w_{1}| \le |w| \le 2|w_{1}|+4$，$\textbf{(c)}$ $|w_{1}|=0$のいずれかに当てはまるため，仮定に矛盾する．
+  When $|w^{\prime}|=2|w^{\prime\prime}|$, we easily see that $w^{\prime} = w^{\prime\prime}w^{\prime\prime}$.
+  Therefore, $w^{\prime\prime}da = bcw^{\prime\prime}$ holds as shown in Fig.~\ref{追加部分14}. It contradicts \textit{Claim} 1.
+  When $|w^{\prime}|=2|w^{\prime\prime}|+i$ ($i=1,2,3$), Eq.~\ref{eq:claim2} is written as shown in Figs.~\ref{追加部分13}, \ref{追加部分12}, and \ref{追加部分11}. Trivially, these cases contradict the conditions $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$.
+  \item[(v)] $2|w^{\prime\prime}|+4 \leq |w^{\prime}|$:
+  Since the strings $w^{\prime\prime}bc$ and $adw^{\prime\prime}$ are a prefix and a suffix of $w^{\prime}$, respectively, and $|w^{\prime\prime}bc| + |adw^{\prime\prime}| = 2|w^{\prime\prime}| + 4$, there exists a string $u$ with $|u| \geq 0$ such that $w^{\prime} = w^{\prime\prime}bcudaw^{\prime\prime}$ holds. From Eq.~\ref{eq:claim2}, $w^{\prime\prime}bcudaw^{\prime\prime}daw^{\prime\prime} = w^{\prime\prime}bcw^{\prime\prime}bcudaw^{\prime\prime}$, i.e., $udaw^{\prime\prime} = w^{\prime\prime}bcu$ holds as shown in Fig.~\ref{2w1+5}.
+  Let $v = w^{\prime\prime}$.
+  Since $|u| + |v| = |w^{\prime}|- (2|w^{\prime\prime}| + 4) + |w^{\prime\prime}| < |w^{\prime}| + |w^{\prime\prime}|$, it contradicts the induction hypothesis on $|u| + |v|$. Therefore, the claim holds.
   \end{enumerate}
   From the above, we conclude that $w^{\prime}daw^{\prime\prime} \not = w^{\prime\prime}bcw^{\prime}$ holds.
   (\textit{End of Proof of Claim})
 
 \smallskip
 
-Therefore, if $|w|=|w^{\prime}|+3$, it contradicts \textit{Claim} 2. 
-
+\noindent
+Thus, the case of $|w| \geq |w^{\prime}| + 3$ contradicts \textit{Claim} 2. 
 
 \begin{figure}[t]
   \begin{center}
@@ -189,31 +182,33 @@ Therefore, if $|w|=|w^{\prime}|+3$, it contradicts \textit{Claim} 2.
   \end{center}
 \end{figure}
     
-  よって，$w^{\prime}daw_{1}=w_{1}bcw^{\prime}$は，主張\ref{主張2}に矛盾する．
-  次に，$|w| < |w^{\prime}|$である場合を考える．
+  Next, we suppose that $|w| < |w^{\prime}|$ holds.
+  Note again that from (1') and (2'), $wbcw^{\prime}d$ and $w^{\prime}d$ are prefixes of $p_{2}$, and from (2) and (3), $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$.
   
-  $|w^{\prime}|=|w|+1$のとき，(1')と(2')より，$p_{2}$の接頭辞は$wbcw^{\prime}d$かつ$w^{\prime}d$である．
-  $|wbc|=|w^{\prime}d|$より，$c=d$となる．
-  これは，$c \ne d$であることに矛盾する．
+  If $|w^{\prime}|=|w|+1$, since $|wbc|=|w^{\prime}d|$, we have $c=d$. This contradicts the condition $c \ne d$.
   
-  $|w^{\prime}|=|w|+2$のとき，(1')と(2')より，$p_{2}$の接頭辞は$wbcw^{\prime}d$かつ$w^{\prime}d$である．
-  $|wbc|=|w^{\prime}|$より，$w^{\prime}$の最初の記号は$d$となり，$w^{\prime}$の最後の2つの記号は$bc$となる．
-  (2)と(3)より，$p_{1}$の接尾辞は$awbcw^{\prime}$かつ$aw$であるため，$|w^{\prime}|-1=|aw|$より，$w^{\prime}$の最初から2つ目の記号は$a$となる．
-  よって，$w^{\prime}=wbc=daw$となる．
-  これは，主張\ref{主張1}に矛盾する．
+  If $|w^{\prime}|=|w|+2$, since $|wbc|=|w^{\prime}|$, $bc$ is a suffix of $w^{\prime}$.
+  Moreover, since $w^{\prime}d$ is a prefix of $wbcw^{\prime}$, $d$ is the first symbol of $w^{\prime}$.
+  Since $aw$ is a suffix of $w'$ and $|w^{\prime}|=|aw|+1$, $a$ is the second symbol of $w^{\prime}$.
+  Therefore, we have $w^{\prime}=wbc=daw$.
+  This contradicts \textit{Claim} 1.
   
-  $|w^{\prime}| \ge |w|+3$のとき，(1')と(2')より，$p_{2}$の接頭辞は$wbcw^{\prime}d$かつ$w^{\prime}d$である．
-  $|wbcw_{1}|=|w^{\prime}|$ ($w_{1}$は定数記号列)より，$w^{\prime}$の接頭辞は$w_{1}d$となり，$w^{\prime}$の接尾辞は$bcw_{1}$となる．
-  (2)と(3)より，$p_{1}$の接尾辞は$awbcw^{\prime}$かつ$aw$である．
-  $|w^{\prime}|-|w_{1}|-1=|aw|$より，$w^{\prime}$の最初から2つ目の記号は$a$となる．
-  よって，$w^{\prime}=wbcw_{1}=w_{1}daw$となる．
-  これは，主張\ref{主張2}に矛盾する．
+  If $|w^{\prime}| \ge |w|+3$, there exists a string $w^{\prime\prime}$ with $|w^{\prime\prime}| \geq 1$ such that $w^{\prime} = wbcw^{\prime\prime}$ holds.
+  Then, since $wbcw^{\prime}d$ and $w^{\prime}d=wbcw^{\prime\prime}d$ are prefixes of $p_{2}$, $w^{\prime\prime}d$ is a prefix of $w^{\prime}$.
+  Since $w^{\prime}$ and $aw$ are suffixes of $p_{1}$ and $|w^{\prime}|=|wbcw^{\prime\prime}|=|w|+|w^{\prime\prime}|+2 > |aw|$, $aw$ is a suffix of $w^{\prime}$.
+  Since $|w^{\prime\prime}d| + |aw| = |w^{\prime}|$, we have $w^{\prime} = w^{\prime\prime}daw$.
+  Therefore, we have $w^{\prime}=wbcw^{\prime\prime}=w^{\prime\prime}daw$.
+  This contradicts \textit{Claim} 2.
+
+  Thus, the case of $A=y_{1}a,B=bc$, and $C=dy_{2}$ implies the contradictions.
+  
+  From the above, we conclude that if $p \{ x := r \} \preceq q$ for all $r = \{ ya, bc, dy \}$ $(b \not\in \{a,d\}$ and $c \not\in \{a,d\})$, then $p \{ x := xy \} \preceq q$ holds.
   \end{proof}
 
 \begin{lem}\label{片方}
 Let $\Sigma$ be an alphabet with $\Sigma \ge 3$ and $p,~q$ regular patterns on $\Sigma$.
 Let $D$ be one of the following sets \textrm{(i), (ii)} of regular patterns on $\Sigma$.
-Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.
+Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$:
 \begin{enumerate}
 \item[{\rm (i)}] $D=\{ ya, bc, dy \}$ ($b = a,~b \not= d,\mbox{~and~}c \not\in \{a,d\}$),
 \item[{\rm (ii)}] $D=\{ ya, bc, dy \}$ ($b \not\in \{a,d\},~c = d,\mbox{~and~} c \not = a$).
@@ -306,10 +301,12 @@ In this case, by reversing the strings $p$ and $q$, we can prove that the assump
 
 When the conditions of both Lemmas \ref{追加部分} and \ref{片方} are not satisfied, counterexamples exist as follows:
 
-\begin{lem}\label{両方}
+\newtheorem{prop}{Proposition}
+
+\begin{prop}\label{両方}
   Let $\Sigma$ be an alphabet with $\sharp \Sigma \ge 3$.
   For a variable symbol $y$, let $D= \{ ya, bc, dy \}$ $(b = a$ and $c = d)$. There exist regular patterns $p$ and $q$ on $\Sigma$ such that $p \{ x := r \} \preceq q$ for any $r \in D$, but $p \{ x := xy \} \not \preceq q$.
-\end{lem}
+\end{prop}
 
 \begin{proof}
 We give an example which shows this lemma.
@@ -513,7 +510,7 @@ There is no $q \in Q_{2}^{(\cdot,\cdot)}$ and a string $a'b' \in A'\cdot B'$ suc
 
 \noindent
 Let ${\cal L}_{2} = \sharp\{a'b' \in A'\cdot B' \mid \exists q \in Q_{2}^{(\cdot,\cdot)} \mbox{ s.t. } p\{x:=a'b'\} \preceq q\}$.
-For any $a'b' \in A'\cdot B'$ and $q \in Q_{2}^{(\cdot,\cdot)}$, if $a' = \sigma_{B}(q)$ and $b' = \sigma_{A}(q)$ hold (it is the condition of Lemma~\ref{両方}), by considering the duplicate numbers $\ell_{A}$ and $\ell_{B}$, we have the following inequality:
+For any $a'b' \in A'\cdot B'$ and $q \in Q_{2}^{(\cdot,\cdot)}$, if $a' = \sigma_{B}(q)$ and $b' = \sigma_{A}(q)$ hold (it is the condition of Proposition~\ref{両方}), by considering the duplicate numbers $\ell_{A}$ and $\ell_{B}$, we have the following inequality:
 \begin{align*}
   {\cal L}_{2} &\leq \min\{\sharp A' + \ell_{B}, \sharp B' + \ell_{A}\}.
 \end{align*}
