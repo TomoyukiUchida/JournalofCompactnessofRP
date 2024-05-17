@@ -117,18 +117,20 @@
   We assume that for constant strings $u$ and $v$ with $|u| + |v| < |w^{\prime}| + |w^{\prime\prime}|$, $vbcu \not= udav$ holds.
   We partition the relations between $|w^{\prime}|$ and $|w^{\prime\prime}|$ into the following four parts:
   \begin{enumerate}
-  \item[(ii)] $0 < |w^{\prime\prime}| \le |w^{\prime}| \le |w^{\prime\prime}|+2$:
-  When either $|w^{\prime}|=|w^{\prime\prime}|$ or $|w^{\prime}|=|w^{\prime\prime}|+1$, Eq.~\ref{eq:claim2} is written as shown in Figs.~\ref{追加部分7}, \ref{追加部分8}. Trivially, these cases contradict the conditions $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$.
-  When $|w^{\prime}|=|w^{\prime\prime}|+2$, Eq.~\ref{eq:claim2} can be written as shown in Fig.~\ref{追加部分9}. This implies $w^{\prime}=w^{\prime\prime}bc=daw^{\prime\prime}$, and then contradicts \textit{Claim} 1.
-  \item[(iii)] $|w^{\prime\prime}|+3 \le |w^{\prime}| \le 2|w^{\prime\prime}| - 1$:
+  \item[(ii)] $0 < |w^{\prime\prime}| \le |w^{\prime}| \le |w^{\prime\prime}|+1$:
+  When either $|w^{\prime}|=|w^{\prime\prime}|$ or $|w^{\prime}|=|w^{\prime\prime}|+1$, Eq.~\ref{eq:claim2} is depicted as shown in Figs.~\ref{追加部分7}, \ref{追加部分8}. Trivially, these cases contradict the conditions $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$.
+  %When $|w^{\prime}|=|w^{\prime\prime}|+2$, Eq.~\ref{eq:claim2} can be written as shown in Fig.~\ref{追加部分9}. This implies $w^{\prime}=w^{\prime\prime}bc=daw^{\prime\prime}$, and then contradicts \textit{Claim} 1.
+  \item[(iii)] $|w^{\prime\prime}|+2 \le |w^{\prime}| \le 2|w^{\prime\prime}| - 1$:
   On Eq.~\ref{eq:claim2}, since $|w^{\prime}daw^{\prime\prime}| = |w^{\prime\prime}bcw^{\prime}| = |w^{\prime}| + |w^{\prime\prime}| + 2$, a suffix of $w^{\prime}$ overlaps with a prefix of $w^{\prime}$ as shown in Fig.~\ref{w1+3}. I.e., there exists a constant string $u$ of length $2|w^{\prime}| - (|w^{\prime}| + |w^{\prime\prime}| + 2) = |w^{\prime}| - |w^{\prime\prime}| - 2$ such that $u$ is a prefix and a suffix of $w^{\prime}$.
   Since $uda$ is of length $|w^{\prime}| - |w^{\prime\prime}|$, $uda$ is also a prefix of $w^{\prime}$. Similarly, $bcu$ is also a suffix of $w^{\prime}$.
   Since $|w^{\prime}| - (|uda| + |bcu|) = 2|w^{\prime\prime}| - |w^{\prime}| \ge 1$, there exist a constant string $v$ of length $2|w^{\prime\prime}| - |w^{\prime}|$ such that $w^{\prime} = udavbcu$ holds. Since $w^{\prime\prime}$ is a suffix of $w^{\prime}$ and $|vbcu| = (2|w^{\prime\prime}| - |w^{\prime}|) + 2 + (|w^{\prime}| - |w^{\prime\prime}| - 2) = |w^{\prime\prime}|$, we have $w^{\prime\prime} = vbcu$. Similarly, we have $w^{\prime\prime} = udav$. Thus, we have a new equation $vbcu = udav$.
-  Since $|u| = |w^{\prime}| - |w^{\prime\prime}| - 2 \leq |w^{\prime\prime}| - 3 < |w^{\prime\prime}|$ and $|v| = 2|w^{\prime\prime}| - |w^{\prime}| \le |w^{\prime}|$, i.e., $|u| + |v| < |w^{\prime}| + |w^{\prime\prime}|$ holds, it contradicts the induction hypothesis on $|u| + |v|$. Therefore, the claim holds.
+  Since $|u| = |w^{\prime}| - |w^{\prime\prime}| - 2 \leq |w^{\prime\prime}| - 3 < |w^{\prime\prime}|$ and $|v| = 2|w^{\prime\prime}| - |w^{\prime}| < |w^{\prime}|$, i.e., $|u| + |v| < |w^{\prime}| + |w^{\prime\prime}|$ holds, it contradicts the induction hypothesis on $|u| + |v|$. Therefore, the claim holds.
   \item[(iv)] $2|w^{\prime\prime}| \le |w^{\prime}| \le 2|w^{\prime\prime}|+3$:
   When $|w^{\prime}|=2|w^{\prime\prime}|$, we easily see that $w^{\prime} = w^{\prime\prime}w^{\prime\prime}$.
-  Therefore, $w^{\prime\prime}da = bcw^{\prime\prime}$ holds as shown in Fig.~\ref{追加部分14}. It contradicts \textit{Claim} 1.
-  When $|w^{\prime}|=2|w^{\prime\prime}|+i$ ($i=1,2,3$), Eq.~\ref{eq:claim2} is written as shown in Figs.~\ref{追加部分13}, \ref{追加部分12}, and \ref{追加部分11}. Trivially, these cases contradict the conditions $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$.
+  Therefore, $w^{\prime\prime}da = bcw^{\prime\prime}$ holds.
+  %as shown in Fig.~\ref{追加部分14}.
+  It contradicts \textit{Claim} 1.
+  When $|w^{\prime}|=2|w^{\prime\prime}|+i$ ($i=1,2,3$), Eq.~\ref{eq:claim2} is depicted as shown in Figs.~\ref{追加部分13}, \ref{追加部分12}, and \ref{追加部分11}. Trivially, these cases contradict the conditions $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$.
   \item[(v)] $2|w^{\prime\prime}|+4 \leq |w^{\prime}|$:
   Since the strings $w^{\prime\prime}bc$ and $adw^{\prime\prime}$ are a prefix and a suffix of $w^{\prime}$, respectively, and $|w^{\prime\prime}bc| + |adw^{\prime\prime}| = 2|w^{\prime\prime}| + 4$, there exists a string $u$ with $|u| \geq 0$ such that $w^{\prime} = w^{\prime\prime}bcudaw^{\prime\prime}$ holds. From Eq.~\ref{eq:claim2}, $w^{\prime\prime}bcudaw^{\prime\prime}daw^{\prime\prime} = w^{\prime\prime}bcw^{\prime\prime}bcudaw^{\prime\prime}$, i.e., $udaw^{\prime\prime} = w^{\prime\prime}bcu$ holds as shown in Fig.~\ref{2w1+5}.
   Let $v = w^{\prime\prime}$.
@@ -144,26 +146,27 @@ Thus, the case of $|w| \geq |w^{\prime}| + 3$ contradicts \textit{Claim} 2.
 
 \begin{figure}[t]
   \begin{center}
-    \includegraphics[scale=0.35]{figs/w=w_1.png}
+    \includegraphics[scale=0.45]{figs/w=w_1.eps}
     \caption{Subcase $|w^{\prime}| = |w^{\prime\prime}|$ of (ii) of \textit{Claim} 2 (Lemma~\ref{追加部分})}\label{追加部分7}
-    \includegraphics[scale=0.35]{figs/w=w_1+1.png}
+    \bigskip
+    \includegraphics[scale=0.45]{figs/w=w_1+1.eps}
     \caption{Subcase $|w^{\prime}| = |w^{\prime\prime}| + 1$ of (ii) of \textit{Claim} 2 (Lemma~\ref{追加部分})}\label{追加部分8}
-    \includegraphics[scale=0.35]{figs/w=w_1+2.png}
-    \caption{Subcase $|w^{\prime}| = |w^{\prime\prime}| + 2$ of (ii) of \textit{Claim} 2 (Lemma~\ref{追加部分})}\label{追加部分9}
+    %\includegraphics[scale=0.35]{figs/w=w_1+2.png}
+    %\caption{Subcase $|w^{\prime}| = |w^{\prime\prime}| + 2$ of (ii) of \textit{Claim} 2 (Lemma~\ref{追加部分})}\label{追加部分9}
   \end{center}
 \end{figure}
 
 \begin{figure}[t]
   \begin{center}
-    \includegraphics[scale=0.35]{figs/w1+3.png}
-    \caption{Case $|w_{\prime\prime}| + 3 \le |w^{\prime}| \le 2|w^{\prime\prime}| - 1$ of (iii) of \textit{Claim} 2 (Lemma~\ref{追加部分})}\label{w1+3}
+    \includegraphics[scale=0.45]{figs/w1+3.eps}
+    \caption{Case $|w^{\prime\prime}| + 2 \le |w^{\prime}| \le 2|w^{\prime\prime}| - 1$ of (iii) of \textit{Claim} 2 (Lemma~\ref{追加部分})}\label{w1+3}
   \end{center}
 \end{figure}
 
 \begin{figure}[t]
   \begin{center}
-    \includegraphics[scale=0.35]{figs/w=2w_1.png}
-    \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}|$ of (iv) of \textit{Claim} 2 (Lemma~\ref{追加部分})}\label{追加部分14}
+    %\includegraphics[scale=0.35]{figs/w=2w_1.png}
+    %\caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}|$ of (iv) of \textit{Claim} 2 (Lemma~\ref{追加部分})}\label{追加部分14}
     \includegraphics[scale=0.35]{figs/w=2w_1+1.png}
     \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}| + 1$ of (iv) of \textit{Claim} 2 (Lemma~\ref{追加部分})}\label{追加部分13}
     \includegraphics[scale=0.35]{figs/w=2w_1+2.png}
