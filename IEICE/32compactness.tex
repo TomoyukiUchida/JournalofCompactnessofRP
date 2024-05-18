@@ -210,6 +210,16 @@ Thus, the case of $|w| \geq |w^{\prime}| + 3$ contradicts \textit{Claim} 2.
   From the above, we conclude that if $p \{ x := r \} \preceq q$ for all $r = \{ ya, bc, dy \}$ $(b \not\in \{a,d\}$ and $c \not\in \{a,d\})$, then $p \{ x := xy \} \preceq q$ holds.
   \end{proof}
 
+% To position the next figure optimally in the paper, it is placed here. (by Takayoshi Shoudai)
+\begin{figure*}[t]
+  %\includegraphics[width=\linewidth]{figs/Exam_b=a_c=d.png}
+  \begin{center}
+  \includegraphics[scale=0.45]{figs/Exam_b=a_c=d.png}
+  \end{center}
+  \caption{Substitutions for $p$ and each correspondence to $q$.}
+  \label{b=aとc=dの例}
+\end{figure*}
+
 \begin{lem}\label{片方}
 Let $\Sigma$ be an alphabet with $\Sigma \ge 3$ and $p,~q$ regular patterns on $\Sigma$.
 Let $D$ be one of the following sets \textrm{(i), (ii)} of regular patterns on $\Sigma$.
@@ -249,7 +259,7 @@ Since $p \{ x := r \} \preceq q$ for all $r \in D$ and $p \{ x := xy \} \not \pr
 \end{align*}
 
 Let $q^{\prime}_{1}=q_{1}A,~q^{\prime}_{2}=wBw^{\prime},~q^{\prime}_{3}=Cq_{2}$. From $(3)$ and $(1')$, we have $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2},~p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$.
-From Lemma \ref{補題9}, if $q^{\prime}_{2}$ contains a variable, $p \preceq q$ holds.
+From Lemma \ref{Sato1:Lemma9}, if $q^{\prime}_{2}$ contains a variable, $p \preceq q$ holds.
 Therefore, $B$ must be $bc$.
 If $A=dy_{3}$, from $(2)$, $p_{1} \preceq q_{1}dy_{3}w$ holds.
 Let $p_{1}=p^{\prime}_{1}p^{\prime\prime}_{1}, p^{\prime}_{1} \preceq q_{1}d$, and $p^{\prime\prime}_{1} \preceq y_{3}w$.
@@ -303,7 +313,6 @@ This contradicts the assumption.
 \noindent\textrm{(ii)}
 In this case, by reversing the strings $p$ and $q$, we can prove that the assumption $p \{ x := xy \} \preceq q$ is contradicted, as in the case of \textrm{(i)}.
 \end{proof}
-
 When the conditions of both Lemmas \ref{追加部分} and \ref{片方} are not satisfied, counterexamples exist as follows:
 
 \newtheorem{prop}{Proposition}
@@ -341,15 +350,6 @@ For these $p$ and $q$, the condition for Corollary \ref{両方} holds as follows
 & \preceq & q.
 \end{eqnarray*}
 \end{proof}
-
-\begin{figure*}[t]
-%\includegraphics[width=\linewidth]{figs/Exam_b=a_c=d.png}
-\begin{center}
-\includegraphics[scale=0.45]{figs/Exam_b=a_c=d.png}
-\end{center}
-\caption{Substitutions for $p$ and each correspondence to $q$.}
-\label{b=aとc=dの例}
-\end{figure*}
 
 \begin{lem}\label{追加補題1}
 Let $k$ be an integer with $k\geq 1$.
