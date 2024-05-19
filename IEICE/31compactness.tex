@@ -180,13 +180,13 @@ Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
 \textrm{(2)}~& p_{1} \preceq q_{1}a_{1} & \textrm{(2')}~& p_{2} \preceq wa_{3}b_{3}q_{2} \\
 \textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}b_{2}w & \textrm{(3')}~& p_{2} \preceq q_{2}
 \end{align*}
-\noindent
+%\noindent
 If $|w|=0$, that is $w$ is the empty string, then $a_{1}$ and $a_{1}b_{1}b_{2}$ are the suffix of $p_{1}$ from the above equations (2) and (3)
 and $b_{2}a_{3}b_{3}$ and $a_{3}b_{3}$ are the prefix of $p_{2}$ from the above equations (1') and (2').
 Since $b_{2}=a_{1}$ and $b_{2}a_{3}=a_{3}b_{3}$, $a_{1}=a_{3}$ holds.
 This contradicts the assumption of $a_{1}\not= a_{3}$.
 
-\noindent
+%\noindent
 If $|w| \ge 1$, $a_{1}$ and $a_{1}b_{1}b_{2}w$ are the suffix of $p_{1}$ from the above equations (2) and (3).
 Hence, the last symbol of $w$ is $a_{1}$.
 Moreover, $b_{2}wa_{3}b_{3}$ and $wa_{3}b_{3}$ are the prefix of $p_{2}$ from the above equations (1') and (2').
@@ -205,13 +205,13 @@ Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
 \end{align*}
 \noindent
 
-\noindent
+%\noindent
 If $|w|=0$, that is $w$ is the empty string, then $a_{1}b_{1}$ and $a_{1}b_{1}a_{2}$ are the suffix of $p_{1}$ from the above equations (2) and (3)
 and $a_{2}b_{2}b_{3}$ and $b_{3}$ are the prefix of $p_{2}$ from the above equations (1') and (2').
 Since $b_{1}=a_{2}$ and $a_{2}=b_{3}$, then $b_{1}=b_{3}$ holds.
 This contradicts the assumption of $b_{1}\not= b_{3}$.
 
-\noindent
+%\noindent
 If $|w| \ge 1$, since $a_{1}b_{1}w$ and $a_{1}b_{1}wa_{2}$ are the suffix of $p_{1}$ from the above equations (2) and (3), the first symbol of $w$ is $b_{1}$.
 Moreover, since $wa_{2}b_{2}b_{3}$ and $b_{3}$ are the prefix of $p_{2}$ from the above equations (1') and (2'),
 the first symbol of $w$ is $b_{3}$.
@@ -231,12 +231,12 @@ Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
 \textrm{(3)}~& p_{1} \preceq q_{1}AwBw^{\prime} & \textrm{(3')}~& p_{2} \preceq q_{2}
 \end{align*}
 
-\noindent
+%\noindent
 If $|w|=|w^{\prime}|$, then $Aw$ and $AwBw^{\prime}$ are the suffix of $p_{1}$ from the above equations (2) and (3).
 Hence, $Aw=Bw^{\prime}$ holds.
 This contradicts the assumption of $A \ne B$.
 
-\noindent
+%\noindent
 If $|w| \ne |w^{\prime}|$, then we consider the two cases $A=a_{3}y$ and $B=a_{3}y$:
 In the case of $A=a_{3}y$, without losing generality, we assume that $B=a_{1}b_{1}$ and $C=a_{2}b_{2}$. 
 Then, there exist regular patterns $p_{1}^{\prime}, p_{1}^{\prime\prime}$ such that $p_{1}=p_{1}^{\prime}p_{1}^{\prime\prime}$, $p_{1}^{\prime} \preceq q_{1}a_{3}$ and $p_{1}^{\prime\prime} \preceq yw$ from the above equation (2).
@@ -277,7 +277,7 @@ Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
 \textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime} & \textrm{(3')}~& p_{2} \preceq q_{2}
 \end{align*}
 
-\noindent
+%\noindent
 If $|w|+1=|w^{\prime}|$, then $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are the suffix of $p_{1}$ from the above equations (2) and (3).
 Since there exists a constant symbol $w_{1}$ such that $w^{\prime}=w_{1}w$ and $b_{2}w_{1}w=a_{1}b_{1}w$ hold,
 then $b_{2}=a_{1}$.
@@ -287,7 +287,7 @@ then $b_{2}=a_{3}$.
 Thus, $a_{1} = a_{3}$ holds.
 This contradicts the assumption of $a_{1} \ne a_{3}$.
 
-\noindent
+%\noindent
 IF $|w|+1 < |w^{\prime}|$, then $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are the suffix of $p_{1}$ from the above equations (2) and (3).
 Hence, $a_{1}b_{1}$ is the suffix of $w_{\prime}$.
 Moreover, $wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are the prefix of $p_{2}$ from the above equations (1') and (2').
@@ -295,7 +295,7 @@ Hence, there exist constant symbols $w_{1}$ and $w_{2}$ such that $w^{\prime}=w_
 Thus, since the second-to-last symbol of $w_{1}$ is $a_{3}$, $a_{1}=a_{3}$ holds.
 This contradicts the assumption of $a_{1} \ne a_{3}$.
 
-\noindent
+%\noindent
 If $|w^{\prime}|+1=|w|$, then $wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are the prefix of $p_{2}$ from the above equations (1') and (2').
 Since there exists a constant symbol $w_{1}$ such that $w=w^{\prime}w_{1}$ and $w^{\prime}w_{1}=w^{\prime}a_{3}$ hold, then $w_{1}=a_{3}$ holds.
 Moreover, since $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are the suffix of $p_{1}$ from the above equations (2) and (3), 
@@ -304,7 +304,7 @@ Hence, $w_{1}=a_{1}$ holds.
 Thus, $a_{1}=a_{3}$ holds.
 This contradicts the assumption of $a_{1}\ne a_{3}$.
 
-\noindent
+%\noindent
 IF $|w| > |w^{\prime}|+1$, since $wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are the prefix of $p_{2}$ from the above equations (1') and (2'),
 there exists a constant string $w_{1}$ such that $w=w^{\prime}w_{1}$ and the first symbol of $w_{1}$ is $a_{3}$.
 Moreover, since there exists a constant string $w_{2}$ such that $w=w_{2}w^{\prime}$ and $|w_{1}a_{2}b_{2}|=|a_{1}b_{1}w_{2}|$ hold,
@@ -338,14 +338,14 @@ Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
 \textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}b_{2}w & \textrm{(3')}~& p_{2} \preceq q_{2}
 \end{align*}
 
-\noindent
+%\noindent
 If $|w|=0$, that is $w$ is the empty string, then $a_{1}$ and $a_{1}b_{1}b_{2}$ are the suffix of $p_{1}$ from the above equations (2) and (3).
 Hence, $a_{1}=b_{2}$ holds.
 Moreover, since $b_{2}a_{3}$ and $a_{3}$ is the prefix of $p_{2}$, $b_{2}=a_{3}$ holds.
 Thus, $a_{1}=a_{3}$ holds.
 This contradicts the assumption of $a_{1} \ne a_{3}$.
 
-\noindent
+%\noindent
 If $|w| \ge 1$, since $a_{1}$ and $a_{1}b_{1}b_{2}w$ are the suffix of $p_{1}$ from the above equations (2) and (3),
 the last symbol of $w$ is $a_{1}$.
 Moreover, since $b_{2}wa_{3}$ and $wa_{3}$ are the prefix of $p_{2}$ from the above equations (1') and (2'),
