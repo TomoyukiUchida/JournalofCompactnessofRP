@@ -1,15 +1,25 @@
-\section{非隣接変数正規パターン}
+%\section{非隣接変数正規パターン}
+\section{Regular Pattern without Adjacent Variable Symbols}
 
-隣接した変数記号を持たない正規パターンを\textbf{非隣接変数正規パターン}という．
-例えば，パターン$axybc$は正規パターンであるが，非隣接変数正規パターンではない．パターン$axbcy$は非隣接変数正規パターンである．
-$\NAVRP$を非隣接変数正規パターン全体の集合とする．
-$\NAVRP$の空でない有限部分集合の集合を$\NAVRPplus$で，
-高々$k~(k\geq 1)$個のパターンから成る$\NAVRP$の部分集合$\{P\in \NAVRPplus \mid \sharp P \leq k\}$を$\NAVRPkei$で表す．
-このとき，次の定理が成り立つ．
+%隣接した変数記号を持たない正規パターンを\textbf{非隣接変数正規パターン}という．
+A regular pattern $p$ is said to be a {\it non-adjacent variable regular pattern} ($\NAVR$ pattern)  
+if $p$ does not contain consecutive variable symbols.
+For example, the regular pattern $p=axybc$ is not a $\NAVR$ pattern because $xy$ is appeared in $p$.
+%例えば，パターン$axybc$は正規パターンであるが，非隣接変数正規パターンではない．パターン$axbcy$は非隣接変数正規パターンである．
+%$\NAVRP$を非隣接変数正規パターン全体の集合とする．
+Let $\NAVRP$ be the set of all NAVR patterns.
+%$\NAVRP$の空でない有限部分集合の集合を$\NAVRPplus$で，
+%高々$k~(k\geq 1)$個のパターンから成る$\NAVRP$の部分集合$\{P\in \NAVRPplus \mid \sharp P \leq k\}$を$\NAVRPkei$で表す．
+Let $\NAVRPplus=\{S \subseteq \NAVRP \mid \sharp S \leq 1\}$, which is the set of all finite subsets $S$ of $NAVRP$ such that $S$ is not the empty set.
+and $\NAVRPkei=\{P\in \NAVRPplus \mid \sharp P \leq k\}$, which is the set of all subsets $P$ of $\NAVRPplus$ such that $P$ consists of at most $k~(k\geq 1)$ $\NAVR$ patterns.
+%このとき，次の定理が成り立つ．
+Then, we have the following Theorem \ref{KeyTheoforNAVRP}.
 
-\begin{thm}\label{非隣接kが4以上}
-$\sharp \Sigma \ge k+2,~P\in \NAVRPplus,~Q \in \NAVRPkei$とする．
-このとき，以下の{\rm (i), (ii), (iii)}は同値である．
+\begin{thm}\label{KeyTheoforNAVRP}%\label{非隣接kが4以上}
+  $\sharp \Sigma \ge k+2,~P\in \NAVRPplus,~Q \in \NAVRPkei$とする．
+Let $\sharp \Sigma \ge k+2,~P\in \NAVRPplus,~Q \in \NAVRPkei$.  
+%このとき，以下の{\rm (i), (ii), (iii)}は同値である．
+Then, the following (i), (ii) and (iii) are equivalent:
 \[
 \begin{tabular}{ll}
 $(\mathrm{i})$ $S_{2}(P) \subseteq L(Q)$,
@@ -44,11 +54,16 @@ $a, b \in \Sigma$に対して，$p_{a}=p \{ x := a \}$，$p_{ab}=p \{ x := ab \}
 \end{proof}
 
 \begin{col}
-$\sharp\Sigma \ge k+2$，$P \in \NAVRPplus$とする．このとき，$S_{2}(P)$は$\mathcal{RPL^{\mbox{$k$}}_{NAV}}$における$L(P)$の特徴集合である．
+%$\sharp\Sigma \ge k+2$，$P \in \NAVRPplus$とする．
+%このとき，$S_{2}(P)$は$\mathcal{RPL^{\mbox{$k$}}_{NAV}}$における$L(P)$の特徴集合である．
+Let $\sharp\Sigma \ge k+2$，$P \in \NAVRPplus$.
+Then, $S_{2}(P)$ is a characteristic set for $\mathcal{RPL^{\mbox{$k$}}_{NAV}}$.
 \end{col}
 
-\begin{lem}\label{k+2のとき}
-$\sharp\Sigma \le k+1$とする．このとき，$\NAVRPkei$は包含に関してコンパクト性を持たない．
+\begin{lem}\label{Case_k+2}\label{k+2のとき}
+%$\sharp\Sigma \le k+1$とする．このとき，$\NAVRPkei$は包含に関してコンパクト性を持たない．
+Let $\sharp\Sigma \le k+1$.
+Then, $\NAVRPkei$ does not have compactness with respect to containment.
 \end{lem}
 \begin{proof}
 $\Sigma = \{ a_{1}, \ldots , a_{k+1} \}$を$k+1$個の定数記号から成る集合，$p, q_{i}$を正規パターンとする．
@@ -60,25 +75,37 @@ $p \{ x:= a_{k+1}a_{1} \} \preceq q_{1}$であるとき，$S_{2}(p) \backslash S
 \end{proof}
 
 コンパクト性をもたない例を例\ref{反例k+1}に示す．
+
+\begin{ex}\label{Case_k+1}\label{反例k+1}
+%$\Sigma= \{a_{1}, a_{2}, a_{3}, a_{4} \}$を$4$つの定数記号から成る集合，$p,q_{1},q_{2},q_{3}$を正規パターン，$x,x^{\prime},x^{\prime\prime}$を変数記号とする．
+Let $\Sigma= \{a_{1}, a_{2}, a_{3}, a_{4} \}$, where $a_{1},~a_{2},~a_{3},~a_{4}$ are constant symbols and $x,x^{\prime},x^{\prime\prime}$ variable symbols.
+Let $p,q_{1},q_{2},q_{3}$ be the $\NAVR$ regular patterns given in Fig. \ref{Fig:CounterExampleforNAVR}. 
+%$p,q_{1},q_{2},q_{3}$を以下のように定義する．
 \begin{figure*}[tb]
-\begin{ex}\label{反例k+1}
-$\Sigma= \{a_{1}, a_{2}, a_{3}, a_{4} \}$を$4$つの定数記号から成る集合，$p,q_{1},q_{2},q_{3}$を正規パターン，$x,x^{\prime},x^{\prime\prime}$を変数記号とする．
-$p,q_{1},q_{2},q_{3}$を以下のように定義する．
 \begin{align*}
 p & = x^{\prime}a_{3}a_{1}a_{4}a_{1}a_{4}a_{1}a_{1}a_{4}a_{1}a_{3}a_{2}a_{1}a_{4}a_{1}a_{4}a_{1}a_{1}a_{4}a_{1}xa_{1}a_{4}a_{1}a_{4}a_{1}a_{1}a_{4}a_{1}a_{3}a_{2}a_{1}a_{4}a_{1}a_{4}a_{1}a_{1}a_{4}a_{1}a_{2}x^{\prime\prime},\\
 q_{1} & = x^{\prime}a_{3}a_{1}a_{4}a_{1}a_{4}a_{1}a_{1}a_{4}a_{1}a_{3}a_{2}a_{1}a_{4}a_{1}a_{4}a_{1}a_{1}a_{4}a_{1}a_{2}x^{\prime\prime},\\
 q_{2} & = x^{\prime}a_{2}a_{1}a_{4}a_{1}a_{4}a_{1}a_{1}a_{4}a_{1}a_{3}x^{\prime\prime},\\
 q_{3} & = x^{\prime}a_{1}a_{1}a_{4}a_{1}a_{4}x^{\prime\prime}.
 \end{align*}
-
-これは，$L(p) \subseteq L(q_{1}) \cup L(q_{2}) \cup L(q_{3})$となる．
-しかし，$p \not \preceq q_{1},~p \not \preceq q_{2}$かつ$p \not \preceq q_{3}$である．
-\end{ex}
+\caption{NAVR patterns $P$, $q_{1}$, $q_{2}$, and $q_{3}$}\label{Fig:CounterExampleforNAVR}
 \end{figure*}
+\noindent
+Then, we can see that  $L(p) \subseteq L(q_{1}) \cup L(q_{2}) \cup L(q_{3})$ holds.
+Since $p \not \preceq q_{1},~p \not \preceq q_{2}$ and $p \not \preceq q_{3}$ also hold,
 
-定理\ref{非隣接kが4以上}と補題\ref{k+2のとき}より，次の定理が成り立つ．
+%これは，$L(p) \subseteq L(q_{1}) \cup L(q_{2}) \cup L(q_{3})$となる．
+%しかし，$p \not \preceq q_{1},~p \not \preceq q_{2}$かつ$p \not \preceq q_{3}$である．
+%However, since $p \not \preceq q_{1},~p \not \preceq q_{2}$ and $p \not \preceq q_{3}$ hold,
 
-\begin{thm}
-$\sharp\Sigma \ge k+2$とする．
-このとき，$\RPat^{k}$は包含に関してコンパクト性を持つ．
+\end{ex}
+
+%定理\ref{非隣接kが4以上}と補題\ref{k+2のとき}より，次の定理が成り立つ．
+From Theorem \ref{KeyTheoforNAVRP} and Lemma \ref{Case_k+2}, we have the following theorem.
+
+\begin{thm}\label{MainTheforNAVRP}
+%$\sharp\Sigma \ge k+2$とする．
+%このとき，$\RPat^{k}$は包含に関してコンパクト性を持つ．
+Let $\sharp\Sigma \ge k+2$.
+Then, the set $\RPat^{k}$ has compactness with respect to containment.
 \end{thm}
