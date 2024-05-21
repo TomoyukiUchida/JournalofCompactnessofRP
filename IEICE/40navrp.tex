@@ -7,11 +7,11 @@ if $p$ does not contain consecutive variable symbols.
 For example, the regular pattern $p=axybc$ is not a $\NAVR$ pattern because $xy$ is appeared in $p$.
 %例えば，パターン$axybc$は正規パターンであるが，非隣接変数正規パターンではない．パターン$axbcy$は非隣接変数正規パターンである．
 %$\NAVRP$を非隣接変数正規パターン全体の集合とする．
-Let $\NAVRP$ be the set of all NAVR patterns.
+Let $\NAVRP$ be the set of all $\NAVR$ patterns.
 %$\NAVRP$の空でない有限部分集合の集合を$\NAVRPplus$で，
 %高々$k~(k\geq 1)$個のパターンから成る$\NAVRP$の部分集合$\{P\in \NAVRPplus \mid \sharp P \leq k\}$を$\NAVRPkei$で表す．
-Let $\NAVRPplus=\{S \subseteq \NAVRP \mid \sharp S \leq 1\}$, which is the set of all finite subsets $S$ of $NAVRP$ such that $S$ is not the empty set.
-and $\NAVRPkei=\{P\in \NAVRPplus \mid \sharp P \leq k\}$, which is the set of all subsets $P$ of $\NAVRPplus$ such that $P$ consists of at most $k~(k\geq 1)$ $\NAVR$ patterns.
+Let $\NAVRPplus$ be the set of all finite subsets $S$ of $\NAVRP$ such that $S$ is not the empty set, i.e., $\NAVRPplus=\{S \subseteq \NAVRP \mid \sharp S \leq 1\}$,
+and $\NAVRPkei$ the set of all subsets $P$ of $\NAVRPplus$ such that $P$ consists of at most $k~(k\geq 1)$ $\NAVR$ patterns, i.e., $\NAVRPkei=\{P\in \NAVRPplus \mid \sharp P \leq k\}$.
 %このとき，次の定理が成り立つ．
 Then, we have the following Theorem \ref{KeyTheoforNAVRP}.
 
@@ -22,23 +22,32 @@ Let $\sharp \Sigma \ge k+2,~P\in \NAVRPplus,~Q \in \NAVRPkei$.
 Then, the following (i), (ii) and (iii) are equivalent:
 \[
 \begin{tabular}{ll}
-$(\mathrm{i})$ $S_{2}(P) \subseteq L(Q)$,
-$(\mathrm{ii})$ $P \sqsubseteq Q$,
-$(\mathrm{iii})$ $L(P) \subseteq L(Q)$.
+(i) $S_{2}(P) \subseteq L(Q)$,
+(ii) $P \sqsubseteq Q$,
+(iii) $L(P) \subseteq L(Q)$.
 \end{tabular}
 \]
 \end{thm}
 
 \begin{proof}
-定義より，
-(ii) $\Rightarrow$ (iii)と(iii) $\Rightarrow$ (i)は自明に成り立つ．
-よって，(i) $\Rightarrow$ (ii)が成り立つことを，$p$に現れる変数記号の数$n$に関する数学的帰納法で証明する．
+%定義より，
+%(ii) $\Rightarrow$ (iii)と(iii) $\Rightarrow$ (i)は自明に成り立つ．
+From the definitions of $\NAVRPplus$ and $\NAVRPkei$, it is obvious that if the equation (ii) holds then the equation (iii) holds and if the equation (iii) holds then the equation (i) holds.
+Hence, we will show that if the equation (i) holds then the equation (ii) holds
+by mathematical induction on the number $n$ of variable symbols that appear in $p$ as follows:
+%よって，(i) $\Rightarrow$ (ii)が成り立つことを，$p$に現れる変数記号の数$n$に関する数学的帰納法で証明する．
+%
+%$n=0$のとき，$S_{2}(p)= \{ p \}$であり，$p \in L(Q)$となる．よって，ある$q \in Q$に対して，$p \preceq q$となる．
+If $n=0$, then we have $S_{2}(p)= \{ p \}$.
+Hence, $p \in L(Q)$.
+Therefore, there exists $q \in Q$ such that $p \preceq q$ holds.
 
-$n=0$のとき，$S_{2}(p)= \{ p \}$であり，$p \in L(Q)$となる．よって，ある$q \in Q$に対して，$p \preceq q$となる．
-
-$n \ge 0$個の変数記号を含む任意の正規パターンに対して，題意が成り立つと仮定する．
-$p$を$S_{2}(p) \subseteq L(Q)$を満たす$n+1$個の変数記号を含む非隣接変数正規パターンとする．
-$p \not \preceq q_{i}$ ($i=1, 2$)と仮定する．
+If $n \ge 0$, we assume that the proposition holds for any regular $\NAVR$ pattern containing $n \ge 0$ variable symbols.
+%$n \ge 0$個の変数記号を含む任意の正規パターンに対して，題意が成り立つと仮定する．
+%$p$を$S_{2}(p) \subseteq L(Q)$を満たす$n+1$個の変数記号を含む非隣接変数正規パターンとする．
+Let $p$ be a $\NAVR$ pattern containing $n+1$ variable symbols such that $S_{2}(p) \subseteq L(Q)$ holds.
+%$p \not \preceq q_{i}$ ($i=1, 2$)と仮定する．
+%Assume that $p \not \preceq q_{1}$ and $p \not \preceq q_{2}$.
 非隣接変数正規パターン$p$を$p=p_{1}xp_{2}$, $Q=\{ q_{1}, \ldots , q_{k} \}$とおく．
 ここで，$p_{1}$は末尾が定数記号である非隣接変数正規パターンであり，$p_{2}$は先頭が定数記号である非隣接変数正規パターン，$x$は変数記号，任意の$i$ ($i=1, \ldots, k$)に対して，$q_{i}$は非隣接変数正規パターンである．
 $a, b \in \Sigma$に対して，$p_{a}=p \{ x := a \}$，$p_{ab}=p \{ x := ab \}$とおく．
@@ -66,20 +75,28 @@ Let $\sharp\Sigma \le k+1$.
 Then, $\NAVRPkei$ does not have compactness with respect to containment.
 \end{lem}
 \begin{proof}
-$\Sigma = \{ a_{1}, \ldots , a_{k+1} \}$を$k+1$個の定数記号から成る集合，$p, q_{i}$を正規パターンとする．
-$p \{ x := a_{i}y \} \preceq q_{i}$かつ$p \{ x := ya_{i+1} \} \preceq q_{i}~(i=1,2, \ldots ,k)$とする．
-$p \{ x:= a_{k+1}a_{1} \} \preceq q_{1}$であるとき，$S_{2}(p) \backslash S_{1}(p) \subseteq \bigcup^{k}_{i=1} L(q_{i})$となる． 
-すなわち，$L(p) \subseteq L(Q)$である．
-しかし，$p \not \preceq q_{i}$であるため，$L(p) \not \subseteq L(q_{i})~(i=1,2, \ldots k)$である．
-したがって，$\NAVRPkei$は包含に関するコンパクト性を持たない．
+%$\Sigma = \{ a_{1}, \ldots , a_{k+1} \}$を$k+1$個の定数記号から成る集合，$p, q_{i}$を正規パターンとする．
+Let $\Sigma$ be the set of $k+1$ constant symbols $a_{1}, \ldots , a_{k+1}$, i.e., $\Sigma = \{ a_{1}, \ldots , a_{k+1} \}$.
+%$p \{ x := a_{i}y \} \preceq q_{i}$かつ$p \{ x := ya_{i+1} \} \preceq q_{i}~(i=1,2, \ldots ,k)$とする．
+We assume that for $i=1,2,\ldots,k$, $p \{ x := a_{i}y \} \preceq q_{i}$ and $p \{ x := ya_{i+1} \} \preceq q_{i}~(i=1,2, \ldots ,k)$ hold.
+%$p \{ x:= a_{k+1}a_{1} \} \preceq q_{1}$であるとき，$S_{2}(p) \backslash S_{1}(p) \subseteq \bigcup^{k}_{i=1} L(q_{i})$となる． 
+If $p \{ x:= a_{k+1}a_{1} \} \preceq q_{1}$ holds, $S_{2}(p) \backslash S_{1}(p) \subseteq \bigcup^{k}_{i=1} L(q_{i})$ holds.
+%すなわち，$L(p) \subseteq L(Q)$である．
+This show that $L(p) \subseteq L(Q)$ holds.
+%しかし，$p \not \preceq q_{i}$であるため，$L(p) \not \subseteq L(q_{i})~(i=1,2, \ldots k)$である．
+However, for $i=1,2,\ldots,k$, since $p \not \preceq q_{i}$ holds, we have that $L(p) \not \subseteq L(q_{i})$ holds.
+%したがって，$\NAVRPkei$は包含に関するコンパクト性を持たない．
+Hence, $\NAVRPkei$ does not have compactness with respect to containment.
 \end{proof}
 
-コンパクト性をもたない例を例\ref{反例k+1}に示す．
+%コンパクト性をもたない例を例\ref{反例k+1}に示す．
+Next, we give a counterexamples in Example \ref{Case_k+1}.
+An example of a lack of compactness is shown in Example \ref{counterexample k+1}.
 
 \begin{ex}\label{Case_k+1}\label{反例k+1}
 %$\Sigma= \{a_{1}, a_{2}, a_{3}, a_{4} \}$を$4$つの定数記号から成る集合，$p,q_{1},q_{2},q_{3}$を正規パターン，$x,x^{\prime},x^{\prime\prime}$を変数記号とする．
-Let $\Sigma= \{a_{1}, a_{2}, a_{3}, a_{4} \}$, where $a_{1},~a_{2},~a_{3},~a_{4}$ are constant symbols and $x,x^{\prime},x^{\prime\prime}$ variable symbols.
-Let $p,q_{1},q_{2},q_{3}$ be the $\NAVR$ regular patterns given in Fig. \ref{Fig:CounterExampleforNAVR}. 
+Let $\Sigma$ be the set of constant symbols $a_{1},~a_{2},~a_{3},~a_{4}$, i.e., $\Sigma= \{a_{1}, a_{2}, a_{3}, a_{4} \}$ and $x,x^{\prime},x^{\prime\prime}$ variable symbols.
+Let $p,q_{1},q_{2},q_{3}$ be the $\NAVR$ patterns given in Fig. \ref{Fig:CounterExampleforNAVR}. 
 %$p,q_{1},q_{2},q_{3}$を以下のように定義する．
 \begin{figure*}[tb]
 \begin{align*}
@@ -88,11 +105,11 @@ q_{1} & = x^{\prime}a_{3}a_{1}a_{4}a_{1}a_{4}a_{1}a_{1}a_{4}a_{1}a_{3}a_{2}a_{1}
 q_{2} & = x^{\prime}a_{2}a_{1}a_{4}a_{1}a_{4}a_{1}a_{1}a_{4}a_{1}a_{3}x^{\prime\prime},\\
 q_{3} & = x^{\prime}a_{1}a_{1}a_{4}a_{1}a_{4}x^{\prime\prime}.
 \end{align*}
-\caption{NAVR patterns $P$, $q_{1}$, $q_{2}$, and $q_{3}$}\label{Fig:CounterExampleforNAVR}
+\caption{$\NAVR$ patterns $P$, $q_{1}$, $q_{2}$, and $q_{3}$}\label{Fig:CounterExampleforNAVR}
 \end{figure*}
 \noindent
-Then, we can see that  $L(p) \subseteq L(q_{1}) \cup L(q_{2}) \cup L(q_{3})$ holds.
-Since $p \not \preceq q_{1},~p \not \preceq q_{2}$ and $p \not \preceq q_{3}$ also hold,
+Then, we have $L(p) \subseteq L(q_{1}) \cup L(q_{2}) \cup L(q_{3})$.
+Since $p \not \preceq q_{1},~p \not \preceq q_{2}$ and $p \not \preceq q_{3}$ hold,
 
 %これは，$L(p) \subseteq L(q_{1}) \cup L(q_{2}) \cup L(q_{3})$となる．
 %しかし，$p \not \preceq q_{1},~p \not \preceq q_{2}$かつ$p \not \preceq q_{3}$である．
