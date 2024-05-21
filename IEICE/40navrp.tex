@@ -2,16 +2,16 @@
 \section{Regular Pattern without Adjacent Variable Symbols}
 
 %隣接した変数記号を持たない正規パターンを\textbf{非隣接変数正規パターン}という．
-A regular pattern $p$ is said to be a {\it non-adjacent variable regular pattern} ($\NAVR$ pattern)  
+A regular pattern $p$ is said to be a {\it non-adjacent variable regular pattern} ($\NAV$ regular pattern)  
 if $p$ does not contain consecutive variable symbols.
-For example, the regular pattern $p=axybc$ is not a $\NAVR$ pattern because $xy$ is appeared in $p$.
+For example, the regular pattern $p=axybc$ is not a $\NAV$ regular pattern because $xy$ is appeared in $p$.
 %例えば，パターン$axybc$は正規パターンであるが，非隣接変数正規パターンではない．パターン$axbcy$は非隣接変数正規パターンである．
 %$\NAVRP$を非隣接変数正規パターン全体の集合とする．
-Let $\NAVRP$ be the set of all $\NAVR$ patterns.
+Let $\NAVRP$ be the set of all $\NAV$ regular patterns.
 %$\NAVRP$の空でない有限部分集合の集合を$\NAVRPplus$で，
 %高々$k~(k\geq 1)$個のパターンから成る$\NAVRP$の部分集合$\{P\in \NAVRPplus \mid \sharp P \leq k\}$を$\NAVRPkei$で表す．
 Let $\NAVRPplus$ be the set of all finite subsets $S$ of $\NAVRP$ such that $S$ is not the empty set, i.e., $\NAVRPplus=\{S \subseteq \NAVRP \mid \sharp S \leq 1\}$,
-and $\NAVRPkei$ the set of all subsets $P$ of $\NAVRPplus$ such that $P$ consists of at most $k~(k\geq 1)$ $\NAVR$ patterns, i.e., $\NAVRPkei=\{P\in \NAVRPplus \mid \sharp P \leq k\}$.
+and $\NAVRPkei$ the set of all subsets $P$ of $\NAVRPplus$ such that $P$ consists of at most $k~(k\geq 1)$ $\NAV$ regular patterns, i.e., $\NAVRPkei=\{P\in \NAVRPplus \mid \sharp P \leq k\}$.
 %このとき，次の定理が成り立つ．
 Then, we have the following Theorem \ref{KeyTheoforNAVRP}.
 
@@ -42,10 +42,10 @@ If $n=0$, then we have $S_{2}(p)= \{ p \}$.
 Hence, $p \in L(Q)$.
 Therefore, there exists $q \in Q$ such that $p \preceq q$ holds.
 
-If $n \ge 0$, we assume that the proposition holds for any regular $\NAVR$ pattern containing $n \ge 0$ variable symbols.
+If $n \ge 0$, we assume that the proposition holds for any regular $\NAV$ regular pattern containing $n \ge 0$ variable symbols.
 %$n \ge 0$個の変数記号を含む任意の正規パターンに対して，題意が成り立つと仮定する．
 %$p$を$S_{2}(p) \subseteq L(Q)$を満たす$n+1$個の変数記号を含む非隣接変数正規パターンとする．
-Let $p$ be a $\NAVR$ pattern containing $n+1$ variable symbols such that $S_{2}(p) \subseteq L(Q)$ holds.
+Let $p$ be a $\NAV$ regular pattern containing $n+1$ variable symbols such that $S_{2}(p) \subseteq L(Q)$ holds.
 %$p \not \preceq q_{i}$ ($i=1, 2$)と仮定する．
 %Assume that $p \not \preceq q_{1}$ and $p \not \preceq q_{2}$.
 非隣接変数正規パターン$p$を$p=p_{1}xp_{2}$, $Q=\{ q_{1}, \ldots , q_{k} \}$とおく．
@@ -65,7 +65,7 @@ $a, b \in \Sigma$に対して，$p_{a}=p \{ x := a \}$，$p_{ab}=p \{ x := ab \}
 \begin{col}
 %$\sharp\Sigma \ge k+2$，$P \in \NAVRPplus$とする．
 %このとき，$S_{2}(P)$は$\mathcal{RPL^{\mbox{$k$}}_{NAV}}$における$L(P)$の特徴集合である．
-Let $\sharp\Sigma \ge k+2$，$P \in \NAVRPplus$.
+Let $\sharp\Sigma \ge k+2$, $P \in \NAVRPplus$.
 Then, $S_{2}(P)$ is a characteristic set for $\mathcal{RPL^{\mbox{$k$}}_{NAV}}$.
 \end{col}
 
@@ -96,7 +96,7 @@ Next, we give an example for Lemma \label{Case_k+2} in Example \ref{Case_k+1}.
 \begin{ex}\label{Case_k+1}\label{反例k+1}
 %$\Sigma= \{a_{1}, a_{2}, a_{3}, a_{4} \}$を$4$つの定数記号から成る集合，$p,q_{1},q_{2},q_{3}$を正規パターン，$x,x^{\prime},x^{\prime\prime}$を変数記号とする．
 Let $\Sigma$ be the set of distinct four constant symbols $a_{1},~a_{2},~a_{3},~a_{4}$, i.e., $\Sigma= \{a_{1}, a_{2}, a_{3}, a_{4} \}$ and $x,x^{\prime},x^{\prime\prime}$ three distinct variable symbols.
-Let $p,q_{1},q_{2},q_{3}$ be the $\NAVR$ patterns given in Fig. \ref{Fig:CounterExampleforNAVR}. 
+Let $p,q_{1},q_{2},q_{3}$ be the $\NAV$ regular patterns given in Fig. \ref{Fig:CounterExampleforNAVR}. 
 %$p,q_{1},q_{2},q_{3}$を以下のように定義する．
 \begin{figure*}[tb]
 \begin{align*}
@@ -105,7 +105,7 @@ q_{1} & = x^{\prime}a_{3}a_{1}a_{4}a_{1}a_{4}a_{1}a_{1}a_{4}a_{1}a_{3}a_{2}a_{1}
 q_{2} & = x^{\prime}a_{2}a_{1}a_{4}a_{1}a_{4}a_{1}a_{1}a_{4}a_{1}a_{3}x^{\prime\prime},\\
 q_{3} & = x^{\prime}a_{1}a_{1}a_{4}a_{1}a_{4}x^{\prime\prime}.
 \end{align*}
-\caption{$\NAVR$ patterns $P$, $q_{1}$, $q_{2}$, and $q_{3}$}\label{Fig:CounterExampleforNAVR}
+\caption{$\NAV$ regular patterns $P$, $q_{1}$, $q_{2}$, and $q_{3}$}\label{Fig:CounterExampleforNAVR}
 \end{figure*}
 \noindent
 Then, we have $L(p) \subseteq L(q_{1}) \cup L(q_{2}) \cup L(q_{3})$.
