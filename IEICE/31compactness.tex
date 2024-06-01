@@ -5,10 +5,15 @@ Then, if $\sharp\Sigma \ge 2k-1$ holds,
 we show that 
 $\RPat^{k}$ has compactness with respect to the containment.
 
-\begin{dfn}
-Let $\mathcal{C}$ be a subset of $\RPatplus$ (resp. $\Patplus$). 
-For any regular pattern $p \in \RPat$ (resp. $\Pat$) and any set $Q \in \mathcal{C}$,
-the set $\mathcal{C}$ has compactness with respect to containment.
+\begin{dfn}\label{def:compactness}
+%Let $\mathcal{C}$ be a subset of $\RPatplus$ (resp. $\Patplus$). 
+%For any regular pattern $p \in \RPat$ (resp. $\Pat$) and any set $Q \in \mathcal{C}$,
+Let $\mathcal{C}$ be a subset of $\RPatplus$. 
+For any regular pattern $p \in \RPat$ and any set $Q \in \mathcal{C}$,
+the set $\mathcal{C}$ said to have {\it compactness with respect to containment}
+%For any regular pattern $p \in \RPat$ and any set $Q \in \RPatplus$,
+the set $\mathcal{C}$ said to have {\it compactness with respect to containment}
+if there exists a regular pattern $q \in Q$ such that $L(p) \subseteq L(q)$ holds if $L(p) \subseteq L(Q)$ holds.
 \end{dfn}
 
 \begin{lem}[Sato et al.\cite{Sato1}]\label{変数2つ}
@@ -26,7 +31,7 @@ We assume that $p \{ x := xy \} \not \preceq q$ in order to derive the contradic
 
 \noindent
 (i) 
-The case of $D=\{ ay, by \} \ (a \ne b)$.
+Case of $D=\{ ay, by \} \ (a \ne b)$:
 
 \noindent
 Since $p \{ x := xy \} \not \preceq q$, $p_{1}ayp_{2}\preceq q$ and $p_{1}byp_{2}\preceq q$, 
@@ -48,7 +53,7 @@ This contradicts the assumption.
 
 \noindent
 (ii) 
-The case of $D=\{ ya, yb \} \ (a \ne b)$.
+Case of $D=\{ ya, yb \} \ (a \ne b)$:
 By reversing the strings of $p$ and $q$, we can prove that $p \{ x := xy \} \preceq q$ holds, in a similar way as (i).
 \end{proof}
 
@@ -102,13 +107,13 @@ Hence, for the cases (i)--(iv), we will prove that $p \{ x := xy \} \preceq q$ h
 \noindent
 (I) Cases of (i), (ii) and (iii), that is the cases that $q$ contains $a_{1}b_{1}, a_{2}b_{2}$ and $a_{3}b_{3}$:
 
-\begin{figure}
-\centering
-\includegraphics[width=\linewidth]{figs/Cases-abc.png}
-\vspace{-1cm}
-\caption{(abc)の場合分け}
-\label{abc組み合わせ}
-\end{figure}
+%\begin{figure}
+%\centering
+%\includegraphics[width=\linewidth]{figs/Cases-abc.png}
+%\vspace{-1cm}
+%\caption{(abc)の場合分け}
+%\label{abc組み合わせ}
+%\end{figure}
 
 \noindent
 We consider the following three cases (I-1)-(I-3) of $q$ for some regular patterns $q_{1},q_{2}$ and some constant strings $w,w^{\prime}$ ($|w|\geq 0$ and $|w^{\prime}|\geq 0$):
@@ -250,13 +255,13 @@ Then, the above equations (3) and (1') are represented by $p_{1} \preceq q_{1}^{
 From Theorem \ref{Sato1:Lemma9}, $p \preceq q$ holds.
 This contradicts the assumption.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\linewidth]{figs/Cases-d.png}
-  \vspace{-1cm}
-  \caption{(d)の場合分け}
-  \label{d組み合わせ}
-\end{figure}
+%\begin{figure}
+%  \centering
+%  \includegraphics[width=\linewidth]{figs/Cases-d.png}
+%  \vspace{-1cm}
+%  \caption{(d)の場合分け}
+%  \label{d組み合わせ}
+%\end{figure}
     
 Next, in the case of $C=a_{3}y$, we consider the following five cases (II-1)--(II-5):
 

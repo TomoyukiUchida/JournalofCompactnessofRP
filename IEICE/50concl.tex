@@ -1,5 +1,5 @@
 \section{Conclusion}
-%In this paper, we have shown the following 
+In this paper, for an integer $k~(k\ge 2)$, we have shown the conditions on the number of constant symbols in $\Sigma$, summarized in Table \ref{table:results}, required for the classes $\RPatkei$ of all the set of $k$ regular pattern languages and $\NAVRPkei$ of all the set of $k$ $\NAV$ regular patterns to have compactness with respect to containment.
 %本稿では，高々$k$ $(k\ge 2)$個の正規パターン集合全体のクラス$\RPatkei$について，(1) 正規パターン集合$P\in\RPatkei$から得られる記号列の集合$S_2(P)$が$P$により生成される言語$L(P)$の特徴集合となること，
 %および(2) $\RPatkei$が包含に関してコンパクト性を持つこと
 %を示したSatoら\cite{Sato1}の結果の証明の誤りを修正した．
@@ -8,6 +8,19 @@
 %正規パターン言語の有限和に対する特徴集合と，定数記号の数が$k+2$以上のとき，
 %$\NAVRPkei$が包含に関してコンパクト性をもつことを示した．
 %これらにより，Arimuraら\cite{Arimura1994}が示した$\RPatkei$に対する学習アルゴリズムを非隣接変数正規パターン言語の有限和に関する効率的な学習アルゴリズムが設計できることを示した．
+\begin{table}
+\caption{The conditions on the number $\sharp \Sigma$ of constant symbols in $\Sigma$ required for compactness with respect to containment.}\label{table:results}
+\begin{center}
+\begin{tabular}{c|c|c}
+  Class & $k=2$ & $k\ge 3$\\
+  \hline
+  \raisebox{-5pt}{$\RPatkei$} & \raisebox{-5pt}{$\sharp \Sigma \ge 4$} & \raisebox{-5pt}{$\sharp \Sigma \ge 2k-1$} \\[10pt]
+  \hline
+  \raisebox{-5pt}{$\NAVRPkei$} & \multicolumn{2}{c}{\raisebox{-5pt}{$\sharp \Sigma \ge k+2$}}\\[10pt]
+\end{tabular}
+\end{center}
+\vspace*{-10pt}
+\end{table}
 
 %今後の課題として，$\NAVRPkei$に対する特徴集合を活用し，非隣接変数正規パターン言語の有限和を正例から極限同定する多項式時間帰納推論アルゴリズム
 %および一つの正例と多項式回の所属性質問を用いて同定する質問学習アルゴリズムの高速化が考えられる．
