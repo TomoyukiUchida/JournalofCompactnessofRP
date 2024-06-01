@@ -20,9 +20,9 @@
   Since $p \{ x := xy \} \not \preceq q$, there exist three regular patterns $A,B,C$ on $\Sigma$ such that $q=q_{1}AwBw^{\prime}Cq_{2}$ hold, where $\{ A,B,C \} = \{ y_{1}a,bc,dy_{2} \}$ for some variable symbols $y_{1}, y_{2}$ ($y_{1} \not= y_{2}$).
   For these $p_{1},p_{2},q_{1},q_{2}$, the following six equations hold:
   \begin{align*}
-  (1)~& p_{1} \preceq q_{1} & (\text{1'})~& p_{2} \preceq wBw^{\prime}Cq_{2} \\
-  (2)~& p_{1} \preceq q_{1}Aw & (\text{2'})~& p_{2} \preceq w^{\prime}Cq_{2} \\
-  (3)~& p_{1} \preceq q_{1}AwBw^{\prime} & (\text{3'})~& p_{2} \preceq q_{2}
+  \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wBw^{\prime}Cq_{2} \\
+  \textrm{(2)}~& p_{1} \preceq q_{1}Aw & \textrm{(2')}~& p_{2} \preceq w^{\prime}Cq_{2} \\
+  \textrm{(3)}~& p_{1} \preceq q_{1}AwBw^{\prime} & \textrm{(3')}~& p_{2} \preceq q_{2}
   \end{align*}
   
   Let $q^{\prime}_{1}=q_{1}A,~q^{\prime}_{2}=wBw^{\prime},~q^{\prime}_{3}=Cq_{2}$.
@@ -42,9 +42,9 @@
   Let $q=q_{1}y_{1}awbcw^{\prime}dy_{2}q_{2}$, where $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$.
   If $p \{ x := xy \} \not \preceq q$ holds, we have the following equations:
   \begin{align*}
-  (1)~& p_{1} \preceq q_{1} & (\text{1'})~& p_{2} \preceq wbcw^{\prime}dy_{2}q_{2} \\
-  (2)~& p_{1} \preceq q_{1}y_{1}aw & (\text{2'})~& p_{2} \preceq w^{\prime}dy_{2}q_{2} \\
-  (3)~& p_{1} \preceq q_{1}y_{1}awbcw^{\prime} & (\text{3'})~& p_{2} \preceq q_{2}
+    \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wbcw^{\prime}dy_{2}q_{2} \\
+    \textrm{(2)}~& p_{1} \preceq q_{1}y_{1}aw & \textrm{(2')}~& p_{2} \preceq w^{\prime}dy_{2}q_{2} \\
+    \textrm{(3)}~& p_{1} \preceq q_{1}y_{1}awbcw^{\prime} & \textrm{(3')}~& p_{2} \preceq q_{2}
   \end{align*}
   Note that from (1') and (2'), $wbcw^{\prime}d$ and $w^{\prime}d$ are prefixes of $p_{2}$, and from (2) and (3), $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$.
 
@@ -253,17 +253,18 @@ There are the following three possibilities of strings in $q$ which corresponds 
 Let $A,B,C$ be strings where $\{ A,B,C \} = \{ y_{1}a,bc,dy_{3} \}$ and let $q=q_{1}AwBw^{\prime}Cq_{2}$.
 Since $p \{ x := r \} \preceq q$ for all $r \in D$ and $p \{ x := xy \} \not \preceq q$ hold, the following conditions hold:
 \begin{align*}
-(1)~& p_{1} \preceq q_{1} & (1')~& p_{2} \preceq wBw^{\prime}Cq_{2} \\
-(2)~& p_{1} \preceq q_{1}Aw & (2')~& p_{2} \preceq w^{\prime}Cq_{2} \\
-(3)~& p_{1} \preceq q_{1}AwBw^{\prime} & (3')~& p_{2} \preceq q_{2}
+  \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wBw^{\prime}Cq_{2} \\
+  \textrm{(2)}~& p_{1} \preceq q_{1}Aw & \textrm{(2')}~& p_{2} \preceq w^{\prime}Cq_{2} \\
+  \textrm{(3)}~& p_{1} \preceq q_{1}AwBw^{\prime} & \textrm{(3')}~& p_{2} \preceq q_{2}
 \end{align*}
 
-Let $q^{\prime}_{1}=q_{1}A,~q^{\prime}_{2}=wBw^{\prime},~q^{\prime}_{3}=Cq_{2}$. From $(3)$ and $(1')$, we have $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2},~p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$.
+Let $q^{\prime}_{1}=q_{1}A,~q^{\prime}_{2}=wBw^{\prime},~q^{\prime}_{3}=Cq_{2}$.
+From (3) and (1'), we have $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2},~p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$.
 From Lemma \ref{Sato1:Lemma9}, if $q^{\prime}_{2}$ contains a variable, $p \preceq q$ holds.
 Therefore, $B$ must be $bc$.
 If $A=dy_{3}$, from $(2)$, $p_{1} \preceq q_{1}dy_{3}w$ holds.
 Let $p_{1}=p^{\prime}_{1}p^{\prime\prime}_{1}, p^{\prime}_{1} \preceq q_{1}d$, and $p^{\prime\prime}_{1} \preceq y_{3}w$.
-From $(1')$, we have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xwbcw^{\prime}y_{1}aq_{2}=q \{ x:=p^{\prime\prime}_{1}x \}$. This shows that there is a substitution $\theta$ such that $p=q\theta$ holds, and this contradicts the assumption. Therefore, we only need to consider the case where $A=y_{1}a,B=bc$, and $C=dy_{3}$.
+From (1'), we have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xwbcw^{\prime}y_{1}aq_{2}=q \{ x:=p^{\prime\prime}_{1}x \}$. This shows that there is a substitution $\theta$ such that $p=q\theta$ holds, and this contradicts the assumption. Therefore, we only need to consider the case where $A=y_{1}a,B=bc$, and $C=dy_{3}$.
 
 From the above, we consider two cases: one in which the symbols overlap and the other in which they do not.
 \smallskip
@@ -282,20 +283,20 @@ Therefore, it contradicts the assumption.
 Let $q=q_{1}y_{1}acwdy_{3}q_{2}$ ($a=b$).
 For this $q$, the following conditions hold:
 \begin{align*}
-(1)~& p_{1} \preceq q_{1} & (1')~& p_{2} \preceq cwdy_{3}q_{2} \\
-(2)~& p_{1} \preceq q_{1}y_{1} & (2')~& p_{2} \preceq wdy_{3}q_{2} \\
-(3)~& p_{1} \preceq q_{1}y_{1}acwdy_{3} & (3')~& p_{2} \preceq q_{2}
+  \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq cwdy_{3}q_{2} \\
+  \textrm{(2)}~& p_{1} \preceq q_{1}y_{1} & \textrm{(2')}~& p_{2} \preceq wdy_{3}q_{2} \\
+  \textrm{(3)}~& p_{1} \preceq q_{1}y_{1}acwdy_{3} & \textrm{(3')}~& p_{2} \preceq q_{2}
 \end{align*}
 
 %
-If $|w|=0$, from $(1')$ and $(2')$, the prefix of $p_{2}$ is $cd$ and $d$.
+If $|w|=0$, from (1') and (2'), the prefix of $p_{2}$ is $cd$ and $d$.
 Therefore, $c=d$. This contradicts the fact that $c \not = d$.
 
 If $|w|=1$, from (1') and (2'), the prefix of $p_{2}$ is $cwd$ and $wd$.
 Therefore, $w=c=d$.
 This contradicts the fact that $c \not = d$.
 
-If $|w| \ge 2$, then from $(1')$ and $(2')$,  prefixes of $p_{2}$ is $cwd$ and $wd$.
+If $|w| \ge 2$, then from (1') and (2'),  prefixes of $p_{2}$ is $cwd$ and $wd$.
 Let $w$ be $w_{1}w_{2}w_{3} \cdots w_{n-1}w_{n}$ $(n\geq 2,~w_{i}\in\Sigma$ for $i=1, \ldots , n)$.
 From $cw=wd$, a prefix of $w$ is $c$ and a suffix of $w$ is $d$.
 Therefore, we have $w=cw_{2}w_{3} \cdots w_{n-1}d$.
