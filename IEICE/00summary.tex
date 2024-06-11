@@ -1,16 +1,12 @@
 \begin{summary}
-正規パターンとは，定数記号と変数記号から成る，各変数記号が高々1回しか出現しない記号列をいう．
-正規パターン$p$の変数記号を定数記号列で置き換えることで生成できる定数記号列全体の集合を$L(p)$で表す．
-高々$k$個の正規パターンの集合全体のクラス$\RPat^{k}$に属する正規パターン集合$P$と$Q$に対し，
-任意の正規パターン$p\in P$に対して，
-$p$より汎化された正規パターン$q$が$Q$に存在するとき，$P\sqsubseteq Q$と書く．
-高々$k~(k\geq 2)$個の正規パターンから成る集合の全体のクラスを$\RPatkei$で表す．
-1998年にSatoら\cite{Sato1}は，各変数記号に対し，長さが高々2の記号列を代入することで$P\in \RPatkei$から得られる記号列の有限集合$S_2(P)$が，
-$L(P)=\bigcup_{p\in P}L(p)$の特徴集合であることを示した．
-次に，定数記号の数が$2k-1$以上のとき，$\RPatkei$が包含関係に関してコンパクト性をもつことを示した．
-これらの結果に対し，本稿では，まずSatoら\cite{Sato1}の結果を検証し，Satoらが与えた定理の証明の誤りを修正した．
-さらに，隣接した変数（隣接変数）を持たない正規パターンである非隣接変数正規パターン全体の集合$\NAVRP$を与え，
-高々$k~(k\ge 1)$個の非隣接変数正規パターンから成る集合の全体のクラス$\NAVRPkei$に属する集合$P$から得られる$S_2(P)$が$L(P)$の特徴集合であることを示した．
-さらに，定数記号の数が$k+2$以上のとき，$\NAVRPkei$が包含に関してコンパクト性をもつことを示した．
-これにより，正規パターン言語のときよりも少ない数の定数記号で，非隣接変数正規パターン言語の有限和に関する効率的な学習アルゴリズムが設計できることを示した．
+A regular pattern is a string consisting of constant symbols and distinct variable symbols.
+The language $L(p)$ of a regular pattern $p$ is the set of all constant strings obtained by replacing all variable symbols in the regular pattern $p$ with constant strings.
+For sets of regular patterns $P$ and $Q$ which are in the set $\RPat^{k}$ of all at most $k$ regular patterns, we write  $P \sqsubseteq Q$ if for any regular pattern $p \in P$ there exits a regular pattern  $q \in Q$ that is a generalization of $p$.
+$\RPatkei$ denotes the set of all at most $k~(k\geq 2)$ regular patterns.
+Sato et al.(1998) showed that the finite set of symbol strings $S_2(P)$  s a characteristic set of $L(P)=\bigcup_{p\in P}L(p)$, where $S_2(P)$ is obtained by substituting symbol strings of at most length 2 from $P\in \RPatkei$.
+Sato et al.(1998) also showed that $\RPatkei$  has compactness with respect to the inclusion relation, if the number of constant symbols is greater than or equal to $2k-1$.
+In this paper, we check the results of Sato et al.\cite{Sato1} and correct the error of the proof of their theorem.
+Further, we consider the set $\NAVRP$ of all non-adjacent regular patterns, which are regular patterns without adjacent variables, and show that the set of $S_2(P)$ obtained from a set $P$ in the set $\NAVRPkei$ of at most $k~(k\ge 1)$ non-adjacent regular patterns is a characteristic set of $L(P)$.
+Further we show that $\NAVRPkei$  has compactness with respect to the inclusion relation if the number of constant symbols is greater than or equal to $k+2$.
+Thus we show that we can design an efficient learning algorithm of a finite union of pattern languages of non-adjacent regular patterns for the number of constant symbols which is smaller than that of regular patterns.
 \end{summary}
