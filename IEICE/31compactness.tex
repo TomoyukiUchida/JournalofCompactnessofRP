@@ -10,14 +10,14 @@ $\RPat^{k}$ has compactness with respect to the containment.
 %For any regular pattern $p \in \RPat$ (resp. $\Pat$) and any set $Q \in \mathcal{C}$,
 Let $\mathcal{C}$ be a subset of $\RPatplus$. 
 For any regular pattern $p \in \RPat$ and any set $Q \in \mathcal{C}$,
-the set $\mathcal{C}$ said to have {\it compactness with respect to containment}
+%the set $\mathcal{C}$ said to have {\it compactness with respect to containment}
 %For any regular pattern $p \in \RPat$ and any set $Q \in \RPatplus$,
 the set $\mathcal{C}$ said to have {\it compactness with respect to containment}
 if there exists a regular pattern $q \in Q$ such that $L(p) \subseteq L(q)$ holds if $L(p) \subseteq L(Q)$ holds.
 \end{dfn}
 
 \begin{lem}[Sato et al.\cite{Sato1}]\label{変数2つ}
-Let $\Sigma$ be an alphabet with $\Sigma \ge 3$ and $p,q$ regular patterns on $\Sigma$.
+Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and $p,q$ regular patterns on $\Sigma$.
 Let $D$ be the set of either $(\mathrm{i})$ or $(\mathrm{ii})$ of regular patterns on $\Sigma$ below: Assume that $a \not= b$ and that a variable symbol $y$ does not appear in $p$.
 \begin{align*}
 (\mathrm{i})~~\{ ay, by \}~~~(\mathrm{ii})~\{ ya, yb \}.
@@ -36,14 +36,14 @@ Case of $D=\{ ay, by \} \ (a \ne b)$:
 \noindent
 Since $p \{ x := xy \} \not \preceq q$, $p_{1}ayp_{2}\preceq q$ and $p_{1}byp_{2}\preceq q$, 
 there exist regular patterns $q_{1},q_{2}$ on $\Sigma$ such that $q=q_{1}ay_{1}wby_{2}q_{2}$ or $q=q_{1}by_{1}way_{2}q_{2}$ for some variable symbols $y_{1},y_{2}~(y_{1} \not= y_{2})$ and a constant string $w$ ($|w|\geq 0$) from Theorem \ref{Sato1:Lemma9}.
-When $q=q_{1}ay_{1}wby_{2}q_{2}$ holds, the following four equations (1), (2), (1'), (2') holds:
+When $q=q_{1}ay_{1}wby_{2}q_{2}$ holds, the following four conditions (1), (2), (1'), (2') holds:
 \begin{align*}
 \textrm{(1)} & ~p_{1} \preceq q_{1}\\
 \textrm{(1')} & ~p_{2} \preceq wby_{2}q_{2} \mbox{ or } p_{2} \preceq y^{\prime}wby_{2}q_{2} ~~(y^{\prime} \in X)\\
 \textrm{(2)} & ~p_{1} \preceq q_{1}ay_{1}w\\
 \textrm{(2')} & ~p_{2} \preceq q_{2} \mbox{ or } p_{2} \preceq y^{\prime\prime}q_{2} ~(y^{\prime\prime} \in X)
 \end{align*}
-From the above equation (2), there exist regular patterns $p_{1}^{\prime},p_{1}^{\prime\prime}$ such that $p_{1}=p_{1}^{\prime}p_{1}^{\prime\prime}$, $p_{1}^{\prime} \preceq q_{1}a$ and $p_{1}^{\prime\prime} \preceq y_{1}w$ hold.
+From the above condition (2), there exist regular patterns $p_{1}^{\prime},p_{1}^{\prime\prime}$ such that $p_{1}=p_{1}^{\prime}p_{1}^{\prime\prime}$, $p_{1}^{\prime} \preceq q_{1}a$ and $p_{1}^{\prime\prime} \preceq y_{1}w$ hold.
 Therefore, since $p=p_{1}xp_{2}=p_{1}^{\prime}p_{1}^{\prime\prime}xp_{2}$,
 if $p_{2} \preceq wby_{2}q_{2}$ holds, 
 $p\preceq q_{1}ap_{1}^{\prime\prime}xwby_{2}q_{2}=q \{ y_{1} := p_{1}^{\prime\prime}x \}$ holds.
@@ -58,14 +58,14 @@ By reversing the strings of $p$ and $q$, we can prove that $p \{ x := xy \} \pre
 \end{proof}
 
 \begin{lem}\label{補題14}
-Let $\Sigma$ be an alphabet with $\Sigma \ge 4$, $p,q$ regular patterns on $\Sigma$.
+Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 4$, $p,q$ regular patterns on $\Sigma$.
 Let $D$ be the following set of constant strings on $\Sigma$ whose lengths are just 2:
 
 \medskip
 \noindent
 ~~\begin{tabular}{l}
   $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}, a_{4}b_{4} \}$\\
-  $(a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\ge i,j\ge 4))$.
+  $(a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\le i,j\le 4))$.
 \end{tabular}
 \medskip
 
@@ -123,21 +123,21 @@ We consider the following three cases (I-1)-(I-3) of $q$ for some regular patter
 \begin{tabular}{ll}
 (I-1) $q=q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime}a_{3}b_{3}q_{2}$,\\
 (I-2) $q=q_{1}a_{1}b_{1}a_{3}b_{3}q_{2}$ ($b_{1}=a_{2}$ and $a_{3}=b_{2}$),\\
-(I-3) $q=q_{1}a_{1}b_{1}b_{2}wa_{3}b_{3}q_{2}$ ($b_{1}=a_{2}$)\\
+(I-3) $q=q_{1}a_{1}b_{1}b_{2}wa_{3}b_{3}q_{2}$ ($b_{1}=a_{2}$),\\
 (I-4) $q=q_{1}a_{1}b_{1}wa_{2}b_{2}b_{3}q_{2}$ ($b_{2}=a_{3}$).
 \end{tabular}
 \smallskip
 
 \noindent
 (I-1) Case of $q=q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime}a_{3}b_{3}q_{2}$:
-Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
+Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
 \begin{align*}
 \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wa_{2}b_{2}w^{\prime}a_{3}b_{3}q_{2} \\
 \textrm{(2)}~& p_{1} \preceq q_{1}a_{1}b_{1}w & \textrm{(2')}~& p_{2} \preceq w^{\prime}a_{3}b_{3}q_{2} \\
 \textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime} & \textrm{(3')}~& p_{2} \preceq q_{2}
 \end{align*}
 
-If $|w|=|w^{\prime}|$ holds, $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are the suffix of $p_{1}$ from the above equations (2) and (3).
+If $|w|=|w^{\prime}|$ holds, $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are the suffix of $p_{1}$ from the above conditions (2) and (3).
 Then, $a_{1}b_{1}w=a_{2}b_{2}w^{\prime}$.
 Hence, $a_{1}b_{1}=a_{2}b_{2}$.
 This contracts the assumption of $a_{1} \ne a_{2}$ and $b_{1} \ne b_{2}$.
@@ -145,7 +145,7 @@ This contracts the assumption of $a_{1} \ne a_{2}$ and $b_{1} \ne b_{2}$.
 If $|w|+1=|w^{\prime}|$ holds, $wa_{2}b_{2}w^{\prime}a_{3}b_{3}$ and $w^{\prime}a_{3}b_{3}$ are the prefix of $p_{2}$.
 If there exists a constant symbol $w_{1}$ such that $w^{\prime}a_{3}b_{3}=ww_{1}a_{3}b_{3}$,
 then $b_{2}$ and $a_{3}$ are the same symbol from $wa_{2}b_{2}=ww_{1}a_{3}$.
-From the above equations (2) and (3), $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are the suffix of $p_{1}$.
+From the above conditions (2) and (3), $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are the suffix of $p_{1}$.
 Then, there exists a constant symbol $w_{2}$ such that $w^{\prime}=w_{2}w$,
 then $b_{2}$ and $a_{1}$ are the same symbol from $b_{2}w_{2}w=a_{1}b_{1}w$.
 Hence, from $b_{2}=a_{3}$, $a_{3}$ and $a_{1}$ are same symbol.
@@ -154,7 +154,7 @@ This contradicts the assumption of $a_{3} \ne a_{1}$.
 If $|w|+1 < |w^{\prime}|$, from the above (2) and (3), 
 $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are the suffix of $p_{1}$.
 If there exists a constant string $w_{1}$ ($|w_{1}|\geq 2$) such that $w^{\prime}=w_{1}w$, then $a_{2}b_{2}$ is the suffix of $w_{1}$.
-From  the above equations ($1'$) and ($2'$), 
+From  the above conditions ($1'$) and ($2'$), 
 $wa_{2}b_{2}w^{\prime}a_{3}b_{3}$ and $w^{\prime}a_{3}b_{3}$ are the prefix of $p_{2}$.
 If there exist constant strings $w_{1}$ and $w_{2}$ such that $w^{\prime} = w_{1}w=ww_{2}$ holds, then $a_{2}b_{2}$ and $a_{3}b_{3}$ are the suffix of $w_{1}$ from $|ww_{2}a_{3}b_{3}|=|wa_{2}b_{2}w_{1}|$.
 Hence, $a_{2}b_{2}=a_{3}b_{3}$.
@@ -163,7 +163,7 @@ This contradicts the assumption of $a_{2} \ne a_{3}$ and $b_{2} \ne b_{3}$.
 
 \noindent
 (I-2) Case of $q=q_{1}a_{1}b_{1}a_{3}b_{3}q_{2}$ ($b_{1}=a_{2}$ and $a_{3}=b_{2}$):
-Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
+Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
 \begin{align*}
 \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq a_{3}b_{3}q_{2} \\
 \textrm{(2)}~& p_{1} \preceq q_{1}a_{1} & \textrm{(2')}~& p_{2} \preceq b_{3}q_{2} \\
@@ -171,7 +171,7 @@ Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
 \end{align*}
 
 \noindent
-From the above equations (2) and (3), since $a_{1}b_{1}$ and $a_{1}$ are the suffix of $p_{1}$, 
+From the above conditions (2) and (3), since $a_{1}b_{1}$ and $a_{1}$ are the suffix of $p_{1}$, 
 $b_{1} = a_{1}$ holds.
 From the assumption of $b_{1}=a_{2}$, $a_{1}=a_{2}$.
 This contradicts the assumption of $a_{1}\not= a_{2}$.
@@ -179,22 +179,22 @@ This contradicts the assumption of $a_{1}\not= a_{2}$.
 
 \noindent
 (I-3) Case of $q=q_{1}a_{1}b_{1}b_{2}wa_{3}b_{3}q_{2}$ ($b_{1}=a_{2}$):
-Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
+Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
 \begin{align*}
 \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq b_{2}wa_{3}b_{3}q_{2} \\
 \textrm{(2)}~& p_{1} \preceq q_{1}a_{1} & \textrm{(2')}~& p_{2} \preceq wa_{3}b_{3}q_{2} \\
 \textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}b_{2}w & \textrm{(3')}~& p_{2} \preceq q_{2}
 \end{align*}
 %\noindent
-If $|w|=0$, that is $w$ is the empty string, then $a_{1}$ and $a_{1}b_{1}b_{2}$ are the suffix of $p_{1}$ from the above equations (2) and (3)
-and $b_{2}a_{3}b_{3}$ and $a_{3}b_{3}$ are the prefix of $p_{2}$ from the above equations (1') and (2').
+If $|w|=0$, that is $w$ is the empty string, then $a_{1}$ and $a_{1}b_{1}b_{2}$ are the suffix of $p_{1}$ from the above conditions (2) and (3)
+and $b_{2}a_{3}b_{3}$ and $a_{3}b_{3}$ are the prefix of $p_{2}$ from the above conditions (1') and (2').
 Since $b_{2}=a_{1}$ and $b_{2}a_{3}=a_{3}b_{3}$, $a_{1}=a_{3}$ holds.
 This contradicts the assumption of $a_{1}\not= a_{3}$.
 
 %\noindent
-If $|w| \ge 1$, $a_{1}$ and $a_{1}b_{1}b_{2}w$ are the suffix of $p_{1}$ from the above equations (2) and (3).
+If $|w| \ge 1$, $a_{1}$ and $a_{1}b_{1}b_{2}w$ are the suffix of $p_{1}$ from the above conditions (2) and (3).
 Hence, the last symbol of $w$ is $a_{1}$.
-Moreover, $b_{2}wa_{3}b_{3}$ and $wa_{3}b_{3}$ are the prefix of $p_{2}$ from the above equations (1') and (2').
+Moreover, $b_{2}wa_{3}b_{3}$ and $wa_{3}b_{3}$ are the prefix of $p_{2}$ from the above conditions (1') and (2').
 Hence, the last symbol of $w$ is $a_{3}$.
 Therefore, $a_{1}=a_{3}$ holds.
 This contradicts the assumption of $a_{1} \ne a_{3}$.
@@ -202,7 +202,7 @@ This contradicts the assumption of $a_{1} \ne a_{3}$.
 
 \noindent
 (I-4) Case of $q=q_{1}a_{1}b_{1}wa_{2}b_{2}b_{3}q_{2}$ ($b_{2}=a_{3}$):
-Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
+Assume that the following six conditons (1),(2),(3),(1'),(2'),(3') are hold.
 \begin{align*}
 \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wa_{2}b_{2}b_{3}q_{2} \\
 \textrm{(2)}~& p_{1} \preceq q_{1}a_{1}b_{1}w & \textrm{(2')}~& p_{2} \preceq b_{3}q_{2} \\
@@ -211,14 +211,14 @@ Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
 \noindent
 
 %\noindent
-If $|w|=0$, that is $w$ is the empty string, then $a_{1}b_{1}$ and $a_{1}b_{1}a_{2}$ are the suffix of $p_{1}$ from the above equations (2) and (3)
-and $a_{2}b_{2}b_{3}$ and $b_{3}$ are the prefix of $p_{2}$ from the above equations (1') and (2').
+If $|w|=0$, that is $w$ is the empty string, then $a_{1}b_{1}$ and $a_{1}b_{1}a_{2}$ are the suffix of $p_{1}$ from the above conditions (2) and (3)
+and $a_{2}b_{2}b_{3}$ and $b_{3}$ are the prefix of $p_{2}$ from the above conditions (1') and (2').
 Since $b_{1}=a_{2}$ and $a_{2}=b_{3}$, then $b_{1}=b_{3}$ holds.
 This contradicts the assumption of $b_{1}\not= b_{3}$.
 
 %\noindent
-If $|w| \ge 1$, since $a_{1}b_{1}w$ and $a_{1}b_{1}wa_{2}$ are the suffix of $p_{1}$ from the above equations (2) and (3), the first symbol of $w$ is $b_{1}$.
-Moreover, since $wa_{2}b_{2}b_{3}$ and $b_{3}$ are the prefix of $p_{2}$ from the above equations (1') and (2'),
+If $|w| \ge 1$, since $a_{1}b_{1}w$ and $a_{1}b_{1}wa_{2}$ are the suffix of $p_{1}$ from the above conditions (2) and (3), the first symbol of $w$ is $b_{1}$.
+Moreover, since $wa_{2}b_{2}b_{3}$ and $b_{3}$ are the prefix of $p_{2}$ from the above conditions (1') and (2'),
 the first symbol of $w$ is $b_{3}$.
 Therefore, $b_{1}=b_{3}$ holds.
 This contradicts the assumption of $b_{1} \ne b_{3}$.
@@ -229,7 +229,7 @@ This contradicts the assumption of $b_{1} \ne b_{3}$.
 \noindent
 (II) Case of (iv), that is, $q$ contains $a_{1}b_{1}, a_{2}b_{2}$ and $a_{3}y$:
 Let $A,B,C$ be distinct regular patterns in $\{a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}$ such that $q=q_{1}AwBw^{\prime}Cq_{2}$.
-Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
+Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
 \begin{align*}
 \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wBw^{\prime}Cq_{2} \\
 \textrm{(2)}~& p_{1} \preceq q_{1}Aw & \textrm{(2')}~& p_{2} \preceq w^{\prime}Cq_{2} \\
@@ -237,21 +237,21 @@ Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
 \end{align*}
 
 %\noindent
-If $|w|=|w^{\prime}|$, then $Aw$ and $AwBw^{\prime}$ are the suffix of $p_{1}$ from the above equations (2) and (3).
+If $|w|=|w^{\prime}|$, then $Aw$ and $AwBw^{\prime}$ are the suffix of $p_{1}$ from the above conditions (2) and (3).
 Hence, $Aw=Bw^{\prime}$ holds.
 This contradicts the assumption of $A \ne B$.
 
 %\noindent
 If $|w| \ne |w^{\prime}|$, then we consider the two cases $A=a_{3}y$ and $B=a_{3}y$:
 In the case of $A=a_{3}y$, without losing generality, we assume that $B=a_{1}b_{1}$ and $C=a_{2}b_{2}$. 
-Then, there exist regular patterns $p_{1}^{\prime}, p_{1}^{\prime\prime}$ such that $p_{1}=p_{1}^{\prime}p_{1}^{\prime\prime}$, $p_{1}^{\prime} \preceq q_{1}a_{3}$ and $p_{1}^{\prime\prime} \preceq yw$ from the above equation (2).
-Moreover, from the above equation (1'), $p=p_{1}xp_{2}=p_{1}^{\prime}p_{1}^{\prime\prime}xp_{2}\preceq q_{1}a_{3}p_{1}^{\prime\prime}xwa_{1}b_{1}w^{\prime}a_{2}b_{2}q_{2}=
+Then, there exist regular patterns $p_{1}^{\prime}, p_{1}^{\prime\prime}$ such that $p_{1}=p_{1}^{\prime}p_{1}^{\prime\prime}$, $p_{1}^{\prime} \preceq q_{1}a_{3}$ and $p_{1}^{\prime\prime} \preceq yw$ from the above condition (2).
+Moreover, from the above condition (1'), $p=p_{1}xp_{2}=p_{1}^{\prime}p_{1}^{\prime\prime}xp_{2}\preceq q_{1}a_{3}p_{1}^{\prime\prime}xwa_{1}b_{1}w^{\prime}a_{2}b_{2}q_{2}=
 q_{1}a_{3}ywa_{1}b_{1}w^{\prime}a_{2}b_{2}q_{2}\{ y := p_{1}^{\prime\prime}x \}=q \{ y := p_{1}^{\prime\prime}x \}$ holds.
 Hence, $p \preceq q$ holds.
 This contracts the assumption.
 In the case of $B=a_{3}y$, without losing generality, we assume that $A=a_{1}b_{1}$ and $C=a_{2}b_{2}$.
 Let $q_{1}^{\prime}=q_{1}a_{1}b_{1}$, $q_{2}^{\prime}=wa_{3}yw^{\prime}$, and $q_{3}^{\prime}=a_{2}b_{2}q_{2}$ such that $q_{2}^{\prime}$ contains at most one variable symbol.
-Then, the above equations (3) and (1') are represented by $p_{1} \preceq q_{1}^{\prime}q_{2}^{\prime}$ and $p_{2} \preceq q_{2}^{\prime}q_{3}^{\prime}$, respectively.
+Then, the above conditions (3) and (1') are represented by $p_{1} \preceq q_{1}^{\prime}q_{2}^{\prime}$ and $p_{2} \preceq q_{2}^{\prime}q_{3}^{\prime}$, respectively.
 From Theorem \ref{Sato1:Lemma9}, $p \preceq q$ holds.
 This contradicts the assumption.
 
@@ -275,7 +275,7 @@ Next, in the case of $C=a_{3}y$, we consider the following five cases (II-1)--(I
 
 \noindent
 (II-1) Case of $q=q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime}a_{3}yq_{2}$:
-Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
+Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
 \begin{align*}
 \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wa_{2}b_{2}w^{\prime}a_{3}yq_{2} \\
 \textrm{(2)}~& p_{1} \preceq q_{1}a_{1}b_{1}w & \textrm{(2')}~& p_{2} \preceq w^{\prime}a_{3}yq_{2} \\
@@ -283,34 +283,34 @@ Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
 \end{align*}
 
 %\noindent
-If $|w|+1=|w^{\prime}|$, then $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are the suffix of $p_{1}$ from the above equations (2) and (3).
+If $|w|+1=|w^{\prime}|$, then $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are the suffix of $p_{1}$ from the above conditions (2) and (3).
 Since there exists a constant symbol $w_{1}$ such that $w^{\prime}=w_{1}w$ and $b_{2}w_{1}w=a_{1}b_{1}w$ hold,
 then $b_{2}=a_{1}$.
-Moreover, $wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are the prefix of $p_{2}$ from the above equations (1') and (2').
+Moreover, $wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are the prefix of $p_{2}$ from the above conditions (1') and (2').
 Since there exists a constant symbol $w_{2}$ such that $w^{\prime}=ww_{2}$ and $wa_{2}b_{2}=ww_{2}a_{3}$ hold,
 then $b_{2}=a_{3}$.
 Thus, $a_{1} = a_{3}$ holds.
 This contradicts the assumption of $a_{1} \ne a_{3}$.
 
 %\noindent
-If $|w|+1 < |w^{\prime}|$, then $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are the suffix of $p_{1}$ from the above equations (2) and (3).
+If $|w|+1 < |w^{\prime}|$, then $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are the suffix of $p_{1}$ from the above conditions (2) and (3).
 Hence, $a_{1}b_{1}$ is the suffix of $w_{\prime}$.
-Moreover, $wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are the prefix of $p_{2}$ from the above equations (1') and (2').
+Moreover, $wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are the prefix of $p_{2}$ from the above conditions (1') and (2').
 Hence, there exist constant symbols $w_{1}$ and $w_{2}$ such that $w^{\prime}=w_{1}w$, $w^{\prime}=ww_{2}$ and $|a_{2}b_{2}w_{1}|=|w_{2}a_{3}|+1$ hold.
 Thus, since the second-to-last symbol of $w_{1}$ is $a_{3}$, $a_{1}=a_{3}$ holds.
 This contradicts the assumption of $a_{1} \ne a_{3}$.
 
 %\noindent
-If $|w^{\prime}|+1=|w|$, then $wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are the prefix of $p_{2}$ from the above equations (1') and (2').
+If $|w^{\prime}|+1=|w|$, then $wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are the prefix of $p_{2}$ from the above conditions (1') and (2').
 Since there exists a constant symbol $w_{1}$ such that $w=w^{\prime}w_{1}$ and $w^{\prime}w_{1}=w^{\prime}a_{3}$ hold, then $w_{1}=a_{3}$ holds.
-Moreover, since $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are the suffix of $p_{1}$ from the above equations (2) and (3), 
+Moreover, since $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are the suffix of $p_{1}$ from the above conditions (2) and (3), 
 there exists a constant symbol $w_{2}$ such that $w=w_{2}w^{\prime}$ and $|w_{1}a_{2}b_{2}w^{\prime}|=|a_{1}b_{1}w_{2}w^{\prime}|$ hold.
 Hence, $w_{1}=a_{1}$ holds.
 Thus, $a_{1}=a_{3}$ holds.
 This contradicts the assumption of $a_{1}\ne a_{3}$.
 
 %\noindent
-If $|w| > |w^{\prime}|+1$, since $wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are the prefix of $p_{2}$ from the above equations (1') and (2'),
+If $|w| > |w^{\prime}|+1$, since $wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are the prefix of $p_{2}$ from the above conditions (1') and (2'),
 there exists a constant string $w_{1}$ such that $w=w^{\prime}w_{1}$ and the first symbol of $w_{1}$ is $a_{3}$.
 Moreover, since there exists a constant string $w_{2}$ such that $w=w_{2}w^{\prime}$ and $|w_{1}a_{2}b_{2}|=|a_{1}b_{1}w_{2}|$ hold,
 $a_{1}b_{1}$ is the prefix of $w_{1}$.
@@ -320,7 +320,7 @@ This contradicts the assumption of $a_{1} \ne a_{3}$.
 
 \noindent
 (II-2) Case of $q=q_{1}a_{1}b_{1}b_{2}yq_{2}$ ($a_{2}=b_{1}$ and $a_{3}=b_{2}$):
-Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
+Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
 \begin{align*}
 \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq b_{2}yq_{2} \\
 \textrm{(2)}~& p_{1} \preceq q_{1}a_{1} & \textrm{(2')}~& p_{2} \preceq yq_{2} \\
@@ -328,7 +328,7 @@ Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
 \end{align*}
 
 \noindent
-From the above equations (2) and (3), $a_{1}b_{1}$ and $a_{1}$ are the suffix of $p_{1}$.
+From the above conditions (2) and (3), $a_{1}b_{1}$ and $a_{1}$ are the suffix of $p_{1}$.
 Hence, $b_{1}=a_{1}$ holds.
 Thus, from the assumption of $b_{1}=a_{2}$, $a_{1}=a_{2}$ holds.
 This contradicts the assumption of $a_{1} \ne a_{2}$.
@@ -336,7 +336,7 @@ This contradicts the assumption of $a_{1} \ne a_{2}$.
 
 \noindent
 (II-3) Case of $q=q_{1}a_{1}b_{1}b_{2}wa_{3}yq_{2}$ ($b_{1}=a_{2}$):
-Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
+Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
 \begin{align*}
 \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq b_{2}wa_{3}yq_{2} \\
 \textrm{(2)}~& p_{1} \preceq q_{1}a_{1} & \textrm{(2')}~& p_{2} \preceq wa_{3}yq_{2} \\
@@ -344,16 +344,16 @@ Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
 \end{align*}
 
 %\noindent
-If $|w|=0$, that is $w$ is the empty string, then $a_{1}$ and $a_{1}b_{1}b_{2}$ are the suffix of $p_{1}$ from the above equations (2) and (3).
+If $|w|=0$, that is $w$ is the empty string, then $a_{1}$ and $a_{1}b_{1}b_{2}$ are the suffix of $p_{1}$ from the above conditions (2) and (3).
 Hence, $a_{1}=b_{2}$ holds.
 Moreover, since $b_{2}a_{3}$ and $a_{3}$ is the prefix of $p_{2}$, $b_{2}=a_{3}$ holds.
 Thus, $a_{1}=a_{3}$ holds.
 This contradicts the assumption of $a_{1} \ne a_{3}$.
 
 %\noindent
-If $|w| \ge 1$, since $a_{1}$ and $a_{1}b_{1}b_{2}w$ are the suffix of $p_{1}$ from the above equations (2) and (3),
+If $|w| \ge 1$, since $a_{1}$ and $a_{1}b_{1}b_{2}w$ are the suffix of $p_{1}$ from the above conditions (2) and (3),
 the last symbol of $w$ is $a_{1}$.
-Moreover, since $b_{2}wa_{3}$ and $wa_{3}$ are the prefix of $p_{2}$ from the above equations (1') and (2'),
+Moreover, since $b_{2}wa_{3}$ and $wa_{3}$ are the prefix of $p_{2}$ from the above conditions (1') and (2'),
 the last symbol of $w$ is $a_{3}$.
 Thus, $a_{1}=a_{3}$ holds.
 This contradicts the assumption of $a_{1} \ne a_{3}$.
@@ -361,7 +361,7 @@ This contradicts the assumption of $a_{1} \ne a_{3}$.
 
 \noindent
 (II-4) Case of $q=q_{1}a_{3}ywa_{1}b_{1}b_{2}q_{2}$ ($b_{1}=a_{2}$):
-Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
+Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
 \begin{align*}
 \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wa_{1}b_{1}b_{2}q_{2} \\
 \textrm{(2)}~& p_{1} \preceq q_{1}a_{3}yw & \textrm{(2')}~& p_{2} \preceq b_{2}q_{2} \\
@@ -369,21 +369,21 @@ Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
 \end{align*}
 
 \noindent
-From the above equation (3), there exist regular patterns $p_{1}^{\prime}$と$p_{1}^{\prime\prime}$ such that $p_{1}=p_{1}^{\prime}p_{1}^{\prime\prime}$，$p_{1}^{\prime} \preceq q_{1}a_{3}$ and $p_{1}^{\prime\prime} \preceq ywa_{1}$ hold.
+From the above condition (3), there exist regular patterns $p_{1}^{\prime}$と$p_{1}^{\prime\prime}$ such that $p_{1}=p_{1}^{\prime}p_{1}^{\prime\prime}$，$p_{1}^{\prime} \preceq q_{1}a_{3}$ and $p_{1}^{\prime\prime} \preceq ywa_{1}$ hold.
 Hence, since $p=p_{1}xp_{2}=p_{1}^{\prime}p_{1}^{\prime\prime}xp_{2}\preceq q_{1}a_{3}p_{1}^{\prime\prime}xwa_{1}b_{1}b_{2}q_{2}=q_{1}a_{3}yxwa_{1}b_{1}b_{2}q_{2}\{ y := p_{1}^{\prime\prime}x \}=q \{ y := p_{1}^{\prime\prime}x \}$, then $p \preceq q$ holds.
 Thus, this contradicts the assumption.
 \smallskip
 
 \noindent
 (II-5) Case of $q=q_{1}a_{1}b_{1}ywa_{2}b_{2}q_{2}$ ($b_{1}=a_{3}$):
-Assume that the following six equations (1),(2),(3),(1'),(2'),(3') are hold.
+Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
 \begin{align*}
 \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq ywa_{2}b_{2}q_{2} \\
 \textrm{(2)}~& p_{1} \preceq q_{1}a_{1} & \textrm{(2')}~& p_{2} \preceq wa_{2}b_{2}q_{2} \\
 \textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}yw & \textrm{(3')}~& p_{2} \preceq q_{2}
 \end{align*}
 \noindent
-There exist regular patterns $q_{1}^{\prime}, q_{2}^{\prime}, q_{3}^{\prime}$ such that $q_{1}^{\prime}=q_{1}a_{1}b_{1}$, $q_{2}^{\prime}=yw$, $q_{3}^{\prime}=a_{2}b_{2}q_{2}$, from the above equation (3) $p_{1} \preceq q_{1}^{\prime}q_{2}^{\prime}$ and from the above equation (1') $p_{2} \preceq q_{2}^{\prime}q_{3}^{\prime}$ hold.
+There exist regular patterns $q_{1}^{\prime}, q_{2}^{\prime}, q_{3}^{\prime}$ such that $q_{1}^{\prime}=q_{1}a_{1}b_{1}$, $q_{2}^{\prime}=yw$, $q_{3}^{\prime}=a_{2}b_{2}q_{2}$, from the above condition (3) $p_{1} \preceq q_{1}^{\prime}q_{2}^{\prime}$ and from the above condition (1') $p_{2} \preceq q_{2}^{\prime}q_{3}^{\prime}$ hold.
 Moreover, since $q_{2}^{\prime}$ contains the variable symbol $y$, $p\preceq q$ holds from Theorem \ref{Sato1:Lemma9}.
 This contradicts the assumption.
 \end{proof}
