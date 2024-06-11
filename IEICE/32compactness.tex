@@ -374,7 +374,7 @@ If for any string $w \in \Sigma^{\ast}$ with $|w|=2$, there exists a regular pat
 \end{lem}
 
 \begin{proof}
-For any $q \in Q$, we define the sets $A(q), B(q) \subset \Sigma$ as follows:
+For any $q \in Q$, we define the sets $A(q), B(q) \subseteq \Sigma$ as follows:
 \begin{align*}
   A(q) & = \{ a \in \Sigma \mid p \{ x:=ay \} \preceq q,\ y\in X\},\\ 
   B(q) & = \{ b \in \Sigma \mid p \{ x:=yb \} \preceq q,\ y\in X\}.
@@ -440,8 +440,9 @@ We partition $Q$ into the following subsets:
   Q^{(\cdot,\cdot)} & = (Q\setminus \sigma_{A}^{-1}(\varnothing)) \cap (Q\setminus \sigma_{B}^{-1}(\varnothing)).
 \end{align*}
 From the condition of this lemma, for any string $w \in \Sigma^{\ast}$ with $|w|=2$, there exists a regular pattern $q_{w} \in Q$ such that $p \{ x:=w \} \preceq q_{w}$ holds.
+In particular, for $w=a'b'\in A'\cdot B'$, we must have $q_{w} \in Q$ that satisfies that $p \{ x:=w \} \preceq q_{w}$ (Fig.~\ref{fig:lem8totalreg}).
 It is easy to see that if $w \in (A\cdot B) \cup (A'\cdot B) \cup (A\cdot B')$, there exists a regular pattern $q_{w} \in Q^{(\varnothing,\cdot)} \cup Q^{(\cdot,\varnothing)} \cup Q^{(\cdot,\cdot)}$ such that $p \{ x:=w \} \preceq q_{w}$ holds.
-For $w=a'b'\in A'\cdot B'$, we must have $q_{w} \in Q$ that satisfies that $p \{ x:=w \} \preceq q_{w}$ (Fig.~\ref{fig:lem8totalreg}).
+%For $w=a'b'\in A'\cdot B'$, we must have $q_{w} \in Q$ that satisfies that $p \{ x:=w \} \preceq q_{w}$ (Fig.~\ref{fig:lem8totalreg}).
 The following two claims are proven from Lemmas~\ref{変数2つ} and \ref{補題14}:
 
 \smallskip
@@ -473,7 +474,7 @@ Under \textit{Assumption} 1, each $q\in Q^{(\varnothing,\varnothing)}$ has at mo
 Then, by \textit{Claim} 1,
 \begin{align*}
   {\cal L}_{1} &\leq 4\sharp Q^{(\varnothing,\varnothing)} + 2\sharp Q^{(\varnothing,\cdot)} + 2\sharp Q^{(\cdot,\varnothing)}\\
-  & = 2(Q^{(\varnothing,\varnothing)} + \sharp Q^{(\varnothing,\cdot)}) + 2(Q^{(\varnothing,\varnothing)} + \sharp Q^{(\cdot,\varnothing)})\\
+  & = 2(\sharp Q^{(\varnothing,\varnothing)} + \sharp Q^{(\varnothing,\cdot)}) + 2(\sharp Q^{(\varnothing,\varnothing)} + \sharp Q^{(\cdot,\varnothing)})\\
   & = 2\sharp \sigma_{A}^{-1}(\varnothing) + 2\sharp \sigma_{B}^{-1}(\varnothing)\\
   & = 2(k - \sharp A - \ell_{A}) + 2(k - \sharp B - \ell_{B})\\
   & = 2(\sharp A' - \ell_{A} - 2) + 2(\sharp B' - \ell_{B} - 2)\\
@@ -497,7 +498,7 @@ If there exist $q \in Q_{1}^{(\cdot,\cdot)}$ and a string $a'b' \in A'\cdot B'$ 
 
 \noindent
 \textit{Proof of Claim} 4.
-Suppose that both $\sigma_{A}(q) \in B$ and $\sigma_{B}(q) \in A$ hold. Then, since $a' \not\in \{\sigma_{A}(q), \sigma_{B}(q)\} \subset A\cap B$ and $b' \not\in \{\sigma_{A}(q), \sigma_{B}(q)\} \subset A\cap B$, from Lemma~\ref{追加部分}, $p\{x:=xy\} \preceq q$ holds.
+Suppose that both $\sigma_{A}(q) \in B$ and $\sigma_{B}(q) \in A$ hold. Then, since $a' \not\in \{\sigma_{A}(q), \sigma_{B}(q)\} \subseteq A\cap B$ and $b' \not\in \{\sigma_{A}(q), \sigma_{B}(q)\} \subseteq A\cap B$, from Lemma~\ref{追加部分}, $p\{x:=xy\} \preceq q$ holds.
 Suppose that $\sigma_{A}(q)\in B$ and $\sigma_{B}(q)\in A'$.
 If $a' = \sigma_{B}(q)$, since $a' \in B$, $a' \not= b'$ holds.
 Since $\sigma_{A}(q)\in B$, $b' \not= \sigma_{A}(q)$ holds.
