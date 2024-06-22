@@ -1,29 +1,39 @@
 \section{Preliminaries}
 
 % Preliminaries
-Let $\Sigma$ be a nonempty finite set of constant symbols and
-$X$ an infinite set of variable symbols such that $\Sigma \cap X = \emptyset$.
+Let $\Sigma$ be a non-empty finite set of constant symbols.
+Let $X$ be an infinite set of variable symbols such that $\Sigma \cap X = \emptyset$ holds.
+Then, a \textit{string} on $\Sigma \cup X$ is a sequence of symbols in $\Sigma \cup X$.
+Particularly, the string having no symbol is called the \textit{empty string} and is denoted by $\varepsilon$.
+We denote by $(\Sigma \cup X)^{\ast}$ the set of all strings on $\Sigma \cup X$ 
+and by $(\Sigma \cup X)^{+}$ the set of all strings on $\Sigma\cup X$ except $\varepsilon$, i.e., $(\Sigma \cup X)^{+}=(\Sigma \cup X)^{\ast}\setminus \{\varepsilon\}$.
 %$\Sigma$を有限アルファベットとし，$X$を$\Sigma \cap X=\emptyset$を満たす可算無限集合とする．
 %$\Sigma$と$X$の要素をそれぞれ定数記号と変数記号という．
 %%$\Sigma$を少なくとも2つの記号を含む定数記号の有限集合, $X$を変数記号からなる可算集合とする．
 %%ただし, $\Sigma \cap X = \phi$とする．
-A pattern is a finite string which consists of symbols in $\Sigma \cup X$.
-Note that the empty string $\varepsilon$ is a regular pattern in this paper.
+%A \textit{pattern} on $\Sigma \cup X$ is a finite string which consists of symbols in $\Sigma \cup X$.
+A \textit{pattern} on $\Sigma \cup X$ is a string in $(\Sigma \cup X)^{\ast}$.
+Note that the empty string $\varepsilon$ is a pattern on $\Sigma \cup X$.
 A pattern $p$ is said to be \textit{regular} if each variable symbol appears
-at most one in $p$.
-It is clear that $\varepsilon$ is a regular pattern.
+at most once in $p$.
+%Note that the empty string $\varepsilon$ is a regular pattern in this paper.
+%It is clear that $\varepsilon$ is a regular pattern.
 The length of $p$, denote by $|p|$, is the number of symbols in $p$.
+%The regular pattern whose length is 0 is called the \textit{empty pattern} and denoted by $\varepsilon$.
+Note that $|\varepsilon|=0$ holds.
 %$\Sigma$と$X$の記号から成る記号列を\textbf{パターン}という．
 %また，各変数記号が高々1回しか現れないパターンを\textbf{正規パターン}という．
 %パターン$p$の長さ，つまりその記号列の長さを$|p|$で表す．
-The set of all patterns and regular patterns are denoted by $\Pat$ and $\RPat$ respectively.
+The set of all patterns and regular patterns are denoted by $\Pat$ and $\RPat$, respectively.
 %Note that the empty string $\varepsilon$ is a regular pattern in this paper.
 %Thus, we have $\Pat = (\Sigma \cup X)^{\ast}$ and $\RPat = (\Sigma \cup X)^{+}$.
 %すべてのパターンの集合とすべての正規パターンの集合をそれぞれ$\Pat$と$\RPat$で表す．便宜上，空記号列$\varepsilon$もパターンとしていることに注意する．
 %つまり，$\Pat=(\Sigma \cup X)^{*}$であり，$\Pat\setminus\{\varepsilon\}=(\Sigma \cup X)^{+}$である．
 %集合$A$の要素数を$\sharp A$で表す．
 For a set $S$, we denote by $\sharp S$ the number of elements in $S$.
-In this paper, we assume $\sharp \Sigma \geq 2$.
+%(*いらないかも*) In this paper, we assume $\sharp \Sigma \geq 2$.
+For two strings $p,q$, we denote by $p\cdot q$ the string obtained from $p$ and $q$ by concatenating $q$ after $p$.
+Note that for a string $p$ and the empty string $\varepsilon$, $p\cdot \varepsilon = \varepsilon \cdot p = p$.
 %本稿では，$\sharp \Sigma \geq 2$と仮定する．
 %$\Pat$の要素を$p,q,\ldots,p_1,p_2,\ldots,$で表す．
 %
@@ -38,14 +48,15 @@ In this paper, we assume $\sharp \Sigma \geq 2$.
 %%全てのパターンの族を$\mathcal{P}$と表し, パターン$p$の文字列の長さを$|p|$で表す．
 %
 A substitution $\theta$ is a mapping from $(\Sigma \cup X)^{\ast}$ to $(\Sigma \cup X)^{\ast}$ such that
-(1) $\theta$ is a homomorphism with respect to string concatenation, that is, for patterns $\pi_{1}$ and $\pi_{2}$,
-$\theta(\pi_{1} \cdot \pi_{2}) = \theta(\pi_{1}) \cdot \theta(\pi_{2})$ holds,
-(2) for each constant symbol $a \in \Sigma$, $\theta(a) = a$ holds,
-and (3) for each variable symbol $x \in X$, $|\theta(x)| \geq 1$ holds.
-Let $x_{1},\ldots,x_{n}$ are variable symbols and $p_{1},\ldots,p_{n}$ nonempty patterns.
-We denote by $\{x_{1}:=p_{1},\ldots,x_{n}:=p_{n}\}$ a substitution that replaces each variable symbol $x_{i}$
-with a nonempty pattern $p_{i}$ for $i \in \{1,\ldots,n\}$ respectively.
-We denote by $\theta(\pi)$ a new pattern obtained by $\theta$ for a pattern $\pi$.
+(1) $\theta$ is a homomorphism with respect to string concatenation, that is, for patterns $p$ and $q$,
+$\theta(p \cdot q) = \theta(p) \cdot \theta(q)$ holds,
+(2) $\theta(\varepsilon)=\varepsilon$ holds,
+(3) for each constant symbol $a \in \Sigma$, $\theta(a) = a$ holds,
+and (4) for each variable symbol $x \in X$, $|\theta(x)| \geq 1$ holds.
+Let $x_{1},\ldots,x_{n}$ are variable symbols and $p_{1},\ldots,p_{n}$ non-empty patterns.
+The notation $\{x_{1}:=p_{1},\ldots,x_{n}:=p_{n}\}$ denotes a substitution that replaces each variable symbol $x_{i}$
+with a non-empty pattern $p_{i}$ for $i \in \{1,\ldots,n\}$.
+For a pattern $p$ and a substitution $\theta=\{x_{1}:=p_{1},\ldots,x_{n}:=p_{n}\}$, we denote by $p\theta$ a new pattern obtained from $p$ by replacing variable symbols $x_1,\ldots,x_n$ in $p$ with patterns $p_1,\ldots,p_n$ according to $\theta$, respectively.
 %
 %与えられたパターンの変数記号に長さ1以上のパターンを代入することで，別のパターンを生成することができる．
 %ただし，同じ変数記号には同じパターンを代入し，空記号列$\varepsilon$は代入しないこととする．
@@ -55,7 +66,7 @@ We denote by $\theta(\pi)$ a new pattern obtained by $\theta$ for a pattern $\pi
 %%\textbf{代入}\bm{$\theta$}とは,全ての定数をそれ自身に移すパターンからパターンへの準同型写像をいう．
 %%代入$\theta$によるパターン$q$の像を$q \theta$で表す．
 For a pattern $p$ and $q$,
-$q$ is a \textit{generalization} of $p$, or $p$ is an \textit{instance} of $q$, denoted by $p \preceq q$,
+the pattern $q$ is a \textit{generalization} of $p$, or $p$ is an \textit{instance} of $q$, denoted by $p \preceq q$,
 if there exists a substitution $\theta$ such that $p = q\theta$.
 We say that $p$ is equal to $q$, denoted by $p \equiv q$, if $p \preceq q$ and $p \succeq q$.
 %For a pattern $p$, the \textit{pattern language} of $p$, denoted by $L(p)$, is the set of all strings $w$ in $\Sigma^{+}$
@@ -69,7 +80,7 @@ We say that $p$ is equal to $q$, denoted by $p \equiv q$, if $p \preceq q$ and $
 %
 For a pattern $p$, the \textit{pattern language} of $p$, denoted by $L(p)$, is the set $\{w \in \Sigma^{\ast} \mid w \preceq p\}$.
 In particular, if $p$ is a regular pattern, we say that $L(p)$ is a \textit{regular pattern language}.
-The set of all pattern languages and regular patterns languages are denoted by $\PatL$ and $\RPatL$ respectively.
+The set of all pattern languages and regular patterns languages are denoted by $\PatL$ and $\RPatL$, respectively.
 For patterns $p$ and $q$, it is clear that $L(p) = L(q)$ if $p \equiv q$, and $L(p) \subseteq L(q)$ if $p \preceq q$.
 % In general, it is not valid that 
 %Note that $L(\varepsilon) = \emptyset$.
@@ -105,14 +116,14 @@ Note that $L(\varepsilon) = \{\varepsilon\}$.
 %\end{lem}
 %%\end{comment}
 Next, we consider unions of pattern languages. % or regular pattern languages.
-The class of all nonempty finite subsets of $\Pat$ is denoted by $\Patplus$, that is,
+The class of all non-empty finite subsets of $\Pat$ is denoted by $\Patplus$, that is,
 $\Patplus = \{P \subseteq \Pat \mid 0 < \sharp P < \infty\}$.
-For a positive integer $k$, the class of nonempty sets consisting of at most $k$ patterns, that is,
+For a positive integer $k$, the class of non-empty sets consisting of at most $k$ patterns, that is,
 $\Patkei = \{P \subseteq \Pat \mid \sharp P = k\}$.
 We denote by $\PatLkei$ the class of unions of at most $k$ pattern languages,
 that is, $\PatLkei = \{L(P) \mid P \in \Patkei\}$,
 where $L(P) = \cup_{p \in P}L(p)$.
-In a similar way, we also define $\RPatplus$, $\RPatkei$ and $\RPatLkei$ respectively.
+In a similar way, we also define $\RPatplus$, $\RPatkei$ and $\RPatLkei$.
 %%次にパターン言語の有限和を考える．
 %$\Pat$の空でない有限部分集合の集合を$\Patplus$で，
 %高々$k~(k\geq 1)$個のパターンから成る$\Pat$の部分集合$\{P\in \Patplus \mid \sharp P \leq k\}$を$\Pat^{k}$で表す．
