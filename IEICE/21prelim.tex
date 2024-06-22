@@ -55,9 +55,9 @@ We denote by $\theta(\pi)$ a new pattern obtained by $\theta$ for a pattern $\pi
 %%\textbf{代入}\bm{$\theta$}とは,全ての定数をそれ自身に移すパターンからパターンへの準同型写像をいう．
 %%代入$\theta$によるパターン$q$の像を$q \theta$で表す．
 For a pattern $p$ and $q$,
-$q$ is a \textit{generalization} of $p$, or $p$ is an \textit{instance} of $q$, denoted by $p \preceq p$,
-if there exists a substitution $\theta$ sudh that $p = q\theta$.
-We say that $p$ is equal to $q$, denoted by $p \equiv q$, if $p \preceq q$ and $p \succeq p$.
+$q$ is a \textit{generalization} of $p$, or $p$ is an \textit{instance} of $q$, denoted by $p \preceq q$,
+if there exists a substitution $\theta$ such that $p = q\theta$.
+We say that $p$ is equal to $q$, denoted by $p \equiv q$, if $p \preceq q$ and $p \succeq q$.
 %For a pattern $p$, the \textit{pattern language} of $p$, denoted by $L(p)$, is the set of all strings $w$ in $\Sigma^{+}$
 %such that $w$ is obtained from $p$ by replacing all variable symbols in $p$ with nonempty constant symbols, that is,
 %such that $w$ is obtained from $p$ by replacing all variable symbols in $p$ with nonempty constant symbols, that is,
@@ -108,7 +108,7 @@ Next, we consider unions of pattern languages. % or regular pattern languages.
 The class of all nonempty finite subsets of $\Pat$ is denoted by $\Patplus$, that is,
 $\Patplus = \{P \subseteq \Pat \mid 0 < \sharp P < \infty\}$.
 For a positive integer $k$, the class of nonempty sets consisting of at most $k$ patterns, that is,
-$\Patkei = \{P \subseteq \Pat \mid 0 < \sharp P \leq k\}$.
+$\Patkei = \{P \subseteq \Pat \mid \sharp P = k\}$.
 We denote by $\PatLkei$ the class of unions of at most $k$ pattern languages,
 that is, $\PatLkei = \{L(P) \mid P \in \Patkei\}$,
 where $L(P) = \cup_{p \in P}L(p)$.
