@@ -1,12 +1,12 @@
 \begin{summary}
 A regular pattern is a string consisting of constant symbols and distinct variable symbols.
 The language $L(p)$ of a regular pattern $p$ is the set of all constant strings obtained by replacing all variable symbols in the regular pattern $p$ with constant strings.
-For sets of regular patterns $P$ and $Q$ which are in the set $\RPat^{k}$ of all at most $k$ regular patterns, we write  $P \sqsubseteq Q$ if for any regular pattern $p \in P$ there exits a regular pattern  $q \in Q$ that is a generalization of $p$.
-$\RPatkei$ denotes the set of all at most $k~(k\geq 2)$ regular patterns.
-Sato et al.(1998) showed that the finite set of symbol strings $S_2(P)$  s a characteristic set of $L(P)=\bigcup_{p\in P}L(p)$, where $S_2(P)$ is obtained by substituting symbol strings of at most length 2 from $P\in \RPatkei$.
-Sato et al.(1998) also showed that $\RPatkei$  has compactness with respect to the inclusion relation, if the number of constant symbols is greater than or equal to $2k-1$.
+$\RPatkei$ denotes the class of all sets consisting at most $k~(k\geq 2)$ regular patterns.
+For sets of regular patterns $P$ and $Q$ which are in the class $\RPat^{k}$, we write  $P \sqsubseteq Q$ if for any regular pattern $p \in P$ there exits a regular pattern  $q \in Q$ that is a generalization of $p$.
+In 1998 Sato et al.\cite{Sato1} showed that the finite set $S_2(P)$ of symbol strings is a characteristic set of $L(P)=\bigcup_{p\in P}L(p)$, where $S_2(P)$ is obtained from $P\in \RPatkei$ by substituting variables with symbol strings of at most length 2. 
+Sato et al.\cite{Sato1} also showed that $\RPatkei$  has compactness with respect to containment, if the number of constant symbols is greater than or equal to $2k-1$.
 In this paper, we check the results of Sato et al.\cite{Sato1} and correct the error of the proof of their theorem.
-Further, we consider the set $\NAVRP$ of all non-adjacent regular patterns, which are regular patterns without adjacent variables, and show that the set of $S_2(P)$ obtained from a set $P$ in the set $\NAVRPkei$ of at most $k~(k\ge 1)$ non-adjacent regular patterns is a characteristic set of $L(P)$.
-Further we show that $\NAVRPkei$  has compactness with respect to the inclusion relation if the number of constant symbols is greater than or equal to $k+2$.
-Thus we show that we can design an efficient learning algorithm of a finite union of pattern languages of non-adjacent regular patterns for the number of constant symbols which is smaller than that of regular patterns.
+Further, we consider the set $\NAVRP$ of all non-adjacent regular patterns, which are regular patterns without adjacent variables, and show that the set $S_2(P)$ obtained from a set $P$ in the class $\NAVRPkei$ of at most $k~(k\ge 1)$ non-adjacent regular patterns is a characteristic set of $L(P)$.
+Further we show that $\NAVRPkei$  has compactness with respect to containment if the number of constant symbols is greater than or equal to $k+2$.
+Thus we show that we can design an efficient learning algorithm of a finite union of pattern languages of non-adjacent regular patterns with the number of constant symbols which is smaller than the case of regular patterns.
 \end{summary}
