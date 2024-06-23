@@ -32,7 +32,9 @@ The set of all patterns and regular patterns are denoted by $\Pat$ and $\RPat$, 
 %集合$A$の要素数を$\sharp A$で表す．
 For a set $S$, we denote by $\sharp S$ the number of elements in $S$.
 %(*いらないかも*) In this paper, we assume $\sharp \Sigma \geq 2$.
-For two strings $p,q$, we denote by $p\cdot q$ the string obtained from $p$ and $q$ by concatenating $q$ after $p$.
+Let $p,q$ be strings.
+If $p$ and $q$ are equal as strings, we denote it by $p=q$.
+We denote by $p\cdot q$ the string obtained from $p$ and $q$ by concatenating $q$ after $p$.
 Note that for a string $p$ and the empty string $\varepsilon$, $p\cdot \varepsilon = \varepsilon \cdot p = p$.
 %本稿では，$\sharp \Sigma \geq 2$と仮定する．
 %$\Pat$の要素を$p,q,\ldots,p_1,p_2,\ldots,$で表す．
@@ -48,8 +50,7 @@ Note that for a string $p$ and the empty string $\varepsilon$, $p\cdot \varepsil
 %%全てのパターンの族を$\mathcal{P}$と表し, パターン$p$の文字列の長さを$|p|$で表す．
 %
 A substitution $\theta$ is a mapping from $(\Sigma \cup X)^{\ast}$ to $(\Sigma \cup X)^{\ast}$ such that
-(1) $\theta$ is a homomorphism with respect to string concatenation, that is, for patterns $p$ and $q$,
-$\theta(p \cdot q) = \theta(p) \cdot \theta(q)$ holds,
+(1) $\theta$ is a homomorphism with respect to string concatenation, i.e., $\theta(p \cdot q) = \theta(p) \cdot \theta(q)$ holds for patterns $p$ and $q$,
 (2) $\theta(\varepsilon)=\varepsilon$ holds,
 (3) for each constant symbol $a \in \Sigma$, $\theta(a) = a$ holds,
 and (4) for each variable symbol $x \in X$, $|\theta(x)| \geq 1$ holds.
@@ -67,8 +68,10 @@ For a pattern $p$ and a substitution $\theta=\{x_{1}:=p_{1},\ldots,x_{n}:=p_{n}\
 %%代入$\theta$によるパターン$q$の像を$q \theta$で表す．
 For a pattern $p$ and $q$,
 the pattern $q$ is a \textit{generalization} of $p$, or $p$ is an \textit{instance} of $q$, denoted by $p \preceq q$,
-if there exists a substitution $\theta$ such that $p = q\theta$.
-We say that $p$ is equal to $q$, denoted by $p \equiv q$, if $p \preceq q$ and $p \succeq q$.
+if there exists a substitution $\theta$ such that $p = q\theta$ holds.
+%We say that $p$ is equal to $q$, denoted by $p \equiv q$, if $p \preceq q$ and $p \succeq q$.
+If $p \preceq q$ and $p \succeq q$ hold, we denote it by $p \equiv q$.
+The notation $p \equiv q$ means that $p$ and $q$ are equal as strings except for variable symbols. 
 %For a pattern $p$, the \textit{pattern language} of $p$, denoted by $L(p)$, is the set of all strings $w$ in $\Sigma^{+}$
 %such that $w$ is obtained from $p$ by replacing all variable symbols in $p$ with nonempty constant symbols, that is,
 %such that $w$ is obtained from $p$ by replacing all variable symbols in $p$ with nonempty constant symbols, that is,
@@ -79,12 +82,12 @@ We say that $p$ is equal to $q$, denoted by $p \equiv q$, if $p \preceq q$ and $
 %また，$p \preceq q$かつ$q \preceq p$であるとき，$p$と$q$は等価であるといい， \bm{$p \equiv q$}で表す．
 %
 For a pattern $p$, the \textit{pattern language} of $p$, denoted by $L(p)$, is the set $\{w \in \Sigma^{\ast} \mid w \preceq p\}$.
-In particular, if $p$ is a regular pattern, we say that $L(p)$ is a \textit{regular pattern language}.
-The set of all pattern languages and regular patterns languages are denoted by $\PatL$ and $\RPatL$, respectively.
 For patterns $p$ and $q$, it is clear that $L(p) = L(q)$ if $p \equiv q$, and $L(p) \subseteq L(q)$ if $p \preceq q$.
 % In general, it is not valid that 
 %Note that $L(\varepsilon) = \emptyset$.
 Note that $L(\varepsilon) = \{\varepsilon\}$.
+In particular, if $p$ is a regular pattern, we say that $L(p)$ is a \textit{regular pattern language}.
+The set of all pattern languages and regular patterns languages are denoted by $\PatL$ and $\RPatL$, respectively.
 %パターン$p$に対し，$p$が表す言語($\Sigma^{*}$の部分集合)を，$p$に代入を施すことにより生成できる定数記号列の集合$L(p)$，つまり，
 %$L(p)=\{w\in \Sigma^{+} \mid w \preceq p\}$
 %と定義する．
@@ -116,13 +119,13 @@ Note that $L(\varepsilon) = \{\varepsilon\}$.
 %\end{lem}
 %%\end{comment}
 Next, we consider unions of pattern languages. % or regular pattern languages.
-The class of all non-empty finite subsets of $\Pat$ is denoted by $\Patplus$, that is,
+The class of all non-empty finite subsets of $\Pat$ is denoted by $\Patplus$, i.e.,
 $\Patplus = \{P \subseteq \Pat \mid 0 < \sharp P < \infty\}$.
-For a positive integer $k$, the class of non-empty sets consisting of at most $k$ patterns, that is,
-$\Patkei = \{P \subseteq \Pat \mid \sharp P = k\}$.
+For a positive integer $k~(k>0)$, the class of non-empty sets consisting of at most $k$ patterns, i.e.,
+$\Patkei = \{P \subseteq \Pat \mid 0< \sharp P \leq k\}$.
 We denote by $\PatLkei$ the class of unions of at most $k$ pattern languages,
-that is, $\PatLkei = \{L(P) \mid P \in \Patkei\}$,
-where $L(P) = \cup_{p \in P}L(p)$.
+i.e., $\PatLkei = \{L(P) \mid P \in \Patkei\}$,
+where $L(P) = \bigcup_{p \in P}L(p)$.
 In a similar way, we also define $\RPatplus$, $\RPatkei$ and $\RPatLkei$.
 %%次にパターン言語の有限和を考える．
 %$\Pat$の空でない有限部分集合の集合を$\Patplus$で，
@@ -135,9 +138,9 @@ In a similar way, we also define $\RPatplus$, $\RPatkei$ and $\RPatLkei$.
 %%\begin{dfn}\label{bi}
 %
 For $P$, $Q$ in $\Patplus$,
-we denote by $P \sqsubseteq Q$ if for any $p \in \Pat$, there is a pattern $q \in Q$ such that $p \preceq q$.
+the notation $P \sqsubseteq Q$ means that for any $p \in P$ there is a pattern $q \in Q$ such that $p \preceq q$ holds.
 It is clear that $P \sqsubseteq Q$ implies $L(P) \subseteq L(Q)$.
-However, note that the converse is not valid in general.
+However, the converse is not valid in general.
 
 %$P, Q$を$\Patplus$に属するパターン集合とする．
 %このとき，任意のパターン$p \in P$に対して，あるパターン$q\in Q$が存在し，

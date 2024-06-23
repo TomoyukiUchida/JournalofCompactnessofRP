@@ -46,8 +46,8 @@ When $q=q_{1}ay_{1}wby_{2}q_{2}$ holds, the following four conditions (1), (2), 
 From the above condition (2), there exist regular patterns $p_{1}^{\prime},p_{1}^{\prime\prime}$ such that $p_{1}=p_{1}^{\prime}p_{1}^{\prime\prime}$, $p_{1}^{\prime} \preceq q_{1}a$ and $p_{1}^{\prime\prime} \preceq y_{1}w$ hold.
 Therefore, since $p=p_{1}xp_{2}=p_{1}^{\prime}p_{1}^{\prime\prime}xp_{2}$,
 if $p_{2} \preceq wby_{2}q_{2}$ holds, 
-$p\preceq q_{1}ap_{1}^{\prime\prime}xwby_{2}q_{2}=q \{ y_{1} := p_{1}^{\prime\prime}x \}$ holds.
-Otherwise, that is $p_2\preceq y'wby_{2}q_{2}$, $p\preceq q_{1}ap_{1}^{\prime\prime}xy'wby_{2}q_{2}=q \{ y_{1} := p_{1}^{\prime\prime}xy' \}$ holds.
+$p\preceq q_{1}ap_{1}^{\prime\prime}xwby_{2}q_{2}\equiv q \{ y_{1} := p_{1}^{\prime\prime}x \}$ holds.
+Otherwise $p_2\preceq y'wby_{2}q_{2}$, $p\preceq q_{1}ap_{1}^{\prime\prime}xy'wby_{2}q_{2}=q \{ y_{1} := p_{1}^{\prime\prime}xy' \}$ holds.
 Hence, $p \preceq q$ holds.
 This contradicts the assumption.
 
@@ -126,7 +126,7 @@ Hence, for the cases (i)--(iv), we will prove that $p \{ x := xy \} \preceq q$ h
 
 \smallskip
 \noindent
-(I) Cases of (i), (ii) and (iii), that is the cases that $q$ contains $a_{1}b_{1}, a_{2}b_{2}$ and $a_{3}b_{3}$:
+(I) Cases of (i), (ii) and (iii), that are the cases that $q$ contains $a_{1}b_{1}, a_{2}b_{2}$ and $a_{3}b_{3}$:
 
 %\begin{figure}
 %\centering
@@ -212,7 +212,7 @@ Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
 \end{align*}
 
 %\noindent
-If $|w|=0$, that is $w$ is the empty string, then $a_{1}$ and $a_{1}b_{1}b_{2}$ are the suffix of $p_{1}$ from the above conditions (2) and (3)
+If $|w|=0$, i.e., $w$ is the empty string, then $a_{1}$ and $a_{1}b_{1}b_{2}$ are the suffix of $p_{1}$ from the above conditions (2) and (3)
 and $b_{2}a_{3}b_{3}$ and $a_{3}b_{3}$ are the prefix of $p_{2}$ from the above conditions (1') and (2').
 Since $b_{2}=a_{1}$ and $b_{2}a_{3}=a_{3}b_{3}$, $a_{1}=a_{3}$ holds.
 This contradicts the assumption of $a_{1}\not= a_{3}$.
@@ -237,7 +237,7 @@ Assume that the following six conditons (1),(2),(3),(1'),(2'),(3') are hold.
 \noindent
 
 %\noindent
-If $|w|=0$, that is $w$ is the empty string, then $a_{1}b_{1}$ and $a_{1}b_{1}a_{2}$ are the suffix of $p_{1}$ from the above conditions (2) and (3)
+If $|w|=0$, i.e., $w$ is the empty string, then $a_{1}b_{1}$ and $a_{1}b_{1}a_{2}$ are the suffix of $p_{1}$ from the above conditions (2) and (3)
 and $a_{2}b_{2}b_{3}$ and $b_{3}$ are the prefix of $p_{2}$ from the above conditions (1') and (2').
 Since $b_{1}=a_{2}$ and $a_{2}=b_{3}$, then $b_{1}=b_{3}$ holds.
 This contradicts the assumption of $b_{1}\not= b_{3}$.
@@ -253,7 +253,7 @@ This contradicts the assumption of $b_{1} \ne b_{3}$.
 \smallskip
 
 \noindent
-(II) Case of (iv), that is, $q$ contains $a_{1}b_{1}, a_{2}b_{2}$ and $a_{3}y$:
+(II) Case of (iv) that $q$ contains $a_{1}b_{1}, a_{2}b_{2}$ and $a_{3}y$:
 Let $A,B,C$ be distinct regular patterns in $\{a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}$ such that $q=q_{1}AwBw^{\prime}Cq_{2}$.
 Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
 \begin{align*}
@@ -370,7 +370,7 @@ Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
 \end{align*}
 
 %\noindent
-If $|w|=0$, that is $w$ is the empty string, then $a_{1}$ and $a_{1}b_{1}b_{2}$ are the suffix of $p_{1}$ from the above conditions (2) and (3).
+If $|w|=0$, i.e., $w$ is the empty string, then $a_{1}$ and $a_{1}b_{1}b_{2}$ are the suffix of $p_{1}$ from the above conditions (2) and (3).
 Hence, $a_{1}=b_{2}$ holds.
 Moreover, since $b_{2}a_{3}$ and $a_{3}$ is the prefix of $p_{2}$, $b_{2}=a_{3}$ holds.
 Thus, $a_{1}=a_{3}$ holds.
