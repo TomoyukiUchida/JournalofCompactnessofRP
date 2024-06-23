@@ -121,7 +121,7 @@
   When either $|w^{\prime}|=|w^{\prime\prime}|$ or $|w^{\prime}|=|w^{\prime\prime}|+1$, Eq.~\ref{eq:claim2} is depicted as shown in Figs.~\ref{追加部分7}, \ref{追加部分8}. Trivially, these cases contradict the conditions $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$.
   %When $|w^{\prime}|=|w^{\prime\prime}|+2$, Eq.~\ref{eq:claim2} can be written as shown in Fig.~\ref{追加部分9}. This implies $w^{\prime}=w^{\prime\prime}bc=daw^{\prime\prime}$, and then contradicts \textit{Claim} 1.
   \item[(iii)] $|w^{\prime\prime}|+2 \le |w^{\prime}| \le 2|w^{\prime\prime}| - 1$:
-  On Eq.~\ref{eq:claim2}, since $|w^{\prime}daw^{\prime\prime}| = |w^{\prime\prime}bcw^{\prime}| = |w^{\prime}| + |w^{\prime\prime}| + 2$, a suffix of $w^{\prime}$ overlaps with a prefix of $w^{\prime}$ as shown in Fig.~\ref{w1+3}. I.e., there exists a constant string $u$ of length $2|w^{\prime}| - (|w^{\prime}| + |w^{\prime\prime}| + 2) = |w^{\prime}| - |w^{\prime\prime}| - 2$ such that $u$ is a prefix and a suffix of $w^{\prime}$.
+  On Eq.~\ref{eq:claim2}, since $|w^{\prime}daw^{\prime\prime}| = |w^{\prime\prime}bcw^{\prime}| = |w^{\prime}| + |w^{\prime\prime}| + 2$, a suffix of $w^{\prime}$ overlaps with a prefix of $w^{\prime}$ as shown in Fig.~\ref{w1+3}. That is, there exists a constant string $u$ of length $2|w^{\prime}| - (|w^{\prime}| + |w^{\prime\prime}| + 2) = |w^{\prime}| - |w^{\prime\prime}| - 2$ such that $u$ is a prefix and a suffix of $w^{\prime}$.
   Since $uda$ is of length $|w^{\prime}| - |w^{\prime\prime}|$, $uda$ is also a prefix of $w^{\prime}$. Similarly, $bcu$ is also a suffix of $w^{\prime}$.
   Since $|w^{\prime}| - (|uda| + |bcu|) = 2|w^{\prime\prime}| - |w^{\prime}| \ge 1$, there exist a constant string $v$ of length $2|w^{\prime\prime}| - |w^{\prime}|$ such that $w^{\prime} = udavbcu$ holds. Since $w^{\prime\prime}$ is a suffix of $w^{\prime}$ and $|vbcu| = (2|w^{\prime\prime}| - |w^{\prime}|) + 2 + (|w^{\prime}| - |w^{\prime\prime}| - 2) = |w^{\prime\prime}|$, we have $w^{\prime\prime} = vbcu$. Similarly, we have $w^{\prime\prime} = udav$. Thus, we have a new equation $vbcu = udav$.
   Since $|u| = |w^{\prime}| - |w^{\prime\prime}| - 2 \leq |w^{\prime\prime}| - 3 < |w^{\prime\prime}|$ and $|v| = 2|w^{\prime\prime}| - |w^{\prime}| < |w^{\prime}|$, i.e., $|u| + |v| < |w^{\prime}| + |w^{\prime\prime}|$ holds, it contradicts the induction hypothesis on $|u| + |v|$. Therefore, the claim holds.
@@ -395,7 +395,7 @@ We define the functions $\sigma_{A}: Q \rightarrow \Sigma \cup \{\varnothing\}$ 
     \varnothing & \textrm{if } B(q) = \emptyset.
   \end{cases}
 \end{align*}
-The inverse functions of $\sigma_{A}$ and $\sigma_{B}$ are denoted by $\sigma_{A}^{-1}$ and $\sigma_{B}^{-1}$, respectively. I.e., for $a,b \in \Sigma \cup \{\varnothing\}$, let $\sigma_{A}^{-1}(a) = \{q \in Q \mid \sigma_{A}(q) = a\}$ and $\sigma_{B}^{-1}(b) = \{q \in Q \mid \sigma_{B}(q) = b\}$. 
+The inverse functions of $\sigma_{A}$ and $\sigma_{B}$ are denoted by $\sigma_{A}^{-1}$ and $\sigma_{B}^{-1}$, respectively. That is, for $a,b \in \Sigma \cup \{\varnothing\}$, let $\sigma_{A}^{-1}(a) = \{q \in Q \mid \sigma_{A}(q) = a\}$ and $\sigma_{B}^{-1}(b) = \{q \in Q \mid \sigma_{B}(q) = b\}$. 
 We give an example in Fig.~\ref{fig:lem8eachreg}.
 
 $A$ and $B$ denotes the following subsets of $\Sigma$:
@@ -502,7 +502,7 @@ Suppose that both $\sigma_{A}(q) \in B$ and $\sigma_{B}(q) \in A$ hold. Then, si
 Suppose that $\sigma_{A}(q)\in B$ and $\sigma_{B}(q)\in A'$.
 If $a' = \sigma_{B}(q)$, since $a' \in B$, $a' \not= b'$ holds.
 Since $\sigma_{A}(q)\in B$, $b' \not= \sigma_{A}(q)$ holds.
-I.e., $a' = \sigma_{B}(q)$, $a' \not= \sigma_{A}(q)$, and $b' \not\in \{\sigma_{A}(q), \sigma_{B}(q)\}$ hold.
+That is, $a' = \sigma_{B}(q)$, $a' \not= \sigma_{A}(q)$, and $b' \not\in \{\sigma_{A}(q), \sigma_{B}(q)\}$ hold.
 Therefore, from Lemma~\ref{片方}, $p\{x:=xy\} \preceq q$ holds.
 If $a' \not= \sigma_{B}(q)$, since $b' \not= \sigma_{A}(q)$, from Lemma~\ref{追加部分}, $p\{x:=xy\} \preceq q$ holds.
 Similarly, the case that $\sigma_{A}(q)\in B'$ and $\sigma_{B}(q)\in A$ is proven. (\textit{End of Proof of Claim})
