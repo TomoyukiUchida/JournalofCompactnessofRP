@@ -1,0 +1,84 @@
+%\section{Compactness for Sets of Regular Patterns}
+
+In this section, we define the compactness of sets of regular patterns, formally.
+Then, if $\sharp\Sigma \ge 2k-1$ holds, 
+we show that 
+$\RPat^{k}$ has compactness with respect to the containment.
+
+\begin{dfn}\label{def:compactness}
+%Let $\mathcal{C}$ be a subset of $\RPatplus$ (resp. $\Patplus$). 
+%For any regular pattern $p \in \RPat$ (resp. $\Pat$) and any set $Q \in \mathcal{C}$,
+Let $\mathcal{C}$ be a subset of $\RPatplus$. 
+For any regular pattern $p \in \RPat$ and any set $Q \in \mathcal{C}$,
+%the set $\mathcal{C}$ said to have {\it compactness with respect to containment}
+%For any regular pattern $p \in \RPat$ and any set $Q \in \RPatplus$,
+the set $\mathcal{C}$ said to have {\it compactness with respect to containment}
+if there exists a regular pattern $q \in Q$ such that $L(p) \subseteq L(q)$ holds if $L(p) \subseteq L(Q)$ holds.
+\end{dfn}
+
+\begin{lem}[Sato et al.\cite{Sato1}]\label{two_variables}%\label{変数2つ}
+Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and $p,q$ regular patterns on $\Sigma$.
+Let $D$ be the set of either $(\mathrm{i})$ or $(\mathrm{ii})$ of regular patterns on $\Sigma$ below: Assume that $a \not= b$ and that a variable symbol $y$ does not appear in $p$.
+\begin{align*}
+(\mathrm{i})~~\{ ay, by \}~~~(\mathrm{ii})~\{ ya, yb \}.
+\end{align*}
+Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.
+\end{lem}
+\begin{proof}
+It is obvious if no variable symbol appears in $p$. 
+Therefore, let $p=p_{1}xp_{2}$, where $p_{1}, p_{2}$ are regular patterns and $x$ is a variable symbol.
+We assume that $p \{ x := xy \} \not \preceq q$ in order to derive the contradictions.
+
+\noindent
+(i) 
+Case of $D=\{ ay, by \} \ (a \ne b)$:
+
+\noindent
+Since $p \{ x := xy \} \not \preceq q$, $p_{1}ayp_{2}\preceq q$ and $p_{1}byp_{2}\preceq q$, 
+there exist regular patterns $q_{1},q_{2}$ on $\Sigma$ such that $q=q_{1}ay_{1}wby_{2}q_{2}$ or $q=q_{1}by_{1}way_{2}q_{2}$ for some variable symbols $y_{1},y_{2}~(y_{1} \not= y_{2})$ and a constant string $w$ ($|w|\geq 0$) from Theorem \ref{Sato1:Lemma9}.
+When $q=q_{1}ay_{1}wby_{2}q_{2}$ holds, the following four conditions (1), (2), (1'), (2') holds:
+\begin{align*}
+\textrm{(1)} & ~p_{1} \preceq q_{1}\\
+\textrm{(1')} & ~p_{2} \preceq wby_{2}q_{2} \mbox{ or } p_{2} \preceq y^{\prime}wby_{2}q_{2} ~~(y^{\prime} \in X)\\
+\textrm{(2)} & ~p_{1} \preceq q_{1}ay_{1}w\\
+\textrm{(2')} & ~p_{2} \preceq q_{2} \mbox{ or } p_{2} \preceq y^{\prime\prime}q_{2} ~(y^{\prime\prime} \in X)
+\end{align*}
+From the above condition (2), there exist regular patterns $p_{1}^{\prime},p_{1}^{\prime\prime}$ such that $p_{1}=p_{1}^{\prime}p_{1}^{\prime\prime}$, $p_{1}^{\prime} \preceq q_{1}a$ and $p_{1}^{\prime\prime} \preceq y_{1}w$ hold.
+Therefore, since $p=p_{1}xp_{2}=p_{1}^{\prime}p_{1}^{\prime\prime}xp_{2}$,
+if $p_{2} \preceq wby_{2}q_{2}$ holds, 
+$p\preceq q_{1}ap_{1}^{\prime\prime}xwby_{2}q_{2}\equiv q \{ y_{1} := p_{1}^{\prime\prime}x \}$ holds.
+Otherwise $p_2\preceq y'wby_{2}q_{2}$, $p\preceq q_{1}ap_{1}^{\prime\prime}xy'wby_{2}q_{2}=q \{ y_{1} := p_{1}^{\prime\prime}xy' \}$ holds.
+Hence, $p \preceq q$ holds.
+This contradicts the assumption.
+
+\noindent
+(ii) 
+Case of $D=\{ ya, yb \} \ (a \ne b)$:
+By reversing the strings of $p$ and $q$, we can prove that $p \{ x := xy \} \preceq q$ holds, in a similar way as (i).
+\end{proof}
+
+In Lemma 14 (ii) of \cite{Sato1}, 
+they stated that, when $\sharp \Sigma \geq 3$, for regular patterns $p,q$, if $p\{x:=r\}\preceq q$ for any $r\in D$, then $p\{x:=xy\} \preceq q$ holds, where 
+$D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$ $(a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\le i,j\le 3))$.
+Unfortunately, there exists the following counterexample of Lemma 14 (ii) of \cite{Sato1}.
+\begin{ex}\label{CounterExample_Lemma14}
+Assume that $a_1 = b_3$ and $a_2 = b_1$ hold.
+Let $p=cb_3a_1b_1b_3x^{\prime}a_1b_1b_3a_2c$ and $q=xb_3a_1b_1b_3a_2y$.
+We have $p\{x^{\prime}:=a_1b_1\}\preceq q$, $p\{x^{\prime}:=a_2b_2\} \preceq q$, and $p\{x^{\prime}:=a_3b_3\} \preceq q$, 
+because 
+$p\{x^{\prime}:=a_1b_1\}=q\{x:=cb_3a_1b_1,y:=b_3a_2c\}$,
+$p\{x^{\prime}:=a_2b_2\}=q\{x:=c,y:=b_2a_1b_1b_3a_2c\}$,
+and $p\{x^{\prime}:=a_3b_3\}=q\{x:=cb_3a_1b_1b_3a_3,y:=c\}$ hold.
+%$p\{x^{\prime}:=a_1b_1\}=cb_3a_1b_1b_3a_1b_1a_1b_1b_3a_2c=q\{x:=cb_3a_1b_1,y:=b_3a_2c\}$,
+%$p\{x^{\prime}:=a_2b_2\}=cb_3a_1b_1b_3a_1b_1a_1b_1b_3a_2c=q\{x:=c,y:=b_2a_1b_1b_3a_2c\}$,
+%and $p\{x^{\prime}:=a_3b_3\}=cb_3a_1b_1b_3a_1b_1a_1b_1b_3a_2c=q\{x:=cb_3a_1b_1b_3a_3,y:=c\}$ hold.
+However, it is clear that $p\{x:=xy\} \not\preceq q$ holds.
+\end{ex}
+
+\noindent
+The following Lemma \ref{lem:4pairsofSymbols} corrects completely mistakes of Lemma 14 (ii) of \cite{Sato1}.
+
+\begin{lem}\label{lem:4pairsofSymbols}\label{補題14}
+Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$, $p,q$ regular patterns on $\Sigma$.
+Let $D$ be the following set of constant strings on $\Sigma$ whose lengths are just 2:
+

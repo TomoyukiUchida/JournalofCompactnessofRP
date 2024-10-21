@@ -1,0 +1,137 @@
+%%%%%
+% 補題11の次の文章を使って省略した部分のオリジナル証明
+% 「$q$に$a_{1}b_{1}, a_{2}b_{2}, yb_{4}$が現れる場合は，記号列$p$と$q$を逆順にすることにより，$q$に$a_{1}b_{1}, a_{2}b_{2}, a_{3}y$が現れる場合の証明から導かれる．」
+%%%%%
+
+\noindent \textbf{(I\hspace{-.1em}I\hspace{-.1em}I)} \textbf{\bm{$q$に$a_{1}b_{1}, a_{2}b_{2}, yb_{4}$が含まれている場合}} \\
+\noindent $[1]$ $q=q_{1}AwBw^{\prime}Cq_{2}$ 
+\medskip
+
+\indent$(1) \ p_{1} \preceq q_{1}, \ (1^{\prime}) \ p_{2} \preceq wBw^{\prime}Cq_{2}$ \\
+\indent $(2) \ p_{1} \preceq q_{1}Aw, \ (2^{\prime}) \ p_{2} \preceq w^{\prime}Cq_{2}$ \\
+\indent $(3) \ p_{1} \preceq q_{1}AwBw^{\prime}, \ (3^{\prime}) \ p_{2} \preceq q_{2}$ \\	
+\indent $\{ A, B, C \} = \{ a_{1}b_{1}, a_{2}b_{2}, yb_{4} \}$ \\
+\indent ($q_{1}, q_{2}$は正規パターン, $w, w^{\prime} \in \Sigma^{\ast}$) 	
+\medskip
+
+$|w|=|w^{\prime}|$のとき,(2),(3)より, $p_{1}$の接尾辞は$Aw, AwBw^{\prime}$である．
+よって, $Aw=Bw^{\prime}$となり, $A \ne B$であることに矛盾する．\\
+\indent 次に, $|w| \ne |w^{\prime}|$の場合を考える．\\
+\indent $B=yb_{4}$の場合($A=a_{1}b_{1}, C=a_{2}b_{2}$), $q_{1}^{\prime}=q_{1}a_{1}b_{1}, q_{2}^{\prime}=wyb_{4}w^{\prime}, q_{3}^{\prime}=a_{2}b_{2}q_{2}$とおくと,$(3) \  p_{1} \preceq q_{1}^{\prime}q_{2}^{\prime}, (1^{\prime}) \ p_{2} \preceq q_{2}^{\prime}q_{3}^{\prime}, q_{2}^{\prime}$は変数が含まれる．
+補題\ref{補題9}より, $p \preceq q$となり, $p \{ x := xy \} \preceq q$である．
+これは,仮定に矛盾する．
+
+$C=yb_{4}$の場合($A=a_{1}b_{1}, B=a_{2}b_{2}$),(2$^{\prime}$)は$p_{2} \preceq w^{\prime}yb_{4}q_{2}$である．
+$p_{2}^{\prime} \preceq w^{\prime}y, p_{2}^{\prime\prime} \preceq b_{4}q_{2}$を満たすような$p_{2}=p_{2}^{\prime}p_{2}^{\prime\prime}$を考えると,
+
+$p=p_{1}xp_{2}=p_{1}xp_{2}^{\prime}p_{2}^{\prime\prime}=p_{1}(xp_{2}^{\prime})p_{2}^{\prime\prime}$
+
+\noindent と表せる．これは次のように$p=q \theta$となる．
+
+$q \{ y := xp_{2}^{\prime} \} = q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime}(xp_{2}^{\prime})b_{4}q_{2}$
+
+よって, $p \preceq q$となり, $p \{ x:=xy \} \preceq q$である．
+これは,仮定に矛盾する．
+
+よって,$B$または$C$が$yb_{4}$の場合,仮定に矛盾するため, $A=yb_{4}$となる場合のみ考える．$A=yb_{4}$のとき,条件は以下のようになる．
+\medskip
+
+\noindent $[1]$ $q=q_{1}yb_{4}wa_{1}b_{1}w^{\prime}a_{2}b_{2}q_{2}$ 
+\medskip
+
+\indent$(1) \ p_{1} \preceq q_{1}, \ (1^{\prime}) \ p_{2} \preceq wa_{1}b_{1}w^{\prime}a_{2}b_{2}q_{2}$ \\
+\indent $(2) \ p_{1} \preceq q_{1}yb_{4}w, \ (2^{\prime}) \ p_{2} \preceq w^{\prime}a_{2}b_{2}q_{2}$ \\
+\indent $(3) \ p_{1} \preceq q_{1}yb_{4}wa_{1}b_{1}w^{\prime}, \ (3^{\prime}) \ p_{2} \preceq q_{2}$ 
+\medskip
+
+$|w|+1 \le |w^{\prime}|$のとき,(2),(3)より, $p_{1}$の接尾辞は$b_{4}w, b_{4}wa_{1}b_{1}w^{\prime}$である．$w^{\prime}=w_{1}w$とおくと, $b_{4}wa_{1}b_{1}w^{\prime}=b_{4}wa_{1}b_{1}w_{1}w$となる．よって, $w_{1}$の接尾辞は$b_{4}$となる．
+(1$^{\prime}$),(2$^{\prime}$)より, $p_{2}$の接頭辞は$wa_{1}b_{1}w^{\prime}a_{2}b_{2}, w^{\prime}a_{2}b_{2}$である．	
+$w^{\prime}=w_{1}w$とおくと, $wa_{1}b_{1}w^{\prime}a_{2}b_{2}=wa_{1}b_{1}w_{1}wa_{2}b_{2}$,$w^{\prime}=ww_{2}$とおくと, $w^{\prime}a_{2}b_{2}=ww_{2}a_{2}b_{2}$となる．
+$|wa_{1}b_{1}w_{1}|=|ww_{2}a_{2}b_{2}|$より, $w_{1}$の接尾辞は$b_{2}$となる．
+よって, $w_{1}$の接尾辞は$b_{2}=b_{4}$となる．
+これは, $b_{i} \ne b_{j}$($i \ne j$)であることに矛盾する．
+
+$|w| = |w^{\prime}|+1$のとき,(1$^{\prime}$),(2$^{\prime}$)より, $p_{2}$の接頭辞は$wa_{1}b_{1}w^{\prime}a_{2}b_{2}, w^{\prime}a_{2}b_{2}$である．
+$w=w^{\prime}w_{1}$とおくと, $wa_{1}b_{1}w^{\prime}a_{2}b_{2}=w^{\prime}w_{1}a_{1}b_{1}w^{\prime}a_{2}b_{2}$となる．$w_{1}a_{2}=a_{2}b_{2}$より, $a_{1}=b_{2}$となる．
+(2),(3)より, $p_{1}$の接尾辞は$b_{4}w, b_{4}wa_{1}b_{1}w^{\prime}$である．
+$w=w^{\prime}w_{1}$とおくと, $b_{4}wa_{1}b_{1}w^{\prime}=b_{4}w^{\prime}w_{1}a_{1}b_{1}w^{\prime}$,$w=w_{2}w^{\prime}$とおくと, $b_{4}w=b_{4}w_{2}w^{\prime}$となる．
+$a_{1}b_{1}=b_{4}w_{2}$より, $a_{1}=b_{4}$となる．
+よって, $b_{2}=b_{4}$となる．
+これは, $b_{i} \ne b_{j}$($i \ne j$)であることに矛盾する．
+
+$|w| > |w^{\prime}|+1$のとき,(1$^{\prime}$),(2$^{\prime}$)より, $p_{2}$の接頭辞は$wa_{1}b_{1}w^{\prime}a_{2}b_{2}, w^{\prime}a_{2}b_{2}$である．
+$w=w^{\prime}w_{1}$とおくと, $wa_{1}b_{1}w^{\prime}a_{2}b_{2}=w^{\prime}w_{1}a_{1}b_{1}w^{\prime}a_{2}b_{2}$となる．$|w_{1}| \ge 2$より, $w_{1}$の接頭辞は$a_{2}b_{2}$となる．
+(2),(3)より, $p_{1}$の接尾辞は$b_{4}w, b_{4}wa_{1}b_{1}w^{\prime}$である．
+$w=w^{\prime}w_{1}$とおくと, $b_{4}wa_{1}b_{1}w^{\prime}=b_{4}w^{\prime}w_{1}a_{1}b_{1}w^{\prime}$,$w=w_{2}w^{\prime}$とおくと, $b_{4}w=b_{4}w_{2}w^{\prime}$となる．
+$|w_{1}a_{1}b_{1}|=|b_{4}w_{2}|+1$より, $w_{1}$の最初から2文字目は$b_{4}$となる．
+これは, $b_{i} \ne b_{j}$($i \ne j$)であることに矛盾する．
+\medskip
+
+\noindent $[2]$ $q=q_{1}yb_{4}wa_{1}b_{1}b_{2}q_{2}$ ($b_{1}=a_{2}$)
+\medskip
+
+\indent$(1) \ p_{1} \preceq q_{1}, \ (1^{\prime}) \ p_{2} \preceq wa_{1}b_{1}b_{2}q_{2}$ \\
+\indent $(2) \ p_{1} \preceq q_{1}yb_{4}w, \ (2^{\prime}) \ p_{2} \preceq b_{2}q_{2}$ \\
+\indent $(3) \ p_{1} \preceq q_{1}yb_{4}wa_{1}, \ (3^{\prime}) \ p_{2} \preceq q_{2}$\\
+\indent ($q_{1}, q_{2}$は正規パターン, $w \in \Sigma^{\ast}$) 
+\medskip
+
+$w= \varepsilon$のとき,(2),(3)より, $p_{1}$の接尾辞は$b_{4}, b_{4}a_{1}$,(1$^{\prime}$),(2$^{\prime}$)より, $p_{2}$の接頭辞は$a_{1}b_{1}b_{2}, b_{2}$である．
+$b_{4}=a_{1}, a_{1}=b_{2}$より, $b_{2}=b_{4}$となる．
+これは, $b_{i} \ne b_{j}$($i \ne j$)であることに矛盾する．
+
+$|w| \ge 1$のとき,(2),(3)より, $p_{1}$の接尾辞は$b_{4}w, b_{4}wa_{1}$である．
+$wa_{1}=b_{4}w$より, $w$の接頭辞は$b_{4}$となる．
+(1$^{\prime}$),(2$^{\prime}$)より, $p_{2}$の接頭辞は$wa_{1}b_{1}b_{2}, b_{2}$である．
+このとき, $w$の接頭辞は$b_{2}$となる．
+したがって, $w$の接頭辞は$b_{4}=b_{2}$となる．
+これは, $b_{i} \ne b_{j}$($i \ne j$)であることに矛盾する．
+\medskip
+
+\noindent $[3]$ $q=q_{1}a_{1}b_{1}b_{2}wyb_{4}q_{2}$ ($b_{1}=a_{2}$)
+\medskip
+
+\indent$(1) \ p_{1} \preceq q_{1}, \ (1^{\prime}) \ p_{2} \preceq b_{2}wyb_{4}q_{2}$ \\
+\indent $(2) \ p_{1} \preceq q_{1}a_{1}, \ (2^{\prime}) \ p_{2} \preceq wyb_{4}q_{2}$ \\
+\indent $(3) \ p_{1} \preceq q_{1}a_{1}b_{1}b_{2}w, \ (3^{\prime}) \ p_{2} \preceq q_{2}$ \\
+\indent ($q_{1}, q_{2}$は正規パターン, $w \in \Sigma^{\ast}$)
+\medskip
+
+$p_{2}^{\prime} \preceq b_{2}w^{\prime}y, p_{2}^{\prime\prime} \preceq b_{4}q_{2}$を満たすような$p_{2}=p_{2}^{\prime}p_{2}^{\prime\prime}$を考えると,
+
+$p=p_{1}xp_{2}=p_{1}xp_{2}^{\prime}p_{2}^{\prime\prime}=p_{1}(xp_{2}^{\prime})p_{2}^{\prime\prime}$
+
+\noindent と表せる．これは以下のように$p=q \theta$となる．
+
+$q \{ y := xp_{2}^{\prime} \} = q_{1}a_{1}b_{1}b_{2}w(xp_{2}^{\prime})b_{4}q_{2}$
+
+よって, $p \preceq q$となる．したがって, $p \{ x:=xy \} \preceq q$であり,
+仮定に矛盾する．
+\medskip
+
+\noindent $[4]$ $q=q_{1}a_{1}b_{1}wyb_{4}b_{2}q_{2}$ ($b_{4}=a_{2}$)
+\medskip
+
+\indent$(1) \ p_{1} \preceq q_{1}, \ (1^{\prime}) \ p_{2} \preceq wyb_{4}b_{2}q_{2}$ \\
+\indent $(2) \ p_{1} \preceq q_{1}a_{1}b_{1}w, \ (2^{\prime}) \ p_{2} \preceq b_{2}q_{2}$ \\
+\indent $(3) \ p_{1} \preceq q_{1}a_{1}b_{1}wy, \ (3^{\prime}) \ p_{2} \preceq q_{2}$\\ 
+\indent ($q_{1}, q_{2}$は正規パターン, $w \in \Sigma^{\ast}$)
+\medskip
+
+$q_{1}^{\prime} = q_{1}a_{1}b_{1}, q_{2}^{\prime} = wy, q_{3}^{\prime} = b_{4}b_{2}q_{2}$とおくと, $(3) \ p_{1} \preceq q_{1}^{\prime}q_{2}^{\prime}, (1^{\prime}) \ p_{2} \preceq q_{2}^{\prime}q_{3}^{\prime}, q_{2}$は変数が含まれる．
+補題\ref{補題9}より, $p \preceq q$となる．よって, $p \{ x:=xy \} \preceq q$であり,
+仮定に矛盾する． 
+\medskip
+
+\noindent $[5]$ $q=q_{1}yb_{4}b_{1}b_{2}q_{2}$ ($b_{4}=a_{1}, b_{1}=a_{2}$)
+\medskip
+
+\indent$(1) \ p_{1} \preceq q_{1}, \ (1^{\prime}) \ p_{2} \preceq b_{1}b_{2}q_{2}$ \\
+\indent $(2) \ p_{1} \preceq q_{1}y, \ (2^{\prime}) \ p_{2} \preceq b_{2}q_{2}$ \\
+\indent $(3) \ p_{1} \preceq q_{1}yb_{4}, \ (3^{\prime}) \ p_{2} \preceq q_{2}$ \\
+\indent ($q_{1}, q_{2}$は正規パターン, $w \in \Sigma^{\ast}$)
+\medskip
+
+(1$^{\prime}$),(2$^{\prime}$)より, $p_{2}$の接頭辞は$b_{1}b_{2}, b_{2}$である．
+よって, $b_{1}=b_{2}$となり, $b_{i} \ne b_{j}$($i \ne j$)であることに矛盾する．
+

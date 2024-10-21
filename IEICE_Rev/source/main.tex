@@ -1,0 +1,126 @@
+\newif\ifkokyuroku\kokyurokufalse
+
+%%%%%%%%%%%%%%%
+% 講究録原稿の場合は次の一行を有効にする
+%\kokyurokutrue
+
+\ifkokyuroku
+\documentclass[11pt,a4paper]{jarticle}
+\else
+\documentclass[10pt,a4paper,twocolumn]{jarticle}
+\fi
+
+%%%%%%%%%
+% タイトル
+\title{変数が隣接しない正規パターンにより \\ 定義される言語の有限和に対するコンパクト性}
+%%%%%%%%%
+
+\ifkokyuroku
+\usepackage{authblk}
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\renewcommand\Authsep{\qquad}
+\renewcommand\Authand{\qquad}
+\renewcommand\Authands{\qquad}
+
+%%%%%%%%%
+% 講究録用（著者情報）
+\author[1]{著者 あ    author A}
+\author[2]{著者 い    author asdf B}
+\author[1]{著者 う  author asdf C}
+\author[1]{\\著者 え    author D}
+\author[2]{著者 お    author asdf E}
+
+\affil[1]{
+ ABC大学大学院DEF学研究科 \authorcr
+ Graduate School of DEF, ABC University
+}
+\affil[2]{
+ GHI大学JKL学部 \authorcr
+ Department of JKL, GHI University
+}
+% end of 講究録用
+%%%%%%%%%
+
+\setlength{\topmargin}{-0.3cm}
+\setlength{\textheight}{23cm}
+\setlength{\oddsidemargin}{0.5cm}
+\setlength{\textwidth}{15.0cm}
+
+\else
+
+%%%%%%%%%
+% 予稿用（講演番号と著者情報）
+\def\kouenbangou{3S} %数字を自分の講演番号に書き換えて下さい．
+\author{
+	\begin{tabular}[t]{lll}
+	武田 直人\thanks{広島市立大学大学院情報科学研究科知能工学専攻 \\ \ \ \ \ \ (mh67011@e.hiroshima-cu.ac.jp)}  & 		内田 智之 \footnotemark[1]  & 	正代 隆義\thanks{福岡工業大学情報工学部情報工学科}\\
+		松本 哲志\thanks{東海大学理学部情報数理学科} &		鈴木 祐介\footnotemark[1] & 	宮原 哲浩\footnotemark[1]
+	\end{tabular}
+	%「\footnotemark[N]」で第N著者と同じマークが付きます．
+}
+% end of 予稿用
+%%%%%%%%%
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{comment}
+\usepackage{bm}
+\usepackage{multicol}
+\usepackage{amsthm}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{here} 
+\allowdisplaybreaks
+
+\input{localenv.sty}
+
+\makeatletter
+\def\ps@LAheadings{
+	\def\@oddhead{}
+	\def\@evenhead{}
+	\def\@evenfoot{\hfil \kouenbangou\,--\,\thepage\hfill}
+	\def\@oddfoot{\hfil \kouenbangou\,--\,\thepage\hfil}
+}
+\def\ps@LAtitleheadings{
+	\def\@oddhead{2023年度冬のLAシンポジウム\,[\kouenbangou]\hfil}
+	\def\@evenhead{}
+	\def\@evenfoot{\hfil \kouenbangou\,--\,\thepage\hfill}
+	\def\@oddfoot{\hfil \kouenbangou\,--\,\thepage\hfil}
+}
+\makeatother
+
+\pagestyle{LAheadings}
+\fi
+
+\date{}
+
+
+
+\begin{document}
+\maketitle
+
+\ifkokyuroku
+\else
+\thispagestyle{LAtitleheadings}
+\fi
+
+\input{abst}
+
+\input{intro}
+
+\input{sec2-1}
+
+\input{sec2-2}
+
+\input{new-sec3}
+
+\input{sec4}
+
+\input{concl}
+
+\input{ack}
+
+\input{LA-summer.bib}
+
+\end{document}
