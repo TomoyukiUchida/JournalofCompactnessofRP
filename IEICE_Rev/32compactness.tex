@@ -25,7 +25,7 @@
   
   \end{enumerate}
   
-  Firstly, we show this lemma for the case (i).
+  Firstly, we will prove that for the case (i), $p \{ x := xy \} \preceq q$ holds.
 
   \smallskip
 
@@ -43,14 +43,12 @@
     & p_{1} \preceq q_{1}dy_{2}wy_{1}^{\prime} & & \\
     \textrm{(3)}~& p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime} & \textrm{(3')}~& p_{2} \preceq q_{2}
   \end{align*}
-  When $p_{2} \preceq wy_{1}aw^{\prime}bcq_{2}$ of (1') holds, let $q^{\prime}_{1}=q_{1}dy_{2},~q^{\prime}_{2}=wy_{1}aw^{\prime},~q^{\prime}_{3}=bcq_{2}$.
-  Since $p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}$ holds from (3), we have $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$ and $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$. 
-  When that $p_{2} \preceq y_{2}^{\prime}wy_{1}aw^{\prime}bcq_{2}$ of (1') holds,
-  let $q^{\prime}_{1}=q_{1}d,~q^{\prime}_{2}=y_{2}wy_{1}aw^{\prime},~q^{\prime}_{3}=bcq_{2}$.
-  Since $p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}$ holds from (3), we have $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$ and $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$.
+  When $p_{2} \preceq wy_{1}aw^{\prime}bcq_{2}$ of (1') holds, let $q^{\prime}_{1}=q_{1}dy_{2},~q^{\prime}_{2}=wy_{1}aw^{\prime},~q^{\prime}_{3}=bcq_{2}$. Since $p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}$ holds from (3), $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$ and $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$ hold and $q_{2}^{\prime}$ contains a variable symbol.
+  %
+  When $p_{2} \preceq y_{2}^{\prime}wy_{1}aw^{\prime}bcq_{2}$ of (1') holds, let $q^{\prime}_{1}=q_{1}d,~q^{\prime}_{2}=y_{2}wy_{1}aw^{\prime},~q^{\prime}_{3}=bcq_{2}$. Since $p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}$ holds from (3), $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$ and $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$ hold and $q_{2}^{\prime}$ contains a variable symbol.
   In both cases, from Theorem~\ref{Sato1:Lemma9}, $p \preceq q$ holds. It contradicts the assumption.
 
-  Similarly, any case of $(A, B, C) = (bc, y_{1}a, dy_{2})$, $(y_{1}a, dy_{2}, bc)$, $(bc, dy_{2}, y_{1}a)$ contradicts the assumption.
+  Similarly, we can show that any case of $(A, B, C) = (y_{1}a, dy_{2}, bc)$, $(bc, y_{1}a, dy_{2})$, $(bc, dy_{2}, y_{1}a)$ contradicts the assumption.
   %
   Therefore, we have $B \not\in \{y_{1}a, dy_{2}\}$. (\textit{End of Proof of Claim})
 
@@ -62,7 +60,7 @@
   \smallskip
   \noindent
   \textit{Proof of Claim} 2.
-  From \textit{Claim} 1, we have $B=bc$. If $(A, B, C) = (dy_{2}, bc, y_{1}a)$ holds, the following conditions hold: for $y_{1}^{\prime},y_{2}^{\prime}\in X$,
+  From \textit{Claim} 1, we have $B=bc$. Suppose that $(A, B, C) = (dy_{2}, bc, y_{1}a)$ holds. Then, the following conditions hold: for $y_{1}^{\prime},y_{2}^{\prime}\in X$,
   \begin{align*}
   \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wbcw^{\prime}y_{1}aq_{2}, \mbox{ or}\\
   & & & p_{2} \preceq y_{2}^{\prime}wbcw^{\prime}y_{1}aq_{2}\\
@@ -70,23 +68,27 @@
   \textrm{(3)}~& p_{1} \preceq q_{1}dy_{2}wbcw^{\prime}, \mbox{ or} & \textrm{(3')}~& p_{2} \preceq q_{2}\\
   & p_{1} \preceq q_{1}dy_{2}wbcw^{\prime}y_{1}^{\prime}& &
   \end{align*}
-  When $p_{2} \preceq y_{2}^{\prime}wbcw^{\prime}y_{1}aq_{2}$ of (1') and $p_{1} \preceq q_{1}dy_{2}wbcw^{\prime}y_{1}^{\prime}$ of (3) hold, let $q^{\prime}_{1}=q_{1}d,~q^{\prime}_{2}=y_{2}wbcw^{\prime}y_{1},~q^{\prime}_{3}=aq_{2}$.
-  Then, $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$ and $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$ hold.
-  When $p_{2} \preceq y_{2}^{\prime}wbcw^{\prime}y_{1}aq_{2}$ of (1') and $p_{1} \preceq q_{1}dy_{2}wbcw^{\prime}$ of (3) (resp. $p_{2} \preceq wbcw^{\prime}y_{1}aq_{2}$ of (1') and $p_{1} \preceq q_{1}dy_{2}wbcw^{\prime}y_{1}^{\prime}$ of (3)) hold, let $q^{\prime}_{1}=q_{1}d$, $q^{\prime}_{2}=y_{2}wbcw^{\prime}$, $q^{\prime}_{3}=y_{1}aq_{2}$ (resp. $q^{\prime}_{1}=q_{1}dy_{2}$, $q^{\prime}_{2}=wbcw^{\prime}y_{1}$, $q^{\prime}_{3}=aq_{2}$). These imply $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$ and $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$.
-  In all of the above cases, from Theorem~\ref{Sato1:Lemma9}, $p \preceq q$ holds. It contradicts the assumption.
-  
-  Thus, if $(A, B, C) = (dy_{2}, bc, y_{1}a)$ holds, $p_{2} \preceq wbcw^{\prime}y_{1}aq_{2}$ of (1') and $p_{1} \preceq q_{1}dy_{2}wbcw^{\prime}$ of (3) hold.
-  From (2), for some $p^{\prime}_{1}$ and $p^{\prime\prime}_{1}$, let $p_{1}=p^{\prime}_{1}p^{\prime\prime}_{1}$, where $p^{\prime}_{1} \preceq q_{1}d$ and $p^{\prime\prime}_{1} \preceq y_{2}w$. 
-  From $p_{2} \preceq wbcw^{\prime}y_{1}aq_{2}$ of (1'), we have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xwbcw^{\prime}y_{1}aq_{2}=q \{ y_{2}:=p^{\prime\prime}_{1}x \}$.
-  Thus, $p \{ x := xy \} \preceq q \{ y_{2}:=p^{\prime\prime}_{1}xy \}$ holds. It contradicts the assumption.
+  %
+  %When $p_{1} \preceq q_{1}dy_{2}wbcw^{\prime}y_{1}^{\prime}$ of (3) and $p_{2} \preceq y_{2}^{\prime}wbcw^{\prime}y_{1}aq_{2}$ of (1') hold, let $q^{\prime}_{1}=q_{1}d,~q^{\prime}_{2}=y_{2}wbcw^{\prime}y_{1},~q^{\prime}_{3}=aq_{2}$.
+  %
+  %When $p_{1} \preceq q_{1}dy_{2}wbcw^{\prime}$ of (3) and $p_{2} \preceq y_{2}^{\prime}wbcw^{\prime}y_{1}aq_{2}$ of (1') hold, let $q^{\prime}_{1}=q_{1}d$, $q^{\prime}_{2}=y_{2}wbcw^{\prime}$, $q^{\prime}_{3}=y_{1}aq_{2}$.
+  %
+  %When $p_{1} \preceq q_{1}dy_{2}wbcw^{\prime}y_{1}^{\prime}$ of (3) and $p_{2} \preceq wbcw^{\prime}y_{1}aq_{2}$ of (1') hold, let $q^{\prime}_{1}=q_{1}dy_{2}$, $q^{\prime}_{2}=wbcw^{\prime}y_{1}$, $q^{\prime}_{3}=aq_{2}$. 
+  %
+  %These imply $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$, $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$, and $q_{2}^{\prime}$ contains a variable symbol. In these three cases, from Theorem~\ref{Sato1:Lemma9}, $p \preceq q$ holds. It contradicts the assumption.
+  %
+  %We suppose that $p_{2} \preceq wbcw^{\prime}y_{1}aq_{2}$ of (1') hold.
+  From $p_{1} \preceq q_{1}dy_{2}w$ of (2), for some $p^{\prime}_{1}$ and $p^{\prime\prime}_{1}$, $p_{1}$ is expressed as $p^{\prime}_{1}p^{\prime\prime}_{1}$, where $p^{\prime}_{1} \preceq q_{1}d$ and $p^{\prime\prime}_{1} \preceq y_{2}w$. 
+  When $p_{2} \preceq wbcw^{\prime}y_{1}aq_{2}$ of (1'), we have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xwbcw^{\prime}y_{1}aq_{2}=q \{ y_{2}:=p^{\prime\prime}_{1}x \}$.
+  When $p_{2} \preceq y_{2}^{\prime}wbcw^{\prime}y_{1}aq_{2}$ of (1'), we have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xy_{2}^{\prime}wbcw^{\prime}y_{1}aq_{2}=q \{ y_{2}:=p^{\prime\prime}_{1}xy_{2}^{\prime} \}$.
+  Thus, $p \{ x := xy \} \preceq q \{ y_{2}:=p^{\prime\prime}_{1}xyy_{2}^{\prime} \}$ holds. It contradicts the assumption.
   %
   Therefore, we have $(A, B, C) = (y_{1}a, bc, dy_{2})$.
   (\textit{End of Proof of Claim})
 
   \smallskip
 
-  Below, we suppose that $(A, B, C) = (y_{1}a, bc, dy_{2})$ holds.
-  Let $q=q_{1}y_{1}awbcw^{\prime}dy_{2}q_{2}$, where $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$.
+  From \textit{Claim} 2, $q$ is expressed as $q_{1}y_{1}awbcw^{\prime}dy_{2}q_{2}$, where $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$.
   If $p \{ x := xy \} \not \preceq q$ holds, we have the following conditions:
   for $y_{1}^{\prime},y_{2}^{\prime}\in X$,
   \begin{align*}
@@ -94,7 +96,20 @@
     \textrm{(2)}~& p_{1} \preceq q_{1}y_{1}aw & \textrm{(2')}~& p_{2} \preceq w^{\prime}dy_{2}q_{2} \\
     \textrm{(3)}~& p_{1} \preceq q_{1}y_{1}awbcw^{\prime} & \textrm{(3')}~& p_{2} \preceq q_{2} \mbox{ or } p_{2} \preceq y_{2}^{\prime}q_{2}
   \end{align*}
-  Note that from (1') and (2'), $wbcw^{\prime}d$ and $w^{\prime}d$ are prefixes of $p_{2}$, and from (2) and (3), $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$.
+
+  \smallskip
+
+  \noindent
+  \textit{Claim} 3. $w$ and $w'$ contains no variable symbol.
+
+  \smallskip
+  \noindent
+  \textit{Proof of Claim} 3.
+  Let $q_{1}^{\prime} = q_{1}y_{1}a$, $q_{2}^{\prime} = wbcw^{\prime}$, and $q_{3}^{\prime} = dy_{2}q_{2}$. From (1') and (3), $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$ and $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$. If $q_{2}^{\prime}$ contains a variable symbol, from Theorem~\ref{Sato1:Lemma9}, $p \preceq q$ holds. It contradicts the assumption. Therefore, $w$ and $w'$ contains no variable symbol. (\textit{End of Proof of Claim})
+
+  \smallskip
+
+  From \textit{Claim} 3, $w$ and $w'$ are strings consisting of symbols in $\Sigma$. Note that from (1') and (2'), $wbcw^{\prime}d$ and $w^{\prime}d$ are prefixes of $p_{2}$, and from (2) and (3), $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$.
 
   If $|w|=|w^{\prime}|$, then $c=a$ holds.
   It contradicts the condition $c \not = a$.
@@ -110,7 +125,7 @@
   \smallskip
 
   \noindent
-  \textit{Claim} 3.
+  \textit{Claim} 4.
   Let $w^{\prime}$ be a string of constant symbols in $\Sigma$ and $a,b,c,d$ constant symbols in $\Sigma$.
   Then, if $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$, then $w^{\prime}da \not = bcw^{\prime}$ holds.
   %\end{cl}
@@ -118,7 +133,7 @@
   \smallskip
   
   \noindent
-  \textit{Proof of Claim} 3.
+  \textit{Proof of Claim} 4.
   When $|w^{\prime}| = 0, 1, 2, 3$, it is easy to see that $w^{\prime}da=bcw^{\prime}$ does not satisfy the conditions $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$. Therefore, $w^{\prime}da \not= bcw^{\prime}$ holds.
   Let $n = |w^{\prime}|$.
   When $n \ge 4$, we assume that for any string $w^{\prime\prime}$ with $|w^{\prime\prime}|<n$, if $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$, $w^{\prime\prime}da \not =bcw^{\prime\prime}$ holds.
@@ -132,7 +147,7 @@
   \smallskip
 
   \noindent
-  Thus, the case of $|w|=|w^{\prime}|+2$ contradicts \textit{Claim} 1. 
+  Thus, the case of $|w|=|w^{\prime}|+2$ contradicts \textit{Claim} 4. 
 
   If $|w| \ge |w^{\prime}|+3$, from (2) and (3), there exists a string $w^{\prime\prime}$ of length $|w|-|w^{\prime}|-2$ such that $w=w^{\prime\prime}bcw^{\prime}$ holds.
   Moreover, from (2) and (3), since $|aw| < |wbcw^{\prime}|$ and $aw = aw^{\prime\prime}bcw^{\prime}$, $aw^{\prime\prime}$ is a suffix of $w$.
@@ -143,14 +158,14 @@
   \smallskip
   
   \noindent
-  \textit{Claim} 4.
+  \textit{Claim} 5.
   Let $w^{\prime},w^{\prime\prime}$ be strings of constant symbols in $\Sigma$ and $a,b,c,d$ constant symbols in $\Sigma$.
   Then, if $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$, then $w^{\prime}daw^{\prime\prime} \not = w^{\prime\prime}bcw^{\prime}$ holds.
 
   \smallskip
   
   \noindent
-  \textit{Proof of Claim} 4.
+  \textit{Proof of Claim} 5.
   We assume that the following equation holds:
   \begin{equation}
   w^{\prime}daw^{\prime\prime} = w^{\prime\prime}bcw^{\prime}\label{eq:claim2}
@@ -160,7 +175,7 @@
   \begin{enumerate}
     \item[(i)] $|w^{\prime}| \geq 0$ and $|w^{\prime\prime}|=0$:
     We have $w^{\prime}da = bcw^{\prime}$ ($b \not\in \{a,d\}$ and $c \not\in \{a,d\}$).
-    It contradicts \textit{Claim} 3.
+    It contradicts \textit{Claim} 4.
   \end{enumerate}
   We assume that for constant strings $u$ and $v$ with $|u| + |v| < |w^{\prime}| + |w^{\prime\prime}|$, $vbcu \not= udav$ holds.
   We partition the relations between $|w^{\prime}|$ and $|w^{\prime\prime}|$ into the following four parts:
@@ -189,40 +204,40 @@
 \smallskip
 
 \noindent
-Thus, the case of $|w| \geq |w^{\prime}| + 3$ contradicts \textit{Claim} 4. 
+Thus, the case of $|w| \geq |w^{\prime}| + 3$ contradicts \textit{Claim} 5. 
 
 \begin{figure}[t]
   \begin{center}
     \includegraphics[scale=0.45]{figs/w=w_1.eps}
-    \caption{Subcase $|w^{\prime}| = |w^{\prime\prime}|$ of (ii) of \textit{Claim} 4 (Lemma~\ref{追加部分})}\label{追加部分7}
+    \caption{Subcase $|w^{\prime}| = |w^{\prime\prime}|$ of (ii) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{追加部分7}
     \bigskip
     \includegraphics[scale=0.45]{figs/w=w_1+1.eps}
-    \caption{Subcase $|w^{\prime}| = |w^{\prime\prime}| + 1$ of (ii) of \textit{Claim} 4 (Lemma~\ref{追加部分})}\label{追加部分8}
+    \caption{Subcase $|w^{\prime}| = |w^{\prime\prime}| + 1$ of (ii) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{追加部分8}
     %\includegraphics[scale=0.35]{figs/w=w_1+2.png}
-    %\caption{Subcase $|w^{\prime}| = |w^{\prime\prime}| + 2$ of (ii) of \textit{Claim} 4 (Lemma~\ref{追加部分})}\label{追加部分9}
+    %\caption{Subcase $|w^{\prime}| = |w^{\prime\prime}| + 2$ of (ii) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{追加部分9}
   \end{center}
 \end{figure}
 
 \begin{figure}[t]
   \begin{center}
     \includegraphics[scale=0.45]{figs/w=w_1+2.eps}
-    \caption{Case $|w^{\prime\prime}| + 2 \le |w^{\prime}| \le 2|w^{\prime\prime}| - 1$ of (iii) of \textit{Claim} 4 (Lemma~\ref{追加部分})}\label{w1+3}
+    \caption{Case $|w^{\prime\prime}| + 2 \le |w^{\prime}| \le 2|w^{\prime\prime}| - 1$ of (iii) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{w1+3}
   \end{center}
 \end{figure}
 
 \begin{figure}[t]
   \begin{center}
     \includegraphics[scale=0.45]{figs/w=2w_1.eps}
-    \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}|$ of (iv) of \textit{Claim} 4 (Lemma~\ref{追加部分})}\label{追加部分14}
+    \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}|$ of (iv) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{追加部分14}
     \bigskip
     \includegraphics[scale=0.45]{figs/w=2w_1+1.eps}
-    \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}| + 1$ of (iv) of \textit{Claim} 4 (Lemma~\ref{追加部分})}\label{追加部分13}
+    \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}| + 1$ of (iv) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{追加部分13}
     \bigskip
     \includegraphics[scale=0.45]{figs/w=2w_1+2.eps}
-    \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}| + 2$ of (iv) of \textit{Claim} 4 (Lemma~\ref{追加部分})}\label{追加部分12}
+    \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}| + 2$ of (iv) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{追加部分12}
     \bigskip
     \includegraphics[scale=0.45]{figs/w=2w_1+3.eps}
-    \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}| + 3$ of (iv) of \textit{Claim} 4 (Lemma~\ref{追加部分})}\label{追加部分11}
+    \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}| + 3$ of (iv) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{追加部分11}
     %\includegraphics[scale=0.35]{figs/w=2w_1+4.png}
     %\caption{$|w| = 2|w_{1}|+4$における定数記号列}\label{追加部分10}
   \end{center}
@@ -231,7 +246,7 @@ Thus, the case of $|w| \geq |w^{\prime}| + 3$ contradicts \textit{Claim} 4.
 \begin{figure}[t]
   \begin{center}
     \includegraphics[scale=0.45]{figs/w=2w_1+4.eps}
-    \caption{Case $2|w^{\prime\prime}| + 4 \leq |w^{\prime}|$ of (v) of \textit{Claim} 4 (Lemma~\ref{追加部分})}\label{2w1+5}
+    \caption{Case $2|w^{\prime\prime}| + 4 \leq |w^{\prime}|$ of (v) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{2w1+5}
   \end{center}
 \end{figure}
     
@@ -251,9 +266,9 @@ Thus, the case of $|w| \geq |w^{\prime}| + 3$ contradicts \textit{Claim} 4.
   Since $w^{\prime}$ and $aw$ are suffixes of $p_{1}$ and $|w^{\prime}|=|wbcw^{\prime\prime}|=|w|+|w^{\prime\prime}|+2 > |aw|$, $aw$ is a suffix of $w^{\prime}$.
   Since $|w^{\prime\prime}d| + |aw| = |w^{\prime}|$, we have $w^{\prime} = w^{\prime\prime}daw$.
   Therefore, we have $w^{\prime}=wbcw^{\prime\prime}=w^{\prime\prime}daw$.
-  This contradicts \textit{Claim} 4.
+  This contradicts \textit{Claim} 5.
 
-  Thus, the case of $A=y_{1}a,B=bc$, and $C=dy_{2}$ implies the contradictions.
+  Thus, the case of $A=y_{1}a$, $B=bc$, and $C=dy_{2}$ implies the contradictions.
   
   From the above, we conclude that if $p \{ x := r \} \preceq q$ for all $r = \{ ya, bc, dy \}$ $(b \not\in \{a,d\}$ and $c \not\in \{a,d\})$, then $p \{ x := xy \} \preceq q$ holds.
   \end{proof}
