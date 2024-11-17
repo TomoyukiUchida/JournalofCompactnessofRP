@@ -14,11 +14,18 @@
 
   \begin{proof}
   It is obvious if no variable symbol appears in $p$.
-  Let $p=p_{1}xp_{2}$, where $p_{1}, p_{2}$ are regular patterns on $\Sigma\cup X$ and $x$ is a variable symbol in $X$.
+  Thus, for a variable symbol $x\in X$, let $p=p_{1}xp_{2}$, where $p_{1}, p_{2}$ are regular patterns on $\Sigma\cup X$.
   We assume that $p \{ x := xy \} \not \preceq q$ in order to derive the contradiction.
 
-  Since $p \{ x := xy \} \not \preceq q$, there exist three regular patterns $A,B,C$ on $\Sigma\cup X$ such that $q=q_{1}AwBw^{\prime}Cq_{2}$ hold, where $\{ A,B,C \} = \{ y_{1}a,bc,dy_{2} \}$ for some variable symbols $y_{1}, y_{2}$ ($y_{1} \not= y_{2}$), and each of $w, w^{\prime}$ is an empty string or a regular pattern on $\Sigma\cup X$.
-  Firstly, we show the following claim:
+  Since $p \{ x := xy \} \not \preceq q$, the regular pattern $q$ can be expressed in one of the following forms:
+  \begin{enumerate}
+  \item[(i)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a,bc,dy_{2} \}$ for distinct variable symbols $y_{1}, y_{2}\in X$, and each of $w, w^{\prime}$ is either an empty string or a regular pattern on $\Sigma\cup X$.
+  \item[(ii)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ay_{2},bc \}$ ($a = d$) for distinct variable symbols $y_{1}, y_{2}\in X$, and $w$ is either an empty string or a regular pattern on $\Sigma\cup X$.
+  \item[(iii)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ dy_{1}a,bc \}$ for a variable symbol $y_{1}\in X$ and $w$ is either an empty string or a regular pattern on $\Sigma\cup X$.
+  
+  \end{enumerate}
+  
+  Firstly, we show this lemma for the case (i).
 
   \smallskip
 
