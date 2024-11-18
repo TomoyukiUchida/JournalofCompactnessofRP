@@ -19,13 +19,12 @@
 
   Since $p \{ x := xy \} \not \preceq q$, the regular pattern $q$ can be expressed in one of the following forms:
   \begin{enumerate}
-  \item[(i)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a,bc,dy_{2} \}$ for distinct variable symbols $y_{1}, y_{2}\in X$, and each of $w, w^{\prime}$ is either an empty string or a regular pattern on $\Sigma\cup X$.
-  \item[(ii)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ay_{2},bc \}$ ($a = d$) for distinct variable symbols $y_{1}, y_{2}\in X$, and $w$ is either an empty string or a regular pattern on $\Sigma\cup X$.
-  \item[(iii)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ dy_{1}a,bc \}$ for a variable symbol $y_{1}\in X$ and $w$ is either an empty string or a regular pattern on $\Sigma\cup X$.
-  
+  \item[(I)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a,bc,dy_{2} \}$ for distinct variable symbols $y_{1}, y_{2}\in X$, and each of $w, w^{\prime}$ is either an empty string or a regular pattern on $\Sigma\cup X$.
+  \item[(II)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ dy_{1}a,bc \}$ for a variable symbol $y_{1}\in X$ and $w$ is either an empty string or a regular pattern on $\Sigma\cup X$.
+  \item[(III)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ay_{2},bc \}$ ($a = d$) for distinct variable symbols $y_{1}, y_{2}\in X$, and $w$ is either an empty string or a regular pattern on $\Sigma\cup X$.
   \end{enumerate}
   
-  Firstly, we will prove that for the case (i), $p \{ x := xy \} \preceq q$ holds.
+  Firstly, we will prove that for the case (I), $p \{ x := xy \} \preceq q$ holds.
 
   \smallskip
 
@@ -60,7 +59,7 @@
   \smallskip
   \noindent
   \textit{Proof of Claim} 2.
-  From \textit{Claim} 1, we have $B=bc$. Suppose that $(A, B, C) = (dy_{2}, bc, y_{1}a)$ holds. Then, the following conditions hold: for $y_{1}^{\prime},y_{2}^{\prime}\in X$,
+  From \textit{Claim} 1, we have $B=bc$. Suppose that $(A, B, C) = (dy_{2}, bc, y_{1}a)$, i.e., $q = q_{1}dy_{2}wbcw^{\prime}y_{1}aq_{2} $ holds. Then, the following conditions hold: for $y_{1}^{\prime},y_{2}^{\prime}\in X$,
   \begin{align*}
   \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wbcw^{\prime}y_{1}aq_{2}, \mbox{ or}\\
   & & & p_{2} \preceq y_{2}^{\prime}wbcw^{\prime}y_{1}aq_{2}\\
@@ -79,7 +78,8 @@
   %
   %We suppose that $p_{2} \preceq wbcw^{\prime}y_{1}aq_{2}$ of (1') hold.
   From $p_{1} \preceq q_{1}dy_{2}w$ of (2), for some $p^{\prime}_{1}$ and $p^{\prime\prime}_{1}$, $p_{1}$ is expressed as $p^{\prime}_{1}p^{\prime\prime}_{1}$, where $p^{\prime}_{1} \preceq q_{1}d$ and $p^{\prime\prime}_{1} \preceq y_{2}w$. 
-  When $p_{2} \preceq wbcw^{\prime}y_{1}aq_{2}$ of (1'), we have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xwbcw^{\prime}y_{1}aq_{2}=q \{ y_{2}:=p^{\prime\prime}_{1}x \}$.
+  When $p_{2} \preceq wbcw^{\prime}y_{1}aq_{2}$ of (1'), we have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xwbcw^{\prime}y_{1}aq_{2}=q \{ y_{2}:=p^{\prime\prime}_{1}x \}$. Thus, $p \{ x := xy \} \preceq q \{ y_{2}:=p^{\prime\prime}_{1}xy \}$ holds. It contradicts the assumption.
+  %
   When $p_{2} \preceq y_{2}^{\prime}wbcw^{\prime}y_{1}aq_{2}$ of (1'), we have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xy_{2}^{\prime}wbcw^{\prime}y_{1}aq_{2}=q \{ y_{2}:=p^{\prime\prime}_{1}xy_{2}^{\prime} \}$.
   Thus, $p \{ x := xy \} \preceq q \{ y_{2}:=p^{\prime\prime}_{1}xyy_{2}^{\prime} \}$ holds. It contradicts the assumption.
   %
@@ -268,7 +268,40 @@ Thus, the case of $|w| \geq |w^{\prime}| + 3$ contradicts \textit{Claim} 5.
   Therefore, we have $w^{\prime}=wbcw^{\prime\prime}=w^{\prime\prime}daw$.
   This contradicts \textit{Claim} 5.
 
-  Thus, the case of $A=y_{1}a$, $B=bc$, and $C=dy_{2}$ implies the contradictions.
+  Thus, the case $(A, B, C) = (y_{1}a, bc, dy_{2})$ implies the contradictions.
+  
+  Secondly, we will prove that for the case (II), $p \{ x := xy \} \preceq q$ holds. Suppose that $(A, B) = (dy_{1}a, bc)$, i.e., $q = q_{1}dy_{1}awbcq_{2} $ holds. Then, the following conditions hold: for $y_{1}^{\prime}\in X$,
+  \begin{align*}
+    \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq awbcq_{2}, \mbox{ or } \\
+    & & & p_{2} \preceq y_{1}^{\prime}awbcq_{2}\\
+    \textrm{(2)}~& p_{1} \preceq q_{1}d, \mbox{ or }  & \textrm{(2')}~& p_{2} \preceq wbcq_{2}\\
+    & p_{1} \preceq q_{1}dy_{1}^{\prime} & & \\
+    \textrm{(3)}~& p_{1} \preceq q_{1}dy_{1}aw & \textrm{(3')}~& p_{2} \preceq q_{2}
+  \end{align*}
+  %
+  From $p_{1} \preceq q_{1}dy_{1}aw$ of (3), for some $p^{\prime}_{1}$ and $p^{\prime\prime}_{1}$, $p_{1}$ is expressed as $p^{\prime}_{1}p^{\prime\prime}_{1}$, where $p^{\prime}_{1} \preceq q_{1}d$ and $p^{\prime\prime}_{1} \preceq y_{1}aw$. 
+  When $p_{2} \preceq awbcq_{2}$ of (1'), we have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xawbcq_{2}=q \{ y_{1}:=p^{\prime\prime}_{1}x \}$.
+  Thus, $p \{ x := xy \} \preceq q \{ y_{1}:=p^{\prime\prime}_{1}xy \}$ holds. It contradicts the assumption.
+  When $p_{2} \preceq y_{1}^{\prime}awbcq_{2}$ of (1'), we have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xy_{1}^{\prime}wbcq_{2}=q \{ y_{1}:=p^{\prime\prime}_{1}xy_{1}^{\prime} \}$.
+  Thus, $p \{ x := xy \} \preceq q \{ y_{1}:=p^{\prime\prime}_{1}xyy_{1}^{\prime} \}$ holds. It contradicts the assumption.
+  %
+  Similarly, we can show that the case $(A, B) = (bc, dy_{1}a)$ contradicts the assumption.
+  
+  Finally, we will prove that for the case (III), $p \{ x := xy \} \preceq q$ holds. Suppose that $(A, B) = (y_{1}ay_{2}, bc)$, i.e., $q = q_{1}y_{1}ay_{2}wbcq_{2} $ holds. Then, the following conditions hold: for $y_{1}^{\prime}\in X$,
+  \begin{align*}
+    \textrm{(1)}~& p_{1} \preceq q_{1}, \mbox{ or } & \textrm{(1')}~& p_{2} \preceq y_{2}wbcq_{2} \\
+    & p_{1} \preceq q_{1}y_{1}^{\prime} & & \\
+    \textrm{(2)}~& p_{1} \preceq q_{1}dy_{1} & \textrm{(2')}~& p_{2} \preceq wbcq_{2}, \mbox{ or }\\    
+    & & & p_{2} \preceq y_{2}^{\prime}wbcq_{2} \\
+    \textrm{(3)}~& p_{1} \preceq q_{1}y_{1}ay_{2}w & \textrm{(3')}~& p_{2} \preceq q_{2}
+  \end{align*}
+  %
+  Let $q^{\prime}_{1}=q_{1}y_{1}a,~q^{\prime}_{2}=y_{2}w,~q^{\prime}_{3}=bcq_{2}$. From (3) and (1'), we have $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$ and $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$, respectively. Since $q_{2}^{\prime}$ contains a variable symbol,
+  from Theorem~\ref{Sato1:Lemma9}, $p \preceq q$ holds. It contradicts the assumption.
+  %
+  Similarly, we can show that the case $(A, B) = (bc, y_{1}ay_{2})$ contradicts the assumption.
+  
+  \smallskip
   
   From the above, we conclude that if $p \{ x := r \} \preceq q$ for all $r = \{ ya, bc, dy \}$ $(b \not\in \{a,d\}$ and $c \not\in \{a,d\})$, then $p \{ x := xy \} \preceq q$ holds.
   \end{proof}
