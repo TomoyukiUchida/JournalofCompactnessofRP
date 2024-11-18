@@ -29,12 +29,13 @@
     \end{tabular}
   \end{center}
 
-  First of all, we show that the cases (b) and (c) are not possible. Suppose that there exists $y_{3}c$ in $q$ that corresponds to $bc$ in $p\{x:=bc\}$. The regular pattern $q$ can be expressed in one of the following forms:
+  First of all, we show that the cases (b) and (c) are not possible. Suppose that there exists $y_{3}c$ in $q$ that corresponds to $bc$ in $p\{x:=bc\}$. The regular pattern $q$ can be expressed in one of the following forms (b-1)--(b-5): Let $y_{1}, y_{2}, y_{3}$ be distinct variable symbols in $X$ and $w,w^{\prime}$ either an empty string or a regular pattern on $\Sigma\cup X$.
   \begin{enumerate}
-    \item[(b-1)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a, dy_{2}, y_{3}c \}$ for distinct variable symbols $y_{1}, y_{2}, y_{3}\in X$, and each of $w, w^{\prime}$ is either an empty string or a regular pattern on $\Sigma\cup X$.
-    \item[(b-2)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ dy_{1}a, y_{3}c \}$ for a variable symbol $y_{1}, y_{3}\in X$ and $w$ is either an empty string or a regular pattern on $\Sigma\cup X$.
-    \item[(b-3)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ay_{2}, y_{3}c \}$ ($a = d$) for distinct variable symbols $y_{1}, y_{2}\in X$, and $w$ is either an empty string or a regular pattern on $\Sigma\cup X$.
-    \item[(b-4)] $q=q_{1}Aq_{2}$, where $A = y_{1}ay_{2}c$ ($a = d$) for distinct variable symbols $y_{1}, y_{2}\in X$.
+    \item[(b-1)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a, dy_{2}, y_{3}c \}$.
+    \item[(b-2)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ dy_{1}a, y_{3}c \}$.
+    \item[(b-3)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ dy_{2}c, y_{1}a \}$.
+    \item[(b-4)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ay_{2}, y_{3}c \}$ ($a = d$).
+    \item[(b-5)] $q=q_{1}Aq_{2}$, where $A = y_{1}ay_{2}c$ ($a = d$).
   \end{enumerate}
 
 \noindent
@@ -70,7 +71,7 @@ For some $y_{1}^{\prime},y_{2}^{\prime},y_{3}^{\prime}\in X$, the following cond
   \noindent
   In any case, $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$ and $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$ hold, and $q^{\prime}_{2}$ contains at least one variable symbol. Therefore, from Theorem~\ref{Sato1:Lemma9}, $p \preceq q$ holds. It contradicts the assumption. Similarly, we can show that in every case $(A, B, C) = (y_{1}a, dy_{2}, y_{3}c)$, $(y_{3}c, y_{1}a, dy_{2})$, $(y_{3}c, dy_{2}, y_{1}a)$ of (b-1), it results in a contradiction from Theorem~\ref{Sato1:Lemma9}.
 
-  Additionally, contradictions are derived from Theorem 2 in cases (b-2), (b-3), (b-4) and also in all cases of (c).
+  Additionally, contradictions are derived from Theorem 2 in cases (b-2)--(b-5) and also in all cases of (c).
   From this, the cases (b) and (c) are not possible. Therefore, in the following, we consider only the case of (a).
 
   Since $p \{ x := xy \} \not \preceq q$, the regular pattern $q$ can be expressed in one of the following forms:
@@ -737,6 +738,6 @@ Let $\Sigma$ be a finite alphabet with $\sharp \Sigma \ge 3$ and $p,q$ regular p
 If there exists a constant symbol $a \in \Sigma$ such that $p \{ x := a \} \preceq q$ and $p \{ x := xy \} \preceq q$, then $p \preceq q$ holds, where $y$ is a variable symbol that does not appear in $q$.
 \end{lem}
 
-%\hfill Edited by Takayoshi Shoudai
+%\hfill Edited by Takayoshi Shoudai (last update: 2024-11-08)
 %\hrule
 %\bigskip
