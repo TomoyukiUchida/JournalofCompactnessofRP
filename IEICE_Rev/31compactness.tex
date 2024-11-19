@@ -1,5 +1,35 @@
-\medskip
-\noindent
+In Lemma 14 (ii) of \cite{Sato1}, 
+they stated that, when $\sharp \Sigma \geq 3$, for regular patterns $p,q$, if $p\{x:=r\}\preceq q$ for any $r\in D$, then $p\{x:=xy\} \preceq q$ holds, where 
+$D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$ $(a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\le i,j\le 3))$.
+Unfortunately, there exist the following counterexamples of Lemma 14 (ii) of \cite{Sato1}.
+\begin{ex}\label{CounterExample_Lemma14}
+Assume that $a_1=b_2$ and $a_3=b_1$ hold.
+  
+\begin{itemize}
+\item[(1)] 
+Let $p=ca_1x^{\prime}a_3c$ and $q=xa_1a_3y$.
+It is clear that $\{x:=xy\} \not\preceq q$ holds.
+However, we can see that $p\{x^{\prime}:=a_1b_1\}\preceq q$, $p\{x^{\prime}:=a_2b_2\}\preceq q$ and $p\{x^{\prime}:=a_3b_3\}\preceq q$ hold, 
+since
+$p\{x^{\prime}:=a_1b_1\}=ca_1a_1b_1a_3c=q\{x:=ca_1,y:=a_3c\}$,
+$p\{x^{\prime}:=a_2b_2\}=ca_1a_2b_2a_3c=q\{x:=ca_1a_2,y:=c\}$ and 
+$p\{x^{\prime}:=a_3b_3\}=ca_1a_3b_3a_3c=q\{x:=c,y:=b_3a_3c\}$ hold.
+
+\item[(2)] 
+%Assume that $a_1 = b_2$ and $a_3 = b_1$ hold.
+Let $p=cb_2a_1b_1b_2x^{\prime}a_1b_1b_2a_3c$ and $q=xb_2a_1b_1b_2a_3y$.
+It is clear that $p\{x:=xy\} \not\preceq q$ holds.
+However, we have $p\{x^{\prime}:=a_1b_1\}\preceq q$, $p\{x^{\prime}:=a_2b_2\} \preceq q$, and $p\{x^{\prime}:=a_3b_3\} \preceq q$, 
+since  
+$p\{x^{\prime}:=a_1b_1\}=cb_2a_1b_1b_2a_1b_1a_1b_1b_2a_3c=q\{x:=cb_2a_1b_1,y:=b_2a_3c\}$,
+$p\{x^{\prime}:=a_2b_2\}=cb_2a_1b_1b_2a_2b_2a_1b_1b_2a_3c=q\{x:=cb_2a_1b_1b_2a_2,y:=c\}$,
+and  $p\{x^{\prime}:=a_3b_3\}=cb_2a_1b_1b_2a_3b_3a_1b_1b_2a_3c=q\{x:=c,y:=b_3a_1b_1b_2a_3c\}$ hold.
+\end{itemize}
+\end{ex}
+
+
+%\medskip
+%\noindent
 \begin{lem}\label{lem:4pairsofSymbols}\label{補題14}
   Let $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$, where 
  $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\le i,j\le 3)$,
