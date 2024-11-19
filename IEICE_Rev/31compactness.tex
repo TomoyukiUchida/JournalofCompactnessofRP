@@ -43,7 +43,7 @@ Therefore, let $p=p_{1}xp_{2}$, where $p_{1}, p_{2}$ are regular patterns.
 We assume that $p \{ x := xy \} \not \preceq q$ in order to derive the contradictions.
 Since $p \{ x := r \} \preceq q$ holds for any $r \in D$,
 the regular pattern $q$ contains $a_{1}b_{1}, a_{2}b_{2}$ and $a_{3}b_{3}$.
-We remark that $a_i$ and $b_j$ may be same for $i,j (1\le i,j\le 3)$.
+We remark that $a_i$ and $b_j$ may be the same for $i,j (1\le i,j\le 3)$.
 Since $p \{ x := r \} \preceq q$ for all $r \in D$ holds, 
 there exist the following 10 cases (i)--(xv) for three regular patterns on $\Sigma$ contained in $q$ that correspond to three constant strings in $D$:
 Here, $y_1,y_2,y_3$ are variable symbols.
@@ -61,13 +61,13 @@ Here, $y_1,y_2,y_3$ are variable symbols.
 \medskip
 
 \noindent
-For the cases (iv), we can prove that $p \{ x := xy \} \preceq q$ holds in a similar way as Lemma \ref{two_variables}.
-For the cases (v)--(x), we can prove that $p \{ x := xy \} \preceq q$ holds in a similar way as Lemma \ref{two_variables}.
+For the case (iv), we can prove that $p \{ x := xy \} \preceq q$ holds from Lemma \ref{追加部分}.
+For the cases (v)--(x), we can prove that $p \{ x := xy \} \preceq q$ holds from Lemma \ref{two_variables}.
 Hence, for the cases (i)--(iii), we will prove that $p \{ x := xy \} \preceq q$ holds.
 
 \smallskip
 \noindent
-(I) Cases of (i), (ii) and (iii), that are the cases that $q$ contains $a_{1}b_{1}, a_{2}b_{2}$ and $a_{3}b_{3}$:
+(I) Case of (i), that are the cases that $q$ contains $a_{1}b_{1}, a_{2}b_{2}$ and $a_{3}b_{3}$:
 
 %\begin{figure}
 %\centering
@@ -192,9 +192,8 @@ This contradicts the assumption of $b_{1} \ne b_{3}$.
 
 
 \smallskip
-
 \noindent
-(II) Case of (iv) that $q$ contains $a_{1}b_{1}, a_{2}b_{2}$ and $a_{3}y$:
+(II) Case of (ii) that $q$ contains $a_{1}b_{1}, a_{2}b_{2}$ and $a_{3}y$:
 Let $A,B,C$ be distinct regular patterns in $\{a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}$ such that $q=q_{1}AwBw^{\prime}Cq_{2}$.
 Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
 \begin{align*}
@@ -353,6 +352,22 @@ Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
 There exist regular patterns $q_{1}^{\prime}, q_{2}^{\prime}, q_{3}^{\prime}$ such that $q_{1}^{\prime}=q_{1}a_{1}b_{1}$, $q_{2}^{\prime}=yw$, $q_{3}^{\prime}=a_{2}b_{2}q_{2}$, from the above condition (3) $p_{1} \preceq q_{1}^{\prime}q_{2}^{\prime}$ and from the above condition (1') $p_{2} \preceq q_{2}^{\prime}q_{3}^{\prime}$ hold.
 Moreover, since $q_{2}^{\prime}$ contains the variable symbol $y$, $p\preceq q$ holds from Theorem \ref{Sato1:Lemma9}.
 This contradicts the assumption.
+
+\smallskip
+\noindent
+(III) Case of (iii) that $q$ contains $a_{1}b_{1}, a_{2}b_{2}$ and $yb_{3}$:
+Let $A,B,C$ be distinct regular patterns in $\{a_{1}b_{1}, a_{2}b_{2}, yb_{3}\}$ such that $q=q_{1}AwBw^{\prime}Cq_{2}$.
+Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+\begin{align*}
+\textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wBw^{\prime}Cq_{2} \\
+\textrm{(2)}~& p_{1} \preceq q_{1}Aw & \textrm{(2')}~& p_{2} \preceq w^{\prime}Cq_{2} \\
+\textrm{(3)}~& p_{1} \preceq q_{1}AwBw^{\prime} & \textrm{(3')}~& p_{2} \preceq q_{2}
+\end{align*}
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxx
+
 \end{proof}
 
 
