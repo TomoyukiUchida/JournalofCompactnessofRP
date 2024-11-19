@@ -19,7 +19,7 @@
 
   Since $p \{ x := r \} \preceq q$ for all $r \in D$, there are three strings of length $2$ corresponding to $ya, bc, dy$ in $q$.
   Note that the three strings may appear partly overlapping.
-  The symbols appearing in $D$ corresponds to a variable or a constant in $q$.
+  The symbols appearing in $D$ corresponds to a variable or a constant symbol in $q$.
   Let $y_{1}, y_{2}, y_{3}$ be variable symbols appearing in $q$.
   The strings $ya$ and $dy$ must correspond to the strings $y_{1}a$ and $dy_{2}$ in $q$, respectively.
   There are the following three possibilities of strings in $q$ that corresponds to $bc$ in $p\{x:=bc\}$.
@@ -29,59 +29,61 @@
     \end{tabular}
   \end{center}
 
-  First of all, we show that the cases (b) and (c) are not possible. Suppose that there exists $y_{3}c$ in $q$ that corresponds to $bc$ in $p\{x:=bc\}$. The regular pattern $q$ can be expressed in one of the following forms (b-1)--(b-5): Let $y_{1}, y_{2}, y_{3}$ be distinct variable symbols in $X$ and $w,w^{\prime}$ either an empty string or a regular pattern on $\Sigma\cup X$.
+  %First of all, we show that the cases (b) and (c) are not possible.
+  Suppose that there exists (b) $y_{3}c$ in $q$ that corresponds to $bc$ in $p\{x:=bc\}$, i.e., there exist regular patterns $q_{1}$ and $q_{2}$ such that (1) $p_{1}bcp_{2} \preceq q_{1}y_{3}cq_{2}$, (2) either $p_{1} \preceq q_{1}$ or $p_{1} \preceq q_{3}y_{3}^{\prime}$ for some variable symbol $y_{3}^{\prime}\in X$, and (3) $p_{2} \preceq q_{2}$.
+  In this case, it is easy to see that $p\{x:=yc\} = p_{1}ycp_{2} \preceq q_{1}y_{3}cq_{2}$ also holds. Thus, both $p\{x:=ya\}\preceq q$ and $p\{x:=yc\}\preceq q$ hold. Since $c\not= a$, from (ii) of Lemma \ref{two_variables}, $p\{x:=xy\}\preceq q$ holds. This contradicts the assumption. Similarly, the case (c) derives a contradiction from (i) of Lemma \ref{two_variables}.
+  %
+  %The regular pattern $q$ can be expressed in one of the following forms (b1)--(b5): Let $y_{1}, y_{2}, y_{3}$ be distinct variable symbols in $X$ and $w,w^{\prime}$ either an empty string or a regular pattern on $\Sigma\cup X$.
+  %\begin{enumerate}
+  %  \item[(b1)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a, dy_{2}, y_{3}c \}$.
+  %  \item[(b2)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ dy_{1}a, y_{3}c \}$.
+  %  \item[(b3)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ dy_{2}c, y_{1}a \}$.
+  %  \item[(b4)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ay_{2}, y_{3}c \}$ ($a = d$).
+  %  \item[(b5)] $q=q_{1}Aq_{2}$, where $A = y_{1}ay_{2}c$ ($a = d$).
+  %\end{enumerate}
+%
+%\noindent
+%In the case of (b1), suppose that $(A, B, C) = (dy_{2}, y_{1}a, y_{3}c)$, i.e., $q=q_{1}dy_{2}wy_{1}aw^{\prime}y_{3}cq_{2}$ holds.
+%For some $y_{1}^{\prime},y_{2}^{\prime},y_{3}^{\prime}\in X$, the following conditions hold:
+%\begin{align*}
+%  \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wy_{1}aw^{\prime}y_{3}cq_{2}\mbox{ or} \\
+%      & & & p_{2} \preceq y_{2}^{\prime}wy_{1}aw^{\prime}y_{3}cq_{2}\\
+%  \textrm{(2)}~& p_{1} \preceq q_{1}dy_{2}w\mbox{ or}  & \textrm{(2')}~& p_{2} \preceq w^{\prime}y_{3}cq_{2}\\
+%      & p_{1} \preceq q_{1}dy_{2}wy_{1}^{\prime} & & \\
+%  \textrm{(3)}~& p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}\mbox{ or} & \textrm{(3')}~& p_{2} \preceq q_{2}\\
+%      & p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}y_{3}^{\prime} & &
+%\end{align*}
+%  When $p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}$ of (3) and $p_{2} \preceq wy_{1}aw^{\prime}y_{3}cq_{2}$ of (1') hold, let 
+%  $q^{\prime}_{1}=q_{1}dy_{2}$, $q^{\prime}_{2}=wy_{1}aw^{\prime}$, and $q^{\prime}_{3}=y_{3}cq_{2}$.
+  %
+  %\noindent
+%  When $p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}$ of (3) and $p_{2} \preceq y_{2}^{\prime}wy_{1}aw^{\prime}y_{3}cq_{2}$ of (1') hold, let
+%  $q^{\prime}_{1}=q_{1}d$, $q^{\prime}_{2}=y_{2}wy_{1}aw^{\prime}$, and $q^{\prime}_{3}=y_{3}cq_{2}$.
+  %
+  %\noindent
+%  When $p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}y_{3}^{\prime}$ of (3) and $p_{2} \preceq wy_{1}aw^{\prime}y_{3}cq_{2}$ of (1') hold, let
+%  $q^{\prime}_{1}=q_{1}dy_{2}$, $q^{\prime}_{2}=wy_{1}aw^{\prime}y_{3}$, and $q^{\prime}_{3}=cq_{2}$.
+  %
+  %\noindent
+%  When $p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}y_{3}^{\prime}$ of (3) and $p_{2} \preceq y_{2}^{\prime}wy_{1}aw^{\prime}y_{3}cq_{2}$ of (1') hold, let
+%  $q^{\prime}_{1}=q_{1}d$, $q^{\prime}_{2}=y_{2}wy_{1}aw^{\prime}y_{3}$, and $q^{\prime}_{3}=cq_{2}$.
+  %
+  %\noindent
+%  In any case, $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$ and $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$ hold, and $q^{\prime}_{2}$ contains at least one variable symbol. Therefore, from Theorem~\ref{Sato1:Lemma9}, $p \preceq q$ holds. It contradicts the assumption. Similarly, we can show that in every case $(A, B, C) = (y_{1}a, dy_{2}, y_{3}c)$, $(y_{3}c, y_{1}a, dy_{2})$, $(y_{3}c, dy_{2}, y_{1}a)$ of (b-1), it results in a contradiction from Theorem~\ref{Sato1:Lemma9}.
+%
+%  In the same way, in the cases (b2)--(b5) and also in all cases of (c), the contradiction is derived from Theorem 2.
+%  From this, the cases (b) and (c) are not possible. 
+  %
+  Therefore, in the following, we consider only the case of (a).
+
+  Since $p \{ x := xy \} \not \preceq q$, the regular pattern $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $w, w^{\prime}$ either an empty string or a regular pattern on $\Sigma\cup X$.
   \begin{enumerate}
-    \item[(b-1)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a, dy_{2}, y_{3}c \}$.
-    \item[(b-2)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ dy_{1}a, y_{3}c \}$.
-    \item[(b-3)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ dy_{2}c, y_{1}a \}$.
-    \item[(b-4)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ay_{2}, y_{3}c \}$ ($a = d$).
-    \item[(b-5)] $q=q_{1}Aq_{2}$, where $A = y_{1}ay_{2}c$ ($a = d$).
-  \end{enumerate}
-
-\noindent
-In the case of (b-1), suppose that $(A, B, C) = (dy_{2}, y_{1}a, y_{3}c)$, i.e., $q=q_{1}dy_{2}wy_{1}aw^{\prime}y_{3}cq_{2}$ holds.
-For some $y_{1}^{\prime},y_{2}^{\prime},y_{3}^{\prime}\in X$, the following conditions hold:
-\begin{align*}
-  \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wy_{1}aw^{\prime}y_{3}cq_{2}, \mbox{ or} \\
-      & & & p_{2} \preceq y_{2}^{\prime}wy_{1}aw^{\prime}y_{3}cq_{2}\\
-  \textrm{(2)}~& p_{1} \preceq q_{1}dy_{2}w, \mbox{ or}  & \textrm{(2')}~& p_{2} \preceq w^{\prime}y_{3}cq_{2}\\
-      & p_{1} \preceq q_{1}dy_{2}wy_{1}^{\prime} & & \\
-  \textrm{(3)}~& p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}, \mbox{ or} & \textrm{(3')}~& p_{2} \preceq q_{2}\\
-      & p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}y_{3}^{\prime} & &
-\end{align*}
-  When $p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}$ of (3) and $p_{2} \preceq wy_{1}aw^{\prime}y_{3}cq_{2}$ of (1') hold, let 
-  
-  $q^{\prime}_{1}=q_{1}dy_{2}$, $q^{\prime}_{2}=wy_{1}aw^{\prime}$, and $q^{\prime}_{3}=y_{3}cq_{2}$.
-  
-  \noindent
-  When $p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}$ of (3) and $p_{2} \preceq y_{2}^{\prime}wy_{1}aw^{\prime}y_{3}cq_{2}$ of (1') hold, let
-  
-  $q^{\prime}_{1}=q_{1}d$, $q^{\prime}_{2}=y_{2}wy_{1}aw^{\prime}$, and $q^{\prime}_{3}=y_{3}cq_{2}$.
-  
-  \noindent
-  When $p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}y_{3}^{\prime}$ of (3) and $p_{2} \preceq wy_{1}aw^{\prime}y_{3}cq_{2}$ of (1') hold, let
-  
-  $q^{\prime}_{1}=q_{1}dy_{2}$, $q^{\prime}_{2}=wy_{1}aw^{\prime}y_{3}$, and $q^{\prime}_{3}=cq_{2}$.
-  
-  \noindent
-  When $p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}y_{3}^{\prime}$ of (3) and $p_{2} \preceq y_{2}^{\prime}wy_{1}aw^{\prime}y_{3}cq_{2}$ of (1') hold, let
-  
-  $q^{\prime}_{1}=q_{1}d$, $q^{\prime}_{2}=y_{2}wy_{1}aw^{\prime}y_{3}$, and $q^{\prime}_{3}=cq_{2}$.
-  
-  \noindent
-  In any case, $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$ and $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$ hold, and $q^{\prime}_{2}$ contains at least one variable symbol. Therefore, from Theorem~\ref{Sato1:Lemma9}, $p \preceq q$ holds. It contradicts the assumption. Similarly, we can show that in every case $(A, B, C) = (y_{1}a, dy_{2}, y_{3}c)$, $(y_{3}c, y_{1}a, dy_{2})$, $(y_{3}c, dy_{2}, y_{1}a)$ of (b-1), it results in a contradiction from Theorem~\ref{Sato1:Lemma9}.
-
-  Additionally, contradictions are derived from Theorem 2 in cases (b-2)--(b-5) and also in all cases of (c).
-  From this, the cases (b) and (c) are not possible. Therefore, in the following, we consider only the case of (a).
-
-  Since $p \{ x := xy \} \not \preceq q$, the regular pattern $q$ can be expressed in one of the following forms:
-  \begin{enumerate}
-  \item[(a-1)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a,bc,dy_{2} \}$ for distinct variable symbols $y_{1}, y_{2}\in X$, and each of $w, w^{\prime}$ is either an empty string or a regular pattern on $\Sigma\cup X$.
-  \item[(a-2)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ dy_{1}a,bc \}$ for a variable symbol $y_{1}\in X$ and $w$ is either an empty string or a regular pattern on $\Sigma\cup X$.
-  \item[(a-3)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ay_{2},bc \}$ ($a = d$) for distinct variable symbols $y_{1}, y_{2}\in X$, and $w$ is either an empty string or a regular pattern on $\Sigma\cup X$.
+  \item[(a1)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a,bc,dy_{2} \}$.
+  \item[(a2)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ dy_{1}a,bc \}$.
+  \item[(a3)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ay_{2},bc \}$ ($a = d$).
   \end{enumerate}
   
-  Firstly, we will prove that for the case (a-1), $p \{ x := xy \} \preceq q$ holds.
+  Firstly, we will prove that for the case (a1), $p \{ x := xy \} \preceq q$ holds.
 
   \smallskip
 
@@ -93,9 +95,9 @@ For some $y_{1}^{\prime},y_{2}^{\prime},y_{3}^{\prime}\in X$, the following cond
   \textit{Proof of Claim} 1.
   Suppose that $(A, B, C) = (dy_{2}, y_{1}a, bc)$. For some $y_{1}^{\prime},y_{2}^{\prime}\in X$, the following conditions hold:
   \begin{align*}
-    \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wy_{1}aw^{\prime}bcq_{2}, \mbox{ or} \\
+    \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wy_{1}aw^{\prime}bcq_{2}\mbox{ or} \\
     & & & p_{2} \preceq y_{2}^{\prime}wy_{1}aw^{\prime}bcq_{2}\\
-    \textrm{(2)}~& p_{1} \preceq q_{1}dy_{2}w, \mbox{ or}  & \textrm{(2')}~& p_{2} \preceq w^{\prime}bcq_{2}\\
+    \textrm{(2)}~& p_{1} \preceq q_{1}dy_{2}w\mbox{ or}  & \textrm{(2')}~& p_{2} \preceq w^{\prime}bcq_{2}\\
     & p_{1} \preceq q_{1}dy_{2}wy_{1}^{\prime} & & \\
     \textrm{(3)}~& p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime} & \textrm{(3')}~& p_{2} \preceq q_{2}
   \end{align*}
@@ -118,10 +120,10 @@ For some $y_{1}^{\prime},y_{2}^{\prime},y_{3}^{\prime}\in X$, the following cond
   \textit{Proof of Claim} 2.
   From \textit{Claim} 1, we have $B=bc$. Suppose that $(A, B, C) = (dy_{2}, bc, y_{1}a)$, i.e., $q = q_{1}dy_{2}wbcw^{\prime}y_{1}aq_{2} $ holds. Then, the following conditions hold: for $y_{1}^{\prime},y_{2}^{\prime}\in X$,
   \begin{align*}
-  \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wbcw^{\prime}y_{1}aq_{2}, \mbox{ or}\\
+  \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wbcw^{\prime}y_{1}aq_{2}\mbox{ or}\\
   & & & p_{2} \preceq y_{2}^{\prime}wbcw^{\prime}y_{1}aq_{2}\\
   \textrm{(2)}~& p_{1} \preceq q_{1}dy_{2}w & \textrm{(2')}~& p_{2} \preceq w^{\prime}y_{1}aq_{2} \\
-  \textrm{(3)}~& p_{1} \preceq q_{1}dy_{2}wbcw^{\prime}, \mbox{ or} & \textrm{(3')}~& p_{2} \preceq q_{2}\\
+  \textrm{(3)}~& p_{1} \preceq q_{1}dy_{2}wbcw^{\prime}\mbox{ or} & \textrm{(3')}~& p_{2} \preceq q_{2}\\
   & p_{1} \preceq q_{1}dy_{2}wbcw^{\prime}y_{1}^{\prime}& &
   \end{align*}
   %
@@ -327,11 +329,11 @@ Thus, the case of $|w| \geq |w^{\prime}| + 3$ contradicts \textit{Claim} 5.
 
   Thus, the case $(A, B, C) = (y_{1}a, bc, dy_{2})$ implies the contradictions.
   
-  Secondly, we will prove that for the case (a-2), $p \{ x := xy \} \preceq q$ holds. Suppose that $(A, B) = (dy_{1}a, bc)$, i.e., $q = q_{1}dy_{1}awbcq_{2} $ holds. Then, the following conditions hold: for $y_{1}^{\prime}\in X$,
+  Secondly, we will prove that for the case (a2), $p \{ x := xy \} \preceq q$ holds. Suppose that $(A, B) = (dy_{1}a, bc)$, i.e., $q = q_{1}dy_{1}awbcq_{2} $ holds. Then, the following conditions hold: for $y_{1}^{\prime}\in X$,
   \begin{align*}
-    \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq awbcq_{2}, \mbox{ or} \\
+    \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq awbcq_{2}\mbox{ or} \\
     & & & p_{2} \preceq y_{1}^{\prime}awbcq_{2}\\
-    \textrm{(2)}~& p_{1} \preceq q_{1}d, \mbox{ or}  & \textrm{(2')}~& p_{2} \preceq wbcq_{2}\\
+    \textrm{(2)}~& p_{1} \preceq q_{1}d\mbox{ or}  & \textrm{(2')}~& p_{2} \preceq wbcq_{2}\\
     & p_{1} \preceq q_{1}dy_{1}^{\prime} & & \\
     \textrm{(3)}~& p_{1} \preceq q_{1}dy_{1}aw & \textrm{(3')}~& p_{2} \preceq q_{2}
   \end{align*}
@@ -344,11 +346,11 @@ Thus, the case of $|w| \geq |w^{\prime}| + 3$ contradicts \textit{Claim} 5.
   %
   Similarly, we can show that the case $(A, B) = (bc, dy_{1}a)$ contradicts the assumption.
   
-  Finally, we will prove that for the case (a-3), $p \{ x := xy \} \preceq q$ holds. Suppose that $(A, B) = (y_{1}ay_{2}, bc)$, i.e., $q = q_{1}y_{1}ay_{2}wbcq_{2} $ holds. Then, the following conditions hold: for $y_{1}^{\prime}\in X$,
+  Finally, we will prove that for the case (a3), $p \{ x := xy \} \preceq q$ holds. Suppose that $(A, B) = (y_{1}ay_{2}, bc)$, i.e., $q = q_{1}y_{1}ay_{2}wbcq_{2} $ holds. Then, the following conditions hold: for $y_{1}^{\prime}\in X$,
   \begin{align*}
-    \textrm{(1)}~& p_{1} \preceq q_{1}, \mbox{ or} & \textrm{(1')}~& p_{2} \preceq y_{2}wbcq_{2} \\
+    \textrm{(1)}~& p_{1} \preceq q_{1}\mbox{ or} & \textrm{(1')}~& p_{2} \preceq y_{2}wbcq_{2} \\
     & p_{1} \preceq q_{1}y_{1}^{\prime} & & \\
-    \textrm{(2)}~& p_{1} \preceq q_{1}dy_{1} & \textrm{(2')}~& p_{2} \preceq wbcq_{2}, \mbox{ or}\\    
+    \textrm{(2)}~& p_{1} \preceq q_{1}dy_{1} & \textrm{(2')}~& p_{2} \preceq wbcq_{2}\mbox{ or}\\    
     & & & p_{2} \preceq y_{2}^{\prime}wbcq_{2} \\
     \textrm{(3)}~& p_{1} \preceq q_{1}y_{1}ay_{2}w & \textrm{(3')}~& p_{2} \preceq q_{2}
   \end{align*}
@@ -386,25 +388,31 @@ Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \pr
 \begin{proof}
   It is obvious if no variable symbol appears in $p$.
   Therefore, let $p=p_{1}xp_{2}$, where $p_{1}, p_{2}$ are regular patterns and $x$ is a variable symbol. We assume that $p \{ x := xy \} \not \preceq q$ in order to derive the contradiction.
-  
-\noindent\textrm{(i)}
+  In the case of \textrm{(ii)}, by reversing the strings $p$ and $q$, we can prove that the assumption $p \{ x := xy \} \preceq q$ is contradicted, as in the case of \textrm{(i)}.
+  Therefore, in the following, we consider only the case of \textrm{(i)}.
+
 Let $D=\{ ya, bc, dy \}$ ($b = a,~b \not= d,\mbox{~and~}c \not\in \{a,d\}$).
 Since $p \{ x := r \} \preceq q$ for all $r \in D$, there are three strings of length $2$ corresponding to $ya, bc, dy$ in $q$. Note that the three strings may appear partly overlapping.
-The symbols appearing in $D$ corresponds to a variable or a constant in $q$.
-Let $y_{1}, y_{2}, y_{3}$ be variable symbols appearing in $q$.
-The strings $ya$ and $dy$ must correspond to the strings $y_{1}a$ and $dy_{3}$ in $q$, respectively.
-There are the following three possibilities of strings in $q$ which corresponds to $bc$ in $p\{x:=bc\}$.
-\begin{center}
-\begin{tabular}{cccccc}
-\textrm{(a)} & $bc$, &
-\textrm{(b)} & $y_{2}c$, &
-\textrm{(c)} & $by_{2}$.
-\end{tabular}
-\end{center}
+The symbols appearing in $D$ corresponds to a variable or a constant symbol in $q$.
+Let $y_{1}, y_{2}$ be variable symbols appearing in $q$.
+The strings $ya$ and $dy$ must correspond to the strings $y_{1}a$ and $dy_{2}$ in $q$.
+For the same reasons stated at the beginning of Lemma〜\ref{追加部分}, the string $bc$ corresponds to the string $bc$ in $q$ as well.
 
-\textrm{(a)}
-Let $A,B,C$ be strings where $\{ A,B,C \} = \{ y_{1}a,bc,dy_{3} \}$ and let $q=q_{1}AwBw^{\prime}Cq_{2}$.
-Since $p \{ x := r \} \preceq q$ for all $r \in D$ and $p \{ x := xy \} \not \preceq q$ hold, the following conditions hold:
+Let $A,B,C$ be strings where $\{ A,B,C \} = \{ y_{1}a,ac,dy_{3} \}$ and let $q=q_{1}AwBw^{\prime}Cq_{2}$.
+Since $p \{ x := xy \} \not \preceq q$, the regular pattern $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $w, w^{\prime}$ either an empty string or a regular pattern on $\Sigma\cup X$.
+\begin{enumerate}
+\item[(a1)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a,ac,dy_{2} \}$.
+\item[(a2)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ac,dy_{2} \}$.
+\item[(a3)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ay_{2},ac \}$ ($a = d$).
+\item[(a4)] $q=q_{1}Aq_{2}$, where $A = dy_{1}ac$.
+\end{enumerate}
+
+In these cases, just like in cases (a2) and (a3) of Lemma~\ref{追加部分}, the cases (a3) and (a4) also lead to contradictions based on Theorem~\ref{Sato1:Lemma9}.
+Moreover, in the cases (a1) and (a2), just like in Lemma~\ref{追加部分}, it is shown that $q=q_{1}y_{1}awacw^{\prime}dy_{2}q_{2}$ and $q=q_{1}y_{1}acwdy_{2}q_{2}$, respectively, and $w,w^{\prime}$ contain no variable symbol.
+
+Firstly, we will prove that for the case (a1), $p \{ x := xy \} \preceq q$ holds.
+Since $p \{ x := r \} \preceq q$ for all $r \in \{ ya, ac, dy \}$ and $p \{ x := xy \} \not \preceq q$ hold, the following conditions hold:
+For $(A,B,C) = (y_{1}a, ac, dy_{2})$,
 \begin{align*}
   \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wBw^{\prime}Cq_{2} \\
   \textrm{(2)}~& p_{1} \preceq q_{1}Aw & \textrm{(2')}~& p_{2} \preceq w^{\prime}Cq_{2} \\
@@ -423,16 +431,16 @@ From the above, we consider two cases: one in which the symbols overlap and the 
 \smallskip
 
 \begin{tabular}{cl}
-\textrm{(a-1)} & $q=q_{1}y_{1}awbcw^{\prime}dy_{3}q_{2}$,\\
-\textrm{(a-2)} & $q=q_{1}y_{1}acwdy_{3}q_{2}$~~($a=b$).
+\textrm{(a1)} & $q=q_{1}y_{1}awacw^{\prime}dy_{3}q_{2}$,\\
+\textrm{(a2)} & $q=q_{1}y_{1}acwdy_{3}q_{2}$~~($a=b$).
 \end{tabular}
 \smallskip
 
-\textrm{(a-1)}
+\textrm{(a1)}
 From the proof of Lemma \ref{追加部分}, $p \{ x:= xy \} \preceq q$ holds.
 Therefore, it contradicts the assumption.
 
-\textrm{(a-2)}
+\textrm{(a2)}
 Let $q=q_{1}y_{1}acwdy_{3}q_{2}$ ($a=b$).
 For this $q$, the following conditions hold:
 \begin{align*}
@@ -455,18 +463,8 @@ From $cw=wd$, a prefix of $w$ is $c$ and a suffix of $w$ is $d$.
 Therefore, we have $w=cw_{2}w_{3} \cdots w_{n-1}d$.
 Since $cw=cw_{2}w_{3} \cdots w_{n-1}d,~wd=cw_{2}w_{3} \cdots w_{n-1}dd$, from $cw=wd$, $w_{i}=w_{i+1}$ holds for $i=2, \ldots , n-2$.
 Therefore, $c=d$. This contradicts the fact that $c \not = d$.
-
-\textrm{(b)}
-Let $q=q_{1}AwBw^{\prime}Cq_{2}$ where $\{ A,B,C \} = \{ y_{1}a,y_{2}c,dy_{3} \}$, and let $q=q_{1}AwBw^{\prime}Cq_{2}$.
-Since $c \not = a$ holds, $q$ have a substring that is corresponding to (i-2) of Lemma~\ref{変数2つ}.
-Therefore, $p \{ x:= xy \} \preceq q$ holds.
-This contradicts the assumption. 
-
-\textrm{(c)} As in (b), this contradicts the assumption.
-
-\noindent\textrm{(ii)}
-In this case, by reversing the strings $p$ and $q$, we can prove that the assumption $p \{ x := xy \} \preceq q$ is contradicted, as in the case of \textrm{(i)}.
 \end{proof}
+
 When the conditions of both Lemmas \ref{追加部分} and \ref{片方} are not satisfied, counterexamples exist as follows:
 
 \newtheorem{prop}{Proposition}
