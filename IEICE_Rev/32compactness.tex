@@ -21,7 +21,7 @@ holds, then $(b, c) = (a, d)$ or $(b, c) = (d, a)$ hold.
   \item When $|w| = 1$, from $w[0]da = bcw[0]$, we have $w[0] = b$, $d = c$, and $a = w[0]$. Thus, $(b, c) = (a, d)$ hold.
   \item When $|w| = 2$, from $w[0]w[1]da = bcw[0]w[1]$, we have $w[0] = b$, $w[1] = c$, $d = w[0]$, $a = w[1]$. Thus, $(b, c) = (d, a)$ hold.
   \item When $|w| = 3$, $w[0]w[1]w[2]da = bcw[0]w[1]w[2]$ holds. Then, we have $w[0] = b$, $w[1] = c$, $w[2] = w[0]$, $d = w[1]$, $a = w[2]$. Thus, $(b, c) = (a, d)$ hold.
-  \item When $|w| \ge 4$, we assume that for any string $u$ with $0\leq |u| < n$, if $uda = bcu$ holds, $(b, c) = (a, d)$ or $(b, c) = (d, a)$ hold. Since the string $w$ has a prefix $bc$ and a suffix $da$, there exists a string $u$ with $|u| = |w| - 4 < |w|$ such that $w = bcuda$ holds. Since $wda = bcudada$ and $bcw = bcbcuda$, if $wda = bcw$ holds, we have $uda = bcu$. Thus, from the assumption, we get $(b, c) = (a, d)$ or $(b, c) = (d, a)$.
+  \item When $|w| \ge 4$, we assume that for any string $u$ with $0\leq |u| < n$, if $uda = bcu$ holds, $(b, c) = (a, d)$ or $(b, c) = (d, a)$ hold. Since the string $w$ has a prefix $bc$ and a suffix $da$, there exists a string $u$ with $|u| = |w| - 4 < |w|$ such that $w = bcuda$ holds. Since $wda = bcw$, we have $bcudada = bcbcuda$, and then $uda = bcu$. Thus, from the assumption, we get $(b, c) = (a, d)$ or $(b, c) = (d, a)$.
   \end{enumerate}
 From the above, we conclude that if $wda = bcw$ holds, then $(b, c) = (a, d)$ or $(b, c) = (d, a)$ hold.
 \end{proof}
@@ -32,7 +32,7 @@ If
 \begin{align}
   wdaw^{\prime} & = w^{\prime}bcw
 \end{align}
-holds, then $a = b$ and $c = d$ hold.\label{prop:repstring_eq}
+holds, then $(b, c) = (a, d)$ or $(b, c) = (d, a)$ hold.\label{prop:repstring_eq}
 \end{prop}
 
 \begin{proof}
@@ -40,13 +40,15 @@ We will prove this proposition by an induction on $|w| + |w^{\prime}|$.
 W.l.o.g., we suppose that $|w| \geq |w^{\prime}|$ holds.
 \begin{enumerate}
   \item[(i)] $|w| \geq 0$ and $|w^{\prime}|=0$:
-  Eq.~(\ref{prop:repstring_eq}) becomes $wda = bcw$. From Proposition~\ref{prop:repstring_base}, $a = b$ and $c = d$ hold.
+  Eq.~(\ref{prop:repstring_eq}) becomes $wda = bcw$. From Proposition~\ref{prop:repstring_base}, $(b, c) = (a, d)$ or $(b, c) = (d, a)$ hold.
 \end{enumerate}
-We assume that for constant strings $u$ and $v$ with $|u| + |v| < |w| + |w^{\prime}|$, if $vbcu = udav$ holds, then $a = b$ and $c = d$ hold.
+We assume that for constant strings $u$ and $u^{\prime}$ with $|u| + |u^{\prime}| < |w| + |w^{\prime}|$, if $udau^{\prime} = u^{\prime}bcu$ holds, then $(b, c) = (a, d)$ or $(b, c) = (d, a)$ hold.
 We partition the relations between $|w|$ and $|w^{\prime}|$ into the following four parts:
 \begin{enumerate}
 \item[(ii)] $0 < |w^{\prime}| \le |w| \le |w^{\prime}|+1$:
-When either $|w|=|w^{\prime}|$ or $|w|=|w^{\prime}|+1$, Eq.~(\ref{prop:repstring_eq}) is depicted as shown in Figs.~\ref{追加部分7}, \ref{追加部分8}. Trivially, these cases contradict the conditions $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$.
+When either $|w|=|w^{\prime}|$ or $|w|=|w^{\prime}|+1$, Eq.~(\ref{prop:repstring_eq}) is depicted as shown in Figs.~\ref{追加部分7} and \ref{追加部分8}, respectively. It When $|w|=|w^{\prime}|$, $(b, c) = (d, a)$ holds. When $|w|=|w^{\prime}|+1$, $a$ is a prefix of $w$ and $b$ is a suffix of $w$. Let $u$ be a string such that $aub=w$. Let $u^{\prime}=w^{\prime}$. Since $wdaw^{\prime} = w^{\prime}bcw$, we have $aubdau^{\prime} = u^{\prime}bcaub$.
+
+Trivially, these cases contradict the conditions $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$.
 %When $|w^{\prime}|=|w^{\prime\prime}|+2$, Eq.~\ref{eq:claim2} can be written as shown in Fig.~\ref{追加部分9}. This implies $w^{\prime}=w^{\prime\prime}bc=daw^{\prime\prime}$, and then contradicts \textit{Claim} 1.
 \item[(iii)] $|w^{\prime\prime}|+2 \le |w^{\prime}| \le 2|w^{\prime\prime}| - 1$:
 On Eq.~\ref{eq:claim2}, since $|w^{\prime}daw^{\prime\prime}| = |w^{\prime\prime}bcw^{\prime}| = |w^{\prime}| + |w^{\prime\prime}| + 2$, a suffix of $w^{\prime}$ overlaps with a prefix of $w^{\prime}$ as shown in Fig.~\ref{w1+3}. That is, there exists a constant string $u$ of length $2|w^{\prime}| - (|w^{\prime}| + |w^{\prime\prime}| + 2) = |w^{\prime}| - |w^{\prime\prime}| - 2$ such that $u$ is a prefix and a suffix of $w^{\prime}$.
