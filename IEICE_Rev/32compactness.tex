@@ -2,6 +2,29 @@
 %\hrule
 %\smallskip
 %\hfill Edited by Takayoshi Shoudai on 2024-05-18 (2nd version), 2024-10-30 (3rd version).
+\newtheorem{prop}{Proposition}
+
+\begin{prop}\label{prop:repstring_base}
+Let $w$ be a string of constant symbols in $\Sigma$ and $a,b,c,d$ constant symbols in $\Sigma$.
+If
+\begin{align}
+wda & = bcw\label{prop:repstring_base_eq}
+\end{align}
+holds, $a = b$ and $c = d$ hold.
+\end{prop}
+
+\begin{proof}
+For $i=1,\ldots,|w|$, we refer the $i$-th symbol of $w$ as $w[i - 1]$.
+\begin{enumerate}
+\item If $|w| = 0$, eq.\ref{prop:repstring_base_eq} becomes $da = bc$. Thus, $a = b$ and $c = d$ hold.
+\item If $|w| = 1$, from $w[0]da = bcw[0]$, we have $w[0] = b$, $d = c$, and $a = w[0]$. Thus, $a = b$ and $c = d$ hold.
+\item If $|w| = 2$, from $w[0]w[1]da = bcw[0]w[1]$, we have $w[0] = b$, $w[1] = c$, $d = w[0]$, $a = w[1]$. Thus, $a = b$ and $c = d$ hold.
+\item If $|w| = 3$, from $w[0]w[1]w[2]da = bcw[0]w[1]w[2]$, we have $w[0] = b$, $w[1] = c$, $w[2] = w[0]$, $d = w[1]$, $a = w[2]$. Thus, $a = b$ and $c = d$ hold.
+\item Let $n = |w|$. When $n \ge 4$, we assume that for any string $w^{\prime}$ with $|w^{\prime}|<n$, if $w^{\prime}da = bcw^{\prime}$ holds, $a = b$ and $c = d$ hold.
+Since the string $w$ has a prefix $bc$ and a suffix $da$, there exists a string $w^{\prime}$ with $0 \leq |w^{\prime}| \leq n - 4$ such that $w = bcw^{\prime}da$ holds.
+Since $wda = bcw^{\prime}dada$ and $bcw = bcbcw^{\prime}da$, if $wda = bcw$ holds, we have $w^{\prime}da = bcw^{\prime}$. Thus, from the assumption, we get $a = b$ and $c = d$.
+\end{enumerate}
+\end{proof}
 
 \begin{lem}\label{追加部分}
   Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and $p,~q$ regular patterns on $\Sigma\cup X$.
@@ -32,48 +55,6 @@
   %First of all, we show that the cases (b) and (c) are not possible.
   Suppose that there exists (b) $y_{3}c$ in $q$ that corresponds to $bc$ in $p\{x:=bc\}$, i.e., there exist regular patterns $q_{1}$ and $q_{2}$ such that (1) $p_{1}bcp_{2} \preceq q_{1}y_{3}cq_{2}$, (2) either $p_{1} \preceq q_{1}$ or $p_{1} \preceq q_{3}y_{3}^{\prime}$ for some variable symbol $y_{3}^{\prime}\in X$, and (3) $p_{2} \preceq q_{2}$.
   In this case, it is easy to see that $p\{x:=yc\} = p_{1}ycp_{2} \preceq q_{1}y_{3}cq_{2}$ also holds. Thus, both $p\{x:=ya\}\preceq q$ and $p\{x:=yc\}\preceq q$ hold. Since $c\not= a$, from (ii) of Lemma \ref{two_variables}, $p\{x:=xy\}\preceq q$ holds. This contradicts the assumption. Similarly, the case (c) derives a contradiction from (i) of Lemma \ref{two_variables}.
-  %
-  %The regular pattern $q$ can be expressed in one of the following forms (b1)--(b5): Let $y_{1}, y_{2}, y_{3}$ be distinct variable symbols in $X$ and $w,w^{\prime}$ either an empty string or a regular pattern on $\Sigma\cup X$.
-  %\begin{enumerate}
-  %  \item[(b1)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a, dy_{2}, y_{3}c \}$.
-  %  \item[(b2)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ dy_{1}a, y_{3}c \}$.
-  %  \item[(b3)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ dy_{2}c, y_{1}a \}$.
-  %  \item[(b4)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ay_{2}, y_{3}c \}$ ($a = d$).
-  %  \item[(b5)] $q=q_{1}Aq_{2}$, where $A = y_{1}ay_{2}c$ ($a = d$).
-  %\end{enumerate}
-%
-%\noindent
-%In the case of (b1), suppose that $(A, B, C) = (dy_{2}, y_{1}a, y_{3}c)$, i.e., $q=q_{1}dy_{2}wy_{1}aw^{\prime}y_{3}cq_{2}$ holds.
-%For some $y_{1}^{\prime},y_{2}^{\prime},y_{3}^{\prime}\in X$, the following conditions hold:
-%\begin{align*}
-%  \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wy_{1}aw^{\prime}y_{3}cq_{2}\mbox{ or} \\
-%      & & & p_{2} \preceq y_{2}^{\prime}wy_{1}aw^{\prime}y_{3}cq_{2}\\
-%  \textrm{(2)}~& p_{1} \preceq q_{1}dy_{2}w\mbox{ or}  & \textrm{(2')}~& p_{2} \preceq w^{\prime}y_{3}cq_{2}\\
-%      & p_{1} \preceq q_{1}dy_{2}wy_{1}^{\prime} & & \\
-%  \textrm{(3)}~& p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}\mbox{ or} & \textrm{(3')}~& p_{2} \preceq q_{2}\\
-%      & p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}y_{3}^{\prime} & &
-%\end{align*}
-%  When $p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}$ of (3) and $p_{2} \preceq wy_{1}aw^{\prime}y_{3}cq_{2}$ of (1') hold, let 
-%  $q^{\prime}_{1}=q_{1}dy_{2}$, $q^{\prime}_{2}=wy_{1}aw^{\prime}$, and $q^{\prime}_{3}=y_{3}cq_{2}$.
-  %
-  %\noindent
-%  When $p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}$ of (3) and $p_{2} \preceq y_{2}^{\prime}wy_{1}aw^{\prime}y_{3}cq_{2}$ of (1') hold, let
-%  $q^{\prime}_{1}=q_{1}d$, $q^{\prime}_{2}=y_{2}wy_{1}aw^{\prime}$, and $q^{\prime}_{3}=y_{3}cq_{2}$.
-  %
-  %\noindent
-%  When $p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}y_{3}^{\prime}$ of (3) and $p_{2} \preceq wy_{1}aw^{\prime}y_{3}cq_{2}$ of (1') hold, let
-%  $q^{\prime}_{1}=q_{1}dy_{2}$, $q^{\prime}_{2}=wy_{1}aw^{\prime}y_{3}$, and $q^{\prime}_{3}=cq_{2}$.
-  %
-  %\noindent
-%  When $p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}y_{3}^{\prime}$ of (3) and $p_{2} \preceq y_{2}^{\prime}wy_{1}aw^{\prime}y_{3}cq_{2}$ of (1') hold, let
-%  $q^{\prime}_{1}=q_{1}d$, $q^{\prime}_{2}=y_{2}wy_{1}aw^{\prime}y_{3}$, and $q^{\prime}_{3}=cq_{2}$.
-  %
-  %\noindent
-%  In any case, $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$ and $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$ hold, and $q^{\prime}_{2}$ contains at least one variable symbol. Therefore, from Theorem~\ref{Sato1:Lemma9}, $p \preceq q$ holds. It contradicts the assumption. Similarly, we can show that in every case $(A, B, C) = (y_{1}a, dy_{2}, y_{3}c)$, $(y_{3}c, y_{1}a, dy_{2})$, $(y_{3}c, dy_{2}, y_{1}a)$ of (b-1), it results in a contradiction from Theorem~\ref{Sato1:Lemma9}.
-%
-%  In the same way, in the cases (b2)--(b5) and also in all cases of (c), the contradiction is derived from Theorem 2.
-%  From this, the cases (b) and (c) are not possible. 
-  %
   Therefore, in the following, we consider only the case of (a).
 
   Since $p \{ x := xy \} \not \preceq q$, the regular pattern $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $w, w^{\prime}$ either an empty string or a regular pattern on $\Sigma\cup X$.
@@ -169,45 +150,16 @@
   \smallskip
 
   From \textit{Claim} 3, $w$ and $w'$ are strings consisting of symbols in $\Sigma$. Note that from (1') and (2'), $wbcw^{\prime}d$ and $w^{\prime}d$ are prefixes of $p_{2}$, and from (2) and (3), $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$.
-
-  If $|w|=|w^{\prime}|$, then $c=a$ holds.
-  It contradicts the condition $c \not = a$.
-  
-  If $|w|=|w^{\prime}|+1$, then $b = a$ holds.
-  It contradicts the condition $b \not = a$.
-  
+  If $|w|=|w^{\prime}|$, then $b = d$ and $a = c$ hold.
+%  It contradicts the conditions $b \not\in \{a,d\}$ and $c \not\in \{a, d\}$.
+  If $|w|=|w^{\prime}|+1$, then $a = b$ holds.
+%  It contradicts the condition $b \not = a$.
   If $|w| = |w^{\prime}|+2$, since $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$, and since $|w|\geq 2$, $a$ is a suffix of $w$.
   From (1') and (2'), since $wbcw^{\prime}d$ and $w^{\prime}d$ are prefixes of $p_{2}$, we have $w=w^{\prime}da$.
   Since $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$, we have $w=bcw^{\prime}$.
-  Therefore, $w^{\prime}da = bcw^{\prime}$ holds. We show the next claim:
-
-  \smallskip
-
-  \noindent
-  \textit{Claim} 4.
-  Let $w^{\prime}$ be a string of constant symbols in $\Sigma$ and $a,b,c,d$ constant symbols in $\Sigma$.
-  Then, if $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$, then $w^{\prime}da \not = bcw^{\prime}$ holds.
-  %\end{cl}
-
-  \smallskip
+  Thus, $w^{\prime}da = bcw^{\prime}$ holds. 
+  From Proposition~\ref{prop:repstring_base}, $a = b$ and $c = d$ hold. Threfore, these cases contradict the conditions $b \not\in \{a,d\}$ and $c \not\in \{a, d\}$.
   
-  \noindent
-  \textit{Proof of Claim} 4.
-  When $|w^{\prime}| = 0, 1, 2, 3$, it is easy to see that $w^{\prime}da=bcw^{\prime}$ does not satisfy the conditions $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$. Therefore, $w^{\prime}da \not= bcw^{\prime}$ holds.
-  Let $n = |w^{\prime}|$.
-  When $n \ge 4$, we assume that for any string $w^{\prime\prime}$ with $|w^{\prime\prime}|<n$, if $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$, $w^{\prime\prime}da \not =bcw^{\prime\prime}$ holds.
-  Since the string $w^{\prime}$ has a prefix $bc$ and a suffix $da$, there exists a string $w^{\prime\prime}$ with $|w^{\prime\prime}| \geq 0$ such that $w^{\prime}=bcw^{\prime\prime}da$ holds.
-  Since $w^{\prime}da=bcw^{\prime\prime}dada$ and $bcw^{\prime}=bcbcw^{\prime\prime}da$, if $w^{\prime}da = bcw^{\prime}$ holds, we have $bcw^{\prime\prime}dada=bcbcw^{\prime\prime}da$.
-  Then we conclude that $w^{\prime\prime}da=bcw^{\prime\prime}$.
-  It contradicts the induction hypothesis. Thus, $w^{\prime}da \not= bcw^{\prime}$ holds.
-  From the above, for any string $w^{\prime}$ with $|w^{\prime}| \geq 0$, if $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$, $w^{\prime}da \not =bcw^{\prime}$ holds.
-  (\textit{End of Proof of Claim})
-  
-  \smallskip
-
-  \noindent
-  Thus, the case of $|w|=|w^{\prime}|+2$ contradicts \textit{Claim} 4. 
-
   If $|w| \ge |w^{\prime}|+3$, from (2) and (3), there exists a string $w^{\prime\prime}$ of length $|w|-|w^{\prime}|-2$ such that $w=w^{\prime\prime}bcw^{\prime}$ holds.
   Moreover, from (2) and (3), since $|aw| < |wbcw^{\prime}|$ and $aw = aw^{\prime\prime}bcw^{\prime}$, $aw^{\prime\prime}$ is a suffix of $w$.
   On the other hand, from (1') and (2'), $w^{\prime}d$ is a prefix of $w$.
@@ -466,8 +418,6 @@ Therefore, $c=d$. This contradicts the fact that $c \not = d$.
 \end{proof}
 
 When the conditions of both Lemmas \ref{追加部分} and \ref{片方} are not satisfied, counterexamples exist as follows:
-
-\newtheorem{prop}{Proposition}
 
 \begin{prop}\label{両方}
   Let $\Sigma$ be an alphabet with $\sharp \Sigma \ge 3$.
