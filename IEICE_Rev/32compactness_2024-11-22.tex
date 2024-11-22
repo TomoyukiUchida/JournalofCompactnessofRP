@@ -3,41 +3,159 @@
 %\smallskip
 %\hfill Edited by Takayoshi Shoudai on 2024-05-18 (2nd version), 2024-10-30 (3rd version).
 \newtheorem{prop}{Proposition}
+\newcommand{\pair}[2]{(#1,#2)}
+%\newcommand{\pair}[2]{#1#2}
+\newcommand{\TheConditionA}{$b \not\in \{a,d\}$ and $c \not\in \{a,d\}$}
+%\newcommand{\TheConditionA}{$bc \not\in \{aa, ad, da, dd\}$}
+\newcommand{\TheConditionB}{$b \not\in \{d\} \mbox{~and~}c \not\in \{a,d\}$}
+%\newcommand{\TheConditionB}{$bc \not\in \{da, dd\}$}
+\newcommand{\TheConditionC}{$b \not\in \{a, d\} \mbox{~and~} c \not\in \{a\}$}
+%\newcommand{\theconditionC}{$bc \not\in \{aa, da\}$}
+
+
+\begin{prop}\label{prop:repstring_origin}
+  Let $w$ be a string of constant symbols in $\Sigma$ and $a,b$ constant symbols in $\Sigma$.
+  If
+  \begin{align}
+  wa & = bw\label{eq:repstring_origin}
+  \end{align}
+  holds, then $a = b$ holds.
+\end{prop}
+
+\begin{proof}
+If $|w|=0$ or $1$, it is trivial. We assume that for a string of constant symbols $u$ with $|u| < |w|$, if $ua = bu$ then $a = b$ holds. When $|w| \geq 2$, since $b$ is a prefix of $w$, there exists a string of constant symbols $u$ such that $w = bu$. From $bua = bbu$, we have $ua = bu$. Thus, from the assumption, we have $a = b$.  
+\end{proof}
 
 \begin{prop}\label{prop:repstring_base}
 Let $w$ be a string of constant symbols in $\Sigma$ and $a,b,c,d$ constant symbols in $\Sigma$.
 If
 \begin{align}
-wda & = bcw\label{prop:repstring_base_eq}
+wda & = bcw\label{eq:repstring_base}
 \end{align}
-holds, $a = b$ and $c = d$ hold.
+holds, then $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$ hold.
 \end{prop}
 
 \begin{proof}
-For $i=1,\ldots,|w|$, we refer the $i$-th symbol of $w$ as $w[i - 1]$.
-\begin{enumerate}
-\item If $|w| = 0$, eq.\ref{prop:repstring_base_eq} becomes $da = bc$. Thus, $a = b$ and $c = d$ hold.
-\item If $|w| = 1$, from $w[0]da = bcw[0]$, we have $w[0] = b$, $d = c$, and $a = w[0]$. Thus, $a = b$ and $c = d$ hold.
-\item If $|w| = 2$, from $w[0]w[1]da = bcw[0]w[1]$, we have $w[0] = b$, $w[1] = c$, $d = w[0]$, $a = w[1]$. Thus, $a = b$ and $c = d$ hold.
-\item If $|w| = 3$, from $w[0]w[1]w[2]da = bcw[0]w[1]w[2]$, we have $w[0] = b$, $w[1] = c$, $w[2] = w[0]$, $d = w[1]$, $a = w[2]$. Thus, $a = b$ and $c = d$ hold.
-\item Let $n = |w|$. When $n \ge 4$, we assume that for any string $w^{\prime}$ with $|w^{\prime}|<n$, if $w^{\prime}da = bcw^{\prime}$ holds, $a = b$ and $c = d$ hold.
-Since the string $w$ has a prefix $bc$ and a suffix $da$, there exists a string $w^{\prime}$ with $0 \leq |w^{\prime}| \leq n - 4$ such that $w = bcw^{\prime}da$ holds.
-Since $wda = bcw^{\prime}dada$ and $bcw = bcbcw^{\prime}da$, if $wda = bcw$ holds, we have $w^{\prime}da = bcw^{\prime}$. Thus, from the assumption, we get $a = b$ and $c = d$.
-\end{enumerate}
+  We will prove this proposition by an induction on $|w|$.
+  For $i=1,\ldots,|w|$, we refer the $i$-th symbol of $w$ as $w[i - 1]$. 
+  \begin{enumerate}
+  \item[(i)] $|w| = 0$: Directly from Eq.~(\ref{eq:repstring_base}), $\pair{b}{c} = \pair{d}{a}$ holds.
+  \item[(ii)] $|w| = 1$: From $w[0]da = bcw[0]$, we have $w[0] = b$, $d = c$, and $a = w[0]$. Thus, $\pair{b}{c} = \pair{a}{d}$ holds.
+  \item[(iii)] $|w| = 2$: From $w[0]w[1]da = bcw[0]w[1]$, we have $w[0] = b$, $w[1] = c$, $d = w[0]$, $a = w[1]$. Thus, $\pair{b}{c} = \pair{d}{a}$ holds.
+  \item[(iv)] $|w| = 3$: From $w[0]w[1]w[2]da = bcw[0]w[1]w[2]$, we have $w[0] = b$, $w[1] = c$, $w[2] = w[0]$, $d = w[1]$, $a = w[2]$. Thus, $\pair{b}{c} = \pair{a}{d}$ holds.
+  \item[(v)] $|w| \ge 4$: We assume that for any string $u$ with $0\leq |u| < n$, if $uda = bcu$ holds, $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$ hold. Since the string $w$ has a prefix $bc$ and a suffix $da$, there exists a string $u$ with $|u| = |w| - 4 < |w|$ such that $w = bcuda$ holds. Since $wda = bcw$, we have $bcudada = bcbcuda$, and then $uda = bcu$. Thus, from the assumption, we get $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$.
+  \end{enumerate}
+From the above, we conclude that if $wda = bcw$ holds, then $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$ hold.
 \end{proof}
+
+The conclusion from Proposition~\ref{prop:repstring_base} shows that $\pair{a}{d} = \pair{b}{c}$ or $\pair{a}{d} = \pair{c}{b}$. Therefore, if the equation $daw = wbd$ holds, we arrive at the same conclusion.
+
+\begin{prop}\label{prop:repstring}
+Let $w,w^{\prime}$ be strings of constant symbols in $\Sigma$ and $a,b,c,d$ constant symbols in $\Sigma$.
+If
+\begin{align}
+  wdaw^{\prime} & = w^{\prime}bcw\label{eq:repstring}
+\end{align}
+holds, then $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$ hold.\label{prop:repstring_eq}
+\end{prop}
+
+\begin{proof}
+We will prove this proposition by an induction on $|w| + |w^{\prime}|$.
+Without loss of generality, we assume that $|w| \geq |w^{\prime}|$, because if $|w| > |w^{\prime}|$ holds, we arrive at the same conclusion: $\pair{a}{d} = \pair{b}{c}$ or $\pair{a}{d} = \pair{c}{b}$.
+\begin{enumerate}
+  \item[(i)] $|w| \geq 0$ and $|w^{\prime}|=0$:
+  Eq.~(\ref{eq:repstring}) becomes $wda = bcw$. From Proposition~\ref{prop:repstring_base}, $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$ hold.
+\end{enumerate}
+We assume that for constant strings $u$ and $u^{\prime}$ with $|u| + |u^{\prime}| < |w| + |w^{\prime}|$, if $udau^{\prime} = u^{\prime}bcu$ holds, then $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$ hold.
+We partition the relations between $|w|$ and $|w^{\prime}|$ into the following four parts:
+\begin{enumerate}
+\item[(ii)] $0 < |w^{\prime}| \le |w| \le |w^{\prime}|+1$:
+When either $|w|=|w^{\prime}|$ or $|w|=|w^{\prime}|+1$, Eq.~(\ref{eq:repstring}) is depicted as shown in Figs.~\ref{追加部分7} and \ref{追加部分8}, respectively.
+It When $|w|=|w^{\prime}|$, $\pair{b}{c} = \pair{d}{a}$ holds. When $|w|=|w^{\prime}|+1$, $a = c$ and $w = w^{\prime}b = dw^{\prime}$ hold.
+From Proposition~\ref{prop:repstring_origin}, we get $b = d$.
+Therefore, $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$ hold.
+%
+\item[(iii)] $|w^{\prime}|+2 \le |w| \le 2|w^{\prime}| - 1$:
+On Eq.~\ref{eq:repstring}, since $|wdaw^{\prime}| = |w^{\prime}bcw| = |w| + |w^{\prime}| + 2$, a suffix of $w$ overlaps with a prefix of $w$ as shown in Fig.~\ref{w1+3}.
+That is, there exists a constant string $u$ of length $2|w| - (|w| + |w^{\prime}| + 2) = |w| - |w^{\prime}| - 2$ such that $u$ is a prefix and a suffix of $w$.
+Since $uda$ is of length $|w| - |w^{\prime}|$, $uda$ is also a prefix of $w$. Similarly, $bcu$ is also a suffix of $w$.
+Since $|w| - (|uda| + |bcu|) = 2|w| - |w^{\prime}| \ge 1$, there exist a constant string $u^{\prime}$ of length $2|w^{\prime}| - |w|$ such that $w = udavbcu$ holds.
+Since $w^{\prime}$ is a suffix of $w$ and $|u^{\prime}bcu| = (2|w^{\prime}| - |w|) + 2 + (|w| - |w^{\prime}| - 2) = |w^{\prime}|$, we have $w^{\prime} = u^{\prime}bcu$.
+Similarly, we have $w^{\prime} = udau^{\prime}$. Thus, we have a new equation $u^{\prime}bcu = udau^{\prime}$.
+Since $|u| = |w| - |w^{\prime}| - 2 \leq |w| - 3 < |w|$ and $|u^{\prime}| = 2|w^{\prime}| - |w| < |w|$, i.e., $|u| + |u^{\prime}| < |w| + |w^{\prime}|$ holds, from the induction hypothesis on $|u| + |u^{\prime}|$, $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$ hold.
+%
+\item[(iv)] $2|w^{\prime}| \le |w| \le 2|w^{\prime}|+3$:
+When $|w|=2|w^{\prime}|$, we easily see that $w = w^{\prime}w^{\prime}$.
+Therefore, $w^{\prime}da = bcw^{\prime}$ holds as shown in Fig.~\ref{追加部分14}. From Proposition~\ref{prop:repstring_base}, $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$ hold.
+When $|w|=2|w^{\prime}|+i$ ($i=1,2,3$), Eq.~(\ref{eq:repstring}) is depicted as shown in Figs.~\ref{追加部分13}, \ref{追加部分12}, and \ref{追加部分11}.
+When $|w|=2|w^{\prime}|+2$, trivially we have $\pair{b}{c} = \pair{d}{a}$. 
+When $|w|=2|w^{\prime}|+1$ and $|w|=2|w^{\prime}|+3$, from Proposition~\ref{prop:repstring_origin}, $\pair{b}{c} = \pair{a}{d}$ holds.
+%
+\item[(v)] $2|w^{\prime}|+4 \leq |w|$:
+Since the strings $w^{\prime}bc$ and $adw^{\prime}$ are a prefix and a suffix of $w$, respectively, and $|w^{\prime}bc| + |adw^{\prime}| = 2|w^{\prime}| + 4$, there exists a string $u$ with $|u| \geq 0$ such that $w = w^{\prime}bcudaw^{\prime}$ holds.
+From Eq.~(\ref{eq:repstring}), $w^{\prime}bcudaw^{\prime}daw^{\prime} = w^{\prime}bcw^{\prime}bcudaw^{\prime}$, i.e., $udaw^{\prime} = w^{\prime}bcu$ holds as shown in Fig.~\ref{2w1+5}.
+Let $u^{\prime} = w^{\prime}$.
+Since $|u| + |u^{\prime}| = |w|- (2|w^{\prime}| + 4) + |w^{\prime}| < |w| + |w^{\prime}|$, from the induction hypothesis on $|u| + |u^{\prime}|$, $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$ hold.
+\end{enumerate}
+From the above, we conclude that if $wdaw^{\prime} = w^{\prime}bcw$, then $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$ hold.
+\end{proof}
+
+\begin{figure}[t]
+\begin{center}
+  \includegraphics[scale=0.45]{figs/w=w_1.eps}
+  \caption{Subcase $|w^{\prime}| = |w^{\prime\prime}|$ of (ii) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{追加部分7}
+  \bigskip
+  \includegraphics[scale=0.45]{figs/w=w_1+1.eps}
+  \caption{Subcase $|w^{\prime}| = |w^{\prime\prime}| + 1$ of (ii) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{追加部分8}
+  %\includegraphics[scale=0.35]{figs/w=w_1+2.png}
+  %\caption{Subcase $|w^{\prime}| = |w^{\prime\prime}| + 2$ of (ii) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{追加部分9}
+\end{center}
+\end{figure}
+
+\begin{figure}[t]
+\begin{center}
+  \includegraphics[scale=0.45]{figs/w=w_1+2.eps}
+  \caption{Case $|w^{\prime\prime}| + 2 \le |w^{\prime}| \le 2|w^{\prime\prime}| - 1$ of (iii) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{w1+3}
+\end{center}
+\end{figure}
+
+\begin{figure}[t]
+\begin{center}
+  \includegraphics[scale=0.45]{figs/w=2w_1.eps}
+  \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}|$ of (iv) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{追加部分14}
+  \bigskip
+  \includegraphics[scale=0.45]{figs/w=2w_1+1.eps}
+  \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}| + 1$ of (iv) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{追加部分13}
+  \bigskip
+  \includegraphics[scale=0.45]{figs/w=2w_1+2.eps}
+  \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}| + 2$ of (iv) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{追加部分12}
+  \bigskip
+  \includegraphics[scale=0.45]{figs/w=2w_1+3.eps}
+  \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}| + 3$ of (iv) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{追加部分11}
+  %\includegraphics[scale=0.35]{figs/w=2w_1+4.png}
+  %\caption{$|w| = 2|w_{1}|+4$における定数記号列}\label{追加部分10}
+\end{center}
+\end{figure}
+
+\begin{figure}[t]
+\begin{center}
+  \includegraphics[scale=0.45]{figs/w=2w_1+4.eps}
+  \caption{Case $2|w^{\prime\prime}| + 4 \leq |w^{\prime}|$ of (v) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{2w1+5}
+\end{center}
+\end{figure}
 
 \begin{lem}\label{追加部分}
   Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and $p,~q$ regular patterns on $\Sigma\cup X$.
   Let $D$ be the following set of regular patterns on $\Sigma\cup X$.
   Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$:
   \begin{enumerate}
-  \item[] $D = \{ ya, bc, dy \}$ $(b \not\in \{a,d\}$ and $c \not\in \{a,d\})$.
+  \item[] $D = \{ ya, bc, dy \}$ (\TheConditionA).
   \end{enumerate}
 \end{lem}
 
   \begin{proof}
   It is obvious if no variable symbol appears in $p$.
-  Thus, for a variable symbol $x\in X$, let $p=p_{1}xp_{2}$, where $p_{1}, p_{2}$ are regular patterns on $\Sigma\cup X$.
+  Thus, for a variable symbol $x\in X$, let $p=p_{1}xp_{2}$, where each $p_{i}$ ($i=1,2$) is a regular pattern on $\Sigma\cup X$ or an empty symbol.
   We assume that $p \{ x := xy \} \not \preceq q$ in order to derive the contradiction.
 
   Since $p \{ x := r \} \preceq q$ for all $r \in D$, there are three strings of length $2$ corresponding to $ya, bc, dy$ in $q$.
@@ -52,19 +170,18 @@ Since $wda = bcw^{\prime}dada$ and $bcw = bcbcw^{\prime}da$, if $wda = bcw$ hold
     \end{tabular}
   \end{center}
 
-  %First of all, we show that the cases (b) and (c) are not possible.
   Suppose that there exists (b) $y_{3}c$ in $q$ that corresponds to $bc$ in $p\{x:=bc\}$, i.e., there exist regular patterns $q_{1}$ and $q_{2}$ such that (1) $p_{1}bcp_{2} \preceq q_{1}y_{3}cq_{2}$, (2) either $p_{1} \preceq q_{1}$ or $p_{1} \preceq q_{3}y_{3}^{\prime}$ for some variable symbol $y_{3}^{\prime}\in X$, and (3) $p_{2} \preceq q_{2}$.
   In this case, it is easy to see that $p\{x:=yc\} = p_{1}ycp_{2} \preceq q_{1}y_{3}cq_{2}$ also holds. Thus, both $p\{x:=ya\}\preceq q$ and $p\{x:=yc\}\preceq q$ hold. Since $c\not= a$, from (ii) of Lemma \ref{two_variables}, $p\{x:=xy\}\preceq q$ holds. This contradicts the assumption. Similarly, the case (c) derives a contradiction from (i) of Lemma \ref{two_variables}.
   Therefore, in the following, we consider only the case of (a).
 
-  Since $p \{ x := xy \} \not \preceq q$, the regular pattern $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $w, w^{\prime}$ either an empty string or a regular pattern on $\Sigma\cup X$.
+  Since $p \{ x := xy \} \not \preceq q$ and the condition \TheConditionA, the regular pattern $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $q_{1}, q_{2}, w, w^{\prime}$ either an empty string or a regular pattern on $\Sigma\cup X$.
   \begin{enumerate}
   \item[(a1)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a,bc,dy_{2} \}$.
   \item[(a2)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ dy_{1}a,bc \}$.
   \item[(a3)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ay_{2},bc \}$ ($a = d$).
   \end{enumerate}
   
-  Firstly, we will prove that for the case (a1), $p \{ x := xy \} \preceq q$ holds.
+  Firstly, we will consider the case (a1).
 
   \smallskip
 
@@ -85,7 +202,7 @@ Since $wda = bcw^{\prime}dada$ and $bcw = bcbcw^{\prime}da$, if $wda = bcw$ hold
   When $p_{2} \preceq wy_{1}aw^{\prime}bcq_{2}$ of (1') holds, let $q^{\prime}_{1}=q_{1}dy_{2},~q^{\prime}_{2}=wy_{1}aw^{\prime},~q^{\prime}_{3}=bcq_{2}$. Since $p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}$ holds from (3), $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$ and $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$ hold and $q_{2}^{\prime}$ contains a variable symbol.
   %
   When $p_{2} \preceq y_{2}^{\prime}wy_{1}aw^{\prime}bcq_{2}$ of (1') holds, let $q^{\prime}_{1}=q_{1}d,~q^{\prime}_{2}=y_{2}wy_{1}aw^{\prime},~q^{\prime}_{3}=bcq_{2}$. Since $p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}$ holds from (3), $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$ and $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$ hold and $q_{2}^{\prime}$ contains a variable symbol.
-  In both cases, from Theorem~\ref{Sato1:Lemma9}, $p \preceq q$ holds. It contradicts the assumption.
+  In both cases, from Theorem~\ref{Sato1:Lemma9}, $p \preceq q$ holds. It contradicts the assumption that $p \{ x := xy \} \not \preceq q$.
 
   Similarly, we can show that any case of $(A, B, C) = (y_{1}a, dy_{2}, bc)$, $(bc, y_{1}a, dy_{2})$, $(bc, dy_{2}, y_{1}a)$ contradicts the assumption.
   %
@@ -107,28 +224,19 @@ Since $wda = bcw^{\prime}dada$ and $bcw = bcbcw^{\prime}da$, if $wda = bcw$ hold
   \textrm{(3)}~& p_{1} \preceq q_{1}dy_{2}wbcw^{\prime}\mbox{ or} & \textrm{(3')}~& p_{2} \preceq q_{2}\\
   & p_{1} \preceq q_{1}dy_{2}wbcw^{\prime}y_{1}^{\prime}& &
   \end{align*}
-  %
-  %When $p_{1} \preceq q_{1}dy_{2}wbcw^{\prime}y_{1}^{\prime}$ of (3) and $p_{2} \preceq y_{2}^{\prime}wbcw^{\prime}y_{1}aq_{2}$ of (1') hold, let $q^{\prime}_{1}=q_{1}d,~q^{\prime}_{2}=y_{2}wbcw^{\prime}y_{1},~q^{\prime}_{3}=aq_{2}$.
-  %
-  %When $p_{1} \preceq q_{1}dy_{2}wbcw^{\prime}$ of (3) and $p_{2} \preceq y_{2}^{\prime}wbcw^{\prime}y_{1}aq_{2}$ of (1') hold, let $q^{\prime}_{1}=q_{1}d$, $q^{\prime}_{2}=y_{2}wbcw^{\prime}$, $q^{\prime}_{3}=y_{1}aq_{2}$.
-  %
-  %When $p_{1} \preceq q_{1}dy_{2}wbcw^{\prime}y_{1}^{\prime}$ of (3) and $p_{2} \preceq wbcw^{\prime}y_{1}aq_{2}$ of (1') hold, let $q^{\prime}_{1}=q_{1}dy_{2}$, $q^{\prime}_{2}=wbcw^{\prime}y_{1}$, $q^{\prime}_{3}=aq_{2}$. 
-  %
-  %These imply $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$, $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$, and $q_{2}^{\prime}$ contains a variable symbol. In these three cases, from Theorem~\ref{Sato1:Lemma9}, $p \preceq q$ holds. It contradicts the assumption.
-  %
-  %We suppose that $p_{2} \preceq wbcw^{\prime}y_{1}aq_{2}$ of (1') hold.
+ %
   From $p_{1} \preceq q_{1}dy_{2}w$ of (2), for some $p^{\prime}_{1}$ and $p^{\prime\prime}_{1}$, $p_{1}$ is expressed as $p^{\prime}_{1}p^{\prime\prime}_{1}$, where $p^{\prime}_{1} \preceq q_{1}d$ and $p^{\prime\prime}_{1} \preceq y_{2}w$. 
-  When $p_{2} \preceq wbcw^{\prime}y_{1}aq_{2}$ of (1'), we have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xwbcw^{\prime}y_{1}aq_{2}=q \{ y_{2}:=p^{\prime\prime}_{1}x \}$. Thus, $p \{ x := xy \} \preceq q \{ y_{2}:=p^{\prime\prime}_{1}xy \}$ holds. It contradicts the assumption.
+  When $p_{2} \preceq wbcw^{\prime}y_{1}aq_{2}$ of (1'), we have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xwbcw^{\prime}y_{1}aq_{2}=q \{ y_{2}:=p^{\prime\prime}_{1}x \}$. Thus, $p \{ x := xy \} \preceq q \{ y_{2}:=p^{\prime\prime}_{1}xy \}$ holds. It contradicts the assumption that $p \{ x := xy \} \not \preceq q$.
   %
   When $p_{2} \preceq y_{2}^{\prime}wbcw^{\prime}y_{1}aq_{2}$ of (1'), we have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xy_{2}^{\prime}wbcw^{\prime}y_{1}aq_{2}=q \{ y_{2}:=p^{\prime\prime}_{1}xy_{2}^{\prime} \}$.
-  Thus, $p \{ x := xy \} \preceq q \{ y_{2}:=p^{\prime\prime}_{1}xyy_{2}^{\prime} \}$ holds. It contradicts the assumption.
+  Thus, $p \{ x := xy \} \preceq q \{ y_{2}:=p^{\prime\prime}_{1}xyy_{2}^{\prime} \}$ holds. It also contradicts the assumption.
   %
   Therefore, we have $(A, B, C) = (y_{1}a, bc, dy_{2})$.
   (\textit{End of Proof of Claim})
 
   \smallskip
 
-  From \textit{Claim} 2, $q$ is expressed as $q_{1}y_{1}awbcw^{\prime}dy_{2}q_{2}$, where $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$.
+  From \textit{Claim} 2, $q$ is expressed as $q_{1}y_{1}awbcw^{\prime}dy_{2}q_{2}$, where \TheConditionA.
   If $p \{ x := xy \} \not \preceq q$ holds, we have the following conditions:
   for $y_{1}^{\prime},y_{2}^{\prime}\in X$,
   \begin{align*}
@@ -149,139 +257,24 @@ Since $wda = bcw^{\prime}dada$ and $bcw = bcbcw^{\prime}da$, if $wda = bcw$ hold
 
   \smallskip
 
-  From \textit{Claim} 3, $w$ and $w'$ are strings consisting of symbols in $\Sigma$. Note that from (1') and (2'), $wbcw^{\prime}d$ and $w^{\prime}d$ are prefixes of $p_{2}$, and from (2) and (3), $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$.
-  If $|w|=|w^{\prime}|$, then $b = d$ and $a = c$ hold.
-%  It contradicts the conditions $b \not\in \{a,d\}$ and $c \not\in \{a, d\}$.
-  If $|w|=|w^{\prime}|+1$, then $a = b$ holds.
-%  It contradicts the condition $b \not = a$.
+  From \textit{Claim} 3, $w$ and $w'$ are strings consisting of symbols in $\Sigma$. From (1') and (2'), $wbcw^{\prime}d$ and $w^{\prime}d$ are prefixes of $p_{2}$, and from (2) and (3), $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$.
+  From these facts, if $|w|=|w^{\prime}|$, $b = d$ and $a = c$ hold, and if $|w|=|w^{\prime}|+1$, $a = b$ holds.
   If $|w| = |w^{\prime}|+2$, since $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$, and since $|w|\geq 2$, $a$ is a suffix of $w$.
   From (1') and (2'), since $wbcw^{\prime}d$ and $w^{\prime}d$ are prefixes of $p_{2}$, we have $w=w^{\prime}da$.
   Since $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$, we have $w=bcw^{\prime}$.
-  Thus, $w^{\prime}da = bcw^{\prime}$ holds. 
-  From Proposition~\ref{prop:repstring_base}, $a = b$ and $c = d$ hold. Threfore, these cases contradict the conditions $b \not\in \{a,d\}$ and $c \not\in \{a, d\}$.
-  
-  If $|w| \ge |w^{\prime}|+3$, from (2) and (3), there exists a string $w^{\prime\prime}$ of length $|w|-|w^{\prime}|-2$ such that $w=w^{\prime\prime}bcw^{\prime}$ holds.
+  Thus, $w^{\prime}da = bcw^{\prime}$ holds.
+  From Proposition~\ref{prop:repstring_base}, $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$ hold.
+  Therefore, these cases contradict the conditions \TheConditionA.
+  From (2) and (3), if $|w| \ge |w^{\prime}|+3$, there exists a string $w^{\prime\prime}$ of length $|w|-|w^{\prime}|-2$ such that $w=w^{\prime\prime}bcw^{\prime}$ holds.
   Moreover, from (2) and (3), since $|aw| < |wbcw^{\prime}|$ and $aw = aw^{\prime\prime}bcw^{\prime}$, $aw^{\prime\prime}$ is a suffix of $w$.
   On the other hand, from (1') and (2'), $w^{\prime}d$ is a prefix of $w$.
-  Since $|w^{\prime}d| + |aw^{\prime\prime}| = |w^{\prime}| + |w^{\prime\prime}| + 2 = |w|$, we have $w=w^{\prime}daw^{\prime\prime}$.
-  Therefore, $w^{\prime}daw^{\prime\prime} = w^{\prime\prime}bcw^{\prime}$ holds.
+  Since $|w^{\prime}d| + |aw^{\prime\prime}| = |w^{\prime}| + |w^{\prime\prime}| + 2 = |w|$, we have $w=w^{\prime}daw^{\prime\prime}$. Therefore, $w^{\prime}daw^{\prime\prime} = w^{\prime\prime}bcw^{\prime}$ holds.
+  From Proposition~\ref{prop:repstring}, we have $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$.
+  It contradicts the conditions \TheConditionA.
+
+  From the above, we conclude that all cases of (a1) contradict the assertion that $p\{x := xy\} \not\preceq q$ and that \TheConditionA.
   
-  \smallskip
-  
-  \noindent
-  \textit{Claim} 5.
-  Let $w^{\prime},w^{\prime\prime}$ be strings of constant symbols in $\Sigma$ and $a,b,c,d$ constant symbols in $\Sigma$.
-  Then, if $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$, then $w^{\prime}daw^{\prime\prime} \not = w^{\prime\prime}bcw^{\prime}$ holds.
-
-  \smallskip
-  
-  \noindent
-  \textit{Proof of Claim} 5.
-  We assume that the following equation holds:
-  \begin{equation}
-  w^{\prime}daw^{\prime\prime} = w^{\prime\prime}bcw^{\prime}\label{eq:claim2}
-  \end{equation}
-  We prove this claim by an induction on $|w^{\prime}| + |w^{\prime\prime}|$.
-  W.l.o.g., we suppose that $|w^{\prime}| \geq |w^{\prime\prime}|$ holds.
-  \begin{enumerate}
-    \item[(i)] $|w^{\prime}| \geq 0$ and $|w^{\prime\prime}|=0$:
-    We have $w^{\prime}da = bcw^{\prime}$ ($b \not\in \{a,d\}$ and $c \not\in \{a,d\}$).
-    It contradicts \textit{Claim} 4.
-  \end{enumerate}
-  We assume that for constant strings $u$ and $v$ with $|u| + |v| < |w^{\prime}| + |w^{\prime\prime}|$, $vbcu \not= udav$ holds.
-  We partition the relations between $|w^{\prime}|$ and $|w^{\prime\prime}|$ into the following four parts:
-  \begin{enumerate}
-  \item[(ii)] $0 < |w^{\prime\prime}| \le |w^{\prime}| \le |w^{\prime\prime}|+1$:
-  When either $|w^{\prime}|=|w^{\prime\prime}|$ or $|w^{\prime}|=|w^{\prime\prime}|+1$, Eq.~\ref{eq:claim2} is depicted as shown in Figs.~\ref{追加部分7}, \ref{追加部分8}. Trivially, these cases contradict the conditions $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$.
-  %When $|w^{\prime}|=|w^{\prime\prime}|+2$, Eq.~\ref{eq:claim2} can be written as shown in Fig.~\ref{追加部分9}. This implies $w^{\prime}=w^{\prime\prime}bc=daw^{\prime\prime}$, and then contradicts \textit{Claim} 1.
-  \item[(iii)] $|w^{\prime\prime}|+2 \le |w^{\prime}| \le 2|w^{\prime\prime}| - 1$:
-  On Eq.~\ref{eq:claim2}, since $|w^{\prime}daw^{\prime\prime}| = |w^{\prime\prime}bcw^{\prime}| = |w^{\prime}| + |w^{\prime\prime}| + 2$, a suffix of $w^{\prime}$ overlaps with a prefix of $w^{\prime}$ as shown in Fig.~\ref{w1+3}. That is, there exists a constant string $u$ of length $2|w^{\prime}| - (|w^{\prime}| + |w^{\prime\prime}| + 2) = |w^{\prime}| - |w^{\prime\prime}| - 2$ such that $u$ is a prefix and a suffix of $w^{\prime}$.
-  Since $uda$ is of length $|w^{\prime}| - |w^{\prime\prime}|$, $uda$ is also a prefix of $w^{\prime}$. Similarly, $bcu$ is also a suffix of $w^{\prime}$.
-  Since $|w^{\prime}| - (|uda| + |bcu|) = 2|w^{\prime\prime}| - |w^{\prime}| \ge 1$, there exist a constant string $v$ of length $2|w^{\prime\prime}| - |w^{\prime}|$ such that $w^{\prime} = udavbcu$ holds. Since $w^{\prime\prime}$ is a suffix of $w^{\prime}$ and $|vbcu| = (2|w^{\prime\prime}| - |w^{\prime}|) + 2 + (|w^{\prime}| - |w^{\prime\prime}| - 2) = |w^{\prime\prime}|$, we have $w^{\prime\prime} = vbcu$. Similarly, we have $w^{\prime\prime} = udav$. Thus, we have a new equation $vbcu = udav$.
-  Since $|u| = |w^{\prime}| - |w^{\prime\prime}| - 2 \leq |w^{\prime\prime}| - 3 < |w^{\prime\prime}|$ and $|v| = 2|w^{\prime\prime}| - |w^{\prime}| < |w^{\prime}|$, i.e., $|u| + |v| < |w^{\prime}| + |w^{\prime\prime}|$ holds, it contradicts the induction hypothesis on $|u| + |v|$. Therefore, the claim holds.
-  \item[(iv)] $2|w^{\prime\prime}| \le |w^{\prime}| \le 2|w^{\prime\prime}|+3$:
-  When $|w^{\prime}|=2|w^{\prime\prime}|$, we easily see that $w^{\prime} = w^{\prime\prime}w^{\prime\prime}$.
-  Therefore, $w^{\prime\prime}da = bcw^{\prime\prime}$ holds as shown in Fig.~\ref{追加部分14}.
-  It contradicts \textit{Claim} 3.
-  When $|w^{\prime}|=2|w^{\prime\prime}|+i$ ($i=1,2,3$), Eq.~\ref{eq:claim2} is depicted as shown in Figs.~\ref{追加部分13}, \ref{追加部分12}, and \ref{追加部分11}. Trivially, these cases contradict the conditions $b \not\in \{a,d\}$ and $c \not\in \{a,d\}$.
-  \item[(v)] $2|w^{\prime\prime}|+4 \leq |w^{\prime}|$:
-  Since the strings $w^{\prime\prime}bc$ and $adw^{\prime\prime}$ are a prefix and a suffix of $w^{\prime}$, respectively, and $|w^{\prime\prime}bc| + |adw^{\prime\prime}| = 2|w^{\prime\prime}| + 4$, there exists a string $u$ with $|u| \geq 0$ such that $w^{\prime} = w^{\prime\prime}bcudaw^{\prime\prime}$ holds. From Eq.~\ref{eq:claim2}, $w^{\prime\prime}bcudaw^{\prime\prime}daw^{\prime\prime} = w^{\prime\prime}bcw^{\prime\prime}bcudaw^{\prime\prime}$, i.e., $udaw^{\prime\prime} = w^{\prime\prime}bcu$ holds as shown in Fig.~\ref{2w1+5}.
-  Let $v = w^{\prime\prime}$.
-  Since $|u| + |v| = |w^{\prime}|- (2|w^{\prime\prime}| + 4) + |w^{\prime\prime}| < |w^{\prime}| + |w^{\prime\prime}|$, it contradicts the induction hypothesis on $|u| + |v|$. Therefore, the claim holds.
-  \end{enumerate}
-  From the above, we conclude that $w^{\prime}daw^{\prime\prime} \not = w^{\prime\prime}bcw^{\prime}$ holds.
-  (\textit{End of Proof of Claim})
-
-\smallskip
-
-\noindent
-Thus, the case of $|w| \geq |w^{\prime}| + 3$ contradicts \textit{Claim} 5. 
-
-\begin{figure}[t]
-  \begin{center}
-    \includegraphics[scale=0.45]{figs/w=w_1.eps}
-    \caption{Subcase $|w^{\prime}| = |w^{\prime\prime}|$ of (ii) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{追加部分7}
-    \bigskip
-    \includegraphics[scale=0.45]{figs/w=w_1+1.eps}
-    \caption{Subcase $|w^{\prime}| = |w^{\prime\prime}| + 1$ of (ii) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{追加部分8}
-    %\includegraphics[scale=0.35]{figs/w=w_1+2.png}
-    %\caption{Subcase $|w^{\prime}| = |w^{\prime\prime}| + 2$ of (ii) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{追加部分9}
-  \end{center}
-\end{figure}
-
-\begin{figure}[t]
-  \begin{center}
-    \includegraphics[scale=0.45]{figs/w=w_1+2.eps}
-    \caption{Case $|w^{\prime\prime}| + 2 \le |w^{\prime}| \le 2|w^{\prime\prime}| - 1$ of (iii) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{w1+3}
-  \end{center}
-\end{figure}
-
-\begin{figure}[t]
-  \begin{center}
-    \includegraphics[scale=0.45]{figs/w=2w_1.eps}
-    \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}|$ of (iv) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{追加部分14}
-    \bigskip
-    \includegraphics[scale=0.45]{figs/w=2w_1+1.eps}
-    \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}| + 1$ of (iv) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{追加部分13}
-    \bigskip
-    \includegraphics[scale=0.45]{figs/w=2w_1+2.eps}
-    \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}| + 2$ of (iv) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{追加部分12}
-    \bigskip
-    \includegraphics[scale=0.45]{figs/w=2w_1+3.eps}
-    \caption{Subcase $|w^{\prime}| = 2|w^{\prime\prime}| + 3$ of (iv) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{追加部分11}
-    %\includegraphics[scale=0.35]{figs/w=2w_1+4.png}
-    %\caption{$|w| = 2|w_{1}|+4$における定数記号列}\label{追加部分10}
-  \end{center}
-\end{figure}
-
-\begin{figure}[t]
-  \begin{center}
-    \includegraphics[scale=0.45]{figs/w=2w_1+4.eps}
-    \caption{Case $2|w^{\prime\prime}| + 4 \leq |w^{\prime}|$ of (v) of \textit{Claim} 5 (Lemma~\ref{追加部分})}\label{2w1+5}
-  \end{center}
-\end{figure}
-    
-  Next, we suppose that $|w| < |w^{\prime}|$ holds.
-  Note again that from (1') and (2'), $wbcw^{\prime}d$ and $w^{\prime}d$ are prefixes of $p_{2}$, and from (2) and (3), $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$.
-  
-  If $|w^{\prime}|=|w|+1$, since $|wbc|=|w^{\prime}d|$, we have $c=d$. This contradicts the condition $c \ne d$.
-  
-  If $|w^{\prime}|=|w|+2$, since $|wbc|=|w^{\prime}|$, $bc$ is a suffix of $w^{\prime}$.
-  Moreover, since $w^{\prime}d$ is a prefix of $wbcw^{\prime}$, $d$ is the first symbol of $w^{\prime}$.
-  Since $aw$ is a suffix of $w'$ and $|w^{\prime}|=|aw|+1$, $a$ is the second symbol of $w^{\prime}$.
-  Therefore, we have $w^{\prime}=wbc=daw$.
-  This contradicts \textit{Claim} 4.
-  
-  If $|w^{\prime}| \ge |w|+3$, there exists a string $w^{\prime\prime}$ with $|w^{\prime\prime}| \geq 1$ such that $w^{\prime} = wbcw^{\prime\prime}$ holds.
-  Then, since $wbcw^{\prime}d$ and $w^{\prime}d=wbcw^{\prime\prime}d$ are prefixes of $p_{2}$, $w^{\prime\prime}d$ is a prefix of $w^{\prime}$.
-  Since $w^{\prime}$ and $aw$ are suffixes of $p_{1}$ and $|w^{\prime}|=|wbcw^{\prime\prime}|=|w|+|w^{\prime\prime}|+2 > |aw|$, $aw$ is a suffix of $w^{\prime}$.
-  Since $|w^{\prime\prime}d| + |aw| = |w^{\prime}|$, we have $w^{\prime} = w^{\prime\prime}daw$.
-  Therefore, we have $w^{\prime}=wbcw^{\prime\prime}=w^{\prime\prime}daw$.
-  This contradicts \textit{Claim} 5.
-
-  Thus, the case $(A, B, C) = (y_{1}a, bc, dy_{2})$ implies the contradictions.
-  
-  Secondly, we will prove that for the case (a2), $p \{ x := xy \} \preceq q$ holds. Suppose that $(A, B) = (dy_{1}a, bc)$, i.e., $q = q_{1}dy_{1}awbcq_{2} $ holds. Then, the following conditions hold: for $y_{1}^{\prime}\in X$,
+  Secondly, for the case (a2), we suppose that $(A, B) = (dy_{1}a, bc)$, i.e., $q = q_{1}dy_{1}awbcq_{2} $ holds. Then, the following conditions hold: for $y_{1}^{\prime}\in X$,
   \begin{align*}
     \textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq awbcq_{2}\mbox{ or} \\
     & & & p_{2} \preceq y_{1}^{\prime}awbcq_{2}\\
@@ -294,7 +287,7 @@ Thus, the case of $|w| \geq |w^{\prime}| + 3$ contradicts \textit{Claim} 5.
   When $p_{2} \preceq awbcq_{2}$ of (1'), we have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xawbcq_{2}=q \{ y_{1}:=p^{\prime\prime}_{1}x \}$.
   Thus, $p \{ x := xy \} \preceq q \{ y_{1}:=p^{\prime\prime}_{1}xy \}$ holds. It contradicts the assumption.
   When $p_{2} \preceq y_{1}^{\prime}awbcq_{2}$ of (1'), we have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xy_{1}^{\prime}wbcq_{2}=q \{ y_{1}:=p^{\prime\prime}_{1}xy_{1}^{\prime} \}$.
-  Thus, $p \{ x := xy \} \preceq q \{ y_{1}:=p^{\prime\prime}_{1}xyy_{1}^{\prime} \}$ holds. It contradicts the assumption.
+  Thus, $p \{ x := xy \} \preceq q \{ y_{1}:=p^{\prime\prime}_{1}xyy_{1}^{\prime} \}$ holds. It contradicts the assumption that $p \{ x := xy \} \not\preceq q$.
   %
   Similarly, we can show that the case $(A, B) = (bc, dy_{1}a)$ contradicts the assumption.
   
@@ -314,7 +307,7 @@ Thus, the case of $|w| \geq |w^{\prime}| + 3$ contradicts \textit{Claim} 5.
   
   \smallskip
   
-  From the above, we conclude that if $p \{ x := r \} \preceq q$ for all $r = \{ ya, bc, dy \}$ $(b \not\in \{a,d\}$ and $c \not\in \{a,d\})$, then $p \{ x := xy \} \preceq q$ holds.
+  From the above, we conclude that if $p \{ x := r \} \preceq q$ for all $r = \{ ya, bc, dy \}$ (\TheConditionA), then $p \{ x := xy \} \preceq q$ holds.
   \end{proof}
 
 % To position the next figure optimally in the paper, it is placed here. (by Takayoshi Shoudai)
@@ -332,31 +325,32 @@ Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and $p,~q$ regular pattern
 Let $D$ be one of the following sets \textrm{(i), (ii)} of regular patterns on $\Sigma\cup X$.
 Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$:
 \begin{enumerate}
-\item[{\rm (i)}] $D=\{ ya, bc, dy \}$ ($b = a,~b \not= d,\mbox{~and~}c \not\in \{a,d\}$),
-\item[{\rm (ii)}] $D=\{ ya, bc, dy \}$ ($b \not\in \{a,d\},~c = d,\mbox{~and~} c \not = a$).
+\item[{\rm (i)}] $D=\{ ya, bc, dy \}$ (\TheConditionB),
+\item[{\rm (ii)}] $D=\{ ya, bc, dy \}$ (\TheConditionC).
 \end{enumerate}
 \end{lem}
 
 \begin{proof}
   It is obvious if no variable symbol appears in $p$.
-  Therefore, let $p=p_{1}xp_{2}$, where $p_{1}, p_{2}$ are regular patterns and $x$ is a variable symbol. We assume that $p \{ x := xy \} \not \preceq q$ in order to derive the contradiction.
+  Therefore, let $p=p_{1}xp_{2}$, where $p_{i}$ (for $i=1,2$) is either a regular pattern or an empty string, and $x$ is a variable symbol.
+  We assume that $p \{ x := xy \} \not \preceq q$ in order to derive a contradiction.
   In the case of \textrm{(ii)}, by reversing the strings $p$ and $q$, we can prove that the assumption $p \{ x := xy \} \preceq q$ is contradicted, as in the case of \textrm{(i)}.
   Therefore, in the following, we consider only the case of \textrm{(i)}.
 
-Let $D=\{ ya, bc, dy \}$ ($b = a,~b \not= d,\mbox{~and~}c \not\in \{a,d\}$).
+Let $D=\{ ya, bc, dy \}$ (\TheConditionB).
 Since $p \{ x := r \} \preceq q$ for all $r \in D$, there are three strings of length $2$ corresponding to $ya, bc, dy$ in $q$. Note that the three strings may appear partly overlapping.
 The symbols appearing in $D$ corresponds to a variable or a constant symbol in $q$.
 Let $y_{1}, y_{2}$ be variable symbols appearing in $q$.
 The strings $ya$ and $dy$ must correspond to the strings $y_{1}a$ and $dy_{2}$ in $q$.
 For the same reasons stated at the beginning of Lemma〜\ref{追加部分}, the string $bc$ corresponds to the string $bc$ in $q$ as well.
 
-Let $A,B,C$ be strings where $\{ A,B,C \} = \{ y_{1}a,ac,dy_{3} \}$ and let $q=q_{1}AwBw^{\prime}Cq_{2}$.
+Let $A,B,C$ be regular patterns on $\Sigma \cup X$, where $\{ A,B,C \} = \{ y_{1}a,ac,dy_{3} \}$. Let $q=q_{1}AwBw^{\prime}Cq_{2}$.
 Since $p \{ x := xy \} \not \preceq q$, the regular pattern $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $w, w^{\prime}$ either an empty string or a regular pattern on $\Sigma\cup X$.
 \begin{enumerate}
-\item[(a1)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a,ac,dy_{2} \}$.
-\item[(a2)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ac,dy_{2} \}$.
-\item[(a3)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ay_{2},ac \}$ ($a = d$).
-\item[(a4)] $q=q_{1}Aq_{2}$, where $A = dy_{1}ac$.
+\item[(a1)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a,bc,dy_{2} \}$.
+\item[(a2)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ac,dy_{2} \}$ ($b = a$).
+\item[(a3)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ay_{2},bc \}$ ($a = d$).
+\item[(a4)] $q=q_{1}Aq_{2}$, where $\{A\} = \{dy_{1}ac\}$ ($b = a$).
 \end{enumerate}
 
 In these cases, just like in cases (a2) and (a3) of Lemma~\ref{追加部分}, the cases (a3) and (a4) also lead to contradictions based on Theorem~\ref{Sato1:Lemma9}.
