@@ -149,13 +149,13 @@ If there exist $q \in Q_{1}^{(\cdot,\cdot)}$ and a string $a'b' \in A'\cdot B'$ 
 
 \noindent
 \textit{Proof of Claim} 4.
-Suppose that both $\sigma_{A}(q) \in B$ and $\sigma_{B}(q) \in A$ hold. Then, since $a' \not\in \{\sigma_{A}(q), \sigma_{B}(q)\} \subseteq A\cap B$ and $b' \not\in \{\sigma_{A}(q), \sigma_{B}(q)\} \subseteq A\cap B$, from Lemma~\ref{追加部分}, $p\{x:=xy\} \preceq q$ holds.
+Suppose that both $\sigma_{A}(q) \in B$ and $\sigma_{B}(q) \in A$ hold. Then, since $a' \not\in \{\sigma_{A}(q), \sigma_{B}(q)\} \subseteq A\cap B$ and $b' \not\in \{\sigma_{A}(q), \sigma_{B}(q)\} \subseteq A\cap B$, from Lemma~\ref{lem:addpart}, $p\{x:=xy\} \preceq q$ holds.
 Suppose that $\sigma_{A}(q)\in B$ and $\sigma_{B}(q)\in A'$.
 If $a' = \sigma_{B}(q)$, since $a' \in B$, $a' \not= b'$ holds.
 Since $\sigma_{A}(q)\in B$, $b' \not= \sigma_{A}(q)$ holds.
 That is, $a' = \sigma_{B}(q)$, $a' \not= \sigma_{A}(q)$, and $b' \not\in \{\sigma_{A}(q), \sigma_{B}(q)\}$ hold.
-Therefore, from Lemma~\ref{片方}, $p\{x:=xy\} \preceq q$ holds.
-If $a' \not= \sigma_{B}(q)$, since $b' \not= \sigma_{A}(q)$, from Lemma~\ref{追加部分}, $p\{x:=xy\} \preceq q$ holds.
+Therefore, from Lemma~\ref{lem:oneside}, $p\{x:=xy\} \preceq q$ holds.
+If $a' \not= \sigma_{B}(q)$, since $b' \not= \sigma_{A}(q)$, from Lemma~\ref{lem:addpart}, $p\{x:=xy\} \preceq q$ holds.
 Similarly, the case that $\sigma_{A}(q)\in B'$ and $\sigma_{B}(q)\in A$ is proven. (\textit{End of Proof of Claim})
 
 \smallskip
@@ -168,7 +168,7 @@ If there exist $q \in Q_{2}^{(\cdot,\cdot)}$ and a string $a'b' \in A'\cdot B'$ 
 
 \noindent
 \textit{Proof of Claim} 5.
-When $a'=b'$, since $\sigma_{A}(q) \not= \sigma_{B}(q)$, from Lemma~\ref{追加部分}, this claim holds. Similarly, when $a' \not = b'$, from Lemma~\ref{追加部分} or Lemma~\ref{片方}, this holds.  (\textit{End of Proof of Claim})
+When $a'=b'$, since $\sigma_{A}(q) \not= \sigma_{B}(q)$, from Lemma~\ref{lem:addpart}, this claim holds. Similarly, when $a' \not = b'$, from Lemma~\ref{lem:addpart} or Lemma~\ref{lem:oneside}, this holds.  (\textit{End of Proof of Claim})
   
 \smallskip
 
@@ -185,7 +185,7 @@ There is no $q \in Q_{2}^{(\cdot,\cdot)}$ and a string $a'b' \in A'\cdot B'$ suc
 
 \noindent
 Let ${\cal L}_{2} = \sharp\{a'b' \in A'\cdot B' \mid \exists q \in Q_{2}^{(\cdot,\cdot)} \mbox{ s.t. } p\{x:=a'b'\} \preceq q\}$.
-For any $a'b' \in A'\cdot B'$ and $q \in Q_{2}^{(\cdot,\cdot)}$, if $a' = \sigma_{B}(q)$ and $b' = \sigma_{A}(q)$ hold (it is the condition of Proposition~\ref{両方}), by considering the duplicate numbers $\ell_{A}$ and $\ell_{B}$, we have the following inequality:
+For any $a'b' \in A'\cdot B'$ and $q \in Q_{2}^{(\cdot,\cdot)}$, if $a' = \sigma_{B}(q)$ and $b' = \sigma_{A}(q)$ hold (it is the condition of Proposition~\ref{lem:bothsides}), by considering the duplicate numbers $\ell_{A}$ and $\ell_{B}$, we have the following inequality:
 \begin{align*}
   {\cal L}_{2} &\leq \min\{\sharp A' + \ell_{B}, \sharp B' + \ell_{A}\}.
 \end{align*}
