@@ -186,8 +186,8 @@ From the above, we conclude that if $wdaw^{\prime} = w^{\prime}bcw$, then either
   \item[(3)] $p_{2} \preceq q_{2}$.
   \end{enumerate}
   In this case, it is straightforward to see that $p\{x:=yc\} = p_{1}ycp_{2} \preceq q_{1}y_{3}cq_{2}$ also holds.
-  Thus, both $p\{x:=ya\}\preceq q$ and $p\{x:=yc\}\preceq q$ hold. Since $c\not= a$, by (ii) of Lemma \ref{two_variables}, $p\{x:=xy\}\preceq q$ also holds. This contradicts the assumption.
-  Similarly, the case (c) leads to a contradiction by (i) of Lemma \ref{two_variables}.
+  Thus, both $p\{x:=ya\}\preceq q$ and $p\{x:=yc\}\preceq q$ hold. Since $c\not= a$, by (ii) in Lemma \ref{two_variables}, $p\{x:=xy\}\preceq q$ also holds. This contradicts the assumption.
+  Similarly, the case (c) leads to a contradiction by (i) in Lemma \ref{two_variables}.
   Therefore, in the following, we consider only case (a).
 
   Since $p \{ x := xy \} \not \preceq q$ and the condition \TheConditionA\ hold, the regular pattern $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $q_{1}, q_{2}, w, w^{\prime}$ be either an empty string or a regular pattern on $\Sigma\cup X$.
@@ -406,7 +406,7 @@ From the condition $b \not= d$, if $b = a$, it follows that $a \not= d$.
 \item[(i4)] $q=q_{1}Aq_{2}$, where $\{A\} = \{dy_{1}ac\}$ ($b = a$).
 \end{enumerate}
 
-In these cases, just as in cases (a2) and (a3) of Lemma~\ref{lem:addpart}, cases (i3) and (i4) also lead to contradictions based on Theorem~\ref{Sato1:Lemma9}.
+In these cases, just as in cases (a2) and (a3) in Lemma~\ref{lem:addpart}, cases (i3) and (i4) also lead to contradictions based on Theorem~\ref{Sato1:Lemma9}.
 In cases (i1) and (i2), similar to Lemma~\ref{lem:addpart}, it is shown that $q=q_{1}y_{1}awacw^{\prime}dy_{2}q_{2}$ and $q=q_{1}y_{1}acwdy_{2}q_{2}$, respectively, where $w$ and $w^{\prime}$ contain no variable symbols.
 
 Firstly, we will consider the case (i1) when $b = a$.
@@ -432,7 +432,7 @@ From (1') and (2'), $wacw^{\prime}d$ and $w^{\prime}d$ are prefixes of $p_{2}$, 
   From Proposition~\ref{prop:repstring}, we have either $c = a$ or $c = d$.
   \item If $|w^{\prime}|=|w|+1$, from (1') and (2'), $c = d$ holds.
   \item If $|w^{\prime}| = |w|+2$, from (1') and (2'), $d$ is a prefix of $w^{\prime}$. Thus, from (2) and (3), $w^{\prime} = wac = daw$ holds. From Proposition~\ref{prop:repstring_base}, either $c = a$ or $c = d$ hold.
-  From (1') and (2'), if $|w^{\prime}| \ge |w|+3$, there exists a string $w^{\prime\prime}$ of length $|w|-|w^{\prime}|-2$ such that $w^{\prime}=wacw^{\prime\prime}$ holds.
+ \item If $|w^{\prime}| \ge |w|+3$, from (1') and (2'), there exists a string $w^{\prime\prime}$ of length $|w|-|w^{\prime}|-2$ such that $w^{\prime}=wacw^{\prime\prime}$ holds.
   Moreover, from (1') and (2'), since $|w^{\prime}d| < |wacw^{\prime}|$ and $w^{\prime}d = wacw^{\prime\prime}d$, $w^{\prime}d$ is a prefix of $w^{\prime}$.
   On the other hand, from (1') and (2'), $aw^{\prime}w$ is a suffix of $w^{\prime}$.
   Since $|w^{\prime\prime}d| + |aw| = |w^{\prime}| + |w| + 2 = |w^{\prime}|$, we have $w^{\prime}=w^{\prime\prime}daw$.
@@ -466,7 +466,7 @@ For this $q=q_{1}y_{1}acwdy_{2}q_{2}$, the following conditions must be satisfie
 \item If $|w| \ge 2$, then from (1') and (2'), $cwd$ and $wd$ are prefixes of $p_{2}$. Thus, we have $cw=wd$. From Proposition~\ref{prop:repstring_base}, $c=d$ holds.
 \end{itemize}
 All of these cases do not meet \TheConditionB.
-Therefore, if \TheConditionB\ are satisfied, case (i2) is also impossible.
+Therefore, if \TheConditionB\ are satisfied, the case (i2) is also impossible.
 
 From the above, we conclude that if $p \{ x := r \} \preceq q$ for all $r = \{ ya, bc, dy \}$ (\TheConditionB), then $p \{ x := xy \} \preceq q$ holds.
 \end{proof}
