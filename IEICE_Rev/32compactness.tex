@@ -289,15 +289,15 @@ From the above, we conclude that if $wdaw^{\prime} = w^{\prime}bcw$, then either
   From (1') and (2'), $wbcw^{\prime}d$ and $w^{\prime}d$ are prefixes of $p_{2}$, and from (2) and (3), $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$.
   From these facts:
 \begin{itemize}
-  \item If $|w|=|w^{\prime}|$, $b = d$ and $a = c$ hold.
-  \item If $|w|=|w^{\prime}|+1$, $a = b$ holds.
-  \item If $|w| = |w^{\prime}|+2$, since $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$, and $|w|\geq 2$, $a$ is a suffix of $w$.
+  \item $|w|=|w^{\prime}|$: $b = d$ and $a = c$ hold.
+  \item $|w|=|w^{\prime}|+1$: $a = b$ holds.
+  \item $|w| = |w^{\prime}|+2$ Since $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$, and $|w|\geq 2$, $a$ is a suffix of $w$.
   From (1') and (2'), we have $w=w^{\prime}da$.
   Furthermore, since $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$, it follows that $w=bcw^{\prime}$.
   Thus, $w^{\prime}da = bcw^{\prime}$ holds.
   From Proposition~\ref{prop:repstring_base}, either $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$, or both, hold.
   Therefore, these cases contradict the conditions \TheConditionA.
-  \item If $|w| \ge |w^{\prime}|+3$, from (2) and (3), there exists a string $w^{\prime\prime}$ of length $|w|-|w^{\prime}|-2$ such that $w=w^{\prime\prime}bcw^{\prime}$ holds.
+  \item $|w| \ge |w^{\prime}|+3$: From (2) and (3), there exists a string $w^{\prime\prime}$ of length $|w|-|w^{\prime}|-2$ such that $w=w^{\prime\prime}bcw^{\prime}$ holds.
   Moreover, from (2) and (3), since $|aw| < |wbcw^{\prime}|$ and $aw = aw^{\prime\prime}bcw^{\prime}$, it follows that $aw^{\prime\prime}$ is a suffix of $w$.
   On the other hand, from (1') and (2'), $w^{\prime}d$ is a prefix of $w$.
   Since $|w^{\prime}d| + |aw^{\prime\prime}| = |w^{\prime}| + |w^{\prime\prime}| + 2 = |w|$, it follows that $w=w^{\prime}daw^{\prime\prime}$ (Fig.~\ref{fig:centerproof1}).
@@ -420,27 +420,25 @@ Since $p \{ x := r \} \preceq q$ for all $r \in \{ ya, ac, dy \}$ and $p \{ x :=
 From (1') and (2'), $wacw^{\prime}d$ and $w^{\prime}d$ are prefixes of $p_{2}$, and from (2) and (3), $awacw^{\prime}$ and $aw$ are suffixes of $p_{1}$.
   From these facts:
   \begin{itemize}
-  \item If $|w|=|w^{\prime}|$, $c = a$ holds.
-  \item If $|w|=|w^{\prime}|+1$, $w = w^{\prime}d = cw^{\prime}$ holds. Thus, from Proposition~\ref{prop:repstring_origin}, $c = d$ holds.
-  \item If $|w| = |w^{\prime}|+2$, $w = w^{\prime}da = acw^{\prime}$ holds. From Proposition~\ref{prop:repstring_base}, either $c = a$ or $c = d$ holds.
+  \item $|w|=|w^{\prime}|$: $c = a$ holds.
+  \item $|w|=|w^{\prime}|+1$: $w = w^{\prime}d = cw^{\prime}$ holds. Thus, from Proposition~\ref{prop:repstring_origin}, $c = d$ holds.
+  \item $|w| = |w^{\prime}|+2$: $w = w^{\prime}da = acw^{\prime}$ holds. From Proposition~\ref{prop:repstring_base}, either $c = a$ or $c = d$ holds.
   %Therefore, these cases contradict the condition \TheConditionBsub.
-  \item If $|w| \ge |w^{\prime}|+3$, from (2) and (3), there exists a string $w^{\prime\prime}$ of length $|w|-|w^{\prime}|-2$ such that $w=w^{\prime\prime}acw^{\prime}$ holds.
+  \item $|w| \ge |w^{\prime}|+3$: From (2) and (3), there exists a string $w^{\prime\prime}$ of length $|w|-|w^{\prime}|-2$ such that $w=w^{\prime\prime}acw^{\prime}$ holds.
   Moreover, from (2) and (3), since $|aw| < |wacw^{\prime}|$ and $aw = aw^{\prime\prime}acw^{\prime}$, it follows that $aw^{\prime\prime}$ is a suffix of $w$.
   On the other hand, from (1') and (2'), $w^{\prime}d$ is a prefix of $w$.
   Since $|w^{\prime}d| + |aw^{\prime\prime}| = |w^{\prime}| + |w^{\prime\prime}| + 2 = |w|$, we have $w=w^{\prime}daw^{\prime\prime}$.
   Therefore, $w^{\prime}daw^{\prime\prime} = w^{\prime\prime}acw^{\prime}$ holds (Fig.~\ref{fig:centerproof2}).
   From Proposition~\ref{prop:repstring}, we have either $c = a$ or $c = d$.
-  \item If $|w^{\prime}|=|w|+1$, from (1') and (2'), $c = d$ holds.
-  \item If $|w^{\prime}| = |w|+2$, from (1') and (2'), $d$ is a prefix of $w^{\prime}$. Thus, from (2) and (3), $w^{\prime} = wac = daw$ holds. From Proposition~\ref{prop:repstring_base}, either $c = a$ or $c = d$ hold.
- \item If $|w^{\prime}| \ge |w|+3$, from (1') and (2'), there exists a string $w^{\prime\prime}$ of length $|w|-|w^{\prime}|-2$ such that $w^{\prime}=wacw^{\prime\prime}$ holds.
+  \item $|w^{\prime}|=|w|+1$: From (1') and (2'), $c = d$ holds.
+  \item $|w^{\prime}| = |w|+2$: From (1') and (2'), $d$ is a prefix of $w^{\prime}$. Thus, from (2) and (3), $w^{\prime} = wac = daw$ holds. From Proposition~\ref{prop:repstring_base}, either $c = a$ or $c = d$ hold.
+ \item $|w^{\prime}| \ge |w|+3$: From (1') and (2'), there exists a string $w^{\prime\prime}$ of length $|w|-|w^{\prime}|-2$ such that $w^{\prime}=wacw^{\prime\prime}$ holds.
   Moreover, from (1') and (2'), since $|w^{\prime}d| < |wacw^{\prime}|$ and $w^{\prime}d = wacw^{\prime\prime}d$, $w^{\prime}d$ is a prefix of $w^{\prime}$.
   On the other hand, from (1') and (2'), $aw^{\prime}w$ is a suffix of $w^{\prime}$.
   Since $|w^{\prime\prime}d| + |aw| = |w^{\prime}| + |w| + 2 = |w^{\prime}|$, we have $w^{\prime}=w^{\prime\prime}daw$.
   Therefore, $w^{\prime\prime}daw = wacw^{\prime\prime}$ holds.
-  From Proposition~\ref{prop:repstring}, we have $c = a$ or $c = d$.
-  %Therefore, these cases contradict the condition \TheConditionBsub.
-  If $|w| \ge |w^{\prime}|+3$, from (2) and (3), i$w^{\prime}daw^{\prime\prime} = w^{\prime\prime}acw^{\prime}$ holds.
   From Proposition~\ref{prop:repstring}, we have either $c = a$ or $c = d$.
+  %Therefore, these cases contradict the condition \TheConditionBsub.
   \end{itemize}
   All the cases contradict the condition \TheConditionBsub.
   Therefore, if \TheConditionB\ are satisfied, the case (i1) is impossible.
