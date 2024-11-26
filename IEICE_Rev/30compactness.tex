@@ -16,15 +16,16 @@ the set $\mathcal{C}$ said to have {\it compactness with respect to containment}
 if there exists a regular pattern $q \in Q$ such that $L(p) \subseteq L(q)$ holds if $L(p) \subseteq L(Q)$ holds.
 \end{dfn}
 
-
-\begin{lem}[Sato et al.\cite{Sato1}]\label{two_variables}\label{変数2つ}
-Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and $p,q$ regular patterns on $\Sigma$.
-Let $D$ be the set of either $(\mathrm{i})$ or $(\mathrm{ii})$ of regular patterns on $\Sigma$ below: Assume that $a \not= b$ and that a variable symbol $y$ does not appear in $p$.
-\begin{align*}
-(\mathrm{i})~~\{ ay, by \}~~~(\mathrm{ii})~\{ ya, yb \}.
-\end{align*}
+\begin{lem}[Sato et al.\cite{Sato1}]\label{lem:twovariables}
+Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and let $p,q$ be regular patterns on $\Sigma$.
+Let $D$ be the following set of regular patterns on $\Sigma\cup X$, where $y$ is a variable symbol that does not appear in $p$ and $q$:
+\begin{enumerate}
+\item[{\rm (i)}] $D=\{ ay, by \}$ ($a \not= b$),
+\item[{\rm (ii)}] $D=\{ ya, yb \}$ ($a \not= b$).
+\end{enumerate}
 Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.
 \end{lem}
+
 \begin{proof}
 It is obvious if no variable symbol appears in $p$. 
 Therefore, let $p=p_{1}xp_{2}$, where $p_{1}, p_{2}$ are regular patterns and $x$ is a variable symbol.
@@ -37,12 +38,12 @@ Case of $D=\{ ay, by \} \ (a \ne b)$:
 \noindent
 Since $p \{ x := xy \} \not \preceq q$, $p_{1}ayp_{2}\preceq q$ and $p_{1}byp_{2}\preceq q$, 
 there exist regular patterns $q_{1},q_{2}$ on $\Sigma$ such that $q=q_{1}ay_{1}wby_{2}q_{2}$ or $q=q_{1}by_{1}way_{2}q_{2}$ for some variable symbols $y_{1},y_{2}~(y_{1} \not= y_{2})$ and a constant string $w$ ($|w|\geq 0$) from Theorem \ref{Sato1:Lemma9}.
-When $q=q_{1}ay_{1}wby_{2}q_{2}$ holds, the following four conditions (1), (2), (1'), (2') holds:
+When $q=q_{1}ay_{1}wby_{2}q_{2}$ holds, the following four conditions (1), (2), (1'), (2') holds: For $y_{1}^{\prime}, y_{2}^{\prime}\in X$,
 \begin{align*}
-\textrm{(1)} & ~p_{1} \preceq q_{1}\\
-\textrm{(1')} & ~p_{2} \preceq wby_{2}q_{2} \mbox{ or } p_{2} \preceq y^{\prime}wby_{2}q_{2} ~~(y^{\prime} \in X)\\
-\textrm{(2)} & ~p_{1} \preceq q_{1}ay_{1}w\\
-\textrm{(2')} & ~p_{2} \preceq q_{2} \mbox{ or } p_{2} \preceq y^{\prime\prime}q_{2} ~(y^{\prime\prime} \in X)
+\textrm{(1)} & ~p_{1} \preceq q_{1}, & \textrm{(1')} & ~p_{2} \preceq wby_{2}q_{2} \mbox{ or }\\
+& & & p_{2} \preceq y_{1}^{\prime}wby_{2}q_{2},\\
+\textrm{(2)} & ~p_{1} \preceq q_{1}ay_{1}w, & \textrm{(2')} & ~p_{2} \preceq q_{2} \mbox{ or }\\
+& & & p_{2} \preceq y_{2}^{\prime}q_{2}.
 \end{align*}
 From the above condition (2), there exist regular patterns $p_{1}^{\prime},p_{1}^{\prime\prime}$ such that $p_{1}=p_{1}^{\prime}p_{1}^{\prime\prime}$, $p_{1}^{\prime} \preceq q_{1}a$ and $p_{1}^{\prime\prime} \preceq y_{1}w$ hold.
 Therefore, since $p=p_{1}xp_{2}=p_{1}^{\prime}p_{1}^{\prime\prime}xp_{2}$,

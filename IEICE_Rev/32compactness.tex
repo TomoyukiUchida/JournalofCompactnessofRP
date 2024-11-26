@@ -5,16 +5,10 @@
 
 \newtheorem{prop}{Proposition}
 \newcommand{\pair}[2]{(#1,#2)}
-%\newcommand{\pair}[2]{#1#2}
-\newcommand{\TheConditionA}{$b \not\in \{a,d\}$ and $c \not\in \{a,d\}$}
-%\newcommand{\TheConditionA}{$bc \not\in \{aa, ad, da, dd\}$}
-%\newcommand{\TheConditionB}{$b \not\in \{d\} \mbox{~and~}c \not\in \{a,d\}$}
-\newcommand{\TheConditionB}{$b \not= d \mbox{~and~}c \not\in \{a,d\}$}
-%\newcommand{\TheConditionB}{$bc \not\in \{da, dd\}$}
-%\newcommand{\TheConditionC}{$b \not\in \{a, d\} \mbox{~and~} c \not\in \{a\}$}
+\newcommand{\TheConditionA}{$b \not\in \{a,d\} \mbox{~and~} c \not\in \{a,d\}$}
+\newcommand{\TheConditionB}{$b \not= d \mbox{~and~} c \not\in \{a,d\}$}
 \newcommand{\TheConditionBsub}{$c \not\in \{a,d\}$}
 \newcommand{\TheConditionC}{$b \not\in \{a, d\} \mbox{~and~} c \not= a$}
-%\newcommand{\theconditionC}{$bc \not\in \{aa, da\}$}
 
 \begin{prop}\label{prop:repstring_origin}
   Let $w$ be a string of constant symbols in $\Sigma$ and $a,b$ constant symbols in $\Sigma$.
@@ -26,9 +20,10 @@
 \end{prop}
 
 \begin{proof}
-Trivial.
-  %If $|w|=0$ or $|w|=1$, the statement is trivial.
-%We assume that for a string of constant symbols $u$ with $|u| < |w|$, if $ua = bu$, then $a = b$ holds. When $|w| \geq 2$, since $b$ is a prefix of $w$, there exists a string of constant symbols $u$ such that $w = bu$.
+Since it is trivial we omit the proof.
+%If $|w|=0$ or $|w|=1$, the statement is trivial.
+%We assume that for a string of constant symbols $u$ with $|u| < |w|$, if $ua = bu$, then $a = b$ holds.
+%When $|w| \geq 2$, since $b$ is a prefix of $w$, there exists a string of constant symbols $u$ such that $w = bu$.
 %From $bua = bbu$, we have $ua = bu$. By the assumption, this implies $a = b$.  
 \end{proof}
 
@@ -43,12 +38,13 @@ holds, then $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
 
 \begin{proof}
   We will prove this proposition by induction on $|w|$.
-  For $i=1,\ldots,|w|$, we refer to the $i$-th symbol of $w$ as $w[i - 1]$. 
+  %For $i=1,\ldots,|w|$, we refer to the $i$-th symbol of $w$ as $w[i - 1]$. 
   \begin{itemize}
-  \item $|w| = 0$: Directly from Eq.~(\ref{eq:repstring_base}), $\pair{b}{c} = \pair{d}{a}$ holds.
-  \item $|w| = 1$: From $w[0]da = bcw[0]$, we have $w[0] = b$, $d = c$, and $a = w[0]$. Thus, $\pair{b}{c} = \pair{a}{d}$ holds.
-  \item $|w| = 2$: From $w[0]w[1]da = bcw[0]w[1]$, we have $w[0] = b$, $w[1] = c$, $d = w[0]$, $a = w[1]$. Thus, $\pair{b}{c} = \pair{d}{a}$ holds.
-  \item $|w| = 3$: From $w[0]w[1]w[2]da = bcw[0]w[1]w[2]$, we have $w[0] = b$, $w[1] = c$, $w[2] = w[0]$, $d = w[1]$, $a = w[2]$. Thus, $\pair{b}{c} = \pair{a}{d}$ holds.
+  %\item $|w| = 0$: Directly from Eq.~(\ref{eq:repstring_base}), $\pair{b}{c} = \pair{d}{a}$ holds.
+  %\item $|w| = 1$: From $w[0]da = bcw[0]$, we have $w[0] = b$, $d = c$, and $a = w[0]$. Thus, $\pair{b}{c} = \pair{a}{d}$ holds.
+  %\item $|w| = 2$: From $w[0]w[1]da = bcw[0]w[1]$, we have $w[0] = b$, $w[1] = c$, $d = w[0]$, $a = w[1]$. Thus, $\pair{b}{c} = \pair{d}{a}$ holds.
+  %\item $|w| = 3$: From $w[0]w[1]w[2]da = bcw[0]w[1]w[2]$, we have $w[0] = b$, $w[1] = c$, $w[2] = w[0]$, $d = w[1]$, $a = w[2]$. Thus, $\pair{b}{c} = \pair{a}{d}$ holds.
+  \item $|w| = 0,1,2,3$: it is straightforward to observe that $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
   \item $|w| \ge 4$: We assume that for any string $u$ with $0\leq |u| < n$, if $uda = bcu$ holds, $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds. Since the string $w$ has a prefix $bc$ and a suffix $da$, there exists a string $u$ with $|u| = |w| - 4 < |w|$ such that $w = bcuda$ holds. Since $wda = bcw$, we have $bcudada = bcbcuda$, and then $uda = bcu$. Thus, from the assumption, we get $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$.
   \end{itemize}
 From the above, we conclude that if $wda = bcw$ holds, then $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
@@ -158,11 +154,11 @@ From the above, we conclude that if $wdaw^{\prime} = w^{\prime}bcw$, then $\pair
 
 \begin{lem}\label{lem:addpart}
   Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and $p,~q$ regular patterns on $\Sigma\cup X$.
-  Let $D$ be the following set of regular patterns on $\Sigma\cup X$.
-  Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$:
+  Let $D$ be the following set of regular patterns on $\Sigma\cup X$, where $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$:
   \begin{enumerate}
   \item[] $D = \{ ya, bc, dy \}$ (\TheConditionA).
   \end{enumerate}
+  Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$:
 \end{lem}
 
   \begin{proof}
@@ -189,8 +185,8 @@ From the above, we conclude that if $wdaw^{\prime} = w^{\prime}bcw$, then $\pair
   \item[(3)] $p_{2} \preceq q_{2}$.
   \end{enumerate}
   In this case, it is straightforward to see that $p\{x:=yc\} = p_{1}ycp_{2} \preceq q_{1}y_{3}cq_{2}$ also holds.
-  Thus, both $p\{x:=ya\}\preceq q$ and $p\{x:=yc\}\preceq q$ hold. Since $c\not= a$, by (ii) in Lemma \ref{two_variables}, $p\{x:=xy\}\preceq q$ also holds. This contradicts the assumption.
-  Similarly, the case (c) leads to a contradiction by (i) in Lemma \ref{two_variables}.
+  Thus, both $p\{x:=ya\}\preceq q$ and $p\{x:=yc\}\preceq q$ hold. Since $c\not= a$, by (ii) in Lemma \ref{lem:twovariables}, $p\{x:=xy\}\preceq q$ also holds. This contradicts the assumption.
+  Similarly, the case (c) leads to a contradiction by (i) in Lemma \ref{lem:twovariables}.
   Therefore, in the following, we consider only case (a).
 
   Since $p \{ x := xy \} \not \preceq q$ and the condition \TheConditionA\ hold, the regular pattern $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $q_{1}, q_{2}, w, w^{\prime}$ be either an empty string or a regular pattern on $\Sigma\cup X$.
@@ -210,7 +206,7 @@ From the above, we conclude that if $wdaw^{\prime} = w^{\prime}bcw$, then $\pair
   \smallskip
   \noindent
   \textit{Proof of Claim} 1.
-  Suppose that $(A, B, C) = (dy_{2}, y_{1}a, bc)$. For some $y_{1}^{\prime},y_{2}^{\prime}\in X$, the following conditions must be satisfied:
+  Suppose that $(A, B, C) = (dy_{2}, y_{1}a, bc)$. The following conditions must be satisfied: For $y_{1}^{\prime},y_{2}^{\prime}\in X$, 
   \begin{align*}
     \textrm{(1)}~& p_{1} \preceq q_{1}, & \textrm{(1')}~& p_{2} \preceq wy_{1}aw^{\prime}bcq_{2}\mbox{ or} \\
     & & & p_{2} \preceq y_{2}^{\prime}wy_{1}aw^{\prime}bcq_{2},\\
@@ -239,7 +235,7 @@ From the above, we conclude that if $wdaw^{\prime} = w^{\prime}bcw$, then $\pair
   \noindent
   \textit{Proof of Claim} 2.
   From \textit{Claim} 1, we have $B=bc$. Suppose that $(A, B, C) = (dy_{2}, bc, y_{1}a)$, i.e., $q = q_{1}dy_{2}wbcw^{\prime}y_{1}aq_{2} $ holds.
-  Then, the following conditions must be satisfied: for $y_{1}^{\prime},y_{2}^{\prime}\in X$:
+  Then, the following conditions must be satisfied: For $y_{1}^{\prime},y_{2}^{\prime}\in X$,
   \begin{align*}
   \textrm{(1)}~& p_{1} \preceq q_{1}, & \textrm{(1')}~& p_{2} \preceq wbcw^{\prime}y_{1}aq_{2}\mbox{ or}\\
   & & & p_{2} \preceq y_{2}^{\prime}wbcw^{\prime}y_{1}aq_{2},\\
@@ -292,8 +288,8 @@ From the above, we conclude that if $wdaw^{\prime} = w^{\prime}bcw$, then $\pair
   From (1') and (2'), $wbcw^{\prime}d$ and $w^{\prime}d$ are prefixes of $p_{2}$, and from (2) and (3), $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$.
   From these facts:
 \begin{itemize}
-  \item $|w|=|w^{\prime}|$: $b = d$ and $a = c$ hold.
-  \item $|w|=|w^{\prime}|+1$: $a = b$ holds.
+  \item $|w|=|w^{\prime}|$: Directly, $b = d$ and $a = c$ hold.
+  \item $|w|=|w^{\prime}|+1$: Also, $a = b$ holds.
   \item $|w| = |w^{\prime}|+2$ Since $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$, and $|w|\geq 2$, $a$ is a suffix of $w$.
   From (1') and (2'), we have $w=w^{\prime}da$.
   Furthermore, since $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$, it follows that $w=bcw^{\prime}$.
@@ -370,7 +366,7 @@ From the above, we conclude that if $wdaw^{\prime} = w^{\prime}bcw$, then $\pair
 
 \begin{lem}\label{lem:oneside}
 Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and let $p,~q$ be regular patterns on $\Sigma\cup X$.
-Let $D$ be one of the following sets of regular patterns on $\Sigma\cup X$:
+Let $D$ be one of the following sets of regular patterns on $\Sigma\cup X$, where $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.
 \begin{enumerate}
 \item[{\rm (i)}] $D=\{ ya, bc, dy \}$ (\TheConditionB),
 \item[{\rm (ii)}] $D=\{ ya, bc, dy \}$ (\TheConditionC).
@@ -406,7 +402,7 @@ From the condition $b \not= d$, if $b = a$, it follows that $a \not= d$.
 \item[(i1)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a,bc,dy_{2} \}$.
 \item[(i2)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ac,dy_{2} \}$ ($b = a$).
 \item[(i3)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ay_{2},bc \}$ ($a = d$).
-\item[(i4)] $q=q_{1}Aq_{2}$, where $\{A\} = \{dy_{1}ac\}$ ($b = a$).
+\item[(i4)] $q=q_{1}Aq_{2}$, where $A = dy_{1}ac$ ($b = a$).
 \end{enumerate}
 
 In these cases, just as in cases (a2) and (a3) in Lemma~\ref{lem:addpart}, cases (i3) and (i4) also lead to contradictions based on Theorem~\ref{Sato1:Lemma9}.
