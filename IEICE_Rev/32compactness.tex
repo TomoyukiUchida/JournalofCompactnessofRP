@@ -26,7 +26,10 @@
 \end{prop}
 
 \begin{proof}
-If $|w|=0$ or $|w|=1$, the statement is trivial. We assume that for a string of constant symbols $u$ with $|u| < |w|$, if $ua = bu$, then $a = b$ holds. When $|w| \geq 2$, since $b$ is a prefix of $w$, there exists a string of constant symbols $u$ such that $w = bu$. From $bua = bbu$, we have $ua = bu$. By the assumption, this implies $a = b$.  
+Trivial.
+  %If $|w|=0$ or $|w|=1$, the statement is trivial.
+%We assume that for a string of constant symbols $u$ with $|u| < |w|$, if $ua = bu$, then $a = b$ holds. When $|w| \geq 2$, since $b$ is a prefix of $w$, there exists a string of constant symbols $u$ such that $w = bu$.
+%From $bua = bbu$, we have $ua = bu$. By the assumption, this implies $a = b$.  
 \end{proof}
 
 \begin{prop}\label{prop:repstring_base}
@@ -35,7 +38,7 @@ If
 \begin{align}
 wda & = bcw\label{eq:repstring_base}
 \end{align}
-holds, then either $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$, or both, hold.
+holds, then $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
 \end{prop}
 
 \begin{proof}
@@ -46,12 +49,12 @@ holds, then either $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$, o
   \item $|w| = 1$: From $w[0]da = bcw[0]$, we have $w[0] = b$, $d = c$, and $a = w[0]$. Thus, $\pair{b}{c} = \pair{a}{d}$ holds.
   \item $|w| = 2$: From $w[0]w[1]da = bcw[0]w[1]$, we have $w[0] = b$, $w[1] = c$, $d = w[0]$, $a = w[1]$. Thus, $\pair{b}{c} = \pair{d}{a}$ holds.
   \item $|w| = 3$: From $w[0]w[1]w[2]da = bcw[0]w[1]w[2]$, we have $w[0] = b$, $w[1] = c$, $w[2] = w[0]$, $d = w[1]$, $a = w[2]$. Thus, $\pair{b}{c} = \pair{a}{d}$ holds.
-  \item $|w| \ge 4$: We assume that for any string $u$ with $0\leq |u| < n$, if $uda = bcu$ holds, $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$ hold. Since the string $w$ has a prefix $bc$ and a suffix $da$, there exists a string $u$ with $|u| = |w| - 4 < |w|$ such that $w = bcuda$ holds. Since $wda = bcw$, we have $bcudada = bcbcuda$, and then $uda = bcu$. Thus, from the assumption, we get $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$.
+  \item $|w| \ge 4$: We assume that for any string $u$ with $0\leq |u| < n$, if $uda = bcu$ holds, $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds. Since the string $w$ has a prefix $bc$ and a suffix $da$, there exists a string $u$ with $|u| = |w| - 4 < |w|$ such that $w = bcuda$ holds. Since $wda = bcw$, we have $bcudada = bcbcuda$, and then $uda = bcu$. Thus, from the assumption, we get $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$.
   \end{itemize}
-From the above, we conclude that if $wda = bcw$ holds, then either $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$, or both, hold.
+From the above, we conclude that if $wda = bcw$ holds, then $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
 \end{proof}
 
-The conclusion from Proposition~\ref{prop:repstring_base} shows that $\pair{a}{d} = \pair{b}{c}$ or $\pair{a}{d} = \pair{c}{b}$. Therefore, if the equation $daw = wbd$ holds, we arrive at the same conclusion.
+The conclusion from Proposition~\ref{prop:repstring_base} shows that $\pair{a}{d} \in \{\pair{b}{c}, \pair{c}{b}\}$. Therefore, if the equation $daw = wbd$ holds, we arrive at the same conclusion.
 
 \begin{prop}\label{prop:repstring}
 Let $w,w^{\prime}$ be strings of constant symbols in $\Sigma$ and $a,b,c,d$ constant symbols in $\Sigma$.
@@ -59,17 +62,17 @@ If
 \begin{align}
   wdaw^{\prime} & = w^{\prime}bcw\label{eq:repstring}
 \end{align}
-holds, then either $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$, or both, hold.\label{prop:repstring_eq}
+holds, then $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.\label{prop:repstring_eq}
 \end{prop}
 
 \begin{proof}
 We will prove this proposition by an induction on $|w| + |w^{\prime}|$.
-Without loss of generality, we assume that $|w| \geq |w^{\prime}|$ because, if $|w| > |w^{\prime}|$, we arrive at the same conclusion that either $\pair{a}{d} = \pair{b}{c}$, or $\pair{a}{d} = \pair{c}{b}$, or both conditions hold.
+Without loss of generality, we assume that $|w| \geq |w^{\prime}|$ because, if $|w| > |w^{\prime}|$, we arrive at the same conclusion that $\pair{a}{d} \in \{\pair{b}{c}, \pair{c}{b}\}$ holds.
 \begin{itemize}
   \item $|w| \geq 0$ and $|w^{\prime}|=0$:
-  Eq.~(\ref{eq:repstring}) reduces to $wda = bcw$. By Proposition~\ref{prop:repstring_base}, either $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$, or both, hold.
+  Eq.~(\ref{eq:repstring}) reduces to $wda = bcw$. By Proposition~\ref{prop:repstring_base}, $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
 \end{itemize}
-We assume that for constant strings $u$ and $u^{\prime}$ with $|u| + |u^{\prime}| < |w| + |w^{\prime}|$, if $udau^{\prime} = u^{\prime}bcu$ holds, then either $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$, or both, holds.
+We assume that for constant strings $u$ and $u^{\prime}$ with $|u| + |u^{\prime}| < |w| + |w^{\prime}|$, if $udau^{\prime} = u^{\prime}bcu$ holds, then $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holdss.
 We divide the relations between $|w|$ and $|w^{\prime}|$ into the following four cases:
 \begin{itemize}
 \item $0 < |w^{\prime}| \le |w| \le |w^{\prime}|+1$:
@@ -77,7 +80,7 @@ When either $|w|=|w^{\prime}|$ or $|w|=|w^{\prime}|+1$, Eq.~(\ref{eq:repstring})
 If $|w|=|w^{\prime}|$, $\pair{b}{c} = \pair{d}{a}$ holds.
 If $|w|=|w^{\prime}|+1$, $a = c$ and $w = w^{\prime}b = dw^{\prime}$ hold.
 From Proposition~\ref{prop:repstring_origin}, we deduce that $b = d$.
-Therefore, $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$, or both, hold.
+Therefore, $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
 %
 \item $|w^{\prime}|+2 \le |w| \le 2|w^{\prime}| - 1$:
 In Eq.~\ref{eq:repstring}, since $|wdaw^{\prime}| = |w^{\prime}bcw| = |w| + |w^{\prime}| + 2$, a suffix of $w$ overlaps with a prefix of $w$, as illustrated in Fig.~\ref{fig:prop_pic9}.
@@ -86,12 +89,12 @@ Since $uda$ has a length of $|w| - |w^{\prime}|$, it is also a prefix of $w$. Si
 Because $|w| - (|uda| + |bcu|) = 2|w| - |w^{\prime}| \ge 1$, there exist a constant string $u^{\prime}$ of length $2|w^{\prime}| - |w|$ such that $w = udavbcu$ holds.
 Since $w^{\prime}$ is a suffix of $w$ and $|u^{\prime}bcu| = (2|w^{\prime}| - |w|) + 2 + (|w| - |w^{\prime}| - 2) = |w^{\prime}|$, we have $w^{\prime} = u^{\prime}bcu$.
 Similarly, $w^{\prime} = udau^{\prime}$. Thus, we derive the equation $u^{\prime}bcu = udau^{\prime}$.
-Since $|u| = |w| - |w^{\prime}| - 2 \leq |w| - 3 < |w|$ and $|u^{\prime}| = 2|w^{\prime}| - |w| < |w|$, i.e., $|u| + |u^{\prime}| < |w| + |w^{\prime}|$, the induction hypothesis on $|u| + |u^{\prime}|$ implies that either $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$, or both, hold.
+Since $|u| = |w| - |w^{\prime}| - 2 \leq |w| - 3 < |w|$ and $|u^{\prime}| = 2|w^{\prime}| - |w| < |w|$, i.e., $|u| + |u^{\prime}| < |w| + |w^{\prime}|$, the induction hypothesis on $|u| + |u^{\prime}|$ implies that $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
 %
 \item $2|w^{\prime}| \le |w| \le 2|w^{\prime}|+3$:
 When $|w|=2|w^{\prime}|$, it is straightforward to observe that $w = w^{\prime}w^{\prime}$.
 Therefore, $w^{\prime}da = bcw^{\prime}$ holds, as illustrated in Fig.~\ref{fig:prop_pic14}.
-From Proposition~\ref{prop:repstring_base}, $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$ holds.
+From Proposition~\ref{prop:repstring_base}, $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
 When $|w|=2|w^{\prime}|+i$ ($i=1,2,3$), Eq.~(\ref{eq:repstring}) is depicted in Figs.~\ref{fig:prop_pic13}, \ref{fig:prop_pic12}, and \ref{fig:prop_pic11}, respectively.
 When $|w|=2|w^{\prime}|+2$, it is clear that $\pair{b}{c} = \pair{d}{a}$. 
 When $|w|=2|w^{\prime}|+1$ and $|w|=2|w^{\prime}|+3$, Proposition~\ref{prop:repstring_origin} implies that $\pair{b}{c} = \pair{a}{d}$ holds.
@@ -100,9 +103,9 @@ When $|w|=2|w^{\prime}|+1$ and $|w|=2|w^{\prime}|+3$, Proposition~\ref{prop:reps
 Since the strings $w^{\prime}bc$ and $adw^{\prime}$ are a prefix and a suffix of $w$, respectively, and $|w^{\prime}bc| + |adw^{\prime}| = 2|w^{\prime}| + 4$, there exists a string $u$ with $|u| \geq 0$ such that $w = w^{\prime}bcudaw^{\prime}$ holds.
 From Eq.~(\ref{eq:repstring}), $w^{\prime}bcudaw^{\prime}daw^{\prime} = w^{\prime}bcw^{\prime}bcudaw^{\prime}$, i.e., $udaw^{\prime} = w^{\prime}bcu$ holds, as illustrated in Fig.~\ref{fig:prop_pic10}.
 Let $u^{\prime} = w^{\prime}$.
-Since $|u| + |u^{\prime}| = |w|- (2|w^{\prime}| + 4) + |w^{\prime}| < |w| + |w^{\prime}|$, the induction hypothesis on $|u| + |u^{\prime}|$ implies that either $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$, or both, hold.
+Since $|u| + |u^{\prime}| = |w|- (2|w^{\prime}| + 4) + |w^{\prime}| < |w| + |w^{\prime}|$, the induction hypothesis on $|u| + |u^{\prime}|$ implies that $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
 \end{itemize}
-From the above, we conclude that if $wdaw^{\prime} = w^{\prime}bcw$, then either $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$, or both, hold.
+From the above, we conclude that if $wdaw^{\prime} = w^{\prime}bcw$, then $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
 \end{proof}
 
 \begin{figure}[t]
@@ -164,7 +167,7 @@ From the above, we conclude that if $wdaw^{\prime} = w^{\prime}bcw$, then either
 
   \begin{proof}
   If no variable symbol appears in $p$, the statement holds trivially.
-  Thus, for a variable symbol $x\in X$, let $p=p_{1}xp_{2}$, where each $p_{i}$ ($i=1,2$) is either a regular pattern on $\Sigma\cup X$ or an empty symbol.
+  Thus, for a variable symbol $x\in X$, let $p=p_{1}xp_{2}$, where each $p_{i}$ ($i=1,2$) is either an empty symbol or a regular pattern on $\Sigma\cup X$.
   We assume that $p \{ x := xy \} \not \preceq q$ in order to derive a contradiction.
 
   Since $p \{ x := r \} \preceq q$ for all $r \in D$, there are three strings of length $2$ in $q$ corresponding to $ya, bc, dy$.
@@ -295,14 +298,14 @@ From the above, we conclude that if $wdaw^{\prime} = w^{\prime}bcw$, then either
   From (1') and (2'), we have $w=w^{\prime}da$.
   Furthermore, since $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$, it follows that $w=bcw^{\prime}$.
   Thus, $w^{\prime}da = bcw^{\prime}$ holds.
-  From Proposition~\ref{prop:repstring_base}, either $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$, or both, hold.
+  From Proposition~\ref{prop:repstring_base}, $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
   Therefore, these cases contradict the conditions \TheConditionA.
   \item $|w| \ge |w^{\prime}|+3$: From (2) and (3), there exists a string $w^{\prime\prime}$ of length $|w|-|w^{\prime}|-2$ such that $w=w^{\prime\prime}bcw^{\prime}$ holds.
   Moreover, from (2) and (3), since $|aw| < |wbcw^{\prime}|$ and $aw = aw^{\prime\prime}bcw^{\prime}$, it follows that $aw^{\prime\prime}$ is a suffix of $w$.
   On the other hand, from (1') and (2'), $w^{\prime}d$ is a prefix of $w$.
   Since $|w^{\prime}d| + |aw^{\prime\prime}| = |w^{\prime}| + |w^{\prime\prime}| + 2 = |w|$, it follows that $w=w^{\prime}daw^{\prime\prime}$ (Fig.~\ref{fig:centerproof1}).
   Therefore, $w^{\prime}daw^{\prime\prime} = w^{\prime\prime}bcw^{\prime}$ holds.
-  From Proposition~\ref{prop:repstring}, either $\pair{b}{c} = \pair{a}{d}$ or $\pair{b}{c} = \pair{d}{a}$, or both, hold.
+  From Proposition~\ref{prop:repstring}, $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
   This contradicts the conditions \TheConditionA.
 \end{itemize}
 
@@ -422,22 +425,22 @@ From (1') and (2'), $wacw^{\prime}d$ and $w^{\prime}d$ are prefixes of $p_{2}$, 
   \begin{itemize}
   \item $|w|=|w^{\prime}|$: $c = a$ holds.
   \item $|w|=|w^{\prime}|+1$: $w = w^{\prime}d = cw^{\prime}$ holds. Thus, from Proposition~\ref{prop:repstring_origin}, $c = d$ holds.
-  \item $|w| = |w^{\prime}|+2$: $w = w^{\prime}da = acw^{\prime}$ holds. From Proposition~\ref{prop:repstring_base}, either $c = a$ or $c = d$ holds.
+  \item $|w| = |w^{\prime}|+2$: $w = w^{\prime}da = acw^{\prime}$ holds. From Proposition~\ref{prop:repstring_base},  $c \in \{a, d\}$ holds.
   %Therefore, these cases contradict the condition \TheConditionBsub.
   \item $|w| \ge |w^{\prime}|+3$: From (2) and (3), there exists a string $w^{\prime\prime}$ of length $|w|-|w^{\prime}|-2$ such that $w=w^{\prime\prime}acw^{\prime}$ holds.
   Moreover, from (2) and (3), since $|aw| < |wacw^{\prime}|$ and $aw = aw^{\prime\prime}acw^{\prime}$, it follows that $aw^{\prime\prime}$ is a suffix of $w$.
   On the other hand, from (1') and (2'), $w^{\prime}d$ is a prefix of $w$.
   Since $|w^{\prime}d| + |aw^{\prime\prime}| = |w^{\prime}| + |w^{\prime\prime}| + 2 = |w|$, we have $w=w^{\prime}daw^{\prime\prime}$.
   Therefore, $w^{\prime}daw^{\prime\prime} = w^{\prime\prime}acw^{\prime}$ holds (Fig.~\ref{fig:centerproof2}).
-  From Proposition~\ref{prop:repstring}, we have either $c = a$ or $c = d$.
+  From Proposition~\ref{prop:repstring}, we have $c \in \{a, d\}$.
   \item $|w^{\prime}|=|w|+1$: From (1') and (2'), $c = d$ holds.
-  \item $|w^{\prime}| = |w|+2$: From (1') and (2'), $d$ is a prefix of $w^{\prime}$. Thus, from (2) and (3), $w^{\prime} = wac = daw$ holds. From Proposition~\ref{prop:repstring_base}, either $c = a$ or $c = d$ hold.
+  \item $|w^{\prime}| = |w|+2$: From (1') and (2'), $d$ is a prefix of $w^{\prime}$. Thus, from (2) and (3), $w^{\prime} = wac = daw$ holds. From Proposition~\ref{prop:repstring_base}, $c \in \{a, d\}$ holds.
  \item $|w^{\prime}| \ge |w|+3$: From (1') and (2'), there exists a string $w^{\prime\prime}$ of length $|w|-|w^{\prime}|-2$ such that $w^{\prime}=wacw^{\prime\prime}$ holds.
   Moreover, from (1') and (2'), since $|w^{\prime}d| < |wacw^{\prime}|$ and $w^{\prime}d = wacw^{\prime\prime}d$, $w^{\prime}d$ is a prefix of $w^{\prime}$.
   On the other hand, from (1') and (2'), $aw^{\prime}w$ is a suffix of $w^{\prime}$.
   Since $|w^{\prime\prime}d| + |aw| = |w^{\prime}| + |w| + 2 = |w^{\prime}|$, we have $w^{\prime}=w^{\prime\prime}daw$.
   Therefore, $w^{\prime\prime}daw = wacw^{\prime\prime}$ holds.
-  From Proposition~\ref{prop:repstring}, we have either $c = a$ or $c = d$.
+  From Proposition~\ref{prop:repstring}, we have $c \in \{a, d\}$.
   %Therefore, these cases contradict the condition \TheConditionBsub.
   \end{itemize}
   All the cases contradict the condition \TheConditionBsub.
