@@ -28,7 +28,7 @@ Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \pr
 
 \begin{proof}
 It is obvious if no variable symbol appears in $p$. 
-Therefore, let $p=p_{1}xp_{2}$, where $p_{1}, p_{2}$ are regular patterns and $x$ is a variable symbol.
+Therefore, let $p=p_{1}xp_{2}$, where $p_{i}$ ($i=1,2$) is an empty symbol or a regular pattern on $\Sigma\cup X$, and $x$ is a variable symbol.
 We assume that $p \{ x := xy \} \not \preceq q$ in order to derive a contradictions.
 In the case of \textrm{(ii)}, by reversing the strings $p$ and $q$, we can prove that the assumption $p \{ x := xy \} \preceq q$ leads to a contradiction, as in the case of \textrm{(i)}.
 Therefore, in the following, we consider only the case of \textrm{(i)}: $D=\{ ay, by \}$ ($a \not= b$).
@@ -44,13 +44,13 @@ When $q=q_{1}ay_{1}wby_{2}q_{2}$ holds, the following four conditions hold: For 
 \end{align*}
 From (2), there exist regular patterns $p_{1}^{\prime},p_{1}^{\prime\prime}$ such that $p_{1}=p_{1}^{\prime}p_{1}^{\prime\prime}$, $p_{1}^{\prime} \preceq q_{1}a$ and $p_{1}^{\prime\prime} \preceq y_{1}w$ hold.
 Therefore, since $p=p_{1}xp_{2}=p_{1}^{\prime}p_{1}^{\prime\prime}xp_{2}$,
-if $p_{2} \preceq wby_{2}q_{2}$ holds, 
+if $p_{2} \preceq wby_{2}q_{2}$ of (1') holds, 
 $p\preceq q_{1}ap_{1}^{\prime\prime}xwby_{2}q_{2}\equiv q \{ y_{1} := p_{1}^{\prime\prime}x \}$ holds.
-Otherwise $p_2\preceq y'wby_{2}q_{2}$, $p\preceq q_{1}ap_{1}^{\prime\prime}xy'wby_{2}q_{2}=q \{ y_{1} := p_{1}^{\prime\prime}xy' \}$ holds.
+If $p_2\preceq y_{1}^{\prime}wby_{2}q_{2}$ of (1') holds, $p\preceq q_{1}ap_{1}^{\prime\prime}xy_{1}^{\prime}wby_{2}q_{2}=q \{ y_{1} := p_{1}^{\prime\prime}xy_{1}^{\prime} \}$ holds.
+Thus, $p\{x := xy\} \preceq q \{ y_{1} := p_{1}^{\prime\prime}xyy_{1}^{\prime} \}$ holds.
 Hence, $p \preceq q$ holds.
 This contradicts the assumption.
-
-Therefore, we conclude that if $p \{ x := r \} \preceq q$ for all $r \in \{ ya, yb \}$ ($a \not= b$), then $p \{ x := xy \} \preceq q$ holds.
+Therefore, we conclude that if $p \{ x := r \} \preceq q$ for all $r \in \{ ay, by \}$ ($a \not= b$), then $p \{ x := xy \} \preceq q$ holds.
 \end{proof}
 
 Let $p,q$ be regular patterns in $\RPat$.
