@@ -32,7 +32,7 @@ For any $q \in Q$, we define the sets $A(q), B(q) \subseteq \Sigma$ as follows:
   A(q) & = \{ a \in \Sigma \mid p \{ x:=ay \} \preceq q,\ y\in X\},\\ 
   B(q) & = \{ b \in \Sigma \mid p \{ x:=yb \} \preceq q,\ y\in X\}.
   \end{align*}
-If there exists $q\in Q$ such that $|A(q)|\geq 2$ or $|B(q)|\geq 2$, from Lemma~\ref{変数2つ}, $p\{x := xy\} \preceq q$ holds.
+If there exists $q\in Q$ such that $|A(q)|\geq 2$ or $|B(q)|\geq 2$, from Lemma~\ref{lem:twovariables}, $p\{x := xy\} \preceq q$ holds.
 Below, we suppose that $|A(q)|\leq 1$ and $|B(q)|\leq 1$.
 Let $\varnothing$ be a constant symbol that is not a member in $\Sigma$.
 We define the functions $\sigma_{A}: Q \rightarrow \Sigma \cup \{\varnothing\}$ and $\sigma_{B}: Q \rightarrow \Sigma \cup \{\varnothing\}$ as follows:
@@ -96,7 +96,7 @@ From the condition of this lemma, for any string $w \in \Sigma^{\ast}$ with $|w|
 In particular, for $w=a'b'\in A'\cdot B'$, we must have $q_{w} \in Q$ that satisfies that $p \{ x:=w \} \preceq q_{w}$ (Fig.~\ref{fig:lem8totalreg}).
 It is easy to see that if $w \in (A\cdot B) \cup (A'\cdot B) \cup (A\cdot B')$, there exists a regular pattern $q_{w} \in Q^{(\varnothing,\cdot)} \cup Q^{(\cdot,\varnothing)} \cup Q^{(\cdot,\cdot)}$ such that $p \{ x:=w \} \preceq q_{w}$ holds.
 %For $w=a'b'\in A'\cdot B'$, we must have $q_{w} \in Q$ that satisfies that $p \{ x:=w \} \preceq q_{w}$ (Fig.~\ref{fig:lem8totalreg}).
-The following two claims are proven from Lemmas~\ref{変数2つ} and \ref{補題14}:
+The following two claims are proven from Lemmas~\ref{lem:twovariables} and \ref{補題14}:
 
 \smallskip
 

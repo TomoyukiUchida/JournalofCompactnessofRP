@@ -354,6 +354,16 @@ From the above, we conclude that if $wdaw^{\prime} = w^{\prime}bcw$, then $\pair
   From the above, we conclude that if $p \{ x := r \} \preceq q$ for all $r = \{ ya, bc, dy \}$ (\TheConditionA), then $p \{ x := xy \} \preceq q$ holds.
   \end{proof}
 
+  The condition in Lemma~\ref{lem:addpart} is illustrated in four cases (3)--(6) in Fig.~\ref{fig:lem5bigraph}.
+
+  \begin{figure*}[t]
+    \begin{center}
+      \includegraphics[scale=0.525]{figs/lem5bigraph.pdf}
+      \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and $p,q \in \RPat$. We assume that the symbols in $\Sigma$ are mutually distinct. The figure (3) expresses the condition of Lemma~\ref{lem:addpart} for the case $D = \{ ya, bc, dy \}$. This is the most general case.
+      The figures (4), (5), and (6) express the conditions of of Lemma~\ref{lem:addpart} in the cases that (4) $D = \{ ya, bc, ay \}$, (5) $D = \{ ya, bb, dy \}$, and (6) $D = \{ ya, bb, ay \}$, respectively. In these cases, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$ holds.}\label{fig:lem5bigraph}
+    \end{center}
+  \end{figure*}
+
 % To position the next figure optimally in the paper, it is placed here. (by Takayoshi Shoudai)
 \begin{figure*}[t]
   %\includegraphics[width=\linewidth]{figs/Exam_b=a_c=d.png}
@@ -465,8 +475,18 @@ For this $q=q_{1}y_{1}acwdy_{2}q_{2}$, the following conditions must be satisfie
 All of these cases do not meet \TheConditionB.
 Therefore, if \TheConditionB\ are satisfied, the case (i2) is also impossible.
 
-From the above, we conclude that if $p \{ x := r \} \preceq q$ for all $r = \{ ya, bc, dy \}$ (\TheConditionB), then $p \{ x := xy \} \preceq q$ holds.
+From the above, we conclude that if $p \{ x := r \} \preceq q$ for all $r \in \{ ya, bc, dy \}$ (\TheConditionB), then $p \{ x := xy \} \preceq q$ holds.
 \end{proof}
+
+The conditions (i) and (ii) in Lemma~\ref{lem:oneside} are illustrated in the cases (7) and (8) in Fig.~\ref{fig:lem6bigraph}, which are additional cases to the cases (3)--(6) in Fig.~\ref{fig:lem5bigraph}.
+
+\begin{figure}[t]
+  \begin{center}
+    \includegraphics[scale=0.525]{figs/lem6bigraph.pdf}
+    \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and $p,q \in \RPat$. We assume that the symbols in $\Sigma$ are mutually distinct.
+    The figures (7) and (8) express the conditions of of Lemma~\ref{lem:oneside} in the cases that (7) $D = \{ ya, ac, dy \}$ and (8) $D = \{ ya, bd, dy \}$, respectively. The condition in Lemma~\ref{lem:oneside} also include the cases (3)--(6) in Fig.~\ref{fig:lem5bigraph}.  In these cases, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$ holds.}\label{fig:lem6bigraph}
+  \end{center}
+\end{figure}
 
 When the conditions of both Lemmas \ref{lem:addpart} and \ref{lem:oneside} are not satisfied, counterexamples can be constructed as follows:
 
