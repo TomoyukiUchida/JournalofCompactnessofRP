@@ -1,5 +1,7 @@
 \section{Preliminaries}
 
+\subsection{Basic definitions and notations}\label{subsec:basicdef}
+
 % Preliminaries
 Let $\Sigma$ be a non-empty finite set of constant symbols.
 Let $X$ be an infinite set of variable symbols such that $\Sigma \cap X = \emptyset$ holds.
@@ -12,6 +14,7 @@ and by $(\Sigma \cup X)^{+}$ the set of all strings on $\Sigma\cup X$ except $\v
 %%$\Sigma$を少なくとも2つの記号を含む定数記号の有限集合, $X$を変数記号からなる可算集合とする．
 %%ただし, $\Sigma \cap X = \phi$とする．
 %A \textit{pattern} on $\Sigma \cup X$ is a finite string which consists of symbols in $\Sigma \cup X$.
+
 A \textit{pattern} on $\Sigma \cup X$ is a string in $(\Sigma \cup X)^{\ast}$.
 Note that the empty string $\varepsilon$ is a pattern on $\Sigma \cup X$.
 A pattern $p$ is said to be \textit{regular} if each variable symbol appears
@@ -48,7 +51,7 @@ Note that for a string $p$ and the empty string $\varepsilon$, $p\cdot \varepsil
 %%\textbf{パターン}とは$(\Sigma \cup X)^{\ast}$に含まれる文字列である．
 %%便宜上，空文字列$\varepsilon$をパターンとして考える．
 %%全てのパターンの族を$\mathcal{P}$と表し, パターン$p$の文字列の長さを$|p|$で表す．
-%
+
 A substitution $\theta$ is a mapping from $(\Sigma \cup X)^{\ast}$ to $(\Sigma \cup X)^{\ast}$ such that
 (1) $\theta$ is a homomorphism with respect to string concatenation, i.e., $\theta(p \cdot q) = \theta(p) \cdot \theta(q)$ holds for patterns $p$ and $q$,
 (2) $\theta(\varepsilon)=\varepsilon$ holds,
@@ -66,6 +69,7 @@ For a pattern $p$ and a substitution $\theta=\{x_{1}:=p_{1},\ldots,x_{n}:=p_{n}\
 %便宜上，$\theta$を代入と呼ぶ．
 %%\textbf{代入}\bm{$\theta$}とは,全ての定数をそれ自身に移すパターンからパターンへの準同型写像をいう．
 %%代入$\theta$によるパターン$q$の像を$q \theta$で表す．
+
 For a pattern $p$ and $q$,
 the pattern $q$ is a \textit{generalization} of $p$, or $p$ is an \textit{instance} of $q$, denoted by $p \preceq q$,
 if there exists a substitution $\theta$ such that $p = q\theta$ holds.

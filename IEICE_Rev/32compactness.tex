@@ -3,154 +3,12 @@
 %\smallskip
 %\hfill Edited by Takayoshi Shoudai on 2024-05-18 (2nd version), 2024-11-18 (3rd version).
 
-\newtheorem{prop}{Proposition}
-\newcommand{\pair}[2]{(#1,#2)}
+\subsection{$|D|=3$}\label{subsec:d3}
+
 \newcommand{\TheConditionA}{$b \not\in \{a,d\} \mbox{~and~} c \not\in \{a,d\}$}
 \newcommand{\TheConditionB}{$b \not= d \mbox{~and~} c \not\in \{a,d\}$}
 \newcommand{\TheConditionBsub}{$c \not\in \{a,d\}$}
 \newcommand{\TheConditionC}{$b \not\in \{a, d\} \mbox{~and~} c \not= a$}
-
-\begin{prop}\label{prop:repstring_origin}
-  Let $w$ be a string of constant symbols in $\Sigma$ and $a,b$ constant symbols in $\Sigma$.
-  If
-  \begin{align}
-  wa & = bw\label{eq:repstring_origin}
-  \end{align}
-  holds, then $a = b$ holds.
-\end{prop}
-
-\begin{proof}
-Since it is trivial we omit the proof.
-%If $|w|=0$ or $|w|=1$, the statement is trivial.
-%We assume that for a string of constant symbols $u$ with $|u| < |w|$, if $ua = bu$, then $a = b$ holds.
-%When $|w| \geq 2$, since $b$ is a prefix of $w$, there exists a string of constant symbols $u$ such that $w = bu$.
-%From $bua = bbu$, we have $ua = bu$. By the assumption, this implies $a = b$.  
-\end{proof}
-
-\begin{prop}\label{prop:repstring_base}
-Let $w$ be a string of constant symbols in $\Sigma$ and $a,b,c,d$ constant symbols in $\Sigma$.
-If
-\begin{align}
-wda & = bcw\label{eq:repstring_base}
-\end{align}
-holds, then $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
-\end{prop}
-
-\begin{proof}
-  We will prove this proposition by induction on $|w|$.
-  %For $i=1,\ldots,|w|$, we refer to the $i$-th symbol of $w$ as $w[i - 1]$. 
-  \begin{itemize}
-  %\item $|w| = 0$: Directly from Eq.~(\ref{eq:repstring_base}), $\pair{b}{c} = \pair{d}{a}$ holds.
-  %\item $|w| = 1$: From $w[0]da = bcw[0]$, we have $w[0] = b$, $d = c$, and $a = w[0]$. Thus, $\pair{b}{c} = \pair{a}{d}$ holds.
-  %\item $|w| = 2$: From $w[0]w[1]da = bcw[0]w[1]$, we have $w[0] = b$, $w[1] = c$, $d = w[0]$, $a = w[1]$. Thus, $\pair{b}{c} = \pair{d}{a}$ holds.
-  %\item $|w| = 3$: From $w[0]w[1]w[2]da = bcw[0]w[1]w[2]$, we have $w[0] = b$, $w[1] = c$, $w[2] = w[0]$, $d = w[1]$, $a = w[2]$. Thus, $\pair{b}{c} = \pair{a}{d}$ holds.
-  \item $|w| = 0,1,2,3$: it is straightforward to observe that $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
-  \item $|w| \ge 4$: We assume that for any string $u$ with $0\leq |u| < n$, if $uda = bcu$ holds, $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds. Since the string $w$ has a prefix $bc$ and a suffix $da$, there exists a string $u$ with $|u| = |w| - 4 < |w|$ such that $w = bcuda$ holds. Since $wda = bcw$, we have $bcudada = bcbcuda$, and then $uda = bcu$. Thus, from the assumption, we get $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$.
-  \end{itemize}
-From the above, we conclude that if $wda = bcw$ holds, then $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
-\end{proof}
-
-The conclusion from Proposition~\ref{prop:repstring_base} shows that $\pair{a}{d} \in \{\pair{b}{c}, \pair{c}{b}\}$. Therefore, if the equation $daw = wbd$ holds, we arrive at the same conclusion.
-
-\begin{prop}\label{prop:repstring}
-Let $w,w^{\prime}$ be strings of constant symbols in $\Sigma$ and $a,b,c,d$ constant symbols in $\Sigma$.
-If
-\begin{align}
-  wdaw^{\prime} & = w^{\prime}bcw\label{eq:repstring}
-\end{align}
-holds, then $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.\label{prop:repstring_eq}
-\end{prop}
-
-\begin{proof}
-We will prove this proposition by an induction on $|w| + |w^{\prime}|$.
-Without loss of generality, we assume that $|w| \geq |w^{\prime}|$ because, if $|w| > |w^{\prime}|$, we arrive at the same conclusion that $\pair{a}{d} \in \{\pair{b}{c}, \pair{c}{b}\}$ holds.
-\begin{itemize}
-  \item $|w| \geq 0$ and $|w^{\prime}|=0$:
-  Eq.~(\ref{eq:repstring}) reduces to $wda = bcw$. By Proposition~\ref{prop:repstring_base}, $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
-\end{itemize}
-We assume that for constant strings $u$ and $u^{\prime}$ with $|u| + |u^{\prime}| < |w| + |w^{\prime}|$, if $udau^{\prime} = u^{\prime}bcu$ holds, then $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holdss.
-We divide the relations between $|w|$ and $|w^{\prime}|$ into the following four cases:
-\begin{itemize}
-\item $0 < |w^{\prime}| \le |w| \le |w^{\prime}|+1$:
-When either $|w|=|w^{\prime}|$ or $|w|=|w^{\prime}|+1$, Eq.~(\ref{eq:repstring}) is illustrated in Figs.~\ref{fig:prop_pic7} and \ref{fig:prop_pic8}, respectively.
-If $|w|=|w^{\prime}|$, $\pair{b}{c} = \pair{d}{a}$ holds.
-If $|w|=|w^{\prime}|+1$, $a = c$ and $w = w^{\prime}b = dw^{\prime}$ hold.
-From Proposition~\ref{prop:repstring_origin}, we deduce that $b = d$.
-Therefore, $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
-%
-\item $|w^{\prime}|+2 \le |w| \le 2|w^{\prime}| - 1$:
-In Eq.~\ref{eq:repstring}, since $|wdaw^{\prime}| = |w^{\prime}bcw| = |w| + |w^{\prime}| + 2$, a suffix of $w$ overlaps with a prefix of $w$, as illustrated in Fig.~\ref{fig:prop_pic9}.
-That is, there exists a constant string $u$ of length $2|w| - (|w| + |w^{\prime}| + 2) = |w| - |w^{\prime}| - 2$ such that $u$ is both a prefix and a suffix of $w$.
-Since $uda$ has a length of $|w| - |w^{\prime}|$, it is also a prefix of $w$. Similarly, $bcu$ is a suffix of $w$.
-Because $|w| - (|uda| + |bcu|) = 2|w| - |w^{\prime}| \ge 1$, there exist a constant string $u^{\prime}$ of length $2|w^{\prime}| - |w|$ such that $w = udavbcu$ holds.
-Since $w^{\prime}$ is a suffix of $w$ and $|u^{\prime}bcu| = (2|w^{\prime}| - |w|) + 2 + (|w| - |w^{\prime}| - 2) = |w^{\prime}|$, we have $w^{\prime} = u^{\prime}bcu$.
-Similarly, $w^{\prime} = udau^{\prime}$. Thus, we derive the equation $u^{\prime}bcu = udau^{\prime}$.
-Since $|u| = |w| - |w^{\prime}| - 2 \leq |w| - 3 < |w|$ and $|u^{\prime}| = 2|w^{\prime}| - |w| < |w|$, i.e., $|u| + |u^{\prime}| < |w| + |w^{\prime}|$, the induction hypothesis on $|u| + |u^{\prime}|$ implies that $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
-%
-\item $2|w^{\prime}| \le |w| \le 2|w^{\prime}|+3$:
-When $|w|=2|w^{\prime}|$, it is straightforward to observe that $w = w^{\prime}w^{\prime}$.
-Therefore, $w^{\prime}da = bcw^{\prime}$ holds, as illustrated in Fig.~\ref{fig:prop_pic14}.
-From Proposition~\ref{prop:repstring_base}, $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
-When $|w|=2|w^{\prime}|+i$ ($i=1,2,3$), Eq.~(\ref{eq:repstring}) is depicted in Figs.~\ref{fig:prop_pic13}, \ref{fig:prop_pic12}, and \ref{fig:prop_pic11}, respectively.
-When $|w|=2|w^{\prime}|+2$, it is clear that $\pair{b}{c} = \pair{d}{a}$. 
-When $|w|=2|w^{\prime}|+1$ and $|w|=2|w^{\prime}|+3$, Proposition~\ref{prop:repstring_origin} implies that $\pair{b}{c} = \pair{a}{d}$ holds.
-%
-\item $2|w^{\prime}|+4 \leq |w|$:
-Since the strings $w^{\prime}bc$ and $adw^{\prime}$ are a prefix and a suffix of $w$, respectively, and $|w^{\prime}bc| + |adw^{\prime}| = 2|w^{\prime}| + 4$, there exists a string $u$ with $|u| \geq 0$ such that $w = w^{\prime}bcudaw^{\prime}$ holds.
-From Eq.~(\ref{eq:repstring}), $w^{\prime}bcudaw^{\prime}daw^{\prime} = w^{\prime}bcw^{\prime}bcudaw^{\prime}$, i.e., $udaw^{\prime} = w^{\prime}bcu$ holds, as illustrated in Fig.~\ref{fig:prop_pic10}.
-Let $u^{\prime} = w^{\prime}$.
-Since $|u| + |u^{\prime}| = |w|- (2|w^{\prime}| + 4) + |w^{\prime}| < |w| + |w^{\prime}|$, the induction hypothesis on $|u| + |u^{\prime}|$ implies that $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
-\end{itemize}
-From the above, we conclude that if $wdaw^{\prime} = w^{\prime}bcw$, then $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
-\end{proof}
-
-\begin{figure}[t]
-\begin{center}
-  %\includegraphics[scale=0.45]{figs/w=w_1.eps}\\
-  \includegraphics[scale=0.345]{figs/w=w_1.pdf}
-  \caption{Case $|w| = |w^{\prime}|$ in Proposition~\ref{prop:repstring}}\label{fig:prop_pic7}
-  \bigskip
-  %\includegraphics[scale=0.45]{figs/w=w_1+1.eps}\\
-  \includegraphics[scale=0.345]{figs/w=w_1+1.pdf}
-  \caption{Case $|w| = |w^{\prime}| + 1$ in Proposition~\ref{prop:repstring}}\label{fig:prop_pic8}
-\end{center}
-\end{figure}
-
-\begin{figure}[t]
-\begin{center}
-  %\includegraphics[scale=0.45]{figs/w=w_1+2.eps}\\
-  \includegraphics[scale=0.345]{figs/w=w_1+2.pdf}
-  \caption{Case $|w^{\prime}| + 2 \le |w| \le 2|w^{\prime}| - 1$ in Proposition~\ref{prop:repstring}}\label{fig:prop_pic9}
-\end{center}
-\end{figure}
-
-\begin{figure}[t]
-\begin{center}
-  %\includegraphics[scale=0.45]{figs/w=2w_1.eps}\\
-  \includegraphics[scale=0.345]{figs/w=2w_1.pdf}
-  \caption{Case $|w| = 2|w^{\prime}|$ in Proposition~\ref{prop:repstring}}\label{fig:prop_pic14}
-  \bigskip
-  %\includegraphics[scale=0.45]{figs/w=2w_1+1.eps}\\
-  \includegraphics[scale=0.345]{figs/w=2w_1+1.pdf}
-  \caption{Case $|w| = 2|w^{\prime}| + 1$ in Proposition~\ref{prop:repstring}}\label{fig:prop_pic13}
-  \bigskip
-  %\includegraphics[scale=0.45]{figs/w=2w_1+2.eps}\\
-  \includegraphics[scale=0.345]{figs/w=2w_1+2.pdf}
-  \caption{Case $|w| = 2|w^{\prime}| + 2$ in Proposition~\ref{prop:repstring}}\label{fig:prop_pic12}
-  \bigskip
-  %\includegraphics[scale=0.45]{figs/w=2w_1+3.eps}\\
-  \includegraphics[scale=0.345]{figs/w=2w_1+3.pdf}
-  \caption{Case $|w| = 2|w^{\prime}| + 3$ in Proposition~\ref{prop:repstring}}\label{fig:prop_pic11}
-\end{center}
-\end{figure}
-
-\begin{figure}[t]
-\begin{center}
-  %\includegraphics[scale=0.45]{figs/w=2w_1+4.eps}\\
-  \includegraphics[scale=0.345]{figs/w=2w_1+4.pdf}
-  \caption{Case $2|w^{\prime}| + 4 \leq |w|$ in Proposition~\ref{prop:repstring}}\label{fig:prop_pic10}
-\end{center}
-\end{figure}
 
 \begin{lem}\label{lem:addpart}
   Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and $p,~q$ regular patterns on $\Sigma\cup X$.
@@ -178,7 +36,7 @@ From the above, we conclude that if $wdaw^{\prime} = w^{\prime}bcw$, then $\pair
     \end{tabular}
   \end{center}
 
-  Suppose that there exists (b) $y_{3}c$ in $q$ that corresponds to $bc$ in $p\{x:=bc\}$, i.e., there exist $q_{1}$ and $q_{2}$, each of which is an empty string or a regular pattern on $\Sigma\cup X$, such that:
+  Suppose that there exists (b) $y_{3}c$ in $q$ that corresponds to $bc$ in $p\{x:=bc\}$, i.e., there exist $q_{1}$ and $q_{2}$, each of which is the empty string or a regular pattern on $\Sigma\cup X$, such that:
   \begin{enumerate}
   \item[(1)] $p_{1}bcp_{2} \preceq q_{1}y_{3}cq_{2}$, 
   \item[(2)] either $p_{1} \preceq q_{1}$ or $p_{1} \preceq q_{1}y_{3}^{\prime}$ for some variable symbol $y_{3}^{\prime}\in X$, and
@@ -189,7 +47,7 @@ From the above, we conclude that if $wdaw^{\prime} = w^{\prime}bcw$, then $\pair
   Similarly, the case (c) leads to a contradiction by (i) in Lemma \ref{lem:twovariables}.
   Therefore, in the following, we consider only case (a).
 
-  Since $p \{ x := xy \} \not \preceq q$ and the condition \TheConditionA\ hold, the regular pattern $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $q_{1}, q_{2}, w, w^{\prime}$ be either an empty string or a regular pattern on $\Sigma\cup X$.
+  Since $p \{ x := xy \} \not \preceq q$ and the condition \TheConditionA\ hold, the regular pattern $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $q_{1}, q_{2}, w, w^{\prime}$ be either the empty string or a regular pattern on $\Sigma\cup X$.
   \begin{enumerate}
   \item[(a1)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a,bc,dy_{2} \}$,
   \item[(a2)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ dy_{1}a,bc \}$,
@@ -394,7 +252,7 @@ In {\rm (ii)}, for the same reason, we assume $c\not= a$.
 
 \begin{proof}
 It is obvious if no variable symbol appears in $p$.
-Therefore, let $p=p_{1}xp_{2}$, where $p_{i}$ (for $i=1,2$) is either an empty string or a regular pattern, and $x$ is a variable symbol.
+Therefore, let $p=p_{1}xp_{2}$, where $p_{i}$ (for $i=1,2$) is either the empty string or a regular pattern, and $x$ is a variable symbol.
 We assume that $p \{ x := xy \} \not \preceq q$ in order to derive a contradiction.
 In the case of \textrm{(ii)}, by reversing the strings $p$ and $q$, we can prove that the assumption $p \{ x := xy \} \preceq q$ leads to a contradiction, as in the case of \textrm{(i)}.
 Therefore, in the following, we consider only the case of \textrm{(i)}: $D=\{ ya, bc, dy \}$ (\TheConditionB).
@@ -407,7 +265,7 @@ The strings $ya$ and $dy$ must correspond to the strings $y_{1}a$ and $dy_{2}$ i
 For the same reasons stated at the beginning of Lemma~\ref{lem:addpart}, the string $bc$ corresponds to the string $bc$ in $q$ as well.
 Let $A,B,C$ be regular patterns on $\Sigma \cup X$, where $\{ A,B,C \} = \{ y_{1}a,ac,dy_{3} \}$.
 Since $p \{ x := xy \} \not \preceq q$, $q$ can be expressed in one of the following four forms:\\
-Let $y_{1}, y_{2}$ be distinct variable symbols in $X$, and $q_{1}, q_{2}, w, w^{\prime}$ either an empty string or a regular pattern on $\Sigma\cup X$.
+Let $y_{1}, y_{2}$ be distinct variable symbols in $X$, and $q_{1}, q_{2}, w, w^{\prime}$ either the empty string or a regular pattern on $\Sigma\cup X$.
 From the condition $b \not= d$, if $b = a$, it follows that $a \not= d$.
 \begin{enumerate}
 \item[(i1)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a,bc,dy_{2} \}$.

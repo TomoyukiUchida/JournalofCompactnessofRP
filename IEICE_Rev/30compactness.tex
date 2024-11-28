@@ -1,4 +1,5 @@
 %\section{Compactness for Sets of Regular Patterns}
+\subsection{Compactness}\label{subsec:compactness}
 
 In this section, we define the compactness of sets of regular patterns, formally.
 Then, if $\sharp\Sigma \ge 2k-1$ holds, 
@@ -15,6 +16,11 @@ For any regular pattern $p \in \RPat$ and any set $Q \in \mathcal{C}$,
 the set $\mathcal{C}$ said to have {\it compactness with respect to containment}
 if there exists a regular pattern $q \in Q$ such that $L(p) \subseteq L(q)$ holds if $L(p) \subseteq L(Q)$ holds.
 \end{dfn}
+
+Let $D \subset \RPat$ with $|D| = 2$ or $3$, and let $p,q$ be regular patterns in $\RPat$.
+In the following two subsections (Subsecs.~\ref{subsec:d2} and \ref{subsec:d3}), we provide the conditions on $D$ under which the implication holds: if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.
+
+\subsection{$|D| = 2$}\label{subsec:d2}
 
 \begin{lem}[Sato et al.\cite{Sato1}]\label{lem:twovariables}
 Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and let $p,q$ be regular patterns on $\Sigma$.
