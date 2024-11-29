@@ -6,9 +6,9 @@
 \subsection{$|D|=3$}\label{subsec:d3}
 
 \newcommand{\TheConditionA}{$b \not\in \{a,d\} \mbox{~and~} c \not\in \{a,d\}$}
-\newcommand{\TheConditionB}{$b \not= d \mbox{~and~} c \not\in \{a,d\}$}
+\newcommand{\TheConditionB}{$b = a,~b \not= d, \mbox{~and~} c \not\in \{a,d\}$}
 \newcommand{\TheConditionBsub}{$c \not\in \{a,d\}$}
-\newcommand{\TheConditionC}{$b \not\in \{a, d\} \mbox{~and~} c \not= a$}
+\newcommand{\TheConditionC}{$b \not\in \{a, d\},~c \not= a, \mbox{~and~} c = d$}
 
 \begin{lem}\label{lem:addpart}
   Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and $p,~q$ regular patterns on $\Sigma\cup X$.
@@ -183,16 +183,18 @@
   \end{align*}
   %
   From $p_{1} \preceq q_{1}dy_{1}aw$ in (3), $p_{1}$ can be expressed as $p^{\prime}_{1}p^{\prime\prime}_{1}$ for some $p^{\prime}_{1}$ and $p^{\prime\prime}_{1}$, where $p^{\prime}_{1} \preceq q_{1}d$ and $p^{\prime\prime}_{1} \preceq y_{1}aw$.
-  When $p_{2} \preceq awbcq_{2}$ in (1'), we have $$p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xawbcq_{2}=q \{ y_{1}:=p^{\prime\prime}_{1}x \}.$$
+  When $p_{2} \preceq awbcq_{2}$ in (1'), we have
+  $$p=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xawbcq_{2}=q \{ y_{1}:=p^{\prime\prime}_{1}x \}.$$
   Thus, $p \{ x := xy \} \preceq q \{ y_{1}:=p^{\prime\prime}_{1}xy \}$ holds.
   This contradicts the assumption.
-  When $p_{2} \preceq y_{1}^{\prime}awbcq_{2}$ in (1'), we similarly have $$p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xy_{1}^{\prime}wbcq_{2}=q \{ y_{1}:=p^{\prime\prime}_{1}xy_{1}^{\prime} \}.$$
+  When $p_{2} \preceq y_{1}^{\prime}awbcq_{2}$ in (1'), we similarly have
+  $$p=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xy_{1}^{\prime}wbcq_{2}=q \{ y_{1}:=p^{\prime\prime}_{1}xy_{1}^{\prime} \}.$$
   Thus, $p \{ x := xy \} \preceq q \{ y_{1}:=p^{\prime\prime}_{1}xyy_{1}^{\prime} \}$ holds.
   This contradicts the assumption that $p \{ x := xy \} \not\preceq q$.
   %
   Similarly, we can show that the case $(A, B) = (bc, dy_{1}a)$ also contradicts the assumption.
   
-  Finally, we will prove that for the case (a3), $p \{ x := xy \} \preceq q$ holds. Suppose that $(A, B) = (y_{1}ay_{2}, bc)$, i.e., $q = q_{1}y_{1}ay_{2}wbcq_{2} $ holds. Then, the following conditions must be satisfied for $y_{1}^{\prime}\in X$:
+  Finally, we prove that for the case (a3), $p \{ x := xy \} \preceq q$ holds. Suppose that $(A, B) = (y_{1}ay_{2}, bc)$, i.e., $q = q_{1}y_{1}ay_{2}wbcq_{2} $ holds. Then, the following conditions must be satisfied for $y_{1}^{\prime}\in X$:
   \begin{align*}
     \textrm{(1)}~& p_{1} \preceq q_{1}\mbox{ or} & \textrm{(1')}~& p_{2} \preceq y_{2}wbcq_{2}, \\
     & p_{1} \preceq q_{1}y_{1}^{\prime}, & & \\
@@ -257,28 +259,26 @@ We assume that $p \{ x := xy \} \not \preceq q$ in order to derive a contradicti
 In the case of \textrm{(ii)}, by reversing the strings $p$ and $q$, we can prove that the assumption $p \{ x := xy \} \preceq q$ leads to a contradiction, as in the case of \textrm{(i)}.
 Therefore, in the following, we consider only the case of \textrm{(i)}: $D=\{ ya, bc, dy \}$ (\TheConditionB).
 
-The proof of this lemma is almost the same as the proof of Lemma~\ref{lem:addpart}.
+The proof is almost the same as the proof of Lemma~\ref{lem:addpart}.
 Since $p \{ x := r \} \preceq q$ for all $r \in D$, there are three strings of length $2$ corresponding to $ya, bc, dy$ in $q$
 The symbols appearing in $D$ correspond to either a variable or a constant symbol in $q$.
 Let $y_{1}$ and $y_{2}$ be variable symbols appearing in $q$.
 The strings $ya$ and $dy$ must correspond to the strings $y_{1}a$ and $dy_{2}$ in $q$, respectively.
 For the same reasons stated at the beginning of Lemma~\ref{lem:addpart}, the string $bc$ corresponds to the string $bc$ in $q$ as well.
 Let $A,B,C$ be regular patterns on $\Sigma \cup X$, where $\{ A,B,C \} = \{ y_{1}a,ac,dy_{3} \}$.
-Since $p \{ x := xy \} \not \preceq q$, $q$ can be expressed in one of the following four forms:\\
+Since $p \{ x := xy \} \not \preceq q$, $q$ can be expressed in one of the following four forms:
 Let $y_{1}, y_{2}$ be distinct variable symbols in $X$, and $q_{1}, q_{2}, w, w^{\prime}$ either the empty string or a regular pattern on $\Sigma\cup X$.
-From the condition $b \not= d$, if $b = a$, it follows that $a \not= d$.
+From the conditions $b = a$ and $b \not= d$, it follows that $a \not= d$.
 \begin{enumerate}
-\item[(i1)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a,bc,dy_{2} \}$.
-\item[(i2)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ac,dy_{2} \}$ ($b = a$).
-\item[(i3)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ay_{2},bc \}$ ($a = d$).
-\item[(i4)] $q=q_{1}Aq_{2}$, where $A = dy_{1}ac$ ($b = a$).
+\item[(i1)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a,ac,dy_{2} \}$.
+\item[(i2)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ac,dy_{2} \}$.
+\item[(i3)] $q=q_{1}Aq_{2}$, where $A = dy_{1}ac$.
 \end{enumerate}
 
-In these cases, just as in cases (a2) and (a3) in Lemma~\ref{lem:addpart}, cases (i3) and (i4) also lead to contradictions based on Theorem~\ref{Sato1:Lemma9}.
 In cases (i1) and (i2), similar to Lemma~\ref{lem:addpart}, it is shown that $q=q_{1}y_{1}awacw^{\prime}dy_{2}q_{2}$ and $q=q_{1}y_{1}acwdy_{2}q_{2}$, respectively, where $w$ and $w^{\prime}$ contain no variable symbols.
 
-Firstly, we will consider the case (i1) when $b = a$.
-Since $p \{ x := r \} \preceq q$ for all $r \in \{ ya, ac, dy \}$ and $p \{ x := xy \} \not\preceq q$, the following conditions must be satisfied:
+First, we consider case (i1).
+For $q=q_{1}y_{1}awacw^{\prime}dy_{2}q_{2}$, the following conditions must be satisfied:
 \begin{align*}
   \textrm{(1)}~& p_{1} \preceq q_{1}, & \textrm{(1')}~& p_{2} \preceq wacw^{\prime}dy_{2}q_{2}, \\
   \textrm{(2)}~& p_{1} \preceq q_{1}y_{1}aw, & \textrm{(2')}~& p_{2} \preceq w^{\prime}dy_{2}q_{2}, \\
@@ -318,8 +318,8 @@ From (1') and (2'), $wacw^{\prime}d$ and $w^{\prime}d$ are prefixes of $p_{2}$, 
     \end{center}
     \end{figure}
 
-Second, we will consider the case (i2).
-For this $q=q_{1}y_{1}acwdy_{2}q_{2}$, the following conditions must be satisfied:
+Second, we consider case (i2).
+For $q=q_{1}y_{1}acwdy_{2}q_{2}$, the following conditions must be satisfied:
 \begin{align*}
   \textrm{(1)}~& p_{1} \preceq q_{1}, & \textrm{(1')}~& p_{2} \preceq cwdy_{3}q_{2}, \\
   \textrm{(2)}~& p_{1} \preceq q_{1}y_{1}, & \textrm{(2')}~& p_{2} \preceq wdy_{3}q_{2}, \\
@@ -334,17 +334,27 @@ For this $q=q_{1}y_{1}acwdy_{2}q_{2}$, the following conditions must be satisfie
 All of these cases do not meet \TheConditionB.
 Therefore, if \TheConditionB\ are satisfied, the case (i2) is also impossible.
 
+Finally, we consider case (i3).
+For $q=q_{1}dy_{1}acq_{2}$, the following conditions must be satisfied for $y_{1}^{\prime},y_{1}^{\prime\prime}\in X$:
+\begin{align*}
+  \textrm{(1)}~& p_{1} \preceq q_{1}d \mbox{~or} & \textrm{(1')}~& p_{2} \preceq cq_{2}, \\
+  &  p_{1} \preceq q_{1}dy_{1}^{\prime}, & & \\
+  \textrm{(2)}~& p_{1} \preceq q_{1}dy_{1}, & \textrm{(2')}~& p_{2} \preceq q_{2}, \\
+  \textrm{(3)}~& p_{1} \preceq q_{1}, & \textrm{(3')}~& p_{2} \preceq acq_{2} \mbox{~or}\\
+  & & & p_{2} \preceq y_{1}^{\prime\prime}acq_{2}.
+\end{align*}
+For $p_{1} \preceq q_{1}d$ in (1) and $p_{2} \preceq acq_{2}$ in (3'), $p = p_{1}xp_{2} \preceq q_{1}dxacq_{2} \preceq q\{y_{1}:=x\}$ holds. From this, we have $p\{x:=xy\} \preceq q\{y_{1}:=x\}$. This contradicts the assumption that $p\{x:=xy\} \not\preceq q$. Similarly, we can show that the other cases of (1) and (3') also contradict the assumption.
+
 From the above, we conclude that if $p \{ x := r \} \preceq q$ for all $r \in \{ ya, bc, dy \}$ (\TheConditionB), then $p \{ x := xy \} \preceq q$ holds.
 \end{proof}
 
-The conditions (i) and (ii) in Lemma~\ref{lem:oneside} are illustrated in the cases (7) and (8) in Fig.~\ref{fig:lem6bigraph}, which are additional cases to the cases (3)--(6) in Fig.~\ref{fig:lem5bigraph}.
+The conditions (i) and (ii) in Lemma~\ref{lem:oneside} are illustrated in the cases (7) and (8) in Fig.~\ref{fig:lem6bigraph}.
 
 \begin{figure}[t]
   \begin{center}
     \includegraphics[scale=0.525]{figs/lem6bigraph.pdf}
     \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and $p,q \in \RPat$. We assume that the symbols in $\Sigma$ are mutually distinct.
     The figures (7) and (8) express two cases $D = \{ ya, ac, dy \}$ and $D = \{ ya, bd, dy \}$ in Lemma~\ref{lem:oneside}, respectively.
-    The conditions in Lemma~\ref{lem:oneside} also include four cases (3)--(6) in Fig.~\ref{fig:lem5bigraph}.
     In these cases, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$ holds.}\label{fig:lem6bigraph}
   \end{center}
 \end{figure}
