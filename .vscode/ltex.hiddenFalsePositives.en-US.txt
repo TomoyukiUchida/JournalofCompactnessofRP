@@ -1,0 +1,1 @@
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QFor case (iv), we need strong conditions on \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q and \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q (\\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q).\\E$"}

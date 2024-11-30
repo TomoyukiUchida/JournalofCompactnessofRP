@@ -1,3 +1,5 @@
+\subsection{$D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$}\label{subsec:d3c}
+
 In Lemma 14 (ii) of \cite{Sato1}, 
 they stated that, when $\sharp \Sigma \geq 3$, for regular patterns $p,q$, if $p\{x:=r\}\preceq q$ for any $r\in D$, then $p\{x:=xy\} \preceq q$ holds, where 
 $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$ $(a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\le i,j\le 3))$.
@@ -27,21 +29,8 @@ and  $p\{x^{\prime}:=a_3b_3\}=cb_2a_1b_1b_2a_3b_3a_1b_1b_2a_3c=q\{x:=c,y:=b_3a_1
 \end{itemize}
 \end{ex}
 
-%\medskip
-%\noindent
-\begin{lem}\label{lem:4pairsofSymbols}\label{補題14}
-  Let $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$, where 
- $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\le i,j\le 3)$,
-  $b_1\neq a_2$ and $b_2\neq a_3$.
-Let $p,q$ be regular patterns such that a variable symbol $y$ does not appear in $p$.
-Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.  
-\end{lem}
-\begin{proof}
-It is obvious if the variable symbol $x$ does not appear in $p$.
-Therefore, let $p=p_{1}xp_{2}$, where $p_{1}, p_{2}$ are regular patterns.
-We assume that $p \{ x := xy \} \not \preceq q$ in order to derive the contradictions.
-Since $p \{ x := r \} \preceq q$ holds for any $r \in D$,
-the regular pattern $q$ contains $a_{1}b_{1}, a_{2}b_{2}$ and $a_{3}b_{3}$.
+Let $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$, where $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\le i,j\le 3)$.
+We consider conditions on $q$ under which satisfies that if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$, where a variable symbol $x$ and $y$ do not appear in $p$ and $q$.
 We remark that $a_i$ and $b_j$ may be the same for $i,j (1\le i,j\le 3)$.
 Since $p \{ x := r \} \preceq q$ for all $r \in D$ holds, 
 there exist the following 10 cases (i)--(xv) for three regular patterns on $\Sigma$ contained in $q$ that correspond to three constant strings in $D$:
@@ -59,15 +48,35 @@ Here, $y_1,y_2,y_3$ are variable symbols.
 \end{tabular}
 \medskip
 
-\noindent
-For the case (iv), we can prove that $p \{ x := xy \} \preceq q$ holds from Lemma \ref{追加部分}.
-For the cases (v)--(x), we can prove that $p \{ x := xy \} \preceq q$ holds from Lemma \ref{two_variables}.
-Hence, for the cases (i)--(iii), we will prove that $p \{ x := xy \} \preceq q$ holds.
+For cases (v)--(x), it is easy to prove that $p \{ x := xy \} \preceq q$ holds from Lemma \ref{lem:twovariables}.
+For example, for case (v), $p \{ x := r \} \preceq q$ for all $r \in \{a_{2}y, a_{3}y\}$ also holds, and therefore $p \{ x := xy \} \preceq q$ holds.
+For case (iv), $p \{ x := r \} \preceq q$ for all $r \in \{a_{1}b_{1}, yb_{2}, a_{3}y\}$ also holds.
+In order to ensure that $p \{ x := xy \} \preceq q$ holds, the following stronger conditions on $a_{i}$ and $b_{j}$ ($1\le i,j\le 3$) are required, in addition to the conditions $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for all } i,j~(i\ne j, 1\le i,j\le 3)$ derived from Lemmas~\ref{lem:addpart} and \ref{lem:oneside}: $a_{1} \not= b_{2}$ or $b_{1} \not = a_{3}$.
+Moreover, since this condition is not symmetric with respect to $a_{i}$ and $b_{i}$ ($1\leq i\leq 3$), it follows that stronger conditions are required overall:
+($a_{1} \not= b_{2}$ or $b_{1} \not = a_{3}$) and %for $a_{1}b_{1}, yb_{2}, a_{3}y$.
+($a_{1} \not= b_{3}$ or $b_{1} \not = a_{2}$) and %for $a_{1}b_{1}, a_{2}y, yb_{3}$,
+($a_{2} \not= b_{3}$ or $b_{2} \not = a_{1}$) and %for $a_{1}y, a_{2}b_{2}, yb_{3}$.
+($a_{2} \not= b_{1}$ or $b_{2} \not = a_{3}$) and %for $yb_{1}, a_{2}b_{2}, a_{3}y$,
+($a_{3} \not= b_{1}$ or $b_{3} \not = a_{2}$) and %for $yb_{1}, a_{2}y, a_{3}b_{3}$.
+($a_{3} \not= b_{2}$ or $b_{3} \not = a_{1}$). %for $a_{1}y, yb_{2}, a_{3}b_{3}$
+Therefore, case (iv) will be regarded as the cases in Lemmas~\ref{lem:addpart} and \ref{lem:oneside} instead of $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$ for the sake of clarity in the subsequent discussion.
+Hence, the subsequent discussion will be restricted to cases (i)--(iii).
 
-\smallskip
-\noindent
-(I) Case of (i), that are the cases that $q$ contains $a_{1}b_{1}, a_{2}b_{2}$ and $a_{3}b_{3}$:
+%\medskip
+%\noindent
+\begin{lem}\label{lem:3consts_i}
+Let $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$, where $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\le i,j\le 3)$.
+Let $p = p_{1}xp_{2}$ for $p_{1},p_{2} \in \RPat \cup \{\varepsilon\}$ and $x \in X$.
+If for all $r \in D$, there exist $q_{r,1}$ and $q_{r,2} \in \RPat \cup \{\varepsilon\}$ such that
+\begin{enumerate}
+\item[1.] $p_{i} \preceq q_{r,i}$ $(i=1,2$) and
+\item[2.] $p_{1}rp_{2} \preceq q_{r,1}rq_{r,2}$,
+\end{enumerate}
+then $p \{ x := xy \} \preceq q$ holds.  
+\end{lem}
 
+\begin{proof}
+%(I) Case of (i), that are the cases that $q$ contains $a_{1}b_{1}, a_{2}b_{2}$ and $a_{3}b_{3}$:
 %\begin{figure}
 %\centering
 %\includegraphics[width=\linewidth]{figs/Cases-abc.png}
@@ -75,8 +84,9 @@ Hence, for the cases (i)--(iii), we will prove that $p \{ x := xy \} \preceq q$ 
 %\caption{(abc)の場合分け}
 %\label{abc組み合わせ}
 %\end{figure}
-
-\noindent
+%\noindent
+This corresponds to case (i).
+We assume that $p \{ x := xy \} \not\preceq q$ holds. 
 We consider the following four cases (I-1)-(I-4) of $q$ for some regular patterns $q_{1},q_{2}$ and some constant strings $w,w^{\prime}$ ($|w|\geq 0$ and $|w^{\prime}|\geq 0$):
 
 \smallskip
@@ -188,11 +198,25 @@ Moreover, since $wa_{2}b_{2}b_{3}$ and $b_{3}$ are the prefix of $p_{2}$ from th
 the first symbol of $w$ is $b_{3}$.
 Therefore, $b_{1}=b_{3}$ holds.
 This contradicts the assumption of $b_{1} \ne b_{3}$.
+\end{proof}
 
+\begin{lem}\label{lem:3consts_ii}
+  Let $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$, where $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\le i,j\le 3)$.
+  Let $p = p_{1}x_{2}$ for $p_{1},p_{2} \in \RPat \cup \{\varepsilon\}$ and $x \in X$.
+  If for all $r \in D$, there exist $q_{r,1}$ and $q_{r,2} \in \RPat \cup \{\varepsilon\}$ such that 
+  \begin{enumerate}
+  \item[1.] $p_{1} \preceq q_{r,1}$,
+  \item[2.] $p_{2} \preceq q_{r,2}$ if $r \in \{a_{1}b_{1}, a_{2}b_{2}\}$,
+  \item[3.] $p_{2} \preceq q_{r,2}$ or $p_{2} \preceq y_{1}^{\prime}q_{r,2}$ if $r = a_{3}b_{3}$ ($y_{1}^{\prime} \in X$),
+  \item[4.] $p_{1}rp_{2} \preceq q_{r,1}rq_{r,2}$ if $r \in \{a_{1}b_{1}, a_{2}b_{2}\}$, add
+  \item[5.] $p_{1}rp_{2} \preceq q_{r,1}a_{3}y_{1}q_{r,2}$ if $r = a_{3}b_{3}$ ($y_{1} \in X)$,
+  \end{enumerate}
+then $p \{ x := xy \} \preceq q$ holds.  
+\end{lem}
 
-\smallskip
-\noindent
-(II) Case of (ii) that $q$ contains $a_{1}b_{1}, a_{2}b_{2}$ and $a_{3}y$:
+\begin{proof}
+This corresponds to case (ii).
+We assume that $p \{ x := xy \} \not\preceq q$ holds. 
 Let $A,B,C$ be distinct regular patterns in $\{a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}$ such that $q=q_{1}AwBw^{\prime}Cq_{2}$.
 Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
 \begin{align*}
@@ -238,6 +262,7 @@ Next, in the case of $C=a_{3}y$, we consider the following five cases (II-1)--(I
 (II-5) $q=q_{1}a_{1}b_{1}ywa_{2}b_{2}q_{2}$ ($b_{1}=a_{3}$).
 \end{tabular}
 
+\smallskip
 \noindent
 (II-1) Case of $q=q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime}a_{3}yq_{2}$:
 Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
@@ -351,22 +376,35 @@ Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
 There exist regular patterns $q_{1}^{\prime}, q_{2}^{\prime}, q_{3}^{\prime}$ such that $q_{1}^{\prime}=q_{1}a_{1}b_{1}$, $q_{2}^{\prime}=yw$, $q_{3}^{\prime}=a_{2}b_{2}q_{2}$, from the above condition (3) $p_{1} \preceq q_{1}^{\prime}q_{2}^{\prime}$ and from the above condition (1') $p_{2} \preceq q_{2}^{\prime}q_{3}^{\prime}$ hold.
 Moreover, since $q_{2}^{\prime}$ contains the variable symbol $y$, $p\preceq q$ holds from Theorem \ref{Sato1:Lemma9}.
 This contradicts the assumption.
+\end{proof}
 
-\smallskip
-\noindent
-(III) Case of (iii) that $q$ contains $a_{1}b_{1}, a_{2}b_{2}$ and $yb_{3}$:
-Let $A,B,C$ be distinct regular patterns in $\{a_{1}b_{1}, a_{2}b_{2}, yb_{3}\}$ such that $q=q_{1}AwBw^{\prime}Cq_{2}$.
-Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
+\begin{lem}\label{lem:3consts_iii}
+  Let $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$, where $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\le i,j\le 3)$.
+  Let $p = p_{1}x_{2}$ for $p_{1},p_{2} \in \RPat \cup \{\varepsilon\}$ and $x \in X$.
+  If for all $r \in D$, there exist $q_{r,1}$ and $q_{r,2} \in \RPat \cup \{\varepsilon\}$ such that 
+  \begin{enumerate}
+  \item[1.] $p_{1} \preceq q_{r,1}$ if $r \in \{a_{1}b_{1}, a_{2}b_{2}\}$,
+  \item[2.] $p_{1} \preceq q_{r,1}$ or $p_{1} \preceq q_{r,1}y_{1}^{\prime}$ if $r = a_{3}b_{3}$ ($y_{1}^{\prime} \in X$),
+  \item[3.] $p_{2} \preceq q_{r,2}$,
+  \item[4.] $p_{1}rp_{2} \preceq q_{r,1}rq_{r,2}$ if $r \in \{a_{1}b_{1}, a_{2}b_{2}\}$, add
+  \item[5.] $p_{1}rp_{2} \preceq q_{r,1}y_{1}b_{3}q_{r,2}$ if $r = a_{3}b_{3}$ ($y_{1} \in X)$,
+  \end{enumerate}
+then $p \{ x := xy \} \preceq q$ holds.  
+\end{lem}
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-\begin{align*}
-\textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wBw^{\prime}Cq_{2} \\
-\textrm{(2)}~& p_{1} \preceq q_{1}Aw & \textrm{(2')}~& p_{2} \preceq w^{\prime}Cq_{2} \\
-\textrm{(3)}~& p_{1} \preceq q_{1}AwBw^{\prime} & \textrm{(3')}~& p_{2} \preceq q_{2}
-\end{align*}
-
-xxxxxxxxxxxxxxxxxxxxxxxxxxx
-
+\begin{proof}
+%(III) Case of (iii) that $q$ contains $a_{1}b_{1}, a_{2}b_{2}$ and $yb_{3}$:
+%Let $A,B,C$ be distinct regular patterns in $\{a_{1}b_{1}, a_{2}b_{2}, yb_{3}\}$ such that $q=q_{1}AwBw^{\prime}Cq_{2}$.
+%Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
+%
+%xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+%\begin{align*}
+%\textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wBw^{\prime}Cq_{2} \\
+%\textrm{(2)}~& p_{1} \preceq q_{1}Aw & \textrm{(2')}~& p_{2} \preceq w^{\prime}Cq_{2} \\
+%\textrm{(3)}~& p_{1} \preceq q_{1}AwBw^{\prime} & \textrm{(3')}~& p_{2} \preceq q_{2}
+%
+This corresponds to case (iii).
+The proof follows by reversing $p$ and $q$ and subsequently applying Lemma~\ref{lem:3consts_ii}.
 \end{proof}
 
 

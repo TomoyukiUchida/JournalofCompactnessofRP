@@ -3,7 +3,7 @@
 %\smallskip
 %\hfill Edited by Takayoshi Shoudai on 2024-05-18 (2nd version), 2024-11-18 (3rd version).
 
-\subsection{$|D|=3$}\label{subsec:d3}
+\subsection{$D = \{ ya, bc, dy \}$}\label{subsec:d3}
 
 \newcommand{\TheConditionA}{$b \not\in \{a,d\} \mbox{~and~} c \not\in \{a,d\}$}
 \newcommand{\TheConditionB}{$b = a,~b \not= d, \mbox{~and~} c \not\in \{a,d\}$}
@@ -20,8 +20,8 @@
 \end{lem}
 
   \begin{proof}
-  If no variable symbol appears in $p$, the statement holds trivially.
-  Thus, for a variable symbol $x\in X$, let $p=p_{1}xp_{2}$, where each $p_{i}$ ($i=1,2$) is either an empty symbol or a regular pattern on $\Sigma\cup X$.
+  %If no variable symbol appears in $p$, the statement holds trivially.
+  %Thus, for a variable symbol $x\in X$, let $p=p_{1}xp_{2}$, where each $p_{i}$ ($i=1,2$) is either an empty symbol or a regular pattern on $\Sigma\cup X$.
   We assume that $p \{ x := xy \} \not \preceq q$ in order to derive a contradiction.
 
   Since $p \{ x := r \} \preceq q$ for all $r \in D$, there are three strings of length $2$ in $q$ corresponding to $ya, bc, dy$.

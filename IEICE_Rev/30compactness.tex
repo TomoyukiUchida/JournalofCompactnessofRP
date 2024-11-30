@@ -19,8 +19,10 @@ if there exists a regular pattern $q \in Q$ such that $L(p) \subseteq L(q)$ hold
 
 Let $D \subset \RPat$ with $|D| = 2$ or $3$, and let $p,q$ be regular patterns in $\RPat$.
 In the following two subsections (Subsecs.~\ref{subsec:d2} and \ref{subsec:d3}), we provide the conditions on $D$ under which the implication holds: if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.
+It is obvious if the variable symbol $x$ does not appear in $p$.
+Therefore, in the following lemmas and propositions, let $p=p_{1}xp_{2}$, where $p_{i}$ ($i=1,2$) is an empty symbol or a regular pattern on $\Sigma\cup X$, and $x$ is a variable symbol.
 
-\subsection{$|D| = 2$}\label{subsec:d2}
+\subsection{$D=\{ ay, by \}$ or $D=\{ ya, yb \}$}\label{subsec:d2}
 
 \begin{lem}[Sato et al.\cite{Sato1}]\label{lem:twovariables}
 Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and let $p,q$ be regular patterns on $\Sigma$.
@@ -33,9 +35,9 @@ Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \pr
 \end{lem}
 
 \begin{proof}
-It is obvious if no variable symbol appears in $p$. 
-Therefore, let $p=p_{1}xp_{2}$, where $p_{i}$ ($i=1,2$) is an empty symbol or a regular pattern on $\Sigma\cup X$, and $x$ is a variable symbol.
-We assume that $p \{ x := xy \} \not \preceq q$ in order to derive a contradictions.
+%It is obvious if no variable symbol appears in $p$. 
+%Therefore, let $p=p_{1}xp_{2}$, where $p_{i}$ ($i=1,2$) is an empty symbol or a regular pattern on $\Sigma\cup X$, and $x$ is a variable symbol.
+We assume that $p \{ x := xy \} \not \preceq q$ in order to derive a contradiction.
 In the case of \textrm{(ii)}, by reversing the strings $p$ and $q$, we can prove that the assumption $p \{ x := xy \} \preceq q$ leads to a contradiction, as in the case of \textrm{(i)}.
 Therefore, in the following, we consider only the case of \textrm{(i)}: $D=\{ ay, by \}$ ($a \not= b$).
 

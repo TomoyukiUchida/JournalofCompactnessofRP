@@ -6,7 +6,7 @@
   \begin{center}
     %\includegraphics[scale=0.5]{figs/lem8eachreg.eps}
     \includegraphics[scale=0.54]{figs/lem8eachreg.pdf}
-    \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}, Q=\{q_1,q_2,q_3,q_4,q_5\}$. We set $A(q_1)=\{a\}$ and $B(q_1)=\{a\}$, and then $\sigma_A(q_1)=a$ and $\sigma_B(q_1)=a$, and so on. For each regular pattern $q_i$ ($i=1,\ldots,5$), we represent a string $w \in \Sigma\cdot\Sigma$ satisfying that $p\{x:=w\}\preceq q_i$ by the edge between the left (first) and right (second) symbols of $w$. For example, the leftmost figure shows that $p\{x:=ay\}\preceq q_1$ and $p\{x:=ya\}\preceq q_1$ for a variable symbol $y$. We note that these figures may contain more edges than those illustrated. From these figures, we get $\ell_A=1, \ell_B=0$, and $Q^{(\blacktriangle,\blacktriangle)}=\{q_5\}, Q^{(\blacktriangle,\cdot)}=\{q_4\}, Q^{(\cdot,\blacktriangle)}=\{q_3\}, Q^{(\cdot,\cdot)}=\{q_1,q_2\}$.}\label{fig:lem8eachreg}
+    \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}, Q=\{q_1,q_2,q_3,q_4,q_5\}$. We set $A(q_1)=\{a\}$ and $B(q_1)=\{a\}$, and then $\sigma_A(q_1)=a$ and $\sigma_B(q_1)=a$, and so on. For each regular pattern $q_i$ ($i=1,\ldots,5$), we represent a string $w \in \Sigma\cdot\Sigma$ satisfying that $p\{x:=w\}\preceq q_i$ by the edge between the left (first) and right (second) symbols of $w$. For example, the leftmost figure shows that $p\{x:=ay\}\preceq q_1$ and $p\{x:=ya\}\preceq q_1$ for a variable symbol $y$. We note that these figures may contain more edges than those illustrated. From these figures, we get $\ell_A=1, \ell_B=0$, and $Q^{(\bot,\bot)}=\{q_5\}, Q^{(\bot,\cdot)}=\{q_4\}, Q^{(\cdot,\bot)}=\{q_3\}, Q^{(\cdot,\cdot)}=\{q_1,q_2\}$.}\label{fig:lem8eachreg}
   \end{center}
 \end{figure*}
 
@@ -34,27 +34,27 @@ For any $q \in Q$, we define the sets $A(q), B(q) \subseteq \Sigma$ as follows:
   \end{align*}
 If there exists $q\in Q$ such that $|A(q)|\geq 2$ or $|B(q)|\geq 2$, from Lemma~\ref{lem:twovariables}, $p\{x := xy\} \preceq q$ holds.
 Below, we suppose that $|A(q)|\leq 1$ and $|B(q)|\leq 1$.
-Let $\blacktriangle$ be a constant symbol that is not a member in $\Sigma$.
-We define the functions $\sigma_{A}: Q \rightarrow \Sigma \cup \{\blacktriangle\}$ and $\sigma_{B}: Q \rightarrow \Sigma \cup \{\blacktriangle\}$ as follows:
+Let $\bot$ be a constant symbol that is not a member in $\Sigma$.
+We define the functions $\sigma_{A}: Q \rightarrow \Sigma \cup \{\bot\}$ and $\sigma_{B}: Q \rightarrow \Sigma \cup \{\bot\}$ as follows:
 \begin{align*}
   \sigma_{A}(q) & =
   \begin{cases}
     a & \textrm{if } A(q) = \{a\}, \\
-    \blacktriangle & \textrm{if } A(q) = \emptyset.
+    \bot & \textrm{if } A(q) = \emptyset.
   \end{cases}\\
   \sigma_{B}(q) & =
   \begin{cases}
     b & \textrm{if } B(q) = \{b\}, \\
-    \blacktriangle & \textrm{if } B(q) = \emptyset.
+    \bot & \textrm{if } B(q) = \emptyset.
   \end{cases}
 \end{align*}
-The inverse functions of $\sigma_{A}$ and $\sigma_{B}$ are denoted by $\sigma_{A}^{-1}$ and $\sigma_{B}^{-1}$, respectively. That is, for $a,b \in \Sigma \cup \{\blacktriangle\}$, let $\sigma_{A}^{-1}(a) = \{q \in Q \mid \sigma_{A}(q) = a\}$ and $\sigma_{B}^{-1}(b) = \{q \in Q \mid \sigma_{B}(q) = b\}$. 
+The inverse functions of $\sigma_{A}$ and $\sigma_{B}$ are denoted by $\sigma_{A}^{-1}$ and $\sigma_{B}^{-1}$, respectively. That is, for $a,b \in \Sigma \cup \{\bot\}$, let $\sigma_{A}^{-1}(a) = \{q \in Q \mid \sigma_{A}(q) = a\}$ and $\sigma_{B}^{-1}(b) = \{q \in Q \mid \sigma_{B}(q) = b\}$. 
 We give an example in Fig.~\ref{fig:lem8eachreg}.
 
 $A$ and $B$ denotes the following subsets of $\Sigma$:
 \begin{align*}
-  A & = \bigcup_{q \in Q \setminus \sigma_{A}^{-1}(\blacktriangle)} A(q) \mbox{,~~~}
-  B = \bigcup_{q \in Q \setminus \sigma_{B}^{-1}(\blacktriangle)} B(q).
+  A & = \bigcup_{q \in Q \setminus \sigma_{A}^{-1}(\bot)} A(q) \mbox{,~~~}
+  B = \bigcup_{q \in Q \setminus \sigma_{B}^{-1}(\bot)} B(q).
 \end{align*}
 Then, let $A' = \Sigma \setminus A$ and $B' = \Sigma \setminus B$.
 For any $a,b \in \Sigma$, we use the following notations:
@@ -75,7 +75,7 @@ We easily see the following claim:
 \textit{Claim} 1. 
 \begin{enumerate}
   \item[(i)] $\sharp A + \sharp A' = \sharp B + \sharp B' = k + 2$,
-  \item[(ii)] $\sharp A + \ell_{A} + \sharp \sigma_{A}^{-1}(\blacktriangle) = \sharp B + \ell_{B} + \sharp \sigma_{B}^{-1}(\blacktriangle) = k$.
+  \item[(ii)] $\sharp A + \ell_{A} + \sharp \sigma_{A}^{-1}(\bot) = \sharp B + \ell_{B} + \sharp \sigma_{B}^{-1}(\bot) = k$.
 \end{enumerate}
 
 \smallskip
@@ -83,52 +83,66 @@ We easily see the following claim:
 Since $\sharp \Sigma = k + 2$ and $\sharp Q = k$, $\sharp A' \geq 2$ and $\sharp B' \geq 2$ hold.
 We partition $Q$ into the following subsets:
 \begin{align*}
-  %Q^{(\blacktriangle,\blacktriangle)} & = \{q \in Q \mid \sigma_{A}(q) = \blacktriangle \textrm{~and~} \sigma_{B}(q) = \blacktriangle\},\\
-  Q^{(\blacktriangle,\blacktriangle)} & = \sigma_{A}^{-1}(\blacktriangle) \cap \sigma_{B}^{-1}(\blacktriangle),\\
-  %Q^{(\blacktriangle,\cdot)} & = \{q \in Q \mid \sigma_{A}(q) = \blacktriangle \textrm{~and~} \sigma_{B}(q) \not= \blacktriangle\},\\
-  Q^{(\blacktriangle,\cdot)} & = \sigma_{A}^{-1}(\blacktriangle) \cap (Q\setminus \sigma_{B}^{-1}(\blacktriangle)),\\
-  %Q^{(\cdot,\blacktriangle)} & = \{q \in Q \mid \sigma_{A}(q) \not= \blacktriangle \textrm{~and~} \sigma_{B}(q) = \blacktriangle\},\\
-  Q^{(\cdot,\blacktriangle)} & = (Q\setminus \sigma_{A}^{-1}(\blacktriangle)) \cap \sigma_{B}^{-1}(\blacktriangle),\\
-  %Q^{(\cdot,\cdot)} & = \{q \in Q \mid \sigma_{A}(q) \not= \blacktriangle \textrm{~and~} \sigma_{B}(q) \not= \blacktriangle\}.
-  Q^{(\cdot,\cdot)} & = (Q\setminus \sigma_{A}^{-1}(\blacktriangle)) \cap (Q\setminus \sigma_{B}^{-1}(\blacktriangle)).
+  %Q^{(\bot,\bot)} & = \{q \in Q \mid \sigma_{A}(q) = \bot \textrm{~and~} \sigma_{B}(q) = \bot\},\\
+  Q^{(\bot,\bot)} & = \sigma_{A}^{-1}(\bot) \cap \sigma_{B}^{-1}(\bot),\\
+  %Q^{(\bot,\cdot)} & = \{q \in Q \mid \sigma_{A}(q) = \bot \textrm{~and~} \sigma_{B}(q) \not= \bot\},\\
+  Q^{(\bot,\cdot)} & = \sigma_{A}^{-1}(\bot) \cap (Q\setminus \sigma_{B}^{-1}(\bot)),\\
+  %Q^{(\cdot,\bot)} & = \{q \in Q \mid \sigma_{A}(q) \not= \bot \textrm{~and~} \sigma_{B}(q) = \bot\},\\
+  Q^{(\cdot,\bot)} & = (Q\setminus \sigma_{A}^{-1}(\bot)) \cap \sigma_{B}^{-1}(\bot),\\
+  %Q^{(\cdot,\cdot)} & = \{q \in Q \mid \sigma_{A}(q) \not= \bot \textrm{~and~} \sigma_{B}(q) \not= \bot\}.
+  Q^{(\cdot,\cdot)} & = (Q\setminus \sigma_{A}^{-1}(\bot)) \cap (Q\setminus \sigma_{B}^{-1}(\bot)).
 \end{align*}
 From the condition of this lemma, for any string $w \in \Sigma^{\ast}$ with $|w|=2$, there exists a regular pattern $q_{w} \in Q$ such that $p \{ x:=w \} \preceq q_{w}$ holds.
 In particular, for $w=a'b'\in A'\cdot B'$, we must have $q_{w} \in Q$ that satisfies that $p \{ x:=w \} \preceq q_{w}$ (Fig.~\ref{fig:lem8totalreg}).
-It is easy to see that if $w \in (A\cdot B) \cup (A'\cdot B) \cup (A\cdot B')$, there exists a regular pattern $q_{w} \in Q^{(\blacktriangle,\cdot)} \cup Q^{(\cdot,\blacktriangle)} \cup Q^{(\cdot,\cdot)}$ such that $p \{ x:=w \} \preceq q_{w}$ holds.
+It is easy to see that if $w \in (A\cdot B) \cup (A'\cdot B) \cup (A\cdot B')$, there exists a regular pattern $q_{w} \in Q^{(\bot,\cdot)} \cup Q^{(\cdot,\bot)} \cup Q^{(\cdot,\cdot)}$ such that $p \{ x:=w \} \preceq q_{w}$ holds.
 %For $w=a'b'\in A'\cdot B'$, we must have $q_{w} \in Q$ that satisfies that $p \{ x:=w \} \preceq q_{w}$ (Fig.~\ref{fig:lem8totalreg}).
-The following two claims are proven from Lemmas~\ref{lem:twovariables} and \ref{補題14}:
+%The following two claims are proven from Lemmas~\ref{lem:twovariables} and \ref{補題14}:
+We have the following two claims:
+\smallskip
+
+\noindent
+\textit{Claim} 2. If there exist $q \in Q^{(\bot,\bot)}$ and distinct $5$ strings $w_{i} \in A'\cdot B'$ ($1\leq i\leq 5$) such  that $p \{ x:=w_{i} \} \preceq q$ holds ($1\leq i\leq 5$),  then $p \{ x:=xy \} \preceq q$ holds.
 
 \smallskip
 
 \noindent
-\textit{Claim} 2. If there exist $q \in Q^{(\blacktriangle,\blacktriangle)}$ and distinct $5$ strings $w_{i} \in A'\cdot B'$ ($1\leq i\leq 5$) such  that $p \{ x:=w_{i} \} \preceq q$ holds ($1\leq i\leq 5$),  then $p \{ x:=xy \} \preceq q$ holds.
+\textit{Proof of Claim} 2.
+Let $W = \{a_{1}b_{1},\ldots,a_{5}b_{5}\} \subset A'\cdot B'$.
+Because, for any $i$ ($1\leq i\leq 5$), $|W \cap \{a_{i}c \mid c \in \Sigma\}| \leq 2$ and  $|W \cap \{cb_{i} \mid c \in \Sigma\}| \leq 2$, it can be proven that there are $3$ strings $a_{i_{1}}b_{i_{1}},a_{i_{2}}b_{i_{2}},a_{i_{3}}b_{i_{3}}\in W$ such that $a_{i_{j}} \not= a_{i_{j^{\prime}}}$ and $b_{i_{j}} \not= b_{i_{j^{\prime}}}$ for any $i_{j},i_{j^{\prime}}$ ($i_{j}\not= i_{j^{\prime}}, 1\leq j,j^{\prime}\leq 3$).
+Therefore, from Lemma~\ref{lem:3consts_i}, this claim holds. (\textit{End of Proof of Claim})
 
 \smallskip
 
 \noindent
-\textit{Claim} 3. If there exist $q \in Q^{(\blacktriangle,\cdot)} \cup Q^{(\cdot,\blacktriangle)}$ and distinct $3$ strings $w_{i} \in A'\cdot B'$ ($1\leq i\leq 3$) such that $p \{ x:=w_{i} \} \preceq q$ holds ($1\leq i\leq 3$),  then $p \{ x:=xy \} \preceq q$ holds.
+\textit{Claim} 3. If there exist $q \in Q^{(\bot,\cdot)} \cup Q^{(\cdot,\bot)}$ and distinct $3$ strings $w_{i} \in A'\cdot B'$ ($1\leq i\leq 3$) such that $p \{ x:=w_{i} \} \preceq q$ holds ($1\leq i\leq 3$),  then $p \{ x:=xy \} \preceq q$ holds.
+
+\noindent
+\textit{Proof of Claim} 3.
+Let $W = \{a_{1}b_{1},a_{2}b_{2},a_{3}b_{3}\} \subset A'\cdot B'$.
+Because, for any $i$ ($1\leq i\leq 3$), $|W \cap \{a_{i}c \mid c \in \Sigma\}| \leq 2$ and  $|W \cap \{cb_{i} \mid c \in \Sigma\}| \leq 2$, it can be proven that there are $2$ strings $a_{i_{1}}b_{i_{1}},a_{i_{2}}b_{i_{2}}\in W$ such that $a_{i_{1}} \not= a_{i_{2}}$ and $b_{i_{1}} \not= b_{i_{2}}$.
+Therefore, from Lemmas~\ref{lem:3consts_ii} and \ref{lem:3consts_iii}, this claim holds. (\textit{End of Proof of Claim})
 
 \smallskip
 
 \noindent
-If there exist a regular pattern $q \in Q^{(\blacktriangle,\blacktriangle)} \cup Q^{(\blacktriangle,\cdot)} \cup Q^{(\cdot,\blacktriangle)}$ and enough strings $w \in A'\cdot B'$ such that either of the conditions of \textit{Claims} 2 and 3 is satisfied, this lemma holds. Then, we assume that it is not the case.
+If there exist a regular pattern $q \in Q^{(\bot,\bot)} \cup Q^{(\bot,\cdot)} \cup Q^{(\cdot,\bot)}$ and enough strings $w \in A'\cdot B'$ such that either of the conditions of \textit{Claims} 2 and 3 is satisfied, this lemma holds. Then, we assume that it is not the case.
 
 \smallskip
 
 \noindent
 \textit{Assumption} 1.
-There is no regular pattern $q \in Q^{(\blacktriangle,\blacktriangle)}$ and $5$ strings $w \in A'\cdot B'$ such that the condition of \textit{Claim} 2 is satisfied and there is no regular pattern $q \in Q^{(\blacktriangle,\cdot)} \cup Q^{(\cdot,\blacktriangle)}$ and $3$ strings $w \in A'\cdot B'$ such that the condition of \textit{Claim} 3 is satisfied.
+There is no regular pattern $q \in Q^{(\bot,\bot)}$ and $5$ strings $w \in A'\cdot B'$ such that the condition of \textit{Claim} 2 is satisfied and there is no regular pattern $q \in Q^{(\bot,\cdot)} \cup Q^{(\cdot,\bot)}$ and $3$ strings $w \in A'\cdot B'$ such that the condition of \textit{Claim} 3 is satisfied.
 
 \smallskip
 
 \noindent
-Let ${\cal L}_{1} = \sharp\{w \in A'\cdot B' \mid \exists q \in Q^{(\blacktriangle,\blacktriangle)} \cup Q^{(\blacktriangle,\cdot)} \cup Q^{(\cdot,\blacktriangle)} \mbox{ s.t. } p\{x:=w\} \preceq q\}$.
-Under \textit{Assumption} 1, each $q\in Q^{(\blacktriangle,\blacktriangle)}$ has at most $4$ strings $w \in A'\cdot B'$ such that the condition of \textit{Claim} 2 is satisfied, and each $q \in Q^{(\blacktriangle,\cdot)} \cup Q^{(\cdot,\blacktriangle)}$ has at most $2$ strings $w \in A'\cdot B'$ such that the condition of \textit{Claim} 3 is satisfied.
+Let ${\cal L}_{1} = \sharp\{w \in A'\cdot B' \mid \exists q \in Q^{(\bot,\bot)} \cup Q^{(\bot,\cdot)} \cup Q^{(\cdot,\bot)} \mbox{ s.t. } p\{x:=w\} \preceq q\}$.
+Under \textit{Assumption} 1, each $q\in Q^{(\bot,\bot)}$ has at most $4$ strings $w \in A'\cdot B'$ such that the condition of \textit{Claim} 2 is satisfied, and each $q \in Q^{(\bot,\cdot)} \cup Q^{(\cdot,\bot)}$ has at most $2$ strings $w \in A'\cdot B'$ such that the condition of \textit{Claim} 3 is satisfied.
 Then, by \textit{Claim} 1,
 \begin{align*}
-  {\cal L}_{1} &\leq 4\sharp Q^{(\blacktriangle,\blacktriangle)} + 2\sharp Q^{(\blacktriangle,\cdot)} + 2\sharp Q^{(\cdot,\blacktriangle)}\\
-  & = 2(\sharp Q^{(\blacktriangle,\blacktriangle)} + \sharp Q^{(\blacktriangle,\cdot)}) + 2(\sharp Q^{(\blacktriangle,\blacktriangle)} + \sharp Q^{(\cdot,\blacktriangle)})\\
-  & = 2\sharp \sigma_{A}^{-1}(\blacktriangle) + 2\sharp \sigma_{B}^{-1}(\blacktriangle)\\
+  {\cal L}_{1} &\leq 4\sharp Q^{(\bot,\bot)} + 2\sharp Q^{(\bot,\cdot)} + 2\sharp Q^{(\cdot,\bot)}\\
+  & = 2(\sharp Q^{(\bot,\bot)} + \sharp Q^{(\bot,\cdot)}) + 2(\sharp Q^{(\bot,\bot)} + \sharp Q^{(\cdot,\bot)})\\
+  & = 2\sharp \sigma_{A}^{-1}(\bot) + 2\sharp \sigma_{B}^{-1}(\bot)\\
   & = 2(k - \sharp A - \ell_{A}) + 2(k - \sharp B - \ell_{B})\\
   & = 2(\sharp A' - \ell_{A} - 2) + 2(\sharp B' - \ell_{B} - 2)\\
   & = 2(\sharp A' + \sharp B') - 2(\ell_{A} + \ell_{B}) - 8.
@@ -136,7 +150,7 @@ Then, by \textit{Claim} 1,
 
 Next, we partition $Q^{(\cdot,\cdot)}$ into the following two subsets:
 \begin{align*}
-  Q_{1}^{(\cdot,\cdot)} & = \{q \in Q^{(\cdot,\cdot)} \mid \sigma_{A}(q) \in B \mbox{ or} \sigma_{B}(q) \in A\},\\
+  Q_{1}^{(\cdot,\cdot)} & = \{q \in Q^{(\cdot,\cdot)} \mid \sigma_{A}(q) \in B \mbox{ or } \sigma_{B}(q) \in A\},\\
   Q_{2}^{(\cdot,\cdot)} & = \{q \in Q^{(\cdot,\cdot)} \mid \sigma_{A}(q) \in B' \mbox{ and } \sigma_{B}(q) \in A'\}.
 \end{align*}
 We show the next two claims on $Q_{1}^{(\cdot,\cdot)}$ and $Q_{2}^{(\cdot,\cdot)}$:
@@ -187,7 +201,7 @@ There is no $q \in Q_{2}^{(\cdot,\cdot)}$ and a string $a'b' \in A'\cdot B'$ suc
 
 \noindent
 Let ${\cal L}_{2} = \sharp\{a'b' \in A'\cdot B' \mid \exists q \in Q_{2}^{(\cdot,\cdot)} \mbox{ s.t. } p\{x:=a'b'\} \preceq q\}$.
-For any $a'b' \in A'\cdot B'$ and $q \in Q_{2}^{(\cdot,\cdot)}$, if $a' = \sigma_{B}(q)$ and $b' = \sigma_{A}(q)$ hold (it is the condition of Proposition~\ref{lem:bothsides}), by considering the duplicate numbers $\ell_{A}$ and $\ell_{B}$, we have the following inequality:
+For any $a'b' \in A'\cdot B'$ and $q \in Q_{2}^{(\cdot,\cdot)}$, if $a' = \sigma_{B}(q)$ and $b' = \sigma_{A}(q)$ hold (it is the condition of Proposition~\ref{prop:bothsides}), by considering the duplicate numbers $\ell_{A}$ and $\ell_{B}$, we have the following inequality:
 \begin{align*}
   {\cal L}_{2} &\leq \min\{\sharp A' + \ell_{B}, \sharp B' + \ell_{A}\}.
 \end{align*}
@@ -216,7 +230,7 @@ Since ${\cal L}_{2} \leq \frac{1}{2}(\sharp A' + \sharp B' + \ell_{A} + \ell_{B}
 When $\sharp A = k$ and $\sharp B \leq k$, i.e., $\sharp A' = 2$ and $\sharp B' \geq 2$ hold, since $\ell_{A} = 0$,
 ${\cal L}_{1} \leq 2\sharp B' - 2\ell_{B} -4$ holds.
 Moreover, ${\cal L}_{2} \leq \min\{\sharp B', \ell_{B} + 2\}$ holds.
-From \textit{Claim} 1, $\ell_B + 2 = k - \sharp\sigma^{-1}_{B}(\blacktriangle) - \sharp B = \sharp B' - \sharp\sigma^{-1}_{B}(\blacktriangle)$ holds. Therefore, ${\cal L}_{2} \leq \ell_{B} + 2$ holds.
+From \textit{Claim} 1, $\ell_B + 2 = k - \sharp\sigma^{-1}_{B}(\bot) - \sharp B = \sharp B' - \sharp\sigma^{-1}_{B}(\bot)$ holds. Therefore, ${\cal L}_{2} \leq \ell_{B} + 2$ holds.
 Thus,
 \begin{align*}
   &\ \sharp A' \times \sharp B' - {\cal L}_{1} - {\cal L}_{2}\\
