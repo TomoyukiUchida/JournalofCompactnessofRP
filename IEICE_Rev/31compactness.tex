@@ -104,7 +104,7 @@ The conditions in Lemmas~\ref{lem:3consts_i}, \ref{lem:3consts_ii}, and \ref{lem
 %\label{abc組み合わせ}
 %\end{figure}
 %\noindent
-This corresponds to case (i).
+%This corresponds to case (i).
 We assume that $p \{ x := xy \} \not\preceq q$ holds. 
 We consider the following four cases (I-1)-(I-4) of $q$ for some regular patterns $q_{1},q_{2}$ and some constant strings $w,w^{\prime}$ ($|w|\geq 0$ and $|w^{\prime}|\geq 0$):
 
@@ -248,33 +248,33 @@ This contradicts the assumption of $b_{1} \ne b_{3}$.
 \begin{proof}
 %This corresponds to case (ii).
 We assume that $p \{ x := xy \} \not\preceq q$ holds. 
-Let $A,B,C$ be distinct regular patterns in $\{a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}$ such that $q=q_{1}AwBw^{\prime}Cq_{2}$.
-Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
-\begin{align*}
-\textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wBw^{\prime}Cq_{2} \\
-\textrm{(2)}~& p_{1} \preceq q_{1}Aw & \textrm{(2')}~& p_{2} \preceq w^{\prime}Cq_{2} \\
-\textrm{(3)}~& p_{1} \preceq q_{1}AwBw^{\prime} & \textrm{(3')}~& p_{2} \preceq q_{2}
-\end{align*}
-
+%Let $A,B,C$ be distinct regular patterns in $\{a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}$ such that $q=q_{1}AwBw^{\prime}Cq_{2}$.
+%Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
+%\begin{align*}
+%\textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wBw^{\prime}Cq_{2} \\
+%\textrm{(2)}~& p_{1} \preceq q_{1}Aw & \textrm{(2')}~& p_{2} \preceq w^{\prime}Cq_{2} \\
+%\textrm{(3)}~& p_{1} \preceq q_{1}AwBw^{\prime} & \textrm{(3')}~& p_{2} \preceq q_{2}
+%\end{align*}
+%
 %\noindent
-If $|w|=|w^{\prime}|$, then $Aw$ and $AwBw^{\prime}$ are suffixes of $p_{1}$ from the above conditions (2) and (3).
-Hence, $Aw=Bw^{\prime}$ holds.
-This contradicts the assumption of $A \ne B$.
-
-%\noindent
-If $|w| \ne |w^{\prime}|$, then we consider the two cases $A=a_{3}y$ and $B=a_{3}y$:
-In the case of $A=a_{3}y$, without losing generality, we assume that $B=a_{1}b_{1}$ and $C=a_{2}b_{2}$. 
-Then, there exist regular patterns $p_{1}^{\prime}, p_{1}^{\prime\prime}$ such that $p_{1}=p_{1}^{\prime}p_{1}^{\prime\prime}$, $p_{1}^{\prime} \preceq q_{1}a_{3}$ and $p_{1}^{\prime\prime} \preceq yw$ from the above condition (2).
-Moreover, from the above condition (1'), $p=p_{1}xp_{2}=p_{1}^{\prime}p_{1}^{\prime\prime}xp_{2}\preceq q_{1}a_{3}p_{1}^{\prime\prime}xwa_{1}b_{1}w^{\prime}a_{2}b_{2}q_{2}=
-q_{1}a_{3}ywa_{1}b_{1}w^{\prime}a_{2}b_{2}q_{2}\{ y := p_{1}^{\prime\prime}x \}=q \{ y := p_{1}^{\prime\prime}x \}$ holds.
-Hence, $p \preceq q$ holds.
-This contracts the assumption.
-In the case of $B=a_{3}y$, without losing generality, we assume that $A=a_{1}b_{1}$ and $C=a_{2}b_{2}$.
-Let $q_{1}^{\prime}=q_{1}a_{1}b_{1}$, $q_{2}^{\prime}=wa_{3}yw^{\prime}$, and $q_{3}^{\prime}=a_{2}b_{2}q_{2}$ such that $q_{2}^{\prime}$ contains at most one variable symbol.
-Then, the above conditions (3) and (1') are represented by $p_{1} \preceq q_{1}^{\prime}q_{2}^{\prime}$ and $p_{2} \preceq q_{2}^{\prime}q_{3}^{\prime}$, respectively.
-From Theorem \ref{Sato1:Lemma9}, $p \preceq q$ holds.
-This contradicts the assumption.
-
+%If $|w|=|w^{\prime}|$, then $Aw$ and $AwBw^{\prime}$ are suffixes of $p_{1}$ from the above conditions (2) and (3).
+%Hence, $Aw=Bw^{\prime}$ holds.
+%This contradicts the assumption of $A \ne B$.
+%
+%%\noindent
+%If $|w| \ne |w^{\prime}|$, then we consider the two cases $A=a_{3}y$ and $B=a_{3}y$:
+%In the case of $A=a_{3}y$, without losing generality, we assume that $B=a_{1}b_{1}$ and $C=a_{2}b_{2}$. 
+%Then, there exist regular patterns $p_{1}^{\prime}, p_{1}^{\prime\prime}$ such that $p_{1}=p_{1}^{\prime}p_{1}^{\prime\prime}%$, $p_{1}^{\prime} \preceq q_{1}a_{3}$ and $p_{1}^{\prime\prime} \preceq yw$ from the above condition (2).
+%Moreover, from the above condition (1'), $p=p_{1}xp_{2}=p_{1}^{\prime}p_{1}^{\prime\prime}xp_{2}\preceq q_{1}a_{3}p_{1}^%{\prime\prime}xwa_{1}b_{1}w^{\prime}a_{2}b_{2}q_{2}=
+%q_{1}a_{3}ywa_{1}b_{1}w^{\prime}a_{2}b_{2}q_{2}\{ y := p_{1}^{\prime\prime}x \}=q \{ y := p_{1}^{\prime\prime}x \}$ holds.
+%Hence, $p \preceq q$ holds.
+%This contracts the assumption.
+%In the case of $B=a_{3}y$, without losing generality, we assume that $A=a_{1}b_{1}$ and $C=a_{2}b_{2}$.
+%Let $q_{1}^{\prime}=q_{1}a_{1}b_{1}$, $q_{2}^{\prime}=wa_{3}yw^{\prime}$, and $q_{3}^{\prime}=a_{2}b_{2}q_{2}$ such that $q_{2}^{\prime}$ contains at most one variable symbol.
+%Then, the above conditions (3) and (1') are represented by $p_{1} \preceq q_{1}^{\prime}q_{2}^{\prime}$ and $p_{2} \preceq q_{2}^{\prime}q_{3}^{\prime}$, respectively.
+%From Theorem \ref{Sato1:Lemma9}, $p \preceq q$ holds.
+%This contradicts the assumption.
+%
 %\begin{figure}
 %  \centering
 %  \includegraphics[width=\linewidth]{figs/Cases-d.png}
@@ -282,8 +282,9 @@ This contradicts the assumption.
 %  \caption{(d)の場合分け}
 %  \label{d組み合わせ}
 %\end{figure}
-    
-Next, in the case of $C=a_{3}y$, we consider the following five cases (II-1)--(II-5):
+%Next, in the case of $C=a_{3}y$, we consider the following five cases (II-1)--(II-5):
+%
+From the same argument as in the proof of Lemma~\ref{lem:oneside}, it is sufficient to consider the following five cases (II-1)--(II-5) of $q$:
 
 \begin{tabular}{l}
 (II-1) $q=q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime}a_{3}yq_{2}$,\\
