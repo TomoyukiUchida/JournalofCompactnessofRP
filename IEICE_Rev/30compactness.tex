@@ -18,9 +18,37 @@ if there exists a regular pattern $q \in Q$ such that $L(p) \subseteq L(q)$ hold
 \end{dfn}
 
 Let $D \subset \RPat$ with $|D| = 2$ or $3$, and let $p,q$ be regular patterns in $\RPat$.
-In the following two subsections (Subsecs.~\ref{subsec:d2} and \ref{subsec:d3}), we provide the conditions on $D$ under which the implication holds: if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.
+In the following subsections (Subsecs.~\ref{subsec:d2}--\ref{subsec:d3c}), we provide the conditions on $D$ under which the implication holds: if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.
 It is obvious if the variable symbol $x$ does not appear in $p$.
-Therefore, in the following lemmas and propositions, let $p=p_{1}xp_{2}$, where $p_{i}$ ($i=1,2$) is an empty symbol or a regular pattern on $\Sigma\cup X$, and $x$ is a variable symbol.
+Therefore, in the following lemmas and propositions, let $p=p_{1}xp_{2}$, where $p_{i}\in \RPat$ ($i=1,2$) and $x$ is a variable symbol.
+
+First of all, we consider the correspondence from $r\in D$ to some string in $q$ when $p \{ x := r \} \preceq q$ holds.
+The symbols in $D$ correspond to either a variable or a constant symbol in $q$.
+If $D$ has a constant string $ab$ of length $2$ for $b,c\in\Sigma$, there are three possible strings in $q$ that correspond to $ab$ in $p\{x:=bc\}$ as follows: For $y^{\prime} \in X$,
+  \begin{center}
+    \begin{tabular}{cccccc}
+      \textrm{(a)} & $ab$, & \textrm{(b)} & $ay_{1}$, & \textrm{(c)} & $y_{1}b$.
+    \end{tabular}
+  \end{center}
+
+\noindent
+If there exists (b) $ay_{1}$ in $q$ that corresponds to $bc$, i.e., there exist $q_{1}$ and $q_{2}\in \RPat$ such that
+  \begin{enumerate}
+  \item[(1)] $p_{1}abp_{2} \preceq q_{1}ay_{1}q_{2}$, 
+  \item[(2)] $p_{1} \preceq q_{1}$, and
+  \item[(3)] either $p_{2} \preceq q_{2}$ or $p_{2} \preceq y_{1}^{\prime}q_{1}$ for $y_{1}^{\prime}\in X$.
+  \end{enumerate}
+In this case, it is straightforward to see that $p\{x:=ay\} = p_{1}ayp_{2} \preceq q_{1}ay_{1}q_{2}$ holds.
+Thus, $p \{ x := r \} \preceq q$ for all $r \in D^{\prime}$ holds, where $D^{\prime} = (D \setminus \{ab\}) \cup \{ay\}$.
+By a similar discussion, if there exists (c) $y_{1}b$ in $q$ that corresponds to $ab$, $p \{ x := r \} \preceq q$ for all $r \in D^{\prime\prime}$ holds, where $D^{\prime\prime} = (D \setminus \{ab\}) \cup \{yb\}$.
+Therefore, in this paper, we make the following assumption on $D$:
+
+\smallskip
+
+\noindent
+\textit{Assumption} on $D$.
+For any $a,b \in \Sigma$, if $D$ includes a constant string $ab$ such that $p \{ x := ab \} \preceq q$ holds, then $p \{ x := ay \} \not\preceq q$ and $p \{ x := yb \} \not\preceq q$ hold for any $y \in X$.
+
 
 \subsection{$D=\{ ay, by \}$ or $D=\{ ya, yb \}$}\label{subsec:d2}
 
@@ -36,7 +64,7 @@ Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \pr
 
 \begin{proof}
 %It is obvious if no variable symbol appears in $p$. 
-%Therefore, let $p=p_{1}xp_{2}$, where $p_{i}$ ($i=1,2$) is an empty symbol or a regular pattern on $\Sigma\cup X$, and $x$ is a variable symbol.
+%Therefore, let $p=p_{1}xp_{2}$, where $p_{i} \in \RPat$ ($i=1,2$) and $x$ is a variable symbol.
 We assume that $p \{ x := xy \} \not \preceq q$ in order to derive a contradiction.
 In the case of \textrm{(ii)}, by reversing the strings $p$ and $q$, we can prove that the assumption $p \{ x := xy \} \preceq q$ leads to a contradiction, as in the case of \textrm{(i)}.
 Therefore, in the following, we consider only the case of \textrm{(i)}: $D=\{ ay, by \}$ ($a \not= b$).
@@ -70,7 +98,6 @@ For example, the conditions (i) and (ii) in Lemma~\ref{lem:twovariables} are ill
 %  B(q) & = \{ b \in \Sigma \mid p \{ x:=yb \} \preceq q,\ y\in X\}.
 %  \end{align*}
 %If either $|A(q)|\geq 2$ or $|B(q)|\geq 2$ holds, from Lemma~\ref{lem:twovariables}, $p\{x := xy\} \preceq q$ holds.
-
 
 \begin{figure}[t]
   \begin{center}
