@@ -44,19 +44,29 @@
 %  \end{enumerate}
 %  In this case, it is straightforward to see that $p\{x:=yc\} = p_{1}ycp_{2} \preceq q_{1}y_{3}cq_{2}$ also holds.
 %  Thus, both $p\{x:=ya\}\preceq q$ and $p\{x:=yc\}\preceq q$ hold. Since $c\not= a$, by (ii) in Lemma \ref{lem:twovariables}, $p\{x:=xy\}\preceq q$ also holds. This contradicts the assumption.
-%  Similarly, the case (c) leads to a contradiction by (i) in Lemma \ref{lem:twovariables}.
+%  Similarly, case (c) leads to a contradiction by (i) in Lemma \ref{lem:twovariables}.
 %  Therefore, in the following, we consider only case (a).
 %
 %  Since $p \{ x := xy \} \not \preceq q$ and the condition \TheConditionA\ hold, the regular pattern $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $q_{1}, q_{2}, w, w^{\prime}$ be either the empty string or a regular pattern on $\Sigma\cup X$.
 %
 Since $D$ is maximally generalized on $(p,q)$, the regular pattern $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $q_{1}, q_{2}, w, w^{\prime}$ be either the empty string or a regular pattern on $\Sigma\cup X$.
-  \begin{enumerate}
-  \item[(a1)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a,bc,dy_{2} \}$,
-  \item[(a2)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ dy_{1}a,bc \}$,
-  \item[(a3)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ay_{2},bc \}$ ($a = d$).
-  \end{enumerate}
+
+\smallskip
+
+  \begin{tabular}{ll}
+  (\ref{lem:addpart}-1) & $q=q_{1}AwBw^{\prime}Cq_{2}$,\\
+  & where $\{ A,B,C \} = \{ y_{1}a,bc,dy_{2} \}$,\\
+  (\ref{lem:addpart}-2) & $q=q_{1}AwBq_{2}$,\\
+  & where $\{ A,B \} = \{ dy_{1}a,bc \}$,\\
+  (\ref{lem:addpart}-3) & $q=q_{1}AwBq_{2}$,\\
+  & where $\{ A,B \} = \{ y_{1}ay_{2},bc \}$ ($a = d$).
+  \end{tabular}
   
-  First, we consider case (a1).
+  \smallskip
+
+  \noindent
+  (\ref{lem:addpart}-1) Case of $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a,bc,dy_{2} \}$:
+  At first, we prove the following three claims:
 
   \smallskip
 
@@ -103,7 +113,7 @@ Since $D$ is maximally generalized on $(p,q)$, the regular pattern $q$ can be ex
   \textrm{(3)}~& p_{1} \preceq q_{1}dy_{2}wbcw^{\prime}\mbox{ or} & \textrm{(3')}~& p_{2} \preceq q_{2}.\\
   & p_{1} \preceq q_{1}dy_{2}wbcw^{\prime}y_{1}^{\prime},& &
   \end{align*}
- %
+ 
   From $p_{1} \preceq q_{1}dy_{2}w$ in (2), $p_{1}$ is expressed as $p^{\prime}_{1}p^{\prime\prime}_{1}$ for some $p^{\prime}_{1}$ and $p^{\prime\prime}_{1}$, where $p^{\prime}_{1} \preceq q_{1}d$ and $p^{\prime\prime}_{1} \preceq y_{2}w$. 
   When $p_{2} \preceq wbcw^{\prime}y_{1}aq_{2}$ in (1'), we have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xwbcw^{\prime}y_{1}aq_{2}=q \{ y_{2}:=p^{\prime\prime}_{1}x \}$.
   Thus, $p \{ x := xy \} \preceq q \{ y_{2}:=p^{\prime\prime}_{1}xy \}$ holds.
@@ -165,16 +175,20 @@ Since $D$ is maximally generalized on $(p,q)$, the regular pattern $q$ can be ex
   This contradicts the conditions \TheConditionA.
 \end{itemize}
 
-  From the above, we conclude that all cases of (a1) contradict the assertion that $p\{x := xy\} \not\preceq q$ and the conditions \TheConditionA.
+  From the above, we conclude that all cases of (\ref{lem:addpart}-1) contradict the assertion that $p\{x := xy\} \not\preceq q$ and the conditions \TheConditionA.
   
   \begin{figure}[t]
     \begin{center}
       \includegraphics[scale=0.345]{figs/centerproof1.pdf}
-      \caption{Case (a1) in Lemma~\ref{lem:addpart}: Relation of strings $w$, $w^{\prime}$, and $w^{\prime\prime}$}\label{fig:centerproof1}
+      \caption{Case (\ref{lem:addpart}-1) in Lemma~\ref{lem:addpart}: Relation of strings $w$, $w^{\prime}$, and $w^{\prime\prime}$}\label{fig:centerproof1}
     \end{center}
     \end{figure}
 
-  Second, for the case (a2), we suppose that $(A, B) = (dy_{1}a, bc)$, i.e., $q = q_{1}dy_{1}awbcq_{2} $ holds.
+\smallskip
+
+\noindent
+(\ref{lem:addpart}-2) $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ dy_{1}a,bc \}$:
+We suppose that $(A, B) = (dy_{1}a, bc)$, i.e., $q = q_{1}dy_{1}awbcq_{2} $ holds.
   Then, the following conditions must be satisfied for $y_{1}^{\prime}\in X$:
   \begin{align*}
     \textrm{(1)}~& p_{1} \preceq q_{1}, & \textrm{(1')}~& p_{2} \preceq awbcq_{2}\mbox{ or} \\
@@ -183,7 +197,7 @@ Since $D$ is maximally generalized on $(p,q)$, the regular pattern $q$ can be ex
     & p_{1} \preceq q_{1}dy_{1}^{\prime}, & & \\
     \textrm{(3)}~& p_{1} \preceq q_{1}dy_{1}aw, & \textrm{(3')}~& p_{2} \preceq q_{2}.
   \end{align*}
-  %
+  
   From $p_{1} \preceq q_{1}dy_{1}aw$ in (3), $p_{1}$ can be expressed as $p^{\prime}_{1}p^{\prime\prime}_{1}$ for some $p^{\prime}_{1}$ and $p^{\prime\prime}_{1}$, where $p^{\prime}_{1} \preceq q_{1}d$ and $p^{\prime\prime}_{1} \preceq y_{1}aw$.
   When $p_{2} \preceq awbcq_{2}$ in (1'), we have
   $$p=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xawbcq_{2}=q \{ y_{1}:=p^{\prime\prime}_{1}x \}.$$
@@ -196,7 +210,12 @@ Since $D$ is maximally generalized on $(p,q)$, the regular pattern $q$ can be ex
   %
   Similarly, we can show that the case $(A, B) = (bc, dy_{1}a)$ also contradicts the assumption.
   
-  Finally, we prove that for the case (a3), $p \{ x := xy \} \preceq q$ holds. Suppose that $(A, B) = (y_{1}ay_{2}, bc)$, i.e., $q = q_{1}y_{1}ay_{2}wbcq_{2} $ holds. Then, the following conditions must be satisfied for $y_{1}^{\prime}\in X$:
+  \smallskip
+
+  \noindent
+  (\ref{lem:addpart}-3) $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ay_{2},bc \}$ ($a = d$):
+  Suppose that $(A, B) = (y_{1}ay_{2}, bc)$, i.e., $q = q_{1}y_{1}ay_{2}wbcq_{2} $ holds.
+  Then, the following conditions must be satisfied: For $y_{1}^{\prime}, y_{2}^{\prime} \in X$,
   \begin{align*}
     \textrm{(1)}~& p_{1} \preceq q_{1}\mbox{ or} & \textrm{(1')}~& p_{2} \preceq y_{2}wbcq_{2}, \\
     & p_{1} \preceq q_{1}y_{1}^{\prime}, & & \\
@@ -204,7 +223,7 @@ Since $D$ is maximally generalized on $(p,q)$, the regular pattern $q$ can be ex
     & & & p_{2} \preceq y_{2}^{\prime}wbcq_{2}, \\
     \textrm{(3)}~& p_{1} \preceq q_{1}y_{1}ay_{2}w, & \textrm{(3')}~& p_{2} \preceq q_{2}.
   \end{align*}
-  %
+  
   Let $q^{\prime}_{1}=q_{1}y_{1}a,~q^{\prime}_{2}=y_{2}w,~q^{\prime}_{3}=bcq_{2}$. From (3) and (1'), we have $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$ and $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$, respectively.
   Since $q_{2}^{\prime}$ contains a variable symbol, Theorem~\ref{Sato1:Lemma9} implies that $p \preceq q$ holds.
   This contradicts the assumption.
@@ -237,30 +256,25 @@ Since $D$ is maximally generalized on $(p,q)$, the regular pattern $q$ can be ex
   \label{fig:cex-bacd}
 \end{figure*}
 
-\begin{lem}\label{lem:oneside}
+\begin{lem}\label{lem:oneside_i}
 Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and let $p,~q$ be regular patterns on $\Sigma\cup X$.
 Let $D$ be one of the following sets of regular patterns on $\Sigma\cup X$, where $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.
 \begin{enumerate}
-\item[{\rm (i)}] $D=\{ ya, bc, dy \}$ (\TheConditionB),
-\item[{\rm (ii)}] $D=\{ ya, bc, dy \}$ (\TheConditionC).
+\item[] $D=\{ ya, bc, dy \}$ (\TheConditionB),
 \end{enumerate}
 Then, if $p \{ x := r \} \preceq q$ for all $r \in D$ and $D$ is maximally generalized on ($p,q$), then $p \{ x := xy \} \preceq q$.
 \end{lem}
 
-In {\rm (i)}, we note that if $b = d$, then, because $p\{x:=dy\}\preceq q$, $p\{x:=bc\}\preceq q$ is always satisfied.
+We note that if $b = d$, then, because $p\{x:=dy\}\preceq q$, $p\{x:=bc\}\preceq q$ is always satisfied.
 In this sense, $D$ essentially consists of only two elements.
-To avoid this, we assume $b \not= d$.
-In {\rm (ii)}, for the same reason, we assume $c\not= a$. 
+To avoid this, we assume $b \not= d$
 
-\medskip
+\smallskip
 
 \begin{proof}
 %It is obvious if no variable symbol appears in $p$.
 %Therefore, let $p=p_{1}xp_{2}$, where $p_{i} \in \RPat$ (for $i=1,2$) and $x \in X$.
 We assume that $p \{ x := xy \} \not \preceq q$ in order to derive a contradiction.
-In the case of \textrm{(ii)}, by reversing the strings $p$ and $q$, we can prove that the assumption $p \{ x := xy \} \preceq q$ leads to a contradiction, as in the case of \textrm{(i)}.
-Therefore, in the following, we consider only the case of \textrm{(i)}: $D=\{ ya, bc, dy \}$ (\TheConditionB).
-
 The proof is almost the same as the proof of Lemma~\ref{lem:addpart}.
 Since $p \{ x := r \} \preceq q$ for all $r \in D$ and $D$ is maximally generalized on $(p,q)$, there are three strings of length $2$ corresponding to $ya, bc, dy$ in $q$
 The symbols appearing in $D$ correspond to either a variable or a constant symbol in $q$.
@@ -271,16 +285,26 @@ Let $A,B,C$ be regular patterns on $\Sigma \cup X$, where $\{ A,B,C \} = \{ y_{1
 Since $p \{ x := xy \} \not \preceq q$, $q$ can be expressed in one of the following four forms:
 Let $y_{1}, y_{2}$ be distinct variable symbols in $X$, and $q_{1}, q_{2}, w, w^{\prime}$ either the empty string or a regular pattern on $\Sigma\cup X$.
 From the conditions $b = a$ and $b \not= d$, it follows that $a \not= d$.
-\begin{enumerate}
-\item[(i1)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a,ac,dy_{2} \}$.
-\item[(i2)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ac,dy_{2} \}$.
-\item[(i3)] $q=q_{1}Aq_{2}$, where $A = dy_{1}ac$.
-\end{enumerate}
 
-In cases (i1) and (i2), similar to Lemma~\ref{lem:addpart}, it is shown that $q=q_{1}y_{1}awacw^{\prime}dy_{2}q_{2}$ and $q=q_{1}y_{1}acwdy_{2}q_{2}$, respectively, where $w$ and $w^{\prime}$ contain no variable symbols.
+\smallskip
 
-First, we consider case (i1).
-For $q=q_{1}y_{1}awacw^{\prime}dy_{2}q_{2}$, the following conditions must be satisfied:
+\begin{tabular}{ll}
+(\ref{lem:oneside_i}-1) & $q=q_{1}AwBw^{\prime}Cq_{2}$,\\
+& where $\{ A,B,C \} = \{ y_{1}a,ac,dy_{2} \}$,\\
+(\ref{lem:oneside_i}-2) & $q=q_{1}AwBq_{2}$,\\
+& where $\{ A,B \} = \{ y_{1}ac,dy_{2} \}$,\\
+(\ref{lem:oneside_i}-3) & $q=q_{1}Aq_{2}$, where $A = dy_{1}ac$.
+\end{tabular}
+
+\smallskip
+
+In cases (\ref{lem:oneside_i}-1) and (\ref{lem:oneside_i}-2), similar to Lemma~\ref{lem:addpart}, it is shown that $q=q_{1}y_{1}awacw^{\prime}dy_{2}q_{2}$ and $q=q_{1}y_{1}acwdy_{2}q_{2}$, respectively, where $w$ and $w^{\prime}$ contain no variable symbols.
+
+\smallskip
+
+\noindent
+(\ref{lem:oneside_i}-1) Case of $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a,ac,dy_{2} \}$:
+The following conditions must be satisfied:
 \begin{align*}
   \textrm{(1)}~& p_{1} \preceq q_{1}, & \textrm{(1')}~& p_{2} \preceq wacw^{\prime}dy_{2}q_{2}, \\
   \textrm{(2)}~& p_{1} \preceq q_{1}y_{1}aw, & \textrm{(2')}~& p_{2} \preceq w^{\prime}dy_{2}q_{2}, \\
@@ -311,16 +335,19 @@ From (1') and (2'), $wacw^{\prime}d$ and $w^{\prime}d$ are prefixes of $p_{2}$, 
   %Therefore, these cases contradict the condition \TheConditionBsub.
   \end{itemize}
   All the cases contradict the condition \TheConditionBsub.
-  Therefore, if \TheConditionB\ are satisfied, the case (i1) is impossible.
+  Therefore, if \TheConditionB\ are satisfied, case (\ref{lem:oneside_i}-1) is impossible.
 
   \begin{figure}[t]
     \begin{center}
       \includegraphics[scale=0.345]{figs/centerproof2.pdf}
-      \caption{Case (i1) in Lemma~\ref{lem:oneside}: Relation of strings $w$, $w^{\prime}$, and $w^{\prime\prime}$}\label{fig:centerproof2}
+      \caption{Case (\ref{lem:oneside_i}-1) in Lemma~\ref{lem:oneside_i}: Relation of strings $w$, $w^{\prime}$, and $w^{\prime\prime}$}\label{fig:centerproof2}
     \end{center}
     \end{figure}
 
-Second, we consider case (i2).
+\smallskip
+
+\noindent
+(\ref{lem:oneside_i}-2) Case of $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ y_{1}ac,dy_{2} \}$:
 For $q=q_{1}y_{1}acwdy_{2}q_{2}$, the following conditions must be satisfied:
 \begin{align*}
   \textrm{(1)}~& p_{1} \preceq q_{1}, & \textrm{(1')}~& p_{2} \preceq cwdy_{3}q_{2}, \\
@@ -334,9 +361,12 @@ For $q=q_{1}y_{1}acwdy_{2}q_{2}$, the following conditions must be satisfied:
 \item If $|w| \ge 2$, then from (1') and (2'), $cwd$ and $wd$ are prefixes of $p_{2}$. Thus, we have $cw=wd$. From Proposition~\ref{prop:repstring_base}, $c=d$ holds.
 \end{itemize}
 All of these cases do not meet \TheConditionB.
-Therefore, if \TheConditionB\ are satisfied, the case (i2) is also impossible.
+Therefore, if \TheConditionB\ are satisfied, case (\ref{lem:oneside_i}-2) is also impossible.
 
-Finally, we consider case (i3).
+\smallskip
+
+\noindent
+(\ref{lem:oneside_i}-3) $q=q_{1}Aq_{2}$, where $A = dy_{1}ac$:
 For $q=q_{1}dy_{1}acq_{2}$, the following conditions must be satisfied for $y_{1}^{\prime},y_{1}^{\prime\prime}\in X$:
 \begin{align*}
   \textrm{(1)}~& p_{1} \preceq q_{1}d \mbox{~or} & \textrm{(1')}~& p_{2} \preceq cq_{2}, \\
@@ -345,23 +375,37 @@ For $q=q_{1}dy_{1}acq_{2}$, the following conditions must be satisfied for $y_{1
   \textrm{(3)}~& p_{1} \preceq q_{1}, & \textrm{(3')}~& p_{2} \preceq acq_{2} \mbox{~or}\\
   & & & p_{2} \preceq y_{1}^{\prime\prime}acq_{2}.
 \end{align*}
+
 For $p_{1} \preceq q_{1}d$ in (1) and $p_{2} \preceq acq_{2}$ in (3'), $p = p_{1}xp_{2} \preceq q_{1}dxacq_{2} \preceq q\{y_{1}:=x\}$ holds. From this, we have $p\{x:=xy\} \preceq q\{y_{1}:=x\}$. This contradicts the assumption that $p\{x:=xy\} \not\preceq q$. Similarly, we can show that the other cases of (1) and (3') also contradict the assumption.
 
 From the above, we conclude that if $p \{ x := r \} \preceq q$ for all $r \in \{ ya, bc, dy \}$ (\TheConditionB), then $p \{ x := xy \} \preceq q$ holds.
 \end{proof}
 
-The conditions (i) and (ii) in Lemma~\ref{lem:oneside} are illustrated in the cases (7) and (8) in Fig.~\ref{fig:lem6bigraph}.
+The conditions in Lemmas~\ref{lem:oneside_i} and \ref{lem:oneside_ii} are illustrated in (7) and (8) in Fig.~\ref{fig:lem6bigraph}, respectively.
 
 \begin{figure}[t]
   \begin{center}
     \includegraphics[scale=0.525]{figs/lem6bigraph.pdf}
     \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and $p,q \in \RPat$. We assume that the symbols in $\Sigma$ are mutually distinct.
-    The figures (7) and (8) express two cases $D = \{ ya, ac, dy \}$ and $D = \{ ya, bd, dy \}$ in Lemma~\ref{lem:oneside}, respectively.
+    The figures (7) and (8) express two cases $D = \{ ya, ac, dy \}$ and $D = \{ ya, bd, dy \}$ in Lemmas~\ref{lem:oneside_i} and \ref{lem:oneside_ii}, respectively.
     In these cases, if $p \{ x := r \} \preceq q$ for all $r \in D$ and $D$ is maximally generalized on ($p,q$), then $p \{ x := xy \} \preceq q$ holds.}\label{fig:lem6bigraph}
   \end{center}
 \end{figure}
 
-When the conditions of both Lemmas \ref{lem:addpart} and \ref{lem:oneside} are not satisfied, counterexamples can be constructed as follows:
+\begin{lem}\label{lem:oneside_ii}
+  Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and let $p,~q$ be regular patterns on $\Sigma\cup X$.
+  Let $D$ be one of the following sets of regular patterns on $\Sigma\cup X$, where $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.
+  \begin{enumerate}
+  \item[] $D=\{ ya, bc, dy \}$ (\TheConditionC).
+  \end{enumerate}
+  Then, if $p \{ x := r \} \preceq q$ for all $r \in D$ and $D$ is maximally generalized on ($p,q$), then $p \{ x := xy \} \preceq q$.
+\end{lem}
+
+\begin{proof}
+The proof follows by reversing $p$ and $q$ and subsequently applying Lemma~\ref{lem:oneside_i}.
+\end{proof}
+
+When the conditions of Lemmas \ref{lem:addpart}, \ref{lem:oneside_i}, and \ref{lem:oneside_ii} are not satisfied, counterexamples can be constructed as follows:
 
 \begin{prop}\label{prop:bothsides}
   Let $\Sigma$ be an alphabet with $\sharp \Sigma \ge 3$.

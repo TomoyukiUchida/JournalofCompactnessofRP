@@ -111,7 +111,7 @@ We have the following two claims:
 \textit{Proof of Claim} 2.
 Let $W = \{a_{1}b_{1},\ldots,a_{5}b_{5}\} \subset A'\cdot B'$.
 Because, for any $i$ ($1\leq i\leq 5$), $|W \cap \{a_{i}c \mid c \in \Sigma\}| \leq 2$ and  $|W \cap \{cb_{i} \mid c \in \Sigma\}| \leq 2$, it can be proven that there are $3$ strings $a_{i_{1}}b_{i_{1}},a_{i_{2}}b_{i_{2}},a_{i_{3}}b_{i_{3}}\in W$ such that $a_{i_{j}} \not= a_{i_{j^{\prime}}}$ and $b_{i_{j}} \not= b_{i_{j^{\prime}}}$ for any $i_{j},i_{j^{\prime}}$ ($i_{j}\not= i_{j^{\prime}}, 1\leq j,j^{\prime}\leq 3$).
-Therefore, from Lemma~\ref{lem:3consts_i}, this claim holds. (\textit{End of Proof of Claim})
+Therefore, from Lemma~\ref{lem:3consts_iii}, this claim holds. (\textit{End of Proof of Claim})
 
 \smallskip
 
@@ -122,7 +122,7 @@ Therefore, from Lemma~\ref{lem:3consts_i}, this claim holds. (\textit{End of Pro
 \textit{Proof of Claim} 3.
 Let $W = \{a_{1}b_{1},a_{2}b_{2},a_{3}b_{3}\} \subset A'\cdot B'$.
 Because, for any $i$ ($1\leq i\leq 3$), $|W \cap \{a_{i}c \mid c \in \Sigma\}| \leq 2$ and  $|W \cap \{cb_{i} \mid c \in \Sigma\}| \leq 2$, it can be proven that there are $2$ strings $a_{i_{1}}b_{i_{1}},a_{i_{2}}b_{i_{2}}\in W$ such that $a_{i_{1}} \not= a_{i_{2}}$ and $b_{i_{1}} \not= b_{i_{2}}$.
-Therefore, from Lemmas~\ref{lem:3consts_ii} and \ref{lem:3consts_iii}, this claim holds. (\textit{End of Proof of Claim})
+Therefore, from Lemmas~\ref{lem:3consts_i} and \ref{lem:3consts_ii}, this claim holds. (\textit{End of Proof of Claim})
 
 \smallskip
 
@@ -172,7 +172,7 @@ Suppose that $\sigma_{A}(q)\in B$ and $\sigma_{B}(q)\in A'$.
 If $a' = \sigma_{B}(q)$, since $a' \in B$, $a' \not= b'$ holds.
 Since $\sigma_{A}(q)\in B$, $b' \not= \sigma_{A}(q)$ holds.
 That is, $a' = \sigma_{B}(q)$, $a' \not= \sigma_{A}(q)$, and $b' \not\in \{\sigma_{A}(q), \sigma_{B}(q)\}$ hold.
-Therefore, from Lemma~\ref{lem:oneside}, $p\{x:=xy\} \preceq q$ holds.
+Therefore, from Lemmas~\ref{lem:oneside_i} and \ref{lem:oneside_ii}, $p\{x:=xy\} \preceq q$ holds.
 If $a' \not= \sigma_{B}(q)$, since $b' \not= \sigma_{A}(q)$, from Lemma~\ref{lem:addpart}, $p\{x:=xy\} \preceq q$ holds.
 Similarly, the case that $\sigma_{A}(q)\in B'$ and $\sigma_{B}(q)\in A$ is proven. (\textit{End of Proof of Claim})
 
@@ -186,7 +186,7 @@ If there exist $q \in Q_{2}^{(\cdot,\cdot)}$ and a string $a'b' \in A'\cdot B'$ 
 
 \noindent
 \textit{Proof of Claim} 5.
-When $a'=b'$, since $\sigma_{A}(q) \not= \sigma_{B}(q)$, from Lemma~\ref{lem:addpart}, this claim holds. Similarly, when $a' \not = b'$, from Lemma~\ref{lem:addpart} or Lemma~\ref{lem:oneside}, this holds.  (\textit{End of Proof of Claim})
+When $a'=b'$, since $\sigma_{A}(q) \not= \sigma_{B}(q)$, from Lemma~\ref{lem:addpart}, this claim holds. Similarly, when $a' \not = b'$, from Lemmas~\ref{lem:addpart}, \ref{lem:oneside_i}, and \ref{lem:oneside_ii}, this holds.  (\textit{End of Proof of Claim})
   
 \smallskip
 

@@ -28,7 +28,7 @@
 %This corresponds to case (ii).
 We assume that $p \{ x := xy \} \not\preceq q$ holds. 
 %Let $A,B,C$ be distinct regular patterns in $\{a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}$ such that $q=q_{1}AwBw^{\prime}Cq_{2}$.
-%Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
+%The following conditions (1),(2),(3),(1'),(2'),(3') must be satisfied:
 %\begin{align*}
 %\textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wBw^{\prime}Cq_{2} \\
 %\textrm{(2)}~& p_{1} \preceq q_{1}Aw & \textrm{(2')}~& p_{2} \preceq w^{\prime}Cq_{2} \\
@@ -61,22 +61,25 @@ We assume that $p \{ x := xy \} \not\preceq q$ holds.
 %  \caption{(d)の場合分け}
 %  \label{d組み合わせ}
 %\end{figure}
-%Next, in the case of $C=a_{3}y$, we consider the following five cases (II-1)--(II-5):
+%Next, in the case of $C=a_{3}y$, we consider the following five cases (\ref{lem:3consts_i}-1)--(\ref{lem:3consts_i}-5):
 %
-Since $D$ is maximally generalized on $(p,q)$, from the same argument as in the proof of Lemma~\ref{lem:oneside}, it is sufficient to consider the following five cases (II-1)--(II-5) of $q$: For $y_{1} \in X$,
+Since $D$ is maximally generalized on $(p,q)$, from the same argument as in the proof of Lemma~\ref{lem:oneside_i}, it is sufficient to consider the following five cases (\ref{lem:3consts_i}-1)--(\ref{lem:3consts_i}-5) of $q$: For $y_{1} \in X$,
 
-\begin{tabular}{l}
-(II-1) $q=q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime}a_{3}y_{1}q_{2}$,\\
-(II-2) $q=q_{1}a_{1}b_{1}b_{2}y_{1}q_{2}$ ($a_{2}=b_{1}$ and $a_{3}=b_{2}$),\\
-(II-3) $q=q_{1}a_{1}b_{1}b_{2}wa_{3}y_{1}q_{2}$ ($b_{1}=a_{2}$),\\
-(II-4) $q=q_{1}a_{3}y_{1}wa_{1}b_{1}b_{2}q_{2}$ ($b_{1}=a_{2}$),\\
-(II-5) $q=q_{1}a_{1}b_{1}y_{1}wa_{2}b_{2}q_{2}$ ($b_{1}=a_{3}$).
+\begin{tabular}{ll}
+(\ref{lem:3consts_i}-1) & $q=q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime}a_{3}y_{1}q_{2}$,\\
+(\ref{lem:3consts_i}-2) & $q=q_{1}a_{1}b_{1}b_{2}y_{1}q_{2}$ ($a_{2}=b_{1}$ and $a_{3}=b_{2}$),\\
+(\ref{lem:3consts_i}-3) & $q=q_{1}a_{1}b_{1}b_{2}wa_{3}y_{1}q_{2}$ ($b_{1}=a_{2}$),\\
+(\ref{lem:3consts_i}-4) & $q=q_{1}a_{3}y_{1}wa_{1}b_{1}b_{2}q_{2}$ ($b_{1}=a_{2}$),\\
+(\ref{lem:3consts_i}-5) & $q=q_{1}a_{1}b_{1}y_{1}wa_{2}b_{2}q_{2}$ ($b_{1}=a_{3}$),
 \end{tabular}
+
+\noindent
+where no variable symbol appears in both $w$ and $w'$.
 
 \smallskip
 \noindent
-(II-1) Case of $q=q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime}a_{3}y_{1}q_{2}$:
-Assume that the following six conditions are hold: For $y_{1}^{\prime}\in X$,
+(\ref{lem:3consts_i}-1) Case of $q=q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime}a_{3}y_{1}q_{2}$:
+The following conditions must be satisfied: For $y_{1}^{\prime}\in X$,
 \begin{align*}
 \textrm{(1)}~& p_{1} \preceq q_{1}, & \textrm{(1')}~& p_{2} \preceq wa_{2}b_{2}w^{\prime}a_{3}y_{1}q_{2}, \\
 \textrm{(2)}~& p_{1} \preceq q_{1}a_{1}b_{1}w, & \textrm{(2')}~& p_{2} \preceq w^{\prime}a_{3}y_{1}q_{2}, \\
@@ -120,38 +123,35 @@ This contradicts the assumption of $a_{1} \ne a_{3}$.
 \smallskip
 
 \noindent
-(II-2) Case of $q=q_{1}a_{1}b_{1}b_{2}y_{1}q_{2}$ ($a_{2}=b_{1}$ and $a_{3}=b_{2}$):
-Assume that the following six conditions are hold: for $y_{1}^{\prime} \in X$,
+(\ref{lem:3consts_i}-2) Case of $q=q_{1}a_{1}b_{1}b_{2}y_{1}q_{2}$ ($a_{2}=b_{1}$ and $a_{3}=b_{2}$):
+The following conditions must be satisfied: For $y_{1}^{\prime} \in X$,
 \begin{align*}
 \textrm{(1)}~& p_{1} \preceq q_{1}, & \textrm{(1')}~& p_{2} \preceq b_{2}y_{1}q_{2}, \\
 \textrm{(2)}~& p_{1} \preceq q_{1}a_{1}, & \textrm{(2')}~& p_{2} \preceq y_{1}q_{2}, \\
 \textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}, & \textrm{(3')}~& p_{2} \preceq q_{2} \mbox{~or~} p_{2} \preceq y_{1}^{\prime}q_{2}.
 \end{align*}
 
-\noindent
-from (2) and (3), $a_{1}b_{1}$ and $a_{1}$ are suffixes of $p_{1}$.
+From (2) and (3), $a_{1}b_{1}$ and $a_{1}$ are suffixes of $p_{1}$.
 Hence, $b_{1}=a_{1}$ holds.
 Thus, from the assumption of $b_{1}=a_{2}$, $a_{1}=a_{2}$ holds.
 This contradicts the assumption of $a_{1} \ne a_{2}$.
 \smallskip
 
 \noindent
-(II-3) Case of $q=q_{1}a_{1}b_{1}b_{2}wa_{3}y_{1}q_{2}$ ($b_{1}=a_{2}$):
-Assume that the following six conditions are hold: For $y_{1}^{\prime} \in X$,
+(\ref{lem:3consts_i}-3) Case of $q=q_{1}a_{1}b_{1}b_{2}wa_{3}y_{1}q_{2}$ ($b_{1}=a_{2}$):
+The following conditions must be satisfied: For $y_{1}^{\prime} \in X$,
 \begin{align*}
 \textrm{(1)}~& p_{1} \preceq q_{1}, & \textrm{(1')}~& p_{2} \preceq b_{2}wa_{3}y_{1}q_{2}, \\
 \textrm{(2)}~& p_{1} \preceq q_{1}a_{1}, & \textrm{(2')}~& p_{2} \preceq wa_{3}y_{1}q_{2}, \\
 \textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}b_{2}w, & \textrm{(3')}~& p_{2} \preceq q_{2} \mbox{~or~} p_{2} \preceq y_{1}^{\prime}q_{2}.
 \end{align*}
 
-%\noindent
 If $|w|=0$, i.e., $w$ is the empty string, then $a_{1}$ and $a_{1}b_{1}b_{2}$ are suffixes of $p_{1}$ from (2) and (3).
 Hence, $a_{1}=b_{2}$ holds.
 Moreover, since $b_{2}a_{3}$ and $a_{3}$ is prefixes of $p_{2}$, $b_{2}=a_{3}$ holds.
 Thus, $a_{1}=a_{3}$ holds.
 This contradicts the assumption of $a_{1} \ne a_{3}$.
 
-%\noindent
 If $|w| \ge 1$, since $a_{1}$ and $a_{1}b_{1}b_{2}w$ are suffixes of $p_{1}$ from (2) and (3),
 the last symbol of $w$ is $a_{1}$.
 Moreover, since $b_{2}wa_{3}$ and $wa_{3}$ are prefixes of $p_{2}$ from (1') and (2'),
@@ -161,8 +161,8 @@ This contradicts the assumption of $a_{1} \ne a_{3}$.
 \smallskip
 
 \noindent
-(II-4) Case of $q=q_{1}a_{3}y_{1}wa_{1}b_{1}b_{2}q_{2}$ ($b_{1}=a_{2}$):
-Assume that the following six conditions are hold: For $y_{1}^{\prime} \in X$,
+(\ref{lem:3consts_i}-4) Case of $q=q_{1}a_{3}y_{1}wa_{1}b_{1}b_{2}q_{2}$ ($b_{1}=a_{2}$):
+The following conditions must be satisfied: For $y_{1}^{\prime} \in X$,
 \begin{align*}
 \textrm{(1)}~& p_{1} \preceq q_{1}, & \textrm{(1')}~& p_{2} \preceq wa_{1}b_{1}b_{2}q_{2} \mbox{ or} \\
 & & & p_{2} \preceq y_{1}^{\prime}wa_{1}b_{1}b_{2}q_{2},\\
@@ -170,7 +170,6 @@ Assume that the following six conditions are hold: For $y_{1}^{\prime} \in X$,
 \textrm{(3)}~& p_{1} \preceq q_{1}a_{3}y_{1}wa_{1}, & \textrm{(3')}~& p_{2} \preceq q_{2}.
 \end{align*}
 
-\noindent
 From (3), there exist regular patterns $p_{1}^{\prime}$ and $p_{1}^{\prime\prime}$ such that $p_{1}=p_{1}^{\prime}p_{1}^{\prime\prime}$, $p_{1}^{\prime} \preceq q_{1}a_{3}$, and $p_{1}^{\prime\prime} \preceq y_{1}wa_{1}$ hold.
 Hence, if $p_{2} \preceq wa_{1}b_{1}b_{2}q_{2}$ of (1') holds, since $p=p_{1}xp_{2}=p_{1}^{\prime}p_{1}^{\prime\prime}xp_{2}\preceq q_{1}a_{3}p_{1}^{\prime\prime}xwa_{1}b_{1}b_{2}q_{2}=q \{ y_{1} := p_{1}^{\prime\prime}x \}$, then $p \preceq q$ holds.
 Thus, this contradicts the assumption.
@@ -179,16 +178,18 @@ Similarly, $p_{2} \preceq y_{1}^{\prime}wa_{1}b_{1}b_{2}q_{2}$ of (1') leads to 
 \smallskip
 
 \noindent
-(II-5) Case of $q=q_{1}a_{1}b_{1}ywa_{2}b_{2}q_{2}$ ($b_{1}=a_{3}$):
-Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
+(\ref{lem:3consts_i}-5) Case of $q=q_{1}a_{1}b_{1}y_{1}wa_{2}b_{2}q_{2}$ ($b_{1}=a_{3}$):
+The following conditions must be satisfied: For $y_{1}^{\prime} \in X$,
 \begin{align*}
-\textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq ywa_{2}b_{2}q_{2} \\
-\textrm{(2)}~& p_{1} \preceq q_{1}a_{1} & \textrm{(2')}~& p_{2} \preceq wa_{2}b_{2}q_{2} \\
-\textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}yw & \textrm{(3')}~& p_{2} \preceq q_{2}
+\textrm{(1)}~& p_{1} \preceq q_{1}, & \textrm{(1')}~& p_{2} \preceq y_{1}wa_{2}b_{2}q_{2}, \\
+\textrm{(2)}~& p_{1} \preceq q_{1}a_{1}, & \textrm{(2')}~& p_{2} \preceq wa_{2}b_{2}q_{2} \mbox{ or} \\
+& & & p_{2} \preceq y_{1}^{\prime}wa_{2}b_{2}q_{2},\\
+\textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}y_{1}w, & \textrm{(3')}~& p_{2} \preceq q_{2}.
 \end{align*}
 \noindent
-There exist regular patterns $q_{1}^{\prime}, q_{2}^{\prime}, q_{3}^{\prime}$ such that $q_{1}^{\prime}=q_{1}a_{1}b_{1}$, $q_{2}^{\prime}=yw$, $q_{3}^{\prime}=a_{2}b_{2}q_{2}$, from (3) $p_{1} \preceq q_{1}^{\prime}q_{2}^{\prime}$ and from (1') $p_{2} \preceq q_{2}^{\prime}q_{3}^{\prime}$ hold.
-Moreover, since $q_{2}^{\prime}$ contains the variable symbol $y$, $p\preceq q$ holds from Theorem \ref{Sato1:Lemma9}.
+Let $q_{1}^{\prime}=q_{1}a_{1}b_{1}$, $q_{2}^{\prime}=y_{1}w$, $q_{3}^{\prime}=a_{2}b_{2}q_{2}$.
+From (3), $p_{1} \preceq q_{1}^{\prime}q_{2}^{\prime}$ holds, and from (1'), $p_{2} \preceq q_{2}^{\prime}q_{3}^{\prime}$ holds.
+Since $q_{2}^{\prime}$ contains a variable symbol $y_{1}$, $p\preceq q$ holds from Theorem \ref{Sato1:Lemma9}.
 This contradicts the assumption.
 \end{proof}
 
@@ -219,7 +220,7 @@ This contradicts the assumption.
 \begin{proof}
 %(III) Case of (iii) that $q$ contains $a_{1}b_{1}, a_{2}b_{2}$ and $yb_{3}$:
 %Let $A,B,C$ be distinct regular patterns in $\{a_{1}b_{1}, a_{2}b_{2}, yb_{3}\}$ such that $q=q_{1}AwBw^{\prime}Cq_{2}$.
-%Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
+%The following conditions (1),(2),(3),(1'),(2'),(3') must be satisfied:
 %
 %xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 %\begin{align*}
@@ -339,25 +340,27 @@ The conditions in Lemmas~\ref{lem:3consts_i}, \ref{lem:3consts_ii}, and \ref{lem
 %\noindent
 %This corresponds to case (i).
 We assume that $p \{ x := xy \} \not\preceq q$ holds.
-Since $D$ is maximally generalized on $(p,q)$, it is sufficient to consider the following four cases (I-1)-(I-4) of $q$ for some regular patterns $q_{1},q_{2}$ and some constant strings $w,w^{\prime}$ ($|w|\geq 0$ and $|w^{\prime}|\geq 0$):
+Since $D$ is maximally generalized on $(p,q)$, it is sufficient to consider the following four cases (\ref{lem:3consts_iii}-1)-(\ref{lem:3consts_iii}-4) of $q$ for some regular patterns $q_{1},q_{2}$ and some constant strings $w,w^{\prime}$ ($|w|\geq 0$ and $|w^{\prime}|\geq 0$):
 
 \smallskip
+
 \noindent
 \begin{tabular}{ll}
-(I-1) $q=q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime}a_{3}b_{3}q_{2}$,\\
-(I-2) $q=q_{1}a_{1}b_{1}a_{3}b_{3}q_{2}$ ($b_{1}=a_{2}$ and $a_{3}=b_{2}$),\\
-(I-3) $q=q_{1}a_{1}b_{1}b_{2}wa_{3}b_{3}q_{2}$ ($b_{1}=a_{2}$),\\
-(I-4) $q=q_{1}a_{1}b_{1}wa_{2}b_{2}b_{3}q_{2}$ ($b_{2}=a_{3}$).
+(\ref{lem:3consts_iii}-1) & $q=q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime}a_{3}b_{3}q_{2}$,\\
+(\ref{lem:3consts_iii}-2) & $q=q_{1}a_{1}b_{1}a_{3}b_{3}q_{2}$ ($b_{1}=a_{2}$ and $a_{3}=b_{2}$),\\
+(\ref{lem:3consts_iii}-3) & $q=q_{1}a_{1}b_{1}b_{2}wa_{3}b_{3}q_{2}$ ($b_{1}=a_{2}$),\\
+(\ref{lem:3consts_iii}-4) & $q=q_{1}a_{1}b_{1}wa_{2}b_{2}b_{3}q_{2}$ ($b_{2}=a_{3}$).
 \end{tabular}
+
 \smallskip
 
 \noindent
-(I-1) Case of $q=q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime}a_{3}b_{3}q_{2}$:
-Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
+(\ref{lem:3consts_iii}-1) Case of $q=q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime}a_{3}b_{3}q_{2}$:
+The following conditions must be satisfied:
 \begin{align*}
-\textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wa_{2}b_{2}w^{\prime}a_{3}b_{3}q_{2} \\
-\textrm{(2)}~& p_{1} \preceq q_{1}a_{1}b_{1}w & \textrm{(2')}~& p_{2} \preceq w^{\prime}a_{3}b_{3}q_{2} \\
-\textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime} & \textrm{(3')}~& p_{2} \preceq q_{2}
+\textrm{(1)}~& p_{1} \preceq q_{1}, & \textrm{(1')}~& p_{2} \preceq wa_{2}b_{2}w^{\prime}a_{3}b_{3}q_{2}, \\
+\textrm{(2)}~& p_{1} \preceq q_{1}a_{1}b_{1}w, & \textrm{(2')}~& p_{2} \preceq w^{\prime}a_{3}b_{3}q_{2}, \\
+\textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime}, & \textrm{(3')}~& p_{2} \preceq q_{2}.
 \end{align*}
 
 If $|w|=|w^{\prime}|$ holds, $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$ from (2) and (3).
@@ -382,44 +385,40 @@ $wa_{2}b_{2}w^{\prime}a_{3}b_{3}$ and $w^{\prime}a_{3}b_{3}$ are prefixes of $p_
 If there exist constant strings $w_{1}$ and $w_{2}$ such that $w^{\prime} = w_{1}w=ww_{2}$ holds, then $a_{2}b_{2}$ and $a_{3}b_{3}$ are suffixes of $w_{1}$ from $|w_1|=|w_2|$ and $|ww_{2}a_{3}b_{3}|=|wa_{2}b_{2}w_{1}|$.
 Hence, $a_{1}b_{1}=a_{3}b_{3}$.
 This contradicts the assumption of $a_{1} \ne a_{3}$ and $b_{1} \ne b_{3}$.
-%\smallskip
 
 If $|w|>|w^{\prime}|$, we can prove the contradiction in a similar way as $|w|\le|w^{\prime}|$.
 
 \smallskip
 
 \noindent
-(I-2) Case of $q=q_{1}a_{1}b_{1}a_{3}b_{3}q_{2}$ ($b_{1}=a_{2}$ and $a_{3}=b_{2}$):
-Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
+(\ref{lem:3consts_iii}-2) Case of $q=q_{1}a_{1}b_{1}a_{3}b_{3}q_{2}$ ($b_{1}=a_{2}$ and $a_{3}=b_{2}$):
+The following conditions must be satisfied:
 \begin{align*}
-\textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq a_{3}b_{3}q_{2} \\
-\textrm{(2)}~& p_{1} \preceq q_{1}a_{1} & \textrm{(2')}~& p_{2} \preceq b_{3}q_{2} \\
-\textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1} & \textrm{(3')}~& p_{2} \preceq q_{2}
+\textrm{(1)}~& p_{1} \preceq q_{1}, & \textrm{(1')}~& p_{2} \preceq a_{3}b_{3}q_{2}, \\
+\textrm{(2)}~& p_{1} \preceq q_{1}a_{1}, & \textrm{(2')}~& p_{2} \preceq b_{3}q_{2}, \\
+\textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}, & \textrm{(3')}~& p_{2} \preceq q_{2}.
 \end{align*}
 
-\noindent
-from (2) and (3), since $a_{1}b_{1}$ and $a_{1}$ are suffixes of $p_{1}$, 
+From (2) and (3), since $a_{1}b_{1}$ and $a_{1}$ are suffixes of $p_{1}$, 
 $b_{1} = a_{1}$ holds.
-From the assumption of $b_{1}=a_{2}$, $a_{1}=a_{2}$.
+From the assumption of $b_{1}=a_{2}$, $a_{1}=a_{2}$ holds.
 This contradicts the assumption of $a_{1}\not= a_{2}$.
 \smallskip
 
 \noindent
-(I-3) Case of $q=q_{1}a_{1}b_{1}b_{2}wa_{3}b_{3}q_{2}$ ($b_{1}=a_{2}$):
-Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
+(\ref{lem:3consts_iii}-3) Case of $q=q_{1}a_{1}b_{1}b_{2}wa_{3}b_{3}q_{2}$ ($b_{1}=a_{2}$):
+The following conditions must be satisfied:
 \begin{align*}
-\textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq b_{2}wa_{3}b_{3}q_{2} \\
-\textrm{(2)}~& p_{1} \preceq q_{1}a_{1} & \textrm{(2')}~& p_{2} \preceq wa_{3}b_{3}q_{2} \\
-\textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}b_{2}w & \textrm{(3')}~& p_{2} \preceq q_{2}
+\textrm{(1)}~& p_{1} \preceq q_{1}, & \textrm{(1')}~& p_{2} \preceq b_{2}wa_{3}b_{3}q_{2}, \\
+\textrm{(2)}~& p_{1} \preceq q_{1}a_{1}, & \textrm{(2')}~& p_{2} \preceq wa_{3}b_{3}q_{2}, \\
+\textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}b_{2}w, & \textrm{(3')}~& p_{2} \preceq q_{2}.
 \end{align*}
 
-%\noindent
 If $|w|=0$, i.e., $w$ is the empty string, then $a_{1}$ and $a_{1}b_{1}b_{2}$ are suffixes of $p_{1}$ from (2) and (3)
 and $b_{2}a_{3}b_{3}$ and $a_{3}b_{3}$ are prefixes of $p_{2}$ from (1') and (2').
 Since $b_{2}=a_{1}$ and $b_{2}a_{3}=a_{3}b_{3}$, $a_{1}=a_{3}$ holds.
 This contradicts the assumption of $a_{1}\not= a_{3}$.
 
-%\noindent
 If $|w| \ge 1$, $a_{1}$ and $a_{1}b_{1}b_{2}w$ are suffixes of $p_{1}$ from (2) and (3).
 Hence, the last symbol of $w$ is $a_{1}$.
 Moreover, $b_{2}wa_{3}b_{3}$ and $wa_{3}b_{3}$ are prefixes of $p_{2}$ from (1') and (2').
@@ -429,22 +428,20 @@ This contradicts the assumption of $a_{1} \ne a_{3}$.
 \smallskip
 
 \noindent
-(I-4) Case of $q=q_{1}a_{1}b_{1}wa_{2}b_{2}b_{3}q_{2}$ ($b_{2}=a_{3}$):
-Assume that the following six conditions (1),(2),(3),(1'),(2'),(3') are hold.
+(\ref{lem:3consts_iii}-4) Case of $q=q_{1}a_{1}b_{1}wa_{2}b_{2}b_{3}q_{2}$ ($b_{2}=a_{3}$):
+The following conditions (1),(2),(3),(1'),(2'),(3') must be satisfied:
 \begin{align*}
-\textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wa_{2}b_{2}b_{3}q_{2} \\
-\textrm{(2)}~& p_{1} \preceq q_{1}a_{1}b_{1}w & \textrm{(2')}~& p_{2} \preceq b_{3}q_{2} \\
-\textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}wa_{2} & \textrm{(3')}~& p_{2} \preceq q_{2}
+\textrm{(1)}~& p_{1} \preceq q_{1}, & \textrm{(1')}~& p_{2} \preceq wa_{2}b_{2}b_{3}q_{2}, \\
+\textrm{(2)}~& p_{1} \preceq q_{1}a_{1}b_{1}w, & \textrm{(2')}~& p_{2} \preceq b_{3}q_{2}, \\
+\textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}wa_{2}, & \textrm{(3')}~& p_{2} \preceq q_{2}.
 \end{align*}
 \noindent
 
-%\noindent
 If $|w|=0$, i.e., $w$ is the empty string, then $a_{1}b_{1}$ and $a_{1}b_{1}a_{2}$ are suffixes of $p_{1}$ from (2) and (3)
 and $a_{2}b_{2}b_{3}$ and $b_{3}$ are prefixes of $p_{2}$ from (1') and (2').
 Since $b_{1}=a_{2}$ and $a_{2}=b_{3}$, then $b_{1}=b_{3}$ holds.
 This contradicts the assumption of $b_{1}\not= b_{3}$.
 
-%\noindent
 If $|w| \ge 1$, since $a_{1}b_{1}w$ and $a_{1}b_{1}wa_{2}$ are suffixes of $p_{1}$ from (2) and (3), the first symbol of $w$ is $b_{1}$.
 Moreover, since $wa_{2}b_{2}b_{3}$ and $b_{3}$ are prefixes of $p_{2}$ from (1') and (2'),
 the first symbol of $w$ is $b_{3}$.
