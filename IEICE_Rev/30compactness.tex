@@ -38,17 +38,20 @@ If there exists (b) $ay_{1}$ in $q$ that corresponds to $bc$, i.e., there exist 
   \item[(2)] $p_{1} \preceq q_{1}$, and
   \item[(3)] either $p_{2} \preceq q_{2}$ or $p_{2} \preceq y_{1}^{\prime}q_{1}$ for $y_{1}^{\prime}\in X$.
   \end{enumerate}
-In this case, it is straightforward to see that $p\{x:=ay\} = p_{1}ayp_{2} \preceq q_{1}ay_{1}q_{2}$ holds.
-Thus, $p \{ x := r \} \preceq q$ for all $r \in D^{\prime}$ holds, where $D^{\prime} = (D \setminus \{ab\}) \cup \{ay\}$.
-By a similar discussion, if there exists (c) $y_{1}b$ in $q$ that corresponds to $ab$, $p \{ x := r \} \preceq q$ for all $r \in D^{\prime\prime}$ holds, where $D^{\prime\prime} = (D \setminus \{ab\}) \cup \{yb\}$.
-Therefore, in this paper, we make the following assumption on $D$:
+Let $D^{\prime} = (D \setminus \{ab\}) \cup \{ay\}$.
+It is straightforward to see that $p\{x:=ay\} = p_{1}ayp_{2} \preceq q_{1}ay_{1}q_{2}$ holds.
+Thus, $p \{ x := r \} \preceq q$ for all $r \in D^{\prime}$ holds.
+Let $D^{\prime\prime} = (D \setminus \{ab\}) \cup \{yb\}$.
+By a similar discussion, if there exists (c) $y_{1}b$ in $q$ that corresponds to $ab$, $p \{ x := r \} \preceq q$ for all $r \in D^{\prime\prime}$ holds.
+Therefore, in this paper, we make the following definition on $D$:
 
 \smallskip
 
-\noindent
-\textit{Assumption} on $D$.
-For any $a,b \in \Sigma$, if $D$ includes a constant string $ab$ such that $p \{ x := ab \} \preceq q$ holds, then $p \{ x := ay \} \not\preceq q$ and $p \{ x := yb \} \not\preceq q$ hold for any $y \in X$.
-
+\begin{dfn}
+Let $p,q \in \RPat$.
+Let $D \subset \RPat$ such that for all $r\in D$, $|r| = 2$ and $p \{ x := r \} \preceq q$ holds.
+Then, if for any $ab\in D$ ($a,b\in\Sigma$), $p \{ x := ay \} \not\preceq q$ and $p \{ x := yb \} \not\preceq q$ hold for any $y \in X$ that does not appear in $q$, the set $D$ is said to be \textit{maximally generalized on ($p,q$)}.
+\end{dfn}
 
 \subsection{$D=\{ ay, by \}$ and $D=\{ ya, yb \}$}\label{subsec:d2}
 

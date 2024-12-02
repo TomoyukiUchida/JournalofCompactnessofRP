@@ -16,7 +16,7 @@
   \begin{enumerate}
   \item[] $D = \{ ya, bc, dy \}$ (\TheConditionA).
   \end{enumerate}
-  Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.
+  Then, if $p \{ x := r \} \preceq q$ for all $r \in D$ and $D$ is maximally generalized on ($p,q$), then $p \{ x := xy \} \preceq q$.
 \end{lem}
 
   \begin{proof}
@@ -49,7 +49,7 @@
 %
 %  Since $p \{ x := xy \} \not \preceq q$ and the condition \TheConditionA\ hold, the regular pattern $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $q_{1}, q_{2}, w, w^{\prime}$ be either the empty string or a regular pattern on $\Sigma\cup X$.
 %
-The regular pattern $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $q_{1}, q_{2}, w, w^{\prime}$ be either the empty string or a regular pattern on $\Sigma\cup X$.
+Since $D$ is maximally generalized on $(p,q)$, the regular pattern $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $q_{1}, q_{2}, w, w^{\prime}$ be either the empty string or a regular pattern on $\Sigma\cup X$.
   \begin{enumerate}
   \item[(a1)] $q=q_{1}AwBw^{\prime}Cq_{2}$, where $\{ A,B,C \} = \{ y_{1}a,bc,dy_{2} \}$,
   \item[(a2)] $q=q_{1}AwBq_{2}$, where $\{ A,B \} = \{ dy_{1}a,bc \}$,
@@ -223,7 +223,7 @@ The regular pattern $q$ can be expressed in one of the following forms: Let $y_{
       \includegraphics[scale=0.525]{figs/lem5bigraph.pdf}
       \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and $p,q \in \RPat$. We assume that the symbols in $\Sigma$ are mutually distinct. The figure (3) expresses case $D = \{ ya, bc, dy \}$ in Lemma~\ref{lem:addpart}.
       The figures (4), (5), and (6) express three cases $D = \{ ya, bc, ay \}$, $D = \{ ya, bb, dy \}$, and $D = \{ ya, bb, ay \}$, respectively.
-      In these cases, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$ holds.}\label{fig:lem5bigraph}
+      In these cases, if $p \{ x := r \} \preceq q$ for all $r \in D$ and $D$ is maximally generalized on ($p,q$), then $p \{ x := xy \} \preceq q$ holds.}\label{fig:lem5bigraph}
     \end{center}
   \end{figure*}
 
@@ -244,7 +244,7 @@ Let $D$ be one of the following sets of regular patterns on $\Sigma\cup X$, wher
 \item[{\rm (i)}] $D=\{ ya, bc, dy \}$ (\TheConditionB),
 \item[{\rm (ii)}] $D=\{ ya, bc, dy \}$ (\TheConditionC).
 \end{enumerate}
-Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, it follows that $p \{ x := xy \} \preceq q$.
+Then, if $p \{ x := r \} \preceq q$ for all $r \in D$ and $D$ is maximally generalized on ($p,q$), then $p \{ x := xy \} \preceq q$.
 \end{lem}
 
 In {\rm (i)}, we note that if $b = d$, then, because $p\{x:=dy\}\preceq q$, $p\{x:=bc\}\preceq q$ is always satisfied.
@@ -255,14 +255,14 @@ In {\rm (ii)}, for the same reason, we assume $c\not= a$.
 \medskip
 
 \begin{proof}
-It is obvious if no variable symbol appears in $p$.
-Therefore, let $p=p_{1}xp_{2}$, where $p_{i} \in \RPat$ (for $i=1,2$) and $x \in X$.
+%It is obvious if no variable symbol appears in $p$.
+%Therefore, let $p=p_{1}xp_{2}$, where $p_{i} \in \RPat$ (for $i=1,2$) and $x \in X$.
 We assume that $p \{ x := xy \} \not \preceq q$ in order to derive a contradiction.
 In the case of \textrm{(ii)}, by reversing the strings $p$ and $q$, we can prove that the assumption $p \{ x := xy \} \preceq q$ leads to a contradiction, as in the case of \textrm{(i)}.
 Therefore, in the following, we consider only the case of \textrm{(i)}: $D=\{ ya, bc, dy \}$ (\TheConditionB).
 
 The proof is almost the same as the proof of Lemma~\ref{lem:addpart}.
-Since $p \{ x := r \} \preceq q$ for all $r \in D$, there are three strings of length $2$ corresponding to $ya, bc, dy$ in $q$
+Since $p \{ x := r \} \preceq q$ for all $r \in D$ and $D$ is maximally generalized on $(p,q)$, there are three strings of length $2$ corresponding to $ya, bc, dy$ in $q$
 The symbols appearing in $D$ correspond to either a variable or a constant symbol in $q$.
 Let $y_{1}$ and $y_{2}$ be variable symbols appearing in $q$.
 The strings $ya$ and $dy$ must correspond to the strings $y_{1}a$ and $dy_{2}$ in $q$, respectively.
@@ -357,7 +357,7 @@ The conditions (i) and (ii) in Lemma~\ref{lem:oneside} are illustrated in the ca
     \includegraphics[scale=0.525]{figs/lem6bigraph.pdf}
     \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and $p,q \in \RPat$. We assume that the symbols in $\Sigma$ are mutually distinct.
     The figures (7) and (8) express two cases $D = \{ ya, ac, dy \}$ and $D = \{ ya, bd, dy \}$ in Lemma~\ref{lem:oneside}, respectively.
-    In these cases, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$ holds.}\label{fig:lem6bigraph}
+    In these cases, if $p \{ x := r \} \preceq q$ for all $r \in D$ and $D$ is maximally generalized on ($p,q$), then $p \{ x := xy \} \preceq q$ holds.}\label{fig:lem6bigraph}
   \end{center}
 \end{figure}
 
