@@ -156,8 +156,9 @@ Since $D$ is maximally generalized on $(p,q)$, the regular pattern $q$ can be ex
 
   From \textit{Claim} 3, $w$ and $w'$ are strings consisting of symbols in $\Sigma$.
   From (1') and (2'), $wbcw^{\prime}d$ and $w^{\prime}d$ are prefixes of $p_{2}$, and from (2) and (3), $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$.
-  From these facts:
-\begin{itemize}
+  It implies a contradiction in the following inductive way:
+  
+  \begin{itemize}
   \item $|w|=|w^{\prime}|$: Directly, $b = d$ and $a = c$ hold.
   \item $|w|=|w^{\prime}|+1$: Also, $a = b$ holds.
   \item $|w| = |w^{\prime}|+2$ Since $awbcw^{\prime}$ and $aw$ are suffixes of $p_{1}$, and $|w|\geq 2$, $a$ is a suffix of $w$.
@@ -312,7 +313,8 @@ The following conditions must be satisfied:
 \end{align*}
 
 From (1') and (2'), $wacw^{\prime}d$ and $w^{\prime}d$ are prefixes of $p_{2}$, and from (2) and (3), $awacw^{\prime}$ and $aw$ are suffixes of $p_{1}$.
-  From these facts:
+It implies a contradiction in the following inductive way:
+
   \begin{itemize}
   \item $|w|=|w^{\prime}|$: $c = a$ holds.
   \item $|w|=|w^{\prime}|+1$: $w = w^{\prime}d = cw^{\prime}$ holds. Thus, from Proposition~\ref{prop:repstring_origin}, $c = d$ holds.

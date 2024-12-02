@@ -86,8 +86,8 @@ The following conditions must be satisfied: For $y_{1}^{\prime}\in X$,
 \textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime}, & \textrm{(3')}~& p_{2} \preceq q_{2} \mbox{~or~} p_{2} \preceq y_{1}^{\prime}q_{2}.
 \end{align*}
 
-%\noindent
-If $|w|+1=|w^{\prime}|$, then $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$ from (2) and (3).
+\begin{itemize}
+\item $|w|+1=|w^{\prime}|$: From (2) and (3), $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$.
 Since there exists a constant symbol $w_{1}$ such that $w^{\prime}=w_{1}w$ and $b_{2}w_{1}w=a_{1}b_{1}w$ hold,
 then $b_{2}=a_{1}$.
 Moreover, $wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are prefixes of $p_{2}$ from (1') and (2').
@@ -95,31 +95,30 @@ Since there exists a constant symbol $w_{2}$ such that $w^{\prime}=ww_{2}$ and $
 then $b_{2}=a_{3}$.
 Thus, $a_{1} = a_{3}$ holds.
 This contradicts the assumption of $a_{1} \ne a_{3}$.
-
-%\noindent
-If $|w|+1 < |w^{\prime}|$, then $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$ from (2) and (3).
+%
+\item $|w|+1 < |w^{\prime}|$: From (2) and (3), $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$.
 Hence, $a_{1}b_{1}$ is suffixes of $w_{\prime}$.
 Moreover, $wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are prefixes of $p_{2}$ from (1') and (2').
 Hence, there exist constant symbols $w_{1}$ and $w_{2}$ such that $w^{\prime}=w_{1}w$, $w^{\prime}=ww_{2}$ and $|a_{2}b_{2}w_{1}|=|w_{2}a_{3}|+1$ hold.
 Thus, since the second-to-last symbol of $w_{1}$ is $a_{3}$, $a_{1}=a_{3}$ holds.
 This contradicts the assumption of $a_{1} \ne a_{3}$.
-
-%\noindent
-If $|w|=|w^{\prime}|+1$, then $wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are prefixes of $p_{2}$ from (1') and (2').
+%
+\item $|w|=|w^{\prime}|+1$: From (1') and (2'), $wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are prefixes of $p_{2}$.
 Since there exists a constant symbol $w_{1}$ such that $w=w^{\prime}w_{1}$ and $w^{\prime}w_{1}=w^{\prime}a_{3}$ hold, then $w_{1}=a_{3}$ holds.
 Moreover, since $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$ from (2) and (3), 
 there exists a constant symbol $w_{2}$ such that $w=w_{2}w^{\prime}$ and $|w_{1}a_{2}b_{2}w^{\prime}|=|a_{1}b_{1}w_{2}w^{\prime}|$ hold.
 Hence, $w_{1}=a_{1}$ holds.
 Thus, $a_{1}=a_{3}$ holds.
 This contradicts the assumption of $a_{1}\ne a_{3}$.
-
-%\noindent
-If $|w| > |w^{\prime}|+1$, since $wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are prefixes of $p_{2}$ from (1') and (2'),
+%
+\item $|w| > |w^{\prime}|+1$: Since $wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are prefixes of $p_{2}$ from (1') and (2'),
 there exists a constant string $w_{1}$ such that $w=w^{\prime}w_{1}$ and the first symbol of $w_{1}$ is $a_{3}$.
 Moreover, since there exists a constant string $w_{2}$ such that $w=w_{2}w^{\prime}$ and $|w_{1}a_{2}b_{2}|=|a_{1}b_{1}w_{2}|$ hold,
 $a_{1}b_{1}$ is a prefix of $w_{1}$.
 Thus, $a_{3}=a_{1}$ holds.
 This contradicts the assumption of $a_{1} \ne a_{3}$.
+\end{itemize}
+
 \smallskip
 
 \noindent
@@ -146,18 +145,21 @@ The following conditions must be satisfied: For $y_{1}^{\prime} \in X$,
 \textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}b_{2}w, & \textrm{(3')}~& p_{2} \preceq q_{2} \mbox{~or~} p_{2} \preceq y_{1}^{\prime}q_{2}.
 \end{align*}
 
-If $|w|=0$, i.e., $w$ is the empty string, then $a_{1}$ and $a_{1}b_{1}b_{2}$ are suffixes of $p_{1}$ from (2) and (3).
+\begin{itemize}
+\item $|w|=0$: From (2) and (3), $a_{1}$ and $a_{1}b_{1}b_{2}$ are suffixes of $p_{1}$.
 Hence, $a_{1}=b_{2}$ holds.
 Moreover, since $b_{2}a_{3}$ and $a_{3}$ is prefixes of $p_{2}$, $b_{2}=a_{3}$ holds.
 Thus, $a_{1}=a_{3}$ holds.
 This contradicts the assumption of $a_{1} \ne a_{3}$.
-
-If $|w| \ge 1$, since $a_{1}$ and $a_{1}b_{1}b_{2}w$ are suffixes of $p_{1}$ from (2) and (3),
+%
+\item $|w| \ge 1$: Since $a_{1}$ and $a_{1}b_{1}b_{2}w$ are suffixes of $p_{1}$ from (2) and (3),
 the last symbol of $w$ is $a_{1}$.
 Moreover, since $b_{2}wa_{3}$ and $wa_{3}$ are prefixes of $p_{2}$ from (1') and (2'),
 the last symbol of $w$ is $a_{3}$.
 Thus, $a_{1}=a_{3}$ holds.
 This contradicts the assumption of $a_{1} \ne a_{3}$.
+\end{itemize}
+
 \smallskip
 
 \noindent
@@ -363,12 +365,13 @@ The following conditions must be satisfied:
 \textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime}, & \textrm{(3')}~& p_{2} \preceq q_{2}.
 \end{align*}
 
-If $|w|=|w^{\prime}|$ holds, $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$ from (2) and (3).
+\begin{itemize}
+\item $|w|=|w^{\prime}|$: From (2) and (3), $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$.
 Then, $a_{1}b_{1}w=a_{2}b_{2}w^{\prime}$.
 Hence, $a_{1}b_{1}=a_{2}b_{2}$.
 This contracts the assumption of $a_{1} \ne a_{2}$ and $b_{1} \ne b_{2}$.
-
-If $|w|+1=|w^{\prime}|$ holds, $wa_{2}b_{2}w^{\prime}a_{3}b_{3}$ and $w^{\prime}a_{3}b_{3}$ are prefixes of $p_{2}$.
+%
+$|w|+1=|w^{\prime}|$: The strings $wa_{2}b_{2}w^{\prime}a_{3}b_{3}$ and $w^{\prime}a_{3}b_{3}$ are prefixes of $p_{2}$.
 If there exists a constant symbol $w_{1}$ such that $w^{\prime}a_{3}b_{3}=ww_{1}a_{3}b_{3}$,
 then $b_{2}$ and $a_{3}$ are the same symbol from $wa_{2}b_{2}=ww_{1}a_{3}$.
 from (2) and (3), $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$.
@@ -376,8 +379,8 @@ Then, there exists a constant symbol $w_{2}$ such that $w^{\prime}=w_{2}w$,
 then $b_{2}$ and $a_{1}$ are the same symbol from $b_{2}w_{2}w=a_{1}b_{1}w$.
 Hence, from $b_{2}=a_{3}$, $a_{3}$ and $a_{1}$ are same symbol.
 This contradicts the assumption of $a_{3} \ne a_{1}$.
-
-If $|w|+1 < |w^{\prime}|$, from the above (2) and (3), 
+%
+\item $|w|+1 < |w^{\prime}|$: From (2) and (3), 
 $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$.
 If there exists a constant string $w_{1}$ ($|w_{1}|\geq 2$) such that $w^{\prime}=w_{1}w$, then $a_{1}b_{1}$ is a suffix of $w_{1}$.
 From  conditions ($1'$) and ($2'$), 
@@ -385,8 +388,9 @@ $wa_{2}b_{2}w^{\prime}a_{3}b_{3}$ and $w^{\prime}a_{3}b_{3}$ are prefixes of $p_
 If there exist constant strings $w_{1}$ and $w_{2}$ such that $w^{\prime} = w_{1}w=ww_{2}$ holds, then $a_{2}b_{2}$ and $a_{3}b_{3}$ are suffixes of $w_{1}$ from $|w_1|=|w_2|$ and $|ww_{2}a_{3}b_{3}|=|wa_{2}b_{2}w_{1}|$.
 Hence, $a_{1}b_{1}=a_{3}b_{3}$.
 This contradicts the assumption of $a_{1} \ne a_{3}$ and $b_{1} \ne b_{3}$.
-
-If $|w|>|w^{\prime}|$, we can prove the contradiction in a similar way as $|w|\le|w^{\prime}|$.
+%
+\item $|w|>|w^{\prime}|$: We can prove the contradiction in a similar way as $|w|\le|w^{\prime}|$.
+\end{itemize}
 
 \smallskip
 
@@ -414,17 +418,19 @@ The following conditions must be satisfied:
 \textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}b_{2}w, & \textrm{(3')}~& p_{2} \preceq q_{2}.
 \end{align*}
 
-If $|w|=0$, i.e., $w$ is the empty string, then $a_{1}$ and $a_{1}b_{1}b_{2}$ are suffixes of $p_{1}$ from (2) and (3)
-and $b_{2}a_{3}b_{3}$ and $a_{3}b_{3}$ are prefixes of $p_{2}$ from (1') and (2').
+\begin{itemize}
+\item $|w|=0$: From (2) and (3), $a_{1}$ and $a_{1}b_{1}b_{2}$ are suffixes of $p_{1}$. Moreover, from (1') and (2'), $b_{2}a_{3}b_{3}$ and $a_{3}b_{3}$ are prefixes of $p_{2}$.
 Since $b_{2}=a_{1}$ and $b_{2}a_{3}=a_{3}b_{3}$, $a_{1}=a_{3}$ holds.
 This contradicts the assumption of $a_{1}\not= a_{3}$.
-
-If $|w| \ge 1$, $a_{1}$ and $a_{1}b_{1}b_{2}w$ are suffixes of $p_{1}$ from (2) and (3).
+%
+\item $|w| \ge 1$: From (2) and (3), $a_{1}$ and $a_{1}b_{1}b_{2}w$ are suffixes of $p_{1}$.
 Hence, the last symbol of $w$ is $a_{1}$.
 Moreover, $b_{2}wa_{3}b_{3}$ and $wa_{3}b_{3}$ are prefixes of $p_{2}$ from (1') and (2').
 Hence, the last symbol of $w$ is $a_{3}$.
 Therefore, $a_{1}=a_{3}$ holds.
 This contradicts the assumption of $a_{1} \ne a_{3}$.
+\end{itemize}
+
 \smallskip
 
 \noindent
@@ -437,14 +443,15 @@ The following conditions must be satisfied:
 \end{align*}
 \noindent
 
-If $|w|=0$, i.e., $w$ is the empty string, then $a_{1}b_{1}$ and $a_{1}b_{1}a_{2}$ are suffixes of $p_{1}$ from (2) and (3)
-and $a_{2}b_{2}b_{3}$ and $b_{3}$ are prefixes of $p_{2}$ from (1') and (2').
+\begin{itemize}
+\item $|w|=0$: From (2) and (3), $a_{1}b_{1}$ and $a_{1}b_{1}a_{2}$ are suffixes of $p_{1}$. And from (1') and (2'), $a_{2}b_{2}b_{3}$ and $b_{3}$ are prefixes of $p_{2}$.
 Since $b_{1}=a_{2}$ and $a_{2}=b_{3}$, then $b_{1}=b_{3}$ holds.
 This contradicts the assumption of $b_{1}\not= b_{3}$.
-
-If $|w| \ge 1$, since $a_{1}b_{1}w$ and $a_{1}b_{1}wa_{2}$ are suffixes of $p_{1}$ from (2) and (3), the first symbol of $w$ is $b_{1}$.
+%
+\item $|w| \ge 1$: Since $a_{1}b_{1}w$ and $a_{1}b_{1}wa_{2}$ are suffixes of $p_{1}$ from (2) and (3), the first symbol of $w$ is $b_{1}$.
 Moreover, since $wa_{2}b_{2}b_{3}$ and $b_{3}$ are prefixes of $p_{2}$ from (1') and (2'),
 the first symbol of $w$ is $b_{3}$.
 Therefore, $b_{1}=b_{3}$ holds.
 This contradicts the assumption of $b_{1} \ne b_{3}$.
+\end{itemize}
 \end{proof}
