@@ -3,7 +3,9 @@
 \newcommand{\pair}[2]{(#1,#2)}
 
 \begin{prop}\label{prop:repstring_origin}
-  Let $w$ be a string of constant symbols in $\Sigma$ and $a,b$ constant symbols in $\Sigma$.
+ % Let $w$ be a string of constant symbols in $\Sigma$ 
+  Let $w$ be a string in $\Sigma^{\ast}$ 
+ and $a,b$ constant symbols in $\Sigma$.
   If
   \begin{align}
   wa & = bw\label{eq:repstring_origin}
@@ -14,13 +16,16 @@
 \begin{proof}
 Since it is trivial, we omit the proof.
 %If $|w|=0$ or $|w|=1$, the statement is trivial.
-%We assume that for a string of constant symbols $u$ with $|u| < |w|$, if $ua = bu$, then $a = b$ holds.
+%%We assume that for a string of constant symbols $u$ with $|u| < |w|$, if $ua = bu$, then $a = b$ holds.
+%We assume that for a string $u$ in $\Sigma^{\ast}$ with $|u| < |w|$, if $ua = bu$, then $a = b$ holds.
 %When $|w| \geq 2$, since $b$ is a prefix of $w$, there exists a string of constant symbols $u$ such that $w = bu$.
 %From $bua = bbu$, we have $ua = bu$. By the assumption, this implies $a = b$.  
 \end{proof}
 
 \begin{prop}\label{prop:repstring_base}
-Let $w$ be a string of constant symbols in $\Sigma$ and $a,b,c,d$ constant symbols in $\Sigma$.
+%Let $w$ be a string of constant symbols in $\Sigma$ and $a,b,c,d$ constant symbols in $\Sigma$.
+Let $w$ be a string in $\Sigma^{\ast}$ 
+and $a,b,c,d$ constant symbols in $\Sigma$.
 If
 \begin{align}
 wda & = bcw\label{eq:repstring_base}
@@ -29,7 +34,7 @@ holds, then $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
 \end{prop}
 
 \begin{proof}
-  We will prove this proposition by induction on $|w|$.
+  We will prove this proposition by induction on the length of $w$, i.e., $|w|$.
   %For $i=1,\ldots,|w|$, we refer to the $i$-th symbol of $w$ as $w[i - 1]$. 
   \begin{itemize}
   %\item $|w| = 0$: Directly from Eq.~(\ref{eq:repstring_base}), $\pair{b}{c} = \pair{d}{a}$ holds.
