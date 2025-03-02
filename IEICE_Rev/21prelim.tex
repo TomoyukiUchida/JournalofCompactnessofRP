@@ -104,7 +104,7 @@ The set of all pattern languages and regular patterns languages are denoted by $
 %%正規パターンに関して,次のような結果が得られている．
 %正規パターンについては，次の補題が成り立つ．
 
-\begin{lem}[Mukouchi\cite{Mukouchi1991}]\label{regularPatternEquivalence}
+\begin{lem}[Mukouchi(Theorem 6.1, \cite{Mukouchi1991})]\label{regularPatternEquivalence}
   Let $p$ and $q$ be regular patterns.
   Then $p \preceq q$ if and only if $L(p) \subseteq L(q)$.
 \end{lem}
@@ -125,11 +125,12 @@ The set of all pattern languages and regular patterns languages are denoted by $
 Next, we consider unions of pattern languages. % or regular pattern languages.
 The class of all non-empty finite subsets of $\Pat$ is denoted by $\Patplus$, i.e.,
 $\Patplus = \{P \subseteq \Pat \mid 0 < \sharp P < \infty\}$.
-For a positive integer $k~(k>0)$, the class of non-empty sets consisting of at most $k$ patterns, i.e.,
+For a positive integer $k$ i.e., $k>0$, the class of non-empty sets consisting of at most $k$ patterns, i.e.,
 $\Patkei = \{P \subseteq \Pat \mid 0< \sharp P \leq k\}$.
+For a set $P$ of patterns, the pattern language of $P$, denoted by $L(P)$, is the set $\bigcup_{p \in P}L(p)$.
 We denote by $\PatLkei$ the class of unions of at most $k$ pattern languages,
-i.e., $\PatLkei = \{L(P) \mid P \in \Patkei\}$,
-where $L(P) = \bigcup_{p \in P}L(p)$.
+i.e., $\PatLkei = \{L(P) \mid P \in \Patkei\}$.
+%where $L(P) = \bigcup_{p \in P}L(p)$.
 In a similar way, we also define $\RPatplus$, $\RPatkei$ and $\RPatLkei$.
 %%次にパターン言語の有限和を考える．
 %$\Pat$の空でない有限部分集合の集合を$\Patplus$で，
