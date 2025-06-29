@@ -1,6 +1,6 @@
 %補題\ref{追加補題1}，補題\ref{補題15}より，次の定理が成り立つ．
-From the Lemma \ref{追加補題1} 
-and Lemma \ref{Sato1:lemma15},%\ref{補題15},
+From the Lemma \ref{Add-Lemma01} %\ref{追加補題1} 
+and Lemma \ref{Sato1:Lemma15}, %\ref{補題15},
 we have the following theorem.
 
 % \begin{thm}\label{定理17}
@@ -15,7 +15,7 @@ we have the following theorem.
 %     \]
 % \end{thm}
 
-\begin{thm}\label{定理17}
+\begin{thm}\label{Theorem17}%\label{定理17}
     Let $k \geq 3$, $\sharp\Sigma \geq 2k-1$, $P \in \RPatplus$ and
     $Q \in \RPatkei$.
     Then, the following (i),(ii) and (iii) are equivalent:
@@ -33,7 +33,8 @@ we have the following theorem.
 \begin{proof}
     it is clear that (ii) implies (iii) and (iii) implies (i).
     %(ii) $\Rightarrow$ (iii)と(iii) $\Rightarrow$ (i)は自明である．
-    From Theorem\ref{定理10}, if $\sharp\Sigma \geq 2k+1$, then
+    From Theorem~\ref{Sato1:Theorem10}, %\ref{定理10}, 
+    if $\sharp\Sigma \geq 2k+1$, then
     (i) implies (ii).
     % 定理\ref{定理10}より，$\sharp\Sigma \ge 2k+1$のとき，
     % (i) $\Rightarrow$ holds．
@@ -84,7 +85,7 @@ we have the following theorem.
     % $D_{i}=\{ a \in \Sigma \mid p \{ x:=a \} \preceq q_{i} \}$ 
     % \ ($i=1, \ldots, k$)とする．
     We assume that $\sharp D_{i} \geq 3$ for some $i \in \{1,\ldots, k\}$.
-    By Lemma~\ref{Sato1:Lemma10}%\ref{補題10}, 
+    By Lemma~\ref{Sato1:Lemma10}, %\ref{補題10}, 
     we have $p \preceq q_{i}$.
     This contradicts the assumption.
     Thus, we have $\sharp D_{i} \leq 2$ for any $i \in \{1,\ldots,k\}$.
@@ -101,11 +102,12 @@ we have the following theorem.
     % $\sharp\Sigma = 2k$のとき，任意の$i$に対して，$\sharp D_{i}=2$となる．
     Since $k \geq 3$, $2k+1 \geq k+2$ holds.
     %$k \ge 3$であるとき，$2k+1 \ge k+2$となる．
-    By Lemma~\ref{追加補題1},
+    By Lemma~\ref{Add-Lemma01},%\ref{追加補題1},
     %よって，補題\ref{追加補題1}より，
     there exists $i \in \{1,\ldots,k\}$ such that $p\{x:=xy\} \preceq q_{i}$.
     %$p \{ x:=xy \} \preceq q_{i}$となる$i$が存在する．
-    Therefore, by Lemma~\ref{補題15}, we have $p \preceq q_{i}$.
+    Therefore, by Lemma~\ref{Sato1:Lemma15}, %\ref{補題15}, 
+    we have $p \preceq q_{i}$.
     %したがって，補題\ref{補題15}より，$p \preceq q_{i}$となる．
     This contradicts the assumption.
     %これは仮定に矛盾する．
@@ -114,13 +116,14 @@ we have the following theorem.
 \end{proof}
 
 %この定理\ref{定理17}より，次の系が得られる．
-From Theorem~\ref{定理17}, the following corollary holds.
+From Theorem~\ref{Theorem17}, %\ref{定理17}, 
+the following corollary holds.
 
 % \begin{col}\label{命題18}
 %     $k \ge 3$，$\sharp\Sigma \ge 2k-1$，$P \in \mathcal{RP}^{+}$とする．このとき，$S_{2}(P)$は$\mathcal{RPL}^{k}$における$L(P)$の特徴集合である．
 % \end{col}
 
-\begin{col}\label{命題18}
+\begin{col}%\label{命題18}
     Let $k \geq 3$, $\sharp\Sigma \geq 2k-1$ and $P \in \RPatplus$.
     %このとき，$S_{2}(P)$は$\mathcal{RPL}^{k}$における$L(P)$の特徴集合である．
     Then, $S_{2}(P)$ is a characteristic set for $L(P)$ within $\RPatLkei$.
@@ -136,7 +139,7 @@ From Theorem~\ref{定理17}, the following corollary holds.
 %         このとき，$\mathcal{RP}^{k}$は包含に関するコンパクト性を持たない．
 % \end{lem}
 
-\begin{lem}[Sato et al.\cite{Sato1}]\label{補題19}
+\begin{lem}[Sato et al.\cite{Sato1}]\label{Sato1:Lemma19}%\label{補題19}
     Let $k \geq 3$ and $\sharp\Sigma \leq 2k-2$.
     Then, $\RPatkei$ does not have compactness with respect to containment.
 \end{lem}
@@ -181,7 +184,8 @@ From Theorem~\ref{定理17}, the following corollary holds.
 \end{proof}
 
 %定理\ref{定理17}と補題\ref{補題19}より，次の定理が成り立つ．
-From Theorem~\ref{定理17} and Lemma~\ref{補題19},
+From Theorem~\ref{Theorem17}%\ref{定理17}
+ and Lemma~\ref{Sato1:Lemma19}, %\ref{補題19},
 we have the following thorem.
 
 % \begin{thm}
@@ -208,7 +212,7 @@ In case $k=2$, we have the following theorem.
 %     \]
 % \end{thm}
 
-\begin{thm}\label{補題21}
+\begin{thm}\label{Theorem21}%\label{補題21}
     Let $\sharp\Sigma \geq 4$, $P \in \RPatplus$ and $Q \in \RPat^{2}$.
     %$\sharp \Sigma \ge 4$とし，$P \in \RPatplus$，$Q \in \RPat^{2}$とする．
     %このとき，以下の{\rm (i),(ii),(iii)}は同値である． 
@@ -296,7 +300,8 @@ In case $k=2$, we have the following theorem.
     % $i, i^{\prime} \le k$が存在する．
     %
     Let $D_{i} = \{a \in \Sigma \mid p\{x:=a\} \preceq q_{i}\}$ $(i=1,2)$.
-    By Lemma~\ref{補題10}, if $\sharp D_{i} \geq 3$ for some $i \in \{1,2\}$,
+    By Lemma~\ref{Sato1:Lemma10}, %\ref{補題10}, 
+    if $\sharp D_{i} \geq 3$ for some $i \in \{1,2\}$,
     then $p \preceq q_{i}$.
     % ある$i$に対して$\sharp D_{i} \ge 3$のとき，補題\ref{補題10}より，
     % $p \preceq q_{i}$となる．
@@ -307,10 +312,12 @@ In case $k=2$, we have the following theorem.
     %したがって，$\sharp D_{1}=2$かつ$\sharp D_{2}=2$となる場合を考える．
     We consider that $\sharp D_{1}=2$ and $\sharp D_{2} = 2$.
     %$\sharp \Sigma = k+2$であるとき，$k=2$より，$\sharp \Sigma =4$となる．
-    From Lemma~\ref{追加補題1}, $p\{x:=xy\} \preceq q_{i}$ for some $i \in \{1,2\}$.
+    From Lemma~\ref{Add-Lemma01}, %\ref{追加補題1}, 
+    $p\{x:=xy\} \preceq q_{i}$ for some $i \in \{1,2\}$.
     % よって，補題\ref{追加補題1}より，ある$i$に対して，
     % $p \{ x:=xy \} \preceq q_{i}$となる．
-    From Lemma~\ref{補題15}, we have $p \preceq q_{i}$ for some $i \in \{1,2\}$.
+    From Lemma~\ref{Sato1:Lemma15}, %\ref{補題15}, 
+    we have $p \preceq q_{i}$ for some $i \in \{1,2\}$.
     %したがって，補題\ref{補題15}より，$p \preceq q_{i}$となる．
     %これは，仮定に矛盾する．
     This contradicts that $p \not\preceq q_{i}$ ($i=1,2$).
@@ -319,7 +326,10 @@ In case $k=2$, we have the following theorem.
 \end{proof}
 
 %次の例は，$k = 2$における定理\ref{補題21}の反例である．
-The next example is a counter-example of Theorem~\ref{補題21}.
+%The next example is a counter-example of Theorem~\ref{Theorem21}%\ref{補題21}.
+The next example gives a set of regular patterns $P \in \RPatplus$ and a set of regular patterns $Q \in \RPat^{2}$ that, 
+in case $\sharp\Sigma = 3$, 
+the three conditions (i),(ii) and (iii) in Theorem~\ref{Theorem21} are not equivalent
 
 % \begin{ex}\label{反例thm17}
 %     $\Sigma= \{a, b, c \}$を$3$つの定数記号から成る集合，$p,q_{1},q_{2}$を正規パターン，$x,x^{\prime},x^{\prime\prime}$を変数記号とする．
@@ -333,7 +343,7 @@ The next example is a counter-example of Theorem~\ref{補題21}.
 %     しかし，$p \not \preceq q_{1}$かつ$p \not \preceq q_{2}$である．
 % \end{ex}
 
-\begin{ex}\label{反例thm17}
+\begin{ex}%\label{反例thm17}
     % $\Sigma= \{a, b, c \}$を$3$つの定数記号から成る集合，
     % $p,q_{1},q_{2}$を正規パターン，
     % $x,x^{\prime},x^{\prime\prime}$を変数記号とする．
@@ -348,7 +358,8 @@ The next example is a counter-example of Theorem~\ref{補題21}.
     However, $p \not\preceq q_{1}$ and $p \not\preceq q_{2}$.
 \end{ex}
 
-From Theorem~\ref{補題21}, we have that following two corollaries.
+From Theorem~\ref{Theorem21}, %\ref{補題21}, 
+we have that following two corollaries.
 
 % \begin{col}
 %     $\sharp\Sigma \ge 4$とし，$P \in \RPatplus$とする．

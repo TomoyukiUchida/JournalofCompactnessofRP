@@ -20,7 +20,24 @@
   \end{center}
 \end{figure}
 
-\begin{lem}\label{追加補題1}
+
+\begin{figure*}[t]
+  \begin{center}
+    %\includegraphics[scale=0.5]{figs/lem8eachreg-suppl.eps}
+    \includegraphics[scale=0.54]{figs/lem8eachreg-suppl.pdf}
+    \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}, Q=\{q_6,q_7,q_8,q_9,q_{10}\}$. From these figures, we get $\ell_A=1$, $\ell_B=1$, $Q^{(\bot,\bot)}=Q^{(\bot,\cdot)}=Q^{(\cdot,\bot)}=\emptyset$, and $Q^{(\cdot,\cdot)}=Q$.}\label{fig:lem8eachreg-suppl}
+  \end{center}
+\end{figure*}
+
+\begin{figure}[t]
+  \begin{center}
+    %\includegraphics[scale=0.5]{figs/lem8totalreg-suppl.eps}
+    \includegraphics[scale=0.525]{figs/lem8totalreg-suppl.pdf}
+    \caption{In the left figure, we aggregate all of the edges appearing in Fig.~\ref{fig:lem8eachreg-suppl}. From Fig.~\ref{fig:lem8eachreg-suppl} and this right figure, we get $Q_{1}^{(\cdot,\cdot)}=\{q_6,q_7,q_8,q_9\}$ and $Q_{2}^{(\cdot,\cdot)}=\{q_{10}\}$. From Proposition~\ref{prop:bothsides}, even if the string $dg \in A'\cdot B'$ satisfies $p \{ x:=gd \} \preceq q_{10}$, it does not imply that $p \{ x:=xy \} \preceq q_{10}$.}\label{fig:lem8totalreg-suppl}
+  \end{center}
+\end{figure}
+
+\begin{lem}\label{Add-Lemma01}%\label{追加補題1}
 Let $k$ be an integer with $k\geq 1$.
 Let $\Sigma$ be an alphabet with $\sharp \Sigma = k + 2$.
 Let $p \in \RPat$ in which a variable symbol $x$ appears, and let $Q \in \RPat^{k}$.
@@ -250,7 +267,7 @@ Therefore, for such a regular pattern $q$, $p \{x := xy\} \preceq q$ holds.
 
 %###############
 
-\begin{lem}[Sato et al.\cite{Sato1}]\label{Sato1:lemma15}%\label{補題15}
+\begin{lem}[Sato et al.\cite{Sato1}]\label{Sato1:Lemma15}%\label{補題15}
 Let $\Sigma$ be a finite alphabet with $\sharp \Sigma \ge 3$ and $p,q$ regular patterns.
 If there exists a constant symbol $a \in \Sigma$ such that $p \{ x := a \} \preceq q$ and $p \{ x := xy \} \preceq q$, then $p \preceq q$ holds, where $y$ is a variable symbol that does not appear in $q$.
 \end{lem}

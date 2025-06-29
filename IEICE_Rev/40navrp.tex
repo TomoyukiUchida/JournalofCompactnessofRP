@@ -38,7 +38,8 @@ Let $p$ be a $\NAV$ regular pattern containing $n+1$ variable symbols such that 
 There exist two $\NAV$ regular patterns $p_{1},p_{2}$ such that $p=p_{1}xp_{2}$ holds.
 By the induction hypothesis, for any constant string $w\in \Sigma^{\ast}$ with $|w|=2$, $\{p\{x:=w\}\}\preceq Q$ holds because $p\{x:=w\}$ contains $n$ variable symbols.
 Hence, there exists a $\NAV$ regular pattern $q_{w} \in Q$ such that $p \{ x:=w \} \preceq q_{w}$ holds.
-From Lemma \ref{追加補題1}, there exists a regular pattern $q \in Q$ such that $p \{ x:=xy \} \preceq q$ holds, where $y$ is a variable symbol that does not appear in $q$.
+From Lemma \ref{Add-Lemma01}, %\ref{追加補題1}, 
+there exists a regular pattern $q \in Q$ such that $p \{ x:=xy \} \preceq q$ holds, where $y$ is a variable symbol that does not appear in $q$.
 This contradicts the condition $Q \in \NAVRPkei$.
 Thus, we have that (i) implies (ii).
 \end{proof}
@@ -48,7 +49,7 @@ Let $k\ge 2$, $\sharp\Sigma \ge k+2$ and $P \in \NAVRPplus$.
 Then, $S_{2}(P)$ is a characteristic set of $\NAVRPLkei$.%$\mathcal{RPL^{\mbox{$k$}}_{NAV}}$.
 \end{col}
 
-\begin{lem}\label{Case_k+2}\label{k+2のとき}
+\begin{lem}\label{Case_k+2}%\label{k+2のとき}
 Let $k\ge 2$ and $\sharp\Sigma \le k+1$.
 Then, $\NAVRPkei$ does not have compactness with respect to containment.
 \end{lem}
@@ -61,8 +62,8 @@ However, for $i=1,2,\ldots,k$, since $p \not \preceq q_{i}$ holds, we have that 
 Hence, $\NAVRPkei$ does not have compactness with respect to containment.
 \end{proof}
 
-Next, we give an example for Lemma \ref{Case_k+2} in Example \ref{Case_k+1}.
-\begin{ex}\label{Case_k+1}\label{反例k+1}
+Next,  in Example \ref{Case_k+1}, we give an example for Lemma \ref{Case_k+2}.
+\begin{ex}\label{Case_k+1}%\label{反例k+1}
 Let $\Sigma$ be the set of four constant symbols $a,~b,~c,~d$, i.e., $\Sigma= \{a, b, c, d \}$ and $x,x^{\prime},x^{\prime\prime}$ three distinct variable symbols.
 Let $p,q_{1},q_{2},q_{3}$ be the $\NAV$ regular patterns given in Fig. \ref{Fig:CounterExampleforNAVR}. 
 \begin{figure}[tb]
