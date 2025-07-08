@@ -188,9 +188,10 @@ It is clear that $S_{n}(P) \subseteq S_{n+1}(P) \subseteq L(P)$ for any positive
 % \end{lem}
 \begin{lem}[Sato et al.(Lemma 10, \cite{Sato1})]\label{Sato1:Lemma10}
     Suppose $\sharp \Sigma \geq 3$.
-    Let $p$, $p_{1}$, $p_{2}$, $q$ be regular patterns in $\RPat$ and $x$ a variable symbol such that  $p = p_{1}xp_{2}$ holds.
+    Let $p_{1}$, $p_{2}$, $q$ be regular patterns in $\RPat$ and $x$ a variable symbol. 
+    %such that  $p = p_{1}xp_{2}$ holds.
     Let $a$, $b$ and $c$ be mutually distinct constant symbols in $\Sigma$.
-    If $p_{1}ap_{2} \preceq q$, $\ p_{1}bp_{2} \preceq q$ and $p_{1}cp_{2} \preceq q$, then $p \preceq q$ holds.
+    If $p_{1}ap_{2} \preceq q$, $\ p_{1}bp_{2} \preceq q$ and $p_{1}cp_{2} \preceq q$, then $ p_{1}xp_{2}\preceq q$ holds.
 \end{lem}
 % \begin{proof}
 % $p \not \preceq q$と仮定する．
@@ -268,8 +269,8 @@ It is clear that $S_{n}(P) \subseteq S_{n+1}(P) \subseteq L(P)$ for any positive
             $(A,B)\in \{(a,b),(b,a)\}$.
         \end{tabular}
     \]
-    If $p\{x:=a\} \preceq q$ and $p\{x:=b\} \preceq q$,
-    then we have $p \not\preceq q$.
+    Then, we have that $p\{x:=a\} \preceq q$ and $p\{x:=b\} \preceq q$ hold 
+    but $p \not\preceq q$.
 \end{lem}
 
 % \begin{comment}
@@ -305,7 +306,7 @@ It is clear that $S_{n}(P) \subseteq S_{n+1}(P) \subseteq L(P)$ for any positive
 
 From Lemma~\ref{Sato1:Lemma10}, the following Theorem holds.
 \begin{thm}[Sato et al.(Theorem 10, \cite{Sato1})]\label{Sato1:Theorem10}%\label{定理10}
-    Suppose $\sharp\Sigma \geq 2k+1$.
+    Let $k$ be a positive integer. Suppose $\sharp\Sigma \geq 2k+1$.
     For $P \in \RPatplus$ and $Q \in \RPatkei$, 
     the following (i), (ii) and (iii) are equivalent:
     %$\sharp \Sigma \ge 2k+1$とし，$P \in \RPatplus,~Q \in \RPat^{k}$とする．
@@ -319,7 +320,9 @@ From Lemma~\ref{Sato1:Lemma10}, the following Theorem holds.
 %
 %In case $\sharp\Sigma = 2k$,
 
-The following example \ref{counter-example4Theorem10} shows  that Theorem~\ref{Sato1:Theorem10} does not hold if $\sharp\Sigma\leq 2k$ holds.%\ref{定理10}.
+The following example \ref{counter-example4Theorem10} shows  that Theorem~\ref{Sato1:Theorem10} does not hold 
+if $\sharp\Sigma\leq 2k$ holds.
+%\ref{定理10}.
 %次の例は，$\sharp \Sigma = 2k$における定理\ref{定理10}の反例である．
 \begin{ex}\label{counter-example4Theorem10}
     Let $k$ be a positive integer and $\Sigma= \{a_{1},\ldots,a_{k},b_{1},\ldots,b_{k}\}$.
