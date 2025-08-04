@@ -1,5 +1,5 @@
 \section{Conclusion}
-In this paper, for an integer $k~(k\ge 2)$, we have shown the conditions on the number of constant symbols in $\Sigma$, summarized in Table \ref{table:results}, required for the classes $\RPatkei$ of all the set of $k$ regular pattern languages and $\NAVRPkei$ of all the set of $k$ $\NAV$ regular patterns to have compactness with respect to containment.
+In this paper, for an integer $k~(k\ge 2)$, we have shown the conditions on the number of constant symbols in $\Sigma$, summarized in Table \ref{table:results}, required for the classes $\RPatkei$ of all the set of $k$ regular pattern languages and $\NAVRPkei$ of all the set of $k$ non-adjacent variable regular patterns in $\NAVRP$ to have compactness with respect to containment.
 %本稿では，高々$k$ $(k\ge 2)$個の正規パターン集合全体のクラス$\RPatkei$について，(1) 正規パターン集合$P\in\RPatkei$から得られる記号列の集合$S_2(P)$が$P$により生成される言語$L(P)$の特徴集合となること，
 %および(2) $\RPatkei$が包含に関してコンパクト性を持つこと
 %を示したSatoら\cite{Sato1}の結果の証明の誤りを修正した．
@@ -7,7 +7,8 @@ In this paper, for an integer $k~(k\ge 2)$, we have shown the conditions on the 
 %高々$k(k\ge 3)$個の非隣接変数正規パターン集合全体のクラス$\NAVRPkei$から得られる記号列の集合$S_2(P)$が，
 %正規パターン言語の有限和に対する特徴集合と，定数記号の数が$k+2$以上のとき，
 %$\NAVRPkei$が包含に関してコンパクト性をもつことを示した．
-これらにより，Arimuraら\cite{Arimura1994}が示した$\RPatkei$に対する学習アルゴリズムを非隣接変数正規パターン言語の有限和に関する効率的な学習アルゴリズムが設計できることを示した．
+%これらにより，Arimuraら\cite{Arimura1994}が示した$\RPatkei$に対する学習アルゴリズムを非隣接変数正規パターン言語の有限和に関する効率的な学習アルゴリズムが設計できることを示した．
+This result leads to design an efficient learning algorithm for finite unions of languages of non-adjacent variable regular patterns in $\NAVRP$, based on the learning algorithm for $\RPatkei$ proposed by Arimura et al.~\cite{Arimura1994}.
 \begin{table}
 \caption{The conditions on the number $\sharp \Sigma$ of constant symbols in $\Sigma$ required for compactness with respect to containment.}\label{table:results}
 \begin{center}
@@ -22,12 +23,12 @@ In this paper, for an integer $k~(k\ge 2)$, we have shown the conditions on the 
 \vspace*{-10pt}
 \end{table}
 
-
-{\color{red}今後の課題として，}
-{\color{violet} 1. 正規言語の有限和における強コンパクト性}
-{\color{blue} 2. $\NAVRPkei$に対する特徴集合を活用し，非隣接変数正規パターン言語の有限和を正例から極限同定する多項式時間帰納推論アルゴリズム}
-{\color{magenta} 
-3. および一つの正例と多項式回の所属性質問を用いて同定する質問学習アルゴリズムの高速化が考えられる．}
+Extending the notion of strong compactness, as introduced by Arimura et al.~\cite{Arimura1996}, to finite unions of regular pattern languages with non-adjacent variables remains as a topic for future research.
+Furthermore, based on the characteristic set for $\NAVRPkei$, we plan to propose a polynomial-time inductive inference algorithm that identifies finite unions of regular pattern languages with non-adjacent variables in the limit from positive examples.
+%{\color{blue} 2. $\NAVRPkei$に対する特徴集合を活用し，非隣接変数正規パターン言語の有限和を正例から極限同定する多項式時間帰納推論アルゴリズム}
+%{\color{magenta} 
+%3. および一つの正例と多項式回の所属性質問を用いて同定する質問学習アルゴリズムの高速化が考えられる．}
+Furthermore, we are actively working on accelerating a query learning algorithm capable of identifying, with a single positive example and a polynomial number of membership queries, target concepts represented as unions of regular pattern languages with non-adjacent variables.
 {\color{green} 4. また，正規パターン言語の有限和に対する特徴集合の概念を
 線形項木パターン言語\cite{Suzuki2006}の有限和や正則FGS言語\cite{Uchida1994}に拡張することが考えられる．}
 
