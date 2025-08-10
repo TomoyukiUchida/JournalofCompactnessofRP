@@ -1,0 +1,48 @@
+Compactness of Finite Union of Regular Patterns and Regular Patterns without Adjacent Variables
+
+Naoto TAKEDA
+Graduate School of Information Sciences, Hiroshima City University
+
+Tomoyuki UCHIDA
+Graduate School of Information Sciences, Hiroshima City University
+9230354
+
+Takayoshi SHOUDAI
+Department of Computer Science and Engineering, Fukuoka Institute of Technology
+9303359
+
+Satoshi MATSUMOTO
+Faculty of Science, Tokai University
+0307572
+
+Yusuke SUZUKI
+Graduate School of Information Sciences, Hiroshima City University
+0120588
+
+Tetsuhiro MIYAHARA
+Graduate School of Information Sciences, Hiroshima City University
+0401030
+
+A023200	General Fundamentals and Boundaries
+
+D140100	Fundamentals of Information Systems
+D140111	Formal Languages
+D140119	Computational Learning Theory
+
+summary:
+A regular pattern is a string consisting of constant symbols and distinct variable symbols.
+The language L(p) of a regular pattern p is the set of all constant strings obtained by replacing all variable symbols in the regular pattern p with constant strings.
+Let k be an integer greater than or eqaul to 2. RPatkei denotes the class of all sets consisting at most k regular patterns.
+Sato et al. (Proc. ALT'98, 1998) showed that the finite set S_2(P) of symbol strings is a characteristic set of L(P)
+the union of the languages L(p) for all regular patterns p contained in P,
+where S_2(P) is obtained from P in RPatkei by substituting variables with symbol strings of at most length 2. 
+They also showed that RPatkei has compactness with respect to containment, if the number of constant symbols is greater than or equal to 2k-1.
+In this paper, we check the their results and correct the error of the proof of their theorem.
+Further, we consider the set NAVRP of all non-adjacent regular patterns, which are regular patterns without adjacent variables, and show that the set S_2(P) obtained from a set P in the class NAVRPkei of at most k non-adjacent regular patterns is a characteristic set of L(P), where k is greater than or equal to 1.
+Further we show that NAVRPkei has compactness with respect to containment if the number of constant symbols is greater than or equal to k+2.
+Thus we show that we can design an efficient learning algorithm of a finite union of pattern languages of non-adjacent regular patterns with the number of constant symbols which is smaller than the case of regular patterns.
+
+keywords:
+Regular Pattern Language, 
+Compactness w.r.t. Containment, 
+Non-adjacent Regular Patterns Language
