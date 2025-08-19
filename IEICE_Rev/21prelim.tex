@@ -30,7 +30,7 @@ A substitution $\theta$ is a mapping from $(\Sigma \cup X)^{\ast}$ to $(\Sigma \
 and (4) for each variable symbol $x \in X$, $|\theta(x)| \geq 1$ holds.
 Let $x_{1},\ldots,x_{n}$ are variable symbols and $p_{1},\ldots,p_{n}$ non-empty patterns.
 The notation $\{x_{1}:=p_{1},\ldots,x_{n}:=p_{n}\}$ denotes a substitution that replaces each variable symbol $x_{i}$
-with a non-empty pattern $p_{i}$ for $i \in \{1,\ldots,n\}$.
+with a non-empty pattern $p_{i}$ for each $i \in \{1,\ldots,n\}$.
 For a pattern $p$ and a substitution $\theta=\{x_{1}:=p_{1},\ldots,x_{n}:=p_{n}\}$, we denote by $p\theta$ a new pattern obtained from $p$ by replacing variable symbols $x_1,\ldots,x_n$ in $p$ with patterns $p_1,\ldots,p_n$ according to $\theta$, respectively.
 
 For a pattern $p$ and $q$,
@@ -45,7 +45,7 @@ In particular, if $p$ is a regular pattern, we say that $L(p)$ is a \textit{regu
 The set of all pattern languages and regular patterns languages are denoted by $\PatL$ and $\RPatL$, respectively.
 
 \begin{lem}[Mukouchi(Theorem 6.1, \cite{Mukouchi1991})]\label{regularPatternEquivalence}
-  Let $p$ and $q$ be regular patterns.
+  Suppose $\sharp \Sigma \geq 3$. Let $p$ and $q$ be regular patterns.
   Then $p \preceq q$ if and only if $L(p) \subseteq L(q)$.
 \end{lem}
 

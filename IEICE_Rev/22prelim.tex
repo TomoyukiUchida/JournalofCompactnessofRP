@@ -57,7 +57,7 @@ It is clear that $S_{n}(P) \subseteq S_{n+1}(P) \subseteq L(P)$ for any positive
     but $p \not\preceq q$.
 \end{lem}
 
-From Lemma~\ref{Sato1:Lemma10}, the following Theorem holds.
+From Lemma~\ref{Sato1:Lemma10}, the following theorem holds.
 \begin{thm}[Sato et al.(Theorem 10, \cite{Sato1})]\label{Sato1:Theorem10}
     Let $k$ be a positive integer. Suppose $\sharp\Sigma \geq 2k+1$.
     For $P \in \RPatplus$ and $Q \in \RPatkei$, 
@@ -69,16 +69,21 @@ From Lemma~\ref{Sato1:Lemma10}, the following Theorem holds.
     \]
 \end{thm}
 
-The following example \ref{counter-example4Theorem10} shows  that Theorem~\ref{Sato1:Theorem10} does not hold 
+The following Example \ref{counter-example4Theorem10} in \ref{Sato1} shows  that Theorem~\ref{Sato1:Theorem10} does not hold 
 if $\sharp\Sigma\leq 2k$ holds.
 
+%****** mukouchi 227ページ
 \begin{ex}\label{counter-example4Theorem10}
     Let $k$ be a positive integer and $\Sigma= \{a_{1},\ldots,a_{k},b_{1},\ldots,b_{k}\}$.
     Let $w_{1},\ldots,w_{k}$ be regular patterns in $\RPat$ such that 
     $w_{k} = \varepsilon$ and for $i=1,2,\ldots,k-1$, $w_{i} = w_{i+1}b_{i+1}a_{i+1}w_{i+1}$ hold.
     Let $p$, $q_{1},\ldots,q_{k}$ be regular patterns in $\RPat$ such that
     $p = x_{1}a_{1}w_{1}xw_{1}b_{1}x_{2}$ and  for $i=1,2,\ldots,k$, $q_{i} = x_{1}a_{i}w_{i}b_{i}x_{2}$ hold.
-    $Q$ a set $\{q_{1},\ldots,q_{k}\}$ in $\RPatkei$.
+    Let $Q$ be a set $\{q_{1},\ldots,q_{k}\}$ in $\RPatkei$.
+    For $i=1$, we have $p\{x:=a_{1}\} =(x_{1}a_{1}w_{1})a_{1}(w_{1}b_{1}x_{2})=q_1\{x_{1}:=x_{1}a_{1}w_{1}\}\preceq q_{1}$.
+    For $i\geq 2$, from the definition of $w_{i}$,
+    we easily see that $w_{1}=(w_{i}b_{i})w^{(i)}=w{'(i)}(a_{i}w_{i})$ for some strings $w^{(i)}$ and $w^{'(i)}$.
+    Then, for each $i\geq 2$, 
     \begin{eqnarray*}
         p \{ x:=a_{i} \} & = & (x_{1}a_{1}w_{1})a_{i}(w_{1}b_{1}x_{2})\\
         & = & (x_{1}a_{1}w_{1})a_{i}(w_{i}b_{i}w^{(i)})b_{1}x_{2}\\
@@ -91,9 +96,9 @@ if $\sharp\Sigma\leq 2k$ holds.
         & = & q_{i} \{ x_{1} := x_{1}a_{1}w^{\prime (i)}, x_{2} := w_{1}b_{1}x_{2} \}\\
         & \preceq & q_{i}.
     \end{eqnarray*}
-
+%
    Hence, $S_{1}(p) \subseteq L(Q)$ holds.
-   However, from $p \not \preceq q_{i}$, $L(p) \not \subseteq L(q_{i})$ holds for $i=1,2,\ldots,k$.
+   However, from $p \not \preceq q_{i}$, $L(p) \not \subseteq L(q_{i})$ holds for each $i=1,2,\ldots,k$.
 \end{ex}
 
 From Theorem~\ref{Sato1:Theorem10},

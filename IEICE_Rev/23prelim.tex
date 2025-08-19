@@ -45,7 +45,7 @@ holds, then $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
 From the above, we conclude that if $wda = bcw$ holds, then $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
 \end{proof}
 
-The conclusion from Proposition~\ref{prop:repstring_base} shows that $\pair{a}{d} \in \{\pair{b}{c}, \pair{c}{b}\}$. Therefore, if the equation $daw = wbd$ holds, we arrive at the same conclusion.
+The conclusion from Proposition~\ref{prop:repstring_base} shows that $\pair{a}{d} \in \{\pair{b}{c}, \pair{c}{b}\}$. Therefore, if the equation $daw = wbc$ holds, we arrive at the same conclusion.
 
 \begin{prop}\label{prop:repstring}
 Let $w,w^{\prime}$ be strings of constant symbols in $\Sigma$ and $a,b,c,d$ constant symbols in $\Sigma$.
@@ -58,7 +58,7 @@ holds, then $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.\label{prop:rep
 
 \begin{proof}
 We will prove this proposition by an induction on $|w| + |w^{\prime}|$.
-Without loss of generality, we assume that $|w| \geq |w^{\prime}|$ because, if $|w| > |w^{\prime}|$, we arrive at the same conclusion that $\pair{a}{d} \in \{\pair{b}{c}, \pair{c}{b}\}$ holds.
+Without loss of generality, we assume that $|w| \geq |w^{\prime}|$ because, if $|w| < |w^{\prime}|$, we arrive at the same conclusion that $\pair{a}{d} \in \{\pair{b}{c}, \pair{c}{b}\}$ holds.
 \begin{itemize}
   \item $|w| \geq 0$ and $|w^{\prime}|=0$:
   Eq.~(\ref{eq:repstring}) reduces to $wda = bcw$. By Proposition~\ref{prop:repstring_base}, $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
@@ -69,18 +69,18 @@ We divide the relations between $|w|$ and $|w^{\prime}|$ into the following four
 \item $0 < |w^{\prime}| \le |w| \le |w^{\prime}|+1$:
 When either $|w|=|w^{\prime}|$ or $|w|=|w^{\prime}|+1$, Eq.~(\ref{eq:repstring}) is illustrated in Figs.~\ref{fig:prop_pic7} and \ref{fig:prop_pic8}, respectively.
 If $|w|=|w^{\prime}|$, $\pair{b}{c} = \pair{d}{a}$ holds.
-If $|w|=|w^{\prime}|+1$, $a = c$ and $w = w^{\prime}b = dw^{\prime}$ hold.
-From Proposition~\ref{prop:repstring_origin}, we deduce that $b = d$.
+If $|w|=|w^{\prime}|+1$, $d = c$ and $w = w^{\prime}b = aw^{\prime}$ hold.
+From Proposition~\ref{prop:repstring_origin}, we deduce that $b = a$.
 Therefore, $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
 %
 \item $|w^{\prime}|+2 \le |w| \le 2|w^{\prime}| - 1$:
 In Eq.~\ref{eq:repstring}, since $|wdaw^{\prime}| = |w^{\prime}bcw| = |w| + |w^{\prime}| + 2$, a suffix of $w$ overlaps with a prefix of $w$, as illustrated in Fig.~\ref{fig:prop_pic9}.
 That is, there exists a constant string $u$ of length $2|w| - (|w| + |w^{\prime}| + 2) = |w| - |w^{\prime}| - 2$ such that $u$ is both a prefix and a suffix of $w$.
 Since $uda$ has a length of $|w| - |w^{\prime}|$, it is also a prefix of $w$. Similarly, $bcu$ is a suffix of $w$.
-Because $|w| - (|uda| + |bcu|) = 2|w| - |w^{\prime}| \ge 1$, there exist a constant string $u^{\prime}$ of length $2|w^{\prime}| - |w|$ such that $w = udavbcu$ holds.
+Because $|w| - (|uda| + |bcu|) = 2|w| - |w^{\prime}| \ge 1$, there exists a constant string $u^{\prime}$ of length $2|w^{\prime}| - |w|$ such that $w = udau^{\prime}bcu$ holds.
 Since $w^{\prime}$ is a suffix of $w$ and $|u^{\prime}bcu| = (2|w^{\prime}| - |w|) + 2 + (|w| - |w^{\prime}| - 2) = |w^{\prime}|$, we have $w^{\prime} = u^{\prime}bcu$.
 Similarly, $w^{\prime} = udau^{\prime}$. Thus, we derive the equation $u^{\prime}bcu = udau^{\prime}$.
-Since $|u| = |w| - |w^{\prime}| - 2 \leq |w| - 3 < |w|$ and $|u^{\prime}| = 2|w^{\prime}| - |w| < |w|$, i.e., $|u| + |u^{\prime}| < |w| + |w^{\prime}|$, the induction hypothesis on $|u| + |u^{\prime}|$ implies that $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
+Since $|u| = |w| - |w^{\prime}| - 2 \leq |w| - 3 < |w|$ and $|u^{\prime}| = 2|w^{\prime}| - |w| < |w^{\prime}|$, i.e., $|u| + |u^{\prime}| < |w| + |w^{\prime}|$, the induction hypothesis on $|u| + |u^{\prime}|$ implies that $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
 %
 \item $2|w^{\prime}| \le |w| \le 2|w^{\prime}|+3$:
 When $|w|=2|w^{\prime}|$, it is straightforward to observe that $w = w^{\prime}w^{\prime}$.
