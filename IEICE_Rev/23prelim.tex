@@ -39,7 +39,7 @@ holds, then $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
   %\item $|w| = 1$: From $w[0]da = bcw[0]$, we have $w[0] = b$, $d = c$, and $a = w[0]$. Thus, $\pair{b}{c} = \pair{a}{d}$ holds.
   %\item $|w| = 2$: From $w[0]w[1]da = bcw[0]w[1]$, we have $w[0] = b$, $w[1] = c$, $d = w[0]$, $a = w[1]$. Thus, $\pair{b}{c} = \pair{d}{a}$ holds.
   %\item $|w| = 3$: From $w[0]w[1]w[2]da = bcw[0]w[1]w[2]$, we have $w[0] = b$, $w[1] = c$, $w[2] = w[0]$, $d = w[1]$, $a = w[2]$. Thus, $\pair{b}{c} = \pair{a}{d}$ holds.
-  \item $|w| = 0,1,2,3$: it is straightforward to observe that $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
+  \item $|w| = 0,1,2,\mbox{\color{red}~or~}3$: it is straightforward to observe that $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
   \item $|w| \ge 4$: We assume that for any string $u$ with $0\leq |u| < n$, if $uda = bcu$ holds, $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds. Since the string $w$ has a prefix $bc$ and a suffix $da$, there exists a string $u$ with $|u| = |w| - 4 < |w|$ such that $w = bcuda$ holds. Since $wda = bcw$, we have $bcudada = bcbcuda$, and then $uda = bcu$. Thus, from the assumption, we get $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$.
   \end{itemize}
 From the above, we conclude that if $wda = bcw$ holds, then $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.

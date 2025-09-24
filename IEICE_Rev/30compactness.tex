@@ -44,16 +44,18 @@ Therefore, in this paper, we make the following definition on $D$:
 \smallskip
 
 \begin{dfn}
-Let $p,q \in \RPat$.
-Let $D \subset \RPat$ such that for all $r\in D$, $|r| = 2$ and $p \{ x := r \} \preceq q$ holds.
-Then, if for any $ab\in D$ ($a,b\in\Sigma$), $p \{ x := ay \} \not\preceq q$ and $p \{ x := yb \} \not\preceq q$ hold for any $y \in X$ that does not appear in $q$, the set $D$ is said to be \textit{maximally generalized on ($p,q$)}.
+Let $p,q \in \RPat$ {\color{red} with $p\not\preceq q$}.
+Let $D \subset \RPat$ such that for all $r\in D$, $|r| = 2$ and $p \{ x := r \} \preceq q$ hold.
+Then, if for any $ab\in D$ ($a,b\in\Sigma$), $p \{ x := ay \} \not\preceq q$ and $p \{ x := yb \} \not\preceq q$ hold for any $y \in X$ that does not appear in $q$, the set $D$ is said to be \textit{maximally generalized {\color{red}with respect to} ($p,q$)}.
 \end{dfn}
 
 \subsection{$D=\{ ay, by \}$ and $D=\{ ya, yb \}$}\label{subsec:d2}
 
 \begin{lem}[Sato et al.\cite{Sato1}]\label{lem:twovariables}
-Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and let $p,q$ be regular patterns on $\Sigma\cup X$.
-Let $D$ be the following set of regular patterns on $\Sigma\cup X$, where $y$ is a variable symbol that does not appear in $p$ and $q$:
+Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$.
+%$p,q$ regular patterns on $\Sigma\cup X$.
+Let $p,q \in \RPat_{\Sigma\cup X}$.
+Let $D$ be the following set of regular patterns {\color{red}over} $\Sigma\cup X$, where $y$ is a variable symbol that does not appear in $p$ and $q$:
 \begin{enumerate}
 \item[{\rm (i)}] $D=\{ ay, by \}$ ($a \not= b$),
 \item[{\rm (ii)}] $D=\{ ya, yb \}$ ($a \not= b$).
@@ -69,7 +71,7 @@ In the case of \textrm{(ii)}, by reversing the strings $p$ and $q$, we can prove
 Therefore, in the following, we consider only the case of \textrm{(i)}: $D=\{ ay, by \}$ ($a \not= b$).
 
 Since $p \{ x := xy \} \not \preceq q$, $p_{1}ayp_{2}\preceq q$ and $p_{1}byp_{2}\preceq q$, 
-there exist regular patterns $q_{1},q_{2}$ on $\Sigma\cup X$ such that $q=q_{1}ay_{1}wby_{2}q_{2}$ or $q=q_{1}by_{1}way_{2}q_{2}$ for some variable symbols $y_{1},y_{2}~(y_{1} \not= y_{2})$ and a constant string $w$ ($|w|\geq 0$) from Theorem \ref{Sato1:Lemma9}.
+there exist regular patterns $q_{1},q_{2}$ {\color{red}over} $\Sigma\cup X$ such that $q=q_{1}ay_{1}wby_{2}q_{2}$ or $q=q_{1}by_{1}way_{2}q_{2}$ for some variable symbols $y_{1},y_{2}~(y_{1} \not= y_{2})$ and a constant string $w$ ($|w|\geq 0$) from Theorem \ref{Sato1:Lemma9}.
 When $q=q_{1}ay_{1}wby_{2}q_{2}$ holds, the following four conditions hold: For $y_{1}^{\prime}, y_{2}^{\prime}\in X$,
 \begin{align*}
 \textrm{(1)} & ~p_{1} \preceq q_{1}, & \textrm{(1')} & ~p_{2} \preceq wby_{2}q_{2} \mbox{~or~}\\

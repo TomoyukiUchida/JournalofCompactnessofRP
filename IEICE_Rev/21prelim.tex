@@ -5,18 +5,20 @@
 % Preliminaries
 Let $\Sigma$ be a non-empty finite set of constant symbols.
 Let $X$ be an infinite set of variable symbols such that $\Sigma \cap X = \emptyset$ holds.
-Then, a \textit{string} on $\Sigma \cup X$ is a sequence of symbols in $\Sigma \cup X$.
+Then, a \textit{string} {\color{red}over} $\Sigma \cup X$ is a sequence of symbols in $\Sigma \cup X$.
 Particularly, the string having no symbol is called the \textit{empty string} and is denoted by $\varepsilon$.
-We denote by $(\Sigma \cup X)^{\ast}$ the set of all strings on $\Sigma \cup X$ 
-and by $(\Sigma \cup X)^{+}$ the set of all strings on $\Sigma\cup X$ except $\varepsilon$, i.e., $(\Sigma \cup X)^{+}=(\Sigma \cup X)^{\ast}\setminus \{\varepsilon\}$.
+We denote by $(\Sigma \cup X)^{\ast}$ the set of all strings {\color{red}over} $\Sigma \cup X$ 
+and by $(\Sigma \cup X)^{+}$ the set of all strings {\color{red}over} $\Sigma\cup X$ except $\varepsilon$, i.e., $(\Sigma \cup X)^{+}=(\Sigma \cup X)^{\ast}\setminus \{\varepsilon\}$.
 
-A \textit{pattern} on $\Sigma \cup X$ is a string in $(\Sigma \cup X)^{\ast}$.
-Note that the empty string $\varepsilon$ is a pattern on $\Sigma \cup X$.
+A \textit{pattern} {\color{red}over} $\Sigma \cup X$ is a string in $(\Sigma \cup X)^{\ast}$.
+Note that the empty string $\varepsilon$ is a pattern {\color{red}over} $\Sigma \cup X$.
 A pattern $p$ is said to be \textit{regular} if each variable symbol appears
 at most once in $p$.
 The length of $p$, denote by $|p|$, is the number of symbols in $p$.
 Note that $|\varepsilon|=0$ holds.
-The set of all patterns and regular patterns on $\Sigma \cup X$ are denoted by $\Pat$ and $\RPat$, respectively.
+{\color{red} The set of all patterns and regular patterns {\color{red}over} $\Sigma \cup X$ are denoted by $\Pat_{\Sigma\cup X}$ and $\RPat_{\Sigma\cup X}$, respectively.
+When $\Sigma$ and $X$ are clear from the context, 
+we omit them in the notation and simply write $\Pat$ and $\RPat$, respectively.}
 For a set $S$, we denote by $\sharp S$ the number of elements in $S$.
 Let $p,q$ be strings.
 If $p$ and $q$ are equal as strings, we denote it by $p=q$.
