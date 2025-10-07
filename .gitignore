@@ -1,11 +1,6 @@
-
-*.aux
-*.dvi
-*.fdb_latexmk
-*.fls
-*.log
-*.gz
-IEICE/out/main.pdf
-IEICE_Rev/.DS_Store
-.DS_Store
-IEICE_Rev/out/main.pdf
+IEICE_Rev/out/*.aux
+IEICE_Rev/out/*.dvi
+IEICE_Rev/out/*.fdb_latexmk
+IEICE_Rev/out/*.fls
+IEICE_Rev/out/*.log
+IEICE_Rev/out/main.synctex.gz

@@ -4,9 +4,9 @@ A regular pattern $p$ is said to be a {\it non-adjacent variable regular pattern
 if $p$ does not contain consecutive variable symbols.
 For example, the regular pattern $p=axybc$ is not an $\NAV$ regular pattern because $xy$ is appeared in $p$.
 Let $\NAVRP$ be the set of all $\NAV$ regular patterns.
-Let $\NAVRPplus$ be the set of all finite subsets $S$ of $\NAVRP$ such that $S$ is not the empty set, i.e., $\NAVRPplus=\{S \subseteq \NAVRP \mid \sharp S \leq 1\}$,
+Let $\NAVRPplus$ be the set of all finite subsets $S$ of $\NAVRP$ such that $S$ is not the empty set, i.e., $\NAVRPplus=\{S \subseteq \NAVRP \mid \sharp S {\color{red} \geq} 1\}$,
 and $\NAVRPkei$ the set of all subsets $P$ of $\NAVRPplus$ such that $P$ consists of at most $k~(k\geq 1)$ $\NAV$ regular patterns, i.e., $\NAVRPkei=\{P\in \NAVRPplus \mid \sharp P \leq k\}$.
-We define the compactness with respect to containment for $\NAVRPkei$ in a similar way as Def.\ref{def:compactness}.
+We define the compactness with respect to containment for $\NAVRPkei$ in a similar way as {\color{red}$\RPatkei$}.%Def.\ref{def:compactness}.
  For any $\NAV$ regular pattern $p \in \NAVRP$ and any set $Q \in \NAVRPkei$ with $k~(k\geq 1)$,
   the set $\NAVRPkei$ said to have {\it compactness with respect to containment}
   if there exists an $\NAV$ regular pattern $q \in Q$ such that $L(p) \subseteq L(q)$ holds if $L(p) \subseteq L(Q)$ holds.
@@ -36,7 +36,7 @@ Therefore, there exists $q \in Q$ such that $p \preceq q$ holds.
 If $n \ge 0$, we assume that the proposition holds for any regular $\NAV$ regular pattern containing $n \ge 0$ variable symbols.
 Let $p$ be an $\NAV$ regular pattern containing $n+1$ variable symbols such that $S_{2}(\{p\}) \subseteq L(Q)$ holds and $p$ contains a variable symbol $x$.
 There exist two $\NAV$ regular patterns $p_{1},p_{2}$ such that $p=p_{1}xp_{2}$ holds.
-By the induction hypothesis, for any constant string $w\in \Sigma^{\ast}$ with $|w|=2$, $\{p\{x:=w\}\}\preceq Q$ holds because $p\{x:=w\}$ contains $n$ variable symbols.
+By the induction hypothesis, for any constant string $w\in \Sigma^{\ast}$ with $|w|=2$, {\color{red}$\{p\{x:=w\}\}\sqsubseteq Q$} holds because $p\{x:=w\}$ contains $n$ variable symbols.
 Hence, there exists an $\NAV$ regular pattern $q_{w} \in Q$ such that $p \{ x:=w \} \preceq q_{w}$ holds.
 From Lemma \ref{Add-Lemma01}, 
 there exists a regular pattern $q \in Q$ such that $p \{ x:=xy \} \preceq q$ holds, where $y$ is a variable symbol that does not appear in $q$.

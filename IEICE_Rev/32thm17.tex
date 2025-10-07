@@ -24,23 +24,22 @@ we have the following theorem.
     (i) implies (ii).
     Let $\sharp Q = k$, $p \in P$, $\sharp\Sigma = 2k-1$ or $2k$.
     Then, we show that (i) implies (ii).
-    It suffices to show that $S_{2}(p) \subseteq L(Q)$ implies $P \sqsubseteq Q$
-    for any regular pattern $p \in \RPat$.
+    It suffices to show that $S_{2}(p) \subseteq L(Q)$ implies {\color{red}$\{p\} \sqsubseteq Q$}
+    for any regular pattern {\color{red}$p \in P$}.
     The proof is done by mathematical induction on $n$, where $n$ is the number of variable symbols appears in $p$.
 
     In case $n=0$, $S_{2}(p) = \{p\}$ holds.
-    By (i), we have $\{p\} = L(Q)$. Thus, $p \preceq q$ for some $q \in Q$.
+    By (i), we have {\color{red}$\{p\} \subset L(Q)$}. Thus, $p \preceq q$ for some $q \in Q$.
 
     For $n \geq 0$,
     we assume that it is valid for any regular pattern $p$
     with $n$ variable symbols.
     Let $p$ be a regular pattern such that $n+1$ variable symbols appear in $p$
     and $S_{2}(p) \subseteq L(Q)$.
-    We assume that $p \not\sqsubseteq Q$, that is, $p \not\preceq q_{i}$
+    {\color{red} Let $Q = \{q_{1},\ldots,q_{k}\}$.}
+    We assume that $p \not\sqsubseteq Q$, that is, {\color{red}$\{p\} \not\preceq q_{i}$}
     for any $i \in \{1,\ldots,k\}$.
-    Let $Q = \{q_{1},\ldots,q_{k}\}$ and
-    $p_{1}$, $p_{2}$ regular patterns, $x$ a variable symbol with
-    $p = p_{1}xp_{2}$.
+    {\color{red} Let $p_{1}$, $p_{2}$ be regular patterns, $x$ a variable symbol with $p = p_{1}xp_{2}$.}
     For $a, b \in \Sigma$,
     let $p_{a}=p\{x:=a\}$ and $p_{ab}=p\{x:=ab\}$.
     Both $p_{a}$ and $p_{ab}$ have $n$ variable symbols, respectively.
@@ -59,7 +58,7 @@ we have the following theorem.
     Moreover,
     If $\sharp\Sigma = 2k$, then
     $\sharp D_{i}=2$ for any $i \in \{1,\ldots,k\}$.
-    Since $k \geq 3$, $2k+1 \geq k+2$ holds.
+    Since $k \geq 3$, {\color{red} $2k-1 \geq k+2$} holds.
     By Lemma~\ref{Add-Lemma01},
     there exists $i \in \{1,\ldots,k\}$ such that $p\{x:=xy\} \preceq q_{i}$.
     Therefore, by Lemma~\ref{Sato1:Lemma15}, 
@@ -125,8 +124,8 @@ In case $k=2$, we have the following theorem.
 \begin{proof}
     It is clear that (ii) implies (iii), and (iii) implies (i).
     Thus, we show that (i) implies (ii).
-    It suffices to show that $S_{2}(p) \subseteq L(Q)$ implies $P \sqsubseteq Q$
-    for any regular pattern $p \in \RPat$.
+    It suffices to show that $S_{2}(p) \subseteq L(Q)$ implies {\color{red}$\{p\} \sqsubseteq Q$}
+    for any regular pattern {\color{red}$p \in P$}.
     Let $Q = \{q_{1}, q_{2}\}$.
     The proof is done by mathematical induction on $n$,
     where $n$ is the number of variable symbols appearing in $p$.
@@ -136,7 +135,7 @@ In case $k=2$, we have the following theorem.
     For $n \geq 0$, we assume that it is valid for any regular pattern $p$ with
     $n$ variable symbols.
     Let $p$ be a regular pattern such that $n+1$ variable symbols appear in $p$,
-    and $S_{2}(p) \subseteq L(Q)$ hold.
+    and $S_{2}(p) \subseteq L(Q)$ {\color{red}holds}.
     We assume that $p \not\preceq q_{i}$ ($i=1,2$).
     Let $p_{1}$, $p_{2}$ be regular patterns and $x$ a variable symbol
     with $p = p_{1}xp_{2}$.
@@ -164,9 +163,11 @@ In case $k=2$, we have the following theorem.
     Hence, (i) implies (ii).
     \end{proof}
 
-The next example gives a set of regular patterns $P \in \RPatplus$ and a set of regular patterns $Q \in \RPat^{2}$ that, 
-in case $\sharp\Sigma = 3$, 
-the three conditions (i),(ii) and (iii) in Theorem~\ref{Theorem21} are not equivalent
+%The next example gives a set of regular patterns $P \in \RPatplus$ and a set of regular patterns $Q \in \RPat^{2}$ that, 
+%in case $\sharp\Sigma = 3$, 
+%the three conditions (i),(ii) and (iii) in Theorem~\ref{Theorem21} are not equivalent.
+{\color{red} The following example provides a set of regular patterns $P \in \RPat^{+}$ and a set of regular patterns $Q \in \RPat^{2}$ demonstrating that, when $\sharp\Sigma = 3$, the three conditions (i), (ii), and (iii) stated in Theorem~\ref{Theorem21} are not equivalent.}
+
 
 \begin{ex}
     Let $\Sigma = \{a,b,c\}$, $p$, $q_{1}$, $q_{2}$ regular patterns and
