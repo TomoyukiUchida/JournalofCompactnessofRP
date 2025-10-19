@@ -1,10 +1,10 @@
 # Fdb version 4
-["dvipdf"] 1760861832.22969 "out/main.dvi" "out/main.pdf" "out/main" 1760861832.73521 0
-  "out/main.dvi" 1760861832.19558 4444 d70bee47dcc729183dd47d8188c27fbc "latex"
+["dvipdf"] 1760913873.28726 "out/main.dvi" "out/main.pdf" "out/main" 1760913873.87869 0
+  "out/main.dvi" 1760913873.25092 6416 79097ac48663e268f80e902c2a3b5b36 "latex"
   (generated)
   "out/main.pdf"
   (rewritten before read)
-["latex"] 1760861831.11478 "main.tex" "out/main.dvi" "main" 1760861832.73422 0
+["latex"] 1760913871.8912 "main.tex" "out/main.dvi" "main" 1760913873.87758 0
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -46,10 +46,12 @@
   "/usr/local/texlive/2025/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
   "figs/lem11-prop4-eachreg1.pdf" 1760857527.75709 128553 c2e6816fd80ff0ac7f66ca9049749814 ""
   "figs/lem11-prop4-eachreg2.pdf" 1760857636.04707 122910 d1c1ac953db445a69cd2ad281793e19f ""
+  "figs/lem11-prop4-eachreg3.pdf" 1760913354.3112 123572 272bddfe0bb5fc053c82107361a54eff ""
   "figs/lem11-prop4-totalreg1.pdf" 1760857599.99077 67573 1331cf5f19405e58ab59e2cd5ac1bdf8 ""
   "figs/lem11-prop4-totalreg2.pdf" 1760857684.32054 64333 5279dbd46192c2786ab8c6157647efe9 ""
-  "main.tex" 1760861830.92594 2687 6bd11ce99173734b4fa25ccab545a89c ""
-  "out/main.aux" 1760861832.1941 2452 5ade8185b6fffd011f08ccf23ded0da2 "latex"
+  "figs/lem11-prop4-totalreg3.pdf" 1760913401.76186 65184 055512b5cb2cef8c44f8a06fc9bffd4a ""
+  "main.tex" 1760913870.16023 3939 bcf3f598c08e6eb1e595d55bfe05245f ""
+  "out/main.aux" 1760913873.24927 3663 3e0f10ace3c78d2fdd4441d0a889acfe "latex"
   (generated)
   "out/main.aux"
   "out/main.dvi"

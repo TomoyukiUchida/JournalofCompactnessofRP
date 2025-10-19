@@ -97,4 +97,12 @@ INPUT ./figs/lem11-prop4-totalreg2.pdf
 INPUT ./figs/lem11-prop4-totalreg2.pdf
 INPUT ./figs/lem11-prop4-totalreg2.pdf
 INPUT extractbb -B cropbox -O figs/lem11-prop4-totalreg2.pdf
+INPUT ./figs/lem11-prop4-eachreg3.pdf
+INPUT ./figs/lem11-prop4-eachreg3.pdf
+INPUT ./figs/lem11-prop4-eachreg3.pdf
+INPUT extractbb -B cropbox -O figs/lem11-prop4-eachreg3.pdf
+INPUT ./figs/lem11-prop4-totalreg3.pdf
+INPUT ./figs/lem11-prop4-totalreg3.pdf
+INPUT ./figs/lem11-prop4-totalreg3.pdf
+INPUT extractbb -B cropbox -O figs/lem11-prop4-totalreg3.pdf
 INPUT out/main.aux
