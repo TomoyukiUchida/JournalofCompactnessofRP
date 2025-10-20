@@ -37,9 +37,9 @@ we have the following theorem.
     Let $p$ be a regular pattern such that $n+1$ variable symbols appear in $p$
     and $S_{2}(p) \subseteq L(Q)$.
     {\color{red} Let $Q = \{q_{1},\ldots,q_{k}\}$.}
-    We assume that $p \not\sqsubseteq Q$, that is, {\color{red}$\{p\} \not\preceq q_{i}$}
+    We assume that $p \not\sqsubseteq Q$, that is, {\color{red}$p \not\preceq q_{i}$}
     for any $i \in \{1,\ldots,k\}$.
-    {\color{red} Let $p_{1}$, $p_{2}$ be regular patterns, $x$ a variable symbol with $p = p_{1}xp_{2}$.}
+    {\color{red} Let $p_{1}$, $p_{2}$ be regular patterns and $x$ a variable symbol with $p = p_{1}xp_{2}$.}
     For $a, b \in \Sigma$,
     let $p_{a}=p\{x:=a\}$ and $p_{ab}=p\{x:=ab\}$.
     Both $p_{a}$ and $p_{ab}$ have $n$ variable symbols, respectively.
@@ -83,8 +83,8 @@ the following Corollary~\ref{Col18} holds.
 \end{lem}
 
 \begin{proof}
-    Let $\Sigma =\{a_{1},\ldots,a_{k-1},b_{1},\ldots,b_{k-1}\}$ and
-    $p, q_{i}$ regular patterns, $w_{i} \in \Sigma^{\ast}$\ $(i=1,\ldots,k-1)$
+    Let $\Sigma =\{a_{1},\ldots,a_{k-1},b_{1},\ldots,b_{k-1}\}${\color{red}. 
+    $p, q_{i}$ regular patterns, $w_{i}=w_{i+1}b_{i+1}a_{i+1}w_{i+1} \in \Sigma^{\ast}$\ $(i=1,\ldots,k-2)$ and $w_{k-1}=\varepsilon$}
     defined in a similar way to Example~\ref{counter-example4Theorem10}. %\ref{例題1}.
     Let $q_{k}=x_{1}a_{1}w_{1}xyw_{1}b_{1}x_{2}$.
     Since
