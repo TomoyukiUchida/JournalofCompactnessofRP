@@ -6,6 +6,7 @@
 \subsection{$D = \{ ya, bc, dy \}$}\label{subsec:d3a}
 
 \newcommand{\TheConditionA}{$b \not\in \{a,d\} \mbox{~and~} c \not\in \{a,d\}$}
+\newcommand{\TheConditionAComma}{$b \not\in \{a,d\}, c \not\in \{a,d\}$}
 \newcommand{\TheConditionAprime}{{\color{red}$b \neq a \mbox{~and~} c \neq d$}}
 \newcommand{\TheConditionB}{$b = a,~b \not= d, \mbox{~and~} c \not\in \{a,d\}$}
 \newcommand{\TheConditionBsub}{$c \not\in \{a,d\}$}
@@ -13,21 +14,24 @@
 
 \begin{lem}\label{lem:addpart}
   Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and $p,~q$ regular patterns {\color{red}over} $\Sigma\cup X$.
-  Let $D$ be the following set of regular patterns {\color{red}over} $\Sigma\cup X$
-  {\color{red} such that $D$ is maximally generalized {\color{red}with respect to} ($p,q$), where \TheConditionAprime~(that is, \TheConditionA),
-  and }
-  where $y$ is a variable symbol in $X$ that does not appear in {\color{red}either }$p$ {\color{red}or} $q$:
-  \begin{enumerate}
+  {\color{red} Let $D = \{ ya, bc, dy \} \subset \RPat_{\Sigma\cup X}$ 
+  %such that $D$ is maximally generalized {\color{red}with respect to} ($p,q$), where \TheConditionAprime~(that is, \TheConditionA),
+  where \TheConditionAComma~  and 
+  $y$ is a variable symbol in $X$ that does not appear in {\color{red}either }$p$ {\color{red}or} $q$.}
+  %\begin{enumerate}
   %\item[] $D = \{ ya, bc, dy \}$ (\TheConditionA).
-  \item[] $D = \{ ya, bc, dy \}$
-  \end{enumerate}
-  Then, {\color{red} if $p \{ x := r \} \preceq q$ for all $r \in D$,} then $p \{ x := xy \} \preceq q$.
+  %\item[] $D = \{ ya, bc, dy \}$
+  %\end{enumerate}
+  Then, {\color{red} if for all $r \in D$, $p \{ x := r \} \preceq q$ holds,} then $p \{ x := xy \} \preceq q$ {\color{red} holds}.
 \end{lem}
 
   \begin{proof}
   %If no variable symbol appears in $p$, the statement holds trivially.
   %Thus, for a variable symbol $x\in X$, let $p=p_{1}xp_{2}$, where each $p_{i} \in \RPat$ ($i=1,2$).
-  We assume that $p \{ x := xy \} \not\preceq q$ in order to derive a contradiction.
+ %We assume that $p \{ x := xy \} \not\preceq q$ in order to derive a contradiction.
+ {\color{red} If $D$ is not maximally generalized with respect to $(p,q)$, then Lemma \ref{lem:addpart} is trivially reducible to Lemma \ref{lem:twovariables}.
+ Then, we consider the case where $D$ is maximally generalized with respect to $(p,q)$.
+ We assume that $p \{ x := xy \} \not\preceq q$ in order to derive a contradiction.}
 %
 % Since $p \{ x := r \} \preceq q$ for all $r \in D$, there are three strings of length $2$ in $q$ corresponding to $ya, bc, dy$.
 %  Note that the three strings may appear with partial overlaps.
