@@ -13,8 +13,12 @@
 \newcommand{\TheConditionBsub}{$c \not\in \{a,d\}$}
 \newcommand{\TheConditionC}{$b \not\in \{a, d\},~c \not= a, \mbox{~and~} c = d$}
 \newcommand{\TheConditionCComma}{$b \not\in \{a, d\},~c \not= a, c = d$}
-{\color{red} In this subsection, if $D = \{ ya, bc, dy \} \subset \RPat_{\Sigma\cup X}$ is not maximally generalized with respect to $(p,q)$, then Lemmas \ref{lem:addpart}, \ref{lem:oneside_i} and \ref{lem:oneside_ii} are trivially reducible to Lemma \ref{lem:twovariables}.
- Then, in Lemmas \ref{lem:addpart}, \ref{lem:oneside_i} and \ref{lem:oneside_ii} we consider the case where $D$ is maximally generalized with respect to $(p,q)$.}
+%{\color{red} In this subsection, if $D = \{ ya, bc, dy \} \subset \RPat_{\Sigma\cup X}$ satisfies $a=c$ or $b=d$, then Lemmas \ref{lem:addpart}, \ref{lem:oneside_i} and \ref{lem:oneside_ii} are trivially reducible to Lemma \ref{lem:twovariables}.
+% Then, in Lemmas \ref{lem:addpart}, \ref{lem:oneside_i} and \ref{lem:oneside_ii}, we consider the case where $a\neq c$ and $b\neq d$.
+ % and $D$ is not maximally generalized with respect to $(p,q)$.
+% }
+{\color{red} In this subsection, for any two regular patterns $p,q$ over $\Sigma\cup X$ with $p\not\preceq q$, we consider $D=\{ya,bc,dy\}\subset \RPat_{\Sigma\cup X}$ such that $D$ is maximally generalized with respect to $(p,q)$.
+Obviously, we remark that $D$ satisfies $a\neq c$ and $b\neq d$.}
 
 \begin{lem}\label{lem:addpart}
   Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and $p,~q$ regular patterns {\color{red}over} $\Sigma\cup X$.
@@ -33,7 +37,10 @@
   %If no variable symbol appears in $p$, the statement holds trivially.
   %Thus, for a variable symbol $x\in X$, let $p=p_{1}xp_{2}$, where each $p_{i} \in \RPat$ ($i=1,2$).
  %We assume that $p \{ x := xy \} \not\preceq q$ in order to derive a contradiction.
-  We assume that $p \{ x := xy \} \not\preceq q$ in order to derive a contradiction.
+  We assume that 
+  $p \{ x := xy \} \not\preceq q$
+  %{\color{red} $D$ is maximally generalized with respect to $(p,q)$}
+  in order to derive a contradiction.
 %
 % Since $p \{ x := r \} \preceq q$ for all $r \in D$, there are three strings of length $2$ in $q$ corresponding to $ya, bc, dy$.
 %  Note that the three strings may appear with partial overlaps.
@@ -60,7 +67,9 @@
 %
 %  Since $p \{ x := xy \} \not \preceq q$ and the condition \TheConditionA\ hold, the regular pattern $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $q_{1}, q_{2}, w, w^{\prime}$ be either the empty string or a regular pattern on $\Sigma\cup X$.
 %
-Since $D$ is maximally generalized {\color{red}over} $(p,q)$, the regular pattern $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $q_{1}, q_{2}, w, w^{\prime}$ be either the empty string or a regular pattern {\color{red}over} $\Sigma\cup X$.
+%Since $D$ is maximally generalized {\color{red}over} $(p,q)$, 
+{\color{red} Since $p\{x:=r\} \preceq q$ holds for all $r\in D$,}
+the regular pattern $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $q_{1}, q_{2}, w, w^{\prime}$ be either the empty string or a regular pattern {\color{red}over} $\Sigma\cup X$.
 
 \smallskip
 
@@ -281,7 +290,9 @@ Then, if {\color{red} for all $r \in D$,} $p \{ x := r \} \preceq q$ {\color{red
 %Therefore, let $p=p_{1}xp_{2}$, where $p_{i} \in \RPat$ (for $i=1,2$) and $x \in X$.
 We assume that $p \{ x := xy \} \not \preceq q$ in order to derive a contradiction.
 The proof is almost the same as the proof of Lemma~\ref{lem:addpart}.
-Since $p \{ x := r \} \preceq q$ for all $r \in D$ and $D$ is maximally generalized {\color{red}with respect to} $(p,q)$, there are three strings of length $2$ corresponding to $ya, bc, dy$ in $q$.
+%Since $p \{ x := r \} \preceq q$ for all $r \in D$ and $D$ is maximally generalized {\color{red}with respect to} $(p,q)$, 
+{\color{red} Since $p \{ x := r \} \preceq q$ for all $r \in D$,}
+there are three strings of length $2$ corresponding to $ya, bc, dy$ in $q$.
 The symbols appearing in $D$ correspond to either a variable or a constant symbol in $q$.
 Let $y_{1}$ and $y_{2}$ be variable symbols appearing in $q$.
 The strings $ya$ and $dy$ must correspond to the strings $y_{1}a$ and $dy_{2}$ in $q$, respectively.

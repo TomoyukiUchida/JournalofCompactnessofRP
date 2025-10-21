@@ -28,7 +28,7 @@ If $D$ has a constant string $ab$ of length $2$ for $a,b\in\Sigma$, there are th
   \end{center}
 
 \noindent
-If there exists (b) $ay_{1}$ in $q$ that corresponds to $ab$, i.e., there exist $q_{1}$ and $q_{2}\in \RPat$ such that
+If there exists $ay_{1}$ in $q$ that corresponds to $ab$, i.e., there exist $q_{1}$ and $q_{2}\in \RPat$ such that
   \begin{enumerate}
   \item[(1)] $p_{1}abp_{2} \preceq q_{1}ay_{1}q_{2}$, 
   \item[(2)] $p_{1} \preceq q_{1}$, and
@@ -46,7 +46,7 @@ Therefore, in this paper, we make the following definition on $D$:
 \begin{dfn}
 Let $p,q \in \RPat$ {\color{red} with $p\not\preceq q$}.
 Let $D \subset \RPat$ such that for all $r\in D$, $|r| = 2$ and $p \{ x := r \} \preceq q$ hold.
-Then, if for any $ab\in D$ ($a,b\in\Sigma$), $p \{ x := ay \} \not\preceq q$ and $p \{ x := yb \} \not\preceq q$ hold for any $y \in X$ that does not appear in $q$, the set $D$ is said to be \textit{maximally generalized {\color{red}with respect to} ($p,q$)}.
+Then, if for any $ab\in D$ ($a,b\in\Sigma$), {\color{red} $ay,yb\not\in D$}, $p \{ x := ay \} \not\preceq q$ and $p \{ x := yb \} \not\preceq q$ hold for any $y \in X$ that does not appear in $q$, the set $D$ is said to be \textit{maximally generalized {\color{red}with respect to} ($p,q$)}.
 \end{dfn}
 
 %\noindent{\color{red} In Subsecs.~\ref{subsec:d3a}--\ref{subsec:d3c}, we consider a subset $D \subset \RPat$ such that for $p,q \in \RPat$, 
@@ -71,7 +71,7 @@ Then, if $p \{ x := r \} \preceq q$ holds for all $r \in D$, then $p \{ x := xy 
 %It is obvious if no variable symbol appears in $p$. 
 %Therefore, let $p=p_{1}xp_{2}$, where $p_{i} \in \RPat$ ($i=1,2$) and $x$ is a variable symbol.
 We assume that $p \{ x := xy \} \not \preceq q$ in order to derive a contradiction.
-In the case of \textrm{(ii)}, by reversing the strings $p$ and $q$, we can prove that the assumption $p \{ x := xy \} \preceq q$ leads to a contradiction, as in the case of \textrm{(i)}.
+In the case of \textrm{(ii)}, by reversing the strings $p$ and $q$, we can prove that the assumption {\color{red}$p \{ x := xy \} \not\preceq q$} leads to a contradiction, as in the case of \textrm{(i)}.
 Therefore, in the following, we consider only the case of \textrm{(i)}: $D=\{ ay, by \}$ ($a \not= b$).
 
 Since $p \{ x := xy \} \not \preceq q$, $p_{1}ayp_{2}\preceq q$ and $p_{1}byp_{2}\preceq q$, 
