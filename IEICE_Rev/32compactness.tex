@@ -9,14 +9,18 @@
 \newcommand{\TheConditionAComma}{$b \not\in \{a,d\}, c \not\in \{a,d\}$}
 \newcommand{\TheConditionAprime}{{\color{red}$b \neq a \mbox{~and~} c \neq d$}}
 \newcommand{\TheConditionB}{$b = a,~b \not= d, \mbox{~and~} c \not\in \{a,d\}$}
+\newcommand{\TheConditionBComma}{$b = a,~b \not= d, c \not\in \{a,d\}$}
 \newcommand{\TheConditionBsub}{$c \not\in \{a,d\}$}
 \newcommand{\TheConditionC}{$b \not\in \{a, d\},~c \not= a, \mbox{~and~} c = d$}
+\newcommand{\TheConditionCComma}{$b \not\in \{a, d\},~c \not= a, c = d$}
+{\color{red} In this subsection, if $D = \{ ya, bc, dy \} \subset \RPat_{\Sigma\cup X}$ is not maximally generalized with respect to $(p,q)$, then Lemmas \ref{lem:addpart}, \ref{lem:oneside_i} and \ref{lem:oneside_ii} are trivially reducible to Lemma \ref{lem:twovariables}.
+ Then, in Lemmas \ref{lem:addpart}, \ref{lem:oneside_i} and \ref{lem:oneside_ii} we consider the case where $D$ is maximally generalized with respect to $(p,q)$.}
 
 \begin{lem}\label{lem:addpart}
   Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and $p,~q$ regular patterns {\color{red}over} $\Sigma\cup X$.
   {\color{red} Let $D = \{ ya, bc, dy \} \subset \RPat_{\Sigma\cup X}$ 
   %such that $D$ is maximally generalized {\color{red}with respect to} ($p,q$), where \TheConditionAprime~(that is, \TheConditionA),
-  where \TheConditionAComma~  and 
+  where \underline{\TheConditionAComma}~  and 
   $y$ is a variable symbol in $X$ that does not appear in {\color{red}either }$p$ {\color{red}or} $q$.}
   %\begin{enumerate}
   %\item[] $D = \{ ya, bc, dy \}$ (\TheConditionA).
@@ -29,9 +33,7 @@
   %If no variable symbol appears in $p$, the statement holds trivially.
   %Thus, for a variable symbol $x\in X$, let $p=p_{1}xp_{2}$, where each $p_{i} \in \RPat$ ($i=1,2$).
  %We assume that $p \{ x := xy \} \not\preceq q$ in order to derive a contradiction.
- {\color{red} If $D$ is not maximally generalized with respect to $(p,q)$, then Lemma \ref{lem:addpart} is trivially reducible to Lemma \ref{lem:twovariables}.
- Then, we consider the case where $D$ is maximally generalized with respect to $(p,q)$.
- We assume that $p \{ x := xy \} \not\preceq q$ in order to derive a contradiction.}
+  We assume that $p \{ x := xy \} \not\preceq q$ in order to derive a contradiction.
 %
 % Since $p \{ x := r \} \preceq q$ for all $r \in D$, there are three strings of length $2$ in $q$ corresponding to $ya, bc, dy$.
 %  Note that the three strings may appear with partial overlaps.
@@ -259,12 +261,13 @@ We suppose that $(A, B) = (dy_{1}a, bc)$, i.e., $q = q_{1}dy_{1}awbcq_{2} $ hold
 
 \begin{lem}\label{lem:oneside_i}
 Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and let $p,~q$ be regular patterns {\color{red}over} $\Sigma\cup X$.
-Let $D$ be one of the following sets of regular patterns {\color{red}over} $\Sigma\cup X$
-{\color{red} such that and $D$ is maximally generalized {\color{red}with respect to} ($p,q$)}, where $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.
-\begin{enumerate}
-\item[] $D=\{ ya, bc, dy \}$ (\TheConditionB),
-\end{enumerate}
-Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.
+{\color{red} Let $D=\{ya,bc,dy\}\subset \RPat_{\Sigma\cup X}$ where \underline{\TheConditionBComma}, and $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.}
+%Let $D$ be one of the following sets of regular patterns {\color{red}over} $\Sigma\cup X$
+%{\color{red} such that and $D$ is maximally generalized {\color{red}with respect to} ($p,q$)}, where $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.
+%\begin{enumerate}
+%\item[] $D=\{ ya, bc, dy \}$ (\TheConditionB),
+%\end{enumerate}
+Then, if {\color{red} for all $r \in D$,} $p \{ x := r \} \preceq q$ {\color{red} holds}, then $p \{ x := xy \} \preceq q$ {\color{red} holds}.
 \end{lem}
 
 %We note that if $b = d$, then, because $p\{x:=dy\}\preceq q$, $p\{x:=bc\}\preceq q$ is always satisfied.
@@ -397,11 +400,13 @@ The conditions in Lemmas~\ref{lem:oneside_i} and \ref{lem:oneside_ii} are illust
 
 \begin{lem}\label{lem:oneside_ii}
   Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and let $p,~q$ be regular patterns {\color{red}over} $\Sigma\cup X$.
-  Let $D$ be one of the following sets of regular patterns {\color{red}over} $\Sigma\cup X$, where $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.
-  \begin{enumerate}
-  \item[] $D=\{ ya, bc, dy \}$ (\TheConditionC).
-  \end{enumerate}
-  Then, if $p \{ x := r \} \preceq q$ for all $r \in D$ and $D$ is maximally generalized {\color{red}over} ($p,q$), then $p \{ x := xy \} \preceq q$.
+  {\color{red} Let $D=\{ya,bc,dy\}\subset \RPat_{\Sigma\cup X}$ where \underline{\TheConditionCComma},
+  and $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.}
+  %Let $D$ be one of the following sets of regular patterns {\color{red}over} $\Sigma\cup X$, where $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.
+  %\begin{enumerate}
+  %\item[] $D=\{ ya, bc, dy \}$ (\TheConditionC).
+  %\end{enumerate}
+  Then, {\color{red}if for all $r \in D$, $p \{ x := r \} \preceq q$ holds, then $p \{ x := xy \} \preceq q$ holds}.
 \end{lem}
 
 \begin{proof}
