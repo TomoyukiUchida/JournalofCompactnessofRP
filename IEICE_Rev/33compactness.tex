@@ -8,7 +8,7 @@
   \begin{center}
     %\includegraphics[scale=0.5]{figs/lem8eachreg.eps}
     \includegraphics[scale=0.54]{figs/lem8eachreg.pdf}
-    \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}~{\color{red} and }~Q=\{q_1,q_2,q_3,q_4,q_5\}$. 
+    \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ {\color{red} and } $Q=\{q_1,q_2,q_3,q_4,q_5\}$. 
     We set $A(q_1)=\{a\}$ and $B(q_1)=\{a\}$, and then $\sigma_A(q_1)=a$ and $\sigma_B(q_1)=a$, and so on. For each regular pattern $q_i$ ($i=1,\ldots,5$), we represent a string $w \in \Sigma\cdot\Sigma$ satisfying that $p\{x:=w\}\preceq q_i$ by the edge between the left (first) and right (second) symbols of $w$. For example, the leftmost figure shows that $p\{x:=ay\}\preceq q_1$ and $p\{x:=ya\}\preceq q_1$ for a variable symbol $y$. We note that these figures may contain more edges than those illustrated. From these figures, we get $\ell_A=1, \ell_B=0$, and $Q^{(\bot,\bot)}=\{q_5\}, Q^{(\bot,\cdot)}=\{q_4\}, Q^{(\cdot,\bot)}=\{q_3\}, Q^{(\cdot,\cdot)}=\{q_1,q_2\}$.}\label{fig:lem8eachreg}
   \end{center}
 \end{figure*}
@@ -17,7 +17,7 @@
   \begin{center}
     %\includegraphics[scale=0.5]{figs/lem8totalreg.eps}
     \includegraphics[scale=0.525]{figs/lem8totalreg.pdf}
-    \caption{In the left figure, we aggregate all of the edges appearing in Fig.~\ref{fig:lem8eachreg}. For all $w=a'b'\in A'\cdot B'$, there must be a regular pattern $q_i$ $(1\leq i\leq 5$) that satisfies that $p \{ x:=w \} \preceq q_i$.}\label{fig:lem8totalreg}
+    \caption{In the left figure, we aggregate all edges appearing in Fig.~\ref{fig:lem8eachreg}. For all $w=a'b'\in A'\cdot B'$, there must be a regular pattern $q_i$ $(1\leq i\leq 5$) that satisfies that $p \{ x:=w \} \preceq q_i$.}\label{fig:lem8totalreg}
   \end{center}
 \end{figure}
 
@@ -35,7 +35,7 @@
   \begin{center}
     %\includegraphics[scale=0.5]{figs/lem8totalreg-suppl.eps}
     \includegraphics[scale=0.8]{figs/lem8totalreg-suppl.png}
-    \caption{In the left figure, we aggregate all of the edges appearing in Fig.~\ref{fig:lem8eachreg-suppl}. From Fig.~\ref{fig:lem8eachreg-suppl} and this right figure, we get $Q_{1}^{(\cdot,\cdot)}=\{q_6,q_7,q_8,q_9\}$ and $Q_{2}^{(\cdot,\cdot)}=\{q_{10}\}$. From Proposition~\ref{prop:bothsides}, even if the string $dg \in A'\cdot B'$ satisfies {\color{red}$p \{ x:=dg \} \preceq q_{10}$}, it does not imply that $p \{ x:=xy \} \preceq q_{10}$.}\label{fig:lem8totalreg-suppl}
+    \caption{In the left figure, we aggregate all edges appearing in Fig.~\ref{fig:lem8eachreg-suppl}. From Fig.~\ref{fig:lem8eachreg-suppl} and this right figure, we get $Q_{1}^{(\cdot,\cdot)}=\{q_6,q_7,q_8,q_9\}$ and $Q_{2}^{(\cdot,\cdot)}=\{q_{10}\}$. From Proposition~\ref{prop:bothsides}, even if the string $dg \in A'\cdot B'$ satisfies {\color{red}$p \{ x:=dg \} \preceq q_{10}$}, it does not imply that $p \{ x:=xy \} \preceq q_{10}$.}\label{fig:lem8totalreg-suppl}
   \end{center}
 \end{figure}
 
@@ -53,8 +53,8 @@ For any $q \in Q$, we define the sets $A(q), B(q) \subseteq \Sigma$ as follows:
   A(q) & = \{ a \in \Sigma \mid p \{ x:=ay \} \preceq q,\ y\in X\},\\ 
   B(q) & = \{ b \in \Sigma \mid p \{ x:=yb \} \preceq q,\ y\in X\}.
   \end{align*}
-If there exists $q\in Q$ such that $|A(q)|\geq 2$ or $|B(q)|\geq 2$, from Lemma~\ref{lem:twovariables}, $p\{x := xy\} \preceq q$ holds.
-Below, we suppose that $|A(q)|\leq 1$ and $|B(q)|\leq 1$.
+If there exists $q\in Q$ such that $\sharp A(q)\geq 2$ or $\sharp B(q)\geq 2$, from Lemma~\ref{lem:twovariables}, $p\{x := xy\} \preceq q$ holds.
+Below, we suppose that $\sharp A(q)\leq 1$ and $\sharp B(q)\leq 1$.
 Let $\bot$ be a constant symbol that is not a member in $\Sigma$.
 We define the functions $\sigma_{A}: Q \rightarrow \Sigma \cup \{\bot\}$ and $\sigma_{B}: Q \rightarrow \Sigma \cup \{\bot\}$ as follows:
 \begin{align*}
@@ -129,7 +129,11 @@ We have the following two claims:
 \noindent
 \textit{Proof of Claim} 2.
 Let $W = \{a_{1}b_{1},\ldots,a_{5}b_{5}\} \subset A'\cdot B'$.
-Because, for any $i$ ($1\leq i\leq 5$), $|W \cap \{a_{i}c \mid c \in \Sigma\}| \leq 2$ and  $|W \cap \{cb_{i} \mid c \in \Sigma\}| \leq 2$, it can be proven that there are $3$ strings $a_{i_{1}}b_{i_{1}},a_{i_{2}}b_{i_{2}},a_{i_{3}}b_{i_{3}}\in W$ such that $a_{i_{j}} \not= a_{i_{j^{\prime}}}$ and $b_{i_{j}} \not= b_{i_{j^{\prime}}}$ for any $i_{j},i_{j^{\prime}}$ ($i_{j}\not= i_{j^{\prime}}, 1\leq j,j^{\prime}\leq 3$).
+{\color{red}For any $i$ ($1\leq i\leq 5$), if $\sharp (W\cap \{a_{i}c \mid c \in \Sigma\})\geq 3$ or $\sharp (W \cap \{cb_{i} \mid c \in \Sigma\}) \geq 3$ holds, then $a_{i}\in A(q)$ or $b_{i}\in B(q)$ holds.
+From the definitions of $A'$ and $B'$, it can see that,  
+for any $i$ ($1\leq i\leq 5$), $\sharp (W \cap \{a_{i}c \mid c \in \Sigma\}) \leq 2$ and $\sharp (W \cap \{cb_{i} \mid c \in \Sigma\}) \leq 2$.}
+%Because, for any $i$ ($1\leq i\leq 5$), $\sharp (W \cap \{a_{i}c \mid c \in \Sigma\}) \leq 2$ and $\sharp (W \cap \{cb_{i} \mid c \in \Sigma\}) \leq 2$, 
+{\color{red} Then,} it can be proven that there are $3$ strings $a_{i_{1}}b_{i_{1}},a_{i_{2}}b_{i_{2}},a_{i_{3}}b_{i_{3}}\in W$ such that $a_{i_{j}} \not= a_{i_{j^{\prime}}}$ and $b_{i_{j}} \not= b_{i_{j^{\prime}}}$ for any $i_{j},i_{j^{\prime}}$ ($i_{j}\not= i_{j^{\prime}}, 1\leq j,j^{\prime}\leq 3$).
 Therefore, from Lemma~\ref{lem:3consts_iii}, this claim holds. (\textit{End of Proof of Claim} 2)
 
 \smallskip
@@ -140,7 +144,7 @@ Therefore, from Lemma~\ref{lem:3consts_iii}, this claim holds. (\textit{End of P
 \noindent
 \textit{Proof of Claim} 3.
 Let $W = \{a_{1}b_{1},a_{2}b_{2},a_{3}b_{3}\} \subset A'\cdot B'$.
-Because, for any $i$ ($1\leq i\leq 3$), $|W \cap \{a_{i}c \mid c \in \Sigma\}| \leq 2$ and  $|W \cap \{cb_{i} \mid c \in \Sigma\}| \leq 2$, it can be proven that there are $2$ strings $a_{i_{1}}b_{i_{1}},a_{i_{2}}b_{i_{2}}\in W$ such that $a_{i_{1}} \not= a_{i_{2}}$ and $b_{i_{1}} \not= b_{i_{2}}$.
+Because, for any $i$ ($1\leq i\leq 3$), $\sharp(W \cap \{a_{i}c \mid c \in \Sigma\}) \leq 2$ and  $\sharp (W \cap \{cb_{i} \mid c \in \Sigma\}) \leq 2$, it can be proven that there are $2$ strings $a_{i_{1}}b_{i_{1}},a_{i_{2}}b_{i_{2}}\in W$ such that $a_{i_{1}} \not= a_{i_{2}}$ and $b_{i_{1}} \not= b_{i_{2}}$.
 Therefore, from Lemmas~\ref{lem:3consts_i} and \ref{lem:3consts_ii}, this claim holds. (\textit{End of Proof of Claim} 3)
 
 \smallskip
@@ -208,8 +212,8 @@ If there exist $q \in Q_{2}^{(\cdot,\cdot)}$ and a string $a'b' \in A'\cdot B'$ 
 When $a'=b'$, since $\sigma_{A}(q) \not= \sigma_{B}(q)$, from Lemma~\ref{lem:addpart}, this claim holds. Similarly, when $a' \not = b'$, from Lemmas~\ref{lem:addpart}, \ref{lem:oneside_i}, and \ref{lem:oneside_ii}, this holds.  (\textit{End of Proof of Claim} 5)
 
 \noindent
-%{\color{red} We give an example in Fig.~\ref{fig:lem8eachreg-suppl} and Fig.~\ref{fig:lem8totalreg-suppl}.}
-We give an example in Fig.~\ref{fig:lem8eachreg-suppl} and Fig.~\ref{fig:lem8totalreg-suppl}.
+{\color{red} We give an example in Fig.~\ref{fig:lem8eachreg-suppl} and Fig.~\ref{fig:lem8totalreg-suppl}.}
+%We give an example in Fig.~\ref{fig:lem8eachreg-suppl} and Fig.~\ref{fig:lem8totalreg-suppl}.
 
 
 \smallskip
@@ -238,15 +242,17 @@ We give an example of the above inequality in Fig.~\ref{fig:lem11-prop4-eachreg2
 %\begin{ex}
 \begin{figure*}[t]
   \begin{center}
-    \includegraphics[scale=0.54]{figs/lem11-prop4-eachreg3.pdf}
-    \caption{Let $\Sigma=\{a,b,c,d,e\} and Q=\{q_{11},q_{12},q_{13},q_{14},q_{15},q_{16}\}$. From these figures, we get $\ell_A=4$, $\ell_B=1$, $Q^{(\bot,\bot)}=Q^{(\bot,\cdot)}=\emptyset, Q^{(\cdot,\bot)}=\{q_{13}\}$, and $Q^{(\cdot,\cdot)}=\{q_{11},q_{12},q_{14},q_{15},q_{16}\}$. From Proposition~\ref{prop:bothsides}, we note again that for example, even if $p \{ x:=db \} \preceq q_{15}$ holds, it does not imply that $p \{ x:=xy \} \preceq q_{15}$.}\label{fig:lem11-prop4-eachreg2}
+    %\includegraphics[scale=0.54]{figs/lem11-prop4-eachreg3.pdf}
+    \includegraphics[scale=0.8]{figs/lem11-prop4-eachreg3.png}
+    \caption{Let $\Sigma=\{a,b,c,d,e\}$ and $Q=\{q_{11},q_{12},q_{13},q_{14},q_{15},q_{16}\}$. From these figures, we get $\ell_A=4$, $\ell_B=1$, $Q^{(\bot,\bot)}=Q^{(\bot,\cdot)}=\emptyset, Q^{(\cdot,\bot)}=\{q_{13}\}$, and $Q^{(\cdot,\cdot)}=\{q_{11},q_{12},q_{14},q_{15},q_{16}\}$. From Proposition~\ref{prop:bothsides}, we note again that for example, even if $p \{ x:=db \} \preceq q_{15}$ holds, it does not imply that $p \{ x:=xy \} \preceq q_{15}$.}\label{fig:lem11-prop4-eachreg2}
   \end{center}
 \end{figure*}
 
 \begin{figure}[t]
   \begin{center}
-    \includegraphics[scale=0.525]{figs/lem11-prop4-totalreg3.pdf}
-    \caption{In the left and right figures, we aggregate all of the edges corresponding to $(A\cdot B)\cup (A'\cdot B)\cup (A\cdot B')$ and $A'\cdot B'$ in Fig.~\ref{fig:lem11-prop4-eachreg2}, respectively. From these figures, we get $Q_{1}^{(\cdot,\cdot)}=\{q_{11},q_{12},q_{14}\}$ and $Q_{2}^{(\cdot,\cdot)}=\{q_{15},q_{16}\}$. Then, ${\cal L}_{1} = 2$ and ${\cal L}_{2} = 2 \leq \min\{\sharp A' + \ell_B, \sharp B' + \ell_A\} = 4$ holds.}\label{fig:lem11-prop4-totalreg2}
+    %\includegraphics[scale=0.525]{figs/lem11-prop4-totalreg3.pdf}
+    \includegraphics[scale=0.8]{figs/lem11-prop4-totalreg3.png}
+    \caption{In the left and right figures, we aggregate all edges corresponding to $(A\cdot B)\cup (A'\cdot B)\cup (A\cdot B')$ and $A'\cdot B'$ in Fig.~\ref{fig:lem11-prop4-eachreg2}, respectively. From these figures, we get $Q_{1}^{(\cdot,\cdot)}=\{q_{11},q_{12},q_{14}\}$ and $Q_{2}^{(\cdot,\cdot)}=\{q_{15},q_{16}\}$. Then, ${\cal L}_{1} = 2$ and ${\cal L}_{2} = 2 \leq \min\{\sharp A' + \ell_B, \sharp B' + \ell_A\} = 4$ holds.}\label{fig:lem11-prop4-totalreg2}
   \end{center}
 \end{figure}
 
