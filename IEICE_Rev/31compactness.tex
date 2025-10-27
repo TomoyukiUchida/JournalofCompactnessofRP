@@ -3,7 +3,7 @@
 {\color{red} In this subsection, for 
 $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}\subset \RPat_{\Sigma\cup X}$ or $D = \{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\} \subset \RPat_{\Sigma\cup X}$,
 we consider a regular pattern $q$ in $\RPat_{\Sigma\cup X}$ 
-such that $q$ minimally supports $D$ for a regular pattern $p$ with $p\not\preceq q$ under some conditions with the symbols $a_i,b_i$ for $i~(1\leq i\leq 3)$.
+such that $q$ minimally supports $D$ for a regular pattern $p$ %with $p\not\preceq q$ under some conditions with the symbols $a_i,b_i$ for $i~(1\leq i\leq 3)$.
 Obviously, we remark that $D$ satisfies that $a_{i}\neq a_{3}$ and $b_{i}\neq b_{3}$ for $i=1,2$.
 }
 %\begin{lem}\label{lem:3consts_ii}
@@ -224,7 +224,7 @@ This contradicts the assumption.
 %\end{lem}
 
 \begin{lem}\label{lem:3consts_ii}
-  Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and $p,~q$ regular patterns {\color{red}over} $\Sigma\cup X$.
+  Let $\Sigma$ be an alphabet $\sharp\Sigma \ge 3$ and $p,~q$ regular patterns {\color{red}over} $\Sigma\cup X$.
   {\color{red} Let $D= \{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\}\subset \RPat_{\Sigma\cup X}$
   where \underline{$a_{1}\neq a_{2}$, $b_{i}\neq b_{j}$ for $1\leq i,j\leq 3$ with $i\neq j$}\\ and $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.
   Then, 
@@ -258,8 +258,13 @@ The proof follows by reversing $p$ and $q$ and subsequently applying Lemma~\ref{
 
 \subsection{$D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$}\label{subsec:d3c}
 
-{\color{red}In this subsection, for any regular patterns $p,q$ over $\Sigma\cup X$ with $p\not\preceq q$, 
-we consider $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\} \subset \RPat_{\Sigma\cup X}$ such that $D$ is maximally generalized with respect to $(p,q)$.
+{\color{red}
+In this subsection, for $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\} \subset \RPat_{\Sigma\cup X}$, we consider a regular pattern $q$ in $\RPat_{\Sigma\cup X}$ 
+such that $q$ minimally supports $D$ for a regular pattern $p$ in $\RPat_{\Sigma\cup X}$
+under some conditions with the symbols $a_i,~b_i \in \Sigma$ for $i~(1\leq i \leq k)$.
+%Obviously, we remark that $D$ satisfies that $a_i\neq a_j$ and $b_i\neq b_j$ for $i,j~(i\neq j, 1\leq i,j\leq 3)$
+%In this subsection, for any regular patterns $p,q$ over $\Sigma\cup X$ with $p\not\preceq q$, 
+%we consider $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\} \subset \RPat_{\Sigma\cup X}$ such that $D$ is maximally generalized with respect to $(p,q)$.
 }
 
 In Lemma 14 (ii) of \cite{Sato1}, 
@@ -329,8 +334,11 @@ The conditions in Lemmas~\ref{lem:3consts_i}, \ref{lem:3consts_ii}, and \ref{lem
     %\includegraphics[scale=0.525]{figs/lem7bigraph.pdf}
     \includegraphics[scale=0.8]{figs/lem7bigraph.png}
     \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and $p,q \in \RPat$. We assume that the symbols in $\Sigma$ are mutually distinct.
-    The figures (9), (10) and (11) express cases $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y \}$, $D = \{a_{1}b_{1}, a_{2}b_{2}, yb_{3}\}$, and $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3} \}$ in Lemmas~\ref{lem:3consts_i}, \ref{lem:3consts_ii}, and \ref{lem:3consts_iii}, respectively, where $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\le i,j\le 3)$.
-    In these cases, if $p \{ x := r \} \preceq q$ for all $r \in D$ and $D$ is maximally generalized {\color{red}with respect to} ($p,q$), then $p \{ x := xy \} \preceq q$ holds.}\label{fig:lem7bigraph}
+    %The figures (9), (10) and (11) express cases $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y \}$, $D = \{a_{1}b_{1}, a_{2}b_{2}, yb_{3}\}$, and $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3} \}$ in Lemmas~\ref{lem:3consts_i}, \ref{lem:3consts_ii}, and \ref{lem:3consts_iii}, respectively, where $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\le i,j\le 3)$.
+    {\color{red} The figures (9), (10) and (11) express cases of $D$s in Lemmas~\ref{lem:3consts_i}, \ref{lem:3consts_ii}, and \ref{lem:3consts_iii}, respectively.}
+    %In these cases, if $p \{ x := r \} \preceq q$ for all $r \in D$ and $D$ is maximally generalized {\color{red}with respect to} ($p,q$), 
+    {\color{red} In these cases, if $q$ minimally supports $D$ for $p$, }
+    then $p \{ x := xy \} \preceq q$ holds.}\label{fig:lem7bigraph}
   \end{center}
 \end{figure*}
 
@@ -349,7 +357,8 @@ The conditions in Lemmas~\ref{lem:3consts_i}, \ref{lem:3consts_ii}, and \ref{lem
 
 \begin{lem}\label{lem:3consts_iii}
   Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and $p,~q$ regular pattern {\color{red}over} $\Sigma\cup X$.
-  {\color{red}Let $D=\{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}\subset \RPat_{\Sigma\cup X}$ where $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ } (i\ne j, 1\le i,j\le 3)$}
+  {\color{red}Let $D=\{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}\subset \RPat_{\Sigma\cup X}$ where $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ with } i\ne j ~(1\le i,j\le 3)$.
+  If $q$ minimally supports $D$ for a regular pattern $p$, then $p \{ x := xy \} \preceq q$.}
   %Let $D$ be the following set of regular patterns {\color{red}over} $\Sigma\cup X$, where $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$:
   %\begin{align*}
   %D & = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\},\\
@@ -370,7 +379,9 @@ The conditions in Lemmas~\ref{lem:3consts_i}, \ref{lem:3consts_ii}, and \ref{lem
 %\noindent
 %This corresponds to case (i).
 We assume that $p \{ x := xy \} \not\preceq q$ holds.
-Since $D$ is maximally generalized {\color{red}with respect to} $(p,q)$, it is sufficient to consider the following four cases (\ref{lem:3consts_iii}-1)-(\ref{lem:3consts_iii}-4) of $q$ for some regular patterns $q_{1},q_{2}$ and some constant strings $w,w^{\prime}$ ($|w|\geq 0$ and $|w^{\prime}|\geq 0$):
+%Since $D$ is maximally generalized {\color{red}with respect to} $(p,q)$, 
+Since $q$ minimally supports $D$ for $p$,
+it is sufficient to consider the following four cases (\ref{lem:3consts_iii}-1)-(\ref{lem:3consts_iii}-4) of $q$ for some regular patterns $q_{1},q_{2}$ and some constant strings $w,w^{\prime}$ ($|w|\geq 0$ and $|w^{\prime}|\geq 0$):
 
 \smallskip
 
