@@ -1,8 +1,9 @@
 \subsection{$D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}$ and $D = \{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\}$}\label{subsec:d3b}
 
-{\color{red} In this subsection, for any regular patterns $p,q$ over $\Sigma\cup X$ with $p\not\preceq q$, we consider
-$D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}\subset \RPat_{\Sigma\cup X}$ or $D = \{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\} \subset \RPat_{\Sigma\cup X}$ 
-such that $D$ is maximally generalized with respect to $(p,q)$.
+{\color{red} In this subsection, for 
+$D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}\subset \RPat_{\Sigma\cup X}$ or $D = \{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\} \subset \RPat_{\Sigma\cup X}$,
+we consider a regular pattern $q$ in $\RPat_{\Sigma\cup X}$ 
+such that $q$ minimally supports $D$ for a regular pattern $p$ with $p\not\preceq q$ under some conditions with the symbols $a_i,b_i$ for $i~(1\leq i\leq 3)$.
 Obviously, we remark that $D$ satisfies that $a_{i}\neq a_{3}$ and $b_{i}\neq b_{3}$ for $i=1,2$.
 }
 %\begin{lem}\label{lem:3consts_ii}
@@ -29,7 +30,8 @@ Obviously, we remark that $D$ satisfies that $a_{i}\neq a_{3}$ and $b_{i}\neq b_
   %D & = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\},\\
   %& \mbox{ where } a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ } (i\ne j, 1\le i,j\le 3).
   %\end{align*}
-  Then, if $p \{ x := r \} \preceq q$ holds for all $r \in D$,
+  Then, %if $p \{ x := r \} \preceq q$ holds for all $r \in D$,
+  if $q$ minimally supports $D$ for $p$,
 %   and $D$ is maximally generalized {\color{red}with respect to} ($p,q$), 
 then $p \{ x := xy \} \preceq q$ holds.}
 \end{lem}
@@ -74,7 +76,7 @@ We assume that $p \{ x := xy \} \not\preceq q$ holds.
 %Next, in the case of $C=a_{3}y$, we consider the following five cases (\ref{lem:3consts_i}-1)--(\ref{lem:3consts_i}-5):
 %
 %Since $D$ is maximally generalized {\color{red}with respect to} $(p,q)$, 
-{\color{red} Since $p\{x:=r\}\preceq q$ for all $r\in D$, }
+{\color{red} Since $q$ minimally supports $D$ for $p$, i.e., $p\{x:=r\}\preceq q$ for all $r\in D$, }
 from the same argument as in the proof of Lemma~\ref{lem:oneside_i}, it is sufficient to consider the following five cases (\ref{lem:3consts_i}-1)--(\ref{lem:3consts_i}-5) of $q$: For $y_{1} \in X$,
 
 \begin{tabular}{ll}
@@ -225,7 +227,11 @@ This contradicts the assumption.
   Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and $p,~q$ regular patterns {\color{red}over} $\Sigma\cup X$.
   {\color{red} Let $D= \{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\}\subset \RPat_{\Sigma\cup X}$
   where \underline{$a_{1}\neq a_{2}$, $b_{i}\neq b_{j}$ for $1\leq i,j\leq 3$ with $i\neq j$}\\ and $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.
-  Then, if $p \{ x := r \} \preceq q$ holds for all $r \in D$,
+  Then, 
+  {\color{red} 
+  %if $p \{ x := r \} \preceq q$ holds for all $r \in D$,
+if $q$ minimally supports $D$ for $p$,
+}
 then $p \{ x := xy \} \preceq q$ holds.}
   %Let $D$ be the following set of regular patterns {\color{red}over} $\Sigma\cup X$, where $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$:
   %\begin{align*}

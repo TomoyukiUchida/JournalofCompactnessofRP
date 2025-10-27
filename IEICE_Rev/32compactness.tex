@@ -18,9 +18,13 @@
  % and $D$ is not maximally generalized with respect to $(p,q)$.
 % }
 
-{\color{red} In this subsection, for any two regular patterns $p,q$ over $\Sigma\cup X$ with $p\not\preceq q$, we consider $D=\{ya,bc,dy\}\subset \RPat_{\Sigma\cup X}$ such that $q$ minimally supports $D$ for $p$.
-Obviously, we remark that $D$ satisfies $a\neq c$ and $b\neq d$.
-Hence, the conditions associated with the symbols a, b, c, and d in D are considered in Lemmas 5 through 7.
+{\color{red} In this subsection, 
+for a subset $D=\{ya,bc,dy\} \subset \RPat_{\Sigma\cup X}$,
+we consider a regular pattern $q$ which minimally supports $D$ for a regular pattern $p$ under some conditions with the symbols $a,~b,~c$ and $d$ in $D$.
+%for any two regular patterns $p,q$ over $\Sigma\cup X$ with $p\not\preceq q$, we consider $D=\{ya,bc,dy\}\subset \RPat_{\Sigma\cup X}$ such that $q$ minimally supports $D$ for $p$.
+Obviously, we remark that $a\neq c$ and $b\neq d$ hold,
+since $q$ minimally supports $D$ for $p$.
+%Hence, the conditions associated with the symbols a, b, c, and d in D are considered in Lemmas 5 through 7.
 }
 
 
@@ -34,7 +38,9 @@ Hence, the conditions associated with the symbols a, b, c, and d in D are consid
   %\item[] $D = \{ ya, bc, dy \}$ (\TheConditionA).
   %\item[] $D = \{ ya, bc, dy \}$
   %\end{enumerate}
-  Then, {\color{red} if for all $r \in D$, $p \{ x := r \} \preceq q$ holds,} then $p \{ x := xy \} \preceq q$ {\color{red} holds}.
+  Then, 
+  %{\color{red} if for all $r \in D$, $p \{ x := r \} \preceq q$ holds,} then $p \{ x := xy \} \preceq q$ {\color{red} holds}.
+  {\color{red} if $q$ minimally supports $D$ for $p$, then $p \{ x := xy \} \preceq q$ {\color{red} holds}}.
 \end{lem}
 
   \begin{proof}
@@ -43,8 +49,8 @@ Hence, the conditions associated with the symbols a, b, c, and d in D are consid
  %We assume that $p \{ x := xy \} \not\preceq q$ in order to derive a contradiction.
   We assume that 
   $p \{ x := xy \} \not\preceq q$
-  %{\color{red} $D$ is maximally generalized with respect to $(p,q)$}
-  in order to derive a contradiction.
+  in order to derive a contradiction
+  {\color{red} with the conditions that the symbols $a,~b,~c$ and $d$ satisfy in $D$.}
 %
 % Since $p \{ x := r \} \preceq q$ for all $r \in D$, there are three strings of length $2$ in $q$ corresponding to $ya, bc, dy$.
 %  Note that the three strings may appear with partial overlaps.
@@ -72,8 +78,11 @@ Hence, the conditions associated with the symbols a, b, c, and d in D are consid
 %  Since $p \{ x := xy \} \not \preceq q$ and the condition \TheConditionA\ hold, the regular pattern $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $q_{1}, q_{2}, w, w^{\prime}$ be either the empty string or a regular pattern on $\Sigma\cup X$.
 %
 %Since $D$ is maximally generalized {\color{red}over} $(p,q)$, 
-{\color{red} Since $p\{x:=r\} \preceq q$ holds for all $r\in D$,}
-the regular pattern $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $q_{1}, q_{2}, w, w^{\prime}$ be either the empty string or a regular pattern {\color{red}over} $\Sigma\cup X$.
+{\color{red} Since 
+%$p\{x:=r\} \preceq q$ holds for all $r\in D$,
+$q$ minimally supported $D$ for $p$, i.e., $p \{ x := r \} \preceq q$ for all $r \in D$,
+}
+$q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $q_{1}, q_{2}, w, w^{\prime}$ be either the empty string or a regular pattern {\color{red}over} $\Sigma\cup X$.
 
 \smallskip
 
@@ -85,7 +94,19 @@ the regular pattern $q$ can be expressed in one of the following forms: Let $y_{
   (\ref{lem:addpart}-3) & $q=q_{1}AwBq_{2}$,\\
   & where $\{ A,B \} = \{ y_{1}ay_{2},bc \}$ ($a = d$).
   \end{tabular}
-  
+ 
+  \noindent
+  %{\color{red} Here, we remark that 
+  %each string in $D$ occurs independently within $q$ in (\ref{lem:addpart}-1),
+  %the string $dya$ is observed as a result of either variable sharing or adjacency between $ya$ and $dy$ in $D$ in (\ref{lem:addpart}-2),
+  %in the case where $a=d$, the string $y_1ay_2$, which is formed by a one-character overlap between $ya$ and $dy$ in $D$, occurs within $q$ in (\ref{lem:addpart}-3).}
+  {\color{red}
+  We note the following observations regarding the behavior of substrings in the sequence $q$:
+In (\ref{lem:addpart}-1), each string in $D$ occurs independently within $q$.
+In (\ref{lem:addpart}-2), the substring $dya$ appears in $q$ as a result of either variable sharing or adjacency between  $ya$ and $dy$ in D.
+In (\ref{lem:addpart}-3), when $a = d$, the substring $y_1ay_2$, formed by a one-character overlap between $ya$ and $dy$ in $D$, is observed within $q$.
+  }
+
   \smallskip
 
   \noindent
@@ -282,7 +303,10 @@ Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and let $p,~q$ be regular 
 %\begin{enumerate}
 %\item[] $D=\{ ya, bc, dy \}$ (\TheConditionB),
 %\end{enumerate}
-Then, if {\color{red} for all $r \in D$,} $p \{ x := r \} \preceq q$ {\color{red} holds}, then $p \{ x := xy \} \preceq q$ {\color{red} holds}.
+Then, if 
+%{\color{red} for all $r \in D$,} $p \{ x := r \} \preceq q$ {\color{red} holds},
+{\color{red} $q$ minimally supports $D$ for $p$},
+ then $p \{ x := xy \} \preceq q$ {\color{red} holds}.
 \end{lem}
 
 %We note that if $b = d$, then, because $p\{x:=dy\}\preceq q$, $p\{x:=bc\}\preceq q$ is always satisfied.
@@ -297,7 +321,7 @@ Then, if {\color{red} for all $r \in D$,} $p \{ x := r \} \preceq q$ {\color{red
 We assume that $p \{ x := xy \} \not \preceq q$ in order to derive a contradiction.
 The proof is almost the same as the proof of Lemma~\ref{lem:addpart}.
 %Since $p \{ x := r \} \preceq q$ for all $r \in D$ and $D$ is maximally generalized {\color{red}with respect to} $(p,q)$, 
-{\color{red} Since $p \{ x := r \} \preceq q$ for all $r \in D$,}
+{\color{red} Since $q$ minimally supports $D$ for $p$, i.e., $p \{ x := r \} \preceq q$ for all $r \in D$,}
 there are three strings of length $2$ corresponding to $ya, bc, dy$ in $q$.
 The symbols appearing in $D$ correspond to either a variable or a constant symbol in $q$.
 Let $y_{1}$ and $y_{2}$ be variable symbols appearing in $q$.
@@ -425,7 +449,10 @@ The conditions in Lemmas~\ref{lem:oneside_i} and \ref{lem:oneside_ii} are illust
   %\begin{enumerate}
   %\item[] $D=\{ ya, bc, dy \}$ (\TheConditionC).
   %\end{enumerate}
-  Then, {\color{red}if for all $r \in D$, $p \{ x := r \} \preceq q$ holds, then $p \{ x := xy \} \preceq q$ holds}.
+  Then, 
+  %{\color{red}if for all $r \in D$, $p \{ x := r \} \preceq q$ holds,
+  {\color{red} if $q$ minimally supports $D$ for $p$,
+   then $p \{ x := xy \} \preceq q$ holds}.
 \end{lem}
 
 \begin{proof}
