@@ -2,6 +2,7 @@
 
 \subsection{Basic definitions and notations}\label{subsec:basicdef}
 
+%$A\subsetneq B$  $A\subseteq B$
 % Preliminaries
 Let $\Sigma$ be a non-empty finite set of constant symbols.
 Let $X$ be an infinite set of variable symbols such that $\Sigma \cap X = \emptyset$ holds.
@@ -16,7 +17,7 @@ A pattern $p$ is said to be \textit{regular} if each variable symbol appears
 at most once in $p$.
 The length of $p$, denote by $|p|$, is the number of symbols in $p$.
 Note that $|\varepsilon|=0$ holds.
-{\color{red} The set of all patterns and regular patterns {\color{red}over} $\Sigma \cup X$ are denoted by $\Pat_{\Sigma\cup X}$ and $\RPat_{\Sigma\cup X}$, respectively.
+{\color{red} The sets of all patterns and regular patterns {\color{red}over} $\Sigma \cup X$ are denoted by $\Pat_{\Sigma\cup X}$ and $\RPat_{\Sigma\cup X}$, respectively.
 When $\Sigma$ and $X$ are clear from the context, 
 we omit them in the notation and simply write $\Pat$ and $\RPat$, respectively.}
 For a set $S$, we denote by $\sharp S$ the number of elements in $S$.
@@ -44,7 +45,7 @@ For a pattern $p$, the \textit{pattern language} of $p$, denoted by $L(p)$, is t
 For patterns $p$ and $q$, it is clear that $L(p) = L(q)$ if $p \equiv q$, and $L(p) \subseteq L(q)$ if $p \preceq q$.
 Note that $L(\varepsilon) = \{\varepsilon\}$.
 In particular, if $p$ is a regular pattern, we say that $L(p)$ is a \textit{regular pattern language}.
-The set of all pattern languages and regular patterns languages are denoted by $\PatL$ and $\RPatL$, respectively.
+The sets of all pattern languages and regular patterns languages are denoted by $\PatL$ and $\RPatL$, respectively.
 
 \begin{lem}[Mukouchi(Theorem 6.1, \cite{Mukouchi1991})]\label{regularPatternEquivalence}
   Suppose $\sharp \Sigma \geq 3$. Let $p$ and $q$ be regular patterns.

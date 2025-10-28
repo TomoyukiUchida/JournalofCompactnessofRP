@@ -1,11 +1,12 @@
 \subsection{$D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}$ and $D = \{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\}$}\label{subsec:d3b}
 
 {\color{red} In this subsection, for 
-$D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}\subset \RPat_{\Sigma\cup X}$ or $D = \{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\} \subset \RPat_{\Sigma\cup X}$,
+$D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}\subsetneq \RPat_{\Sigma\cup X}$ or $D = \{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\} \subsetneq \RPat_{\Sigma\cup X}$,
 we consider a regular pattern $q$ in $\RPat_{\Sigma\cup X}$ 
-such that $q$ minimally supports $D$ for a regular pattern $p$ %with $p\not\preceq q$ under some conditions with the symbols $a_i,b_i$ for $i~(1\leq i\leq 3)$.
+such that $q$ minimally supports $D$ for a regular pattern $p$. %with $p\not\preceq q$ under some conditions with the symbols $a_i,b_i$ for $i~(1\leq i\leq 3)$.
 Obviously, we remark that $D$ satisfies that $a_{i}\neq a_{3}$ and $b_{i}\neq b_{3}$ for $i=1,2$.
 }
+要検討
 %\begin{lem}\label{lem:3consts_ii}
 %  Let $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$, where $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\le i,j\le 3)$.
 %  Let $p = p_{1}x_{2}$ for $p_{1},p_{2} \in \RPat \cup \{\varepsilon\}$ and $x \in X$.
@@ -22,8 +23,8 @@ Obviously, we remark that $D$ satisfies that $a_{i}\neq a_{3}$ and $b_{i}\neq b_
 
 \begin{lem}\label{lem:3consts_i}
   Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and $p,~q$ regular patterns {\color{red}over} $\Sigma\cup X$.
-  {\color{red} Let $D=\{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}\subset \RPat_{\Sigma\cup X}$
-  where \underline{$a_{i}\neq a_{j}$ and $a_{i} \neq b_{k}$ for $i,j,k(1\leq i,j\leq 3,$}\\ \underline{$ 1\leq k\leq 2, i\neq j, i\neq k)$, $b_{1}\neq b_{2}$}
+  {\color{red} Let $D=\{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}\subsetneq \RPat_{\Sigma\cup X}$
+  where \underline{$a_{i}\neq a_{j}$ for $i,j(1\leq i,j\leq 3, i\neq j)$, $b_{1}\neq b_{2}$}
    and $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.
   %Let $D$ be the following set of regular patterns {\color{red}over} $\Sigma\cup X$, where $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$:
   %\begin{align*}
@@ -225,7 +226,7 @@ This contradicts the assumption.
 
 \begin{lem}\label{lem:3consts_ii}
   Let $\Sigma$ be an alphabet $\sharp\Sigma \ge 3$ and $p,~q$ regular patterns {\color{red}over} $\Sigma\cup X$.
-  {\color{red} Let $D= \{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\}\subset \RPat_{\Sigma\cup X}$
+  {\color{red} Let $D= \{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\}\subsetneq \RPat_{\Sigma\cup X}$
   where \underline{$a_{1}\neq a_{2}$, $b_{i}\neq b_{j}$ for $1\leq i,j\leq 3$ with $i\neq j$}\\ and $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.
   Then, 
   {\color{red} 
@@ -259,7 +260,7 @@ The proof follows by reversing $p$ and $q$ and subsequently applying Lemma~\ref{
 \subsection{$D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$}\label{subsec:d3c}
 
 {\color{red}
-In this subsection, for $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\} \subset \RPat_{\Sigma\cup X}$, we consider a regular pattern $q$ in $\RPat_{\Sigma\cup X}$ 
+In this subsection, for $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\} \subsetneq \RPat_{\Sigma\cup X}$, we consider a regular pattern $q$ in $\RPat_{\Sigma\cup X}$ 
 such that $q$ minimally supports $D$ for a regular pattern $p$ in $\RPat_{\Sigma\cup X}$
 under some conditions with the symbols $a_i,~b_i \in \Sigma$ for $i~(1\leq i \leq k)$.
 %Obviously, we remark that $D$ satisfies that $a_i\neq a_j$ and $b_i\neq b_j$ for $i,j~(i\neq j, 1\leq i,j\leq 3)$
@@ -357,7 +358,7 @@ The conditions in Lemmas~\ref{lem:3consts_i}, \ref{lem:3consts_ii}, and \ref{lem
 
 \begin{lem}\label{lem:3consts_iii}
   Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and $p,~q$ regular pattern {\color{red}over} $\Sigma\cup X$.
-  {\color{red}Let $D=\{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}\subset \RPat_{\Sigma\cup X}$ where $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ with } i\ne j ~(1\le i,j\le 3)$.
+  {\color{red}Let $D=\{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}\subsetneq \RPat_{\Sigma\cup X}$ where $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ with } i\ne j ~(1\le i,j\le 3)$.
   If $q$ minimally supports $D$ for a regular pattern $p$, then $p \{ x := xy \} \preceq q$.}
   %Let $D$ be the following set of regular patterns {\color{red}over} $\Sigma\cup X$, where $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$:
   %\begin{align*}

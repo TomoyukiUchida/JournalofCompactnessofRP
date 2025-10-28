@@ -13,7 +13,7 @@ the set $\mathcal{C}$ said to have {\it compactness with respect to containment}
 if there exists a regular pattern $q \in Q$ such that $L(p) \subseteq L(q)$ holds if $L(p) \subseteq L(Q)$ holds.
 \end{dfn}
 
-Let $D \subset \RPat$ with $\sharp D = 2$ or $3$, and let $p,q$ be regular patterns in $\RPat$.
+Let $D \subsetneq \RPat$ with $\sharp D = 2$ or $3$, and let $p,q$ be regular patterns in $\RPat$.
 In the following subsections (Subsecs.~\ref{subsec:d2}--\ref{subsec:d3c}), we provide the conditions on $D$ under which the implication holds: if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.
 It is obvious if the variable symbol $x$ does not appear in $p$.
 Therefore, in the following lemmas and propositions, let $p=p_{1}xp_{2}$, where $p_{i}\in \RPat$ ($i=1,2$) and $x$ is a variable symbol.
@@ -45,10 +45,10 @@ Therefore, in this paper, we make the following definition on $D$:
 
 \begin{dfn}
 Let $p,q \in \RPat$ {\color{red} with $p\not\preceq q$}.
-Let $D \subset \RPat$ such that for all $r\in D$, $|r| = 2$ and $p \{ x := r \} \preceq q$ hold.
-Then, if for any $ab\in D$ ($a,b\in\Sigma$), {\color{red} $ay,yb\not\in D$}, $p \{ x := ay \} \not\preceq q$ and $p \{ x := yb \} \not\preceq q$ hold for any $y \in X$ that does not appear in $q$, 
+Let $D \subsetneq \RPat$ such that for all $r\in D$, $|r| = 2$ and $p \{ x := r \} \preceq q$ hold.
+Then, if for any $ab\in D$ ($a,b\in\Sigma$), {\color{red} $ay,yb\not\in D$}, $p \{ x := ay \} \not\preceq q$ and $p \{ x := yb \} \not\preceq q$ hold for any $y \in X$ that does not appear in $q$,
 %the set $D$ is said to be \textit{maximally generalized {\color{red}with respect to} ($p,q$)}.
-{\color{red}The regular pattern $q$ is said to \textit{minimally support $D$ for $p$}, in the sense that any generalization of the strings in $D$ would invalidate the conditions $p\{x := r\} \preceq q$ for all $r\in D$}.
+{\color{red}the regular pattern $q$ is said to \textit{minimally support $D$ for $p$}, in the sense that any generalization of the strings in $D$ would invalidate the conditions $p\{x := r\} \preceq q$ for all $r\in D$}.
 
 \end{dfn}
 
@@ -73,13 +73,27 @@ Then, if $p \{ x := r \} \preceq q$ holds for all $r \in D$, then $p \{ x := xy 
 \begin{proof}
 %It is obvious if no variable symbol appears in $p$. 
 %Therefore, let $p=p_{1}xp_{2}$, where $p_{i} \in \RPat$ ($i=1,2$) and $x$ is a variable symbol.
-We assume that $p \{ x := xy \} \not \preceq q$ in order to derive a contradiction.
-In the case of \textrm{(ii)}, by reversing the strings $p$ and $q$, we can prove that the assumption {\color{red}$p \{ x := xy \} \not\preceq q$} leads to a contradiction, as in the case of \textrm{(i)}.
+%--------
+%We assume that $p \{ x := xy \} \not \preceq q$ in order to derive a contradiction.
+%In the case of \textrm{(ii)}, by reversing the strings $p$ and $q$, we can prove that the assumption {\color{red}$p \{ x := xy \} \not\preceq q$} leads to a contradiction, as in the case of \textrm{(i)}.
+%----------
+{\color{red}
+Case \textrm{(ii)} follows from case \textrm{(i)} by symmetry, upon reversing the strings $p$ and $q$.
+}
 Therefore, in the following, we consider only the case of \textrm{(i)}: $D=\{ ay, by \}$ ($a \not= b$).
+%
+%{\color{red} We assume that $p\not\preceq q$ holds in order to derive a contradiction.}
+%
+%---------
+%Since $p \{ x := xy \} \not \preceq q$, $p_{1}ayp_{2}\preceq q$ and $p_{1}byp_{2}\preceq q$, 
+%there exist regular patterns $q_{1},q_{2}$ {\color{red}over} $\Sigma\cup X$ such that $q=q_{1}ay_{1}wby_{2}q_{2}$ or $q=q_{1}by_{1}way_{2}q_{2}$ for some variable symbols $y_{1},y_{2}~(y_{1} \not= y_{2})$ and a constant string $w$ ($|w|\geq 0$) from Theorem \ref{Sato1:Lemma9}.
+%-------------------
+%
+{\color{red} Since $p\not\preceq q$, but $p_{1}ayp_{2}\preceq q$ and $p_{1}byp_{2}\preceq q$ hold, it follows from Theorem~\ref{Sato1:Lemma9} that
+there exist regular patterns $q_{1},q_{2}$ {\color{red}over} $\Sigma\cup X$ such that $q=q_{1}ay_{1}wby_{2}q_{2}$ or $q=q_{1}by_{1}way_{2}q_{2}$ for some variable symbols $y_{1},y_{2}$ with $y_{1} \not= y_{2}$, and a constant string $w\in \Sigma^{*}$ with $|w|\geq 0$.
+}
 
-Since $p \{ x := xy \} \not \preceq q$, $p_{1}ayp_{2}\preceq q$ and $p_{1}byp_{2}\preceq q$, 
-there exist regular patterns $q_{1},q_{2}$ {\color{red}over} $\Sigma\cup X$ such that $q=q_{1}ay_{1}wby_{2}q_{2}$ or $q=q_{1}by_{1}way_{2}q_{2}$ for some variable symbols $y_{1},y_{2}~(y_{1} \not= y_{2})$ and a constant string $w$ ($|w|\geq 0$) from Theorem \ref{Sato1:Lemma9}.
-When $q=q_{1}ay_{1}wby_{2}q_{2}$ holds, the following four conditions hold: For $y_{1}^{\prime}, y_{2}^{\prime}\in X$,
+When $q=q_{1}ay_{1}wby_{2}q_{2}$, the following four conditions hold: For $y_{1}^{\prime}, y_{2}^{\prime}\in X$,
 \begin{align*}
 \textrm{(1)} & ~p_{1} \preceq q_{1}, & \textrm{(1')} & ~p_{2} \preceq wby_{2}q_{2} \mbox{~or~}\\
 & & & p_{2} \preceq y_{1}^{\prime}wby_{2}q_{2},\\
@@ -93,9 +107,14 @@ if $p_{2} \preceq wby_{2}q_{2}$ of (1') holds,
 $p\preceq q_{1}ap_{1}^{\prime\prime}xwby_{2}q_{2}\equiv q \{ y_{1} := p_{1}^{\prime\prime}x \}$ holds.
 If $p_2\preceq y_{1}^{\prime}wby_{2}q_{2}$ of (1') holds, $p\preceq q_{1}ap_{1}^{\prime\prime}xy_{1}^{\prime}wby_{2}q_{2}=q \{ y_{1} := p_{1}^{\prime\prime}xy_{1}^{\prime} \}$ holds.
 Thus, $p\{x := xy\} \preceq q \{ y_{1} := p_{1}^{\prime\prime}xyy_{1}^{\prime} \}$ holds.
-Hence, $p \preceq q$ holds.
-This contradicts the assumption.
-Therefore, we conclude that if $p \{ x := r \} \preceq q$ for all $r \in \{ ay, by \}$ ($a \not= b$), then $p \{ x := xy \} \preceq q$ holds.
+%
+%-------
+%Hence, $p \preceq q$ holds.
+%This contradicts the assumption.
+%-------
+%
+{\color{red} Hence, $p\{x:=xy\}\preceq q$ holds.}
+Therefore, we conclude that if $p \{ x := r \} \preceq q$ for all $r \in \{ ay, by \}$ with $a \not= b$, then $p \{ x := xy \} \preceq q$ holds.
 \end{proof}
 
 Let $p,q$ be regular patterns in $\RPat$.
