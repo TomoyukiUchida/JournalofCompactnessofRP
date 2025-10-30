@@ -19,7 +19,7 @@
 % }
 
 {\color{red} In this subsection, 
-for a subset $D=\{ya,bc,dy\} \subset \RPat_{\Sigma\cup X}$,
+for a subset $D=\{ya,bc,dy\} \subsetneq \RPat_{\Sigma\cup X}$,
 we consider a regular pattern $q$ which minimally supports $D$ for a regular pattern $p$ under some conditions with the symbols $a,~b,~c$ and $d$ in $D$.
 %for any two regular patterns $p,q$ over $\Sigma\cup X$ with $p\not\preceq q$, we consider $D=\{ya,bc,dy\}\subset \RPat_{\Sigma\cup X}$ such that $q$ minimally supports $D$ for $p$.
 Obviously, we remark that $a\neq c$ and $b\neq d$ hold,
@@ -29,7 +29,7 @@ since $q$ minimally supports $D$ for $p$.
 
 
 \begin{lem}\label{lem:addpart}
-  Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and $p,~q$ regular patterns {\color{red}over} $\Sigma\cup X$.
+  Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and $p,~q$ regular patterns in {\color{red} $\RPat_{\Sigma\cup X}$ with $p\not\preceq q$}.
   {\color{red} Let $D = \{ ya, bc, dy \} \subset \RPat_{\Sigma\cup X}$ 
   %such that $D$ is maximally generalized {\color{red}with respect to} ($p,q$), where \TheConditionAprime~(that is, \TheConditionA),
   where \underline{\TheConditionAComma}~  and 
@@ -40,7 +40,7 @@ since $q$ minimally supports $D$ for $p$.
   %\end{enumerate}
   Then, 
   %{\color{red} if for all $r \in D$, $p \{ x := r \} \preceq q$ holds,} then $p \{ x := xy \} \preceq q$ {\color{red} holds}.
-  {\color{red} if $q$ minimally supports $D$ for $p$, then $p \{ x := xy \} \preceq q$ {\color{red} holds}}.
+  {\color{red} if $q$ minimally supports $D$ for $p$, then $p \{ x := xy \} \preceq q$ holds}.
 \end{lem}
 
   \begin{proof}
@@ -286,7 +286,7 @@ We suppose that $(A, B) = (dy_{1}a, bc)$, i.e., $q = q_{1}dy_{1}awbcq_{2} $ hold
   \begin{figure*}[t]
     \begin{center}
       \includegraphics[scale=0.525]{figs/lem5bigraph.pdf}
-      \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and $p,q \in \RPat$. We assume that the symbols in $\Sigma$ are mutually distinct. The figure (3) expresses case $D = \{ ya, bc, dy \}$ in Lemma~\ref{lem:addpart}.
+      \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and {\color{red}$p,q \in \RPat_{\Sigma\cup X}$ with $p\not\preceq q$}. We assume that the symbols in $\Sigma$ are mutually distinct. The figure (3) expresses case $D = \{ ya, bc, dy \}$ in Lemma~\ref{lem:addpart}.
       The figures (4), (5), and (6) express three cases $D = \{ ya, bc, ay \}$, $D = \{ ya, bb, dy \}$, and $D = \{ ya, bb, ay \}$, respectively.
       In these cases, if $p \{ x := r \} \preceq q$ for all $r \in D$,
       % and $D$ is maximally generalized {\color{red}with respect to} ($p,q$), 
@@ -433,7 +433,7 @@ The conditions in Lemmas~\ref{lem:oneside_i} and \ref{lem:oneside_ii} are illust
 \begin{figure}[t]
   \begin{center}
     \includegraphics[scale=0.525]{figs/lem6bigraph.pdf}
-    \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and $p,q \in \RPat$. We assume that the symbols in $\Sigma$ are mutually distinct.
+    \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and {\color{red}$p,q \in \RPat_{\Sigma\cup X}$ with $p\not\preceq q$}. We assume that the symbols in $\Sigma$ are mutually distinct.
     The figures (7) and (8) express two cases $D = \{ ya, ac, dy \}$ and $D = \{ ya, bd, dy \}$ in Lemmas~\ref{lem:oneside_i} and \ref{lem:oneside_ii}, respectively.
     In these cases, if $p \{ x := r \} \preceq q$ for all $r \in D$,
     % and $D$ is maximally generalized {\color{red}with respect to} ($p,q$),
@@ -442,8 +442,8 @@ The conditions in Lemmas~\ref{lem:oneside_i} and \ref{lem:oneside_ii} are illust
 \end{figure}
 
 \begin{lem}\label{lem:oneside_ii}
-  Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and let $p,~q$ be regular patterns {\color{red}over} $\Sigma\cup X$.
-  {\color{red} Let $D=\{ya,bc,dy\}\subset \RPat_{\Sigma\cup X}$ where \underline{\TheConditionCComma},
+  {\color{red}Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$, $p,~q$ be regular patterns in $\RPat_{\Sigma\cup X}$ with $p\not\preceq q$ and
+  $D=\{ya,bc,dy\}\subsetneq \RPat_{\Sigma\cup X}$ where \underline{\TheConditionCComma},
   and $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.}
   %Let $D$ be one of the following sets of regular patterns {\color{red}over} $\Sigma\cup X$, where $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.
   %\begin{enumerate}

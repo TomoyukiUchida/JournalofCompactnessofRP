@@ -1,24 +1,12 @@
 %\section{Compactness for Sets of Regular Patterns}
-\subsection{Compactness}\label{subsec:compactness}
+%\subsection{Compactness}\label{subsec:compactness}
 
-In this section, we define the compactness of sets of regular patterns, formally.
-Then, if $\sharp\Sigma \ge 2k-1$ holds, 
-we show that 
-$\RPat^{k}$ has compactness with respect to the containment.
-
-\begin{dfn}\label{def:compactness}
-Let $\mathcal{C}$ be a subset of $\RPatplus$. 
-For any regular pattern $p \in \RPat$ and any set $Q \in \mathcal{C}$,
-the set $\mathcal{C}$ said to have {\it compactness with respect to containment}
-if there exists a regular pattern $q \in Q$ such that $L(p) \subseteq L(q)$ holds if $L(p) \subseteq L(Q)$ holds.
-\end{dfn}
-
-Let $D \subsetneq \RPat$ with $\sharp D = 2$ or $3$, and let $p,q$ be regular patterns in $\RPat$.
+Let {\color{red}$D \subsetneq \RPat_{\Sigma\cup X}$} with $\sharp D = 2$ or $3$, and let $p,q$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$ with $p\not\preceq q$}.
 In the following subsections (Subsecs.~\ref{subsec:d2}--\ref{subsec:d3c}), we provide the conditions on $D$ under which the implication holds: if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.
 It is obvious if the variable symbol $x$ does not appear in $p$.
 Therefore, in the following lemmas and propositions, let $p=p_{1}xp_{2}$, where $p_{i}\in \RPat$ ($i=1,2$) and $x$ is a variable symbol.
 
-First of all, we consider the correspondence from $r\in D$ to some string in $q$ when $p \{ x := r \} \preceq q$ holds.
+We consider the correspondence from $r\in D$ to some string in $q$ when $p \{ x := r \} \preceq q$ holds.
 The symbols in $D$ correspond to either a variable or a constant symbol in $q$.
 If $D$ has a constant string $ab$ of length $2$ for $a,b\in\Sigma$, there are three possible strings in $q$ that correspond to $ab$ in $p\{x:=ab\}$ as follows: For $y_{1} \in X$,
   \begin{center}
@@ -52,17 +40,19 @@ Then, if for any $ab\in D$ ($a,b\in\Sigma$), {\color{red} $ay,yb\not\in D$}, $p 
 
 \end{dfn}
 
-%\noindent{\color{red} In Subsecs.~\ref{subsec:d3a}--\ref{subsec:d3c}, we consider a subset $D \subset \RPat$ such that for $p,q \in \RPat$, 
+%{\color{red}In Subsecs.~\ref{subsec:d3a}--\ref{subsec:d3c}, 
+%we consider a regular pattern $q$ which minimally support $D$ for $p$}.
+\noindent{\color{red} In Subsecs.~\ref{subsec:d3a}--\ref{subsec:d3c}, we consider a subset $D \subsetneq \RPat_{\Sigma\cup X}$ such that a regular pattern $q \in \RPat_{\Sigma\cup X}$ minimally support $D$ for a regular pattern $p$.} 
 %$D$ is maximally generalized with respect to $(p,q)$.}
 
 
 \subsection{$D=\{ ay, by \}$ and $D=\{ ya, yb \}$}\label{subsec:d2}
 
-\begin{lem}[Sato et al.\cite{Sato1}]\label{lem:twovariables}
+\begin{lem}\label{lem:twovariables}
 Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$.
 %$p,q$ regular patterns on $\Sigma\cup X$.
-Let $p,q \in \RPat_{\Sigma\cup X}$.
-Let $D$ be the following set of regular patterns {\color{red}over} $\Sigma\cup X$, where $y$ is a variable symbol that does not appear in $p$ and $q$:
+Let $p,q$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$ with $p\not\preceq q$}.
+Let $D$ be the following set of regular patterns in $\RPat_{\Sigma\cup X}$, where $y$ is a variable symbol that does not appear in $p$ and $q$:
 \begin{enumerate}
 \item[{\rm (i)}] $D=\{ ay, by \}$ ($a \not= b$),
 \item[{\rm (ii)}] $D=\{ ya, yb \}$ ($a \not= b$).
@@ -117,7 +107,7 @@ Thus, $p\{x := xy\} \preceq q \{ y_{1} := p_{1}^{\prime\prime}xyy_{1}^{\prime} \
 Therefore, we conclude that if $p \{ x := r \} \preceq q$ for all $r \in \{ ay, by \}$ with $a \not= b$, then $p \{ x := xy \} \preceq q$ holds.
 \end{proof}
 
-Let $p,q$ be regular patterns in $\RPat$.
+Let $p,q$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$}.
 In this paper, the statement like Lemma~\ref{lem:twovariables} is illustrated by a bipartite graph $(\Sigma, \Sigma, E)$ where $E = \{(a, b) \in \Sigma\times\Sigma \mid p\{x:=ab\} \preceq q\}$.
 For example, the conditions (i) and (ii) in Lemma~\ref{lem:twovariables} are illustrated in (1) and (2) in Fig.~\ref{fig:lem4bigraph}, respectively.
 %Moreover, we define the sets $A(q), B(q) \subseteq \Sigma$ as follows:
@@ -130,7 +120,7 @@ For example, the conditions (i) and (ii) in Lemma~\ref{lem:twovariables} are ill
 \begin{figure}[t]
   \begin{center}
     \includegraphics[scale=0.525]{figs/lem4bigraph.pdf}
-    \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and $p,q \in \RPat$. We assume that the symbols in $\Sigma$ are mutually distinct.
+    \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and $p,q \in {\color{red}\RPat_{\Sigma\cup X}}$. We assume that the symbols in $\Sigma$ are mutually distinct.
     These figures (1) and (2) express two cases $D = \{ ay, by \}$ and $D = \{ ya, yb \}$, respectively.
     In these cases, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$ holds.}\label{fig:lem4bigraph}
   \end{center}

@@ -35,9 +35,13 @@ It is clear that $S_{n}(P) \subseteq S_{n+1}(P) \subseteq L(P)$ for any positive
 
 \begin{lem}[Sato et al.(Lemma 10, \cite{Sato1})]\label{Sato1:Lemma10}
     Suppose $\sharp \Sigma \geq 3$.
-    Let $p_{1}$, $p_{2}$, $q$ be regular patterns in $\RPat$ and $x$ a variable symbol. 
+    {\color{red} Let $p,~q$ be regular patterns $\RPat_{\Sigma\cup X}$
+    and $x$ a variable symbol.
+ %   Let $p_{1}$, $p_{2}$, $q$ be regular patterns in $\RPat$ and $x$ a variable symbol. 
     Let $a$, $b$ and $c$ be mutually distinct constant symbols in $\Sigma$.
-    If $p_{1}ap_{2} \preceq q$, $\ p_{1}bp_{2} \preceq q$ and $p_{1}cp_{2} \preceq q$, then $ p_{1}xp_{2}\preceq q$ holds.
+ %   If $p_{1}ap_{2} \preceq q$, $\ p_{1}bp_{2} \preceq q$ and $p_{1}cp_{2} \preceq q$, then $ p_{1}xp_{2}\preceq q$ holds.
+ If $p\{x:=a\}\preceq q$, $p\{x:=b\} \preceq q$, and $p\{x:=c\}\preceq q$ hold,
+ then $p\preceq q$.} 
 \end{lem}
 
 From Lemma~\ref{Sato1:Lemma10}, the following theorem holds.
@@ -56,7 +60,7 @@ From Theorem~\ref{Sato1:Theorem11},
 we have the following corollary.
 \begin{col}[Sato et al.(Corollary 12, \cite{Sato1})]
     Suppose $\sharp\Sigma \geq 3$.
-    For two regular patterns $p$ and $q$,
+    For two regular patterns {\color{red}$p,~q\in\RPat_{\Sigma\cup X}$},
     the following $(\mathrm{i}), (\mathrm{ii})$ and $(\mathrm{iii})$ are equivalent:
     \[
         (\mathrm{i})\ S_{1}(p) \subseteq L(q),\ \
@@ -68,9 +72,9 @@ we have the following corollary.
 {\color{red} The following lemma demonstrates that Theorem \ref{Sato1:Theorem11} does not hold in general when $\sharp\Sigma \leq 2k$.}
 \begin{lem}[Sato et al.(Lemma 13, \cite{Sato1})]\label{Sato1:Lemma13}
     Suppose $\sharp\Sigma \geq 3$.
-    Let $p_{1}$, $p_{2}$, $q_{1}$, $q_{2}$ be regular patterns in $\RPat$ and $x$ a variable symbol.
+    Let $p_{1}$, $p_{2}$, $q_{1}$, $q_{2}$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$} and $x$ a variable symbol.
     Let $a$, $b$ be constant symbols in $\Sigma$ with $a \neq b$ and $w$ a string {\color{red}in} $\Sigma^{\ast}$.
-    Let $p = p_{1}AwxwBp_{2}$ and $q = q_{1}AwBq_{2}$ be regular patterns that satisfy the following three conditions:
+    Let $p = p_{1}AwxwBp_{2}$ and $q = q_{1}AwBq_{2}$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$} that satisfy the following three conditions:
     \[
         \begin{tabular}{ll}
             $\mathrm{(i)}~p_{1}Aw \preceq q_{1}$,  \\ 
@@ -91,7 +95,7 @@ The following Example \ref{counter-example4Theorem11} in \cite{Sato1} shows that
     Let $k$ be a positive integer and $\Sigma= \{a_{1},\ldots,a_{k},b_{1},\ldots,b_{k}\}$.
     Let $w_{1},\ldots,w_{k}$ be regular patterns in $\RPat$ such that 
     $w_{k} = \varepsilon$ and for $i=1,2,\ldots,k-1$, $w_{i} = w_{i+1}b_{i+1}a_{i+1}w_{i+1}$ hold.
-    Let $p$, $q_{1},\ldots,q_{k}$ be regular patterns in $\RPat$ such that
+    Let $p$, $q_{1},\ldots,q_{k}$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$} such that
     $p = x_{1}a_{1}w_{1}xw_{1}b_{1}x_{2}$ and  for $i=1,2,\ldots,k$, $q_{i} = x_{1}a_{i}w_{i}b_{i}x_{2}$ hold.
     Let $Q$ be a set $\{q_{1},\ldots,q_{k}\}$ in $\RPatkei$.
     For $i=1$, we have $p\{x:=a_{1}\} =(x_{1}a_{1}w_{1})a_{1}(w_{1}b_{1}x_{2})=q_1\{x_{1}:=x_{1}a_{1}w_{1}\}\preceq q_{1}$.
