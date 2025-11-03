@@ -81,7 +81,7 @@ since $q$ minimally supports $D$ for $p$.
 {\color{red} Since 
 %$p\{x:=r\} \preceq q$ holds for all $r\in D$,
 $q$ minimally supported $D$ for $p$, i.e., $p \{ x := r \} \preceq q$ for all $r \in D$,
-}
+the regular pattern }
 $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distinct variable symbols in $X$ and $q_{1}, q_{2}, w, w^{\prime}$ be either the empty string or a regular pattern {\color{red}over} $\Sigma\cup X$.
 
 \smallskip
@@ -135,7 +135,9 @@ In (\ref{lem:addpart}-3), when $a = d$, the substring $y_1ay_2$, formed by a one
   When $p_{2} \preceq y_{2}^{\prime}wy_{1}aw^{\prime}bcq_{2}$ in (1') holds, let $q^{\prime}_{1}=q_{1}d,~q^{\prime}_{2}=y_{2}wy_{1}aw^{\prime},~q^{\prime}_{3}=bcq_{2}$.
   Since $p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}$ holds from (3), both $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$ and $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$ hold, and $q_{2}^{\prime}$ contains a variable symbol.
   In both cases, by Theorem~\ref{Sato1:Lemma9}, $p \preceq q$ holds.
-  This contradicts the assumption that $p \{ x := xy \} \not \preceq q$.
+  {\color{red}This contradicts the assumption that $p$ and $q$ satisfy 
+  $p\not\preceq q$ holds.}
+  %$p \{ x := xy \} \not \preceq q$.
 
   Similarly, we can show that any case where $(A, B, C) = (y_{1}a, dy_{2}, bc)$, $(bc, y_{1}a, dy_{2})$, or $(bc, dy_{2}, y_{1}a)$ also contradicts the assumption.
   %
@@ -162,11 +164,15 @@ In (\ref{lem:addpart}-3), when $a = d$, the substring $y_1ay_2$, formed by a one
   From $p_{1} \preceq q_{1}dy_{2}w$ in (2), $p_{1}$ is expressed as $p^{\prime}_{1}p^{\prime\prime}_{1}$ for some $p^{\prime}_{1}$ and $p^{\prime\prime}_{1}$, where $p^{\prime}_{1} \preceq q_{1}d$ and $p^{\prime\prime}_{1} \preceq y_{2}w$. 
   When $p_{2} \preceq wbcw^{\prime}y_{1}aq_{2}$ in (1'), we have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xwbcw^{\prime}y_{1}aq_{2}=q \{ y_{2}:=p^{\prime\prime}_{1}x \}$.
   Thus, $p \{ x := xy \} \preceq q \{ y_{2}:=p^{\prime\prime}_{1}xy \}$ holds.
-  This contradicts the assumption that $p \{ x := xy \} \not \preceq q$.
+  {\color{red}This contradicts the assumption that $p$ and $q$ satisfy 
+  $p\not\preceq q$ holds.}
+  %This contradicts the assumption that $p \{ x := xy \} \not \preceq q$.
   %
   When $p_{2} \preceq y_{2}^{\prime}wbcw^{\prime}y_{1}aq_{2}$ in (1'), we similarly have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xy_{2}^{\prime}wbcw^{\prime}y_{1}aq_{2}=q \{ y_{2}:=p^{\prime\prime}_{1}xy_{2}^{\prime} \}$.
   Thus, $p \{ x := xy \} \preceq q \{ y_{2}:=p^{\prime\prime}_{1}xyy_{2}^{\prime} \}$ holds.
-  This also contradicts the assumption.
+  {\color{red}This also contradicts the assumption that $p$ and $q$ satisfy 
+  $p\not\preceq q$ holds.}
+  %  This also contradicts the assumption.
   %
   Therefore, we conclude that $(A, B, C) = (y_{1}a, bc, dy_{2})$.
   (\textit{End of Proof of Claim} 2)
@@ -193,7 +199,9 @@ In (\ref{lem:addpart}-3), when $a = d$, the substring $y_1ay_2$, formed by a one
   Let $q_{1}^{\prime} = q_{1}y_{1}a$, $q_{2}^{\prime} = wbcw^{\prime}$, and $q_{3}^{\prime} = dy_{2}q_{2}$.
   From (1') and (3), $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$ and $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$.
   If $q_{2}^{\prime}$ contains a variable symbol, then by Theorem~\ref{Sato1:Lemma9}, $p \preceq q$ holds.
-  This contradicts the assumption.
+  {\color{red}This contradicts the assumption that $p$ and $q$ satisfy 
+  $p\not\preceq q$ holds.}
+  %  This contradicts the assumption.
   Therefore, $w$ and $w'$ contain no variable symbols.
   (\textit{End of Proof of Claim} 3)
 
@@ -219,9 +227,10 @@ In (\ref{lem:addpart}-3), when $a = d$, the substring $y_1ay_2$, formed by a one
   Therefore, $w^{\prime}daw^{\prime\prime} = w^{\prime\prime}bcw^{\prime}$ holds.
   From Proposition~\ref{prop:repstring}, $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
   This contradicts the conditions \TheConditionA.
+  \item {\color{red}$|w| < |w^{\prime}|$: The proof can be established in a manner analogous to the case where $|w|>|w^{\prime}$.}
 \end{itemize}
 
-  From the above, we conclude that all cases of (\ref{lem:addpart}-1) contradict the assertion that $p\{x := xy\} \not\preceq q$ and the conditions \TheConditionA.
+  From the above, we conclude that all cases of (\ref{lem:addpart}-1) contradict the assertion that {\color{red}$p\not\preceq q$} and the conditions \TheConditionA.
   
   \begin{figure}[t]
     \begin{center}
@@ -248,11 +257,15 @@ We suppose that $(A, B) = (dy_{1}a, bc)$, i.e., $q = q_{1}dy_{1}awbcq_{2} $ hold
   When $p_{2} \preceq awbcq_{2}$ in (1'), we have
   $$p=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xawbcq_{2}=q \{ y_{1}:=p^{\prime\prime}_{1}x \}.$$
   Thus, $p \{ x := xy \} \preceq q \{ y_{1}:=p^{\prime\prime}_{1}xy \}$ holds.
-  This contradicts the assumption.
+  {\color{red}This contradicts the assumption that $p$ and $q$ satisfy 
+  $p\not\preceq q$ holds.}
+    %This contradicts the assumption.
   When $p_{2} \preceq y_{1}^{\prime}awbcq_{2}$ in (1'), we similarly have
   $$p=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq {\color{red}q_{1}dp^{\prime\prime}_{1}xy_{1}^{\prime}awbcq_{2}}=q \{ y_{1}:=p^{\prime\prime}_{1}xy_{1}^{\prime} \}.$$
-  Thus, $p \{ x := xy \} \preceq q \{ y_{1}:=p^{\prime\prime}_{1}xyy_{1}^{\prime} \}$ holds.
-  This contradicts the assumption that $p \{ x := xy \} \not\preceq q$.
+  %Thus, $p \{ x := xy \} \preceq q \{ y_{1}:=p^{\prime\prime}_{1}xyy_{1}^{\prime} \}$ holds.
+  {\color{red}This contradicts the assumption that $p$ and $q$ satisfy 
+  $p\not\preceq q$ holds.}
+  %  This contradicts the assumption that $p \{ x := xy \} \not\preceq q$.
   %
   Similarly, we can show that the case $(A, B) = (bc, dy_{1}a)$ also contradicts the assumption.
   
@@ -272,7 +285,9 @@ We suppose that $(A, B) = (dy_{1}a, bc)$, i.e., $q = q_{1}dy_{1}awbcq_{2} $ hold
   
   Let $q^{\prime}_{1}=q_{1}y_{1}a,~q^{\prime}_{2}=y_{2}w,~q^{\prime}_{3}=bcq_{2}$. From (3) and (1'), we have $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$ and $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$, respectively.
   Since $q_{2}^{\prime}$ contains a variable symbol, Theorem~\ref{Sato1:Lemma9} implies that $p \preceq q$ holds.
-  This contradicts the assumption.
+  {\color{red}This contradicts the assumption that $p$ and $q$ satisfy 
+  $p\not\preceq q$ holds.}
+  %  This contradicts the assumption.
   %
   Similarly, we can show that the case $(A, B) = (bc, y_{1}ay_{2})$ also contradicts the assumption.
   
@@ -401,7 +416,8 @@ For $q=q_{1}y_{1}acwdy_{2}q_{2}$, the following conditions must be satisfied:
   \textrm{(2)}~& p_{1} \preceq q_{1}y_{1}, & \textrm{(2')}~& p_{2} \preceq wdy_{3}q_{2}, \\
   \textrm{(3)}~& p_{1} \preceq {\color{red}q_{1}y_{1}acwd}, & \textrm{(3')}~& p_{2} \preceq q_{2}.
 \end{align*}
-
+\noindent
+{\color{red} This leads to a contradiction, as demonstrated by the following inductive argument:}
 \begin{itemize}
 \item If $|w|=0$, from (1') and (2'), {\color{red} both $cd$ and $d$ are prefixes of $p_{2}$}. Thus, we have $c=d$.
 \item If $|w|=1$, from (1') and (2'), {\color{red} both $cwd$ and $wd$ are prefixes of $p_{2}$}. Thus, we have $w=c=d$.
@@ -423,7 +439,14 @@ For $q=q_{1}dy_{1}acq_{2}$, the following conditions must be satisfied for $y_{1
   & & & p_{2} \preceq y_{1}^{\prime\prime}acq_{2}.
 \end{align*}
 
-For $p_{1} \preceq q_{1}d$ in (1) and $p_{2} \preceq acq_{2}$ in (3'), $p = p_{1}xp_{2} \preceq q_{1}dxacq_{2} \preceq q\{y_{1}:=x\}$ holds. From this, we have $p\{x:=xy\} \preceq q\{y_{1}:=x\}$. This contradicts the assumption that $p\{x:=xy\} \not\preceq q$. Similarly, we can show that the other cases of (1) and (3') also contradict the assumption.
+For $p_{1} \preceq q_{1}d$ in (1) and $p_{2} \preceq acq_{2}$ in (3'), $p = p_{1}xp_{2} \preceq q_{1}dxacq_{2} \preceq q\{y_{1}:=x\}$ holds. 
+%From this, we have $p\{x:=xy\} \preceq q\{y_{1}:=x\}$. 
+{\color{red}
+From this, we have $p\preceq q$.
+This contradicts the assumption that $p$ and $q$ satisfy 
+  $p\not\preceq q$ holds.}
+%This contradicts the assumption that $p\{x:=xy\} \not\preceq q$. 
+Similarly, we can show that the other cases of (1) and (3') also contradict the assumption.
 
 From the above, we conclude that if $p \{ x := r \} \preceq q$ for all $r \in \{ ya, bc, dy \}$ (\TheConditionB), then $p \{ x := xy \} \preceq q$ holds.
 \end{proof}
@@ -464,7 +487,8 @@ When the conditions of Lemmas \ref{lem:addpart}, \ref{lem:oneside_i}, and \ref{l
 \begin{prop}\label{prop:bothsides}
   Let $\Sigma$ be an alphabet with $\sharp \Sigma \ge 3$.
   For a variable symbol $y$, let $D= \{ ya, bc, dy \}$ $(b = a$ and $c = d)$.
-  There exist regular patterns $p$ and $q$ {\color{red}over} $\Sigma\cup X$ such that $p \{ x := r \} \preceq q$ for any $r \in D$, but $p \{ x := xy \} \not \preceq q$.
+  There exist regular patterns $p$ and $q$ {\color{red} in $\RPat_{\Sigma\cup X}$
+  such that $q$ minimally supports $D$ for $p$ (i.e., $p \{ x := r \} \preceq q$ for any $r \in D$, $p\{x:=by\}\not\preceq q$ and $p\{x:=yc\}\not\preceq q$)}, but $p \{ x := xy \} \not \preceq q$.
 \end{prop}
 
 \begin{proof}

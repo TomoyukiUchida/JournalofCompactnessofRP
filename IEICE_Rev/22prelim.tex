@@ -93,14 +93,14 @@ The following Example \ref{counter-example4Theorem11} in \cite{Sato1} shows that
 %****** mukouchi 227ページ
 \begin{ex}\label{counter-example4Theorem11}
     Let $k$ be a positive integer and $\Sigma= \{a_{1},\ldots,a_{k},b_{1},\ldots,b_{k}\}$.
-    Let $w_{1},\ldots,w_{k}$ be regular patterns in $\RPat$ such that 
+    Let $w_{1},\ldots,w_{k}$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$} such that 
     $w_{k} = \varepsilon$ and for $i=1,2,\ldots,k-1$, $w_{i} = w_{i+1}b_{i+1}a_{i+1}w_{i+1}$ hold.
     Let $p$, $q_{1},\ldots,q_{k}$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$} such that
-    $p = x_{1}a_{1}w_{1}xw_{1}b_{1}x_{2}$ and  for $i=1,2,\ldots,k$, $q_{i} = x_{1}a_{i}w_{i}b_{i}x_{2}$ hold.
+    $p = x_{1}a_{1}w_{1}xw_{1}b_{1}x_{2}$ and for $i=1,2,\ldots,k$, $q_{i} = x_{1}a_{i}w_{i}b_{i}x_{2}$ hold.
     Let $Q$ be a set $\{q_{1},\ldots,q_{k}\}$ in $\RPatkei$.
     For $i=1$, we have $p\{x:=a_{1}\} =(x_{1}a_{1}w_{1})a_{1}(w_{1}b_{1}x_{2})=q_1\{x_{1}:=x_{1}a_{1}w_{1}\}\preceq q_{1}$.
     For $i\geq 2$, from the definition of $w_{i}$,
-    we easily see that $w_{1}=(w_{i}b_{i})w^{(i)}={\color{red}w^{\prime(i)}}(a_{i}w_{i})$ for some strings $w^{(i)}$ and $w^{'(i)}$.
+    we easily see that $w_{1}=(w_{i}b_{i})w^{(i)}={\color{red}w^{\prime(i)}}(a_{i}w_{i})$ for some strings $w^{(i)}$ and $w^{\prime(i)}$.
     Then, for each $i\geq 2$, 
     \begin{eqnarray*}
         p \{ x:=a_{i} \} & = & (x_{1}a_{1}w_{1})a_{i}(w_{1}b_{1}x_{2})\\

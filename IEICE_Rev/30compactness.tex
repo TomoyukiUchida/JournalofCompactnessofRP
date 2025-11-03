@@ -6,6 +6,38 @@ In the following subsections (Subsecs.~\ref{subsec:d2}--\ref{subsec:d3c}), we pr
 It is obvious if the variable symbol $x$ does not appear in $p$.
 Therefore, in the following lemmas and propositions, let $p=p_{1}xp_{2}$, where $p_{i}\in \RPat$ ($i=1,2$) and $x$ is a variable symbol.
 
+{\color{red}
+In Lemma 14 (ii) of \cite{Sato1}, 
+they stated that, when $\sharp \Sigma \geq 3$, for regular patterns $p,q$, if $p\{x:=r\}\preceq q$ for any $r\in D$, then $p\{x:=xy\} \preceq q$ holds, where 
+$D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$ $(a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\le i,j\le 3))$.
+Unfortunately, there exist the following counterexamples of Lemma 14 (ii) of \cite{Sato1}.
+\begin{ex}\label{CounterExample_Lemma14}
+Assume that $a_1=b_2$ and $a_3=b_1$ hold.
+{\color{red} In the following two examples, we have that $p\{x:=r\}\preceq q$ holds for $r\in D$}.
+  
+\begin{itemize}
+\item[(1)] 
+Let $p=ca_1xa_3c$ and $q=ya_1a_3z$ {\color{red} where $c$ is a symbol in $\Sigma$}.
+It is clear that $p\{x:=xy\} \not\preceq q$ holds.
+However, we can see that $p\{x:=a_1b_1\}\preceq q$, $p\{x:=a_2b_2\}\preceq q$ and $p\{x:=a_3b_3\}\preceq q$ hold, 
+since
+$p\{x:=a_1b_1\}=ca_1a_1b_1a_3c=q\{y:=ca_1,z:=a_3c\}$,
+$p\{x:=a_2b_2\}=ca_1a_2b_2a_3c=q\{y:=ca_1a_2,z:=c\}$ and 
+$p\{x:=a_3b_3\}=ca_1a_3b_3a_3c=q\{y:=c,z:=b_3a_3c\}$ hold.
+
+\item[(2)] 
+%Assume that $a_1 = b_2$ and $a_3 = b_1$ hold.
+Let $p=cb_2a_1b_1b_2xa_1b_1b_2a_3c$ and $q=yb_2a_1b_1b_2a_3z$  {\color{red} where $c$ is a symbol in $\Sigma$}.
+It is clear that $p\{x:=xy\} \not\preceq q$ holds.
+However, we have $p\{x:=a_1b_1\}\preceq q$, $p\{x:=a_2b_2\} \preceq q$, and $p\{x:=a_3b_3\} \preceq q$, 
+since  
+$p\{x:=a_1b_1\}=cb_2a_1b_1b_2a_1b_1a_1b_1b_2a_3c=q\{y:=cb_2a_1b_1,z:=b_2a_3c\}$,
+$p\{x:=a_2b_2\}=cb_2a_1b_1b_2a_2b_2a_1b_1b_2a_3c=q\{y:=cb_2a_1b_1b_2a_2,z:=c\}$,
+and  $p\{x:=a_3b_3\}=cb_2a_1b_1b_2a_3b_3a_1b_1b_2a_3c=q\{y:=c,z:=b_3a_1b_1b_2a_3c\}$ hold.
+\end{itemize}
+\end{ex}
+}
+
 We consider the correspondence from $r\in D$ to some string in $q$ when $p \{ x := r \} \preceq q$ holds.
 The symbols in $D$ correspond to either a variable or a constant symbol in $q$.
 If $D$ has a constant string $ab$ of length $2$ for $a,b\in\Sigma$, there are three possible strings in $q$ that correspond to $ab$ in $p\{x:=ab\}$ as follows: For $y_{1} \in X$,
