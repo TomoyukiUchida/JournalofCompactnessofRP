@@ -76,14 +76,24 @@ the following Corollary~\ref{Col18} holds.
     Then, $S_{2}(P)$ is a characteristic set for $L(P)$ within $\RPatLkei$.
 \end{col}
 
+{\color{red}Then, from Theorem~\ref{Theorem17},
+we have the following Theorem~\ref{Theorem5}.}
 
+\begin{thm}\label{Theorem5}
+    Let $k \geq 3$ and $\sharp\Sigma \geq 2k-1$.
+    Then, $\RPatkei$ has compactness with respect to {\color{red} language} containment.
+\end{thm}
+
+{\color{red} 
+The following lemma demonstrates that Theorem~\ref{Theorem5} fails to hold under the condition $\sharp\Sigma \leq 2k-2$, thereby establishing the minimum cardinality of $\Sigma$  required for the validity of Theorem~\ref{Theorem5}.
+}
 \begin{lem}[Sato et al.\cite{Sato1}]\label{Sato1:Lemma19}%\label{補題19}
     Let $k \geq 3$ and $\sharp\Sigma \leq 2k-2$.
-    Then, $\RPatkei$ does not have compactness with respect to containment.
+    Then, $\RPatkei$ does not have compactness with respect to {\color{red} language} containment.
 \end{lem}
 
 \begin{proof}
-    Let $\Sigma =\{a_{1},\ldots,a_{k-1},b_{1},\ldots,b_{k-1}\}${\color{red}. 
+    Let $\Sigma =\{a_{1},\ldots,a_{k-1},b_{1},\ldots,b_{k-1}\}${\color{red},
     $p, q_{i}$ regular patterns, $w_{i}=w_{i+1}b_{i+1}a_{i+1}w_{i+1} \in \Sigma^{\ast}$\ $(i=1,\ldots,k-2)$ and $w_{k-1}=\varepsilon$}
     defined in a similar way to Example~\ref{counter-example4Theorem11}. %\ref{例題1}.
     Let $q_{k}=x_{1}a_{1}w_{1}xyw_{1}b_{1}x_{2}$.
@@ -98,16 +108,8 @@ the following Corollary~\ref{Col18} holds.
     By Theorem~\ref{regularPatternEquivalence},
     since $p \not \preceq q_{i}$, $L(p) \not \subseteq L(q_{i})$
     for any $i \in \{1,\ldots, k\}$.
-    Therefore, $\RPatkei$ does not have compactness with respect to containment.
+    Therefore, $\RPatkei$ does not have compactness with respect to {\color{red} language} containment.
 \end{proof}
-
-From Theorem~\ref{Theorem17} and Lemma~\ref{Sato1:Lemma19}, 
-we have the following Theorem~\ref{Theorem5}.
-
-\begin{thm}\label{Theorem5}
-    Let $k \geq 3$ and $\sharp\Sigma \geq 2k-1$.
-    Then, $\RPatkei$ has compactness with respect to containment.
-\end{thm}
 
 In case $k=2$, we have the following theorem.
 
@@ -191,5 +193,5 @@ the following two corollaries holds.
 
 \begin{col}
     Let $\sharp\Sigma \geq 4$.
-    Then, $\RPat^{2}$ has compactness with respect to containment.
+    Then, $\RPat^{2}$ has compactness with respect to {\color{red} language} containment.
 \end{col}

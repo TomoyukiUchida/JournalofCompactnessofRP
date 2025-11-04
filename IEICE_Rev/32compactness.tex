@@ -227,7 +227,7 @@ In (\ref{lem:addpart}-3), when $a = d$, the substring $y_1ay_2$, formed by a one
   Therefore, $w^{\prime}daw^{\prime\prime} = w^{\prime\prime}bcw^{\prime}$ holds.
   From Proposition~\ref{prop:repstring}, $\pair{b}{c} \in \{\pair{a}{d}, \pair{d}{a}\}$ holds.
   This contradicts the conditions \TheConditionA.
-  \item {\color{red}$|w| < |w^{\prime}|$: The proof can be established in a manner analogous to the case where $|w|>|w^{\prime}$.}
+  \item {\color{red}$|w| < |w^{\prime}|$: The proof can be established in a manner analogous to the case where $|w|>|w^{\prime}|$.}
 \end{itemize}
 
   From the above, we conclude that all cases of (\ref{lem:addpart}-1) contradict the assertion that {\color{red}$p\not\preceq q$} and the conditions \TheConditionA.
@@ -296,6 +296,8 @@ We suppose that $(A, B) = (dy_{1}a, bc)$, i.e., $q = q_{1}dy_{1}awbcq_{2} $ hold
   From the above, we conclude that if $p \{ x := r \} \preceq q$ for all $r {\color{red}\in}  \{ ya, bc, dy \}$ (\TheConditionA), then $p \{ x := xy \} \preceq q$ holds.
   \end{proof}
 
+  \noindent
+  {\color{red} Note that Lemma~\ref{lem:addpart} is valid under the condition that $\sharp\Sigma \geq 2$.}
   The condition in Lemma~\ref{lem:addpart} is illustrated in four cases (3)--(6) in Fig.~\ref{fig:lem5bigraph}.
 
   \begin{figure*}[t]
@@ -451,19 +453,6 @@ Similarly, we can show that the other cases of (1) and (3') also contradict the 
 From the above, we conclude that if $p \{ x := r \} \preceq q$ for all $r \in \{ ya, bc, dy \}$ (\TheConditionB), then $p \{ x := xy \} \preceq q$ holds.
 \end{proof}
 
-The conditions in Lemmas~\ref{lem:oneside_i} and \ref{lem:oneside_ii} are illustrated in (7) and (8) in Fig.~\ref{fig:lem6bigraph}, respectively.
-
-\begin{figure}[t]
-  \begin{center}
-    \includegraphics[scale=0.525]{figs/lem6bigraph.pdf}
-    \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and {\color{red}$p,q \in \RPat_{\Sigma\cup X}$ with $p\not\preceq q$}. We assume that the symbols in $\Sigma$ are mutually distinct.
-    The figures (7) and (8) express two cases $D = \{ ya, ac, dy \}$ and $D = \{ ya, bd, dy \}$ in Lemmas~\ref{lem:oneside_i} and \ref{lem:oneside_ii}, respectively.
-    In these cases, if $p \{ x := r \} \preceq q$ for all $r \in D$,
-    % and $D$ is maximally generalized {\color{red}with respect to} ($p,q$),
-     then $p \{ x := xy \} \preceq q$ holds.}\label{fig:lem6bigraph}
-  \end{center}
-\end{figure}
-
 \begin{lem}\label{lem:oneside_ii}
   {\color{red}Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$, $p,~q$ be regular patterns in $\RPat_{\Sigma\cup X}$ with $p\not\preceq q$ and
   $D=\{ya,bc,dy\}\subsetneq \RPat_{\Sigma\cup X}$ where \underline{\TheConditionCComma},
@@ -482,13 +471,27 @@ The conditions in Lemmas~\ref{lem:oneside_i} and \ref{lem:oneside_ii} are illust
 The proof follows by reversing $p$ and $q$ and subsequently applying Lemma~\ref{lem:oneside_i}.
 \end{proof}
 
+{\color{red} The conditions in Lemmas~\ref{lem:oneside_i} and \ref{lem:oneside_ii} are illustrated in (7) and (8) in Fig.~\ref{fig:lem6bigraph}, respectively.}
+
+\begin{figure}[t]
+  \begin{center}
+    \includegraphics[scale=0.525]{figs/lem6bigraph.pdf}
+    \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and {\color{red}$p,q \in \RPat_{\Sigma\cup X}$ with $p\not\preceq q$}. We assume that the symbols in $\Sigma$ are mutually distinct.
+    The figures (7) and (8) express two cases $D = \{ ya, ac, dy \}$ and $D = \{ ya, bd, dy \}$ in Lemmas~\ref{lem:oneside_i} and \ref{lem:oneside_ii}, respectively.
+    In these cases, if $p \{ x := r \} \preceq q$ for all $r \in D$,
+    % and $D$ is maximally generalized {\color{red}with respect to} ($p,q$),
+     then $p \{ x := xy \} \preceq q$ holds.}\label{fig:lem6bigraph}
+  \end{center}
+\end{figure}
+
 When the conditions of Lemmas \ref{lem:addpart}, \ref{lem:oneside_i}, and \ref{lem:oneside_ii} are not satisfied, counterexamples can be constructed as follows:
 
 \begin{prop}\label{prop:bothsides}
-  Let $\Sigma$ be an alphabet with $\sharp \Sigma \ge 3$.
+  {\color{red} Let $\Sigma$ be an alphabet.} 
+  % with $\sharp \Sigma \ge 3$.
   For a variable symbol $y$, let $D= \{ ya, bc, dy \}$ $(b = a$ and $c = d)$.
   There exist regular patterns $p$ and $q$ {\color{red} in $\RPat_{\Sigma\cup X}$
-  such that $q$ minimally supports $D$ for $p$ (i.e., $p \{ x := r \} \preceq q$ for any $r \in D$, $p\{x:=by\}\not\preceq q$ and $p\{x:=yc\}\not\preceq q$)}, but $p \{ x := xy \} \not \preceq q$.
+  such that $q$ minimally supports $D$ for $p$ (i.e., $p\not\preceq q$, $p \{ x := r \} \preceq q$ for any $r \in D$, $p\{x:=by\}\not\preceq q$ and $p\{x:=yc\}\not\preceq q$)}, but $p \{ x := xy \} \not \preceq q$.
 \end{prop}
 
 \begin{proof}
