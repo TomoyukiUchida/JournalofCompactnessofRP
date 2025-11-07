@@ -4,7 +4,7 @@
 $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}\subsetneq \RPat_{\Sigma\cup X}$ or $D = \{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\} \subsetneq \RPat_{\Sigma\cup X}$,
 we consider a regular pattern $q$ in $\RPat_{\Sigma\cup X}$ 
 such that $q$ minimally supports $D$ for a regular pattern $p$. %with $p\not\preceq q$ under some conditions with the symbols $a_i,b_i$ for $i~(1\leq i\leq 3)$.
-Obviously, we remark that $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}$ and $D = \{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\}$ satisfies that $a_{i}\neq a_{3}$ and $b_{i}\neq b_{3}$ for $i=1,2$, respectively.
+Obviously, we remark that $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}$ and $D = \{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\}$ {\color{red} satisfy} that $a_{i}\neq a_{3}$ and $b_{i}\neq b_{3}$ for $i=1,2$, respectively.
 }
 
 %\begin{lem}\label{lem:3consts_ii}
@@ -22,7 +22,7 @@ Obviously, we remark that $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}$ and $D = \{ 
 %\end{lem}
 
 \begin{lem}\label{lem:3consts_i}
-  Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$, $p,~q$ regular patterns {\color{red}in $\RPat_{\Sigma\cup X}$ with $p\not\preceq q$} and
+  Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$, $p,~q$ regular patterns {\color{red}in $\RPat_{\Sigma\cup X}$} and
   {\color{red} $D=\{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}\subsetneq \RPat_{\Sigma\cup X}$
   where \underline{$a_{i}\neq a_{j}$ for $i,j(1\leq i,j\leq 3, i\neq j)$,$b_{1}\neq b_{2}$}
    and $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.
@@ -39,6 +39,7 @@ then $p \{ x := xy \} \preceq q$ holds.}
 
 \begin{proof}
 %This corresponds to case (ii).
+{\color{red} We may assume $p\not\preceq q$, since the case $p\preceq q$ is trivial.}
 We assume that $p \{ x := xy \} \not\preceq q$ holds. 
 %Let $A,B,C$ be distinct regular patterns in $\{a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}$ such that $q=q_{1}AwBw^{\prime}Cq_{2}$.
 %The following conditions (1),(2),(3),(1'),(2'),(3') must be satisfied:
@@ -197,7 +198,7 @@ Hence, if $p_{2} \preceq wa_{1}b_{1}b_{2}q_{2}$ of (1') holds, since $p=p_{1}xp_
 {\color{red}
 %From this, we have $p\preceq q$.
 Thus, this contradicts the assumption that $p$ and $q$ satisfy 
-  $p\not\preceq q$ holds.}
+  $p\not\preceq q$.}
 %Thus, this contradicts the assumption.
 Similarly, $p_{2} \preceq y_{1}^{\prime}wa_{1}b_{1}b_{2}q_{2}$ of (1') leads to a contradiction.
 
@@ -218,7 +219,7 @@ From (3), $p_{1} \preceq q_{1}^{\prime}q_{2}^{\prime}$ holds, and from (1'), $p_
 Since $q_{2}^{\prime}$ contains a variable symbol $y_{1}$, $p\preceq q$ holds from Theorem \ref{Sato1:Lemma9}.
 {\color{red}
 This contradicts the assumption that $p$ and $q$ satisfy 
-  $p\not\preceq q$ holds.}
+  $p\not\preceq q$.}
 %This contradicts the assumption.
 \end{proof}
 
@@ -237,7 +238,7 @@ This contradicts the assumption that $p$ and $q$ satisfy
 %\end{lem}
 
 \begin{lem}\label{lem:3consts_ii}
-  Let $\Sigma$ be an alphabet $\sharp\Sigma \ge 3$, $p,~q$ regular patterns {\color{red} in $\RPat_{\Sigma\cup X}$ with $p\not\preceq q$ and
+  Let $\Sigma$ be an alphabet $\sharp\Sigma \ge 3$, $p,~q$ regular patterns {\color{red} in $\RPat_{\Sigma\cup X}$ and
   $D=\{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\} \subsetneq \RPat_{\Sigma\cup X}$
   where \underline{$a_{1}\neq a_{2}$, $b_{i}\neq b_{j}$ for $1\leq i,j\leq 3$ with $i\neq j$} and $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.
   Then, 
@@ -338,7 +339,7 @@ The conditions in Lemmas~\ref{lem:3consts_i}, \ref{lem:3consts_ii}, and \ref{lem
 %\end{lem}
 
 \begin{lem}\label{lem:3consts_iii}
-  Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$, $p,~q$ regular pattern {\color{red}in $\RPat_{\Sigma\cup X}$ with $p\not\preceq q$} and
+  Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$, $p,~q$ regular pattern {\color{red}in $\RPat_{\Sigma\cup X}$} and
   {\color{red} $D=\{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}\subsetneq \RPat_{\Sigma\cup X}$ where $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ with } i\ne j ~(1\le i,j\le 3)$.
   If $q$ minimally supports $D$ for a regular pattern $p$, then $p \{ x := xy \} \preceq q$.}
   %Let $D$ be the following set of regular patterns {\color{red}over} $\Sigma\cup X$, where $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$:
@@ -360,6 +361,7 @@ The conditions in Lemmas~\ref{lem:3consts_i}, \ref{lem:3consts_ii}, and \ref{lem
 %\end{figure}
 %\noindent
 %This corresponds to case (i).
+{\color{red} We may assume $p\not\preceq q$, since the case $p\preceq q$ is trivial.}
 We assume that $p \{ x := xy \} \not\preceq q$ holds.
 %Since $D$ is maximally generalized {\color{red}with respect to} $(p,q)$, 
 Since $q$ minimally supports $D$ for $p$,

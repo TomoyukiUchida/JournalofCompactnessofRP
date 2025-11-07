@@ -1,7 +1,7 @@
 %\section{Compactness for Sets of Regular Patterns}
 %\subsection{Compactness}\label{subsec:compactness}
 
-Let {\color{red}$D \subsetneq \RPat_{\Sigma\cup X}$} with $\sharp D = 2$ or $3$, and let $p,q$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$ with $p\not\preceq q$}.
+Let {\color{red}$D \subsetneq \RPat_{\Sigma\cup X}$} with $\sharp D = 2$ or $3$, and let $p,q$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$}.
 In the following subsections (Subsecs.~\ref{subsec:d2}--\ref{subsec:d3c}), we provide the conditions on $D$ under which the implication holds: if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.
 It is obvious if the variable symbol $x$ does not appear in $p$.
 Therefore, in the following lemmas and propositions, let $p=p_{1}xp_{2}$, where $p_{i}\in \RPat$ ($i=1,2$) and $x$ is a variable symbol.
@@ -83,7 +83,7 @@ Then, if for any $ab\in D$ ($a,b\in\Sigma$), {\color{red} $ay,yb\not\in D$}, $p 
 \begin{lem}\label{lem:twovariables}
 Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$.
 %$p,q$ regular patterns on $\Sigma\cup X$.
-Let $p,q$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$ with $p\not\preceq q$}.
+Let $p,q$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$}.
 Let $D$ be the following set of regular patterns in $\RPat_{\Sigma\cup X}$, where $y$ is a variable symbol that does not appear in $p$ and $q$:
 \begin{enumerate}
 \item[{\rm (i)}] $D=\{ ay, by \}$ ($a \not= b$),
@@ -103,6 +103,7 @@ Then, if $p \{ x := r \} \preceq q$ holds for all $r \in D$, then $p \{ x := xy 
 Case \textrm{(ii)} follows from case \textrm{(i)} by symmetry, upon reversing the strings $p$ and $q$.
 }
 Therefore, in the following, we consider only the case of \textrm{(i)}: $D=\{ ay, by \}$ ($a \not= b$).
+{\color{red} We may assume $p\not\preceq q$, since the case $p\preceq q$ is trivial.}
 %
 %{\color{red} We assume that $p\not\preceq q$ holds in order to derive a contradiction.}
 %

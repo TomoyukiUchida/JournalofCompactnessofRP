@@ -29,7 +29,7 @@ since $q$ minimally supports $D$ for $p$.
 
 
 \begin{lem}\label{lem:addpart}
-  Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and $p,~q$ regular patterns in {\color{red} $\RPat_{\Sigma\cup X}$ with $p\not\preceq q$}.
+  Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$ and $p,~q$ regular patterns in {\color{red} $\RPat_{\Sigma\cup X}$}.
   {\color{red} Let $D = \{ ya, bc, dy \} \subset \RPat_{\Sigma\cup X}$ 
   %such that $D$ is maximally generalized {\color{red}with respect to} ($p,q$), where \TheConditionAprime~(that is, \TheConditionA),
   where \underline{\TheConditionAComma}~  and 
@@ -47,6 +47,7 @@ since $q$ minimally supports $D$ for $p$.
   %If no variable symbol appears in $p$, the statement holds trivially.
   %Thus, for a variable symbol $x\in X$, let $p=p_{1}xp_{2}$, where each $p_{i} \in \RPat$ ($i=1,2$).
  %We assume that $p \{ x := xy \} \not\preceq q$ in order to derive a contradiction.
+ {\color{red} We may assume $p\not\preceq q$, since the case $p\preceq q$ is trivial.}
   We assume that 
   $p \{ x := xy \} \not\preceq q$
   in order to derive a contradiction
@@ -136,7 +137,7 @@ In (\ref{lem:addpart}-3), when $a = d$, the substring $y_1ay_2$, formed by a one
   Since $p_{1} \preceq q_{1}dy_{2}wy_{1}aw^{\prime}$ holds from (3), both $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$ and $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$ hold, and $q_{2}^{\prime}$ contains a variable symbol.
   In both cases, by Theorem~\ref{Sato1:Lemma9}, $p \preceq q$ holds.
   {\color{red}This contradicts the assumption that $p$ and $q$ satisfy 
-  $p\not\preceq q$ holds.}
+  $p\not\preceq q$.}
   %$p \{ x := xy \} \not \preceq q$.
 
   Similarly, we can show that any case where $(A, B, C) = (y_{1}a, dy_{2}, bc)$, $(bc, y_{1}a, dy_{2})$, or $(bc, dy_{2}, y_{1}a)$ also contradicts the assumption.
@@ -165,13 +166,13 @@ In (\ref{lem:addpart}-3), when $a = d$, the substring $y_1ay_2$, formed by a one
   When $p_{2} \preceq wbcw^{\prime}y_{1}aq_{2}$ in (1'), we have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xwbcw^{\prime}y_{1}aq_{2}=q \{ y_{2}:=p^{\prime\prime}_{1}x \}$.
   Thus, $p \{ x := xy \} \preceq q \{ y_{2}:=p^{\prime\prime}_{1}xy \}$ holds.
   {\color{red}This contradicts the assumption that $p$ and $q$ satisfy 
-  $p\not\preceq q$ holds.}
+  $p\not\preceq q$.}
   %This contradicts the assumption that $p \{ x := xy \} \not \preceq q$.
   %
   When $p_{2} \preceq y_{2}^{\prime}wbcw^{\prime}y_{1}aq_{2}$ in (1'), we similarly have $p=p_{1}xp_{2}=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xy_{2}^{\prime}wbcw^{\prime}y_{1}aq_{2}=q \{ y_{2}:=p^{\prime\prime}_{1}xy_{2}^{\prime} \}$.
   Thus, $p \{ x := xy \} \preceq q \{ y_{2}:=p^{\prime\prime}_{1}xyy_{2}^{\prime} \}$ holds.
   {\color{red}This also contradicts the assumption that $p$ and $q$ satisfy 
-  $p\not\preceq q$ holds.}
+  $p\not\preceq q$.}
   %  This also contradicts the assumption.
   %
   Therefore, we conclude that $(A, B, C) = (y_{1}a, bc, dy_{2})$.
@@ -200,7 +201,7 @@ In (\ref{lem:addpart}-3), when $a = d$, the substring $y_1ay_2$, formed by a one
   From (1') and (3), $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$ and $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$.
   If $q_{2}^{\prime}$ contains a variable symbol, then by Theorem~\ref{Sato1:Lemma9}, $p \preceq q$ holds.
   {\color{red}This contradicts the assumption that $p$ and $q$ satisfy 
-  $p\not\preceq q$ holds.}
+  $p\not\preceq q$.}
   %  This contradicts the assumption.
   Therefore, $w$ and $w'$ contain no variable symbols.
   (\textit{End of Proof of Claim} 3)
@@ -258,13 +259,13 @@ We suppose that $(A, B) = (dy_{1}a, bc)$, i.e., $q = q_{1}dy_{1}awbcq_{2} $ hold
   $$p=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq q_{1}dp^{\prime\prime}_{1}xawbcq_{2}=q \{ y_{1}:=p^{\prime\prime}_{1}x \}.$$
   Thus, $p \{ x := xy \} \preceq q \{ y_{1}:=p^{\prime\prime}_{1}xy \}$ holds.
   {\color{red}This contradicts the assumption that $p$ and $q$ satisfy 
-  $p\not\preceq q$ holds.}
+  $p\not\preceq q$.}
     %This contradicts the assumption.
   When $p_{2} \preceq y_{1}^{\prime}awbcq_{2}$ in (1'), we similarly have
   $$p=p^{\prime}_{1}p^{\prime\prime}_{1}xp_{2} \preceq {\color{red}q_{1}dp^{\prime\prime}_{1}xy_{1}^{\prime}awbcq_{2}}=q \{ y_{1}:=p^{\prime\prime}_{1}xy_{1}^{\prime} \}.$$
   %Thus, $p \{ x := xy \} \preceq q \{ y_{1}:=p^{\prime\prime}_{1}xyy_{1}^{\prime} \}$ holds.
   {\color{red}This contradicts the assumption that $p$ and $q$ satisfy 
-  $p\not\preceq q$ holds.}
+  $p\not\preceq q$.}
   %  This contradicts the assumption that $p \{ x := xy \} \not\preceq q$.
   %
   Similarly, we can show that the case $(A, B) = (bc, dy_{1}a)$ also contradicts the assumption.
@@ -286,7 +287,7 @@ We suppose that $(A, B) = (dy_{1}a, bc)$, i.e., $q = q_{1}dy_{1}awbcq_{2} $ hold
   Let $q^{\prime}_{1}=q_{1}y_{1}a,~q^{\prime}_{2}=y_{2}w,~q^{\prime}_{3}=bcq_{2}$. From (3) and (1'), we have $p_{1} \preceq q^{\prime}_{1}q^{\prime}_{2}$ and $p_{2} \preceq q^{\prime}_{2}q^{\prime}_{3}$, respectively.
   Since $q_{2}^{\prime}$ contains a variable symbol, Theorem~\ref{Sato1:Lemma9} implies that $p \preceq q$ holds.
   {\color{red}This contradicts the assumption that $p$ and $q$ satisfy 
-  $p\not\preceq q$ holds.}
+  $p\not\preceq q$.}
   %  This contradicts the assumption.
   %
   Similarly, we can show that the case $(A, B) = (bc, y_{1}ay_{2})$ also contradicts the assumption.
@@ -303,7 +304,7 @@ We suppose that $(A, B) = (dy_{1}a, bc)$, i.e., $q = q_{1}dy_{1}awbcq_{2} $ hold
   \begin{figure*}[t]
     \begin{center}
       \includegraphics[scale=0.525]{figs/lem5bigraph.pdf}
-      \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and {\color{red}$p,q \in \RPat_{\Sigma\cup X}$ with $p\not\preceq q$}. We assume that the symbols in $\Sigma$ are mutually distinct. The figure (3) expresses case $D = \{ ya, bc, dy \}$ in Lemma~\ref{lem:addpart}.
+      \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and {\color{red}$p,q \in \RPat_{\Sigma\cup X}$}. We assume that the symbols in $\Sigma$ are mutually distinct. The figure (3) expresses case $D = \{ ya, bc, dy \}$ in Lemma~\ref{lem:addpart}.
       The figures (4), (5), and (6) express three cases $D = \{ ya, bc, ay \}$, $D = \{ ya, bb, dy \}$, and $D = \{ ya, bb, ay \}$, respectively.
       In these cases, if $p \{ x := r \} \preceq q$ for all $r \in D$,
       % and $D$ is maximally generalized {\color{red}with respect to} ($p,q$), 
@@ -313,7 +314,7 @@ We suppose that $(A, B) = (dy_{1}a, bc)$, i.e., $q = q_{1}dy_{1}awbcq_{2} $ hold
 
 
 \begin{lem}\label{lem:oneside_i}
-Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$, $p,~q$ regular patterns {\color{red} in $\RPat_{\Sigma\cup X}$ with $p\not\preceq q$ and
+Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$, $p,~q$ regular patterns {\color{red} in $\RPat_{\Sigma\cup X}$ and
 $D=\{ya,bc,dy\}\subsetneq \RPat_{\Sigma\cup X}$ where \underline{\TheConditionBComma}, and $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.}
 %Let $D$ be one of the following sets of regular patterns {\color{red}over} $\Sigma\cup X$
 %{\color{red} such that and $D$ is maximally generalized {\color{red}with respect to} ($p,q$)}, where $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.
@@ -335,6 +336,7 @@ Then, if
 \begin{proof}
 %It is obvious if no variable symbol appears in $p$.
 %Therefore, let $p=p_{1}xp_{2}$, where $p_{i} \in \RPat$ (for $i=1,2$) and $x \in X$.
+{\color{red} We may assume $p\not\preceq q$, since the case $p\preceq q$ is trivial.}
 We assume that $p \{ x := xy \} \not \preceq q$ in order to derive a contradiction.
 The proof is almost the same as the proof of Lemma~\ref{lem:addpart}.
 %Since $p \{ x := r \} \preceq q$ for all $r \in D$ and $D$ is maximally generalized {\color{red}with respect to} $(p,q)$, 
@@ -446,7 +448,7 @@ For $p_{1} \preceq q_{1}d$ in (1) and $p_{2} \preceq acq_{2}$ in (3'), $p = p_{1
 {\color{red}
 From this, we have $p\preceq q$.
 This contradicts the assumption that $p$ and $q$ satisfy 
-  $p\not\preceq q$ holds.}
+  $p\not\preceq q$.}
 %This contradicts the assumption that $p\{x:=xy\} \not\preceq q$. 
 Similarly, we can show that the other cases of (1) and (3') also contradict the assumption.
 
@@ -454,7 +456,7 @@ From the above, we conclude that if $p \{ x := r \} \preceq q$ for all $r \in \{
 \end{proof}
 
 \begin{lem}\label{lem:oneside_ii}
-  {\color{red}Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$, $p,~q$ be regular patterns in $\RPat_{\Sigma\cup X}$ with $p\not\preceq q$ and
+  {\color{red}Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$, $p,~q$ be regular patterns in $\RPat_{\Sigma\cup X}$ and
   $D=\{ya,bc,dy\}\subsetneq \RPat_{\Sigma\cup X}$ where \underline{\TheConditionCComma},
   and $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.}
   %Let $D$ be one of the following sets of regular patterns {\color{red}over} $\Sigma\cup X$, where $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.
@@ -476,7 +478,7 @@ The proof follows by reversing $p$ and $q$ and subsequently applying Lemma~\ref{
 \begin{figure}[t]
   \begin{center}
     \includegraphics[scale=0.525]{figs/lem6bigraph.pdf}
-    \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and {\color{red}$p,q \in \RPat_{\Sigma\cup X}$ with $p\not\preceq q$}. We assume that the symbols in $\Sigma$ are mutually distinct.
+    \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and {\color{red}$p,q \in \RPat_{\Sigma\cup X}$}. We assume that the symbols in $\Sigma$ are mutually distinct.
     The figures (7) and (8) express two cases $D = \{ ya, ac, dy \}$ and $D = \{ ya, bd, dy \}$ in Lemmas~\ref{lem:oneside_i} and \ref{lem:oneside_ii}, respectively.
     In these cases, if $p \{ x := r \} \preceq q$ for all $r \in D$,
     % and $D$ is maximally generalized {\color{red}with respect to} ($p,q$),

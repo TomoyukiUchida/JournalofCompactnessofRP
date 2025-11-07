@@ -25,7 +25,7 @@ If $p$ and $q$ are equal as strings, we denote it by $p=q$.
 We denote by $p\cdot q$ the string obtained from $p$ and $q$ by concatenating $q$ after $p$.
 Note that for a string $p$ and the empty string $\varepsilon$, $p\cdot \varepsilon = \varepsilon \cdot p = p$.
 
-A substitution $\theta$ is a mapping from $(\Sigma \cup X)^{\ast}$ to $(\Sigma \cup X)^{\ast}$ such that
+A {\color{red} \textit{substitution}} $\theta$ is a mapping from $(\Sigma \cup X)^{\ast}$ to $(\Sigma \cup X)^{\ast}$ such that
 (1) $\theta$ is a homomorphism with respect to string concatenation, i.e., $\theta(p \cdot q) = \theta(p) \cdot \theta(q)$ holds for patterns $p$ and $q$,
 (2) $\theta(\varepsilon)=\varepsilon$ holds,
 (3) for each constant symbol $a \in \Sigma$, $\theta(a) = a$ holds,

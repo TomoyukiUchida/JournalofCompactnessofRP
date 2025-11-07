@@ -13,7 +13,7 @@ $\RPat^{k}$ has compactness with respect to {\color{red} language } containment.
 \begin{dfn}\label{def:compactness}
 Let $\mathcal{C}$ be a subset of $\RPatplus$. 
 For any regular pattern $p \in \RPat$ and any set $Q \in \mathcal{C}$,
-the set $\mathcal{C}$ said to have {\it compactness with respect to {\color{red} language } containment}
+the set $\mathcal{C}$ {\color{red} is said} to have {\it compactness with respect to {\color{red} language } containment}
 if there exists a regular pattern $q \in Q$ such that $L(p) \subseteq L(q)$ holds if $L(p) \subseteq L(Q)$ holds.
 \end{dfn}
 
@@ -31,7 +31,7 @@ if there exists a regular pattern $q \in Q$ such that $L(p) \subseteq L(q)$ hold
   \begin{center}
     %\includegraphics[scale=0.5]{figs/lem8totalreg.eps}
     \includegraphics[scale=0.525]{figs/lem8totalreg.pdf}
-    \caption{In the left figure, we aggregate all edges appearing in Fig.~\ref{fig:lem8eachreg}. For all $w=a'b'\in A'\cdot B'$, there must be a regular pattern $q_i$ $(1\leq i\leq 5$) that satisfies that $p \{ x:=w \} \preceq q_i$.}\label{fig:lem8totalreg}
+    \caption{In the left figure, we aggregate all edges appearing in Fig.~\ref{fig:lem8eachreg}. For all $w=a'b'\in A'\cdot B'$, there must be a regular pattern $q_i$ $(1\leq i\leq 5$) {\color{red} satisfying} $p \{ x:=w \} \preceq q_i$.}\label{fig:lem8totalreg}
   \end{center}
 \end{figure}
 
@@ -54,7 +54,7 @@ if there exists a regular pattern $q \in Q$ such that $L(p) \subseteq L(q)$ hold
 \end{figure}
 
 {\color{red} As a preliminary step toward the main theorem
-that $\RPatkei$ has compactness with respect to language containment, we establish some Lemmas, Theorem and corollaries.}
+that $\RPatkei$ has compactness with respect to language containment, we establish some Lemmas, Theorem and Corollaries.}
 \begin{lem}\label{Add-Lemma01}
 Let $k$ be an integer with $k\geq 1$.
 Let $\Sigma$ be an alphabet with $\sharp \Sigma = k + 2$.
@@ -130,7 +130,7 @@ We partition $Q$ into the following subsets:
   Q^{(\cdot,\cdot)} & = (Q\setminus \sigma_{A}^{-1}(\bot)) \cap (Q\setminus \sigma_{B}^{-1}(\bot)).
 \end{align*}
 From the condition of this lemma, for any string $w \in \Sigma^{\ast}$ with $|w|=2$, there exists a regular pattern $q_{w} \in Q$ such that $p \{ x:=w \} \preceq q_{w}$ holds.
-In particular, for $w=a'b'\in A'\cdot B'$, we must have $q_{w} \in Q$ that satisfies that $p \{ x:=w \} \preceq q_{w}$ (Fig.~\ref{fig:lem8totalreg}).
+In particular, for $w=a'b'\in A'\cdot B'$, we must have $q_{w} \in Q$ {\color{red}satisfying} $p \{ x:=w \} \preceq q_{w}$ (Fig.~\ref{fig:lem8totalreg}).
 It is easy to see that if $w \in (A\cdot B) \cup (A'\cdot B) \cup (A\cdot B')$, there exists a regular pattern $q_{w} \in Q^{(\bot,\cdot)} \cup Q^{(\cdot,\bot)} \cup Q^{(\cdot,\cdot)}$ such that $p \{ x:=w \} \preceq q_{w}$ holds.
 %For $w=a'b'\in A'\cdot B'$, we must have $q_{w} \in Q$ that satisfies that $p \{ x:=w \} \preceq q_{w}$ (Fig.~\ref{fig:lem8totalreg}).
 %The following two claims are proven from Lemmas~\ref{lem:twovariables} and \ref{補題14}:
@@ -317,7 +317,7 @@ Therefore, for such a regular pattern $q$, $p \{x := xy\} \preceq q$ holds.
 %###############
 
 \begin{lem}[Sato et al.\cite{Sato1}]\label{Sato1:Lemma15}%\label{補題15}
-Let $\Sigma$ be a finite alphabet with $\sharp \Sigma \ge 3$ and $p,q$ regular patterns.
+Let $\Sigma$ be {\color{red} an alphabet} with $\sharp \Sigma \ge 3$ and $p,q$ regular patterns.
 If there exists a constant symbol $a \in \Sigma$ such that $p \{ x := a \} \preceq q$ and $p \{ x := xy \} \preceq q$, then $p \preceq q$ holds, where $y$ is a variable symbol that does not appear in $q$.
 \end{lem}
 
