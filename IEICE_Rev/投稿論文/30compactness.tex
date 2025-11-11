@@ -1,5 +1,3 @@
-%\section{Compactness for Sets of Regular Patterns}
-%\subsection{Compactness}\label{subsec:compactness}
 
 Let {\color{red}$D \subsetneq \RPat_{\Sigma\cup X}$} with $\sharp D = 2$ or $3$, and let $p,q$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$}.
 In the following subsections (Subsecs.~\ref{subsec:d2}--\ref{subsec:d3c}), we provide the conditions on $D$ under which the implication holds: if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.
@@ -7,8 +5,7 @@ It is obvious if the variable symbol $x$ does not appear in $p$.
 Therefore, in the following lemmas and propositions, let $p=p_{1}xp_{2}$, where $p_{i}\in \RPat$ ($i=1,2$) and $x$ is a variable symbol.
 
 {\color{red}
-In Lemma 14 (ii) of \cite{Sato1}, 
-they stated that, when $\sharp \Sigma \geq 3$, for regular patterns $p,q$, if $p\{x:=r\}\preceq q$ for any $r\in D$, then $p\{x:=xy\} \preceq q$ holds, where 
+Lemma 14 (ii) of \cite{Sato1} stated that, when $\sharp \Sigma \geq 3$, for regular patterns $p,q$, if $p\{x:=r\}\preceq q$ for any $r\in D$, then $p\{x:=xy\} \preceq q$ holds, where 
 $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$ $(a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\le i,j\le 3))$.
 Unfortunately, there exist the following counterexamples of Lemma 14 (ii) of \cite{Sato1}.
 \begin{ex}\label{CounterExample_Lemma14}
@@ -19,17 +16,16 @@ Assume that $a_1=b_2$ and $a_3=b_1$ hold.
 \item[(1)] 
 Let $p=ca_1xa_3c$ and $q=ya_1a_3z$ {\color{red} where $c$ is a symbol in $\Sigma$}.
 It is clear that $p\{x:=xy\} \not\preceq q$ holds.
-However, we can see that $p\{x:=a_1b_1\}\preceq q$, $p\{x:=a_2b_2\}\preceq q$ and $p\{x:=a_3b_3\}\preceq q$ hold, 
+However, we have that $p\{x:=a_1b_1\}\preceq q$, $p\{x:=a_2b_2\}\preceq q$ and $p\{x:=a_3b_3\}\preceq q$ hold, 
 since
 $p\{x:=a_1b_1\}=ca_1a_1b_1a_3c=q\{y:=ca_1,z:=a_3c\}$,
 $p\{x:=a_2b_2\}=ca_1a_2b_2a_3c=q\{y:=ca_1a_2,z:=c\}$ and 
 $p\{x:=a_3b_3\}=ca_1a_3b_3a_3c=q\{y:=c,z:=b_3a_3c\}$ hold.
 
 \item[(2)] 
-%Assume that $a_1 = b_2$ and $a_3 = b_1$ hold.
 Let $p=cb_2a_1b_1b_2xa_1b_1b_2a_3c$ and $q=yb_2a_1b_1b_2a_3z$  {\color{red} where $c$ is a symbol in $\Sigma$}.
 It is clear that $p\{x:=xy\} \not\preceq q$ holds.
-However, we have $p\{x:=a_1b_1\}\preceq q$, $p\{x:=a_2b_2\} \preceq q$, and $p\{x:=a_3b_3\} \preceq q$, 
+However, we have that $p\{x:=a_1b_1\}\preceq q$, $p\{x:=a_2b_2\} \preceq q$ and $p\{x:=a_3b_3\} \preceq q$ hold, 
 since  
 $p\{x:=a_1b_1\}=cb_2a_1b_1b_2a_1b_1a_1b_1b_2a_3c=q\{y:=cb_2a_1b_1,z:=b_2a_3c\}$,
 $p\{x:=a_2b_2\}=cb_2a_1b_1b_2a_2b_2a_1b_1b_2a_3c=q\{y:=cb_2a_1b_1b_2a_2,z:=c\}$,
@@ -67,22 +63,17 @@ Therefore, in this paper, we make the following definition on $D$:
 Let $p,q \in \RPat$ {\color{red} with $p\not\preceq q$}.
 Let $D \subsetneq \RPat$ such that for all $r\in D$, $|r| = 2$ and $p \{ x := r \} \preceq q$ hold.
 Then, if for any $ab\in D$ ($a,b\in\Sigma$), {\color{red} $ay,yb\not\in D$}, $p \{ x := ay \} \not\preceq q$ and $p \{ x := yb \} \not\preceq q$ hold for any $y \in X$ that does not appear in $q$,
-%the set $D$ is said to be \textit{maximally generalized {\color{red}with respect to} ($p,q$)}.
 {\color{red}the regular pattern $q$ is said to \textit{minimally support $D$ for $p$}, in the sense that any generalization of the strings in $D$ would invalidate the conditions $p\{x := r\} \preceq q$ for all $r\in D$}.
 
 \end{dfn}
 
-%{\color{red}In Subsecs.~\ref{subsec:d3a}--\ref{subsec:d3c}, 
-%we consider a regular pattern $q$ which minimally support $D$ for $p$}.
 \noindent{\color{red} In Subsecs.~\ref{subsec:d3a}--\ref{subsec:d3c}, we consider a subset $D \subsetneq \RPat_{\Sigma\cup X}$ such that a regular pattern $q \in \RPat_{\Sigma\cup X}$ minimally support $D$ for a regular pattern $p$.} 
-%$D$ is maximally generalized with respect to $(p,q)$.}
 
 
 \subsection{$D=\{ ay, by \}$ and $D=\{ ya, yb \}$}\label{subsec:d2}
 
 \begin{lem}\label{lem:twovariables}
 Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$.
-%$p,q$ regular patterns on $\Sigma\cup X$.
 Let $p,q$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$}.
 Let $D$ be the following set of regular patterns in $\RPat_{\Sigma\cup X}$, where $y$ is a variable symbol that does not appear in $p$ and $q$:
 \begin{enumerate}
@@ -93,25 +84,11 @@ Then, if $p \{ x := r \} \preceq q$ holds for all $r \in D$, then $p \{ x := xy 
 \end{lem}
 
 \begin{proof}
-%It is obvious if no variable symbol appears in $p$. 
-%Therefore, let $p=p_{1}xp_{2}$, where $p_{i} \in \RPat$ ($i=1,2$) and $x$ is a variable symbol.
-%--------
-%We assume that $p \{ x := xy \} \not \preceq q$ in order to derive a contradiction.
-%In the case of \textrm{(ii)}, by reversing the strings $p$ and $q$, we can prove that the assumption {\color{red}$p \{ x := xy \} \not\preceq q$} leads to a contradiction, as in the case of \textrm{(i)}.
-%----------
 {\color{red}
 Case \textrm{(ii)} follows from case \textrm{(i)} by symmetry, upon reversing the strings $p$ and $q$.
 }
 Therefore, in the following, we consider only the case of \textrm{(i)}: $D=\{ ay, by \}$ ($a \not= b$).
 {\color{red} We may assume $p\not\preceq q$, since the case $p\preceq q$ is trivial.}
-%
-%{\color{red} We assume that $p\not\preceq q$ holds in order to derive a contradiction.}
-%
-%---------
-%Since $p \{ x := xy \} \not \preceq q$, $p_{1}ayp_{2}\preceq q$ and $p_{1}byp_{2}\preceq q$, 
-%there exist regular patterns $q_{1},q_{2}$ {\color{red}over} $\Sigma\cup X$ such that $q=q_{1}ay_{1}wby_{2}q_{2}$ or $q=q_{1}by_{1}way_{2}q_{2}$ for some variable symbols $y_{1},y_{2}~(y_{1} \not= y_{2})$ and a constant string $w$ ($|w|\geq 0$) from Theorem \ref{Sato1:Lemma9}.
-%-------------------
-%
 {\color{red} Since $p\not\preceq q$, but $p_{1}ayp_{2}\preceq q$ and $p_{1}byp_{2}\preceq q$ hold, it follows from Theorem~\ref{Sato1:Lemma9} that
 there exist regular patterns $q_{1},q_{2}$ {\color{red}over} $\Sigma\cup X$ such that $q=q_{1}ay_{1}wby_{2}q_{2}$ or $q=q_{1}by_{1}way_{2}q_{2}$ for some variable symbols $y_{1},y_{2}$ with $y_{1} \not= y_{2}$, and a constant string $w\in \Sigma^{*}$ with $|w|\geq 0$.
 }
@@ -130,12 +107,6 @@ if $p_{2} \preceq wby_{2}q_{2}$ of (1') holds,
 $p\preceq q_{1}ap_{1}^{\prime\prime}xwby_{2}q_{2}\equiv q \{ y_{1} := p_{1}^{\prime\prime}x \}$ holds.
 If $p_2\preceq y_{1}^{\prime}wby_{2}q_{2}$ of (1') holds, $p\preceq q_{1}ap_{1}^{\prime\prime}xy_{1}^{\prime}wby_{2}q_{2}=q \{ y_{1} := p_{1}^{\prime\prime}xy_{1}^{\prime} \}$ holds.
 Thus, $p\{x := xy\} \preceq q \{ y_{1} := p_{1}^{\prime\prime}xyy_{1}^{\prime} \}$ holds.
-%
-%-------
-%Hence, $p \preceq q$ holds.
-%This contradicts the assumption.
-%-------
-%
 {\color{red} Hence, $p\{x:=xy\}\preceq q$ holds.}
 Therefore, we conclude that if $p \{ x := r \} \preceq q$ for all $r \in \{ ay, by \}$ with $a \not= b$, then $p \{ x := xy \} \preceq q$ holds.
 \end{proof}
@@ -143,12 +114,6 @@ Therefore, we conclude that if $p \{ x := r \} \preceq q$ for all $r \in \{ ay, 
 Let $p,q$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$}.
 In this paper, the statement like Lemma~\ref{lem:twovariables} is illustrated by a bipartite graph $(\Sigma, \Sigma, E)$ where $E = \{(a, b) \in \Sigma\times\Sigma \mid p\{x:=ab\} \preceq q\}$.
 For example, the conditions (i) and (ii) in Lemma~\ref{lem:twovariables} are illustrated in (1) and (2) in Fig.~\ref{fig:lem4bigraph}, respectively.
-%Moreover, we define the sets $A(q), B(q) \subseteq \Sigma$ as follows:
-%\begin{align*}
-%  A(q) & = \{ a \in \Sigma \mid p \{ x:=ay \} \preceq q,\ y\in X\},\\ 
-%  B(q) & = \{ b \in \Sigma \mid p \{ x:=yb \} \preceq q,\ y\in X\}.
-%  \end{align*}
-%If either $|A(q)|\geq 2$ or $|B(q)|\geq 2$ holds, from Lemma~\ref{lem:twovariables}, $p\{x := xy\} \preceq q$ holds.
 
 \begin{figure}[t]
   \begin{center}

@@ -1,4 +1,4 @@
-Compactness in Finite Unions of Regular Patterns and Regular Patterns without Adjacent Variables
+Compactness of Finite Unions of Regular Patterns and Regular Patterns without Adjacent Variables
 
 Naoto TAKEDA
 Graduate School of Information Sciences, Hiroshima City University
@@ -39,7 +39,7 @@ They also claimed that RP^k is compact with respect to language containment when
 In this paper, we revisit their results and identify an error in the original proof of their theorem. 
 We then present a new and correct proof by introducing additional conditions that guarantee the validity of their claim. 
 Furthermore, we study the subclass RP^k_{NAV}, consisting of at most k (k >= 1) non-adjacent regular patterns, in which no two variable symbols occur consecutively. 
-For any P in RP^k_{NAV}, we prove that the set S_2(P) serves as a characteristic set of L(P) and that RP^k_{NAV}$ is compact with respect to language containment if the number of constant symbols is at least k + 2.
+For any P in RP^k_{NAV}, we prove that the set S_2(P) serves as a characteristic set of L(P) and that RP^k_{NAV} is compact with respect to language containment if the number of constant symbols is at least k + 2.
 These results demonstrate that finite unions of non-adjacent regular pattern languages can be learned efficiently under weaker constraints on constant symbols than those required in the general case. 
 Our analysis thus refines and extends the compactness properties of regular pattern languages originally discussed by Sato et al., providing a corrected theoretical foundation for subsequent studies on the learnability of pattern languages.
 

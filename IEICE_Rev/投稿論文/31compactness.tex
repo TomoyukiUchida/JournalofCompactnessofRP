@@ -3,81 +3,22 @@
 {\color{red} In this subsection, for 
 $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}\subsetneq \RPat_{\Sigma\cup X}$ or $D = \{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\} \subsetneq \RPat_{\Sigma\cup X}$,
 we consider a regular pattern $q$ in $\RPat_{\Sigma\cup X}$ 
-such that $q$ minimally supports $D$ for a regular pattern $p$. %with $p\not\preceq q$ under some conditions with the symbols $a_i,b_i$ for $i~(1\leq i\leq 3)$.
+such that $q$ minimally supports $D$ for a regular pattern $p$. 
 Obviously, we remark that $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}$ and $D = \{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\}$ {\color{red} satisfy} that $a_{i}\neq a_{3}$ and $b_{i}\neq b_{3}$ for $i=1,2$, respectively.
 }
-
-%\begin{lem}\label{lem:3consts_ii}
-%  Let $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$, where $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\le i,j\le 3)$.
-%  Let $p = p_{1}x_{2}$ for $p_{1},p_{2} \in \RPat \cup \{\varepsilon\}$ and $x \in X$.
-%  If for all $r \in D$, there exist $q_{r,1}$ and $q_{r,2} \in \RPat \cup \{\varepsilon\}$ such that 
-%  \begin{enumerate}
-%  \item[1.] $p_{1} \preceq q_{r,1}$,
-%  \item[2.] $p_{2} \preceq q_{r,2}$ if $r \in \{a_{1}b_{1}, a_{2}b_{2}\}$,
-%  \item[3.] $p_{2} \preceq q_{r,2}$ or $p_{2} \preceq y_{1}^{\prime}q_{r,2}$ if $r = a_{3}b_{3}$ ($y_{1}^{\prime} \in X$),
-%  \item[4.] $p_{1}rp_{2} \preceq q_{r,1}rq_{r,2}$ if $r \in \{a_{1}b_{1}, a_{2}b_{2}\}$, and
-%  \item[5.] $p_{1}rp_{2} \preceq q_{r,1}a_{3}y_{1}q_{r,2}$ if $r = a_{3}b_{3}$ ($y_{1} \in X)$,
-%  \end{enumerate}
-%then $p \{ x := xy \} \preceq q$ holds.  
-%\end{lem}
 
 \begin{lem}\label{lem:3consts_i}
   Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$, $p,~q$ regular patterns {\color{red}in $\RPat_{\Sigma\cup X}$} and
   {\color{red} $D=\{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}\subsetneq \RPat_{\Sigma\cup X}$
-  where \underline{$a_{i}\neq a_{j}$ for $i,j(1\leq i,j\leq 3, i\neq j)$,$b_{1}\neq b_{2}$}
-   and $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.
-  %Let $D$ be the following set of regular patterns {\color{red}over} $\Sigma\cup X$, where $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$:
-  %\begin{align*}
-  %D & = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\},\\
-  %& \mbox{ where } a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ } (i\ne j, 1\le i,j\le 3).
-  %\end{align*}
-  Then, %if $p \{ x := r \} \preceq q$ holds for all $r \in D$,
-  if $q$ minimally supports $D$ for $p$,
-%   and $D$ is maximally generalized {\color{red}with respect to} ($p,q$), 
+  where $a_{i}\neq a_{j}$ for $i,j(1\leq i,j\leq 3, i\neq j)$,$b_{1}\neq b_{2}$
+   and $y$ is a variable symbol in $X$ that appears in neither $p$ nor $q$.
+  Then, if $q$ minimally supports $D$ for $p$,
 then $p \{ x := xy \} \preceq q$ holds.}
 \end{lem}
 
 \begin{proof}
-%This corresponds to case (ii).
 {\color{red} We may assume $p\not\preceq q$, since the case $p\preceq q$ is trivial.}
 We assume that $p \{ x := xy \} \not\preceq q$ holds. 
-%Let $A,B,C$ be distinct regular patterns in $\{a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}$ such that $q=q_{1}AwBw^{\prime}Cq_{2}$.
-%The following conditions (1),(2),(3),(1'),(2'),(3') must be satisfied:
-%\begin{align*}
-%\textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wBw^{\prime}Cq_{2} \\
-%\textrm{(2)}~& p_{1} \preceq q_{1}Aw & \textrm{(2')}~& p_{2} \preceq w^{\prime}Cq_{2} \\
-%\textrm{(3)}~& p_{1} \preceq q_{1}AwBw^{\prime} & \textrm{(3')}~& p_{2} \preceq q_{2}
-%\end{align*}
-%
-%\noindent
-%If $|w|=|w^{\prime}|$, then $Aw$ and $AwBw^{\prime}$ are suffixes of $p_{1}$ from (2) and (3).
-%Hence, $Aw=Bw^{\prime}$ holds.
-%This contradicts the assumption of $A \ne B$.
-%
-%%\noindent
-%If $|w| \ne |w^{\prime}|$, then we consider the two cases $A=a_{3}y$ and $B=a_{3}y$:
-%In the case of $A=a_{3}y$, without losing generality, we assume that $B=a_{1}b_{1}$ and $C=a_{2}b_{2}$. 
-%Then, there exist regular patterns $p_{1}^{\prime}, p_{1}^{\prime\prime}$ such that $p_{1}=p_{1}^{\prime}p_{1}^{\prime\prime}%$, $p_{1}^{\prime} \preceq q_{1}a_{3}$ and $p_{1}^{\prime\prime} \preceq yw$ from (2).
-%Moreover, from (1'), $p=p_{1}xp_{2}=p_{1}^{\prime}p_{1}^{\prime\prime}xp_{2}\preceq q_{1}a_{3}p_{1}^%{\prime\prime}xwa_{1}b_{1}w^{\prime}a_{2}b_{2}q_{2}=
-%q_{1}a_{3}ywa_{1}b_{1}w^{\prime}a_{2}b_{2}q_{2}\{ y := p_{1}^{\prime\prime}x \}=q \{ y := p_{1}^{\prime\prime}x \}$ holds.
-%Hence, $p \preceq q$ holds.
-%This contracts the assumption.
-%In the case of $B=a_{3}y$, without losing generality, we assume that $A=a_{1}b_{1}$ and $C=a_{2}b_{2}$.
-%Let $q_{1}^{\prime}=q_{1}a_{1}b_{1}$, $q_{2}^{\prime}=wa_{3}yw^{\prime}$, and $q_{3}^{\prime}=a_{2}b_{2}q_{2}$ such that $q_{2}^{\prime}$ contains at most one variable symbol.
-%Then, conditions (3) and (1') are represented by $p_{1} \preceq q_{1}^{\prime}q_{2}^{\prime}$ and $p_{2} \preceq q_{2}^{\prime}q_{3}^{\prime}$, respectively.
-%From Theorem \ref{Sato1:Lemma9}, $p \preceq q$ holds.
-%This contradicts the assumption.
-%
-%\begin{figure}
-%  \centering
-%  \includegraphics[width=\linewidth]{figs/Cases-d.png}
-%  \vspace{-1cm}
-%  \caption{(d)の場合分け}
-%  \label{d組み合わせ}
-%\end{figure}
-%Next, in the case of $C=a_{3}y$, we consider the following five cases (\ref{lem:3consts_i}-1)--(\ref{lem:3consts_i}-5):
-%
-%Since $D$ is maximally generalized {\color{red}with respect to} $(p,q)$, 
 {\color{red} Since $q$ minimally supports $D$ for $p$, i.e., $p\{x:=r\}\preceq q$ for all $r\in D$, }
 from the same argument as in the proof of Lemma~\ref{lem:oneside_i}, it is sufficient to consider the following five cases (\ref{lem:3consts_i}-1)--(\ref{lem:3consts_i}-5) of $q$: For $y_{1} \in X$,
 
@@ -164,7 +105,6 @@ The following conditions must be satisfied: For $y_{1}^{\prime} \in X$,
 \textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}b_{2}w, & \textrm{(3')}~& p_{2} \preceq q_{2} \mbox{~or~} p_{2} \preceq y_{1}^{\prime}q_{2}.
 \end{align*}
 \noindent
-%Then, it implies a contradiction in the following inductive way:
 {\color{red} This leads to a contradiction, as demonstrated by the following inductive argument:}
 \begin{itemize}
 \item $|w|=0$: From (2) and (3), {\color{red}both }$a_{1}$ and $a_{1}b_{1}b_{2}$ are suffixes of $p_{1}$.
@@ -196,10 +136,8 @@ The following conditions must be satisfied: For $y_{1}^{\prime} \in X$,
 From (3), there exist regular patterns $p_{1}^{\prime}$ and $p_{1}^{\prime\prime}$ such that $p_{1}=p_{1}^{\prime}p_{1}^{\prime\prime}$, $p_{1}^{\prime} \preceq q_{1}a_{3}$, and $p_{1}^{\prime\prime} \preceq y_{1}wa_{1}$ hold.
 Hence, if $p_{2} \preceq wa_{1}b_{1}b_{2}q_{2}$ of (1') holds, since $p=p_{1}xp_{2}=p_{1}^{\prime}p_{1}^{\prime\prime}xp_{2}\preceq q_{1}a_{3}p_{1}^{\prime\prime}xwa_{1}b_{1}b_{2}q_{2}=q \{ y_{1} := p_{1}^{\prime\prime}x \}$, then $p \preceq q$ holds.
 {\color{red}
-%From this, we have $p\preceq q$.
 Thus, this contradicts the assumption that $p$ and $q$ satisfy 
   $p\not\preceq q$.}
-%Thus, this contradicts the assumption.
 Similarly, $p_{2} \preceq y_{1}^{\prime}wa_{1}b_{1}b_{2}q_{2}$ of (1') leads to a contradiction.
 
 \smallskip
@@ -220,51 +158,18 @@ Since $q_{2}^{\prime}$ contains a variable symbol $y_{1}$, $p\preceq q$ holds fr
 {\color{red}
 This contradicts the assumption that $p$ and $q$ satisfy 
   $p\not\preceq q$.}
-%This contradicts the assumption.
 \end{proof}
-
-%\begin{lem}\label{lem:3consts_iii}
-%  Let $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$, where $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\le i,j\le 3)$.
-%  Let $p = p_{1}x_{2}$ for $p_{1},p_{2} \in \RPat \cup \{\varepsilon\}$ and $x \in X$.
-%  If for all $r \in D$, there exist $q_{r,1}$ and $q_{r,2} \in \RPat \cup \{\varepsilon\}$ such that 
-%  \begin{enumerate}
-%  \item[1.] $p_{1} \preceq q_{r,1}$ if $r \in \{a_{1}b_{1}, a_{2}b_{2}\}$,
-%  \item[2.] $p_{1} \preceq q_{r,1}$ or $p_{1} \preceq q_{r,1}y_{1}^{\prime}$ if $r = a_{3}b_{3}$ ($y_{1}^{\prime} \in X$),
-%  \item[3.] $p_{2} \preceq q_{r,2}$,
-%  \item[4.] $p_{1}rp_{2} \preceq q_{r,1}rq_{r,2}$ if $r \in \{a_{1}b_{1}, a_{2}b_{2}\}$, add
-%  \item[5.] $p_{1}rp_{2} \preceq q_{r,1}y_{1}b_{3}q_{r,2}$ if $r = a_{3}b_{3}$ ($y_{1} \in X)$,
-%  \end{enumerate}
-%then $p \{ x := xy \} \preceq q$ holds.  
-%\end{lem}
 
 \begin{lem}\label{lem:3consts_ii}
   Let $\Sigma$ be an alphabet $\sharp\Sigma \ge 3$, $p,~q$ regular patterns {\color{red} in $\RPat_{\Sigma\cup X}$ and
   $D=\{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\} \subsetneq \RPat_{\Sigma\cup X}$
-  where \underline{$a_{1}\neq a_{2}$, $b_{i}\neq b_{j}$ for $1\leq i,j\leq 3$ with $i\neq j$} and $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$.
+  where $a_{1}\neq a_{2}$, $b_{i}\neq b_{j}$ for $1\leq i,j\leq 3$ with $i\neq j$ and $y$ is a variable symbol in $X$ that {\color{red}appears in neither $p$ nor $q$}.
   Then, 
-  %if $p \{ x := r \} \preceq q$ holds for all $r \in D$,
 if $q$ minimally supports $D$ for $p$,
 then $p \{ x := xy \} \preceq q$ holds.}
-  %Let $D$ be the following set of regular patterns {\color{red}over} $\Sigma\cup X$, where $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$:
-  %\begin{align*}
-  %D & = \{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\},\\
-  %& \mbox{ where } a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ } (i\ne j, 1\le i,j\le 3).
-  %\end{align*}
-  %Then, if $p \{ x := r \} \preceq q$ for all $r \in D$ and $D$ is maximally generalized {\color{red}with respect to} ($p,q$), then $p \{ x := xy \} \preceq q$.
 \end{lem}
 
 \begin{proof}
-%(III) Case of (iii) that $q$ contains $a_{1}b_{1}, a_{2}b_{2}$ and $yb_{3}$:
-%Let $A,B,C$ be distinct regular patterns in $\{a_{1}b_{1}, a_{2}b_{2}, yb_{3}\}$ such that $q=q_{1}AwBw^{\prime}Cq_{2}$.
-%The following conditions (1),(2),(3),(1'),(2'),(3') must be satisfied:
-%
-%xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-%\begin{align*}
-%\textrm{(1)}~& p_{1} \preceq q_{1} & \textrm{(1')}~& p_{2} \preceq wBw^{\prime}Cq_{2} \\
-%\textrm{(2)}~& p_{1} \preceq q_{1}Aw & \textrm{(2')}~& p_{2} \preceq w^{\prime}Cq_{2} \\
-%\textrm{(3)}~& p_{1} \preceq q_{1}AwBw^{\prime} & \textrm{(3')}~& p_{2} \preceq q_{2}
-%
-%This corresponds to case (iii).
 The proof follows by reversing $p$ and $q$ and subsequently applying Lemma~\ref{lem:3consts_i}.
 \end{proof}
 
@@ -274,96 +179,29 @@ The proof follows by reversing $p$ and $q$ and subsequently applying Lemma~\ref{
 In this subsection, for $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\} \subsetneq \RPat_{\Sigma\cup X}$, we consider a regular pattern $q$ in $\RPat_{\Sigma\cup X}$ 
 such that $q$ minimally supports $D$ for a regular pattern $p$ in $\RPat_{\Sigma\cup X}$
 under some conditions with the symbols $a_i,~b_i \in \Sigma$ for $i~(1\leq i \leq k)$.
-%Obviously, we remark that $D$ satisfies that $a_i\neq a_j$ and $b_i\neq b_j$ for $i,j~(i\neq j, 1\leq i,j\leq 3)$
-%In this subsection, for any regular patterns $p,q$ over $\Sigma\cup X$ with $p\not\preceq q$, 
-%we consider $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\} \subset \RPat_{\Sigma\cup X}$ such that $D$ is maximally generalized with respect to $(p,q)$.
 }
-
-%Let $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$, where $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\le i,j\le 3)$.
-%We consider conditions on $q$ under which satisfies that if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$, where a variable symbol $x$ and $y$ do not appear in $p$ and $q$.
-%We remark that $a_i$ and $b_j$ may be the same for $i,j (1\le i,j\le 3)$.
-%Since $p \{ x := r \} \preceq q$ for all $r \in D$ holds, there exist the following 10 cases (i)--(xv) for three regular patterns on $\Sigma$ contained in $q$ that correspond to three constant strings in $D$:
-%Here, $y_1,y_2,y_3$ are variable symbols.
-%
-%\medskip  
-%
-%\noindent
-%\begin{tabular}{ll}
-%(i)~~~~$a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}$ & (vi)~~~$a_{1}b_{1}, y_{1}b_{2}, y_{2}b_{3}$\\
-%(ii)~~~$a_{1}b_{1}, a_{2}b_{2}, a_{3}y_{1}$ & (vii)~~$y_{1}b_{1}, y_{2}b_{2}, y_{3}b_{3}$\\
-%(iii)~~$a_{1}b_{1}, a_{2}b_{2}, y_{1}b_{3}$ & (viii)~$y_{1}b_{1}, y_{2}b_{2}, a_{3}y_{3}$\\
-%(iv)~~~$a_{1}b_{1}, y_{1}b_{2}, a_{3}y_{2}$ & (ix)~~~$y_{1}b_{1}, a_{2}y_{2}, a_{3}y_{3}$\\
-%(v)~~~~$a_{1}b_{1}, a_{2}y_{1}, a_{3}y_{2}$ & (x)~~~~$a_{1}y_{1}, a_{2}y_{2}, a_{3}y_{3}$
-%\end{tabular}
-%
-%For cases (v)--(x), it is easy to prove that $p \{ x := xy \} \preceq q$ holds from Lemma \ref{lem:twovariables}.
-%For example, for case (v), $p \{ x := r \} \preceq q$ for all $r \in \{a_{2}y, a_{3}y\}$ also holds, and therefore $p \{ x := xy \} \preceq q$ holds.
-%For case (iv), $p \{ x := r \} \preceq q$ for all $r \in \{a_{1}b_{1}, yb_{2}, a_{3}y\}$ also holds.
-%In order to ensure that $p \{ x := xy \} \preceq q$ holds, the following stronger conditions on $a_{i}$ and $b_{j}$ ($1\le i,j\le 3$) are required, in addition to the conditions $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for all } i,j~(i\ne j, 1\le i,j\le 3)$ derived from Lemmas~\ref{lem:addpart} and \ref{lem:oneside}: $a_{1} \not= b_{2}$ or $b_{1} \not = a_{3}$.
-%Moreover, since this condition is not symmetric with respect to $a_{i}$ and $b_{i}$ ($1\leq i\leq 3$), it follows that stronger conditions are required overall:
-%($a_{1} \not= b_{2}$ or $b_{1} \not = a_{3}$) and %for $a_{1}b_{1}, yb_{2}, a_{3}y$.
-%($a_{1} \not= b_{3}$ or $b_{1} \not = a_{2}$) and %for $a_{1}b_{1}, a_{2}y, yb_{3}$,
-%($a_{2} \not= b_{3}$ or $b_{2} \not = a_{1}$) and %for $a_{1}y, a_{2}b_{2}, yb_{3}$.
-%($a_{2} \not= b_{1}$ or $b_{2} \not = a_{3}$) and %for $yb_{1}, a_{2}b_{2}, a_{3}y$,
-%($a_{3} \not= b_{1}$ or $b_{3} \not = a_{2}$) and %for $yb_{1}, a_{2}y, a_{3}b_{3}$.
-%$a_{3} \not= b_{2}$ or $b_{3} \not = a_{1}$). %for $a_{1}y, yb_{2}, a_{3}b_{3}$
-%Therefore, case (iv) will be regarded as the cases in Lemmas~\ref{lem:addpart} and \ref{lem:oneside} instead of $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$ for the sake of clarity in the subsequent discussion.
-%Hence, the subsequent discussion will be restricted to cases (i)--(iii).
 
 The conditions in Lemmas~\ref{lem:3consts_i}, \ref{lem:3consts_ii}, and \ref{lem:3consts_iii} are illustrated in the cases (9), (10), and (11) in Fig.~\ref{fig:lem7bigraph}.
 
 \begin{figure*}[t]
   \begin{center}
-    %\includegraphics[scale=0.525]{figs/lem7bigraph.pdf}
     \includegraphics[scale=0.8]{figs/lem7bigraph.png}
     \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and $p,q \in \RPat$. We assume that the symbols in $\Sigma$ are mutually distinct.
-    %The figures (9), (10) and (11) express cases $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y \}$, $D = \{a_{1}b_{1}, a_{2}b_{2}, yb_{3}\}$, and $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3} \}$ in Lemmas~\ref{lem:3consts_i}, \ref{lem:3consts_ii}, and \ref{lem:3consts_iii}, respectively, where $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\le i,j\le 3)$.
     {\color{red} The figures (9), (10) and (11) express cases of $D$s in Lemmas~\ref{lem:3consts_i}, \ref{lem:3consts_ii}, and \ref{lem:3consts_iii}, respectively.}
-    %In these cases, if $p \{ x := r \} \preceq q$ for all $r \in D$ and $D$ is maximally generalized {\color{red}with respect to} ($p,q$), 
     {\color{red} In these cases, if $q$ minimally supports $D$ for $p$, }
     then $p \{ x := xy \} \preceq q$ holds.}\label{fig:lem7bigraph}
   \end{center}
 \end{figure*}
 
-%\medskip
-%\noindent
-%\begin{lem}\label{lem:3consts_i}
-%Let $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$, where $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\le i,j\le 3)$.
-%Let $p = p_{1}xp_{2}$ for $p_{1},p_{2} \in \RPat \cup \{\varepsilon\}$ and $x \in X$.
-%If for all $r \in D$, there exist $q_{r,1}$ and $q_{r,2} \in \RPat \cup \{\varepsilon\}$ such that
-%\begin{enumerate}
-%\item[1.] $p_{i} \preceq q_{r,i}$ $(i=1,2$) and
-%\item[2.] $p_{1}rp_{2} \preceq q_{r,1}rq_{r,2}$,
-%\end{enumerate}
-%then $p \{ x := xy \} \preceq q$ holds.  
-%\end{lem}
-
 \begin{lem}\label{lem:3consts_iii}
   Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$, $p,~q$ regular pattern {\color{red}in $\RPat_{\Sigma\cup X}$} and
   {\color{red} $D=\{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}\subsetneq \RPat_{\Sigma\cup X}$ where $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ with } i\ne j ~(1\le i,j\le 3)$.
   If $q$ minimally supports $D$ for a regular pattern $p$, then $p \{ x := xy \} \preceq q$.}
-  %Let $D$ be the following set of regular patterns {\color{red}over} $\Sigma\cup X$, where $y$ is a variable symbol in $X$ that does not appear in $p$ and $q$:
-  %\begin{align*}
-  %D & = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\},\\
-  %& \mbox{ where } a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ } (i\ne j, 1\le i,j\le 3).
-  %\end{align*}
-  %$Then, if $p \{ x := r \} \preceq q$ for all $r \in D$ and $D$ is maximally generalized {\color{red}with respect to} ($p,q$), then $p \{ x := xy \} \preceq q$.
 \end{lem}
 
 \begin{proof}
-%(I) Case of (i), that are the cases that $q$ contains $a_{1}b_{1}, a_{2}b_{2}$ and $a_{3}b_{3}$:
-%\begin{figure}
-%\centering
-%\includegraphics[width=\linewidth]{figs/Cases-abc.png}
-%\vspace{-1cm}
-%\caption{(abc)の場合分け}
-%\label{abc組み合わせ}
-%\end{figure}
-%\noindent
-%This corresponds to case (i).
 {\color{red} We may assume $p\not\preceq q$, since the case $p\preceq q$ is trivial.}
 We assume that $p \{ x := xy \} \not\preceq q$ holds.
-%Since $D$ is maximally generalized {\color{red}with respect to} $(p,q)$, 
 Since $q$ minimally supports $D$ for $p$,
 it is sufficient to consider the following four cases (\ref{lem:3consts_iii}-1)-(\ref{lem:3consts_iii}-4) of $q$ for some regular patterns $q_{1},q_{2}$ and some constant strings $w,w^{\prime}$ ($|w|\geq 0$ and $|w^{\prime}|\geq 0$):
 
