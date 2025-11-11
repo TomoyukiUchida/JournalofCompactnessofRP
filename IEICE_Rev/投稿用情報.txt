@@ -1,4 +1,4 @@
-Compactness of Finite Union of Regular Patterns and Regular Patterns without Adjacent Variables
+Compactness in Finite Unions of Regular Patterns and Regular Patterns without Adjacent Variables
 
 Naoto TAKEDA
 Graduate School of Information Sciences, Hiroshima City University
@@ -30,19 +30,20 @@ D140111	Formal Languages
 D140119	Computational Learning Theory
 
 summary:
-A regular pattern is a string consisting of constant symbols and distinct variable symbols.
-The language L(p) of a regular pattern p is the set of all constant strings obtained by replacing all variable symbols in the regular pattern p with constant strings.
-Let k be an integer greater than or eqaul to 2. RPatkei denotes the class of all sets consisting at most k regular patterns.
-Sato et al. (Proc. ALT'98, 1998) showed that the finite set S_2(P) of symbol strings is a characteristic set of L(P)
-the union of the languages L(p) for all regular patterns p contained in P,
-where S_2(P) is obtained from P in RPatkei by substituting variables with symbol strings of at most length 2. 
-They also showed that RPatkei has compactness with respect to containment, if the number of constant symbols is greater than or equal to 2k-1.
-In this paper, we check the their results and correct the error of the proof of their theorem.
-Further, we consider the set NAVRP of all non-adjacent regular patterns, which are regular patterns without adjacent variables, and show that the set S_2(P) obtained from a set P in the class NAVRPkei of at most k non-adjacent regular patterns is a characteristic set of L(P), where k is greater than or equal to 1.
-Further we show that NAVRPkei has compactness with respect to containment if the number of constant symbols is greater than or equal to k+2.
-Thus we show that we can design an efficient learning algorithm of a finite union of pattern languages of non-adjacent regular patterns with the number of constant symbols which is smaller than the case of regular patterns.
+A regular pattern is a string consisting of constant and distinct variable symbols. 
+The language L(p) of a pattern p is defined as the set of all constant strings obtained by replacing each variable with a constant string. 
+Let RP^k denote the class of all sets containing at most k (k >= 2) regular patterns. 
+Sato et al. (Proc. ALT'98, 1998) showed that the finite set S_2(P), obtained from P in RP^k by replacing variables with constant strings of length at most two, serves as a characteristic set for the language L(P), which is 
+the union of the languages L(p) for all regular patterns p contained in P. 
+They also claimed that RP^k is compact with respect to language containment when the number of constant symbols is at least 2k - 1.
+In this paper, we revisit their results and identify an error in the original proof of their theorem. 
+We then present a new and correct proof by introducing additional conditions that guarantee the validity of their claim. 
+Furthermore, we study the subclass RP^k_{NAV}, consisting of at most k (k >= 1) non-adjacent regular patterns, in which no two variable symbols occur consecutively. 
+For any P in RP^k_{NAV}, we prove that the set S_2(P) serves as a characteristic set of L(P) and that RP^k_{NAV}$ is compact with respect to language containment if the number of constant symbols is at least k + 2.
+These results demonstrate that finite unions of non-adjacent regular pattern languages can be learned efficiently under weaker constraints on constant symbols than those required in the general case. 
+Our analysis thus refines and extends the compactness properties of regular pattern languages originally discussed by Sato et al., providing a corrected theoretical foundation for subsequent studies on the learnability of pattern languages.
 
 keywords:
 Regular Pattern Language, 
-Compactness w.r.t. Containment, 
+Compactness with respect to Language Containment, 
 Non-adjacent Regular Patterns Language
