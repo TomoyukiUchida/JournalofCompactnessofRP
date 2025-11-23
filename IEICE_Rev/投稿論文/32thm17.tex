@@ -28,7 +28,7 @@ we have the following theorem.
     for any regular pattern {\color{red}$p \in P$}.
     The proof is done by mathematical induction on $n$, where $n$ is the number of variable symbols appears in $p$.
 
-    In case $n=0$, $S_{2}(p) = \{p\}$ holds.
+    In case $n=0$, $S_{2}(p) = \{p\}$.
     By (i), we have {\color{red}$\{p\} \subseteq L(Q)$}. Thus, $p \preceq q$ for some $q \in Q$.
 
     For $n \geq 0$,
@@ -43,7 +43,7 @@ we have the following theorem.
     For $a, b \in \Sigma$,
     let $p_{a}=p\{x:=a\}$ and $p_{ab}=p\{x:=ab\}$.
     Both $p_{a}$ and $p_{ab}$ have $n$ variable symbols, respectively.
-    Thus, $S_{2}(p_{a}) \subseteq L(Q)$ and $S_{2}(p_{ab}) \subseteq L(P)$ hold.
+    Thus, $S_{2}(p_{a}) \subseteq L(Q)$ and $S_{2}(p_{ab}) \subseteq L(P)$.
     By the induction hypothesis,
     there exist $i, i' \in \{1,\ldots,k\}$ such that
     $p_{a} \preceq q_{i}$ and $p_{ab} \preceq q_{i'}$.
@@ -58,7 +58,7 @@ we have the following theorem.
     Moreover,
     If $\sharp\Sigma = 2k$, then
     $\sharp D_{i}=2$ for any $i \in \{1,\ldots,k\}$.
-    Since $k \geq 3$, {\color{red} $2k-1 \geq k+2$} holds.
+    Since $k \geq 3$, {\color{red} $2k-1 \geq k+2$}.
     By Lemma~\ref{Add-Lemma01},
     there exists $i \in \{1,\ldots,k\}$ such that $p\{x:=xy\} \preceq q_{i}$.
     Therefore, by Lemma~\ref{Sato1:Lemma15}, 
@@ -68,28 +68,32 @@ we have the following theorem.
 \end{proof}
 
 From Theorem~\ref{Theorem17}, 
-{\color{red}the following Corollary holds}.
+{\color{red}the following corollary holds}.
 
 
 \begin{col}\label{Col18}
-    Let $k \geq 3$, $\sharp\Sigma \geq 2k-1$ and $P \in \RPatplus$.
-    Then, $S_{2}(P)$ is a characteristic set for $L(P)$ within $\RPatLkei$.
+    %Let $k \geq 3$, $\sharp\Sigma \geq 2k-1$ and $P \in \RPatplus$.
+    {\color{red}Let $k$ be an integer with $k \geq 3$ and $\Sigma$ an alphabet with $\sharp\Sigma \geq 2k-1$.
+    Then, for a set of regular patterns $P \in \RPatplus_{\Sigma\cup X}$,}
+    $S_{2}(P)$ is a characteristic set for $L(P)$ within $\RPatLkei_{\Sigma\cup X}$.
 \end{col}
 
 {\color{red}From Theorem~\ref{Theorem17},
 we have the following theorem.}
 
 \begin{thm}\label{Theorem5}
-    Let $k \geq 3$ and $\sharp\Sigma \geq 2k-1$.
-    Then, $\RPatkei$ has compactness with respect to {\color{red} language} containment.
+    %Let $k \geq 3$ and $\sharp\Sigma \geq 2k-1$.
+    {\color{red}Let $k$ be an integer with $k \geq 3$ and $\Sigma$ an alphabet with $\sharp\Sigma \geq 2k-1$.}
+    Then, {\color{red}$\RPatkei_{\Sigma\cup X}$} has compactness with respect to {\color{red} language} containment.
 \end{thm}
 
 {\color{red} 
 The following lemma demonstrates that Theorem~\ref{Theorem5} fails to hold under the condition $\sharp\Sigma \leq 2k-2$, thereby establishing the minimum cardinality of $\Sigma$  required for the validity of Theorem~\ref{Theorem5}.
 }
 \begin{lem}[Sato et al.\cite{Sato1}]\label{Sato1:Lemma19}
-    Let $k \geq 3$ and $\sharp\Sigma \leq 2k-2$.
-    Then, $\RPatkei$ does not have compactness with respect to {\color{red} language} containment.
+    %Let $k \geq 3$ and $\sharp\Sigma \leq 2k-2$.
+    {\color{red} Let $k$ be an integer with $k \geq 3$ and $\Sigma$ an alphabet with $\sharp\Sigma \leq 2k-2$.}
+    Then, {\color{red}$\RPatkei_{\Sigma\cup X}$} does not have compactness with respect to {\color{red} language} containment.
 \end{lem}
 
 \begin{proof}
@@ -114,8 +118,9 @@ The following lemma demonstrates that Theorem~\ref{Theorem5} fails to hold under
 In case $k=2$, we have the following theorem.
 
 \begin{thm}\label{Theorem21}
-    Let $\sharp\Sigma \geq 4$, $P \in \RPatplus$ and $Q \in \RPat^{2}$.
-    The following (i), (ii) and (iii) are equivalent:
+    {\color{red} Let $\Sigma$ be an alphabet with $\sharp\Sigma \geq 4$.
+    For two sets of regular patterns $P \in \RPatplus_{\Sigma\cup X}$ and $Q \in \RPat^{2}_{\Sigma\cup X}$,
+    the following conditions (i), (ii), and (iii) are equivalent:}
     \[
         \mathrm{(i)}\ S_{2}(P) \subseteq L(Q),\ \
         \mathrm{(ii)}\ P \sqsubseteq Q, \ \
@@ -137,7 +142,7 @@ In case $k=2$, we have the following theorem.
     For $n \geq 0$, we assume that it is valid for any regular pattern $p$ with
     $n$ variable symbols.
     Let $p$ be a regular pattern such that $n+1$ variable symbols appear in $p$,
-    and $S_{2}(p) \subseteq L(Q)$ {\color{red}holds}.
+    and $S_{2}(p) \subseteq L(Q)$.
     We assume that $p \not\preceq q_{i}$ ($i=1,2$).
     Let $p_{1}$, $p_{2}$ be regular patterns and $x$ a variable symbol
     with $p = p_{1}xp_{2}$.
@@ -168,26 +173,38 @@ In case $k=2$, we have the following theorem.
 
 
 \begin{ex}
-    Let $\Sigma = \{a,b,c\}$, $p$, $q_{1}$, $q_{2}$ regular patterns and
-    $x,x',x''$ variable symbols such that
-    $p = x'axbx''$, $q_{1} = x'abx''$ and $q_{2} = x'cx''$.
-    Let $w \in \Sigma^{+}$.
-    If $w$ contains $c$, then $p \{x:=w\} \preceq q_{2}$.
-    On the other hand, if $w$ does not contain $c$,
-    then $p\{x:=w\} \preceq q_{1}$.
-    Thus, $L(p) \subseteq L(q_{1}) \cup L(q_{2})$.
-    However, $p \not\preceq q_{1}$ and $p \not\preceq q_{2}$.
+    {\color{red}
+    %Let $\Sigma = \{a,b,c\}$, $p$, $q_{1}$, $q_{2}$ regular patterns and
+    %$x,x',x''$ variable symbols such that
+    %$p = x'axbx''$, $q_{1} = x'abx''$ and $q_{2} = x'cx''$.
+    %Let $w \in \Sigma^{+}$.
+    %If $w$ contains $c$, then $p \{x:=w\} \preceq q_{2}$.
+    %On the other hand, if $w$ does not contain $c$,
+    %then $p\{x:=w\} \preceq q_{1}$.
+    %Thus, $L(p) \subseteq L(q_{1}) \cup L(q_{2})$.
+    %However, $p \not\preceq q_{1}$ and $p \not\preceq q_{2}$.
+    Let $\Sigma = \{a,b,c\}$.
+    Define the regular patterns $p = x'axbx''$, $q_{1} = x'abx''$, and $q_{2} = x'cx''$,
+    where $x,x',x''$ are variable symbols in $X$.
+    Then the following statements hold:
+    \begin{itemize}
+    \item[(1)] For any constant string $w \in \Sigma^{+}$, if $w$ contains the symbol $c$, then $p \{x:=w\} \preceq q_{2}$.
+    \item[(2)]  For any constant string $w \in \Sigma^{+}$, if $w$ does not contain $c$, then  $p\{x:=w\} \preceq q_{1}$.
+    \end{itemize}
+    Consequently, $L(p) \subseteq L(q_{1}) \cup L(q_{2})$.
+    However, $p \not\preceq q_{1}$ and $p \not\preceq q_{2}$.}
 \end{ex}
 
 From Theorem~\ref{Theorem21}, 
 the following two corollaries holds.
 
 \begin{col}
-    Let $\sharp\Sigma \geq 4$ and $P \in \RPatplus$.
-    Then, $S_{2}(P)$ is a characteristic set for $L(P)$ within $\RPatL^{2}$.
+    {\color{red} Let $\Sigma$ be an alphabet with $\sharp\Sigma \geq 4$.
+    For a set of regular patterns $P \in \RPatplus_{\Sigma\cup X}$,}
+    $S_{2}(P)$ is a characteristic set for $L(P)$ within {\color{red}$\RPatL^{2}_{\Sigma\cup X}$}.
 \end{col}
 
 \begin{col}
-    Let $\sharp\Sigma \geq 4$.
-    Then, $\RPat^{2}$ has compactness with respect to {\color{red} language} containment.
+    {\color{red} Let $\Sigma$ be an alphabet with $\sharp\Sigma \geq 4$}.
+Then, {\color{red}$\RPat^{2}_{\Sigma\cup X}$} has compactness with respect to {\color{red} language} containment.
 \end{col}

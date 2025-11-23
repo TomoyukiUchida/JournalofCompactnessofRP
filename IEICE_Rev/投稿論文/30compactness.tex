@@ -2,39 +2,39 @@
 Let {\color{red}$D \subsetneq \RPat_{\Sigma\cup X}$} with $\sharp D = 2$ or $3$, and let $p,q$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$}.
 In the following subsections (Subsecs.~\ref{subsec:d2}--\ref{subsec:d3c}), we provide the conditions on $D$ under which the implication holds: if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.
 It is obvious if the variable symbol $x$ does not appear in $p$.
-Therefore, in the following lemmas and propositions, let $p=p_{1}xp_{2}$, where $p_{i}\in \RPat$ ($i=1,2$) and $x$ is a variable symbol.
+Therefore, in the following lemmas and propositions, let $p=p_{1}xp_{2}$, where {\color{red}$p_{i}\in \RPat_{\Sigma\cup X}$} ($i=1,2$) and $x$ is a variable symbol.
 
 {\color{red}
-Lemma 14 (ii) of \cite{Sato1} stated that, when $\sharp \Sigma \geq 3$, for regular patterns $p,q$, if $p\{x:=r\}\preceq q$ for any $r\in D$, then $p\{x:=xy\} \preceq q$ holds, where 
+Lemma 14 (ii) of \cite{Sato1} stated that, when $\sharp \Sigma \geq 3$, for regular patterns $p,q$, if $p\{x:=r\}\preceq q$ for any $r\in D$, then $p\{x:=xy\} \preceq q$, where 
 $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$ $(a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ for each } i,j~(i\ne j, 1\le i,j\le 3))$.
 Unfortunately, there exist the following counterexamples of Lemma 14 (ii) of \cite{Sato1}.
 \begin{ex}\label{CounterExample_Lemma14}
-Assume that $a_1=b_2$ and $a_3=b_1$ hold.
-{\color{red} In the following two examples, we have that $p\{x:=r\}\preceq q$ holds for $r\in D$}.
+Assume that $a_1=b_2$ and $a_3=b_1$.
+{\color{red} In the following two examples, we have $p\{x:=r\}\preceq q$ for $r\in D$}.
   
 \begin{itemize}
 \item[(1)] 
 Let $p=ca_1xa_3c$ and $q=ya_1a_3z$ {\color{red} where $c$ is a symbol in $\Sigma$}.
-It is clear that $p\{x:=xy\} \not\preceq q$ holds.
-However, we have that $p\{x:=a_1b_1\}\preceq q$, $p\{x:=a_2b_2\}\preceq q$ and $p\{x:=a_3b_3\}\preceq q$ hold, 
+It is clear that $p\{x:=xy\} \not\preceq q$.
+However, we have $p\{x:=a_1b_1\}\preceq q$, $p\{x:=a_2b_2\}\preceq q$ and $p\{x:=a_3b_3\}\preceq q$, 
 since
 $p\{x:=a_1b_1\}=ca_1a_1b_1a_3c=q\{y:=ca_1,z:=a_3c\}$,
 $p\{x:=a_2b_2\}=ca_1a_2b_2a_3c=q\{y:=ca_1a_2,z:=c\}$ and 
-$p\{x:=a_3b_3\}=ca_1a_3b_3a_3c=q\{y:=c,z:=b_3a_3c\}$ hold.
+$p\{x:=a_3b_3\}=ca_1a_3b_3a_3c=q\{y:=c,z:=b_3a_3c\}$.
 
 \item[(2)] 
 Let $p=cb_2a_1b_1b_2xa_1b_1b_2a_3c$ and $q=yb_2a_1b_1b_2a_3z$  {\color{red} where $c$ is a symbol in $\Sigma$}.
-It is clear that $p\{x:=xy\} \not\preceq q$ holds.
+It is clear that $p\{x:=xy\} \not\preceq q$.
 However, we have that $p\{x:=a_1b_1\}\preceq q$, $p\{x:=a_2b_2\} \preceq q$ and $p\{x:=a_3b_3\} \preceq q$ hold, 
 since  
 $p\{x:=a_1b_1\}=cb_2a_1b_1b_2a_1b_1a_1b_1b_2a_3c=q\{y:=cb_2a_1b_1,z:=b_2a_3c\}$,
 $p\{x:=a_2b_2\}=cb_2a_1b_1b_2a_2b_2a_1b_1b_2a_3c=q\{y:=cb_2a_1b_1b_2a_2,z:=c\}$,
-and  $p\{x:=a_3b_3\}=cb_2a_1b_1b_2a_3b_3a_1b_1b_2a_3c=q\{y:=c,z:=b_3a_1b_1b_2a_3c\}$ hold.
+and  $p\{x:=a_3b_3\}=cb_2a_1b_1b_2a_3b_3a_1b_1b_2a_3c=q\{y:=c,z:=b_3a_1b_1b_2a_3c\}$.
 \end{itemize}
 \end{ex}
 }
 
-We consider the correspondence from $r\in D$ to some string in $q$ when $p \{ x := r \} \preceq q$ holds.
+{\color{red}For regular patterns $p,q\in\RPat$ with $p\not\preceq q$, we} consider the correspondence from $r\in D$ to some string in $q$ when $p \{ x := r \} \preceq q$.
 The symbols in $D$ correspond to either a variable or a constant symbol in $q$.
 If $D$ has a constant string $ab$ of length $2$ for $a,b\in\Sigma$, there are three possible strings in $q$ that correspond to $ab$ in $p\{x:=ab\}$ as follows: For $y_{1} \in X$,
   \begin{center}
@@ -51,18 +51,18 @@ If there exists $ay_{1}$ in $q$ that corresponds to $ab$, i.e., there exist $q_{
   \item[(3)] either $p_{2} \preceq q_{2}$ or $p_{2} \preceq y_{1}^{\prime}q_{2}$ for $y_{1}^{\prime}\in X$.
   \end{enumerate}
 Let $D^{\prime} = (D \setminus \{ab\}) \cup \{ay\}$.
-It is straightforward to see that $p\{x:=ay\} = p_{1}ayp_{2} \preceq q_{1}ay_{1}q_{2}$ holds.
-Thus, $p \{ x := r \} \preceq q$ for all $r \in D^{\prime}$ holds.
+It is straightforward to see that $p\{x:=ay\} = p_{1}ayp_{2} \preceq q_{1}ay_{1}q_{2}$.
+Thus, $p \{ x := r \} \preceq q$ for all $r \in D^{\prime}$.
 Let $D^{\prime\prime} = (D \setminus \{ab\}) \cup \{yb\}$.
-By a similar discussion, if there exists $y_{1}b$ in $q$ that corresponds to $ab$, $p \{ x := r \} \preceq q$ for all $r \in D^{\prime\prime}$ holds.
+By a similar discussion, if there exists $y_{1}b$ in $q$ that corresponds to $ab$, $p \{ x := r \} \preceq q$ for all $r \in D^{\prime\prime}$.
 Therefore, in this paper, we make the following definition on $D$:
 
 \smallskip
 
 \begin{dfn}
 Let $p,q \in \RPat$ {\color{red} with $p\not\preceq q$}.
-Let $D \subsetneq \RPat$ such that for all $r\in D$, $|r| = 2$ and $p \{ x := r \} \preceq q$ hold.
-Then, if for any $ab\in D$ ($a,b\in\Sigma$), {\color{red} $ay,yb\not\in D$}, $p \{ x := ay \} \not\preceq q$ and $p \{ x := yb \} \not\preceq q$ hold for any $y \in X$ that does not appear in $q$,
+Let $D \subsetneq \RPat$ such that for all $r\in D$, $|r| = 2$ and $p \{ x := r \} \preceq q$.
+Then, if for any $ab\in D$ ($a,b\in\Sigma$), {\color{red} $ay,yb\not\in D$}, $p \{ x := ay \} \not\preceq q$ and $p \{ x := yb \} \not\preceq q$ for any $y \in X$ that does not appear in $q$,
 {\color{red}the regular pattern $q$ is said to \textit{minimally support $D$ for $p$}, in the sense that any generalization of the strings in $D$ would invalidate the conditions $p\{x := r\} \preceq q$ for all $r\in D$}.
 
 \end{dfn}
@@ -73,14 +73,15 @@ Then, if for any $ab\in D$ ($a,b\in\Sigma$), {\color{red} $ay,yb\not\in D$}, $p 
 \subsection{$D=\{ ay, by \}$ and $D=\{ ya, yb \}$}\label{subsec:d2}
 
 \begin{lem}\label{lem:twovariables}
-Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$.
+%Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$.
+{\color{red}Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 2$}.
 Let $p,q$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$}.
 Let $D$ be the following set of regular patterns in $\RPat_{\Sigma\cup X}$, where $y$ is a variable symbol that does not appear in $p$ and $q$:
 \begin{enumerate}
 \item[{\rm (i)}] $D=\{ ay, by \}$ ($a \not= b$),
 \item[{\rm (ii)}] $D=\{ ya, yb \}$ ($a \not= b$).
 \end{enumerate}
-Then, if $p \{ x := r \} \preceq q$ holds for all $r \in D$, then $p \{ x := xy \} \preceq q$ holds.
+Then, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.
 \end{lem}
 
 \begin{proof}
@@ -88,7 +89,7 @@ Then, if $p \{ x := r \} \preceq q$ holds for all $r \in D$, then $p \{ x := xy 
 Case \textrm{(ii)} follows from case \textrm{(i)} by symmetry, upon reversing the strings $p$ and $q$.
 }
 Therefore, in the following, we consider only the case of \textrm{(i)}: $D=\{ ay, by \}$ ($a \not= b$).
-{\color{red} We may assume $p\not\preceq q$, since the case $p\preceq q$ is trivial.}
+{\color{red} We will prove the case $p\not\preceq q$, since the case $p\preceq q$ is trivial.}
 {\color{red} Since $p\not\preceq q$, but $p_{1}ayp_{2}\preceq q$ and $p_{1}byp_{2}\preceq q$ hold, it follows from Theorem~\ref{Sato1:Lemma9} that
 there exist regular patterns $q_{1},q_{2}$ {\color{red}over} $\Sigma\cup X$ such that $q=q_{1}ay_{1}wby_{2}q_{2}$ or $q=q_{1}by_{1}way_{2}q_{2}$ for some variable symbols $y_{1},y_{2}$ with $y_{1} \not= y_{2}$, and a constant string $w\in \Sigma^{*}$ with $|w|\geq 0$.
 }
@@ -101,17 +102,18 @@ When $q=q_{1}ay_{1}wby_{2}q_{2}$, the following four conditions hold: For $y_{1}
 p_{2} \preceq y_{2}^{\prime}q_{2}.
 \end{align*}
 
-From (2), there exist regular patterns $p_{1}^{\prime},p_{1}^{\prime\prime}$ such that $p_{1}=p_{1}^{\prime}p_{1}^{\prime\prime}$, $p_{1}^{\prime} \preceq q_{1}a$ and $p_{1}^{\prime\prime} \preceq y_{1}w$ hold.
+From (2), there exist regular patterns $p_{1}^{\prime},p_{1}^{\prime\prime}$ such that $p_{1}=p_{1}^{\prime}p_{1}^{\prime\prime}$, $p_{1}^{\prime} \preceq q_{1}a$ and $p_{1}^{\prime\prime} \preceq y_{1}w$.
 Therefore, since $p=p_{1}xp_{2}=p_{1}^{\prime}p_{1}^{\prime\prime}xp_{2}$,
 if $p_{2} \preceq wby_{2}q_{2}$ of (1') holds, 
-$p\preceq q_{1}ap_{1}^{\prime\prime}xwby_{2}q_{2}\equiv q \{ y_{1} := p_{1}^{\prime\prime}x \}$ holds.
-If $p_2\preceq y_{1}^{\prime}wby_{2}q_{2}$ of (1') holds, $p\preceq q_{1}ap_{1}^{\prime\prime}xy_{1}^{\prime}wby_{2}q_{2}=q \{ y_{1} := p_{1}^{\prime\prime}xy_{1}^{\prime} \}$ holds.
-Thus, $p\{x := xy\} \preceq q \{ y_{1} := p_{1}^{\prime\prime}xyy_{1}^{\prime} \}$ holds.
-{\color{red} Hence, $p\{x:=xy\}\preceq q$ holds.}
-Therefore, we conclude that if $p \{ x := r \} \preceq q$ for all $r \in \{ ay, by \}$ with $a \not= b$, then $p \{ x := xy \} \preceq q$ holds.
+$p\preceq q_{1}ap_{1}^{\prime\prime}xwby_{2}q_{2}\equiv q \{ y_{1} := p_{1}^{\prime\prime}x \}$.
+{\color{red} Hence, $p\{x:=xy\}\preceq q$.}
+If $p_2\preceq y_{1}^{\prime}wby_{2}q_{2}$ of (1') holds, $p\preceq q_{1}ap_{1}^{\prime\prime}xy_{1}^{\prime}wby_{2}q_{2}=q \{ y_{1} := p_{1}^{\prime\prime}xy_{1}^{\prime} \}$.
+Thus, $p\{x := xy\} \preceq q \{ y_{1} := p_{1}^{\prime\prime}xyy_{1}^{\prime} \}$.
+{\color{red} Hence, $p\{x:=xy\}\preceq q$.}
+Therefore, we conclude that if $p \{ x := r \} \preceq q$ for all $r \in \{ ay, by \}$ with $a \not= b$, then $p \{ x := xy \} \preceq q$.
 \end{proof}
 
-Let $p,q$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$}.
+Let $p$ and $q$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$}.
 In this paper, the statement like Lemma~\ref{lem:twovariables} is illustrated by a bipartite graph $(\Sigma, \Sigma, E)$ where $E = \{(a, b) \in \Sigma\times\Sigma \mid p\{x:=ab\} \preceq q\}$.
 For example, the conditions (i) and (ii) in Lemma~\ref{lem:twovariables} are illustrated in (1) and (2) in Fig.~\ref{fig:lem4bigraph}, respectively.
 
@@ -120,6 +122,6 @@ For example, the conditions (i) and (ii) in Lemma~\ref{lem:twovariables} are ill
     \includegraphics[scale=0.525]{figs/lem4bigraph.pdf}
     \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and $p,q \in {\color{red}\RPat_{\Sigma\cup X}}$. We assume that the symbols in $\Sigma$ are mutually distinct.
     These figures (1) and (2) express two cases $D = \{ ay, by \}$ and $D = \{ ya, yb \}$, respectively.
-    In these cases, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$ holds.}\label{fig:lem4bigraph}
+    In these cases, if $p \{ x := r \} \preceq q$ for all $r \in D$, then $p \{ x := xy \} \preceq q$.}\label{fig:lem4bigraph}
   \end{center}
 \end{figure}

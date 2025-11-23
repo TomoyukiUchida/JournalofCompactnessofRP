@@ -1,8 +1,8 @@
 
 \subsection{Basic Definitions and Notations}\label{subsec:basicdef}
 
-Let $\Sigma$ be a non-empty finite set of constant symbols.
-Let $X$ be an infinite set of variable symbols such that $\Sigma \cap X = \emptyset$ holds.
+Let $\Sigma$ be {\color{red} an alphabet, i.e.,} a non-empty finite set of constant symbols.
+Let $X$ be an infinite set of variable symbols such that $\Sigma \cap X = \emptyset$.
 Then, a \textit{string} {\color{red}over} $\Sigma \cup X$ is a sequence of symbols in $\Sigma \cup X$.
 Particularly, the string having no symbol is called the \textit{empty string} and is denoted by $\varepsilon$.
 We denote by $(\Sigma \cup X)^{\ast}$ the set of all strings {\color{red}over} $\Sigma \cup X$ 
@@ -13,7 +13,7 @@ Note that the empty string $\varepsilon$ is a pattern {\color{red}over} $\Sigma 
 A pattern $p$ is said to be \textit{regular} if each variable symbol appears
 at most once in $p$.
 The length of $p$, denote by $|p|$, is the number of symbols in $p$.
-Note that $|\varepsilon|=0$ holds.
+Note that $|\varepsilon|=0$.
 {\color{red} The sets of all patterns and regular patterns {\color{red}over} $\Sigma \cup X$ are denoted by $\Pat_{\Sigma\cup X}$ and $\RPat_{\Sigma\cup X}$, respectively.
 When $\Sigma$ and $X$ are clear from the context, 
 we omit them in the notation and simply write $\Pat$ and $\RPat$, respectively.}
@@ -24,10 +24,10 @@ We denote by $p\cdot q$ the string obtained from $p$ and $q$ by concatenating $q
 Note that for a string $p$ and the empty string $\varepsilon$, $p\cdot \varepsilon = \varepsilon \cdot p = p$.
 
 A {\color{red} \textit{substitution}} $\theta$ is a mapping from $(\Sigma \cup X)^{\ast}$ to $(\Sigma \cup X)^{\ast}$ such that
-(1) $\theta$ is a homomorphism with respect to string concatenation, i.e., $\theta(p \cdot q) = \theta(p) \cdot \theta(q)$ holds for patterns $p$ and $q$,
-(2) $\theta(\varepsilon)=\varepsilon$ holds,
-(3) for each constant symbol $a \in \Sigma$, $\theta(a) = a$ holds,
-and (4) for each variable symbol $x \in X$, $|\theta(x)| \geq 1$ holds.
+(1) $\theta$ is a homomorphism with respect to string concatenation, i.e., $\theta(p \cdot q) = \theta(p) \cdot \theta(q)$ for patterns $p$ and $q$,
+(2) $\theta(\varepsilon)=\varepsilon$,
+(3) for each constant symbol $a \in \Sigma$, $\theta(a) = a$,
+and (4) for each variable symbol $x \in X$, $|\theta(x)| \geq 1$.
 Let $x_{1},\ldots,x_{n}$ are variable symbols and $p_{1},\ldots,p_{n}$ non-empty patterns.
 The notation $\{x_{1}:=p_{1},\ldots,x_{n}:=p_{n}\}$ denotes a substitution that replaces each variable symbol $x_{i}$
 with a non-empty pattern $p_{i}$ for each $i \in \{1,\ldots,n\}$.
@@ -35,8 +35,8 @@ For a pattern $p$ and a substitution $\theta=\{x_{1}:=p_{1},\ldots,x_{n}:=p_{n}\
 
 For a pattern $p$ and $q$,
 the pattern $q$ is a \textit{generalization} of $p$, or $p$ is an \textit{instance} of $q$, denoted by $p \preceq q$,
-if there exists a substitution $\theta$ such that $p = q\theta$ holds.
-If $p \preceq q$ and $p \succeq q$ hold, we denote it by $p \equiv q$.
+if there exists a substitution $\theta$ such that $p = q\theta$.
+If $p \preceq q$ and $p \succeq q$, we denote it by $p \equiv q$.
 The notation $p \equiv q$ means that $p$ and $q$ are equal as strings except for variable symbols. 
 For a pattern $p$, the \textit{pattern language} of $p$, denoted by $L(p)$, is the set $\{w \in \Sigma^{\ast} \mid w \preceq p\}$.
 For patterns $p$ and $q$, it is clear that $L(p) = L(q)$ if $p \equiv q$, and $L(p) \subseteq L(q)$ if $p \preceq q$.
@@ -45,21 +45,23 @@ In particular, if $p$ is a regular pattern, we say that $L(p)$ is a \textit{regu
 The sets of all pattern languages and regular patterns languages are denoted by $\PatL$ and $\RPatL$, respectively.
 
 \begin{lem}[Mukouchi(Theorem 6.1, \cite{Mukouchi1991})]\label{regularPatternEquivalence}
-  Suppose $\sharp \Sigma \geq 3$. Let $p$ and $q$ be regular patterns.
+  Let $\Sigma$ be an alphabet with $\sharp \Sigma \geq 3$. Let $p$ and $q$ be regular patterns.
   Then $p \preceq q$ if and only if $L(p) \subseteq L(q)$.
 \end{lem}
 
 Next, we consider unions of pattern languages. 
-The class of all non-empty finite subsets of $\Pat$ is denoted by $\Patplus$, i.e.,
-$\Patplus = \{P \subseteq \Pat \mid 0 < \sharp P < \infty\}$.
+The class of all non-empty finite subsets of {\color{red}$\Pat_{\Sigma\cup X}$} is denoted by {\color{red}$\Patplus_{\Sigma\cup X}$}, i.e.,
+{\color{red}$\Patplus_{\Sigma\cup X} = \{P \subseteq \Pat_{\Sigma \cup X} \mid 0 < \sharp P < \infty\}$}.
 For a positive integer $k$ (i.e., $k>0$), 
 we denote that the class of non-empty sets consisting of at most $k$ patterns, i.e.,
-$\Patkei = \{P \subseteq \Pat \mid 0< \sharp P \leq k\}$.
+{\color{red}$\Patkei_{\Sigma\cup X} = \{P \subseteq \Pat_{\Sigma\cup X} \mid 0< \sharp P \leq k\}$}.
 For a set $P$ of patterns, the pattern language of $P$, denoted by $L(P)$, is the set $\bigcup_{p \in P}L(p)$.
-We denote by $\PatLkei$ the class of unions of at most $k$ pattern languages,
-i.e., $\PatLkei = \{L(P) \mid P \in \Patkei\}$.
-In a similar way, we also define $\RPatplus$, $\RPatkei$ and $\RPatLkei$.
+We denote by $\PatLkei_{\Sigma\cup X}$ the class of unions of at most $k$ pattern languages {\color{red}over $\Sigma\cup X$},
+i.e., {\color{red}$\PatLkei_{\Sigma\cup X} = \{L(P) \mid P \in \Patkei_{\Sigma\cup X}\}$}.
+{\color{red}Similarly}, we also define $\RPatplus_{\Sigma\cup X}$, $\RPatkei_{\Sigma\cup X}$, and $\RPatLkei_{\Sigma\cup X}$.
+{\color{red} When $\Sigma$ and $X$ are clear from the context, we omit them and simply write $\Patplus$, $\Patkei$, $\PatLkei$, $\RPatplus$, $\RPatkei$, and $\RPatLkei$.}
+
 For $P$, $Q$ in $\Patplus$,
-the notation $P \sqsubseteq Q$ means that for any $p \in P$ there is a pattern $q \in Q$ such that $p \preceq q$ holds.
+the notation $P \sqsubseteq Q$ means that for any $p \in P$ there is a pattern $q \in Q$ such that $p \preceq q$.
 It is clear that $P \sqsubseteq Q$ implies $L(P) \subseteq L(Q)$.
 However, the converse is not valid in general.

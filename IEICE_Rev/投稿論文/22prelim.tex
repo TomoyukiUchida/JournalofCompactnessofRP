@@ -23,7 +23,7 @@ It is clear that $S_{n}(P) \subseteq S_{n+1}(P) \subseteq L(P)$ for any positive
 \begin{thm}[Sato et al.(Lemma 9, \cite{Sato1})]\label{Sato1:Lemma9}
     Let $p$, $q$, $p_{1}$, $p_{2}$, $q_{1}$, $q_{2}$, $q_{3}$ be regular patterns in
     $\RPat$ and $x$ a variable symbol such that 
-    $p = p_{1}xp_{2}$ and $q = q_{1}q_{2}q_{3}$ hold.
+    $p = p_{1}xp_{2}$ and $q = q_{1}q_{2}q_{3}$.
     Then $p \preceq q$ if the following three conditions $(\mathrm{i}),~(\mathrm{ii})$ and $(\mathrm{iii})$ are holds:
     \[
         \begin{tabular}{ll}
@@ -35,17 +35,17 @@ It is clear that $S_{n}(P) \subseteq S_{n+1}(P) \subseteq L(P)$ for any positive
 \end{thm}
 
 \begin{lem}[Sato et al.(Lemma 10, \cite{Sato1})]\label{Sato1:Lemma10}
-    Suppose $\sharp \Sigma \geq 3$.
-    {\color{red} Let {\color{red}$p,q$} be regular patterns in $\RPat_{\Sigma\cup X}$
-    and $x$ a variable symbol.
-     Let $a$, $b$ and $c$ be mutually distinct constant symbols in $\Sigma$.
-  If $p\{x:=a\}\preceq q$, $p\{x:=b\} \preceq q$, and $p\{x:=c\}\preceq q$ hold,
- then $p\preceq q$.} 
+    {\color{red} Let $\Sigma$ be an alphabet with $\sharp \Sigma \geq 3$ and $x$ a variable symbol in $X$.
+    For two regular patterns $p$ and $q$ in $\RPat_{\Sigma\cup X}$ and three distinct constant symbols $a,b,c$ in $\Sigma$,
+     %Let $a$, $b$ and $c$ be mutually distinct constant symbols in $\Sigma$.
+  assume that the following three conditions hold:
+  $p\{x:=a\}\preceq q$, $p\{x:=b\} \preceq q$, and $p\{x:=c\}\preceq q$.
+ Then $p\preceq q$.} 
 \end{lem}
 
 From Lemma~\ref{Sato1:Lemma10}, the following theorem holds.
 \begin{thm}[Sato et al.(Theorem {\color{red} 11}, \cite{Sato1})]\label{Sato1:Theorem11}
-    Let $k$ be a positive integer. Suppose $\sharp\Sigma \geq 2k+1$.
+    Let $k$ be a positive integer {\color{red} with $k\ge 1$ and $\Sigma$  an alphabet with $\sharp\Sigma \geq 2k+1$}.
     For {\color{red}$P \in \RPatplus_{\Sigma\cup X}$} and {\color{red}$Q \in \RPatkei_{\Sigma\cup X}$}, 
     the following (i), (ii) and (iii) are equivalent:
     \[
@@ -58,7 +58,7 @@ From Lemma~\ref{Sato1:Lemma10}, the following theorem holds.
 From Theorem~\ref{Sato1:Theorem11},
 we have the following corollary.
 \begin{col}[Sato et al.(Corollary 12, \cite{Sato1})]
-    Suppose $\sharp\Sigma \geq 3$.
+    Let $\Sigma$ be an alphabet with $\sharp\Sigma \geq 3$.
     For two regular patterns {\color{red}$p,q\in\RPat_{\Sigma\cup X}$},
     the following $(\mathrm{i}), (\mathrm{ii})$ and $(\mathrm{iii})$ are equivalent:
     \[
@@ -72,7 +72,7 @@ we have the following corollary.
 That is, the following lemma specifies the minimal cardinality of $\Sigma$ required for Theorem~\ref{Sato1:Theorem11} to hold.
 }
 \begin{lem}[Sato et al.(Lemma 13, \cite{Sato1})]\label{Sato1:Lemma13}
-    Suppose $\sharp\Sigma \geq 3$.
+    Let $\Sigma$ be an alphabet with $\sharp\Sigma \geq 3$.
     Let $p_{1}$, $p_{2}$, $q_{1}$, $q_{2}$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$} and $x$ a variable symbol.
     Let $a$, $b$ be constant symbols in $\Sigma$ with $a \neq b$ and $w$ a string {\color{red}in} $\Sigma^{\ast}$.
     Let $p = p_{1}AwxwBp_{2}$ and $q = q_{1}AwBq_{2}$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$} {\color{red}satisfying} the following three conditions:
@@ -84,7 +84,7 @@ That is, the following lemma specifies the minimal cardinality of $\Sigma$ requi
             $(A,B)\in \{(a,b),(b,a)\}$.
         \end{tabular}
     \]
-    Then, we have that $p\{x:=a\} \preceq q$ and $p\{x:=b\} \preceq q$ hold 
+    Then, we have $p\{x:=a\} \preceq q$ and $p\{x:=b\} \preceq q$,
     but $p \not\preceq q$.
 \end{lem}
 
@@ -93,10 +93,10 @@ That is, the following lemma specifies the minimal cardinality of $\Sigma$ requi
 \begin{ex}[{\color{red}Example~\ref{counter-example4Theorem11}, \cite{Sato1}}]\label{counter-example4Theorem11}
     Let $k$ be a positive integer and $\Sigma= \{a_{1},\ldots,a_{k},b_{1},\ldots,b_{k}\}$.
     Let $w_{1},\ldots,w_{k}$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$} such that 
-    $w_{k} = \varepsilon$ and for $i=1,2,\ldots,k-1$, $w_{i} = w_{i+1}b_{i+1}a_{i+1}w_{i+1}$ hold.
+    $w_{k} = \varepsilon$ and for $i=1,2,\ldots,k-1$, $w_{i} = w_{i+1}b_{i+1}a_{i+1}w_{i+1}$.
     Let $p$, $q_{1},\ldots,q_{k}$ be regular patterns in {\color{red}$\RPat_{\Sigma\cup X}$} such that
-    $p = x_{1}a_{1}w_{1}xw_{1}b_{1}x_{2}$ and for $i=1,2,\ldots,k$, $q_{i} = x_{1}a_{i}w_{i}b_{i}x_{2}$ hold.
-    Let $Q$ be a set $\{q_{1},\ldots,q_{k}\}$ in $\RPatkei$.
+    $p = x_{1}a_{1}w_{1}xw_{1}b_{1}x_{2}$ and for $i=1,2,\ldots,k$, $q_{i} = x_{1}a_{i}w_{i}b_{i}x_{2}$.
+    Let $Q$ be a set $\{q_{1},\ldots,q_{k}\}$ in {\color{red}$\RPatkei_{\Sigma\cup X}$}.
     For $i=1$, we have $p\{x:=a_{1}\} =(x_{1}a_{1}w_{1})a_{1}(w_{1}b_{1}x_{2})=q_1\{x_{1}:=x_{1}a_{1}w_{1}\}\preceq q_{1}$.
     For $i\geq 2$, from the definition of $w_{i}$,
     we easily see that $w_{1}=(w_{i}b_{i})w^{(i)}={\color{red}w^{\prime(i)}}(a_{i}w_{i})$ for some strings $w^{(i)}$ and $w^{\prime(i)}$.
@@ -114,7 +114,7 @@ That is, the following lemma specifies the minimal cardinality of $\Sigma$ requi
         & \preceq & q_{i}.
     \end{eqnarray*}
 %
-   Hence, $S_{1}(p) \subseteq L(Q)$ holds.
-   However, from $p \not \preceq q_{i}$, $L(p) \not \subseteq L(q_{i})$ holds for each $i=1,2,\ldots,k$.
+   Hence, $S_{1}(p) \subseteq L(Q)$.
+   However, from $p \not \preceq q_{i}$, $L(p) \not \subseteq L(q_{i})$ for each $i=1,2,\ldots,k$.
 \end{ex}
 

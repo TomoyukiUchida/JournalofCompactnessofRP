@@ -3,18 +3,19 @@
 A regular pattern $p$ is said to be a {\it non-adjacent variable regular pattern} ($\NAV$ regular pattern)  
 if $p$ does not contain consecutive variable symbols.
 For example, the regular pattern $p=axybc$ is not an $\NAV$ regular pattern because $xy$ is appeared in $p$.
-Let $\NAVRP$ be the set of all $\NAV$ regular patterns.
-Let $\NAVRPplus$ be the set of all finite subsets $S$ of $\NAVRP$ such that $S$ is not the empty set, i.e., $\NAVRPplus=\{S \subseteq \NAVRP \mid \sharp S {\color{red} \geq} 1\}$,
-and $\NAVRPkei$ the set of all subsets $P$ of $\NAVRPplus$ such that $P$ consists of at most $k~(k\geq 1)$ $\NAV$ regular patterns, i.e., $\NAVRPkei=\{P\in \NAVRPplus \mid \sharp P \leq k\}$.
-We define the compactness with respect to {\color{red} language} containment for $\NAVRPkei$ in a similar way as {\color{red}$\RPatkei$}.%Def.\ref{def:compactness}.
- For any $\NAV$ regular pattern $p \in \NAVRP$ and any set $Q \in \NAVRPkei$ with $k~(k\geq 1)$,
-  the set $\NAVRPkei$ {\color{red} is said} to have {\it compactness with respect to {\color{red}language} containment}
-  if there exists an $\NAV$ regular pattern $q \in Q$ such that $L(p) \subseteq L(q)$ holds if $L(p) \subseteq L(Q)$ holds.
+Let {\color{red}$\NAVRP_{\Sigma\cup X}$} be the set of all $\NAV$ regular patterns {\color{red} over $\Sigma\cup X$}.
+Let {\color{red}$\NAVRPplus_{\Sigma\cup X}$} be the set of all finite subsets $S$ of {\color{red}$\NAVRP_{\Sigma\cup X}$} such that $S$ is not the empty set, i.e., {\color{red}$\NAVRPplus_{\Sigma\cup X}=\{S \subseteq \NAVRP_{\Sigma\cup X} \mid \sharp S {\color{red} \geq} 1\}$}.
+{\color{red}For an integer $k$ with $k\geq 1$, let $\NAVRPkei_{\Sigma\cup X}$ be} the set of all subsets $P$ of {\color{red}$\NAVRPplus_{\Sigma\cup X}$} such that $P$ consists of at most $k$ $\NAV$ regular patterns {\color{red}over $\Sigma\cup X$}, i.e., {\color{red}$\NAVRPkei_{\Sigma\cup X}=\{P\in \NAVRPplus_{\Sigma\cup X} \mid \sharp P \leq k\}$.}
+We define the compactness with respect to {\color{red} language} containment for {\color{red}$\NAVRPkei_{\Sigma\cup X}$ in the same manner as for} {\color{red}$\RPatkei_{\Sigma\cup X}$}.%Def.\ref{def:compactness}.
+ For an integer $k$ with $k\geq 1$, any $\NAV$ regular pattern $p \in \NAVRP_{\Sigma\cup X}$ and any set $Q \in \NAVRPkei_{\Sigma\cup X}$,
+  the set $\NAVRPkei_{\Sigma\cup X}$ {\color{red} is said} to have {\it compactness with respect to {\color{red}language} containment}
+  if there exists an $\NAV$ regular pattern $q \in Q$ over $\Sigma\cup X$ such that $L(p) \subseteq L(q)$ if $L(p) \subseteq L(Q)$.
 Then, the following {\color{red}theorem} holds.
 
 \begin{thm}\label{KeyTheoforNAVRP}
-For an integer $k~(k\ge 2)$, let $\sharp \Sigma \ge k+2,~P\in \NAVRPplus,~Q \in \NAVRPkei$.  
-Then, the following (i), (ii) and (iii) are equivalent:
+%For an integer $k~(k\ge 2)$, let $\sharp \Sigma \ge k+2,~P\in \NAVRPplus,~Q \in \NAVRPkei$.  
+{\color{red} Let $k$ be an integer with $k\ge 2$ and $\Sigma$ an alphabet with $\sharp \Sigma \ge k+2$.}
+Then, {\color{red} for two sets \NAV regular patterns $P\in \NAVRPplus_{\Sigma\cup X}$ and $Q \in \NAVRPkei_{\Sigma\cup X}$,} the following (i), (ii) and (iii) are equivalent:
 \[
 \begin{tabular}{ll}
 (i) $S_{2}(P) \subseteq L(Q)$,
@@ -25,59 +26,64 @@ Then, the following (i), (ii) and (iii) are equivalent:
 \end{thm}
 
 \begin{proof}
-From the definitions of $\NAVRPplus$ and $\NAVRPkei$, it is clear that (ii) implies (iii)  and  (iii) implies (i).
+From the definitions of {\color{red}$\NAVRPplus_{\Sigma\cup X}$} and {\color{red}$\NAVRPkei_{\Sigma\cup X}$}, it is clear that (ii) implies (iii)  and  (iii) implies (i).
 Hence, we will show that (i) implies (ii) 
 by mathematical induction on the number $n$ of variable symbols that appear in an $\NAV$ regular pattern $p\in P$ as follows:
 If $n=0$, then we have $S_{2}(\{p\})= \{ p \}$.
 Hence, $p \in L(Q)$.
-Therefore, there exists $q \in Q$ such that $p \preceq q$ holds.
+Therefore, there exists $q \in Q$ such that $p \preceq q$.
 
 If $n \ge 0$, we assume that the proposition holds for any regular $\NAV$ regular pattern containing $n \ge 0$ variable symbols.
-Let $p$ be an $\NAV$ regular pattern containing $n+1$ variable symbols such that $S_{2}(\{p\}) \subseteq L(Q)$ holds and $p$ contains a variable symbol $x$.
-There exist two $\NAV$ regular patterns $p_{1},p_{2}$ such that $p=p_{1}xp_{2}$ holds.
-By the induction hypothesis, for any constant string $w\in \Sigma^{\ast}$ with $|w|=2$, {\color{red}$\{p\{x:=w\}\}\sqsubseteq Q$} holds because $p\{x:=w\}$ contains $n$ variable symbols.
-Hence, there exists an $\NAV$ regular pattern $q_{w} \in Q$ such that $p \{ x:=w \} \preceq q_{w}$ holds.
+Let $p$ be an $\NAV$ regular pattern containing $n+1$ variable symbols such that $S_{2}(\{p\}) \subseteq L(Q)$ and $p$ contains a variable symbol $x$.
+There exist two $\NAV$ regular patterns $p_{1},p_{2}$ such that $p=p_{1}xp_{2}$.
+By the induction hypothesis, for any constant string $w\in \Sigma^{\ast}$ with $|w|=2$, {\color{red}$\{p\{x:=w\}\}\sqsubseteq Q$} because $p\{x:=w\}$ contains $n$ variable symbols.
+Hence, there exists an $\NAV$ regular pattern $q_{w} \in Q$ such that $p \{ x:=w \} \preceq q_{w}$.
 From Lemma \ref{Add-Lemma01}, 
-there exists a regular pattern $q \in Q$ such that $p \{ x:=xy \} \preceq q$ holds, where $y$ is a variable symbol that does not appear in $q$.
+there exists a regular pattern $q \in Q$ such that $p \{ x:=xy \} \preceq q$, where $y$ is a variable symbol that does not appear in $q$.
 This contradicts the condition $Q \in \NAVRPkei$.
 Thus, we have that (i) implies (ii).
 \end{proof}
 
 \begin{col}
-Let $k\ge 2$, $\sharp\Sigma \ge k+2$ and $P \in \NAVRPplus$.
-Then, $S_{2}(P)$ is a characteristic set of $\NAVRPLkei$.
+%Let $k\ge 2$, $\sharp\Sigma \ge k+2$ and {\color{red}$P \in \NAVRPplus$}.
+{\color{red}Let $k$ be an integer with $k\ge 2$ and $\Sigma$ an alphabet with $\sharp\Sigma \ge k+2$.}
+Then, for {\color{red}$P \in \NAVRPplus_{\Sigma\cup X}$}, $S_{2}(P)$ is a characteristic set of $\NAVRPLkei$.
 \end{col}
 
 \begin{lem}\label{Case_k+2}
-Let $k\ge 2$ and $\sharp\Sigma \le k+1$.
-Then, $\NAVRPkei$ does not have compactness with respect to {\color{red} language }containment.
+%Let $k\ge 2$ and $\sharp\Sigma \le k+1$.
+{\color{red}Let $k$ be an integer with $k\ge 2$ and $\Sigma$ an alphabet with $\sharp\Sigma \le k+1$.}
+Then, $\NAVRPkei_{\Sigma\cup X}$ does not have compactness with respect to {\color{red} language }containment.
 \end{lem}
 \begin{proof}
 Let $\Sigma = \{ a_{1}, \ldots , a_{k+1} \}$.
-We assume that for $i=1,2,\ldots,k$, $p \{ x := a_{i}y \} \preceq q_{i}$ and $p \{ x := ya_{i+1} \} \preceq q_{i}$ holds. 
-If $p \{ x:= a_{k+1}a_{1} \} \preceq q_{1}$ holds, $S_{2}(p) \backslash S_{1}(p) \subseteq \bigcup^{k}_{i=1} L(q_{i})$ holds.
-This show that $L(p) \subseteq L(Q)$ holds.
-However, for $i=1,2,\ldots,k$, since $p \not \preceq q_{i}$ holds, we have that $L(p) \not \subseteq L(q_{i})$ holds.
+We assume that for $i=1,2,\ldots,k$, $p \{ x := a_{i}y \} \preceq q_{i}$ and $p \{ x := ya_{i+1} \} \preceq q_{i}$. 
+If $p \{ x:= a_{k+1}a_{1} \} \preceq q_{1}$, $S_{2}(p) \backslash S_{1}(p) \subseteq \bigcup^{k}_{i=1} L(q_{i})$.
+This show that $L(p) \subseteq L(Q)$.
+However, for $i=1,2,\ldots,k$, since $p \not \preceq q_{i}$, we have $L(p) \not \subseteq L(q_{i})$.
 Hence, $\NAVRPkei$ does not have compactness with respect to {\color{red} language }containment.
 \end{proof}
 
 Next, in Example \ref{Case_k+1}, we give an example for Lemma \ref{Case_k+2}.
 \begin{ex}\label{Case_k+1}
-Let $\Sigma$ be the set of four constant symbols $a,~b,~c,~d$, i.e., $\Sigma= \{a, b, c, d \}$ and $x,x^{\prime},x^{\prime\prime}$ three distinct variable symbols.
-Let $p,q_{1},q_{2},q_{3}$ be the $\NAV$ regular patterns given in Fig. \ref{Fig:CounterExampleforNAVR}. 
-\begin{figure}[tb]
-  \begin{tabular}{l}
+{\color{red}Let $\Sigma=\{a,b,c,d\}$.
+Let $p,q_{1},q_{2},q_{3}$ be the following $\NAV$ regular patterns over $\Sigma\cup X$:% given in Fig. \ref{Fig:CounterExampleforNAVR}. 
+%\begin{figure}[tb]
+
+\noindent
+%  \begin{tabular}{l}
 $p  = x^{\prime}cadadaadacbadadaadaxadadaadacbadadaadabx^{\prime\prime}$,\\
 $q_{1} = x^{\prime}cadadaadacbadadaadacx^{\prime\prime}$,\\
 $q_{2} = x^{\prime}badadaadacx^{\prime\prime}$,\\
-$q_{3} = x^{\prime}aadadx^{\prime\prime}$.
-  \end{tabular}
-\caption{$\NAV$ regular patterns $p$, $q_{1}$, $q_{2}$, and $q_{3}$}\label{Fig:CounterExampleforNAVR}
-\end{figure}
+$q_{3} = x^{\prime}aadadx^{\prime\prime}$,\\
+%  \end{tabular}
+%\caption{$\NAV$ regular patterns $p$, $q_{1}$, $q_{2}$, and $q_{3}$}\label{Fig:CounterExampleforNAVR}
+%\end{figure}
 \noindent
+where $x,x^{\prime},x^{\prime\prime}$ are three distinct variable symbols in $X$}.
 Then, we have  $L(p) \subseteq L(q_{1}) \cup L(q_{2}) \cup L(q_{3})$.
 This show that for $P=\{p\},~Q=\{q_{1},q_{2},q_{3}\}$, (iii) of Theorem \ref{KeyTheoforNAVRP} holds.
-However, since $p \not \preceq q_{1},~p \not \preceq q_{2}$ and $p \not \preceq q_{3}$ hold,
+However, since $p \not \preceq q_{1},~p \not \preceq q_{2}$ and $p \not \preceq q_{3}$,
 we have $P \not \sqsubseteq Q$, that is, (ii) of Theorem \ref{KeyTheoforNAVRP} does not hold.
 \end{ex}
 
@@ -85,6 +91,7 @@ From Theorem \ref{KeyTheoforNAVRP} and Lemma \ref{Case_k+2},
 we have the following theorem.
 
 \begin{thm}\label{MainTheforNAVRP}
-Let $k\ge 2$ and $\sharp\Sigma \ge k+2$.
-Then, the set $\NAVRPLkei$ has compactness with respect to {\color{red} language }containment.
+%Let $k\ge 2$ and $\sharp\Sigma \ge k+2$.
+{\color{red}Let $k$ be an integer with $k\ge 2$ and $\Sigma$ an alphabet with $\sharp\Sigma \ge k+2$.}
+Then, the set {\color{red}$\NAVRPLkei_{\Sigma\cup X}$} has compactness with respect to {\color{red} language }containment.
 \end{thm}
