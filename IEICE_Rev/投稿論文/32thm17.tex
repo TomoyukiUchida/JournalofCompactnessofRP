@@ -26,7 +26,7 @@ we have the following theorem.
     Then, we show that (i) implies (ii).
     It suffices to show that $S_{2}(p) \subseteq L(Q)$ implies {\color{red}$\{p\} \sqsubseteq Q$}
     for any regular pattern {\color{red}$p \in P$}.
-    The proof is done by mathematical induction on $n$, where $n$ is the number of variable symbols appears in $p$.
+    The proof is done by mathematical induction on $n$, where $n$ is the number of variable symbols occurs in $p$.
 
     In case $n=0$, $S_{2}(p) = \{p\}$.
     By (i), we have {\color{red}$\{p\} \subseteq L(Q)$}. Thus, $p \preceq q$ for some $q \in Q$.
@@ -34,10 +34,10 @@ we have the following theorem.
     For $n \geq 0$,
     we assume that it is valid for any regular pattern $p$
     with $n$ variable symbols.
-    Let $p$ be a regular pattern such that $n+1$ variable symbols appear in $p$
+    Let $p$ be a regular pattern such that $n+1$ variable symbols occur in $p$
     and $S_{2}(p) \subseteq L(Q)$.
     {\color{red} Let $Q = \{q_{1},\ldots,q_{k}\}$.}
-    We assume that $p \not\sqsubseteq Q$, that is, {\color{red}$p \not\preceq q_{i}$}
+    We assume that {\color{red}$\{p\} \not\sqsubseteq Q$}, that is, {\color{red}$p \not\preceq q_{i}$}
     for any $i \in \{1,\ldots,k\}$.
     {\color{red} Let $p_{1}$, $p_{2}$ be regular patterns and $x$ a variable symbol with $p = p_{1}xp_{2}$.}
     For $a, b \in \Sigma$,
@@ -135,13 +135,13 @@ In case $k=2$, we have the following theorem.
     for any regular pattern {\color{red}$p \in P$}.
     Let $Q = \{q_{1}, q_{2}\}$.
     The proof is done by mathematical induction on $n$,
-    where $n$ is the number of variable symbols appearing in $p$.
+    where $n$ is the number of variable symbols occurring in $p$.
     In case $n=0$, $p \in \Sigma^{+}$.
     Since $S_{2}(p) = \{p\} \subseteq L(Q)$, we have $p \preceq q$
     for some $q \in Q$.
     For $n \geq 0$, we assume that it is valid for any regular pattern $p$ with
     $n$ variable symbols.
-    Let $p$ be a regular pattern such that $n+1$ variable symbols appear in $p$,
+    Let $p$ be a regular pattern such that $n+1$ variable symbols occur in $p$,
     and $S_{2}(p) \subseteq L(Q)$.
     We assume that $p \not\preceq q_{i}$ ($i=1,2$).
     Let $p_{1}$, $p_{2}$ be regular patterns and $x$ a variable symbol

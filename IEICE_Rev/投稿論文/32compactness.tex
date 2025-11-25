@@ -25,7 +25,7 @@ since $q$ minimally supports $D$ for $p$.
   {\color{red} Let {\color{red}$p$ and $q$} be regular patterns in {\color{red} $\RPat_{\Sigma\cup X}$}}.
   {\color{red} Define $D = \{ ya, bc, dy \} \subsetneq \RPat_{\Sigma\cup X}$ 
   where \TheConditionAComma~  and 
-  $y$ is a variable symbol in $X$ that {\color{red}appears in neither $p$ nor $q$}.}
+  $y$ is a variable symbol in $X$ that {\color{red}occurs in neither $p$ nor $q$}.}
   {\color{red} Suppose that $p\preceq q$ or that $q$ minimally supports $D$ for $p$. Then $p \{ x := xy \} \preceq q$}.
 \end{lem}
 
@@ -55,7 +55,7 @@ $q$ can be expressed in one of the following forms: Let $y_{1}, y_{2}$ be distin
   {\color{red}
   We note the following observations regarding the behavior of substrings in the sequence $q$:
 In (\ref{lem:addpart}-1), each string in $D$ occurs independently within $q$.
-In (\ref{lem:addpart}-2), the substring $dya$ appears in $q$ as a result of either variable sharing or adjacency between  $ya$ and $dy$ in D.
+In (\ref{lem:addpart}-2), the substring $dya$ occurs in $q$ as a result of either variable sharing or adjacency between  $ya$ and $dy$ in D.
 In (\ref{lem:addpart}-3), when $a = d$, the substring $y_1ay_2$, formed by a one-character overlap between $ya$ and $dy$ in $D$, is observed within $q$.
   }
 
@@ -256,7 +256,7 @@ We suppose that $(A, B) = (dy_{1}a, bc)$, i.e., $q = q_{1}dy_{1}awbcq_{2}$.
 {\color{red} 
 Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$.
 Let $p$ and $q$ be regular patterns in $\RPat_{\Sigma\cup X}$.
-Define $D=\{ya,bc,dy\}\subsetneq \RPat_{\Sigma\cup X}$ where \TheConditionBComma, and $y$ is a variable symbol in $X$ that appears in neither $p$ nor $q$.}
+Define $D=\{ya,bc,dy\}\subsetneq \RPat_{\Sigma\cup X}$ where \TheConditionBComma, and $y$ is a variable symbol in $X$ that occurs in neither $p$ nor $q$.}
 {\color{red} Suppose that $p\preceq q$ or that $q$ minimally supports $D$ for $p$.
  Then $p \{ x := xy \} \preceq q$}.
 \end{lem}
@@ -269,8 +269,8 @@ We assume that $p \{ x := xy \} \not \preceq q$ in order to derive a contradicti
 The proof is almost the same as the proof of Lemma~\ref{lem:addpart}.
 {\color{red} Since $q$ minimally supports $D$ for $p$, i.e., $p \{ x := r \} \preceq q$ for all $r \in D$,}
 there are three strings of length $2$ corresponding to $ya, bc, dy$ in $q$.
-The symbols appearing in $D$ correspond to either a variable or a constant symbol in $q$.
-Let $y_{1}$ and $y_{2}$ be variable symbols appearing in $q$.
+The symbols occurring in $D$ correspond to either a variable or a constant symbol in $q$.
+Let $y_{1}$ and $y_{2}$ be variable symbols occurring in $q$.
 The strings $ya$ and $dy$ must correspond to the strings $y_{1}a$ and $dy_{2}$ in $q$, respectively.
 For the same reasons stated at the beginning of Lemma~\ref{lem:addpart}, the string $bc$ corresponds to the string $bc$ in $q$ as well.
 Let $A,B,C$ be regular patterns {\color{red}over} $\Sigma \cup X$, where $\{ A,B,C \} = \{ y_{1}a,ac,dy_{3} \}$.
@@ -384,7 +384,7 @@ From the above, we conclude that if $p \{ x := r \} \preceq q$ for all $r \in \{
   {\color{red} Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 2$.
   Let $p$ and $q$ be} regular patterns in $\RPat_{\Sigma\cup X}$.
   {\color{red} Define} $D=\{ya,bc,dy\}\subsetneq \RPat_{\Sigma\cup X}$ where \TheConditionCComma,
-  and $y$ is a variable symbol in $X$ that appears in neither $p$ nor $q$.
+  and $y$ is a variable symbol in $X$ that occurs in neither $p$ nor $q$.
   {\color{red} Suppose that $p\preceq q$ or that $q$ minimally supports $D$ for $p$.
    Then $p \{ x := xy \} \preceq q$}.
 \end{lem}
@@ -411,7 +411,7 @@ When the conditions of Lemmas \ref{lem:addpart}, \ref{lem:oneside_i}, and \ref{l
   {\color{red} Let $\Sigma$ be an alphabet.} 
   {\color{red} Define $D= \{ ya, bc, dy \}$, where $a,b,c,d\in \Sigma,~b=a,~c=d$ and $y$ is a variable symbol in $X$.}
   There exist regular patterns $p$ and $q$ {\color{red} in $\RPat_{\Sigma\cup X}$
-  such that $q$ minimally supports $D$ for $p$ (i.e., $p\not\preceq q$, $p \{ x := r \} \preceq q$ for any $r \in D$, $p\{x:=by\}\not\preceq q$ and $p\{x:=yc\}\not\preceq q$) and $y$ appears in neither $p$ nor $q$.}, but $p \{ x := xy \} \not \preceq q$.
+  such that $q$ minimally supports $D$ for $p$ (i.e., $p\not\preceq q$, $p \{ x := r \} \preceq q$ for any $r \in D$, $p\{x:=by\}\not\preceq q$ and $p\{x:=yc\}\not\preceq q$) and $y$ occurs in neither $p$ nor $q$.}, but $p \{ x := xy \} \not \preceq q$.
 \end{prop}
 
 \begin{proof}

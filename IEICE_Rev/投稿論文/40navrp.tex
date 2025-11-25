@@ -2,7 +2,7 @@
 
 A regular pattern $p$ is said to be a {\it non-adjacent variable regular pattern} ($\NAV$ regular pattern)  
 if $p$ does not contain consecutive variable symbols.
-For example, the regular pattern $p=axybc$ is not an $\NAV$ regular pattern because $xy$ is appeared in $p$.
+For example, the regular pattern $p=axybc$ is not an $\NAV$ regular pattern because $xy$ is occurred in $p$.
 Let {\color{red}$\NAVRP_{\Sigma\cup X}$} be the set of all $\NAV$ regular patterns {\color{red} over $\Sigma\cup X$}.
 Let {\color{red}$\NAVRPplus_{\Sigma\cup X}$} be the set of all finite subsets $S$ of {\color{red}$\NAVRP_{\Sigma\cup X}$} such that $S$ is not the empty set, i.e., {\color{red}$\NAVRPplus_{\Sigma\cup X}=\{S \subseteq \NAVRP_{\Sigma\cup X} \mid \sharp S {\color{red} \geq} 1\}$}.
 {\color{red}For an integer $k$ with $k\geq 1$, let $\NAVRPkei_{\Sigma\cup X}$ be} the set of all subsets $P$ of {\color{red}$\NAVRPplus_{\Sigma\cup X}$} such that $P$ consists of at most $k$ $\NAV$ regular patterns {\color{red}over $\Sigma\cup X$}, i.e., {\color{red}$\NAVRPkei_{\Sigma\cup X}=\{P\in \NAVRPplus_{\Sigma\cup X} \mid \sharp P \leq k\}$.}
@@ -15,7 +15,7 @@ Then, the following {\color{red}theorem} holds.
 \begin{thm}\label{KeyTheoforNAVRP}
 %For an integer $k~(k\ge 2)$, let $\sharp \Sigma \ge k+2,~P\in \NAVRPplus,~Q \in \NAVRPkei$.  
 {\color{red} Let $k$ be an integer with $k\ge 2$ and $\Sigma$ an alphabet with $\sharp \Sigma \ge k+2$.}
-Then, {\color{red} for two sets \NAV regular patterns $P\in \NAVRPplus_{\Sigma\cup X}$ and $Q \in \NAVRPkei_{\Sigma\cup X}$,} the following (i), (ii) and (iii) are equivalent:
+Then, {\color{red} for two sets $\NAV$ regular patterns $P\in \NAVRPplus_{\Sigma\cup X}$ and $Q \in \NAVRPkei_{\Sigma\cup X}$,} the following (i), (ii) and (iii) are equivalent:
 \[
 \begin{tabular}{ll}
 (i) $S_{2}(P) \subseteq L(Q)$,
@@ -28,7 +28,7 @@ Then, {\color{red} for two sets \NAV regular patterns $P\in \NAVRPplus_{\Sigma\c
 \begin{proof}
 From the definitions of {\color{red}$\NAVRPplus_{\Sigma\cup X}$} and {\color{red}$\NAVRPkei_{\Sigma\cup X}$}, it is clear that (ii) implies (iii)  and  (iii) implies (i).
 Hence, we will show that (i) implies (ii) 
-by mathematical induction on the number $n$ of variable symbols that appear in an $\NAV$ regular pattern $p\in P$ as follows:
+by mathematical induction on the number $n$ of variable symbols that occur in an $\NAV$ regular pattern $p\in P$ as follows:
 If $n=0$, then we have $S_{2}(\{p\})= \{ p \}$.
 Hence, $p \in L(Q)$.
 Therefore, there exists $q \in Q$ such that $p \preceq q$.
@@ -39,7 +39,7 @@ There exist two $\NAV$ regular patterns $p_{1},p_{2}$ such that $p=p_{1}xp_{2}$.
 By the induction hypothesis, for any constant string $w\in \Sigma^{\ast}$ with $|w|=2$, {\color{red}$\{p\{x:=w\}\}\sqsubseteq Q$} because $p\{x:=w\}$ contains $n$ variable symbols.
 Hence, there exists an $\NAV$ regular pattern $q_{w} \in Q$ such that $p \{ x:=w \} \preceq q_{w}$.
 From Lemma \ref{Add-Lemma01}, 
-there exists a regular pattern $q \in Q$ such that $p \{ x:=xy \} \preceq q$, where $y$ is a variable symbol that does not appear in $q$.
+there exists a regular pattern $q \in Q$ such that $p \{ x:=xy \} \preceq q$, where $y$ is a variable symbol that does not occur in $q$.
 This contradicts the condition $Q \in \NAVRPkei$.
 Thus, we have that (i) implies (ii).
 \end{proof}

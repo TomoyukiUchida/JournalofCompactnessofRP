@@ -26,7 +26,7 @@ there exists $q \in Q$ such that $L(p) \subseteq L(q)$.}
 \begin{figure}[t]
   \begin{center}
     \includegraphics[scale=0.525]{figs/lem8totalreg.pdf}
-    \caption{In the left figure, we aggregate all edges appearing in Fig.~\ref{fig:lem8eachreg}. For all $w=a'b'\in A'\cdot B'$, there must be a regular pattern $q_i$ $(1\leq i\leq 5$) {\color{red} satisfying} $p \{ x:=w \} \preceq q_i$.}\label{fig:lem8totalreg}
+    \caption{In the left figure, we aggregate all edges occurring in Fig.~\ref{fig:lem8eachreg}. For all $w=a'b'\in A'\cdot B'$, there must be a regular pattern $q_i$ $(1\leq i\leq 5$) {\color{red} satisfying} $p \{ x:=w \} \preceq q_i$.}\label{fig:lem8totalreg}
   \end{center}
 \end{figure}
 
@@ -41,7 +41,7 @@ there exists $q \in Q$ such that $L(p) \subseteq L(q)$.}
 \begin{figure}[t]
   \begin{center}
     \includegraphics[scale=0.8]{figs/lem8totalreg-suppl.png}
-    \caption{In the left figure, we aggregate all edges appearing in Fig.~\ref{fig:lem8eachreg-suppl}. From Fig.~\ref{fig:lem8eachreg-suppl} and this right figure, we get $Q_{1}^{(\cdot,\cdot)}=\{q_6,q_7,q_8,q_9\}$ and $Q_{2}^{(\cdot,\cdot)}=\{q_{10}\}$. From Proposition~\ref{prop:bothsides}, even if the string $dg \in A'\cdot B'$ satisfies {\color{red}$p \{ x:=dg \} \preceq q_{10}$}, it does not imply that $p \{ x:=xy \} \preceq q_{10}$.}\label{fig:lem8totalreg-suppl}
+    \caption{In the left figure, we aggregate all edges occurring in Fig.~\ref{fig:lem8eachreg-suppl}. From Fig.~\ref{fig:lem8eachreg-suppl} and this right figure, we get $Q_{1}^{(\cdot,\cdot)}=\{q_6,q_7,q_8,q_9\}$ and $Q_{2}^{(\cdot,\cdot)}=\{q_{10}\}$. From Proposition~\ref{prop:bothsides}, even if the string $dg \in A'\cdot B'$ satisfies {\color{red}$p \{ x:=dg \} \preceq q_{10}$}, it does not imply that $p \{ x:=xy \} \preceq q_{10}$.}\label{fig:lem8totalreg-suppl}
   \end{center}
 \end{figure}
 
@@ -51,7 +51,7 @@ that $\RPatkei$ has compactness with respect to language containment, we establi
 Let $k$ be an integer with $k \geq 1$ and $\Sigma$ an alphabet with $\sharp \Sigma = k + 2$.
 {\color{red}Consider a regular pattern $p\in \RPat_{\Sigma\cup X}$ that contains} a variable symbol {\color{red}$x\in X$}, and let $Q \in \RPat^{k}$.
 {\color{red}Assume that for any string $w \in \Sigma^{\ast}$ with $|w|=2$, there exists a regular pattern $q_{w} \in Q$ such that $p \{ x:=w \} \preceq q_{w}$.
-Then there exists a regular pattern $q \in Q$ such that $p \{ x:=xy \} \preceq q$, where $y$ is a variable symbol that occurs in neither $p$ nor $q$.}
+Then there exists a regular pattern $q \in Q$ such that $p \{ x:=xy \} \preceq q$, where $y$ is a variable symbol that does not occur in $p$.}
 \end{lem}
 
 \begin{proof}
@@ -127,10 +127,10 @@ We have the following two claims:
 \noindent
 \textit{Proof of Claim} 2.
 Let $W = \{a_{1}b_{1},\ldots,a_{5}b_{5}\} \subseteq A'\cdot B'$.
-{\color{red}For any $i$ ($1\leq i\leq 5$), if either $\sharp (W\cap \{a_{i}c \mid c \in \Sigma\})\geq 3$ or $\sharp (W \cap \{cb_{i} \mid c \in \Sigma\}) \geq 3$ holds, then $a_{i}\in A(q)$ or $b_{i}\in B(q)$.
+{\color{red}From Lemma~\ref{Sato1:Lemma10}, for any $i$ ($1\leq i\leq 5$), if either $\sharp (W\cap \{a_{i}c \mid c \in \Sigma\})\geq 3$ or $\sharp (W \cap \{cb_{i} \mid c \in \Sigma\}) \geq 3$ holds, then $a_{i}\in A(q)$ or $b_{i}\in B(q)$.
 From the definitions of $A'$ and $B'$, {\color{red}we have} that,  
 for any $i$ ($1\leq i\leq 5$), $\sharp (W \cap \{a_{i}c \mid c \in \Sigma\}) \leq 2$ and $\sharp (W \cap \{cb_{i} \mid c \in \Sigma\}) \leq 2$.}
-{\color{red} Then, it is proved} that there are $3$ strings $a_{i_{1}}b_{i_{1}},a_{i_{2}}b_{i_{2}},a_{i_{3}}b_{i_{3}}\in W$ such that $a_{i_{j}} \not= a_{i_{j^{\prime}}}$ and $b_{i_{j}} \not= b_{i_{j^{\prime}}}$ for any $i_{j},i_{j^{\prime}}$ ($i_{j}\not= i_{j^{\prime}}, 1\leq j,j^{\prime}\leq 3$).
+{\color{red} Then, it is proved} that there are $3$ strings $a_{i_{1}}b_{i_{1}},a_{i_{2}}b_{i_{2}},a_{i_{3}}b_{i_{3}}\in W$ such that $a_{i_{j}} \not= a_{i_{j^{\prime}}}$ and $b_{i_{j}} \not= b_{i_{j^{\prime}}}$ for any $i_{j},i_{j^{\prime}}$ ($i_{j}\not= i_{j^{\prime}}, {\color{red}1\leq j<j^{\prime}\leq 3}$).
 Therefore, from Lemma~\ref{lem:3consts_iii}, this claim holds. (\textit{End of Proof of Claim} 2)
 
 \smallskip
@@ -238,14 +238,14 @@ We give an example of the above inequality in Fig.~\ref{fig:lem11-prop4-eachreg2
 \begin{figure*}[t]
   \begin{center}
     \includegraphics[scale=0.8]{figs/lem11-prop4-eachreg3.png}
-    \caption{Let $\Sigma=\{a,b,c,d,e\}$ and $Q=\{q_{11},q_{12},q_{13},q_{14},q_{15},q_{16}\}$. From these figures, we get $\ell_A=4$, $\ell_B=1$, $Q^{(\bot,\bot)}=Q^{(\bot,\cdot)}=\emptyset, Q^{(\cdot,\bot)}=\{q_{13}\}$, and $Q^{(\cdot,\cdot)}=\{q_{11},q_{12},q_{14},q_{15},q_{16}\}$. From Proposition~\ref{prop:bothsides}, we note again that for example, even if $p \{ x:=db \} \preceq q_{15}$, it does not imply that $p \{ x:=xy \} \preceq q_{15}$.}\label{fig:lem11-prop4-eachreg2}
+    \caption{Let $\Sigma=\{a,b,c,d,e\}$ and $Q=\{q_{11},q_{12},q_{13},q_{14},q_{15},q_{16}\}$. From these figures, we get $\ell_A=4$, $\ell_B=2$, $Q^{(\bot,\bot)}=Q^{(\bot,\cdot)}=\emptyset, Q^{(\cdot,\bot)}=\{q_{13}\}$, and $Q^{(\cdot,\cdot)}=\{q_{11},q_{12},q_{14},q_{15},q_{16}\}$. From Proposition~\ref{prop:bothsides}, we note again that for example, even if $p \{ x:=db \} \preceq q_{15}$, it does not imply that $p \{ x:=xy \} \preceq q_{15}$.}\label{fig:lem11-prop4-eachreg2}
   \end{center}
 \end{figure*}
 
 \begin{figure}[t]
   \begin{center}
     \includegraphics[scale=0.8]{figs/lem11-prop4-totalreg3.png}
-    \caption{In the left and right figures, we aggregate all edges corresponding to $(A\cdot B)\cup (A'\cdot B)\cup (A\cdot B')$ and $A'\cdot B'$ in Fig.~\ref{fig:lem11-prop4-eachreg2}, respectively. From these figures, we get $Q_{1}^{(\cdot,\cdot)}=\{q_{11},q_{12},q_{14}\}$ and $Q_{2}^{(\cdot,\cdot)}=\{q_{15},q_{16}\}$. Then, ${\cal L}_{1} = 2$ and ${\cal L}_{2} = 2 \leq \min\{\sharp A' + \ell_B, \sharp B' + \ell_A\} = 4$.}\label{fig:lem11-prop4-totalreg2}
+    \caption{In the left and right figures, we aggregate all edges corresponding to $(A\cdot B)\cup (A'\cdot B)\cup (A\cdot B')$ and $A'\cdot B'$ in Fig.~\ref{fig:lem11-prop4-eachreg2}, respectively. From these figures, we get $Q_{1}^{(\cdot,\cdot)}=\{q_{11},q_{12},q_{14}\}$ and $Q_{2}^{(\cdot,\cdot)}=\{q_{15},q_{16}\}$. Then, ${\cal L}_{1} = 2$ and ${\cal L}_{2} = 2 \leq \min\{\sharp A' + \ell_B, \sharp B' + \ell_A\} = 5$.}\label{fig:lem11-prop4-totalreg2}
   \end{center}
 \end{figure}
 
@@ -273,7 +273,8 @@ Since ${\cal L}_{2} \leq \frac{1}{2}(\sharp A' + \sharp B' + \ell_{A} + \ell_{B}
 When $\sharp A = k$ and $\sharp B \leq k$, i.e., $\sharp A' = 2$ and $\sharp B' \geq 2$, since $\ell_{A} = 0$,
 ${\cal L}_{1} \leq 2\sharp B' - 2\ell_{B} -4$.
 Moreover, ${\cal L}_{2} \leq \min\{\sharp B', \ell_{B} + 2\}$.
-From \textit{Claim} 1, $\ell_B + 2 = k - \sharp\sigma^{-1}_{B}(\bot) - \sharp B = \sharp B' - \sharp\sigma^{-1}_{B}(\bot)$. Therefore, ${\cal L}_{2} \leq \ell_{B} + 2$.
+%From \textit{Claim} 1, $\ell_B + 2 = k - \sharp\sigma^{-1}_{B}(\bot) - \sharp B = \sharp B' - \sharp\sigma^{-1}_{B}(\bot)$. 
+Therefore, ${\cal L}_{2} \leq \ell_{B} + 2$.
 Thus,
 \begin{align*}
   &\ \sharp A' \times \sharp B' - {\cal L}_{1} - {\cal L}_{2}\\
@@ -292,7 +293,7 @@ Therefore, for such a regular pattern $q$, $p \{x := xy\} \preceq q$.
 \begin{lem}[Sato et al.\cite{Sato1}]\label{Sato1:Lemma15}
 {\color{red} Let $\Sigma$ be an alphabet with $\sharp \Sigma \ge 3$}.
 {\color{red} For regular patterns $p$ and $q$,
-assume that there exists a constant symbol $a \in \Sigma$ such that $p \{ x := a \} \preceq q$ and $p \{ x := xy \} \preceq q$, where $y$ is a variable symbol that does not occur in $q$.
+assume that there exists a constant symbol $a \in \Sigma$ such that $p \{ x := a \} \preceq q$ and $p \{ x := xy \} \preceq q$, where $y$ is a variable symbol that does not occur in {\color{red}$p$}.
 Then $p \preceq q$.}
 \end{lem}
 
