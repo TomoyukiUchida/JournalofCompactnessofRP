@@ -1,20 +1,20 @@
 
 \subsection{Basic Definitions and Notations}\label{subsec:basicdef}
 
-Let $\Sigma$ be {\color{black} an alphabet, i.e.,} a non-empty finite set of constant symbols.
+Let $\Sigma$ be {\color{red} an alphabet, i.e.,} a non-empty finite set of constant symbols.
 Let $X$ be an infinite set of variable symbols such that $\Sigma \cap X = \emptyset$.
-Then, a \textit{string} {\color{black}over} $\Sigma \cup X$ is a sequence of symbols in $\Sigma \cup X$.
+Then, a \textit{string} {\color{red}over} $\Sigma \cup X$ is a sequence of symbols in $\Sigma \cup X$.
 Particularly, the string having no symbol is called the \textit{empty string} and is denoted by $\varepsilon$.
-We denote by $(\Sigma \cup X)^{\ast}$ the set of all strings {\color{black}over} $\Sigma \cup X$ 
-and by $(\Sigma \cup X)^{+}$ the set of all strings {\color{black}over} $\Sigma\cup X$ except $\varepsilon$, i.e., $(\Sigma \cup X)^{+}=(\Sigma \cup X)^{\ast}\setminus \{\varepsilon\}$.
+We denote by $(\Sigma \cup X)^{\ast}$ the set of all strings {\color{red}over} $\Sigma \cup X$ 
+and by $(\Sigma \cup X)^{+}$ the set of all strings {\color{red}over} $\Sigma\cup X$ except $\varepsilon$, i.e., $(\Sigma \cup X)^{+}=(\Sigma \cup X)^{\ast}\setminus \{\varepsilon\}$.
 
-A \textit{pattern} {\color{black}over} $\Sigma \cup X$ is a string in $(\Sigma \cup X)^{\ast}$.
-Note that the empty string $\varepsilon$ is a pattern {\color{black}over} $\Sigma \cup X$.
+A \textit{pattern} {\color{red}over} $\Sigma \cup X$ is a string in $(\Sigma \cup X)^{\ast}$.
+Note that the empty string $\varepsilon$ is a pattern {\color{red}over} $\Sigma \cup X$.
 A pattern $p$ is said to be \textit{regular} if each variable symbol occurs
 at most once in $p$.
 The length of $p$, denote by $|p|$, is the number of symbols in $p$.
 Note that $|\varepsilon|=0$.
-{\color{black} The sets of all patterns and regular patterns {\color{black}over} $\Sigma \cup X$ are denoted by $\Pat_{\Sigma\cup X}$ and $\RPat_{\Sigma\cup X}$, respectively.
+{\color{red} The sets of all patterns and regular patterns {\color{red}over} $\Sigma \cup X$ are denoted by $\Pat_{\Sigma\cup X}$ and $\RPat_{\Sigma\cup X}$, respectively.
 When $\Sigma$ and $X$ are clear from the context, 
 we omit them in the notation and simply write $\Pat$ and $\RPat$, respectively.}
 For a set $S$, we denote by $\sharp S$ the number of elements in $S$.
@@ -23,7 +23,7 @@ If $p$ and $q$ are equal as strings, we denote it by $p=q$.
 We denote by $p\cdot q$ the string obtained from $p$ and $q$ by concatenating $q$ after $p$.
 Note that for a string $p$ and the empty string $\varepsilon$, $p\cdot \varepsilon = \varepsilon \cdot p = p$.
 
-A {\color{black} \textit{substitution}} $\theta$ is a mapping from $(\Sigma \cup X)^{\ast}$ to $(\Sigma \cup X)^{\ast}$ such that
+A {\color{red} \textit{substitution}} $\theta$ is a mapping from $(\Sigma \cup X)^{\ast}$ to $(\Sigma \cup X)^{\ast}$ such that
 (1) $\theta$ is a homomorphism with respect to string concatenation, i.e., $\theta(p \cdot q) = \theta(p) \cdot \theta(q)$ for patterns $p$ and $q$,
 (2) $\theta(\varepsilon)=\varepsilon$,
 (3) for each constant symbol $a \in \Sigma$, $\theta(a) = a$,
@@ -50,16 +50,16 @@ The sets of all pattern languages and regular patterns languages are denoted by 
 \end{lem}
 
 Next, we consider unions of pattern languages. 
-The class of all non-empty finite subsets of {\color{black}$\Pat_{\Sigma\cup X}$} is denoted by {\color{black}$\Patplus_{\Sigma\cup X}$}, i.e.,
-{\color{black}$\Patplus_{\Sigma\cup X} = \{P \subseteq \Pat_{\Sigma \cup X} \mid 0 < \sharp P < \infty\}$}.
+The class of all non-empty finite subsets of {\color{red}$\Pat_{\Sigma\cup X}$} is denoted by {\color{red}$\Patplus_{\Sigma\cup X}$}, i.e.,
+{\color{red}$\Patplus_{\Sigma\cup X} = \{P \subseteq \Pat_{\Sigma \cup X} \mid 0 < \sharp P < \infty\}$}.
 For a positive integer $k$ (i.e., $k>0$), 
 we denote that the class of non-empty sets consisting of at most $k$ patterns, i.e.,
-{\color{black}$\Patkei_{\Sigma\cup X} = \{P \subseteq \Pat_{\Sigma\cup X} \mid 0< \sharp P \leq k\}$}.
+{\color{red}$\Patkei_{\Sigma\cup X} = \{P \subseteq \Pat_{\Sigma\cup X} \mid 0< \sharp P \leq k\}$}.
 For a set $P$ of patterns, the pattern language of $P$, denoted by $L(P)$, is the set $\bigcup_{p \in P}L(p)$.
-We denote by $\PatLkei_{\Sigma\cup X}$ the class of unions of at most $k$ pattern languages {\color{black}over $\Sigma\cup X$},
-i.e., {\color{black}$\PatLkei_{\Sigma\cup X} = \{L(P) \mid P \in \Patkei_{\Sigma\cup X}\}$}.
-{\color{black}Similarly}, we also define $\RPatplus_{\Sigma\cup X}$, $\RPatkei_{\Sigma\cup X}$, and $\RPatLkei_{\Sigma\cup X}$.
-{\color{black} When $\Sigma$ and $X$ are clear from the context, we omit them and simply write $\Patplus$, $\Patkei$, $\PatLkei$, $\RPatplus$, $\RPatkei$, and $\RPatLkei$.}
+We denote by $\PatLkei_{\Sigma\cup X}$ the class of unions of at most $k$ pattern languages {\color{red}over $\Sigma\cup X$},
+i.e., {\color{red}$\PatLkei_{\Sigma\cup X} = \{L(P) \mid P \in \Patkei_{\Sigma\cup X}\}$}.
+{\color{red}Similarly}, we also define $\RPatplus_{\Sigma\cup X}$, $\RPatkei_{\Sigma\cup X}$, and $\RPatLkei_{\Sigma\cup X}$.
+{\color{red} When $\Sigma$ and $X$ are clear from the context, we omit them and simply write $\Patplus$, $\Patkei$, $\PatLkei$, $\RPatplus$, $\RPatkei$, and $\RPatLkei$.}
 
 For $P$, $Q$ in $\Patplus$,
 the notation $P \sqsubseteq Q$ means that for any $p \in P$ there is a pattern $q \in Q$ such that $p \preceq q$.

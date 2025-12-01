@@ -24,22 +24,22 @@ we have the following theorem.
     (i) implies (ii).
     Let $\sharp Q = k$, $p \in P$, $\sharp\Sigma = 2k-1$ or $2k$.
     Then, we show that (i) implies (ii).
-    It suffices to show that $S_{2}(p) \subseteq L(Q)$ implies {\color{black}$\{p\} \sqsubseteq Q$}
-    for any regular pattern {\color{black}$p \in P$}.
+    It suffices to show that $S_{2}(p) \subseteq L(Q)$ implies {\color{red}$\{p\} \sqsubseteq Q$}
+    for any regular pattern {\color{red}$p \in P$}.
     The proof is done by mathematical induction on $n$, where $n$ is the number of variable symbols occurs in $p$.
 
     In case $n=0$, $S_{2}(p) = \{p\}$.
-    By (i), we have {\color{black}$\{p\} \subseteq L(Q)$}. Thus, $p \preceq q$ for some $q \in Q$.
+    By (i), we have {\color{red}$\{p\} \subseteq L(Q)$}. Thus, $p \preceq q$ for some $q \in Q$.
 
     For $n \geq 0$,
     we assume that it is valid for any regular pattern $p$
     with $n$ variable symbols.
     Let $p$ be a regular pattern such that $n+1$ variable symbols occur in $p$
     and $S_{2}(p) \subseteq L(Q)$.
-    {\color{black} Let $Q = \{q_{1},\ldots,q_{k}\}$.}
-    We assume that {\color{black}$\{p\} \not\sqsubseteq Q$}, that is, {\color{black}$p \not\preceq q_{i}$}
+    {\color{red} Let $Q = \{q_{1},\ldots,q_{k}\}$.}
+    We assume that {\color{red}$\{p\} \not\sqsubseteq Q$}, that is, {\color{red}$p \not\preceq q_{i}$}
     for any $i \in \{1,\ldots,k\}$.
-    {\color{black} Let $p_{1}$, $p_{2}$ be regular patterns and $x$ a variable symbol with $p = p_{1}xp_{2}$.}
+    {\color{red} Let $p_{1}$, $p_{2}$ be regular patterns and $x$ a variable symbol with $p = p_{1}xp_{2}$.}
     For $a, b \in \Sigma$,
     let $p_{a}=p\{x:=a\}$ and $p_{ab}=p\{x:=ab\}$.
     Both $p_{a}$ and $p_{ab}$ have $n$ variable symbols, respectively.
@@ -58,7 +58,7 @@ we have the following theorem.
     Moreover,
     If $\sharp\Sigma = 2k$, then
     $\sharp D_{i}=2$ for any $i \in \{1,\ldots,k\}$.
-    Since $k \geq 3$, {\color{black} $2k-1 \geq k+2$}.
+    Since $k \geq 3$, {\color{red} $2k-1 \geq k+2$}.
     By Lemma~\ref{Add-Lemma01},
     there exists $i \in \{1,\ldots,k\}$ such that $p\{x:=xy\} \preceq q_{i}$.
     Therefore, by Lemma~\ref{Sato1:Lemma15}, 
@@ -68,36 +68,36 @@ we have the following theorem.
 \end{proof}
 
 From Theorem~\ref{Theorem17}, 
-{\color{black}the following corollary holds}.
+{\color{red}the following corollary holds}.
 
 
 \begin{col}\label{Col18}
     %Let $k \geq 3$, $\sharp\Sigma \geq 2k-1$ and $P \in \RPatplus$.
-    {\color{black}Let $k$ be an integer with $k \geq 3$ and $\Sigma$ an alphabet with $\sharp\Sigma \geq 2k-1$.
+    {\color{red}Let $k$ be an integer with $k \geq 3$ and $\Sigma$ an alphabet with $\sharp\Sigma \geq 2k-1$.
     Then, for a set of regular patterns $P \in \RPatplus_{\Sigma\cup X}$,}
     $S_{2}(P)$ is a characteristic set for $L(P)$ within $\RPatLkei_{\Sigma\cup X}$.
 \end{col}
 
-{\color{black}From Theorem~\ref{Theorem17},
+{\color{red}From Theorem~\ref{Theorem17},
 we have the following theorem.}
 
 \begin{thm}\label{Theorem5}
     %Let $k \geq 3$ and $\sharp\Sigma \geq 2k-1$.
-    {\color{black}Let $k$ be an integer with $k \geq 3$ and $\Sigma$ an alphabet with $\sharp\Sigma \geq 2k-1$.}
-    Then, {\color{black}$\RPatkei_{\Sigma\cup X}$} has compactness with respect to {\color{black} language} containment.
+    {\color{red}Let $k$ be an integer with $k \geq 3$ and $\Sigma$ an alphabet with $\sharp\Sigma \geq 2k-1$.}
+    Then, {\color{red}$\RPatkei_{\Sigma\cup X}$} has compactness with respect to {\color{red} language} containment.
 \end{thm}
 
-{\color{black} 
+{\color{red} 
 The following lemma demonstrates that Theorem~\ref{Theorem5} fails to hold under the condition $\sharp\Sigma \leq 2k-2$, thereby establishing the minimum cardinality of $\Sigma$  required for the validity of Theorem~\ref{Theorem5}.
 }
 \begin{lem}[Sato et al.\cite{Sato1}]\label{Sato1:Lemma19}
     %Let $k \geq 3$ and $\sharp\Sigma \leq 2k-2$.
-    {\color{black} Let $k$ be an integer with $k \geq 3$ and $\Sigma$ an alphabet with $\sharp\Sigma \leq 2k-2$.}
-    Then, {\color{black}$\RPatkei_{\Sigma\cup X}$} does not have compactness with respect to {\color{black} language} containment.
+    {\color{red} Let $k$ be an integer with $k \geq 3$ and $\Sigma$ an alphabet with $\sharp\Sigma \leq 2k-2$.}
+    Then, {\color{red}$\RPatkei_{\Sigma\cup X}$} does not have compactness with respect to {\color{red} language} containment.
 \end{lem}
 
 \begin{proof}
-    Let $\Sigma =\{a_{1},\ldots,a_{k-1},b_{1},\ldots,b_{k-1}\}${\color{black},
+    Let $\Sigma =\{a_{1},\ldots,a_{k-1},b_{1},\ldots,b_{k-1}\}${\color{red},
     $p, q_{i}$ regular patterns, $w_{i}=w_{i+1}b_{i+1}a_{i+1}w_{i+1} \in \Sigma^{\ast}$\ $(i=1,\ldots,k-2)$ and $w_{k-1}=\varepsilon$}
     defined in a similar way to Example~\ref{counter-example4Theorem11}. 
     Let $q_{k}=x_{1}a_{1}w_{1}xyw_{1}b_{1}x_{2}$.
@@ -112,13 +112,13 @@ The following lemma demonstrates that Theorem~\ref{Theorem5} fails to hold under
     By Theorem~\ref{regularPatternEquivalence},
     since $p \not \preceq q_{i}$, $L(p) \not \subseteq L(q_{i})$
     for any $i \in \{1,\ldots, k\}$.
-    Therefore, $\RPatkei$ does not have compactness with respect to {\color{black} language} containment.
+    Therefore, $\RPatkei$ does not have compactness with respect to {\color{red} language} containment.
 \end{proof}
 
 In case $k=2$, we have the following theorem.
 
 \begin{thm}\label{Theorem21}
-    {\color{black} Let $\Sigma$ be an alphabet with $\sharp\Sigma \geq 4$.
+    {\color{red} Let $\Sigma$ be an alphabet with $\sharp\Sigma \geq 4$.
     For two sets of regular patterns $P \in \RPatplus_{\Sigma\cup X}$ and $Q \in \RPat^{2}_{\Sigma\cup X}$,
     the following conditions (i), (ii), and (iii) are equivalent:}
     \[
@@ -131,8 +131,8 @@ In case $k=2$, we have the following theorem.
 \begin{proof}
     It is clear that (ii) implies (iii), and (iii) implies (i).
     Thus, we show that (i) implies (ii).
-    It suffices to show that $S_{2}(p) \subseteq L(Q)$ implies {\color{black}$\{p\} \sqsubseteq Q$}
-    for any regular pattern {\color{black}$p \in P$}.
+    It suffices to show that $S_{2}(p) \subseteq L(Q)$ implies {\color{red}$\{p\} \sqsubseteq Q$}
+    for any regular pattern {\color{red}$p \in P$}.
     Let $Q = \{q_{1}, q_{2}\}$.
     The proof is done by mathematical induction on $n$,
     where $n$ is the number of variable symbols occurring in $p$.
@@ -169,11 +169,11 @@ In case $k=2$, we have the following theorem.
     Hence, (i) implies (ii).
     \end{proof}
 
-{\color{black} The following example provides a set of regular patterns $P \in \RPat^{+}$ and a set of regular patterns $Q \in \RPat^{2}$ demonstrating that, when $\sharp\Sigma = 3$, the three conditions (i), (ii), and (iii) stated in Theorem~\ref{Theorem21} are not equivalent.}
+{\color{red} The following example provides a set of regular patterns $P \in \RPat^{+}$ and a set of regular patterns $Q \in \RPat^{2}$ demonstrating that, when $\sharp\Sigma = 3$, the three conditions (i), (ii), and (iii) stated in Theorem~\ref{Theorem21} are not equivalent.}
 
 
 \begin{ex}
-    {\color{black}
+    {\color{red}
     %Let $\Sigma = \{a,b,c\}$, $p$, $q_{1}$, $q_{2}$ regular patterns and
     %$x,x',x''$ variable symbols such that
     %$p = x'axbx''$, $q_{1} = x'abx''$ and $q_{2} = x'cx''$.
@@ -199,12 +199,12 @@ From Theorem~\ref{Theorem21},
 the following two corollaries holds.
 
 \begin{col}
-    {\color{black} Let $\Sigma$ be an alphabet with $\sharp\Sigma \geq 4$.
+    {\color{red} Let $\Sigma$ be an alphabet with $\sharp\Sigma \geq 4$.
     For a set of regular patterns $P \in \RPatplus_{\Sigma\cup X}$,}
-    $S_{2}(P)$ is a characteristic set for $L(P)$ within {\color{black}$\RPatL^{2}_{\Sigma\cup X}$}.
+    $S_{2}(P)$ is a characteristic set for $L(P)$ within {\color{red}$\RPatL^{2}_{\Sigma\cup X}$}.
 \end{col}
 
 \begin{col}
-    {\color{black} Let $\Sigma$ be an alphabet with $\sharp\Sigma \geq 4$}.
-Then, {\color{black}$\RPat^{2}_{\Sigma\cup X}$} has compactness with respect to {\color{black} language} containment.
+    {\color{red} Let $\Sigma$ be an alphabet with $\sharp\Sigma \geq 4$}.
+Then, {\color{red}$\RPat^{2}_{\Sigma\cup X}$} has compactness with respect to {\color{red} language} containment.
 \end{col}

@@ -1,15 +1,15 @@
 \subsection{$D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}$ and $D = \{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\}$}\label{subsec:d3b}
 
-{\color{black} In this subsection, for 
+{\color{red} In this subsection, for 
 $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}\subsetneq \RPat_{\Sigma\cup X}$ or $D = \{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\} \subsetneq \RPat_{\Sigma\cup X}$,
 we consider a regular pattern $q$ in $\RPat_{\Sigma\cup X}$ 
 such that $q$ minimally supports $D$ for a regular pattern $p$. 
-Obviously, we remark that $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}$ and $D = \{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\}$ {\color{black} satisfy} that $a_{i}\neq a_{3}$ and $b_{i}\neq b_{3}$ for $i=1,2$, respectively.
+Obviously, we remark that $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}$ and $D = \{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\}$ {\color{red} satisfy} that $a_{i}\neq a_{3}$ and $b_{i}\neq b_{3}$ for $i=1,2$, respectively.
 }
 
 \begin{lem}\label{lem:3consts_i}
  % Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$, 
- {\color{black}
+ {\color{red}
  Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$.
   Let $p$ and $q$ be regular patterns in $\RPat_{\Sigma\cup X}$.
   Define $D=\{ a_{1}b_{1}, a_{2}b_{2}, a_{3}y\}\subsetneq \RPat_{\Sigma\cup X}$
@@ -20,9 +20,9 @@ Then $p \{ x := xy \} \preceq q$.}
 \end{lem}
 
 \begin{proof}
-{\color{black} It suffices to consider the case $p\not\preceq q$, since the case $p\preceq q$ is trivial.}
+{\color{red} It suffices to consider the case $p\not\preceq q$, since the case $p\preceq q$ is trivial.}
 We assume that $p \{ x := xy \} \not\preceq q$. 
-{\color{black} Since $q$ minimally supports $D$ for $p$, i.e., $p\{x:=r\}\preceq q$ for all $r\in D$, }
+{\color{red} Since $q$ minimally supports $D$ for $p$, i.e., $p\{x:=r\}\preceq q$ for all $r\in D$, }
 from the same argument as in the proof of Lemma~\ref{lem:oneside_i}, it is sufficient to consider the following five cases (\ref{lem:3consts_i}-1)--(\ref{lem:3consts_i}-5) of $q$: For $y_{1} \in X$,
 
 \begin{tabular}{ll}
@@ -46,37 +46,37 @@ The following conditions must be satisfied: For $y_{1}^{\prime}\in X$,
 \textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime}, & \textrm{(3')}~& p_{2} \preceq q_{2} \mbox{~or~} p_{2} \preceq y_{1}^{\prime}q_{2}.
 \end{align*}
 \noindent
-{\color{black} This leads to a contradiction, as demonstrated by the following inductive argument:}
+{\color{red} This leads to a contradiction, as demonstrated by the following inductive argument:}
 \begin{itemize}
-  {\color{black} \item $|w|=|w^{\prime}|$: From (1') and (2'), we have $a_2=a_3$.
+  {\color{red} \item $|w|=|w^{\prime}|$: From (1') and (2'), we have $a_2=a_3$.
   This contradicts that $a_2\neq a_3$.}
-\item $|w|+1=|w^{\prime}|$: From (2) and (3), {\color{black}both }$a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$.
+\item $|w|+1=|w^{\prime}|$: From (2) and (3), {\color{red}both }$a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$.
 Since there exists a constant symbol $w_{1}$ such that $w^{\prime}=w_{1}w$ and $b_{2}w_{1}w=a_{1}b_{1}w$,
 then $b_{2}=a_{1}$.
-Moreover, {\color{black}both }$wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are prefixes of $p_{2}$ from (1') and (2').
+Moreover, {\color{red}both }$wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are prefixes of $p_{2}$ from (1') and (2').
 Since there exists a constant symbol $w_{2}$ such that $w^{\prime}=ww_{2}$ and $wa_{2}b_{2}=ww_{2}a_{3}$,
 then $b_{2}=a_{3}$.
 Thus, $a_{1} = a_{3}$.
 This contradicts the assumption of $a_{1} \ne a_{3}$.
 %
-\item $|w|+1 < |w^{\prime}|$: From (2) and (3), {\color{black}both }$a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$.
-Hence, {\color{black}$a_{1}b_{1}w$ is the suffix of $w^{\prime}$}.
-Moreover, {\color{black}both }$wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are prefixes of $p_{2}$ from (1') and (2').
-Hence, there exist constant {\color{black}strings} $w_{1}$ and $w_{2}$ such that $w^{\prime}=w_{1}w$, $w^{\prime}=ww_{2}$ and $|a_{2}b_{2}w_{1}|=|w_{2}a_{3}|+1$.
+\item $|w|+1 < |w^{\prime}|$: From (2) and (3), {\color{red}both }$a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$.
+Hence, {\color{red}$a_{1}b_{1}w$ is the suffix of $w^{\prime}$}.
+Moreover, {\color{red}both }$wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are prefixes of $p_{2}$ from (1') and (2').
+Hence, there exist constant {\color{red}strings} $w_{1}$ and $w_{2}$ such that $w^{\prime}=w_{1}w$, $w^{\prime}=ww_{2}$ and $|a_{2}b_{2}w_{1}|=|w_{2}a_{3}|+1$.
 Thus, since the second-to-last symbol of $w_{1}$ is $a_{3}$, the equation $a_{1}=a_{3}$ holds.
 This contradicts the assumption of $a_{1} \ne a_{3}$.
 %
-\item $|w|=|w^{\prime}|+1$: From (1') and (2'), {\color{black}both }$wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are prefixes of $p_{2}$.
+\item $|w|=|w^{\prime}|+1$: From (1') and (2'), {\color{red}both }$wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are prefixes of $p_{2}$.
 Since there exists a constant symbol $w_{1}$ such that $w=w^{\prime}w_{1}$ and $w^{\prime}w_{1}=w^{\prime}a_{3}$, then $w_{1}=a_{3}$.
-Moreover, since {\color{black}both }$a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$ from (2) and (3), 
-there exists a constant symbol $w_{2}$ such that $w=w_{2}w^{\prime}$ and {\color{black}$w_{1}a_{2}b_{2}w^{\prime}=a_{1}b_{1}w_{2}w^{\prime}$}.
+Moreover, since {\color{red}both }$a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$ from (2) and (3), 
+there exists a constant symbol $w_{2}$ such that $w=w_{2}w^{\prime}$ and {\color{red}$w_{1}a_{2}b_{2}w^{\prime}=a_{1}b_{1}w_{2}w^{\prime}$}.
 Hence, $w_{1}=a_{1}$.
 Thus, $a_{1}=a_{3}$.
 This contradicts the assumption of $a_{1}\ne a_{3}$.
 %
-\item $|w| > |w^{\prime}|+1$: Since {\color{black}both }$wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are prefixes of $p_{2}$ from (1') and (2'),
+\item $|w| > |w^{\prime}|+1$: Since {\color{red}both }$wa_{2}b_{2}w^{\prime}a_{3}$ and $w^{\prime}a_{3}$ are prefixes of $p_{2}$ from (1') and (2'),
 there exists a constant string $w_{1}$ such that $w=w^{\prime}w_{1}$ and the first symbol of $w_{1}$ is $a_{3}$.
-Moreover, since there exists a constant string $w_{2}$ such that $w=w_{2}w^{\prime}$ and {\color{black}$w_{1}a_{2}b_{2}=a_{1}b_{1}w_{2}$ from (2) and (3)},
+Moreover, since there exists a constant string $w_{2}$ such that $w=w_{2}w^{\prime}$ and {\color{red}$w_{1}a_{2}b_{2}=a_{1}b_{1}w_{2}$ from (2) and (3)},
 $a_{1}b_{1}$ is a prefix of $w_{1}$.
 Thus, $a_{3}=a_{1}$.
 This contradicts the assumption of $a_{1} \ne a_{3}$.
@@ -93,7 +93,7 @@ The following conditions must be satisfied: For $y_{1}^{\prime} \in X$,
 \textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}, & \textrm{(3')}~& p_{2} \preceq q_{2} \mbox{~or~} p_{2} \preceq y_{1}^{\prime}q_{2}.
 \end{align*}
 
-From (2) and (3), {\color{black}both }$a_{1}b_{1}$ and $a_{1}$ are suffixes of $p_{1}$.
+From (2) and (3), {\color{red}both }$a_{1}b_{1}$ and $a_{1}$ are suffixes of $p_{1}$.
 Hence, $b_{1}=a_{1}$.
 Thus, from the assumption of $b_{1}=a_{2}$, the equation $a_{1}=a_{2}$ holds.
 This contradicts the assumption of $a_{1} \ne a_{2}$.
@@ -108,17 +108,17 @@ The following conditions must be satisfied: For $y_{1}^{\prime} \in X$,
 \textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}b_{2}w, & \textrm{(3')}~& p_{2} \preceq q_{2} \mbox{~or~} p_{2} \preceq y_{1}^{\prime}q_{2}.
 \end{align*}
 \noindent
-{\color{black} This leads to a contradiction, as demonstrated by the following inductive argument:}
+{\color{red} This leads to a contradiction, as demonstrated by the following inductive argument:}
 \begin{itemize}
-\item $|w|=0$: From (2) and (3), {\color{black}both }$a_{1}$ and $a_{1}b_{1}b_{2}$ are suffixes of $p_{1}$.
+\item $|w|=0$: From (2) and (3), {\color{red}both }$a_{1}$ and $a_{1}b_{1}b_{2}$ are suffixes of $p_{1}$.
 Hence, $a_{1}=b_{2}$.
-Moreover, since {\color{black}both }$b_{2}a_{3}$ and $a_{3}$ is prefixes of $p_{2}$, $b_{2}=a_{3}$.
+Moreover, since {\color{red}both }$b_{2}a_{3}$ and $a_{3}$ is prefixes of $p_{2}$, $b_{2}=a_{3}$.
 Thus, $a_{1}=a_{3}$.
 This contradicts the assumption of $a_{1} \ne a_{3}$.
 %
-\item $|w| \ge 1$: Since {\color{black}both }$a_{1}$ and $a_{1}b_{1}b_{2}w$ are suffixes of $p_{1}$ from (2) and (3),
+\item $|w| \ge 1$: Since {\color{red}both }$a_{1}$ and $a_{1}b_{1}b_{2}w$ are suffixes of $p_{1}$ from (2) and (3),
 the last symbol of $w$ is $a_{1}$.
-Moreover, since {\color{black}both }$b_{2}wa_{3}$ and $wa_{3}$ are prefixes of $p_{2}$ from (1') and (2'),
+Moreover, since {\color{red}both }$b_{2}wa_{3}$ and $wa_{3}$ are prefixes of $p_{2}$ from (1') and (2'),
 the last symbol of $w$ is $a_{3}$.
 Thus, $a_{1}=a_{3}$.
 This contradicts the assumption of $a_{1} \ne a_{3}$.
@@ -138,7 +138,7 @@ The following conditions must be satisfied: For $y_{1}^{\prime} \in X$,
 
 From (3), there exist regular patterns $p_{1}^{\prime}$ and $p_{1}^{\prime\prime}$ such that $p_{1}=p_{1}^{\prime}p_{1}^{\prime\prime}$, $p_{1}^{\prime} \preceq q_{1}a_{3}$, and $p_{1}^{\prime\prime} \preceq y_{1}wa_{1}$.
 Hence, if $p_{2} \preceq wa_{1}b_{1}b_{2}q_{2}$ of (1') holds, since $p=p_{1}xp_{2}=p_{1}^{\prime}p_{1}^{\prime\prime}xp_{2}\preceq q_{1}a_{3}p_{1}^{\prime\prime}xwa_{1}b_{1}b_{2}q_{2}=q \{ y_{1} := p_{1}^{\prime\prime}x \}$, then $p \preceq q$.
-{\color{black}
+{\color{red}
 Thus, this contradicts the assumption that $p$ and $q$ satisfy 
   $p\not\preceq q$.}
 Similarly, $p_{2} \preceq y_{1}^{\prime}wa_{1}b_{1}b_{2}q_{2}$ of (1') leads to a contradiction.
@@ -157,18 +157,18 @@ The following conditions must be satisfied: For $y_{1}^{\prime} \in X$,
 \noindent
 Let $q_{1}^{\prime}=q_{1}a_{1}b_{1}$, $q_{2}^{\prime}=y_{1}w$, $q_{3}^{\prime}=a_{2}b_{2}q_{2}$.
 From (3), $p_{1} \preceq q_{1}^{\prime}q_{2}^{\prime}$, and from (1'), $p_{2} \preceq q_{2}^{\prime}q_{3}^{\prime}$.
-{\color{black}From Theorem \ref{Sato1:Lemma9}, we have $p\preceq q$, since $q_{2}^{\prime}$ contains a variable symbol $y_{1}$.}
-{\color{black}
+{\color{red}From Theorem \ref{Sato1:Lemma9}, we have $p\preceq q$, since $q_{2}^{\prime}$ contains a variable symbol $y_{1}$.}
+{\color{red}
 This contradicts the assumption that $p$ and $q$ satisfy 
   $p\not\preceq q$.}
 \end{proof}
 
 \begin{lem}\label{lem:3consts_ii}
   %Let $\Sigma$ be an alphabet $\sharp\Sigma \ge 3$, 
-  {\color{black}Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$}.
-  {\color{black}Let $p$ and $q$} be regular patterns {\color{black} in $\RPat_{\Sigma\cup X}$.
+  {\color{red}Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$}.
+  {\color{red}Let $p$ and $q$} be regular patterns {\color{red} in $\RPat_{\Sigma\cup X}$.
   Define $D=\{ a_{1}b_{1}, a_{2}b_{2}, yb_{3}\} \subsetneq \RPat_{\Sigma\cup X}$
-  where $a_{1}\neq a_{2}$, $b_{i}\neq b_{j}$ for {\color{black}$1\leq i<j\leq 3$} with $i\neq j$ and $y$ is a variable symbol in $X$ that {\color{black}occurs in neither $p$ nor $q$}.
+  where $a_{1}\neq a_{2}$, $b_{i}\neq b_{j}$ for {\color{red}$1\leq i<j\leq 3$} with $i\neq j$ and $y$ is a variable symbol in $X$ that {\color{red}occurs in neither $p$ nor $q$}.
   Suppose that $p\preceq q$ or that $q$ minimally supports $D$ for $p$.
 Then $p \{ x := xy \} \preceq q$.}
 \end{lem}
@@ -179,7 +179,7 @@ The proof follows by reversing $p$ and $q$ and subsequently applying Lemma~\ref{
 
 \subsection{$D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}$}\label{subsec:d3c}
 
-{\color{black}
+{\color{red}
 In this subsection, for $D = \{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\} \subsetneq \RPat_{\Sigma\cup X}$, we consider a regular pattern $q$ in $\RPat_{\Sigma\cup X}$ 
 such that $q$ minimally supports $D$ for a regular pattern $p$ in $\RPat_{\Sigma\cup X}$
 under some conditions with the symbols $a_i,~b_i \in \Sigma$ for $i~(1\leq i \leq k)$.
@@ -187,16 +187,16 @@ under some conditions with the symbols $a_i,~b_i \in \Sigma$ for $i~(1\leq i \le
 
 \begin{lem}\label{lem:3consts_iii}
  % Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$, 
- {\color{black}Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$}.
- {\color{black}Let $p$ and $q$ be} regular {\color{black}patterns in $\RPat_{\Sigma\cup X}$}
+ {\color{red}Let $\Sigma$ be an alphabet with $\sharp\Sigma \ge 3$}.
+ {\color{red}Let $p$ and $q$ be} regular {\color{red}patterns in $\RPat_{\Sigma\cup X}$}
  such that a variable symbol $y\in X$ does not occur in $p$.
-  {\color{black} Define $D=\{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}\subsetneq \RPat_{\Sigma\cup X}$ where $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ with } i\ne j ~{\color{black}(1\le i<j\le 3)}$.
+  {\color{red} Define $D=\{ a_{1}b_{1}, a_{2}b_{2}, a_{3}b_{3}\}\subsetneq \RPat_{\Sigma\cup X}$ where $a_{i} \ne a_{j} \mbox{ and } b_{i} \ne b_{j} \mbox{ with } i\ne j ~{\color{red}(1\le i<j\le 3)}$.
   Suppose that $p\preceq q$ or that $q$ minimally supports $D$ for $p$.
   Then $p \{ x := xy \} \preceq q$.}
 \end{lem}
 
 \begin{proof}
-{\color{black} It suffices to consider the case $p\not\preceq q$, since the case $p\preceq q$ is trivial.}
+{\color{red} It suffices to consider the case $p\not\preceq q$, since the case $p\preceq q$ is trivial.}
 We assume that $p \{ x := xy \} \not\preceq q$.
 Since $q$ minimally supports $D$ for $p$,
 it is sufficient to consider the following four cases (\ref{lem:3consts_iii}-1)-(\ref{lem:3consts_iii}-4) of $q$ for some regular patterns $q_{1},q_{2}$ and some constant strings $w,w^{\prime}$ ($|w|\geq 0$ and $|w^{\prime}|\geq 0$):
@@ -222,28 +222,28 @@ The following conditions must be satisfied:
 \textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}wa_{2}b_{2}w^{\prime}, & \textrm{(3')}~& p_{2} \preceq q_{2}.
 \end{align*}
 \noindent
-{\color{black} This leads to a contradiction, as demonstrated by the following inductive argument:}
+{\color{red} This leads to a contradiction, as demonstrated by the following inductive argument:}
 \begin{itemize}
-\item $|w|=|w^{\prime}|$: From (2) and (3), {\color{black}both }$a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$.
+\item $|w|=|w^{\prime}|$: From (2) and (3), {\color{red}both }$a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$.
 Then, $a_{1}b_{1}w=a_{2}b_{2}w^{\prime}$.
 Hence, $a_{1}b_{1}=a_{2}b_{2}$.
 This contracts the assumption of $a_{1} \ne a_{2}$ and $b_{1} \ne b_{2}$.
 %
-\item $|w|+1=|w^{\prime}|$: {\color{black} From (1') and (2')}, $wa_{2}b_{2}w^{\prime}a_{3}b_{3}$ and $w^{\prime}a_{3}b_{3}$ are prefixes of $p_{2}$.
+\item $|w|+1=|w^{\prime}|$: {\color{red} From (1') and (2')}, $wa_{2}b_{2}w^{\prime}a_{3}b_{3}$ and $w^{\prime}a_{3}b_{3}$ are prefixes of $p_{2}$.
 If there exists a constant symbol $w_{1}$ such that $w^{\prime}a_{3}b_{3}=ww_{1}a_{3}b_{3}$,
-then {\color{black}$b_{2}=a_{3}$} from $wa_{2}b_{2}=ww_{1}a_{3}$.
-{\color{black}From} (2) and (3), {\color{black}both } $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$.
+then {\color{red}$b_{2}=a_{3}$} from $wa_{2}b_{2}=ww_{1}a_{3}$.
+{\color{red}From} (2) and (3), {\color{red}both } $a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$.
 Then, there exists a constant symbol $w_{2}$ such that $w^{\prime}=w_{2}w$,
 then we have $b_{2}=a_{1}$ from $b_{2}w_{2}w=a_{1}b_{1}w$.
-Hence, from $b_{2}=a_{3}$, {\color{black} we have $a_{3}=a_{1}$}.
+Hence, from $b_{2}=a_{3}$, {\color{red} we have $a_{3}=a_{1}$}.
 This contradicts the assumption of $a_{3} \ne a_{1}$.
 %
 \item $|w|+1 < |w^{\prime}|$: From (2) and (3), 
-{\color{black}both }$a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$.
+{\color{red}both }$a_{1}b_{1}wa_{2}b_{2}w^{\prime}$ and $a_{1}b_{1}w$ are suffixes of $p_{1}$.
 If there exists a constant string $w_{1}$ ($|w_{1}|\geq 2$) such that $w^{\prime}=w_{1}w$, then $a_{1}b_{1}$ is a suffix of $w_{1}$.
 From  conditions (1') and (2'), 
-{\color{black}both }$wa_{2}b_{2}w^{\prime}a_{3}b_{3}$ and $w^{\prime}a_{3}b_{3}$ are prefixes of $p_{2}$.
-If there exist constant strings $w_{1}$ and $w_{2}$ such that $w^{\prime} = w_{1}w=ww_{2}$, then {\color{black} $a_{3}b_{3}$ is a suffix of $w_{1}$ from $|w_1|=|w_2|$ and $ww_{2}a_{3}b_{3}=wa_{2}b_{2}w_{1}$}.
+{\color{red}both }$wa_{2}b_{2}w^{\prime}a_{3}b_{3}$ and $w^{\prime}a_{3}b_{3}$ are prefixes of $p_{2}$.
+If there exist constant strings $w_{1}$ and $w_{2}$ such that $w^{\prime} = w_{1}w=ww_{2}$, then {\color{red} $a_{3}b_{3}$ is a suffix of $w_{1}$ from $|w_1|=|w_2|$ and $ww_{2}a_{3}b_{3}=wa_{2}b_{2}w_{1}$}.
 Hence, $a_{1}b_{1}=a_{3}b_{3}$.
 This contradicts the assumption of $a_{1} \ne a_{3}$ and $b_{1} \ne b_{3}$.
 %
@@ -261,7 +261,7 @@ The following conditions must be satisfied:
 \textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}, & \textrm{(3')}~& p_{2} \preceq q_{2}.
 \end{align*}
 
-From (2) and (3), since {\color{black}both }$a_{1}b_{1}$ and $a_{1}$ are suffixes of $p_{1}$, 
+From (2) and (3), since {\color{red}both }$a_{1}b_{1}$ and $a_{1}$ are suffixes of $p_{1}$, 
 the equation $b_{1} = a_{1}$ holds.
 From the assumption of $b_{1}=a_{2}$, the equation $a_{1}=a_{2}$ holds.
 This contradicts the assumption of $a_{1}\not= a_{2}$.
@@ -276,15 +276,15 @@ The following conditions must be satisfied:
 \textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}b_{2}w, & \textrm{(3')}~& p_{2} \preceq q_{2}.
 \end{align*}
 \noindent
-{\color{black} This leads to a contradiction, as demonstrated by the following inductive argument:}
+{\color{red} This leads to a contradiction, as demonstrated by the following inductive argument:}
 \begin{itemize}
-\item $|w|=0$: From (2) and (3), {\color{black}both }$a_{1}$ and $a_{1}b_{1}b_{2}$ are suffixes of $p_{1}$. Moreover, from (1') and (2'), {\color{black}both }$b_{2}a_{3}b_{3}$ and $a_{3}b_{3}$ are prefixes of $p_{2}$.
-Since $b_{2}=a_{1}$ and {\color{black}$b_{2}=a_{3}$, we have $a_{1}=a_{3}$}.
+\item $|w|=0$: From (2) and (3), {\color{red}both }$a_{1}$ and $a_{1}b_{1}b_{2}$ are suffixes of $p_{1}$. Moreover, from (1') and (2'), {\color{red}both }$b_{2}a_{3}b_{3}$ and $a_{3}b_{3}$ are prefixes of $p_{2}$.
+Since $b_{2}=a_{1}$ and {\color{red}$b_{2}=a_{3}$, we have $a_{1}=a_{3}$}.
 This contradicts the assumption of $a_{1}\not= a_{3}$.
 %
-\item $|w| \ge 1$: From (2) and (3), {\color{black}both }$a_{1}$ and $a_{1}b_{1}b_{2}w$ are suffixes of $p_{1}$.
+\item $|w| \ge 1$: From (2) and (3), {\color{red}both }$a_{1}$ and $a_{1}b_{1}b_{2}w$ are suffixes of $p_{1}$.
 Hence, the last symbol of $w$ is $a_{1}$.
-Moreover, {\color{black}both }$b_{2}wa_{3}b_{3}$ and $wa_{3}b_{3}$ are prefixes of $p_{2}$ from (1') and (2').
+Moreover, {\color{red}both }$b_{2}wa_{3}b_{3}$ and $wa_{3}b_{3}$ are prefixes of $p_{2}$ from (1') and (2').
 Hence, the last symbol of $w$ is $a_{3}$.
 Therefore, $a_{1}=a_{3}$.
 This contradicts the assumption of $a_{1} \ne a_{3}$.
@@ -301,14 +301,14 @@ The following conditions must be satisfied:
 \textrm{(3)}~& p_{1} \preceq q_{1}a_{1}b_{1}wa_{2}, & \textrm{(3')}~& p_{2} \preceq q_{2}.
 \end{align*}
 \noindent
-{\color{black} This leads to a contradiction, as demonstrated by the following inductive argument:}
+{\color{red} This leads to a contradiction, as demonstrated by the following inductive argument:}
 \begin{itemize}
-\item $|w|=0$: From (2) and (3), {\color{black}both }$a_{1}b_{1}$ and $a_{1}b_{1}a_{2}$ are suffixes of $p_{1}$. And from (1') and (2'), {\color{black}both }$a_{2}b_{2}b_{3}$ and $b_{3}$ are prefixes of $p_{2}$.
+\item $|w|=0$: From (2) and (3), {\color{red}both }$a_{1}b_{1}$ and $a_{1}b_{1}a_{2}$ are suffixes of $p_{1}$. And from (1') and (2'), {\color{red}both }$a_{2}b_{2}b_{3}$ and $b_{3}$ are prefixes of $p_{2}$.
 Since $b_{1}=a_{2}$ and $a_{2}=b_{3}$, then $b_{1}=b_{3}$.
 This contradicts the assumption of $b_{1}\not= b_{3}$.
 %
-\item $|w| \ge 1$: Since {\color{black}both }$a_{1}b_{1}w$ and $a_{1}b_{1}wa_{2}$ are suffixes of $p_{1}$ from (2) and (3), the first symbol of $w$ is $b_{1}$.
-Moreover, since {\color{black}both }$wa_{2}b_{2}b_{3}$ and $b_{3}$ are prefixes of $p_{2}$ from (1') and (2'),
+\item $|w| \ge 1$: Since {\color{red}both }$a_{1}b_{1}w$ and $a_{1}b_{1}wa_{2}$ are suffixes of $p_{1}$ from (2) and (3), the first symbol of $w$ is $b_{1}$.
+Moreover, since {\color{red}both }$wa_{2}b_{2}b_{3}$ and $b_{3}$ are prefixes of $p_{2}$ from (1') and (2'),
 the first symbol of $w$ is $b_{3}$.
 Therefore, $b_{1}=b_{3}$.
 This contradicts the assumption of $b_{1} \ne b_{3}$.
@@ -316,7 +316,7 @@ This contradicts the assumption of $b_{1} \ne b_{3}$.
 \vspace*{-1em}
 \end{proof}
 
-{\color{black}
+{\color{red}
 The conditions in Lemmas~\ref{lem:3consts_i}, \ref{lem:3consts_ii}, and \ref{lem:3consts_iii} are illustrated in the cases (9), (10), and (11) in Fig.~\ref{fig:lem7bigraph}.
 }
 
@@ -324,8 +324,8 @@ The conditions in Lemmas~\ref{lem:3consts_i}, \ref{lem:3consts_ii}, and \ref{lem
   \begin{center}
     \includegraphics[scale=0.8]{figs/lem7bigraph.png}
     \caption{Let $\Sigma=\{a,b,c,d,e,f,g\}$ and $p,q \in \RPat$. We assume that the symbols in $\Sigma$ are mutually distinct.
-    {\color{black} The figures (9), (10) and (11) express cases of $D$s in Lemmas~\ref{lem:3consts_i}, \ref{lem:3consts_ii}, and \ref{lem:3consts_iii}, respectively.}
-    {\color{black} In these cases, if $q$ minimally supports $D$ for $p$, }
+    {\color{red} The figures (9), (10) and (11) express cases of $D$s in Lemmas~\ref{lem:3consts_i}, \ref{lem:3consts_ii}, and \ref{lem:3consts_iii}, respectively.}
+    {\color{red} In these cases, if $q$ minimally supports $D$ for $p$, }
     then $p \{ x := xy \} \preceq q$.}\label{fig:lem7bigraph}
   \end{center}
 \end{figure*}
