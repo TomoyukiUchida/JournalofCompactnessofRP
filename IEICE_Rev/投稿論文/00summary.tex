@@ -2,13 +2,14 @@
 {\color{black}
 A \textit{regular pattern} is a string consisting of constant and distinct variable symbols. 
 The language $L(p)$ of a regular pattern $p$ is defined as the set of all constant strings obtained by replacing each variable with a constant string. 
-Let $\mathcal{RP}^k$ denote the class of all sets containing at most $k$ $(k \ge 2)$ regular patterns. 
-Sato et al.\ (Proc.\ ALT'98, 1998) showed that the finite set $S_2(P)$, obtained from $P \in \mathcal{RP}^k$ by replacing variables with constant strings of length at most two, serves as a characteristic set for the language $L(P) = \bigcup_{p \in P} L(p)$. 
-They also claimed that $\mathcal{RP}^k$ is compact with respect to language containment when the number of constant symbols is at least $2k - 1$.
+Let %$\mathcal{RP}^k$ 
+$\RPatkei$ denote the class of all sets containing at most $k$ $(k \ge 2)$ regular patterns. 
+Sato et al.\ (Proc.\ ALT'98, 1998) showed that the finite set $S_2(P)$, obtained from $P \in \RPatkei$ by replacing variables with constant strings of length at most two, serves as a characteristic set for the language $L(P) = \bigcup_{p \in P} L(p)$. 
+They also claimed that $\RPatkei$ has compactness with respect to language containment when the number of constant symbols is at least $2k - 1$.
 In this paper, we revisit their results and identify an error in the original proof of their theorem. 
 We then present a new and correct proof by introducing additional conditions that guarantee the validity of their claim. 
-Furthermore, we study the subclass $\mathcal{RP}^k_{\mathrm{NAV}}$, consisting of at most $k$ $(k \ge 1)$ \textit{non-adjacent regular patterns}, in which no two variable symbols occur consecutively. 
-For any $P \in \mathcal{RP}^k_{\mathrm{NAV}}$, we prove that the set $S_2(P)$ serves as a characteristic set of $L(P)$ and that $\mathcal{RP}^k_{\mathrm{NAV}}$ is compact with respect to {\color{black} language} containment if the number of constant symbols is at least $k + 2$.
+Furthermore, we study the subclass $\NAVRPkei$, consisting of at most $k$ $(k \ge 1)$ \textit{non-adjacent regular patterns}, in which no two variable symbols occur consecutively. 
+For any $P \in \NAVRPkei$, we prove that the set $S_2(P)$ serves as a characteristic set of $L(P)$ and that $\NAVRPkei$ has compactness with respect to {\color{black} language} containment if the number of constant symbols is at least $k + 2$.
 These results demonstrate that finite unions of non-adjacent regular pattern languages can be learned efficiently under weaker constraints on constant symbols than those required in the general case. 
 Our analysis thus refines and extends the compactness properties of regular pattern languages originally discussed by Sato et al.(Proc.~ALT'98, 1998), providing a corrected theoretical foundation for subsequent studies on the learnability of pattern languages, which is an important learning theme in Computational Learning Theory.
 }
