@@ -1,27 +1,32 @@
 Compactness of Finite Unions of Regular Patterns and Regular Patterns without Adjacent Variables
 
-Naoto TAKEDA
+Naoto TAKETA
 Graduate School of Information Sciences, Hiroshima City University
 
 Tomoyuki UCHIDA
 Graduate School of Information Sciences, Hiroshima City University
 9230354
+uchida@hiroshima-cu.ac.jp
 
 Takayoshi SHOUDAI
 Department of Computer Science and Engineering, Fukuoka Institute of Technology
 9303359
+shodai@fit.ac.jp
 
 Satoshi MATSUMOTO
  Department of Mathematical Sciences, Tokai University
 0307572
+matsumoto@tokai.ac.jp
 
 Yusuke SUZUKI
 Graduate School of Information Sciences, Hiroshima City University
 0120588
+y-suzuki@hiroshima-cu.ac.jp
 
 Tetsuhiro MIYAHARA
 Graduate School of Information Sciences, Hiroshima City University
 0401030
+miyahara@hiroshima-cu.ac.jp
 
 A023200	General Fundamentals and Boundaries
 
